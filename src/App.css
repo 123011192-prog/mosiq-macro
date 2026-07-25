@@ -131,6 +131,62 @@ body {
 .lv-red { color: var(--red); }
 .lv-unknown { color: var(--ink-4); }
 
+/* ── 今日结论 ───────────────────────── */
+.concl {
+  margin-top: 14px;
+  padding: 22px 28px;
+  background: linear-gradient(135deg, #eaf4ff 0%, #ffffff 70%);
+  border: 1px solid #cfe5ff;
+  border-radius: 14px;
+}
+.concl-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--mosiq-navy);
+}
+.concl-detail {
+  margin: 8px 0 0;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+
+/* 指标解释小字 */
+.core dd.cap {
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--ink-3);
+  max-width: 200px;
+  font-variant-numeric: normal;
+}
+
+/* ── 使用说明 ───────────────────────── */
+.guide .guide-lead {
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+.guide-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  color: var(--ink-2);
+}
+.guide-list li {
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
+}
+.guide-note {
+  margin: 10px 0 0;
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
 /* ── 卡片区块 ───────────────────────── */
 .card {
   margin-top: 14px;

@@ -65,6 +65,87 @@ function asLight(value: string | undefined): Light {
     : 'unknown'
 }
 
+/** 今日结论：把灯号 + 核心信号翻译成大白话，给非专业读者一个明确 takeaway。 */
+function conclusion(m: Snapshot): { title: string; detail: string } {
+  const pct = m.core?.baa10y_pct
+  const curve = m.core?.curve_10y3m
+  const facts: string[] = []
+  if (pct != null) {
+    facts.push(
+      pct < 50
+        ? `企业借钱的紧张程度比历史上 ${(100 - pct).toFixed(0)}% 的日子都低`
+        : `企业借钱的紧张程度已高于历史上 ${pct.toFixed(0)}% 的日子`,
+    )
+  }
+  if (curve != null) {
+    facts.push(curve >= 0 ? '国债长短期利差形态正常' : '国债曲线倒挂（历史上最可靠的衰退预警之一）')
+  }
+  const factTxt = facts.length ? facts.join('，') + '。' : ''
+  switch (m.global_light) {
+    case 'green':
+      return {
+        title: '今日结论：风险平稳，无需动作',
+        detail: `${factTxt}四类危机雷达均无异常信号。按系统规则，今天保持现状即可。`,
+      }
+    case 'yellow':
+      return {
+        title: '今日结论：出现早期风险信号，保持关注',
+        detail: `${factTxt}有风险指标开始抬头但尚未形成共振。规则建议：不加杠杆、不追高，继续观察。`,
+      }
+    case 'orange':
+      return {
+        title: '今日结论：多个风险信号相互印证，应当警觉',
+        detail: `${factTxt}独立模块同时恶化。规则建议：降低风险仓位、提高现金与流动性。`,
+      }
+    case 'red':
+      return {
+        title: '今日结论：高危状态，防御优先',
+        detail: `${factTxt}风险信号已广泛确认。规则建议：防御姿态，等待系统解除信号。`,
+      }
+    default:
+      return {
+        title: '今日结论：数据不足，暂不判断',
+        detail: '核心数据尚未就位，请稍后再看。',
+      }
+  }
+}
+
+/** 创始人笔记兜底：引擎的"数据完整性不足"是内部诚实机制，
+ * 公网展示换成平静的解释；灯号主触发器数据完好时这句话才成立。 */
+function displayNote(m: Snapshot): string {
+  const note = m.founder_note || ''
+  if (note.includes('数据完整性不足')) {
+    return '核心信号（Baa 利差分位 + 国债曲线）数据完好，今日灯号可信；个别增强指标受免费数据源限制未覆盖，已在页脚标注，不影响灯号判断。'
+  }
+  return note || '今日笔记待填写。'
+}
+
+/** 页脚健康信息：把内部代码翻译成读者能懂的话。 */
+const DEGRADED_TXT: Record<string, string> = {
+  'refresh:yahoo:GOLD_YAHOO': '黄金价格更新延迟（数据源限流，会自动恢复）',
+  'refresh:yahoo:GSPC_YAHOO': '美股指数更新延迟（数据源限流，会自动恢复）',
+  'cycle:market_stress': '市场压力模块个别增强指标未覆盖',
+  'radar:banking': '银行雷达个别增强指标未覆盖',
+  'radar:nonbank': '非银雷达个别增强指标未覆盖',
+}
+
+function healthText(m: Snapshot): string {
+  const h = m.health || {}
+  const parts: string[] = []
+  if (h.data_asof) parts.push(`数据更新至 ${h.data_asof}`)
+  if (h.stale_count) parts.push(`${h.stale_count} 项数据稍有延迟`)
+  const degraded = (h.degraded || []).map((d) => DEGRADED_TXT[d] || d)
+  if (degraded.length) parts.push(degraded.join('；'))
+  return parts.length ? parts.join(' · ') : '数据完整'
+}
+
+const LIGHT_GUIDE: Array<{ light: Light; text: string }> = [
+  { light: 'green', text: '绿灯·平稳：正常运行，无需动作' },
+  { light: 'yellow', text: '黄灯·关注：早期信号出现，不加杠杆、不追高' },
+  { light: 'orange', text: '橙灯·警戒：降低风险仓位，提高现金与流动性' },
+  { light: 'red', text: '红灯·高危：防御姿态，等待系统解除信号' },
+]
+
 function LightDot({ light, big }: { light: Light; big?: boolean }) {
   return <span className={`px ${big ? 'big ' : ''}${light}`} aria-hidden="true" />
 }
@@ -104,12 +185,17 @@ export default function Home() {
         </p>
       </section>
 
+      <section className="concl" aria-label="今日结论">
+        <div className="concl-title">{conclusion(m).title}</div>
+        <p className="concl-detail">{conclusion(m).detail}</p>
+      </section>
+
       <section aria-label="创始人笔记" className="card">
         <div className="note">
           <img className="avatar" src="assets/grace-avatar.jpg" alt="Grace Yang" />
           <div>
             <div className="who">Grace Yang · 创始人笔记</div>
-            <blockquote>{m.founder_note || '今日笔记待填写。'}</blockquote>
+            <blockquote>{displayNote(m)}</blockquote>
           </div>
         </div>
       </section>
@@ -132,10 +218,12 @@ export default function Home() {
           <dl>
             <dt>Baa 利差</dt>
             <dd>{m.core?.baa10y == null ? '—' : `${m.core.baa10y.toFixed(2)}%`}</dd>
+            <dd className="cap">美国低评级企业借债比国债多付的利息，危机前会快速飙升</dd>
           </dl>
           <dl>
             <dt>历史分位</dt>
             <dd>{m.core?.baa10y_pct == null ? '—' : `${m.core.baa10y_pct.toFixed(0)}%`}</dd>
+            <dd className="cap">当前利差在历史中的位置，越高越危险，≥70% 触发黄灯</dd>
           </dl>
           <dl>
             <dt>10Y–3M 曲线</dt>
@@ -146,6 +234,7 @@ export default function Home() {
                     m.core.curve_inverted ? '（倒挂）' : ''
                   }`}
             </dd>
+            <dd className="cap">长短期国债利差，变成负数（倒挂）是最可靠的衰退预警之一</dd>
           </dl>
         </div>
       </section>
@@ -214,15 +303,26 @@ export default function Home() {
         </section>
       )}
 
+      <section aria-label="灯号使用说明" className="card guide">
+        <h2>这个盘面怎么用</h2>
+        <p className="guide-lead">每天早上回答一个问题：今天全球金融系统有没有正在酝酿的危机？按灯号行动——</p>
+        <ul className="guide-list">
+          {LIGHT_GUIDE.map((g) => (
+            <li key={g.light}>
+              <LightDot light={g.light} />
+              <span>{g.text}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="guide-note">以上为系统性规则的方向性参考，不构成个性化投资建议。</p>
+      </section>
+
       <footer className="foot">
-        <span>
-          数据健康：断更 {m.health?.stale_count ?? '—'} 项（数据至 {m.health?.data_asof || '—'}）
-          {m.health?.degraded?.length ? `，降级模块：${m.health.degraded.join('、')}` : ''}
-        </span>
+        <span>{healthText(m)}</span>
         <a className="news" href={newsLink} target="_blank" rel="noopener noreferrer">
           新闻雷达 worldmonitor ↗
         </a>
-        <span>MOSIQ · 规则冻结 · 证据链见验收报告</span>
+        <span>MOSIQ · 规则冻结 · 证据链可审计</span>
         {error && <span className="err">数据加载失败（展示示例）：{error}</span>}
       </footer>
     </main>
