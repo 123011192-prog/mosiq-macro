@@ -1,0 +1,64 @@
+{
+  "as_of": "2026-07-24",
+  "global_light": "green",
+  "lights": {
+    "banking": "green",
+    "credit": "green",
+    "nonbank": "green",
+    "liquidity": "green"
+  },
+  "core": {
+    "baa10y": 1.58,
+    "baa10y_pct": 10.849196,
+    "curve_10y3m": 0.76,
+    "curve_inverted": false
+  },
+  "cycle": {
+    "growth": "up",
+    "inflation": "neutral",
+    "liquidity": "down",
+    "credit": "down",
+    "policy": "neutral",
+    "market_stress": "degraded"
+  },
+  "confirmations": [
+    {
+      "label": "周期或雷达确认",
+      "active": true
+    },
+    {
+      "label": "VIX期限倒挂",
+      "active": false
+    },
+    {
+      "label": "BAA10Y二十日走阔",
+      "active": false
+    },
+    {
+      "label": "美元二十日急升",
+      "active": false
+    },
+    {
+      "label": "金涨债跌代理",
+      "active": false
+    }
+  ],
+  "founder_note": "数据完整性不足，当前灯号仅作谨慎参考",
+  "advice": [
+    {
+      "text": "维持中性观察；触发：核心分位升至70或曲线倒挂；失效：两项条件均未持续。",
+      "confidence": "low"
+    }
+  ],
+  "health": {
+    "data_asof": "2026-07-23",
+    "stale_count": 11,
+    "degraded": [
+      "refresh:yahoo:GOLD_YAHOO",
+      "refresh:yahoo:GSPC_YAHOO",
+      "cycle:market_stress",
+      "radar:banking",
+      "radar:nonbank"
+    ]
+  }
+}

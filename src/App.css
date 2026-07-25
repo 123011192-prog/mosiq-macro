@@ -1,0 +1,349 @@
+/* MOSIQ 全球宏观罗盘 — 蓝白品牌调性 · 高级简约 */
+
+:root {
+  --mosiq-blue: #0a84ff;
+  --mosiq-navy: #16233f;
+  --ink: #1c2733;
+  --ink-2: #4a5a6e;
+  --ink-3: #8a99ad;
+  --ink-4: #b9c5d3;
+  --line: #e6ecf4;
+  --bg: #ffffff;
+  --bg-soft: #f6f9fd;
+  --green: #16a34a;
+  --yellow: #d97706;
+  --orange: #ea580c;
+  --red: #dc2626;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue',
+    'Segoe UI', 'Microsoft YaHei', sans-serif;
+  color: var(--ink);
+  background: var(--bg-soft);
+  letter-spacing: 0;
+}
+
+.mono {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+}
+
+/* ── 品牌头 ─────────────────────────── */
+.brandbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.brand .logo {
+  height: 40px;
+  width: auto;
+  display: block;
+  border-radius: 6px;
+}
+.brand .title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--mosiq-navy);
+}
+.brand .sub {
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  color: var(--ink-3);
+}
+.sample {
+  margin-inline-start: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--yellow);
+}
+.asof-top {
+  font-size: 12.5px;
+  color: var(--ink-3);
+}
+
+/* ── P0 全局灯号 ────────────────────── */
+.hero {
+  margin: 22px 0 4px;
+  padding: 26px 28px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.hero-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.hero-light {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+.hero-sub {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+/* 灯号像素标记 */
+.px {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  vertical-align: -1px;
+  margin-inline-end: 7px;
+}
+.px.big {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  vertical-align: -2px;
+}
+.px.green { background: var(--green); }
+.px.yellow { background: var(--yellow); }
+.px.orange { background: var(--orange); }
+.px.red { background: var(--red); }
+.px.unknown { background: transparent; border: 1.5px solid var(--ink-4); }
+.lv-green { color: var(--green); }
+.lv-yellow { color: var(--yellow); }
+.lv-orange { color: var(--orange); }
+.lv-red { color: var(--red); }
+.lv-unknown { color: var(--ink-4); }
+
+/* ── 卡片区块 ───────────────────────── */
+.card {
+  margin-top: 14px;
+  padding: 20px 24px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+h2 {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+  margin: 0 0 14px;
+}
+
+/* 创始人笔记（MOSIQ 特色） */
+.note {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.note .avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  border: 2px solid var(--mosiq-blue);
+}
+.note .who {
+  font-size: 12px;
+  color: var(--mosiq-blue);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.note blockquote {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--mosiq-navy);
+  padding-inline-start: 12px;
+  border-inline-start: 3px solid var(--mosiq-blue);
+}
+
+/* P1 雷达与核心信号 */
+.radar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.radar .cell {
+  font-size: 14px;
+  padding: 12px 14px;
+  background: var(--bg-soft);
+  border-radius: 10px;
+}
+.radar .cell .lab {
+  display: block;
+  font-size: 11.5px;
+  color: var(--ink-3);
+  margin-bottom: 6px;
+}
+.core {
+  display: flex;
+  gap: 36px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--line);
+}
+.core dl { margin: 0; }
+.core dt {
+  font-size: 11.5px;
+  color: var(--ink-3);
+  margin-bottom: 3px;
+}
+.core dd {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--mosiq-navy);
+  font-variant-numeric: tabular-nums;
+}
+
+/* P2 周期状态 */
+.cyc {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 24px;
+  font-size: 13.5px;
+}
+.cyc .m {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--bg-soft);
+  border-radius: 8px;
+}
+.cyc .m .name { color: var(--ink-2); }
+.s-up { color: var(--green); font-weight: 600; }
+.s-down { color: var(--red); font-weight: 600; }
+.s-neutral { color: var(--ink-3); }
+.s-degraded { color: var(--ink-4); }
+
+/* 两列区 */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* 确认项与建议 */
+.cf, .ad {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+.cf li {
+  display: flex;
+  gap: 9px;
+  padding: 4px 0;
+  color: var(--ink-2);
+}
+.cf li.on {
+  color: var(--ink);
+  font-weight: 600;
+}
+.cf .dot {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 6px;
+  border: 1.5px solid var(--ink-4);
+}
+.cf li.on .dot {
+  background: var(--red);
+  border-color: var(--red);
+}
+.ad li {
+  padding: 5px 0;
+  display: flex;
+  gap: 9px;
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+.ad .tag {
+  flex: 0 0 auto;
+  font-size: 11px;
+  color: var(--ink-3);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1px 6px;
+  height: fit-content;
+}
+
+/* worldmonitor 简报区（预留） */
+.briefs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.briefs li {
+  padding: 8px 0;
+  border-top: 1px solid var(--line);
+}
+.briefs li:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+.brief-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--mosiq-navy);
+  text-decoration: none;
+}
+a.brief-title:hover { color: var(--mosiq-blue); }
+.briefs p {
+  margin: 3px 0 0;
+  font-size: 12.5px;
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+
+/* 页脚 */
+.foot {
+  margin-top: 20px;
+  font-size: 11.5px;
+  color: var(--ink-3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  align-items: center;
+}
+a.news {
+  color: var(--mosiq-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+a.news:focus-visible {
+  outline: 2px solid var(--mosiq-blue);
+  outline-offset: 2px;
+}
+.foot .err { color: var(--yellow); }
+
+/* 响应式 */
+@media (max-width: 640px) {
+  .radar { grid-template-columns: repeat(2, 1fr); }
+  .cyc { grid-template-columns: repeat(2, 1fr); }
+  .grid-2 { grid-template-columns: 1fr; }
+  .hero-light { font-size: 27px; }
+  .core { gap: 24px; }
+}
