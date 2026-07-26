@@ -858,3 +858,95 @@ a.news:focus-visible {
   border-color: var(--mosiq-blue);
   box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.12);
 }
+
+/* ── 数据时效标签 ───────────────────── */
+.region-fresh {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 2px 9px;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--mosiq-blue);
+  background: #eaf4ff;
+  border: 1px solid #cfe5ff;
+  border-radius: 99px;
+  font-variant-numeric: tabular-nums;
+}
+.core-fresh {
+  margin: 12px 0 0;
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
+/* ── 变灯距离 · 规则透明化 ───────────── */
+.thresh .sec-note { margin-bottom: 10px; }
+.thresh-now {
+  margin: 0 0 18px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+.thresh-now b { color: var(--mosiq-navy); }
+.thresh-now b.mono { font-weight: 700; }
+.thresh-bar { margin: 0 4px; }
+.thresh-track {
+  position: relative;
+  height: 8px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 99px;
+}
+.thresh-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #bcd9ff 0%, var(--mosiq-blue) 100%);
+  border-radius: 99px;
+}
+.thresh-nowline {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  width: 2px;
+  transform: translateX(-1px);
+  background: var(--mosiq-navy);
+  border-radius: 1px;
+}
+.thresh-tick {
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  width: 0;
+  border-left: 1.5px dashed var(--ink-4);
+}
+.thresh-tick.k-yellow { border-left-color: var(--yellow); }
+.thresh-tick.k-orange { border-left-color: var(--orange); }
+.thresh-tick.k-red { border-left-color: var(--red); }
+.thresh-labels {
+  position: relative;
+  height: 32px;
+  margin-top: 8px;
+  font-size: 10.5px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+.thresh-labels span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.thresh-labels span:first-child { transform: none; }
+.thresh-labels span:last-child { transform: translateX(-100%); }
+.thresh-labels span.low { top: 15px; }
+.thresh-labels span.k-yellow { color: var(--yellow); font-weight: 600; }
+.thresh-labels span.k-orange { color: var(--orange); font-weight: 600; }
+.thresh-labels span.k-red { color: var(--red); font-weight: 600; }
+.thresh-curve {
+  margin: 6px 0 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--ink-3);
+}

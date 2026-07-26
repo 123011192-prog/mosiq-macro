@@ -123,12 +123,46 @@ function displayNote(m: Snapshot): string {
 }
 
 /** 页脚健康信息：把内部代码翻译成读者能懂的话。 */
-const DEGRADED_TXT: Record<string, string> = {
-  'refresh:yahoo:GOLD_YAHOO': '黄金价格更新延迟（数据源限流，会自动恢复）',
-  'refresh:yahoo:GSPC_YAHOO': '美股指数更新延迟（数据源限流，会自动恢复）',
-  'cycle:market_stress': '市场压力模块个别增强指标未覆盖',
-  'radar:banking': '银行雷达个别增强指标未覆盖',
-  'radar:nonbank': '非银雷达个别增强指标未覆盖',
+/** 内部降级代码 → 读者能懂的话。按命名空间解析映射，
+ * 任何未识别的代码都归入通用文案，绝不把原始代码串显示在页面上。 */
+const YAHOO_TXT: Record<string, string> = {
+  GOLD_YAHOO: '黄金价格更新延迟（数据源限流，会自动恢复）',
+  GSPC_YAHOO: '美股指数更新延迟（数据源限流，会自动恢复）',
+}
+const REFRESH_TXT: Record<string, string> = {
+  fred_api_key_missing: 'FRED 密钥未生效，使用缓存数据',
+}
+const REGION_DEGRADED_TXT: Record<string, string> = {
+  euro_area: '欧元区面板本次更新不完整',
+  china: '中国面板本次更新不完整',
+  japan: '日本面板本次更新不完整',
+  korea: '韩国面板本次更新不完整',
+}
+const RADAR_DEGRADED_TXT: Record<string, string> = {
+  banking: '银行雷达个别增强指标未覆盖',
+  credit: '企业信用雷达个别增强指标未覆盖',
+  nonbank: '非银雷达个别增强指标未覆盖',
+  liquidity: '流动性雷达个别增强指标未覆盖',
+}
+const CYCLE_DEGRADED_TXT: Record<string, string> = {
+  market_stress: '市场压力模块个别增强指标未覆盖',
+}
+
+function degradedText(code: string): string {
+  const [ns, a, b] = code.split(':')
+  switch (ns) {
+    case 'refresh':
+      if (a === 'yahoo') return YAHOO_TXT[b] || '个别市场行情更新延迟（数据源限流，会自动恢复）'
+      return REFRESH_TXT[a] || '个别数据源本次未刷新，沿用最近缓存数据'
+    case 'regions':
+      return REGION_DEGRADED_TXT[a] || '个别区域面板本次更新不完整'
+    case 'radar':
+      return RADAR_DEGRADED_TXT[a] || '个别雷达模块的增强指标未覆盖'
+    case 'cycle':
+      return CYCLE_DEGRADED_TXT[a] || '个别周期模块的增强指标未覆盖'
+    default:
+      return '部分增强指标未更新'
+  }
 }
 
 function healthText(m: Snapshot): string {
@@ -136,7 +170,7 @@ function healthText(m: Snapshot): string {
   const parts: string[] = []
   if (h.data_asof) parts.push(`数据更新至 ${h.data_asof}`)
   if (h.stale_count) parts.push(`${h.stale_count} 项数据稍有延迟`)
-  const degraded = (h.degraded || []).map((d) => DEGRADED_TXT[d] || d)
+  const degraded = [...new Set((h.degraded || []).map(degradedText))]
   if (degraded.length) parts.push(degraded.join('；'))
   return parts.length ? parts.join(' · ') : '数据完整'
 }
@@ -207,6 +241,30 @@ function LoadingScreen() {
 }
 
 /* ── 全球区域面板（美国以外） ───────────────────── */
+
+/** 从指标日期推断更新频率：
+ * 季度起点（1/4/7/10 月 1 日，BIS 信贷类季度频）→ 季度标签；
+ * 其余月初日期（OECD CLI 等月度）→ 月度；近日期（FRED 市场类）→ 日频。 */
+function indFreq(date: string): { rank: number; label: string } | null {
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(date || '')
+  if (!m) return null
+  const [, y, mm, dd] = m
+  const month = Number(mm)
+  if (dd === '01' && [1, 4, 7, 10].includes(month))
+    return { rank: 3, label: `季度数据 · 截至 ${y}Q${(month + 2) / 3}` }
+  if (dd === '01') return { rank: 2, label: `月度 · 截至 ${y}-${mm}` }
+  return { rank: 1, label: `日频 · 截至 ${y}-${mm}-${dd}` }
+}
+
+/** 卡片徽标取最滞后一档（数据新鲜度以最慢口径为准）。 */
+function regionFreq(region: RegionSnapshot): string | null {
+  let best: { rank: number; label: string } | null = null
+  for (const ind of region.indicators || []) {
+    const f = indFreq(ind.date)
+    if (f && (!best || f.rank > best.rank)) best = f
+  }
+  return best ? best.label : null
+}
 function fmtRegionValue(v: number | null, unit?: string): string {
   if (v == null) return '—'
   const abs = Math.abs(v)
@@ -219,6 +277,77 @@ function fmtRegionValue(v: number | null, unit?: string): string {
   return unit && unit !== '指数' && unit !== '指数/点位' ? `${txt} ${unit}` : txt
 }
 
+/** 变灯距离 · 规则透明化：把黄 / 橙 / 红灯阈值画在一条 0–100% 分位轴上，
+ * 让读者一眼看到"现在离变灯还有多远"。只读 core 数据，不改任何判定逻辑。 */
+const THRESH_TICKS = [
+  { v: 70, name: '黄灯', cls: 'k-yellow' },
+  { v: 75, name: '橙灯', cls: 'k-orange' },
+  { v: 92, name: '红灯', cls: 'k-red' },
+]
+
+function moodOf(gap: number): { text: string; cls: string } {
+  if (gap <= 0) return { text: '已越过黄灯阈值', cls: 'lv-yellow' }
+  if (gap > 40) return { text: '离变黄灯还很远', cls: 'lv-green' }
+  if (gap > 20) return { text: '进入观察区', cls: 'lv-yellow' }
+  return { text: '接近变灯', cls: 'lv-orange' }
+}
+
+function ThresholdTrack({ m }: { m: Snapshot }) {
+  const pct = m.core?.baa10y_pct
+  const curve = m.core?.curve_10y3m
+  const inverted = m.core?.curve_inverted
+  if (pct == null) return null
+  const pos = Math.max(0, Math.min(100, pct))
+  const gap = Math.max(0, 70 - pct)
+  const mood = moodOf(70 - pct)
+  return (
+    <section aria-label="变灯距离" className="card reveal thresh" style={reveal(3)}>
+      <h2>变灯距离 · 规则透明化</h2>
+      <p className="sec-note">
+        灯号规则冻结公开：核心分位 ≥70% 且曲线确认 → 黄灯；≥75% → 橙灯；≥92% → 红灯。
+      </p>
+      <p className="thresh-now">
+        当前 BAA10Y 核心分位 <b className="mono">{pct.toFixed(1)}%</b>，距黄灯阈值 70% 还差{' '}
+        <b className="mono">{gap.toFixed(1)}</b> 个百分点 ——{' '}
+        <b className={mood.cls}>{mood.text}</b>
+      </p>
+      <div
+        className="thresh-bar"
+        role="img"
+        aria-label={`当前分位 ${pct.toFixed(1)}%；黄灯阈值 70%，橙灯 75%，红灯 92%`}
+      >
+        <div className="thresh-track">
+          <div className="thresh-fill" style={{ width: `${pos}%` }} />
+          <span className="thresh-nowline" style={{ left: `${pos}%` }} />
+          {THRESH_TICKS.map((t) => (
+            <span key={t.v} className={`thresh-tick ${t.cls}`} style={{ left: `${t.v}%` }} />
+          ))}
+        </div>
+        <div className="thresh-labels">
+          <span style={{ left: '0%' }}>0</span>
+          {THRESH_TICKS.map((t, i) => (
+            <span
+              key={t.v}
+              className={`${t.cls}${i % 2 ? ' low' : ''}`}
+              style={{ left: `${t.v}%` }}
+            >
+              {t.v} {t.name}
+            </span>
+          ))}
+          <span style={{ left: '100%' }}>100</span>
+        </div>
+      </div>
+      <p className="thresh-curve">
+        曲线状态：
+        {inverted
+          ? `已倒挂（${curve != null ? curve.toFixed(2) : '—'}），已计入变灯确认`
+          : `未倒挂（${curve != null ? `+${curve.toFixed(2)}` : '—'}），一旦倒挂即计入变灯确认`}
+        。分位与曲线均为日频 · 最近交易日。
+      </p>
+    </section>
+  )
+}
+
 function RegionCard({
   regionKey,
   region,
@@ -229,6 +358,7 @@ function RegionCard({
   active?: boolean
 }) {
   const light = asLight(region.light)
+  const freq = regionFreq(region)
   const signalInds = (region.indicators || []).filter(
     (ind) => ind.signal && Object.keys(ind.signal).length > 0,
   )
@@ -241,6 +371,7 @@ function RegionCard({
           <span className={`lv-${light}`}>{LIGHT_SHORT[light]}灯</span>
         </span>
       </div>
+      {freq && <span className="region-fresh">{freq}</span>}
       {region.status !== 'ok' && (
         <p className="region-degraded">⚠ 数据不完整：部分读数滞后或缺失，请谨慎参考</p>
       )}
@@ -323,7 +454,9 @@ export default function Home() {
         <p className="concl-detail">{conclusion(m).detail}</p>
       </section>
 
-      <section aria-label="创始人笔记" className="card reveal" style={reveal(3)}>
+      <ThresholdTrack m={m} />
+
+      <section aria-label="创始人笔记" className="card reveal" style={reveal(4)}>
         <div className="note">
           <img className="avatar" src="assets/grace-avatar.jpg" alt="Grace Yang" />
           <div>
@@ -333,7 +466,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section aria-label="危机雷达" className="card reveal" style={reveal(4)}>
+      <section aria-label="危机雷达" className="card reveal" style={reveal(5)}>
         <h2>危机雷达（四类）· 美国</h2>
         <p className="sec-note">美国金融系统四个部位的健康灯——全绿 = 没有起火迹象。</p>
         <div className="radar">
@@ -388,9 +521,10 @@ export default function Home() {
             <dd className="cap">长短期国债利差，变成负数（倒挂）是最可靠的衰退预警之一</dd>
           </dl>
         </div>
+        <p className="core-fresh">核心信号（Baa 利差 / 历史分位 / 10Y–3M 曲线）：日频 · 最近交易日</p>
       </section>
 
-      <section aria-label="周期状态" className="card reveal" style={reveal(5)}>
+      <section aria-label="周期状态" className="card reveal" style={reveal(6)}>
         <h2>六维周期状态 · 美国</h2>
         <p className="sec-note">美国经济现在的六项体温——向上 / 中性 / 向下，一眼看清方向。</p>
         <div className="cyc">
@@ -409,11 +543,12 @@ export default function Home() {
       </section>
 
       {m.regions && REGION_ORDER.some((k) => m.regions?.[k]) && (
-        <section aria-label="全球区域面板" className="card reveal" style={reveal(6)}>
+        <section aria-label="全球区域面板" className="card reveal" style={reveal(7)}>
           <h2>全球区域面板 · 美国以外</h2>
           <p className="region-lead">
             全球灯号由美国核心引擎判定；这里的区域面板提供美国以外的风险视角。
-            数据来自 OECD / BIS / 各国央行，BIS 信贷数据滞后 2–3 个季度属正常现象——每条读数旁都标注了数据日期。
+            时效提醒：市场数据为最近交易日；信贷 / 宏观数据按官方发布节奏滞后 1–2 个季度属正常现象——
+            每张卡片标注了更新频率，每条读数旁标注了数据日期。
           </p>
           <WorldDotMap
             regions={m.regions!}
@@ -434,7 +569,7 @@ export default function Home() {
         </section>
       )}
 
-      <div className="grid-2 reveal" style={reveal(7)}>
+      <div className="grid-2 reveal" style={reveal(8)}>
         <section aria-label="跨资产确认" className="card">
           <h2>跨资产确认</h2>
           <ul className="cf">
@@ -462,7 +597,7 @@ export default function Home() {
       </div>
 
       {briefs && briefs.items.length > 0 && (
-        <section aria-label="今日事件" className="card reveal" style={reveal(8)}>
+        <section aria-label="今日事件" className="card reveal" style={reveal(9)}>
           <h2>今日事件 · worldmonitor 新闻雷达</h2>
           <ul className="briefs">
             {briefs.items.map((b, i) => (
@@ -481,7 +616,7 @@ export default function Home() {
         </section>
       )}
 
-      <section aria-label="灯号使用说明" className="card guide reveal" style={reveal(9)}>
+      <section aria-label="灯号使用说明" className="card guide reveal" style={reveal(10)}>
         <h2>这个盘面怎么用</h2>
         <p className="guide-lead">每天早上回答一个问题：今天全球金融系统有没有正在酝酿的危机？按灯号行动——</p>
         <ul className="guide-list">
@@ -495,7 +630,7 @@ export default function Home() {
         <p className="guide-note">以上为系统性规则的方向性参考，不构成个性化投资建议。</p>
       </section>
 
-      <footer className="foot reveal" style={reveal(10)}>
+      <footer className="foot reveal" style={reveal(11)}>
         <span>{healthText(m)}</span>
         <a className="news" href={newsLink} target="_blank" rel="noopener noreferrer">
           新闻雷达 worldmonitor ↗

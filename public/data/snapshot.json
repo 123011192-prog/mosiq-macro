@@ -43,7 +43,7 @@
       "active": false
     }
   ],
-  "founder_note": "韩国的半导体杠杆在收缩，寒意会传到全球科技股——这种时候，耐心比仓位值钱。",
+  "founder_note": "欧元区信贷走弱、韩国信贷收缩，这是全球绿灯里最该被看见的两条裂缝。",
   "advice": [
     {
       "text": "维持中性观察；触发：核心分位升至70或曲线倒挂；失效：两项条件均未持续。",
@@ -54,12 +54,12 @@
     "data_asof": "2026-07-23",
     "stale_count": 9,
     "degraded": [
-      "refresh:fred_api_key_missing",
       "refresh:yahoo:GOLD_YAHOO",
       "refresh:yahoo:GSPC_YAHOO",
       "cycle:market_stress",
       "radar:banking",
-      "radar:nonbank"
+      "radar:nonbank",
+      "regions:japan"
     ]
   },
   "regions": {
@@ -229,12 +229,12 @@
       "degraded": []
     },
     "japan": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "neutral",
         "policy": "down",
         "credit": "neutral",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -269,16 +269,6 @@
           }
         },
         {
-          "id": "fred_nikkei225",
-          "name": "日经 225 指数",
-          "value": 64611.15,
-          "date": "2026-07-24",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -10.72
-          }
-        },
-        {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
           "value": 68.03,
@@ -304,8 +294,10 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷平稳、市场平稳，区域黄灯",
-      "degraded": []
+      "summary": "日本：增长平稳、信贷平稳、市场缺失，区域黄灯",
+      "degraded": [
+        "fred_nikkei225"
+      ]
     },
     "korea": {
       "status": "ok",
@@ -313,7 +305,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "down",
-        "market": "down",
+        "market": "up",
         "fx": "down"
       },
       "indicators": [
@@ -348,13 +340,13 @@
           }
         },
         {
-          "id": "fred_sox",
+          "id": "oecd_share_kr",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11818.89,
-          "date": "2026-07-24",
+          "value": 421.8348,
+          "date": "2026-06-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -19.24
+            "drawdown_pct": 0.0
           }
         },
         {
@@ -382,8 +374,8 @@
           "unit": "指数"
         }
       ],
-      "light": "red",
-      "summary": "韩国：增长走强、信贷走弱、市场走弱，区域红灯",
+      "light": "orange",
+      "summary": "韩国：增长走强、信贷走弱、市场走强，区域橙灯",
       "degraded": []
     }
   }
