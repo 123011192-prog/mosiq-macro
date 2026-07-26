@@ -54,10 +54,9 @@ body {
   gap: 14px;
 }
 .brand .logo {
-  height: 40px;
+  height: 46px;
   width: auto;
   display: block;
-  border-radius: 6px;
 }
 .brand .title {
   font-size: 15px;

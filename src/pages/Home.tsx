@@ -110,11 +110,11 @@ function conclusion(m: Snapshot): { title: string; detail: string } {
   }
 }
 
-/** 创始人笔记兜底：引擎的"数据完整性不足"是内部诚实机制，
+/** 创始人笔记兜底：引擎的"数据不全"是内部诚实机制，
  * 公网展示换成平静的解释；灯号主触发器数据完好时这句话才成立。 */
 function displayNote(m: Snapshot): string {
   const note = m.founder_note || ''
-  if (note.includes('数据完整性不足')) {
+  if (note.includes('数据不全') || note.includes('数据完整性不足')) {
     return '核心信号（Baa 利差分位 + 国债曲线）数据完好，今日灯号可信；个别增强指标受免费数据源限制未覆盖，已在页脚标注，不影响灯号判断。'
   }
   return note || '今日笔记待填写。'

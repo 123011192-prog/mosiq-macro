@@ -43,7 +43,7 @@
       "active": false
     }
   ],
-  "founder_note": "数据完整性不足，当前灯号仅作谨慎参考；韩国亮红灯",
+  "founder_note": "韩国的半导体杠杆在收缩，寒意会传到全球科技股——这种时候，耐心比仓位值钱。",
   "advice": [
     {
       "text": "维持中性观察；触发：核心分位升至70或曲线倒挂；失效：两项条件均未持续。",
@@ -54,6 +54,7 @@
     "data_asof": "2026-07-23",
     "stale_count": 9,
     "degraded": [
+      "refresh:fred_api_key_missing",
       "refresh:yahoo:GOLD_YAHOO",
       "refresh:yahoo:GSPC_YAHOO",
       "cycle:market_stress",
