@@ -402,4 +402,105 @@ a.news:focus-visible {
   .grid-2 { grid-template-columns: 1fr; }
   .hero-light { font-size: 27px; }
   .core { gap: 24px; }
+  .region-grid { grid-template-columns: 1fr; }
+}
+
+/* 板块大白话说明 */
+.sec-note {
+  margin: -6px 0 12px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--ink-3);
+}
+
+/* ── 全球区域面板（美国以外） ────────── */
+.region-lead {
+  margin: -4px 0 14px;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+.region-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.region-card {
+  padding: 16px 18px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.region-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.region-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--mosiq-navy);
+}
+.region-light {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+.region-sum {
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+.region-degraded {
+  margin: 8px 0 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--yellow);
+}
+.region-cyc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--line);
+  font-size: 12px;
+}
+.region-dim {
+  color: var(--ink-3);
+}
+.region-dim b {
+  margin-inline-start: 4px;
+  font-weight: 600;
+}
+.region-ind {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 10px 0 0;
+  border-top: 1px dashed var(--line);
+}
+.region-ind li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1px 10px;
+  padding: 4px 0;
+  font-size: 12px;
+}
+.region-ind .ind-name {
+  color: var(--ink-2);
+}
+.region-ind .ind-val {
+  font-weight: 700;
+  color: var(--mosiq-navy);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.region-ind .ind-date {
+  grid-column: 2;
+  font-size: 10.5px;
+  color: var(--ink-4);
+  text-align: right;
 }

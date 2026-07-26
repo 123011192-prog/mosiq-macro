@@ -1,4 +1,4 @@
-import type { Light, Snapshot } from '../types/snapshot'
+import type { Light, RegionSnapshot, Snapshot } from '../types/snapshot'
 import { useSnapshot } from '../hooks/use-snapshot'
 import '../App.css'
 
@@ -150,6 +150,90 @@ function LightDot({ light, big }: { light: Light; big?: boolean }) {
   return <span className={`px ${big ? 'big ' : ''}${light}`} aria-hidden="true" />
 }
 
+/* ── 全球区域面板（美国以外） ───────────────────── */
+const REGION_ORDER = ['euro_area', 'china', 'japan', 'korea'] as const
+const REGION_NAMES: Record<string, string> = {
+  euro_area: '欧元区',
+  china: '中国',
+  japan: '日本',
+  korea: '韩国',
+}
+const REGION_CYCLE_KEYS = ['growth', 'policy', 'credit', 'market', 'fx'] as const
+const REGION_CYCLE_LABELS: Record<(typeof REGION_CYCLE_KEYS)[number], string> = {
+  growth: '增长',
+  policy: '政策',
+  credit: '信贷',
+  market: '市场',
+  fx: '汇率',
+}
+const DIR_TXT: Record<string, string> = {
+  up: '上行',
+  neutral: '中性',
+  down: '下行',
+  degraded: '数据降级',
+}
+const DIR_ARROW: Record<string, string> = { up: '↑', neutral: '→', down: '↓', degraded: '—' }
+
+function fmtRegionValue(v: number | null, unit?: string): string {
+  if (v == null) return '—'
+  const abs = Math.abs(v)
+  const txt =
+    abs >= 10000
+      ? v.toLocaleString('en-US', { maximumFractionDigits: 0 })
+      : abs >= 100
+        ? v.toFixed(1)
+        : v.toFixed(2)
+  return unit && unit !== '指数' && unit !== '指数/点位' ? `${txt} ${unit}` : txt
+}
+
+function RegionCard({ regionKey, region }: { regionKey: string; region: RegionSnapshot }) {
+  const light = asLight(region.light)
+  const signalInds = (region.indicators || []).filter(
+    (ind) => ind.signal && Object.keys(ind.signal).length > 0,
+  )
+  return (
+    <div className="region-card">
+      <div className="region-head">
+        <span className="region-name">{REGION_NAMES[regionKey] || regionKey}</span>
+        <span className="region-light">
+          <LightDot light={light} />
+          <span className={`lv-${light}`}>{LIGHT_SHORT[light]}灯</span>
+        </span>
+      </div>
+      {region.status !== 'ok' && (
+        <p className="region-degraded">⚠ 数据不完整：部分读数滞后或缺失，请谨慎参考</p>
+      )}
+      {region.summary && <p className="region-sum">{region.summary}</p>}
+      <div className="region-cyc">
+        {REGION_CYCLE_KEYS.map((dim) => {
+          const dir = region.cycle?.[dim] || 'neutral'
+          const cls =
+            dir === 'up' ? 's-up' : dir === 'down' ? 's-down' : dir === 'degraded' ? 's-degraded' : 's-neutral'
+          return (
+            <span className="region-dim" key={dim}>
+              {REGION_CYCLE_LABELS[dim]}
+              <b className={cls}>
+                {DIR_ARROW[dir] || '→'} {DIR_TXT[dir] || '—'}
+              </b>
+            </span>
+          )
+        })}
+      </div>
+      {signalInds.length > 0 && (
+        <ul className="region-ind">
+          {signalInds.map((ind) => (
+            <li key={ind.id}>
+              <span className="ind-name">{ind.name}</span>
+              <span className="ind-val mono">{fmtRegionValue(ind.value, ind.unit)}</span>
+              <span className="ind-date mono">{ind.date}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
+}
+
 export default function Home() {
   const { snapshot, briefs, loading, error } = useSnapshot()
   const isSample = !snapshot
@@ -201,7 +285,8 @@ export default function Home() {
       </section>
 
       <section aria-label="危机雷达" className="card">
-        <h2>危机雷达（四类）</h2>
+        <h2>危机雷达（四类）· 美国</h2>
+        <p className="sec-note">美国金融系统四个部位的健康灯——全绿 = 没有起火迹象。</p>
         <div className="radar">
           {RADAR_KEYS.map((key) => {
             const light = asLight(m.lights?.[key])
@@ -240,7 +325,8 @@ export default function Home() {
       </section>
 
       <section aria-label="周期状态" className="card">
-        <h2>六维周期状态</h2>
+        <h2>六维周期状态 · 美国</h2>
+        <p className="sec-note">美国经济现在的六项体温——向上 / 中性 / 向下，一眼看清方向。</p>
         <div className="cyc">
           {CYCLE_KEYS.map((key) => {
             const st = m.cycle?.[key] || 'neutral'
@@ -255,6 +341,21 @@ export default function Home() {
           })}
         </div>
       </section>
+
+      {m.regions && REGION_ORDER.some((k) => m.regions?.[k]) && (
+        <section aria-label="全球区域面板" className="card">
+          <h2>全球区域面板 · 美国以外</h2>
+          <p className="region-lead">
+            全球灯号由美国核心引擎判定；这里的区域面板提供美国以外的风险视角。
+            数据来自 OECD / BIS / 各国央行，BIS 信贷数据滞后 2–3 个季度属正常现象——每条读数旁都标注了数据日期。
+          </p>
+          <div className="region-grid">
+            {REGION_ORDER.filter((k) => m.regions?.[k]).map((k) => (
+              <RegionCard key={k} regionKey={k} region={m.regions![k]} />
+            ))}
+          </div>
+        </section>
+      )}
 
       <div className="grid-2">
         <section aria-label="跨资产确认" className="card">

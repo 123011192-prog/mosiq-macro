@@ -16,15 +16,15 @@
   "cycle": {
     "growth": "up",
     "inflation": "neutral",
-    "liquidity": "down",
-    "credit": "down",
+    "liquidity": "neutral",
+    "credit": "neutral",
     "policy": "neutral",
     "market_stress": "degraded"
   },
   "confirmations": [
     {
       "label": "周期或雷达确认",
-      "active": true
+      "active": false
     },
     {
       "label": "VIX期限倒挂",
@@ -43,7 +43,7 @@
       "active": false
     }
   ],
-  "founder_note": "数据完整性不足，当前灯号仅作谨慎参考",
+  "founder_note": "数据完整性不足，当前灯号仅作谨慎参考；韩国亮红灯",
   "advice": [
     {
       "text": "维持中性观察；触发：核心分位升至70或曲线倒挂；失效：两项条件均未持续。",
@@ -52,7 +52,7 @@
   ],
   "health": {
     "data_asof": "2026-07-23",
-    "stale_count": 11,
+    "stale_count": 9,
     "degraded": [
       "refresh:yahoo:GOLD_YAHOO",
       "refresh:yahoo:GSPC_YAHOO",
@@ -60,5 +60,330 @@
       "radar:banking",
       "radar:nonbank"
     ]
+  },
+  "regions": {
+    "euro_area": {
+      "status": "ok",
+      "cycle": {
+        "growth": "neutral",
+        "policy": "down",
+        "credit": "down",
+        "market": "up",
+        "fx": "neutral"
+      },
+      "indicators": [
+        {
+          "id": "oecd_bci_ea20",
+          "name": "OECD 欧元区商业信心指数 BCI",
+          "value": 99.4636,
+          "date": "2026-06-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.108
+          }
+        },
+        {
+          "id": "ecb_dfr",
+          "name": "ECB 存款便利利率",
+          "value": 2.25,
+          "date": "2026-06-17",
+          "unit": "%",
+          "signal": {
+            "6m_change_pp": 0.25
+          }
+        },
+        {
+          "id": "bis_tc_ea_gdp",
+          "name": "BIS 欧元区私人非金融信贷/GDP",
+          "value": 153.6,
+          "date": "2025-10-01",
+          "unit": "% GDP",
+          "signal": {
+            "4q_change_pp": -2.7
+          }
+        },
+        {
+          "id": "oecd_share_ea20",
+          "name": "OECD 欧元区股价指数（STOXX 代理）",
+          "value": 185.2148,
+          "date": "2026-06-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": 0.0
+          }
+        },
+        {
+          "id": "bis_eer_eur",
+          "name": "BIS 欧元名义有效汇率",
+          "value": 108.77,
+          "date": "2026-06-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change_pct": -0.658
+          }
+        },
+        {
+          "id": "ecb_hicp_yoy",
+          "name": "ECB HICP 通胀同比",
+          "value": 2.8,
+          "date": "2026-06-01",
+          "unit": "%"
+        },
+        {
+          "id": "ecb_m3_idx",
+          "name": "ECB M3 货币总量指数",
+          "value": 186.1581,
+          "date": "2026-05-01",
+          "unit": "指数"
+        },
+        {
+          "id": "ecb_loan_idx",
+          "name": "ECB 非金融企业贷款指数",
+          "value": 128.4323,
+          "date": "2026-05-01",
+          "unit": "指数"
+        }
+      ],
+      "light": "orange",
+      "summary": "欧元区：增长平稳、信贷走弱、市场走强，区域橙灯",
+      "degraded": []
+    },
+    "china": {
+      "status": "ok",
+      "cycle": {
+        "growth": "neutral",
+        "policy": "neutral",
+        "credit": "up",
+        "market": "up",
+        "fx": "up"
+      },
+      "indicators": [
+        {
+          "id": "oecd_cli_cn",
+          "name": "OECD 中国综合领先指标 CLI",
+          "value": 98.5677,
+          "date": "2026-06-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.114
+          }
+        },
+        {
+          "id": "bis_policy_cn",
+          "name": "BIS 中国央行政策利率",
+          "value": 3.0,
+          "date": "2026-06-01",
+          "unit": "%",
+          "signal": {
+            "6m_change_pp": 0.0
+          }
+        },
+        {
+          "id": "bis_tc_cn_gdp",
+          "name": "BIS 中国私人非金融信贷/GDP",
+          "value": 200.8,
+          "date": "2025-10-01",
+          "unit": "% GDP",
+          "signal": {
+            "4q_change_pp": 2.9
+          }
+        },
+        {
+          "id": "oecd_share_cn",
+          "name": "OECD 中国股价指数（A 股代理）",
+          "value": 110.0066,
+          "date": "2026-06-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -1.93
+          }
+        },
+        {
+          "id": "bis_eer_cn",
+          "name": "BIS 人民币名义有效汇率",
+          "value": 113.62,
+          "date": "2026-06-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change_pct": 2.37
+          }
+        },
+        {
+          "id": "oecd_bci_cn",
+          "name": "OECD 中国商业信心指数 BCI",
+          "value": 98.8054,
+          "date": "2026-05-01",
+          "unit": "指数"
+        },
+        {
+          "id": "bis_spp_cn",
+          "name": "BIS 中国住宅房价指数",
+          "value": 113.9785,
+          "date": "2026-01-01",
+          "unit": "指数"
+        }
+      ],
+      "light": "green",
+      "summary": "中国：增长平稳、信贷走强、市场走强，区域绿灯",
+      "degraded": []
+    },
+    "japan": {
+      "status": "ok",
+      "cycle": {
+        "growth": "neutral",
+        "policy": "down",
+        "credit": "neutral",
+        "market": "neutral",
+        "fx": "neutral"
+      },
+      "indicators": [
+        {
+          "id": "oecd_cli_jp",
+          "name": "OECD 日本综合领先指标 CLI",
+          "value": 100.2981,
+          "date": "2026-06-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": 0.144
+          }
+        },
+        {
+          "id": "bis_policy_jp",
+          "name": "BIS 日本央行政策利率",
+          "value": 1.0,
+          "date": "2026-06-01",
+          "unit": "%",
+          "signal": {
+            "6m_change_pp": 0.25
+          }
+        },
+        {
+          "id": "bis_tc_jp_gdp",
+          "name": "BIS 日本私人非金融信贷/GDP",
+          "value": 175.1,
+          "date": "2025-10-01",
+          "unit": "% GDP",
+          "signal": {
+            "4q_change_pp": 0.8
+          }
+        },
+        {
+          "id": "fred_nikkei225",
+          "name": "日经 225 指数",
+          "value": 64611.15,
+          "date": "2026-07-24",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -10.72
+          }
+        },
+        {
+          "id": "bis_eer_jp",
+          "name": "BIS 日元名义有效汇率",
+          "value": 68.03,
+          "date": "2026-06-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change_pct": -1.534
+          }
+        },
+        {
+          "id": "oecd_bci_jp",
+          "name": "OECD 日本商业信心指数 BCI",
+          "value": 101.3623,
+          "date": "2026-06-01",
+          "unit": "指数"
+        },
+        {
+          "id": "bis_spp_jp",
+          "name": "BIS 日本住宅房价指数",
+          "value": 144.6454,
+          "date": "2025-10-01",
+          "unit": "指数"
+        }
+      ],
+      "light": "yellow",
+      "summary": "日本：增长平稳、信贷平稳、市场平稳，区域黄灯",
+      "degraded": []
+    },
+    "korea": {
+      "status": "ok",
+      "cycle": {
+        "growth": "up",
+        "policy": "neutral",
+        "credit": "down",
+        "market": "down",
+        "fx": "down"
+      },
+      "indicators": [
+        {
+          "id": "oecd_cli_kr",
+          "name": "OECD 韩国综合领先指标 CLI",
+          "value": 102.8698,
+          "date": "2026-06-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": 0.868
+          }
+        },
+        {
+          "id": "bis_policy_kr",
+          "name": "BIS 韩国央行政策利率",
+          "value": 2.5,
+          "date": "2026-06-01",
+          "unit": "%",
+          "signal": {
+            "6m_change_pp": 0.0
+          }
+        },
+        {
+          "id": "bis_tc_kr_gdp",
+          "name": "BIS 韩国私人非金融信贷/GDP",
+          "value": 199.0,
+          "date": "2025-10-01",
+          "unit": "% GDP",
+          "signal": {
+            "4q_change_pp": -1.3
+          }
+        },
+        {
+          "id": "fred_sox",
+          "name": "费城半导体指数 SOX / OECD 韩国股价指数",
+          "value": 11818.89,
+          "date": "2026-07-24",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -19.24
+          }
+        },
+        {
+          "id": "bis_eer_kr",
+          "name": "BIS 韩元名义有效汇率",
+          "value": 81.99,
+          "date": "2026-06-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change_pct": -2.821
+          }
+        },
+        {
+          "id": "oecd_bci_kr",
+          "name": "OECD 韩国商业信心指数 BCI",
+          "value": 99.371,
+          "date": "2026-06-01",
+          "unit": "指数"
+        },
+        {
+          "id": "bis_spp_kr",
+          "name": "BIS 韩国住宅房价指数",
+          "value": 144.8397,
+          "date": "2026-01-01",
+          "unit": "指数"
+        }
+      ],
+      "light": "red",
+      "summary": "韩国：增长走强、信贷走弱、市场走弱，区域红灯",
+      "degraded": []
+    }
   }
 }
