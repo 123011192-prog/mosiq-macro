@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+import type { CSSProperties } from 'react'
 import type { Light, RegionSnapshot, Snapshot } from '../types/snapshot'
 import { useSnapshot } from '../hooks/use-snapshot'
 import '../App.css'
@@ -40,7 +42,7 @@ const CYCLE_LABELS: Record<(typeof CYCLE_KEYS)[number], string> = {
   market_stress: '市场压力',
 }
 
-/** 数据缺失时的示例快照（标注"示例数据"，与看板行为一致）。 */
+/** 数据加载失败时的示例快照（显著标注"示例数据"，仅作兜底展示）。 */
 const SAMPLE: Snapshot = {
   as_of: '2026-07-25',
   global_light: 'yellow',
@@ -150,6 +152,76 @@ function LightDot({ light, big }: { light: Light; big?: boolean }) {
   return <span className={`px ${big ? 'big ' : ''}${light}`} aria-hidden="true" />
 }
 
+/* ── 动效辅助 ───────────────────────── */
+
+/** 尊重系统减弱动态偏好。 */
+function useReducedMotion(): boolean {
+  const [reduced, setReduced] = useState(
+    () =>
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+  )
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const onChange = () => setReduced(mq.matches)
+    mq.addEventListener('change', onChange)
+    return () => mq.removeEventListener('change', onChange)
+  }, [])
+  return reduced
+}
+
+/** 数字滚动：数据加载完成后从 0 缓动滚动到目标值；reduced-motion 下直接呈现终值。 */
+function CountUp({ value, format }: { value: number; format: (v: number) => string }) {
+  const reduced = useReducedMotion()
+  const [display, setDisplay] = useState(() => (reduced ? value : 0))
+  useEffect(() => {
+    if (reduced) {
+      setDisplay(value)
+      return
+    }
+    const duration = 850
+    const t0 = performance.now()
+    let raf = 0
+    const tick = (t: number) => {
+      const p = Math.min(1, (t - t0) / duration)
+      setDisplay(value * (1 - Math.pow(1 - p, 3)))
+      if (p < 1) raf = requestAnimationFrame(tick)
+    }
+    raf = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(raf)
+  }, [value, reduced])
+  return <>{format(display)}</>
+}
+
+/** 入场 stagger 序号 → CSS 变量。 */
+function reveal(i: number): CSSProperties {
+  return { '--i': i } as CSSProperties
+}
+
+/** 数据加载中的品牌骨架屏：不渲染任何灯号或数据。 */
+function LoadingScreen() {
+  return (
+    <main className="page" aria-busy="true" aria-label="数据加载中">
+      <header className="brandbar">
+        <div className="brand">
+          <img className="logo" src="assets/mosiq-logo.png" alt="MOSIQ" />
+          <div>
+            <div className="title">全球宏观罗盘 · 每日快照</div>
+            <div className="sub">AI-NATIVE DECISION INTELLIGENCE</div>
+          </div>
+        </div>
+      </header>
+      <section className="hero hero-loading">
+        <span className="loading-spinner" aria-hidden="true" />
+        <p className="loading-text">正在加载今日快照…</p>
+      </section>
+      <div className="skel skel-lg" aria-hidden="true" />
+      <div className="skel" aria-hidden="true" />
+      <div className="skel" aria-hidden="true" />
+    </main>
+  )
+}
+
 /* ── 全球区域面板（美国以外） ───────────────────── */
 const REGION_ORDER = ['euro_area', 'china', 'japan', 'korea'] as const
 const REGION_NAMES: Record<string, string> = {
@@ -236,6 +308,11 @@ function RegionCard({ regionKey, region }: { regionKey: string; region: RegionSn
 
 export default function Home() {
   const { snapshot, briefs, loading, error } = useSnapshot()
+
+  // 数据未就位：只显示品牌加载态，绝不渲染示例灯号，避免灯号跳变。
+  if (loading) return <LoadingScreen />
+
+  // 加载结束后：有真实数据用真实数据；失败才回退到 SAMPLE 并显著标注"示例数据"。
   const isSample = !snapshot
   const m = snapshot ?? SAMPLE
   const globalLight = asLight(m.global_light)
@@ -243,13 +320,13 @@ export default function Home() {
 
   return (
     <main className="page">
-      <header className="brandbar">
+      <header className="brandbar reveal" style={reveal(0)}>
         <div className="brand">
           <img className="logo" src="assets/mosiq-logo.png" alt="MOSIQ" />
           <div>
             <div className="title">
               全球宏观罗盘 · 每日快照
-              {isSample && !loading && <span className="sample">示例数据</span>}
+              {isSample && <span className="sample">示例数据</span>}
             </div>
             <div className="sub">AI-NATIVE DECISION INTELLIGENCE</div>
           </div>
@@ -259,7 +336,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="hero" aria-label="全局风险灯号">
+      <section className="hero reveal" style={reveal(1)} aria-label="全局风险灯号">
         <div className="hero-left">
           <LightDot light={globalLight} big />
           <span className={`hero-light lv-${globalLight}`}>{LIGHT_TXT[globalLight]}</span>
@@ -269,12 +346,12 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="concl" aria-label="今日结论">
+      <section className="concl reveal" style={reveal(2)} aria-label="今日结论">
         <div className="concl-title">{conclusion(m).title}</div>
         <p className="concl-detail">{conclusion(m).detail}</p>
       </section>
 
-      <section aria-label="创始人笔记" className="card">
+      <section aria-label="创始人笔记" className="card reveal" style={reveal(3)}>
         <div className="note">
           <img className="avatar" src="assets/grace-avatar.jpg" alt="Grace Yang" />
           <div>
@@ -284,7 +361,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section aria-label="危机雷达" className="card">
+      <section aria-label="危机雷达" className="card reveal" style={reveal(4)}>
         <h2>危机雷达（四类）· 美国</h2>
         <p className="sec-note">美国金融系统四个部位的健康灯——全绿 = 没有起火迹象。</p>
         <div className="radar">
@@ -302,29 +379,46 @@ export default function Home() {
         <div className="core">
           <dl>
             <dt>Baa 利差</dt>
-            <dd>{m.core?.baa10y == null ? '—' : `${m.core.baa10y.toFixed(2)}%`}</dd>
+            <dd>
+              {m.core?.baa10y == null ? (
+                '—'
+              ) : (
+                <CountUp value={m.core.baa10y} format={(v) => `${v.toFixed(2)}%`} />
+              )}
+            </dd>
             <dd className="cap">美国低评级企业借债比国债多付的利息，危机前会快速飙升</dd>
           </dl>
           <dl>
             <dt>历史分位</dt>
-            <dd>{m.core?.baa10y_pct == null ? '—' : `${m.core.baa10y_pct.toFixed(0)}%`}</dd>
+            <dd>
+              {m.core?.baa10y_pct == null ? (
+                '—'
+              ) : (
+                <CountUp value={m.core.baa10y_pct} format={(v) => `${v.toFixed(0)}%`} />
+              )}
+            </dd>
             <dd className="cap">当前利差在历史中的位置，越高越危险，≥70% 触发黄灯</dd>
           </dl>
           <dl>
             <dt>10Y–3M 曲线</dt>
             <dd>
-              {m.core?.curve_10y3m == null
-                ? '—'
-                : `${m.core.curve_10y3m > 0 ? '+' : ''}${m.core.curve_10y3m.toFixed(2)}${
-                    m.core.curve_inverted ? '（倒挂）' : ''
-                  }`}
+              {m.core?.curve_10y3m == null ? (
+                '—'
+              ) : (
+                <CountUp
+                  value={m.core.curve_10y3m}
+                  format={(v) =>
+                    `${v > 0 ? '+' : ''}${v.toFixed(2)}${m.core?.curve_inverted ? '（倒挂）' : ''}`
+                  }
+                />
+              )}
             </dd>
             <dd className="cap">长短期国债利差，变成负数（倒挂）是最可靠的衰退预警之一</dd>
           </dl>
         </div>
       </section>
 
-      <section aria-label="周期状态" className="card">
+      <section aria-label="周期状态" className="card reveal" style={reveal(5)}>
         <h2>六维周期状态 · 美国</h2>
         <p className="sec-note">美国经济现在的六项体温——向上 / 中性 / 向下，一眼看清方向。</p>
         <div className="cyc">
@@ -343,7 +437,7 @@ export default function Home() {
       </section>
 
       {m.regions && REGION_ORDER.some((k) => m.regions?.[k]) && (
-        <section aria-label="全球区域面板" className="card">
+        <section aria-label="全球区域面板" className="card reveal" style={reveal(6)}>
           <h2>全球区域面板 · 美国以外</h2>
           <p className="region-lead">
             全球灯号由美国核心引擎判定；这里的区域面板提供美国以外的风险视角。
@@ -357,7 +451,7 @@ export default function Home() {
         </section>
       )}
 
-      <div className="grid-2">
+      <div className="grid-2 reveal" style={reveal(7)}>
         <section aria-label="跨资产确认" className="card">
           <h2>跨资产确认</h2>
           <ul className="cf">
@@ -385,7 +479,7 @@ export default function Home() {
       </div>
 
       {briefs && briefs.items.length > 0 && (
-        <section aria-label="今日事件" className="card">
+        <section aria-label="今日事件" className="card reveal" style={reveal(8)}>
           <h2>今日事件 · worldmonitor 新闻雷达</h2>
           <ul className="briefs">
             {briefs.items.map((b, i) => (
@@ -404,7 +498,7 @@ export default function Home() {
         </section>
       )}
 
-      <section aria-label="灯号使用说明" className="card guide">
+      <section aria-label="灯号使用说明" className="card guide reveal" style={reveal(9)}>
         <h2>这个盘面怎么用</h2>
         <p className="guide-lead">每天早上回答一个问题：今天全球金融系统有没有正在酝酿的危机？按灯号行动——</p>
         <ul className="guide-list">
@@ -418,7 +512,7 @@ export default function Home() {
         <p className="guide-note">以上为系统性规则的方向性参考，不构成个性化投资建议。</p>
       </section>
 
-      <footer className="foot">
+      <footer className="foot reveal" style={reveal(10)}>
         <span>{healthText(m)}</span>
         <a className="news" href={newsLink} target="_blank" rel="noopener noreferrer">
           新闻雷达 worldmonitor ↗

@@ -503,3 +503,193 @@ a.news:focus-visible {
   color: var(--ink-4);
   text-align: right;
 }
+
+/* ════════════════════════════════════════════════════
+   科技感动效（克制版 · MOSIQ 蓝白调性）
+   全部尊重 prefers-reduced-motion: reduce
+   ════════════════════════════════════════════════════ */
+
+/* ── 1. 入场动效：staggered fade-in + 轻微上移 ── */
+@keyframes mosiq-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.reveal {
+  animation: mosiq-fade-up 0.55s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation-delay: calc(var(--i, 0) * 70ms);
+}
+
+/* ── 2. 灯号呼吸：柔和脉冲光晕，颜色随灯号等级 ── */
+.px.green { --glow-rgb: 22, 163, 74; }
+.px.yellow { --glow-rgb: 217, 119, 6; }
+.px.orange { --glow-rgb: 234, 88, 12; }
+.px.red { --glow-rgb: 220, 38, 38; }
+
+@keyframes mosiq-breathe {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(var(--glow-rgb), 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(var(--glow-rgb), 0);
+  }
+}
+.px.green,
+.px.yellow,
+.px.orange,
+.px.red {
+  animation: mosiq-breathe 3.2s ease-in-out infinite;
+}
+.px.big.green,
+.px.big.yellow,
+.px.big.orange,
+.px.big.red {
+  animation-duration: 2.6s;
+}
+@keyframes mosiq-breathe-big {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(var(--glow-rgb), 0.45);
+  }
+  50% {
+    box-shadow: 0 0 14px 3px rgba(var(--glow-rgb), 0.28);
+  }
+}
+.px.big.green,
+.px.big.yellow,
+.px.big.orange,
+.px.big.red {
+  animation-name: mosiq-breathe-big;
+}
+
+/* ── 3. Hero 背景微动效：品牌蓝渐变光晕缓慢漂移 ── */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  top: -150px;
+  right: -90px;
+  background: radial-gradient(
+    circle,
+    rgba(10, 132, 255, 0.13) 0%,
+    rgba(10, 132, 255, 0) 65%
+  );
+  pointer-events: none;
+  animation: mosiq-hero-drift 14s ease-in-out infinite alternate;
+}
+.hero > * {
+  position: relative;
+}
+@keyframes mosiq-hero-drift {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(-48px, 28px) scale(1.12);
+  }
+}
+
+/* ── 4. hover 微交互：轻微浮起 ── */
+.card,
+.region-card,
+.radar .cell,
+.cyc .m {
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(22, 35, 63, 0.06);
+  border-color: #d6e3f3;
+}
+.radar .cell:hover,
+.cyc .m:hover,
+.region-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(22, 35, 63, 0.05);
+}
+.grid-2 .card:hover {
+  transform: none;
+  box-shadow: 0 6px 18px rgba(22, 35, 63, 0.05);
+}
+
+/* ── 5. 加载态：品牌骨架屏（无灯号、无数据） ── */
+.hero-loading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 96px;
+}
+.loading-spinner {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2.5px solid rgba(10, 132, 255, 0.18);
+  border-top-color: var(--mosiq-blue);
+  animation: mosiq-spin 0.9s linear infinite;
+}
+@keyframes mosiq-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loading-text {
+  margin: 0;
+  font-size: 14px;
+  color: var(--ink-3);
+}
+.skel {
+  margin-top: 14px;
+  height: 84px;
+  border-radius: 14px;
+  background: linear-gradient(
+    90deg,
+    #edf2f8 25%,
+    #f7fafd 50%,
+    #edf2f8 75%
+  );
+  background-size: 200% 100%;
+  animation: mosiq-shimmer 1.5s ease-in-out infinite;
+}
+.skel-lg {
+  height: 110px;
+}
+@keyframes mosiq-shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
+/* ── 6. 减弱动态偏好：关闭全部动画与过渡 ── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .px,
+  .hero::before,
+  .loading-spinner,
+  .skel {
+    animation: none !important;
+  }
+  .card,
+  .region-card,
+  .radar .cell,
+  .cyc .m {
+    transition: none !important;
+  }
+}
