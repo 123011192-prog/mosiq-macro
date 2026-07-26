@@ -2,6 +2,19 @@ import { useEffect, useState } from 'react'
 import type { CSSProperties } from 'react'
 import type { Light, RegionSnapshot, Snapshot } from '../types/snapshot'
 import { useSnapshot } from '../hooks/use-snapshot'
+import { useReducedMotion } from '../hooks/use-reduced-motion'
+import RiskGauge from '../components/RiskGauge'
+import WorldDotMap from '../components/WorldDotMap'
+import {
+  asLight,
+  DIR_ARROW,
+  DIR_TXT,
+  LIGHT_SHORT,
+  REGION_CYCLE_KEYS,
+  REGION_CYCLE_LABELS,
+  REGION_NAMES,
+  REGION_ORDER,
+} from '../components/region-shared'
 import '../App.css'
 
 const LIGHT_TXT: Record<Light, string> = {
@@ -10,13 +23,6 @@ const LIGHT_TXT: Record<Light, string> = {
   orange: '橙灯 · 警戒',
   red: '红灯 · 高危',
   unknown: '未知',
-}
-const LIGHT_SHORT: Record<Light, string> = {
-  green: '绿',
-  yellow: '黄',
-  orange: '橙',
-  red: '红',
-  unknown: '—',
 }
 const CYCLE_TXT: Record<string, string> = {
   up: '上行',
@@ -59,12 +65,6 @@ const SAMPLE: Snapshot = {
   advice: [{ text: '维持基准配置，关注信用利差走向；黄灯期间不加杠杆。', confidence: '中' }],
   health: { data_asof: '2026-07-24', stale_count: 0, degraded: [] },
   news_link: 'https://finance.worldmonitor.app',
-}
-
-function asLight(value: string | undefined): Light {
-  return value === 'green' || value === 'yellow' || value === 'orange' || value === 'red'
-    ? value
-    : 'unknown'
 }
 
 /** 今日结论：把灯号 + 核心信号翻译成大白话，给非专业读者一个明确 takeaway。 */
@@ -148,27 +148,11 @@ const LIGHT_GUIDE: Array<{ light: Light; text: string }> = [
   { light: 'red', text: '红灯·高危：防御姿态，等待系统解除信号' },
 ]
 
-function LightDot({ light, big }: { light: Light; big?: boolean }) {
-  return <span className={`px ${big ? 'big ' : ''}${light}`} aria-hidden="true" />
+function LightDot({ light }: { light: Light }) {
+  return <span className={`px ${light}`} aria-hidden="true" />
 }
 
 /* ── 动效辅助 ───────────────────────── */
-
-/** 尊重系统减弱动态偏好。 */
-function useReducedMotion(): boolean {
-  const [reduced, setReduced] = useState(
-    () =>
-      typeof window !== 'undefined' &&
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-  )
-  useEffect(() => {
-    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
-    const onChange = () => setReduced(mq.matches)
-    mq.addEventListener('change', onChange)
-    return () => mq.removeEventListener('change', onChange)
-  }, [])
-  return reduced
-}
 
 /** 数字滚动：数据加载完成后从 0 缓动滚动到目标值；reduced-motion 下直接呈现终值。 */
 function CountUp({ value, format }: { value: number; format: (v: number) => string }) {
@@ -204,7 +188,7 @@ function LoadingScreen() {
     <main className="page" aria-busy="true" aria-label="数据加载中">
       <header className="brandbar">
         <div className="brand">
-          <img className="logo" src="assets/mosiq-logo.png" alt="MOSIQ" />
+          <img className="logo" src="assets/mosiq-mark.png" alt="MOSIQ" />
           <div>
             <div className="title">全球宏观罗盘 · 每日快照</div>
             <div className="sub">AI-NATIVE DECISION INTELLIGENCE</div>
@@ -223,29 +207,6 @@ function LoadingScreen() {
 }
 
 /* ── 全球区域面板（美国以外） ───────────────────── */
-const REGION_ORDER = ['euro_area', 'china', 'japan', 'korea'] as const
-const REGION_NAMES: Record<string, string> = {
-  euro_area: '欧元区',
-  china: '中国',
-  japan: '日本',
-  korea: '韩国',
-}
-const REGION_CYCLE_KEYS = ['growth', 'policy', 'credit', 'market', 'fx'] as const
-const REGION_CYCLE_LABELS: Record<(typeof REGION_CYCLE_KEYS)[number], string> = {
-  growth: '增长',
-  policy: '政策',
-  credit: '信贷',
-  market: '市场',
-  fx: '汇率',
-}
-const DIR_TXT: Record<string, string> = {
-  up: '上行',
-  neutral: '中性',
-  down: '下行',
-  degraded: '数据降级',
-}
-const DIR_ARROW: Record<string, string> = { up: '↑', neutral: '→', down: '↓', degraded: '—' }
-
 function fmtRegionValue(v: number | null, unit?: string): string {
   if (v == null) return '—'
   const abs = Math.abs(v)
@@ -258,13 +219,21 @@ function fmtRegionValue(v: number | null, unit?: string): string {
   return unit && unit !== '指数' && unit !== '指数/点位' ? `${txt} ${unit}` : txt
 }
 
-function RegionCard({ regionKey, region }: { regionKey: string; region: RegionSnapshot }) {
+function RegionCard({
+  regionKey,
+  region,
+  active,
+}: {
+  regionKey: string
+  region: RegionSnapshot
+  active?: boolean
+}) {
   const light = asLight(region.light)
   const signalInds = (region.indicators || []).filter(
     (ind) => ind.signal && Object.keys(ind.signal).length > 0,
   )
   return (
-    <div className="region-card">
+    <div className={`region-card${active ? ' active' : ''}`}>
       <div className="region-head">
         <span className="region-name">{REGION_NAMES[regionKey] || regionKey}</span>
         <span className="region-light">
@@ -308,6 +277,7 @@ function RegionCard({ regionKey, region }: { regionKey: string; region: RegionSn
 
 export default function Home() {
   const { snapshot, briefs, loading, error } = useSnapshot()
+  const [activeRegion, setActiveRegion] = useState<string | null>(null)
 
   // 数据未就位：只显示品牌加载态，绝不渲染示例灯号，避免灯号跳变。
   if (loading) return <LoadingScreen />
@@ -322,7 +292,7 @@ export default function Home() {
     <main className="page">
       <header className="brandbar reveal" style={reveal(0)}>
         <div className="brand">
-          <img className="logo" src="assets/mosiq-logo.png" alt="MOSIQ" />
+          <img className="logo" src="assets/mosiq-mark.png" alt="MOSIQ" />
           <div>
             <div className="title">
               全球宏观罗盘 · 每日快照
@@ -338,12 +308,14 @@ export default function Home() {
 
       <section className="hero reveal" style={reveal(1)} aria-label="全局风险灯号">
         <div className="hero-left">
-          <LightDot light={globalLight} big />
-          <span className={`hero-light lv-${globalLight}`}>{LIGHT_TXT[globalLight]}</span>
+          <RiskGauge light={globalLight} date={m.as_of} />
+          <div className="hero-text">
+            <span className={`hero-light lv-${globalLight}`}>{LIGHT_TXT[globalLight]}</span>
+            <p className="hero-sub">
+              BAA10Y 核心分位 + 10Y–3M 曲线为主触发器，复杂引擎为确认层 · 规则冻结 · 证据链可审计
+            </p>
+          </div>
         </div>
-        <p className="hero-sub">
-          BAA10Y 核心分位 + 10Y–3M 曲线为主触发器，复杂引擎为确认层 · 规则冻结 · 证据链可审计
-        </p>
       </section>
 
       <section className="concl reveal" style={reveal(2)} aria-label="今日结论">
@@ -443,9 +415,20 @@ export default function Home() {
             全球灯号由美国核心引擎判定；这里的区域面板提供美国以外的风险视角。
             数据来自 OECD / BIS / 各国央行，BIS 信贷数据滞后 2–3 个季度属正常现象——每条读数旁都标注了数据日期。
           </p>
+          <WorldDotMap
+            regions={m.regions!}
+            order={REGION_ORDER}
+            active={activeRegion}
+            onActive={setActiveRegion}
+          />
           <div className="region-grid">
             {REGION_ORDER.filter((k) => m.regions?.[k]).map((k) => (
-              <RegionCard key={k} regionKey={k} region={m.regions![k]} />
+              <RegionCard
+                key={k}
+                regionKey={k}
+                region={m.regions![k]}
+                active={activeRegion === k}
+              />
             ))}
           </div>
         </section>

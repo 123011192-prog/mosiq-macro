@@ -90,10 +90,15 @@ body {
 .hero-left {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.hero-text {
+  min-width: 200px;
+  flex: 1;
 }
 .hero-light {
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 1.15;
   font-variant-numeric: tabular-nums;
@@ -112,12 +117,6 @@ body {
   border-radius: 3px;
   vertical-align: -1px;
   margin-inline-end: 7px;
-}
-.px.big {
-  width: 20px;
-  height: 20px;
-  border-radius: 5px;
-  vertical-align: -2px;
 }
 .px.green { background: var(--green); }
 .px.yellow { background: var(--yellow); }
@@ -546,26 +545,72 @@ a.news:focus-visible {
 .px.red {
   animation: mosiq-breathe 3.2s ease-in-out infinite;
 }
-.px.big.green,
-.px.big.yellow,
-.px.big.orange,
-.px.big.red {
-  animation-duration: 2.6s;
+
+/* ── 2b. 圆环仪表盘（全局灯号） ── */
+.gauge {
+  position: relative;
+  width: 168px;
+  height: 168px;
+  flex: 0 0 auto;
+  border-radius: 50%;
 }
-@keyframes mosiq-breathe-big {
+.gauge-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.gauge-track {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 14;
+}
+.gauge-arc {
+  fill: none;
+  stroke-width: 14;
+  stroke-linecap: round;
+}
+.arc-green { stroke: var(--green); }
+.arc-yellow { stroke: var(--yellow); }
+.arc-orange { stroke: var(--orange); }
+.arc-red { stroke: var(--red); }
+.arc-unknown { stroke: var(--ink-4); }
+.gauge-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+.gauge-word {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.gauge-date {
+  font-size: 10.5px;
+  color: var(--ink-3);
+}
+/* 呼吸光晕：颜色随灯号（沿用 --glow-rgb 体系） */
+.gauge-green { --glow-rgb: 22, 163, 74; }
+.gauge-yellow { --glow-rgb: 217, 119, 6; }
+.gauge-orange { --glow-rgb: 234, 88, 12; }
+.gauge-red { --glow-rgb: 220, 38, 38; }
+.gauge-green,
+.gauge-yellow,
+.gauge-orange,
+.gauge-red {
+  animation: mosiq-gauge-breathe 3.4s ease-in-out infinite;
+}
+@keyframes mosiq-gauge-breathe {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(var(--glow-rgb), 0.45);
+    box-shadow: 0 0 0 0 rgba(var(--glow-rgb), 0.28);
   }
   50% {
-    box-shadow: 0 0 14px 3px rgba(var(--glow-rgb), 0.28);
+    box-shadow: 0 0 26px 5px rgba(var(--glow-rgb), 0.18);
   }
-}
-.px.big.green,
-.px.big.yellow,
-.px.big.orange,
-.px.big.red {
-  animation-name: mosiq-breathe-big;
 }
 
 /* ── 3. Hero 背景微动效：品牌蓝渐变光晕缓慢漂移 ── */
@@ -681,15 +726,135 @@ a.news:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   .px,
+  .gauge,
   .hero::before,
   .loading-spinner,
-  .skel {
+  .skel,
+  .map-pulse::after {
     animation: none !important;
   }
   .card,
   .region-card,
   .radar .cell,
-  .cyc .m {
+  .cyc .m,
+  .map-marker .map-pulse,
+  .map-panel {
     transition: none !important;
   }
+}
+
+/* ── 点阵世界地图（全球区域面板） ─────────────── */
+.map-block {
+  margin: 2px 0 14px;
+}
+.map {
+  position: relative;
+}
+.map-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* 区域脉冲光点：颜色 = 区域灯号；按钮热区 44px，移动端可点 */
+.map-marker {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.map-marker:focus-visible {
+  outline: 2px solid var(--mosiq-blue);
+  outline-offset: -4px;
+  border-radius: 50%;
+}
+.map-pulse {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+.m-green .map-pulse { background: var(--green); --glow-rgb: 22, 163, 74; }
+.m-yellow .map-pulse { background: var(--yellow); --glow-rgb: 217, 119, 6; }
+.m-orange .map-pulse { background: var(--orange); --glow-rgb: 234, 88, 12; }
+.m-red .map-pulse { background: var(--red); --glow-rgb: 220, 38, 38; }
+.m-unknown .map-pulse { background: var(--ink-4); --glow-rgb: 138, 153, 173; }
+.map-pulse::after {
+  content: '';
+  position: absolute;
+  inset: -7px;
+  border-radius: 50%;
+  border: 2px solid rgba(var(--glow-rgb), 0.55);
+  animation: mosiq-ping 2.2s ease-out infinite;
+}
+@keyframes mosiq-ping {
+  0% {
+    transform: scale(0.55);
+    opacity: 0.9;
+  }
+  70%,
+  100% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+}
+.map-marker.on .map-pulse,
+.map-marker:hover .map-pulse {
+  transform: scale(1.35);
+  box-shadow: 0 0 0 5px rgba(var(--glow-rgb), 0.22);
+}
+
+/* 区域速览面板（hover/点击光点显示） */
+.map-panel {
+  margin: 10px 0 0;
+  padding: 13px 16px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-inline-start: 3px solid var(--ink-4);
+  border-radius: 12px;
+}
+.mp-green { border-inline-start-color: var(--green); }
+.mp-yellow { border-inline-start-color: var(--yellow); }
+.mp-orange { border-inline-start-color: var(--orange); }
+.mp-red { border-inline-start-color: var(--red); }
+.map-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.map-panel-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--mosiq-navy);
+}
+.map-panel-sum {
+  margin: 6px 0 0;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+.map-panel-cyc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--line);
+  font-size: 12px;
+}
+
+/* 地图选中区域时，下方明细卡片同步高亮 */
+.region-card.active {
+  border-color: var(--mosiq-blue);
+  box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.12);
 }
