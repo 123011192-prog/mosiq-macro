@@ -1,23 +1,23 @@
 {
-  "as_of": "2026-07-24",
+  "as_of": "2026-07-31",
   "global_light": "green",
   "lights": {
     "banking": "green",
     "credit": "green",
     "nonbank": "green",
-    "liquidity": "green"
+    "liquidity": "yellow"
   },
   "core": {
-    "baa10y": 1.58,
-    "baa10y_pct": 10.849196,
-    "curve_10y3m": 0.76,
+    "baa10y": 1.64,
+    "baa10y_pct": 13.743981,
+    "curve_10y3m": 0.86,
     "curve_inverted": false
   },
   "cycle": {
-    "growth": "up",
-    "inflation": "neutral",
+    "growth": "degraded",
+    "inflation": "degraded",
     "liquidity": "neutral",
-    "credit": "neutral",
+    "credit": "degraded",
     "policy": "neutral",
     "market_stress": "degraded"
   },
@@ -43,7 +43,7 @@
       "active": false
     }
   ],
-  "founder_note": "欧元区信贷走弱、韩国信贷收缩，这是全球绿灯里最该被看见的两条裂缝。",
+  "founder_note": "数据不全的日子，少动、多看、别下注；韩国要当心",
   "advice": [
     {
       "text": "维持中性观察；触发：核心分位升至70或曲线倒挂；失效：两项条件均未持续。",
@@ -51,15 +51,17 @@
     }
   ],
   "health": {
-    "data_asof": "2026-07-23",
-    "stale_count": 9,
+    "data_asof": "2026-07-30",
+    "stale_count": 24,
     "degraded": [
-      "refresh:yahoo:GOLD_YAHOO",
-      "refresh:yahoo:GSPC_YAHOO",
+      "refresh:unexpected_failure",
+      "cycle:growth",
+      "cycle:inflation",
+      "cycle:credit",
       "cycle:market_stress",
       "radar:banking",
       "radar:nonbank",
-      "regions:japan"
+      "regions:china"
     ]
   },
   "regions": {
@@ -126,22 +128,22 @@
         {
           "id": "ecb_hicp_yoy",
           "name": "ECB HICP 通胀同比",
-          "value": 2.8,
-          "date": "2026-06-01",
+          "value": 2.9,
+          "date": "2026-07-01",
           "unit": "%"
         },
         {
           "id": "ecb_m3_idx",
           "name": "ECB M3 货币总量指数",
-          "value": 186.1581,
-          "date": "2026-05-01",
+          "value": 186.636,
+          "date": "2026-06-01",
           "unit": "指数"
         },
         {
           "id": "ecb_loan_idx",
           "name": "ECB 非金融企业贷款指数",
-          "value": 128.4323,
-          "date": "2026-05-01",
+          "value": 129.0791,
+          "date": "2026-06-01",
           "unit": "指数"
         }
       ],
@@ -150,7 +152,7 @@
       "degraded": []
     },
     "china": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "neutral",
         "policy": "neutral",
@@ -210,13 +212,6 @@
           }
         },
         {
-          "id": "oecd_bci_cn",
-          "name": "OECD 中国商业信心指数 BCI",
-          "value": 98.8054,
-          "date": "2026-05-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_cn",
           "name": "BIS 中国住宅房价指数",
           "value": 113.9785,
@@ -226,15 +221,17 @@
       ],
       "light": "green",
       "summary": "中国：增长平稳、信贷走强、市场走强，区域绿灯",
-      "degraded": []
+      "degraded": [
+        "oecd_bci_cn"
+      ]
     },
     "japan": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "neutral",
         "policy": "down",
         "credit": "neutral",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -269,6 +266,16 @@
           }
         },
         {
+          "id": "fred_nikkei225",
+          "name": "日经 225 指数",
+          "value": 64362.02,
+          "date": "2026-07-31",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -11.06
+          }
+        },
+        {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
           "value": 68.03,
@@ -294,10 +301,8 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷平稳、市场缺失，区域黄灯",
-      "degraded": [
-        "fred_nikkei225"
-      ]
+      "summary": "日本：增长平稳、信贷平稳、市场平稳，区域黄灯",
+      "degraded": []
     },
     "korea": {
       "status": "ok",
@@ -305,7 +310,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "down",
-        "market": "up",
+        "market": "down",
         "fx": "down"
       },
       "indicators": [
@@ -340,13 +345,13 @@
           }
         },
         {
-          "id": "oecd_share_kr",
+          "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 421.8348,
-          "date": "2026-06-01",
+          "value": 11311.08,
+          "date": "2026-07-31",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": 0.0
+            "drawdown_pct": -22.71
           }
         },
         {
@@ -374,8 +379,8 @@
           "unit": "指数"
         }
       ],
-      "light": "orange",
-      "summary": "韩国：增长走强、信贷走弱、市场走强，区域橙灯",
+      "light": "red",
+      "summary": "韩国：增长走强、信贷走弱、市场走弱，区域红灯",
       "degraded": []
     }
   }
