@@ -65,6 +65,27 @@ export interface RegionSnapshot {
   degraded?: string[]
 }
 
+/** 油价观察：WTI / 布伦特读数与涨跌幅。
+ * inflation_evidence 仅作证据记录，不参与六维判定。 */
+export interface OilQuote {
+  value: number | null
+  date?: string
+  change_20d_pct?: number | null
+  change_3m_pct?: number | null
+}
+
+export interface OilWatch {
+  wti?: OilQuote
+  brent?: OilQuote
+  inflation_evidence?: {
+    rule?: string
+    active?: boolean
+    wti_change_3m_pct?: number | null
+    brent_change_3m_pct?: number | null
+    note?: string
+  }
+}
+
 export interface Snapshot {
   as_of: string
   global_light: Light
@@ -82,6 +103,8 @@ export interface Snapshot {
   health?: Health
   /** 美国以外的区域风险面板（欧元区 / 中国 / 日本 / 韩国）。 */
   regions?: Record<string, RegionSnapshot>
+  /** 油价观察（WTI / 布伦特 + 通胀辅助证据）。 */
+  oil_watch?: OilWatch
   news_link?: string
 }
 

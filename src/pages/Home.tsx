@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { CSSProperties } from 'react'
-import type { Light, RegionSnapshot, Snapshot } from '../types/snapshot'
+import type { Light, OilQuote, RegionSnapshot, Snapshot } from '../types/snapshot'
 import { useSnapshot } from '../hooks/use-snapshot'
 import { useReducedMotion } from '../hooks/use-reduced-motion'
 import RiskGauge from '../components/RiskGauge'
@@ -292,6 +292,50 @@ function moodOf(gap: number): { text: string; cls: string } {
   return { text: '接近变灯', cls: 'lv-orange' }
 }
 
+/** 油价观察：变灯距离卡内的一条紧凑横条。
+ * 语义色 = 风险方向（涨=风险升温）；20 日急涨 ≥10% 触发确认时状态点点亮呼吸。 */
+function OilQuoteItem({ name, q }: { name: string; q: OilQuote }) {
+  if (q.value == null) return null
+  const chg = q.change_20d_pct
+  const chgCls =
+    chg == null ? '' : chg >= 10 ? 'oil-surge' : chg > 0 ? 'oil-up' : chg < 0 ? 'oil-down' : ''
+  return (
+    <span className="oil-q">
+      <span className="oil-q-name">{name}</span>
+      <b className="mono">{q.value.toFixed(2)}</b>
+      {chg != null && (
+        <b className={`mono ${chgCls}`}>
+          {chg > 0 ? '▲' : chg < 0 ? '▼' : ''}
+          {Math.abs(chg).toFixed(1)}%
+        </b>
+      )}
+    </span>
+  )
+}
+
+function OilStrip({ m }: { m: Snapshot }) {
+  const oil = m.oil_watch
+  if (!oil || (oil.wti?.value == null && oil.brent?.value == null)) return null
+  const surge = (m.confirmations ?? []).some((c) => c.label.includes('油价') && c.active)
+  const inflation = !!oil.inflation_evidence?.active
+  const note = inflation
+    ? '油价正在推升通胀压力'
+    : surge
+      ? '20日急涨，已计入风险确认'
+      : '地缘风险的第一管道'
+  const date = oil.wti?.date || oil.brent?.date
+  return (
+    <div className="oil-strip" aria-label="油价观察">
+      <span className={`oil-dot${surge ? ' on' : ''}`} aria-hidden="true" />
+      <span className="oil-name">油价</span>
+      <OilQuoteItem name="WTI" q={oil.wti ?? { value: null }} />
+      <OilQuoteItem name="布伦特" q={oil.brent ?? { value: null }} />
+      <span className="oil-note">{note}</span>
+      {date && <span className="oil-date mono">{date}</span>}
+    </div>
+  )
+}
+
 function ThresholdTrack({ m }: { m: Snapshot }) {
   const pct = m.core?.baa10y_pct
   const curve = m.core?.curve_10y3m
@@ -342,8 +386,9 @@ function ThresholdTrack({ m }: { m: Snapshot }) {
         {inverted
           ? `已倒挂（${curve != null ? curve.toFixed(2) : '—'}），已计入变灯确认`
           : `未倒挂（${curve != null ? `+${curve.toFixed(2)}` : '—'}），一旦倒挂即计入变灯确认`}
-        。分位与曲线均为日频 · 最近交易日。
+        。
       </p>
+      <OilStrip m={m} />
     </section>
   )
 }
@@ -456,17 +501,7 @@ export default function Home() {
 
       <ThresholdTrack m={m} />
 
-      <section aria-label="创始人笔记" className="card reveal" style={reveal(4)}>
-        <div className="note">
-          <img className="avatar" src="assets/grace-avatar.jpg" alt="Grace Yang" />
-          <div>
-            <div className="who">Grace Yang · 创始人笔记</div>
-            <blockquote>{displayNote(m)}</blockquote>
-          </div>
-        </div>
-      </section>
-
-      <section aria-label="危机雷达" className="card reveal" style={reveal(5)}>
+      <section aria-label="危机雷达" className="card reveal" style={reveal(4)}>
         <h2>危机雷达（四类）· 美国</h2>
         <p className="sec-note">美国金融系统四个部位的健康灯——全绿 = 没有起火迹象。</p>
         <div className="radar">
@@ -521,10 +556,10 @@ export default function Home() {
             <dd className="cap">长短期国债利差，变成负数（倒挂）是最可靠的衰退预警之一</dd>
           </dl>
         </div>
-        <p className="core-fresh">核心信号（Baa 利差 / 历史分位 / 10Y–3M 曲线）：日频 · 最近交易日</p>
+        <p className="core-fresh">核心信号均为日频 · 最近交易日</p>
       </section>
 
-      <section aria-label="周期状态" className="card reveal" style={reveal(6)}>
+      <section aria-label="周期状态" className="card reveal" style={reveal(5)}>
         <h2>六维周期状态 · 美国</h2>
         <p className="sec-note">美国经济现在的六项体温——向上 / 中性 / 向下，一眼看清方向。</p>
         <div className="cyc">
@@ -543,12 +578,11 @@ export default function Home() {
       </section>
 
       {m.regions && REGION_ORDER.some((k) => m.regions?.[k]) && (
-        <section aria-label="全球区域面板" className="card reveal" style={reveal(7)}>
+        <section aria-label="全球区域面板" className="card reveal" style={reveal(6)}>
           <h2>全球区域面板 · 美国以外</h2>
           <p className="region-lead">
-            全球灯号由美国核心引擎判定；这里的区域面板提供美国以外的风险视角。
-            时效提醒：市场数据为最近交易日；信贷 / 宏观数据按官方发布节奏滞后 1–2 个季度属正常现象——
-            每张卡片标注了更新频率，每条读数旁标注了数据日期。
+            全球灯号由美国核心引擎判定，此面板补充美国以外视角。信贷 / 宏观数据按官方节奏滞后
+            1–2 个季度属正常，时效已逐卡逐条标注。
           </p>
           <WorldDotMap
             regions={m.regions!}
@@ -569,7 +603,7 @@ export default function Home() {
         </section>
       )}
 
-      <div className="grid-2 reveal" style={reveal(8)}>
+      <div className="grid-2 reveal" style={reveal(7)}>
         <section aria-label="跨资产确认" className="card">
           <h2>跨资产确认</h2>
           <ul className="cf">
@@ -584,7 +618,7 @@ export default function Home() {
         </section>
 
         <section aria-label="监测建议" className="card">
-          <h2>监测建议（非个性化投资意见）</h2>
+          <h2>监测建议</h2>
           <ul className="ad">
             {(m.advice ?? []).map((item, i) => (
               <li key={i}>
@@ -595,6 +629,16 @@ export default function Home() {
           </ul>
         </section>
       </div>
+
+      <section aria-label="创始人笔记" className="card reveal" style={reveal(8)}>
+        <div className="note">
+          <img className="avatar" src="assets/grace-avatar.jpg" alt="Grace Yang" />
+          <div>
+            <div className="who">Grace Yang · 创始人笔记</div>
+            <blockquote>{displayNote(m)}</blockquote>
+          </div>
+        </div>
+      </section>
 
       {briefs && briefs.items.length > 0 && (
         <section aria-label="今日事件" className="card reveal" style={reveal(9)}>
