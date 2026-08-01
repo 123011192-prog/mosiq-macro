@@ -41,6 +41,10 @@
     {
       "label": "金涨债跌代理",
       "active": false
+    },
+    {
+      "label": "油价20日急涨≥10%",
+      "active": true
     }
   ],
   "founder_note": "数据不全的日子，少动、多看、别下注；韩国要当心",
@@ -382,6 +386,27 @@
       "light": "red",
       "summary": "韩国：增长走强、信贷走弱、市场走弱，区域红灯",
       "degraded": []
+    }
+  },
+  "oil_watch": {
+    "wti": {
+      "value": 84.25,
+      "date": "2026-07-27",
+      "change_20d_pct": 19.4,
+      "change_3m_pct": -20.05
+    },
+    "brent": {
+      "value": 91.82,
+      "date": "2026-07-27",
+      "change_20d_pct": 30.32,
+      "change_3m_pct": -22.36
+    },
+    "inflation_evidence": {
+      "rule": "油价近3个月涨幅≥+15%记为通胀上行辅助压力信号",
+      "active": false,
+      "wti_change_3m_pct": -20.05,
+      "brent_change_3m_pct": -22.36,
+      "note": "仅作证据记录：不参与 inflation 维度 up/neutral/down 判定，六维判定路径保持不变"
     }
   }
 }
