@@ -67,6 +67,7 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -76,7 +77,8 @@
       "regions:china",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -700,12 +702,12 @@
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "neutral",
         "policy": "up",
         "credit": "neutral",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -740,16 +742,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 342.7509,
-          "date": "2026-06-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -11.25
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.97,
@@ -775,8 +767,10 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长平稳、信贷平稳、市场平稳，区域绿灯",
-      "degraded": []
+      "summary": "巴西：增长平稳、信贷平稳、市场缺失，区域绿灯",
+      "degraded": [
+        "oecd_share_br"
+      ]
     }
   },
   "oil_watch": {
@@ -834,7 +828,11 @@
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
-      "us10y": null,
+      "us10y": {
+        "value": 4.745,
+        "date": "2026-07-31",
+        "source": "yahoo_gw"
+      },
       "us30y": {
         "value": 5.275,
         "date": "2026-07-31",
