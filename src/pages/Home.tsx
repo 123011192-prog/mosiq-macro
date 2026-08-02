@@ -163,6 +163,16 @@ const SAMPLE: Snapshot = {
     },
     geopolitical_note: '避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要',
   },
+  gold_watch: {
+    spot: { value: 4074.1, date: '2026-07-21', change_20d_pct: 1.5, change_3m_pct: -10.7 },
+    risk_off_signal: {
+      rule: '金价20日上涨≥8%记为避险升温信号',
+      active: false,
+      change_20d_pct: 1.5,
+      note: '仅作证据记录：不参与灯号判定，也不计入确认项计数',
+    },
+    note: '黄金是避险与去美元化的双重温度计——与实际利率和地缘局势联动解读',
+  },
   news_link: 'https://finance.worldmonitor.app',
 }
 
@@ -463,6 +473,39 @@ function RatesStrip({ m }: { m: Snapshot }) {
   )
 }
 
+/** 黄金观察：与油价/美债横条同族的第三条紧凑横条（避险温度计）。
+ * 语义色 = 避险方向：20 日上涨 ≥8% 红（避险升温）、>0 橙、≤0 绿；
+ * 避险标记触发时状态点点亮呼吸。仅作证据展示，不参与灯号判定。 */
+function GoldStrip({ m }: { m: Snapshot }) {
+  const gold = m.gold_watch
+  const spot = gold?.spot
+  if (!gold || !spot || spot.value == null) return null
+  const riskOff = !!gold.risk_off_signal?.active
+  const chg = spot.change_20d_pct
+  const chgCls =
+    chg == null ? '' : chg >= 8 ? 'oil-surge' : chg > 0 ? 'oil-up' : 'oil-down'
+  const note = riskOff ? '避险升温，已作证据记录' : '避险与去美元化的温度计'
+  return (
+    <div className="oil-strip gold-strip" aria-label="黄金价格观察">
+      <span className={`oil-dot gold-dot${riskOff ? ' on' : ''}`} aria-hidden="true" />
+      <span className="oil-name">黄金</span>
+      <span className="oil-q">
+        <b className="mono">
+          {spot.value.toLocaleString('en-US', { maximumFractionDigits: 0 })}
+        </b>
+        {chg != null && (
+          <b className={`mono ${chgCls}`}>
+            {chg > 0 ? '▲' : chg < 0 ? '▼' : ''}
+            {Math.abs(chg).toFixed(1)}%（20日）
+          </b>
+        )}
+      </span>
+      <span className="oil-note">{note}</span>
+      {spot.date && <span className="oil-date mono">{spot.date}</span>}
+    </div>
+  )
+}
+
 function ThresholdTrack({ m }: { m: Snapshot }) {
   const pct = m.core?.baa10y_pct
   const curve = m.core?.curve_10y3m
@@ -517,6 +560,7 @@ function ThresholdTrack({ m }: { m: Snapshot }) {
       </p>
       <OilStrip m={m} />
       <RatesStrip m={m} />
+      <GoldStrip m={m} />
     </section>
   )
 }

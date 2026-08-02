@@ -112,6 +112,27 @@ export interface RatesWatch {
   geopolitical_note?: string
 }
 
+/** 黄金价格观察：现货读数（美元/盎司）、20 日与约 3 个月涨跌幅。
+ * risk_off_signal 仅作证据记录，不参与灯号判定与确认项计数。
+ * 数据源 Yahoo 限流时沿用本地缓存，date 可能滞后数天，如实展示。 */
+export interface GoldQuote {
+  value: number | null
+  date?: string | null
+  change_20d_pct?: number | null
+  change_3m_pct?: number | null
+}
+
+export interface GoldWatch {
+  spot?: GoldQuote
+  risk_off_signal?: {
+    rule?: string
+    active?: boolean
+    change_20d_pct?: number | null
+    note?: string
+  }
+  note?: string
+}
+
 export interface Snapshot {
   as_of: string
   global_light: Light
@@ -133,6 +154,8 @@ export interface Snapshot {
   oil_watch?: OilWatch
   /** 美债收益率观察（10Y / 30Y / 2Y + 2s10s 利差 + 长端异动标记）。 */
   rates_watch?: RatesWatch
+  /** 黄金价格观察（现货 + 20日/3个月涨幅 + 避险升温标记）。 */
+  gold_watch?: GoldWatch
   news_link?: string
 }
 

@@ -1110,3 +1110,15 @@ a.news:focus-visible {
   border-color: var(--red);
   --glow-rgb: 220, 38, 38;
 }
+
+/* ── 黄金横条：与油价/美债横条同族的第三条，状态点用橙色语义（避险升温） ── */
+.gold-strip {
+  margin-top: 8px;
+  padding-top: 0;
+  border-top: none;
+}
+.gold-dot.on {
+  background: var(--orange);
+  border-color: var(--orange);
+  --glow-rgb: 234, 88, 12;
+}
