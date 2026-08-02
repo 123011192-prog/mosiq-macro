@@ -67,7 +67,6 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -77,8 +76,7 @@
       "regions:china",
       "regions:canada",
       "regions:australia",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -702,12 +700,12 @@
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "neutral",
         "policy": "up",
         "credit": "neutral",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -742,6 +740,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 342.7509,
+          "date": "2026-06-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -11.25
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.97,
@@ -767,10 +775,8 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长平稳、信贷平稳、市场缺失，区域绿灯",
-      "degraded": [
-        "oecd_share_br"
-      ]
+      "summary": "巴西：增长平稳、信贷平稳、市场平稳，区域绿灯",
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -829,14 +835,14 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.745,
+        "value": 4.75,
         "date": "2026-07-31",
-        "source": "yahoo_gw"
+        "source": "tushare"
       },
       "us30y": {
-        "value": 5.275,
+        "value": 5.27,
         "date": "2026-07-31",
-        "source": "yahoo_gw"
+        "source": "tushare"
       }
     }
   },
@@ -858,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "英媒称日本过度押注AI出口，产业空心化及对中美依赖风险上升 - jpchinapress.com",
-      "source": "jpchinapress.com",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOTkpPRlFTQVBKSzRXNlMtQmxTVlpiV1hIbW8zVkp6ZXhiS2ZzVE5vcTRkVl95ZHc5RVNtTVg0dEcxQ2JPNnlPeDNtVHJLWXBYRlZGWUxvM2FpbEVuNDlNU3VScWsxeVE4OXEyTHhHZWdNMUtOaDdCa2szNG5EWTh2WklPS0tNNTFyUGc?oc=5",
-      "published": "2026-08-02T07:40:03+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "21评论丨韩股巨震，杠杆惹的祸- 21世纪经济报道 - 21财经",
-      "source": "21财经",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQMlRZZ2RBaXI5NjFPMElENmpQdlN3MGR0bXg0N2FHQkYwVlNpa2Fka05zczJqNHFoYkh6WFBkdlA4Mjc0WVAwMklNcDlXaEJSYzhvMEVsWnJnT2s1N0FZejFKaFh6RmhpZGhGM1BJLWxma1FlaFRVSThXYjFSOEhHUnlXTlRVU3RmazlF?oc=5",
-      "published": "2026-08-02T06:34:02+00:00"
-    },
-    {
       "category": "货币政策",
-      "title": "比特币在亚洲交易时段走弱，因美联储利率决议即将公布 - Moomoo",
-      "source": "Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOSmk3bHZDY0NUZTZLN1pLbGdFLUJjU1dfeko1MHhzQkQ1czJ1Vnc4OEhqMDFYU3ZVM180dXVqb1VPdUtoMHhyVVpLRU9rZDRGeXFrdmI2N0FYRENRTVBSZHBXWmVkNElVT0txVDYyV2tFNU9jUWg2WmFYbWdfbDZaeVA2YTJXNmN2MWllMVlaSmNHdVF0bmdiYUZRRUVtWGNuYmFiWVU5a3Q?oc=5",
-      "published": "2026-08-02T05:34:13+00:00"
+      "title": "Gold , silver seen range - bound as focus shifts to US job numbers , Fed cues : Analysts",
+      "source": "thehindubusinessline.com",
+      "url": "https://www.thehindubusinessline.com/markets/gold/gold-silver-seen-range-bound-as-focus-shifts-to-us-job-numbers-fed-cues-analysts/article71297626.ece",
+      "published": "2026-08-02T12:00:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
+      "title": "Improved dollar supply fuels won strongest monthly gain since 2009",
+      "source": "koreatimes.co.kr",
+      "url": "https://www.koreatimes.co.kr/economy/20260802/improved-dollar-supply-fuels-wons-strongest-monthly-gain-since-2009",
+      "published": "2026-08-02T10:00:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
+      "title": "ideaForge Technology Receives In - Principle Approval for ₹151 Crore Financial Assistance from Technology Development Board ( TDB )",
+      "source": "equitybulls.com",
+      "url": "https://www.equitybulls.com/category.php?id=373814",
+      "published": "2026-08-01T11:15:00+00:00"
     }
   ]
 }
