@@ -38,6 +38,18 @@ export const REGION_NAMES: Record<string, string> = {
   india: '印度',
   brazil: '巴西',
 }
+/** 全球灯带：区域 → 国旗 emoji。 */
+export const REGION_FLAGS: Record<string, string> = {
+  euro_area: '🇪🇺',
+  china: '🇨🇳',
+  japan: '🇯🇵',
+  korea: '🇰🇷',
+  uk: '🇬🇧',
+  canada: '🇨🇦',
+  australia: '🇦🇺',
+  india: '🇮🇳',
+  brazil: '🇧🇷',
+}
 /** 区域在点阵世界地图上的标记位置（经度, 纬度，取各国经济中心）。 */
 export const REGION_GEO: Record<string, [number, number]> = {
   euro_area: [10, 50],

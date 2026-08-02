@@ -9,15 +9,15 @@
   },
   "core": {
     "baa10y": 1.64,
-    "baa10y_pct": 13.749498,
+    "baa10y_pct": 14.762421,
     "curve_10y3m": 0.86,
     "curve_inverted": false
   },
   "cycle": {
-    "growth": "degraded",
-    "inflation": "degraded",
+    "growth": "up",
+    "inflation": "neutral",
     "liquidity": "neutral",
-    "credit": "degraded",
+    "credit": "neutral",
     "policy": "neutral",
     "market_stress": "degraded"
   },
@@ -64,12 +64,10 @@
   ],
   "health": {
     "data_asof": "2026-07-30",
-    "stale_count": 24,
+    "stale_count": 11,
     "degraded": [
-      "refresh:unexpected_failure",
-      "cycle:growth",
-      "cycle:inflation",
-      "cycle:credit",
+      "refresh:yahoo:GOLD_YAHOO",
+      "refresh:yahoo:GSPC_YAHOO",
       "cycle:market_stress",
       "radar:banking",
       "radar:nonbank",
@@ -864,25 +862,25 @@
   },
   "world_brief": [
     {
+      "category": "科技产业链",
+      "title": "21评论丨韩股巨震，杠杆惹的祸- 21世纪经济报道 - 21财经",
+      "source": "21财经",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQMlRZZ2RBaXI5NjFPMElENmpQdlN3MGR0bXg0N2FHQkYwVlNpa2Fka05zczJqNHFoYkh6WFBkdlA4Mjc0WVAwMklNcDlXaEJSYzhvMEVsWnJnT2s1N0FZejFKaFh6RmhpZGhGM1BJLWxma1FlaFRVSThXYjFSOEhHUnlXTlRVU3RmazlF?oc=5",
+      "published": "2026-08-02T10:26:56+00:00"
+    },
+    {
       "category": "货币政策",
-      "title": "Gold , silver seen range - bound as focus shifts to US job numbers , Fed cues : Analysts",
-      "source": "thehindubusinessline.com",
-      "url": "https://www.thehindubusinessline.com/markets/gold/gold-silver-seen-range-bound-as-focus-shifts-to-us-job-numbers-fed-cues-analysts/article71297626.ece",
-      "published": "2026-08-02T12:00:00+00:00"
+      "title": "悬念拉满！美联储利率决议前夕 交易员疯狂对冲意外加息风险 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE11VXgySzhtR24zeVdIR3dmaUxiMENDaHJtaGg3eWFPS1VlRTJ6bGVlMG5WVTZIVjE1OTlhd3ZyT01BMVktcW5oTg?oc=5",
+      "published": "2026-08-02T10:24:32+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "Improved dollar supply fuels won strongest monthly gain since 2009",
-      "source": "koreatimes.co.kr",
-      "url": "https://www.koreatimes.co.kr/economy/20260802/improved-dollar-supply-fuels-wons-strongest-monthly-gain-since-2009",
-      "published": "2026-08-02T10:00:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "ideaForge Technology Receives In - Principle Approval for ₹151 Crore Financial Assistance from Technology Development Board ( TDB )",
-      "source": "equitybulls.com",
-      "url": "https://www.equitybulls.com/category.php?id=373814",
-      "published": "2026-08-01T11:15:00+00:00"
+      "category": "科技产业链",
+      "title": "全球第二，仅次于中国！2026年韩国外贸顺差，预计突破3000亿美元 - Sohu",
+      "source": "Sohu",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOUVFxM1k1U0xJTW1lWDlTTk9UX2UzaTdVd2wtLWFPNU4yTENGdEI1bEVkQ2dzSThycUJweVlTSEtsTXBXOUR1Zk5zV1AwcElFRlBzUzNfbHFFM2ZvT0xPOWJfd3ZjSzNjSzJVaDJrRnlSdTRVdVVMR3RwQm5iMkdLR0dtbXlYeGRVV0RFYw?oc=5",
+      "published": "2026-08-02T10:15:07+00:00"
     }
   ]
 }

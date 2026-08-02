@@ -1,24 +1,16 @@
 import { useEffect, useState } from 'react'
 import type { CSSProperties } from 'react'
-import type {
-  LatestQuote,
-  Light,
-  RateQuote,
-  RegionSnapshot,
-  Snapshot,
-} from '../types/snapshot'
+import type { Light, RegionSnapshot, Snapshot } from '../types/snapshot'
 import { useSnapshot } from '../hooks/use-snapshot'
 import { useReducedMotion } from '../hooks/use-reduced-motion'
 import RiskGauge from '../components/RiskGauge'
 import SentinelGauge from '../components/SentinelGauge'
-import WorldDotMap from '../components/WorldDotMap'
 import {
   asLight,
-  DIR_ARROW,
-  DIR_TXT,
   LIGHT_SHORT,
   REGION_CYCLE_KEYS,
   REGION_CYCLE_LABELS,
+  REGION_FLAGS,
   REGION_NAMES,
   REGION_ORDER,
 } from '../components/region-shared'
@@ -55,6 +47,9 @@ const CYCLE_LABELS: Record<(typeof CYCLE_KEYS)[number], string> = {
   market_stress: '市场压力',
 }
 
+/** 灯带排序权重：红 > 橙 > 黄 > 绿，同级保持原顺序（稳定排序）。 */
+const LIGHT_SEV: Record<Light, number> = { red: 0, orange: 1, yellow: 2, green: 3, unknown: 4 }
+
 /** 数据加载失败时的示例快照（显著标注"示例数据"，仅作兜底展示）。 */
 const SAMPLE_REGION: Record<string, RegionSnapshot> = {
   euro_area: {
@@ -64,7 +59,7 @@ const SAMPLE_REGION: Record<string, RegionSnapshot> = {
       { id: 'oecd_cli_eu', name: 'OECD 欧元区综合领先指标 CLI', value: 99.8, date: '2026-06-01', unit: '指数', signal: { '3m_change': 0.1 } },
     ],
     light: 'green',
-    summary: '增长动能平稳，政策路径温和。',
+    summary: '欧元区：增长平稳、信贷平稳、市场平稳，区域绿灯',
   },
   china: {
     status: 'ok',
@@ -73,7 +68,7 @@ const SAMPLE_REGION: Record<string, RegionSnapshot> = {
       { id: 'oecd_cli_cn', name: 'OECD 中国综合领先指标 CLI', value: 100.4, date: '2026-06-01', unit: '指数', signal: { '3m_change': 0.3 } },
     ],
     light: 'green',
-    summary: '政策托底延续，信贷节奏平稳。',
+    summary: '中国：增长平稳、信贷平稳、市场平稳，区域绿灯',
   },
   japan: {
     status: 'ok',
@@ -82,7 +77,7 @@ const SAMPLE_REGION: Record<string, RegionSnapshot> = {
       { id: 'oecd_cli_jp', name: 'OECD 日本综合领先指标 CLI', value: 100.1, date: '2026-06-01', unit: '指数', signal: { '3m_change': 0.2 } },
     ],
     light: 'yellow',
-    summary: '加息周期推进，日元波动加大。',
+    summary: '日本：增长平稳、信贷平稳、汇率走弱，区域黄灯',
   },
   korea: {
     status: 'ok',
@@ -91,7 +86,7 @@ const SAMPLE_REGION: Record<string, RegionSnapshot> = {
       { id: 'oecd_cli_kr', name: 'OECD 韩国综合领先指标 CLI', value: 99.2, date: '2026-06-01', unit: '指数', signal: { '3m_change': -0.6 } },
     ],
     light: 'orange',
-    summary: '出口与信贷同步走弱，需重点跟踪。',
+    summary: '韩国：增长走弱、信贷走弱、市场走弱，区域橙灯',
   },
   uk: {
     status: 'ok',
@@ -100,7 +95,7 @@ const SAMPLE_REGION: Record<string, RegionSnapshot> = {
       { id: 'oecd_cli_gb', name: 'OECD 英国综合领先指标 CLI', value: 100.2, date: '2026-06-01', unit: '指数', signal: { '3m_change': 0.2 } },
     ],
     light: 'green',
-    summary: '通胀回落，市场动能修复。',
+    summary: '英国：增长平稳、信贷平稳、市场走强，区域绿灯',
   },
   canada: {
     status: 'ok',
@@ -109,7 +104,7 @@ const SAMPLE_REGION: Record<string, RegionSnapshot> = {
       { id: 'oecd_cli_ca', name: 'OECD 加拿大综合领先指标 CLI', value: 99.9, date: '2026-06-01', unit: '指数', signal: { '3m_change': 0.0 } },
     ],
     light: 'green',
-    summary: '商品周期平稳，增长温和。',
+    summary: '加拿大：增长平稳、信贷平稳、市场平稳，区域绿灯',
   },
   australia: {
     status: 'ok',
@@ -118,7 +113,7 @@ const SAMPLE_REGION: Record<string, RegionSnapshot> = {
       { id: 'oecd_cli_au', name: 'OECD 澳大利亚综合领先指标 CLI', value: 100.0, date: '2026-06-01', unit: '指数', signal: { '3m_change': 0.1 } },
     ],
     light: 'green',
-    summary: '资源出口稳健，市场偏强。',
+    summary: '澳大利亚：增长平稳、信贷平稳、市场走强，区域绿灯',
   },
   india: {
     status: 'ok',
@@ -127,7 +122,7 @@ const SAMPLE_REGION: Record<string, RegionSnapshot> = {
       { id: 'oecd_cli_in', name: 'OECD 印度综合领先指标 CLI', value: 101.1, date: '2026-06-01', unit: '指数', signal: { '3m_change': 0.5 } },
     ],
     light: 'green',
-    summary: '高增长延续，信贷扩张积极。',
+    summary: '印度：增长走强、信贷走强、市场走强，区域绿灯',
   },
   brazil: {
     status: 'ok',
@@ -136,7 +131,7 @@ const SAMPLE_REGION: Record<string, RegionSnapshot> = {
       { id: 'oecd_cli_br', name: 'OECD 巴西综合领先指标 CLI', value: 99.7, date: '2026-06-01', unit: '指数', signal: { '3m_change': -0.2 } },
     ],
     light: 'yellow',
-    summary: '高利率压制需求，汇率承压。',
+    summary: '巴西：增长平稳、信贷平稳、汇率走弱，区域黄灯',
   },
 }
 
@@ -383,43 +378,6 @@ function LoadingScreen() {
   )
 }
 
-/* ── 全球区域面板（美国以外） ───────────────────── */
-
-/** 从指标日期推断更新频率：
- * 季度起点（1/4/7/10 月 1 日，BIS 信贷类季度频）→ 季度标签；
- * 其余月初日期（OECD CLI 等月度）→ 月度；近日期（FRED 市场类）→ 日频。 */
-function indFreq(date: string): { rank: number; label: string } | null {
-  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(date || '')
-  if (!m) return null
-  const [, y, mm, dd] = m
-  const month = Number(mm)
-  if (dd === '01' && [1, 4, 7, 10].includes(month))
-    return { rank: 3, label: `季度数据 · 截至 ${y}Q${(month + 2) / 3}` }
-  if (dd === '01') return { rank: 2, label: `月度 · 截至 ${y}-${mm}` }
-  return { rank: 1, label: `日频 · 截至 ${y}-${mm}-${dd}` }
-}
-
-/** 卡片徽标取最滞后一档（数据新鲜度以最慢口径为准）。 */
-function regionFreq(region: RegionSnapshot): string | null {
-  let best: { rank: number; label: string } | null = null
-  for (const ind of region.indicators || []) {
-    const f = indFreq(ind.date)
-    if (f && (!best || f.rank > best.rank)) best = f
-  }
-  return best ? best.label : null
-}
-function fmtRegionValue(v: number | null, unit?: string): string {
-  if (v == null) return '—'
-  const abs = Math.abs(v)
-  const txt =
-    abs >= 10000
-      ? v.toLocaleString('en-US', { maximumFractionDigits: 0 })
-      : abs >= 100
-        ? v.toFixed(1)
-        : v.toFixed(2)
-  return unit && unit !== '指数' && unit !== '指数/点位' ? `${txt} ${unit}` : txt
-}
-
 /** 变灯距离 · 规则透明化：把黄 / 橙 / 红灯阈值画在一条 0–100% 分位轴上，
  * 让读者一眼看到"现在离变灯还有多远"。只读 core 数据，不改任何判定逻辑。 */
 const THRESH_TICKS = [
@@ -440,141 +398,87 @@ function chgClsOf(v: number, threshold: number): string {
   return v >= threshold ? 'surge' : v > 0 ? 'up' : 'down'
 }
 
-/** 油价观察：变灯距离卡内第一条哨兵（WTI / 布伦特 + 20 日涨幅迷你量规）。
- * 量规范围 0~15%，阈值 +10%（通胀压力证据）；超出打满。
- * 语义色 = 风险方向（涨=风险升温）；触发确认时状态点点亮呼吸。 */
+/** 哨兵状态箭头：涨 ▲ / 跌 ▼。 */
+function chgArrow(v: number): string {
+  return v > 0 ? '▲' : v < 0 ? '▼' : ''
+}
+
+/* ── 哨兵三条（一行一条极简 + 历史危机剧本标签） ── */
+
+/** 油价观察 · 第一条哨兵：WTI 读数（布伦特兜底）+ 20 日涨幅迷你量规
+ * （范围 0~15%，阈值 +10% 通胀压力证据；超出打满）。
+ * 剧本标签：石油冲击 1973·1979·1990。触发确认时数值红色强调、状态点呼吸。 */
 function OilStrip({ m }: { m: Snapshot }) {
   const oil = m.oil_watch
-  if (!oil || (oil.wti?.value == null && oil.brent?.value == null)) return null
+  const primary = oil?.wti?.value != null ? oil.wti : oil?.brent?.value != null ? oil.brent : null
+  if (!oil || !primary || primary.value == null) return null
+  const qName = oil.wti?.value != null ? 'WTI' : '布伦特'
   const surge = (m.confirmations ?? []).some((c) => c.label.includes('油价') && c.active)
-  const inflation = !!oil.inflation_evidence?.active
-  const note = inflation
-    ? '油价正在推升通胀压力'
-    : surge
-      ? '20日急涨，已计入风险确认'
-      : '地缘风险的第一管道'
-  const chg = oil.wti?.change_20d_pct ?? oil.brent?.change_20d_pct ?? null
-  const date = oil.wti?.date || oil.brent?.date
-  const source = srcLabel(oil.wti?.source || oil.brent?.source)
+  const active = surge || !!oil.inflation_evidence?.active
+  const chg = primary.change_20d_pct ?? null
+  const src = [srcLabel(primary.source), mmdd(primary.date)].filter(Boolean).join('·')
   return (
-    <div className="sent" aria-label="油价观察">
-      <div className="sent-head">
-        <span className={`oil-dot${surge ? ' on' : ''}`} aria-hidden="true" />
+    <div className={`sent${active ? ' sent-on' : ''}`} aria-label="油价观察">
+      <div className="sent-row">
+        <span className={`oil-dot${active ? ' on' : ''}`} aria-hidden="true" />
         <span className="sent-name">油价</span>
-        {oil.wti?.value != null && (
-          <span className="sent-q">
-            <span className="sent-q-name">WTI</span>
-            <b className="mono">{oil.wti.value.toFixed(2)}</b>
-          </span>
+        <span className="sent-q">
+          <span className="sent-q-name">{qName}</span>
+          <b className="sent-val mono">{primary.value.toFixed(2)}</b>
+        </span>
+        {chg != null && (
+          <b className={`sent-chg mono ${chgClsOf(chg, 10)}`}>
+            {chgArrow(chg)}
+            {Math.abs(chg).toFixed(1)}%
+          </b>
         )}
-        {oil.brent?.value != null && (
-          <span className="sent-q">
-            <span className="sent-q-name">布伦特</span>
-            <b className="mono">{oil.brent.value.toFixed(2)}</b>
-          </span>
-        )}
-        <span className="sent-note">{note}</span>
-        {date && (
-          <span className="sent-src mono">
-            {[source, mmdd(date)].filter(Boolean).join(' · ')}
-          </span>
-        )}
-      </div>
-      <div className="sent-bar">
-        <span className="sent-bar-cap">20日涨幅</span>
         <SentinelGauge
           value={chg}
           max={15}
           threshold={10}
           thresholdLabel="+10%"
-          ariaLabel={`WTI 20日涨幅 ${chg != null ? `${chg.toFixed(1)}%` : '—'}，通胀压力触发阈值 +10%`}
+          ariaLabel={`${qName} 20日涨幅 ${chg != null ? `${chg.toFixed(1)}%` : '—'}，通胀压力触发阈值 +10%`}
         />
-        {chg != null && (
-          <b className={`sent-chg mono ${chgClsOf(chg, 10)}`}>
-            {chg > 0 ? '▲' : chg < 0 ? '▼' : ''}
-            {Math.abs(chg).toFixed(1)}%
-          </b>
-        )}
+        <span className="sent-script">石油冲击 1973·1979·1990</span>
+        {src && <span className="sent-src mono">{src}</span>}
       </div>
     </div>
   )
 }
 
-/** 美债单期限读数：Tushare 美债官方曲线 / Yahoo 网关收盘在场时主显，
- * FRED 官方值作缩短副标（FRED 4.68·07-30）。 */
-function RateVal({
-  name,
-  q,
-  live,
-}: {
-  name: string
-  q?: RateQuote
-  live?: LatestQuote | null
-}) {
-  const main = live?.value != null ? live.value : q?.value
-  if (main == null) return null
-  return (
-    <span className="sent-q">
-      <span className="sent-q-name">{name}</span>
-      <b className="mono">{main.toFixed(2)}%</b>
-      {live?.value != null && q?.value != null && (
-        <span className="oil-src">
-          FRED {q.value.toFixed(2)}·{mmdd(q.date)}
-        </span>
-      )}
-    </span>
-  )
-}
-
-/** 美债收益率观察：第二条哨兵。第一行 10Y + 30Y 数值，
- * 第二行 20 日 bp 变动迷你量规（取 10Y/30Y 较大者，范围 0~30bp，阈值 +30bp）+ 2s10s。
- * 长端抛售标记触发时状态点点亮呼吸。仅作证据展示，不参与灯号判定。 */
+/** 美债收益率观察 · 第二条哨兵：10Y 主读数（Tushare 美债官方曲线 /
+ * Yahoo 网关收盘在场时主显，否则 FRED）+ 20 日 bp 变动迷你量规
+ * （取 10Y/30Y 较大者，范围 0~30bp，阈值 +30bp）。
+ * 剧本标签：利率冲击 1994·2013·2022。长端抛售触发时数值红色强调、状态点呼吸。 */
 function RatesStrip({ m }: { m: Snapshot }) {
   const rates = m.rates_watch
-  if (!rates || (rates.us10y?.value == null && rates.us30y?.value == null)) return null
-  const selloff = !!rates.long_end_selloff?.active
-  const note = selloff ? '长端抛售压力，已作证据记录' : '方向比水平更重要'
-  const date = rates.us10y?.date || rates.us30y?.date || rates.us02y?.date
-  const spread = rates.spread_2s10s?.value_bp
+  if (!rates) return null
   const live10 = rates.latest_quotes?.us10y
   const live30 = rates.latest_quotes?.us30y
-  const hasLive = live10?.value != null || live30?.value != null
+  const main = live10?.value ?? rates.us10y?.value ?? live30?.value ?? rates.us30y?.value ?? null
+  if (main == null) return null
+  const qName = live10?.value != null || rates.us10y?.value != null ? '10Y' : '30Y'
+  const active = !!rates.long_end_selloff?.active
+  const srcQ = live10?.value != null ? live10 : (rates.us10y?.value != null ? rates.us10y : (live30?.value != null ? live30 : rates.us30y))
+  const src = [srcLabel(srcQ?.source), mmdd(srcQ?.date)].filter(Boolean).join('·')
   const chg10 = rates.us10y?.change_20d_bp ?? rates.long_end_selloff?.us10y_change_20d_bp ?? null
   const chg30 = rates.us30y?.change_20d_bp ?? rates.long_end_selloff?.us30y_change_20d_bp ?? null
   const chg = chg10 != null && chg30 != null ? Math.max(chg10, chg30) : (chg10 ?? chg30)
   return (
-    <div className="sent" aria-label="美债收益率观察">
-      <div className="sent-head">
-        <span className={`oil-dot rates-dot${selloff ? ' on' : ''}`} aria-hidden="true" />
+    <div className={`sent${active ? ' sent-on' : ''}`} aria-label="美债收益率观察">
+      <div className="sent-row">
+        <span className={`oil-dot rates-dot${active ? ' on' : ''}`} aria-hidden="true" />
         <span className="sent-name">美债</span>
-        <RateVal name="10Y" q={rates.us10y} live={live10} />
-        <RateVal name="30Y" q={rates.us30y} live={live30} />
-        <span className="sent-note">{note}</span>
-        {hasLive ? (
-          <span className="sent-src mono">
-            {(() => {
-              // 两个期限同源同日时标签最干净；只有单腿在场时如实标注“部分”。
-              const pair =
-                live10?.value != null && live30?.value != null
-                  ? live10
-                  : (live10?.value != null ? live10 : live30)
-              const partial = live10?.value == null || live30?.value == null
-              return (
-                [srcLabel(pair?.source), mmdd(pair?.date)].filter(Boolean).join(' · ') +
-                (partial ? '（部分）' : '')
-              )
-            })()}
-          </span>
-        ) : (
-          date && (
-            <span className="sent-src mono">
-              {[srcLabel(rates.us10y?.source), mmdd(date)].filter(Boolean).join(' · ')}
-            </span>
-          )
+        <span className="sent-q">
+          <span className="sent-q-name">{qName}</span>
+          <b className="sent-val mono">{main.toFixed(2)}%</b>
+        </span>
+        {chg != null && (
+          <b className={`sent-chg mono ${chgClsOf(chg, 30)}`}>
+            {chgArrow(chg)}
+            {Math.abs(chg).toFixed(0)}bp
+          </b>
         )}
-      </div>
-      <div className="sent-bar">
-        <span className="sent-bar-cap">20日变动</span>
         <SentinelGauge
           value={chg}
           max={30}
@@ -582,55 +486,39 @@ function RatesStrip({ m }: { m: Snapshot }) {
           thresholdLabel="+30bp"
           ariaLabel={`长端收益率 20 日上行 ${chg != null ? `${chg.toFixed(0)}bp` : '—'}（取 10Y/30Y 较大者），抛售压力触发阈值 +30bp`}
         />
-        {chg != null && (
-          <b className={`sent-chg mono ${chgClsOf(chg, 30)}`}>
-            {chg > 0 ? '▲' : chg < 0 ? '▼' : ''}
-            {Math.abs(chg).toFixed(0)}bp
-          </b>
-        )}
-        {spread != null && (
-          <span className="sent-extra">
-            <span className="sent-q-name">2s10s</span>{' '}
-            <b className="mono">
-              {spread > 0 ? '+' : ''}
-              {spread.toFixed(0)}bp
-            </b>
-          </span>
-        )}
+        <span className="sent-script">利率冲击 1994·2013·2022</span>
+        {src && <span className="sent-src mono">{src}</span>}
       </div>
     </div>
   )
 }
 
-/** 黄金观察：第三条哨兵（避险温度计）。现货读数 + 20 日涨幅迷你量规
- * （范围 0~8%，阈值 +8% 避险升温）；触发时状态点点亮呼吸。
- * 仅作证据展示，不参与灯号判定。 */
+/** 黄金观察 · 第三条哨兵：现货读数 + 20 日涨幅迷你量规
+ * （范围 0~8%，阈值 +8% 避险升温）。
+ * 剧本标签：避险失灵 2008·2020。触发时数值红色强调、状态点呼吸。 */
 function GoldStrip({ m }: { m: Snapshot }) {
   const gold = m.gold_watch
   const spot = gold?.spot
   if (!gold || !spot || spot.value == null) return null
-  const riskOff = !!gold.risk_off_signal?.active
+  const active = !!gold.risk_off_signal?.active
   const chg = spot.change_20d_pct ?? gold.risk_off_signal?.change_20d_pct ?? null
-  const note = riskOff ? '避险升温，已作证据记录' : '避险与去美元化的温度计'
+  const src = [srcLabel(spot.source), mmdd(spot.date)].filter(Boolean).join('·')
   return (
-    <div className="sent" aria-label="黄金价格观察">
-      <div className="sent-head">
-        <span className={`oil-dot gold-dot${riskOff ? ' on' : ''}`} aria-hidden="true" />
+    <div className={`sent${active ? ' sent-on' : ''}`} aria-label="黄金价格观察">
+      <div className="sent-row">
+        <span className={`oil-dot gold-dot${active ? ' on' : ''}`} aria-hidden="true" />
         <span className="sent-name">黄金</span>
         <span className="sent-q">
-          <b className="mono">
+          <b className="sent-val mono">
             {spot.value.toLocaleString('en-US', { maximumFractionDigits: 0 })}
           </b>
         </span>
-        <span className="sent-note">{note}</span>
-        {spot.date && (
-          <span className="sent-src mono">
-            {[srcLabel(spot.source), mmdd(spot.date)].filter(Boolean).join(' · ')}
-          </span>
+        {chg != null && (
+          <b className={`sent-chg mono ${chgClsOf(chg, 8)}`}>
+            {chgArrow(chg)}
+            {Math.abs(chg).toFixed(1)}%
+          </b>
         )}
-      </div>
-      <div className="sent-bar">
-        <span className="sent-bar-cap">20日涨幅</span>
         <SentinelGauge
           value={chg}
           max={8}
@@ -638,12 +526,8 @@ function GoldStrip({ m }: { m: Snapshot }) {
           thresholdLabel="+8%"
           ariaLabel={`金价 20 日涨幅 ${chg != null ? `${chg.toFixed(1)}%` : '—'}，避险升温触发阈值 +8%`}
         />
-        {chg != null && (
-          <b className={`sent-chg mono ${chgClsOf(chg, 8)}`}>
-            {chg > 0 ? '▲' : chg < 0 ? '▼' : ''}
-            {Math.abs(chg).toFixed(1)}%
-          </b>
-        )}
+        <span className="sent-script">避险失灵 2008·2020</span>
+        {src && <span className="sent-src mono">{src}</span>}
       </div>
     </div>
   )
@@ -658,7 +542,7 @@ function ThresholdTrack({ m }: { m: Snapshot }) {
   const gap = Math.max(0, 70 - pct)
   const mood = moodOf(70 - pct)
   return (
-    <section aria-label="变灯距离" className="card reveal thresh" style={reveal(3)}>
+    <section aria-label="变灯距离" className="card reveal thresh" style={reveal(5)}>
       <h2>变灯距离 · 规则透明化</h2>
       <p className="sec-note">
         灯号规则冻结公开：核心分位 ≥70% 且曲线确认 → 黄灯；≥75% → 橙灯；≥92% → 红灯。
@@ -708,69 +592,53 @@ function ThresholdTrack({ m }: { m: Snapshot }) {
   )
 }
 
-function RegionCard({
-  regionKey,
-  region,
-  active,
-}: {
-  regionKey: string
-  region: RegionSnapshot
-  active?: boolean
-}) {
-  const light = asLight(region.light)
-  const freq = regionFreq(region)
-  const signalInds = (region.indicators || []).filter(
-    (ind) => ind.signal && Object.keys(ind.signal).length > 0,
+/* ── 全球灯带（美国 + 九区域一排） ─────────────── */
+
+/** 非绿色成员的异常一行：cycle 中"下行"维度（如 政策↓ 信贷↓）+
+ * summary 里"："后的短句（约 20 字截断）。绿色成员不调用。 */
+function regionAnomaly(region: RegionSnapshot): string {
+  const downs = REGION_CYCLE_KEYS.filter((d) => region.cycle?.[d] === 'down').map(
+    (d) => `${REGION_CYCLE_LABELS[d]}↓`,
   )
+  const sum = region.summary || ''
+  const after = sum.includes('：') ? sum.slice(sum.indexOf('：') + 1) : sum
+  const short = after.length > 20 ? `${after.slice(0, 20)}…` : after
+  return [...downs, short].filter(Boolean).join(' · ')
+}
+
+/** 灯带成员：国旗 + 名称 + 灯点（圆形）+ 灯色小字 + 可选数据滞后标记，
+ * 副行仅"核心引擎"（美国）或非绿色成员的异常说明。 */
+function BandItem({
+  flag,
+  name,
+  light,
+  sub,
+  stale,
+}: {
+  flag: string
+  name: string
+  light: Light
+  sub?: string
+  stale?: boolean
+}) {
   return (
-    <div className={`region-card${active ? ' active' : ''}`}>
-      <div className="region-head">
-        <span className="region-name">{REGION_NAMES[regionKey] || regionKey}</span>
-        <span className="region-light">
-          <LightDot light={light} />
-          <span className={`lv-${light}`}>{LIGHT_SHORT[light]}灯</span>
+    <li className="band-item">
+      <div className="band-top">
+        <span className="band-flag" aria-hidden="true">
+          {flag}
         </span>
+        <span className="band-name">{name}</span>
+        <span className={`band-dot ${light}`} role="img" aria-label={LIGHT_TXT[light]} />
+        <span className={`band-light lv-${light}`}>{LIGHT_SHORT[light]}灯</span>
+        {stale && <span className="band-stale">数据滞后</span>}
       </div>
-      {freq && <span className="region-fresh">{freq}</span>}
-      {region.status !== 'ok' && (
-        <p className="region-degraded">⚠ 数据不完整：部分读数滞后或缺失，请谨慎参考</p>
-      )}
-      {region.summary && <p className="region-sum">{region.summary}</p>}
-      <div className="region-cyc">
-        {REGION_CYCLE_KEYS.map((dim) => {
-          const dir = region.cycle?.[dim] || 'neutral'
-          const cls =
-            dir === 'up' ? 's-up' : dir === 'down' ? 's-down' : dir === 'degraded' ? 's-degraded' : 's-neutral'
-          return (
-            <span className="region-dim" key={dim}>
-              {REGION_CYCLE_LABELS[dim]}
-              <b className={cls}>
-                {DIR_ARROW[dir] || '→'} {DIR_TXT[dir] || '—'}
-              </b>
-            </span>
-          )
-        })}
-      </div>
-      {signalInds.length > 0 && (
-        <ul className="region-ind">
-          {signalInds.map((ind) => (
-            <li key={ind.id}>
-              <span className="ind-name" title={ind.name}>
-                {ind.name}
-              </span>
-              <span className="ind-val mono">{fmtRegionValue(ind.value, ind.unit)}</span>
-              <span className="ind-date mono">{ind.date}</span>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
+      {sub && <div className="band-sub">{sub}</div>}
+    </li>
   )
 }
 
 export default function Home() {
   const { snapshot, briefs, loading, error } = useSnapshot()
-  const [activeRegion, setActiveRegion] = useState<string | null>(null)
 
   // 数据未就位：只显示品牌加载态，绝不渲染示例灯号，避免灯号跳变。
   if (loading) return <LoadingScreen />
@@ -780,7 +648,7 @@ export default function Home() {
   const m = snapshot ?? SAMPLE
   const globalLight = asLight(m.global_light)
   const newsLink = m.news_link || 'https://finance.worldmonitor.app'
-  // 区域面板数据驱动：先按固定排序输出已知名称的区域，再兜底其余键。
+  // 灯带数据驱动：先按固定排序输出已知名称的区域，再兜底其余键。
   const regionKeys = m.regions
     ? [
         ...REGION_ORDER.filter((k) => m.regions?.[k]),
@@ -789,6 +657,10 @@ export default function Home() {
         ),
       ]
     : []
+  // 美国排第一（主灯），其余按灯严重度排序（红>橙>黄>绿），同级保持原顺序。
+  const bandItems = regionKeys
+    .map((k) => ({ key: k, region: m.regions![k], light: asLight(m.regions![k].light) }))
+    .sort((a, b) => LIGHT_SEV[a.light] - LIGHT_SEV[b.light])
 
   return (
     <main className="page">
@@ -820,7 +692,27 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="concl reveal" style={reveal(2)} aria-label="创始人笔记">
+      <section aria-label="全球灯带" className="card reveal" style={reveal(2)}>
+        <h2>全球灯带 · 谁在亮灯</h2>
+        <p className="sec-note">
+          主灯监测全球危机震中（美国金融体系）；区域灯监测地方火情——1997亚洲、2010欧债都是区域先起火
+        </p>
+        <ul className="band">
+          <BandItem flag="🇺🇸" name="美国" light={globalLight} sub="核心引擎" />
+          {bandItems.map(({ key, region, light }) => (
+            <BandItem
+              key={key}
+              flag={REGION_FLAGS[key] || '🏳'}
+              name={REGION_NAMES[key] || key}
+              light={light}
+              stale={region.status !== 'ok'}
+              sub={light === 'green' || light === 'unknown' ? undefined : regionAnomaly(region)}
+            />
+          ))}
+        </ul>
+      </section>
+
+      <section className="concl reveal" style={reveal(3)} aria-label="创始人笔记">
         <div className="note">
           <img className="avatar" src="assets/grace-avatar.jpg" alt="Grace Yang" />
           <div className="note-body">
@@ -832,7 +724,7 @@ export default function Home() {
       </section>
 
       {m.world_brief && m.world_brief.length > 0 && (
-        <section className="world-brief reveal" style={reveal(3)} aria-label="今日世界">
+        <section className="world-brief reveal" style={reveal(4)} aria-label="今日世界">
           <span className="wb-lead">今日世界</span>
           <ul className="wb-list">
             {m.world_brief.map((item, i) => (
@@ -860,8 +752,8 @@ export default function Home() {
 
       <ThresholdTrack m={m} />
 
-      <section aria-label="危机雷达" className="card reveal" style={reveal(4)}>
-        <h2>危机雷达（四类）· 美国</h2>
+      <section aria-label="危机雷达" className="card reveal" style={reveal(6)}>
+        <h2>危机雷达 · 美国金融四部位</h2>
         <p className="sec-note">美国金融系统四个部位的健康灯——全绿 = 没有起火迹象。</p>
         <div className="radar">
           {RADAR_KEYS.map((key) => {
@@ -918,7 +810,7 @@ export default function Home() {
         <p className="core-fresh">核心信号均为日频 · 最近交易日</p>
       </section>
 
-      <section aria-label="周期状态" className="card reveal" style={reveal(5)}>
+      <section aria-label="周期状态" className="card reveal" style={reveal(7)}>
         <h2>六维周期状态 · 美国</h2>
         <p className="sec-note">美国经济现在的六项体温——向上 / 中性 / 向下，一眼看清方向。</p>
         <div className="cyc">
@@ -936,36 +828,7 @@ export default function Home() {
         </div>
       </section>
 
-      {regionKeys.length > 0 && (
-        <section aria-label="全球区域面板" className="card reveal" style={reveal(6)}>
-          <h2>全球九区域 · 风险面板</h2>
-          <p className="region-lead">
-            全球灯号由美国核心引擎判定，此面板补充美国以外九大区域视角。信贷 / 宏观数据按官方节奏滞后
-            1–2 个季度属正常，时效已逐卡逐条标注。
-          </p>
-          <WorldDotMap
-            regions={m.regions!}
-            order={regionKeys}
-            active={activeRegion}
-            onActive={setActiveRegion}
-          />
-          <div className="region-swipe" aria-hidden="true">
-            左右滑动查看全部 {regionKeys.length} 个区域 →
-          </div>
-          <div className="region-grid">
-            {regionKeys.map((k) => (
-              <RegionCard
-                key={k}
-                regionKey={k}
-                region={m.regions![k]}
-                active={activeRegion === k}
-              />
-            ))}
-          </div>
-        </section>
-      )}
-
-      <div className="grid-2 reveal" style={reveal(7)}>
+      <div className="grid-2 reveal" style={reveal(8)}>
         <section aria-label="跨资产确认" className="card">
           <h2>跨资产确认</h2>
           <ul className="cf">
@@ -993,7 +856,7 @@ export default function Home() {
       </div>
 
       {briefs && briefs.items.length > 0 && (
-        <section aria-label="今日事件" className="card reveal" style={reveal(8)}>
+        <section aria-label="今日事件" className="card reveal" style={reveal(9)}>
           <h2>今日事件 · worldmonitor 新闻雷达</h2>
           <ul className="briefs">
             {briefs.items.map((b, i) => (
@@ -1012,7 +875,7 @@ export default function Home() {
         </section>
       )}
 
-      <section aria-label="灯号使用说明" className="card guide reveal" style={reveal(9)}>
+      <section aria-label="灯号使用说明" className="card guide reveal" style={reveal(10)}>
         <h2>这个盘面怎么用</h2>
         <p className="guide-lead">每天早上回答一个问题：今天全球金融系统有没有正在酝酿的危机？按灯号行动——</p>
         <ul className="guide-list">
@@ -1026,7 +889,7 @@ export default function Home() {
         <p className="guide-note">以上为系统性规则的方向性参考，不构成个性化投资建议。</p>
       </section>
 
-      <footer className="foot reveal" style={reveal(10)}>
+      <footer className="foot reveal" style={reveal(11)}>
         <span>{healthText(m)}</span>
         <a className="news" href={newsLink} target="_blank" rel="noopener noreferrer">
           新闻雷达 worldmonitor ↗

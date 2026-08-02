@@ -407,46 +407,12 @@ a.news:focus-visible {
 .foot .err { color: var(--yellow); }
 
 /* 响应式 */
-@media (max-width: 900px) {
-  .region-grid { grid-template-columns: repeat(2, 1fr); }
-}
 @media (max-width: 640px) {
   .radar { grid-template-columns: repeat(2, 1fr); }
   .cyc { grid-template-columns: repeat(2, 1fr); }
   .grid-2 { grid-template-columns: 1fr; }
   .hero-light { font-size: 27px; }
   .core { gap: 24px; }
-
-  /* 区域卡片：scroll-snap 轮播，卡宽 78vw，右侧露出下一张提示可滑 */
-  .region-swipe { display: block; }
-  .region-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 12px;
-    margin: 0 -24px;
-    padding: 2px 24px 12px;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-  .region-grid::-webkit-scrollbar { display: none; }
-  .region-card {
-    flex: 0 0 78vw;
-    scroll-snap-align: start;
-  }
-
-  /* 卡内指标行：名称列放宽并单行省略号截断，杜绝一字一行竖排 */
-  .region-ind li {
-    grid-template-columns: minmax(0, 62%) minmax(0, 38%);
-    gap: 1px 8px;
-    font-size: 11.5px;
-  }
-  .region-ind .ind-name {
-    min-width: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
 }
 
 /* 板块大白话说明 */
@@ -457,104 +423,69 @@ a.news:focus-visible {
   color: var(--ink-3);
 }
 
-/* ── 全球九区域面板 ─────────────────── */
-.region-lead {
-  margin: -6px 0 12px;
-  font-size: 12px;
-  line-height: 1.6;
-  color: var(--ink-3);
-}
-.region-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-/* 移动端滑动提示（仅 ≤640px 显示） */
-.region-swipe {
-  display: none;
-  margin: -4px 0 8px;
-  font-size: 10.5px;
-  letter-spacing: 0.04em;
-  color: var(--ink-4);
-}
-.region-card {
-  padding: 16px 18px;
-  background: var(--bg-soft);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-}
-.region-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-.region-name {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--mosiq-navy);
-}
-.region-light {
-  display: inline-flex;
-  align-items: center;
-  font-size: 12.5px;
-  font-weight: 600;
-}
-.region-sum {
-  margin: 8px 0 0;
-  font-size: 12.5px;
-  line-height: 1.6;
-  color: var(--ink-2);
-}
-.region-degraded {
-  margin: 8px 0 0;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--yellow);
-}
-.region-cyc {
+/* ── 全球灯带（美国 + 九区域一排，自然换行不截断） ── */
+.band {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 14px;
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px dashed var(--line);
-  font-size: 12px;
+  align-items: flex-start;
+  gap: 6px;
 }
-.region-dim {
-  color: var(--ink-3);
+.band-item {
+  flex: 0 0 auto;
+  max-width: 220px;
+  padding: 8px 11px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 10px;
 }
-.region-dim b {
-  margin-inline-start: 4px;
+.band-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.band-flag {
+  font-size: 15px;
+  line-height: 1;
+}
+.band-name {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--mosiq-navy);
+}
+.band-dot {
+  flex: 0 0 auto;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+.band-dot.green { background: var(--green); }
+.band-dot.yellow { background: var(--yellow); }
+.band-dot.orange { background: var(--orange); }
+.band-dot.red { background: var(--red); }
+.band-dot.unknown { background: transparent; border: 1.5px solid var(--ink-4); }
+.band-light {
+  font-size: 11px;
   font-weight: 600;
 }
-.region-ind {
-  list-style: none;
-  margin: 10px 0 0;
-  padding: 10px 0 0;
-  border-top: 1px dashed var(--line);
-}
-.region-ind li {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 1px 10px;
-  padding: 4px 0;
-  font-size: 12px;
-}
-.region-ind .ind-name {
-  color: var(--ink-2);
-}
-.region-ind .ind-val {
-  font-weight: 700;
-  color: var(--mosiq-navy);
-  font-variant-numeric: tabular-nums;
-  text-align: right;
-}
-.region-ind .ind-date {
-  grid-column: 2;
-  font-size: 10.5px;
+/* 数据滞后极小浅灰标记（degraded 区域） */
+.band-stale {
+  font-size: 9.5px;
+  font-weight: 500;
   color: var(--ink-4);
-  text-align: right;
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 0 5px;
+}
+/* 副行：美国"核心引擎" / 非绿成员异常说明，允许自然换行 */
+.band-sub {
+  margin-top: 4px;
+  font-size: 10.5px;
+  line-height: 1.45;
+  color: var(--ink-3);
 }
 
 /* ════════════════════════════════════════════════════
@@ -782,7 +713,7 @@ a.news:focus-visible {
 
 /* ── 4. hover 微交互：轻微浮起 ── */
 .card,
-.region-card,
+.band-item,
 .radar .cell,
 .cyc .m {
   transition:
@@ -797,7 +728,7 @@ a.news:focus-visible {
 }
 .radar .cell:hover,
 .cyc .m:hover,
-.region-card:hover {
+.band-item:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(22, 35, 63, 0.05);
 }
@@ -866,150 +797,18 @@ a.news:focus-visible {
   .hero::before,
   .loading-spinner,
   .skel,
-  .oil-dot.on,
-  .map-pulse::after {
+  .oil-dot.on {
     animation: none !important;
   }
   .card,
-  .region-card,
+  .band-item,
   .radar .cell,
-  .cyc .m,
-  .map-marker .map-pulse,
-  .map-panel {
+  .cyc .m {
     transition: none !important;
   }
 }
 
-/* ── 点阵世界地图（全球区域面板） ─────────────── */
-.map-block {
-  margin: 2px 0 14px;
-}
-.map {
-  position: relative;
-}
-.map-canvas {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-/* 区域脉冲光点：颜色 = 区域灯号；按钮热区 44px，移动端可点 */
-.map-marker {
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  transform: translate(-50%, -50%);
-  display: grid;
-  place-items: center;
-  background: none;
-  border: none;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-}
-.map-marker:focus-visible {
-  outline: 2px solid var(--mosiq-blue);
-  outline-offset: -4px;
-  border-radius: 50%;
-}
-.map-pulse {
-  position: relative;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  transition:
-    transform 0.18s ease,
-    box-shadow 0.18s ease;
-}
-.m-green .map-pulse { background: var(--green); --glow-rgb: 22, 163, 74; }
-.m-yellow .map-pulse { background: var(--yellow); --glow-rgb: 217, 119, 6; }
-.m-orange .map-pulse { background: var(--orange); --glow-rgb: 234, 88, 12; }
-.m-red .map-pulse { background: var(--red); --glow-rgb: 220, 38, 38; }
-.m-unknown .map-pulse { background: var(--ink-4); --glow-rgb: 138, 153, 173; }
-.map-pulse::after {
-  content: '';
-  position: absolute;
-  inset: -7px;
-  border-radius: 50%;
-  border: 2px solid rgba(var(--glow-rgb), 0.55);
-  animation: mosiq-ping 2.2s ease-out infinite;
-}
-@keyframes mosiq-ping {
-  0% {
-    transform: scale(0.55);
-    opacity: 0.9;
-  }
-  70%,
-  100% {
-    transform: scale(1.45);
-    opacity: 0;
-  }
-}
-.map-marker.on .map-pulse,
-.map-marker:hover .map-pulse {
-  transform: scale(1.35);
-  box-shadow: 0 0 0 5px rgba(var(--glow-rgb), 0.22);
-}
-
-/* 区域速览面板（hover/点击光点显示） */
-.map-panel {
-  margin: 10px 0 0;
-  padding: 13px 16px;
-  background: var(--bg-soft);
-  border: 1px solid var(--line);
-  border-inline-start: 3px solid var(--ink-4);
-  border-radius: 12px;
-}
-.mp-green { border-inline-start-color: var(--green); }
-.mp-yellow { border-inline-start-color: var(--yellow); }
-.mp-orange { border-inline-start-color: var(--orange); }
-.mp-red { border-inline-start-color: var(--red); }
-.map-panel-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-.map-panel-name {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--mosiq-navy);
-}
-.map-panel-sum {
-  margin: 6px 0 0;
-  font-size: 12.5px;
-  line-height: 1.6;
-  color: var(--ink-2);
-}
-.map-panel-cyc {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 14px;
-  margin-top: 8px;
-  padding-top: 8px;
-  border-top: 1px dashed var(--line);
-  font-size: 12px;
-}
-
-/* 地图选中区域时，下方明细卡片同步高亮 */
-.region-card.active {
-  border-color: var(--mosiq-blue);
-  box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.12);
-}
-
 /* ── 数据时效标签 ───────────────────── */
-.region-fresh {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 2px 9px;
-  font-size: 10.5px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--mosiq-blue);
-  background: #eaf4ff;
-  border: 1px solid #cfe5ff;
-  border-radius: 99px;
-  font-variant-numeric: tabular-nums;
-}
 .core-fresh {
   margin: 12px 0 0;
   font-size: 11px;
@@ -1097,19 +896,22 @@ a.news:focus-visible {
   margin-top: 10px;
   padding-top: 10px;
 }
-.sent-head {
+/* 哨兵一行式极简横条：状态点 + 名称 + 主数值 + 变化 + 迷你量规 + 剧本标签 + 行尾来源 */
+.sent-row {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 4px 12px;
+  gap: 4px 10px;
   font-size: 12.5px;
   color: var(--ink-2);
 }
 .sent-name {
+  flex: 0 0 auto;
   font-weight: 600;
   color: var(--ink-3);
 }
 .sent-q {
+  flex: 0 0 auto;
   display: inline-flex;
   align-items: baseline;
   gap: 5px;
@@ -1119,30 +921,15 @@ a.news:focus-visible {
   font-size: 11.5px;
   color: var(--ink-3);
 }
-.sent-q b.mono {
+.sent-val {
   font-size: 16px;
   font-weight: 700;
   color: var(--mosiq-navy);
 }
-.sent-note {
-  font-size: 11.5px;
-  color: var(--ink-3);
-}
-.sent-src {
-  margin-inline-start: auto;
-  font-size: 10.5px;
-  color: var(--ink-4);
-}
-.sent-bar {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-top: 8px;
-}
-.sent-bar-cap {
-  flex: 0 0 auto;
-  font-size: 10.5px;
-  color: var(--ink-3);
+/* 触发 active：数值与变化红色强调，状态点呼吸 */
+.sent-on .sent-val,
+.sent-on .sent-chg {
+  color: var(--red);
 }
 .sent-chg {
   flex: 0 0 auto;
@@ -1153,21 +940,24 @@ a.news:focus-visible {
 .sent-chg.surge { color: var(--red); }
 .sent-chg.up { color: var(--orange); }
 .sent-chg.down { color: var(--green); }
-.sent-extra {
+/* 历史危机剧本标签：浅灰小字 */
+.sent-script {
   flex: 0 0 auto;
-  font-size: 11px;
-  color: var(--ink-2);
-  font-variant-numeric: tabular-nums;
+  font-size: 10.5px;
+  color: var(--ink-4);
+  white-space: nowrap;
 }
-.sent-extra b.mono {
-  font-weight: 700;
-  color: var(--mosiq-navy);
+.sent-src {
+  margin-inline-start: auto;
+  font-size: 10px;
+  color: var(--ink-4);
 }
 
-/* 迷你量规轨道：复用 BAA10Y 变灯距离量规语言（渐变填充 + 阈值虚线刻度） */
+/* 迷你量规轨道：复用 BAA10Y 变灯距离量规语言（渐变填充 + 阈值虚线刻度）
+ * 在一行式哨兵横条内占剩余宽度，窄屏自动折到第二行 */
 .sg {
-  flex: 1 1 auto;
-  min-width: 0;
+  flex: 1 1 140px;
+  min-width: 120px;
 }
 .sg-track {
   position: relative;
@@ -1320,13 +1110,6 @@ a.news:focus-visible {
   font-size: 10.5px;
   color: var(--ink-4);
   white-space: nowrap;
-}
-
-/* ── 哨兵横条来源小字（FRED / Yahoo网关 / 本地缓存） ── */
-.oil-src {
-  font-size: 10px;
-  color: var(--ink-4);
-  font-weight: 400;
 }
 
 @media (max-width: 560px) {
