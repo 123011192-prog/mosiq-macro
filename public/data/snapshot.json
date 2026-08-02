@@ -9,15 +9,15 @@
   },
   "core": {
     "baa10y": 1.64,
-    "baa10y_pct": 14.762421,
+    "baa10y_pct": 13.749498,
     "curve_10y3m": 0.86,
     "curve_inverted": false
   },
   "cycle": {
-    "growth": "up",
-    "inflation": "neutral",
+    "growth": "degraded",
+    "inflation": "degraded",
     "liquidity": "neutral",
-    "credit": "neutral",
+    "credit": "degraded",
     "policy": "neutral",
     "market_stress": "degraded"
   },
@@ -64,10 +64,12 @@
   ],
   "health": {
     "data_asof": "2026-07-30",
-    "stale_count": 11,
+    "stale_count": 24,
     "degraded": [
-      "refresh:yahoo:GOLD_YAHOO",
-      "refresh:yahoo:GSPC_YAHOO",
+      "refresh:unexpected_failure",
+      "cycle:growth",
+      "cycle:inflation",
+      "cycle:credit",
       "cycle:market_stress",
       "radar:banking",
       "radar:nonbank",
@@ -783,14 +785,14 @@
       "date": "2026-07-31",
       "change_20d_pct": 23.26,
       "change_3m_pct": -19.42,
-      "source": "yahoo_gw"
+      "source": "local_cache"
     },
     "brent": {
       "value": 90.120003,
       "date": "2026-07-31",
       "change_20d_pct": 31.22,
       "change_3m_pct": -21.25,
-      "source": "yahoo_gw"
+      "source": "local_cache"
     },
     "inflation_evidence": {
       "rule": "油价近3个月涨幅≥+15%记为通胀上行辅助压力信号",
@@ -850,7 +852,7 @@
       "date": "2026-07-31",
       "change_20d_pct": -0.14,
       "change_3m_pct": -11.0,
-      "source": "yahoo_gw"
+      "source": "local_cache"
     },
     "risk_off_signal": {
       "rule": "金价20日上涨≥8%记为避险升温信号",
@@ -863,10 +865,10 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "21评论丨韩股巨震，杠杆惹的祸- 21世纪经济报道 - 21财经",
+      "title": "漫条撕理｜韩国股市为何坐上“过山车” - 21财经",
       "source": "21财经",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQMlRZZ2RBaXI5NjFPMElENmpQdlN3MGR0bXg0N2FHQkYwVlNpa2Fka05zczJqNHFoYkh6WFBkdlA4Mjc0WVAwMklNcDlXaEJSYzhvMEVsWnJnT2s1N0FZejFKaFh6RmhpZGhGM1BJLWxma1FlaFRVSThXYjFSOEhHUnlXTlRVU3RmazlF?oc=5",
-      "published": "2026-08-02T10:26:56+00:00"
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNTFV3Xzlvdi01ZGpWTy11ZGJLaWY1Wi1jSTRXYWxIdXdXMkk4S0dUWk5jQzQ1bDZ1NnJnZGlNTy1TdW9CNVRGX2tXM0VHMFpCanV1amR1ZHJaYkRoLS05bVFvR3UzN2phSkJUYVl2NVRKTTVxSnBIcGdyLVNheGpfUllEa1RUXzFmVURFaA?oc=5",
+      "published": "2026-08-02T13:13:00+00:00"
     },
     {
       "category": "货币政策",
