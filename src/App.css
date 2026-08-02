@@ -1098,3 +1098,15 @@ a.news:focus-visible {
   font-size: 10.5px;
   color: var(--ink-4);
 }
+
+/* ── 美债收益率横条：与油价横条同族对称，仅收紧间距、状态点用红色语义 ── */
+.rates-strip {
+  margin-top: 8px;
+  padding-top: 0;
+  border-top: none;
+}
+.rates-dot.on {
+  background: var(--red);
+  border-color: var(--red);
+  --glow-rgb: 220, 38, 38;
+}

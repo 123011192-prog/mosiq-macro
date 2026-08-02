@@ -86,6 +86,32 @@ export interface OilWatch {
   }
 }
 
+/** 美债收益率观察：10Y / 30Y / 2Y 读数、20 交易日 bp 变化与 2s10s 利差。
+ * long_end_selloff 仅作证据记录，不参与灯号判定。 */
+export interface RateQuote {
+  value: number | null
+  date?: string | null
+  change_20d_bp?: number | null
+}
+
+export interface RatesWatch {
+  us10y?: RateQuote
+  us30y?: RateQuote
+  us02y?: RateQuote
+  spread_2s10s?: {
+    value_bp?: number | null
+    date?: string | null
+  }
+  long_end_selloff?: {
+    rule?: string
+    active?: boolean
+    us10y_change_20d_bp?: number | null
+    us30y_change_20d_bp?: number | null
+    note?: string
+  }
+  geopolitical_note?: string
+}
+
 export interface Snapshot {
   as_of: string
   global_light: Light
@@ -105,6 +131,8 @@ export interface Snapshot {
   regions?: Record<string, RegionSnapshot>
   /** 油价观察（WTI / 布伦特 + 通胀辅助证据）。 */
   oil_watch?: OilWatch
+  /** 美债收益率观察（10Y / 30Y / 2Y + 2s10s 利差 + 长端异动标记）。 */
+  rates_watch?: RatesWatch
   news_link?: string
 }
 

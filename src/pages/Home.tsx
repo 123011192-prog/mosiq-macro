@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { CSSProperties } from 'react'
-import type { Light, OilQuote, RegionSnapshot, Snapshot } from '../types/snapshot'
+import type { Light, OilQuote, RateQuote, RegionSnapshot, Snapshot } from '../types/snapshot'
 import { useSnapshot } from '../hooks/use-snapshot'
 import { useReducedMotion } from '../hooks/use-reduced-motion'
 import RiskGauge from '../components/RiskGauge'
@@ -149,6 +149,20 @@ const SAMPLE: Snapshot = {
   advice: [{ text: '维持基准配置，关注信用利差走向；黄灯期间不加杠杆。', confidence: '中' }],
   health: { data_asof: '2026-07-24', stale_count: 0, degraded: [] },
   regions: SAMPLE_REGION,
+  rates_watch: {
+    us10y: { value: 4.68, date: '2026-07-24', change_20d_bp: 19.0 },
+    us30y: { value: 5.21, date: '2026-07-24', change_20d_bp: 23.0 },
+    us02y: { value: 4.23, date: '2026-07-24', change_20d_bp: 9.0 },
+    spread_2s10s: { value_bp: 45.0, date: '2026-07-24' },
+    long_end_selloff: {
+      rule: '10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力',
+      active: false,
+      us10y_change_20d_bp: 19.0,
+      us30y_change_20d_bp: 23.0,
+      note: '仅作证据记录，不参与灯号判定',
+    },
+    geopolitical_note: '避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要',
+  },
   news_link: 'https://finance.worldmonitor.app',
 }
 
@@ -399,6 +413,56 @@ function OilStrip({ m }: { m: Snapshot }) {
   )
 }
 
+/** 美债收益率观察：与油价横条对称的第二条紧凑横条。
+ * 语义色 = 利率风险方向（上行=风险升温）：20 日上行 ≥30bp 红、>0 橙、≤0 绿；
+ * 长端异动标记触发时状态点点亮呼吸。仅作证据展示，不参与灯号判定。 */
+function RateQuoteItem({ name, q }: { name: string; q: RateQuote }) {
+  if (q.value == null) return null
+  const chg = q.change_20d_bp
+  const chgCls =
+    chg == null ? '' : chg >= 30 ? 'oil-surge' : chg > 0 ? 'oil-up' : 'oil-down'
+  return (
+    <span className="oil-q">
+      <span className="oil-q-name">{name}</span>
+      <b className="mono">{q.value.toFixed(2)}%</b>
+      {chg != null && (
+        <b className={`mono ${chgCls}`}>
+          {chg > 0 ? '▲' : chg < 0 ? '▼' : ''}
+          {Math.abs(chg).toFixed(0)}bp
+        </b>
+      )}
+    </span>
+  )
+}
+
+function RatesStrip({ m }: { m: Snapshot }) {
+  const rates = m.rates_watch
+  if (!rates || (rates.us10y?.value == null && rates.us30y?.value == null)) return null
+  const selloff = !!rates.long_end_selloff?.active
+  const note = selloff ? '长端抛售压力，已作证据记录' : '方向比水平更重要'
+  const date = rates.us10y?.date || rates.us30y?.date || rates.us02y?.date
+  const spread = rates.spread_2s10s?.value_bp
+  return (
+    <div className="oil-strip rates-strip" aria-label="美债收益率观察">
+      <span className={`oil-dot rates-dot${selloff ? ' on' : ''}`} aria-hidden="true" />
+      <span className="oil-name">美债</span>
+      <RateQuoteItem name="10Y" q={rates.us10y ?? { value: null }} />
+      <RateQuoteItem name="30Y" q={rates.us30y ?? { value: null }} />
+      {spread != null && (
+        <span className="oil-q">
+          <span className="oil-q-name">2s10s</span>
+          <b className="mono">
+            {spread > 0 ? '+' : ''}
+            {spread.toFixed(0)}bp
+          </b>
+        </span>
+      )}
+      <span className="oil-note">{note}</span>
+      {date && <span className="oil-date mono">{date}</span>}
+    </div>
+  )
+}
+
 function ThresholdTrack({ m }: { m: Snapshot }) {
   const pct = m.core?.baa10y_pct
   const curve = m.core?.curve_10y3m
@@ -452,6 +516,7 @@ function ThresholdTrack({ m }: { m: Snapshot }) {
         。
       </p>
       <OilStrip m={m} />
+      <RatesStrip m={m} />
     </section>
   )
 }
