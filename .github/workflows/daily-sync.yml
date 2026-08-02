@@ -50,6 +50,8 @@ jobs:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           # secret 缺失时 agent-gw 路径自动跳过，靠 FRED+本地CSV 降级，不会失败
           KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
+          # agent_gw SDK 默认指向 dev 端点（云端不可达），必须显式指定生产端点
+          KIMI_BASE_URL: https://agent-gw.kimi.com/coding/
         run: python scripts/daily_snapshot.py
         timeout-minutes: 15
 
