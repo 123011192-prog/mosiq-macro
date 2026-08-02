@@ -416,7 +416,37 @@ a.news:focus-visible {
   .grid-2 { grid-template-columns: 1fr; }
   .hero-light { font-size: 27px; }
   .core { gap: 24px; }
-  .region-grid { grid-template-columns: 1fr; }
+
+  /* 区域卡片：scroll-snap 轮播，卡宽 78vw，右侧露出下一张提示可滑 */
+  .region-swipe { display: block; }
+  .region-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 12px;
+    margin: 0 -24px;
+    padding: 2px 24px 12px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .region-grid::-webkit-scrollbar { display: none; }
+  .region-card {
+    flex: 0 0 78vw;
+    scroll-snap-align: start;
+  }
+
+  /* 卡内指标行：名称列放宽并单行省略号截断，杜绝一字一行竖排 */
+  .region-ind li {
+    grid-template-columns: minmax(0, 62%) minmax(0, 38%);
+    gap: 1px 8px;
+    font-size: 11.5px;
+  }
+  .region-ind .ind-name {
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 /* 板块大白话说明 */
@@ -438,6 +468,14 @@ a.news:focus-visible {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
+}
+/* 移动端滑动提示（仅 ≤640px 显示） */
+.region-swipe {
+  display: none;
+  margin: -4px 0 8px;
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  color: var(--ink-4);
 }
 .region-card {
   padding: 16px 18px;
@@ -1049,20 +1087,146 @@ a.news:focus-visible {
   color: var(--ink-3);
 }
 
-/* ── 油价观察横条（变灯距离卡内） ─────── */
-.oil-strip {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 6px 14px;
+/* ── 哨兵迷你量规（变灯距离卡内 · 油价/美债/黄金） ── */
+.sent {
   margin-top: 12px;
   padding-top: 12px;
   border-top: 1px dashed var(--line);
+}
+.sent + .sent {
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.sent-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 12px;
   font-size: 12.5px;
   color: var(--ink-2);
 }
+.sent-name {
+  font-weight: 600;
+  color: var(--ink-3);
+}
+.sent-q {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  font-variant-numeric: tabular-nums;
+}
+.sent-q-name {
+  font-size: 11.5px;
+  color: var(--ink-3);
+}
+.sent-q b.mono {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--mosiq-navy);
+}
+.sent-note {
+  font-size: 11.5px;
+  color: var(--ink-3);
+}
+.sent-src {
+  margin-inline-start: auto;
+  font-size: 10.5px;
+  color: var(--ink-4);
+}
+.sent-bar {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 8px;
+}
+.sent-bar-cap {
+  flex: 0 0 auto;
+  font-size: 10.5px;
+  color: var(--ink-3);
+}
+.sent-chg {
+  flex: 0 0 auto;
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.sent-chg.surge { color: var(--red); }
+.sent-chg.up { color: var(--orange); }
+.sent-chg.down { color: var(--green); }
+.sent-extra {
+  flex: 0 0 auto;
+  font-size: 11px;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+.sent-extra b.mono {
+  font-weight: 700;
+  color: var(--mosiq-navy);
+}
+
+/* 迷你量规轨道：复用 BAA10Y 变灯距离量规语言（渐变填充 + 阈值虚线刻度） */
+.sg {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.sg-track {
+  position: relative;
+  height: 6px;
+  margin-top: 5px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 99px;
+}
+.sg-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 99px;
+}
+.sg-fill.sg-red { background: linear-gradient(90deg, #f3bcbc 0%, var(--red) 100%); }
+.sg-fill.sg-orange { background: linear-gradient(90deg, #fbdcb9 0%, var(--orange) 100%); }
+.sg-fill.sg-calm { background: linear-gradient(90deg, #cfe4d6 0%, var(--green) 100%); }
+.sg-now {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  width: 2px;
+  transform: translateX(-1px);
+  background: var(--mosiq-navy);
+  border-radius: 1px;
+}
+.sg-tick {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  width: 0;
+  border-left: 1.5px dashed var(--red);
+}
+.sg-scale {
+  position: relative;
+  height: 13px;
+  margin-top: 5px;
+}
+.sg-scale span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  font-size: 9.5px;
+  color: var(--ink-4);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.sg-scale span.at-end { transform: translateX(-100%); }
+.sg-scale span.hit {
+  color: var(--red);
+  font-weight: 600;
+}
+
+/* 哨兵状态点：触发时点亮呼吸（沿用全局 mosiq-breathe 体系） */
 .oil-dot {
   flex: 0 0 auto;
+  align-self: center;
   width: 9px;
   height: 9px;
   border-radius: 50%;
@@ -1074,48 +1238,10 @@ a.news:focus-visible {
   --glow-rgb: 234, 88, 12;
   animation: mosiq-breathe 3.2s ease-in-out infinite;
 }
-.oil-name {
-  font-weight: 600;
-  color: var(--ink-3);
-  margin-inline-end: -4px;
-}
-.oil-q {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 6px;
-  font-variant-numeric: tabular-nums;
-}
-.oil-q-name { color: var(--ink-3); }
-.oil-q b { color: var(--mosiq-navy); }
-.oil-q b.oil-up { color: var(--orange); font-weight: 600; }
-.oil-q b.oil-surge { color: var(--red); font-weight: 600; }
-.oil-q b.oil-down { color: var(--green); font-weight: 600; }
-.oil-note {
-  color: var(--ink-3);
-}
-.oil-date {
-  margin-inline-start: auto;
-  font-size: 10.5px;
-  color: var(--ink-4);
-}
-
-/* ── 美债收益率横条：与油价横条同族对称，仅收紧间距、状态点用红色语义 ── */
-.rates-strip {
-  margin-top: 8px;
-  padding-top: 0;
-  border-top: none;
-}
 .rates-dot.on {
   background: var(--red);
   border-color: var(--red);
   --glow-rgb: 220, 38, 38;
-}
-
-/* ── 黄金横条：与油价/美债横条同族的第三条，状态点用橙色语义（避险升温） ── */
-.gold-strip {
-  margin-top: 8px;
-  padding-top: 0;
-  border-top: none;
 }
 .gold-dot.on {
   background: var(--orange);

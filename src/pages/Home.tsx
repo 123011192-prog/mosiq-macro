@@ -3,7 +3,6 @@ import type { CSSProperties } from 'react'
 import type {
   LatestQuote,
   Light,
-  OilQuote,
   RateQuote,
   RegionSnapshot,
   Snapshot,
@@ -11,6 +10,7 @@ import type {
 import { useSnapshot } from '../hooks/use-snapshot'
 import { useReducedMotion } from '../hooks/use-reduced-motion'
 import RiskGauge from '../components/RiskGauge'
+import SentinelGauge from '../components/SentinelGauge'
 import WorldDotMap from '../components/WorldDotMap'
 import {
   asLight,
@@ -295,6 +295,8 @@ function srcLabel(source?: string): string {
       return '本地缓存'
     case 'fred':
       return 'FRED'
+    case 'tushare':
+      return '美债官方曲线'
     default:
       return ''
   }
@@ -433,27 +435,14 @@ function moodOf(gap: number): { text: string; cls: string } {
   return { text: '接近变灯', cls: 'lv-orange' }
 }
 
-/** 油价观察：变灯距离卡内的一条紧凑横条。
- * 语义色 = 风险方向（涨=风险升温）；20 日急涨 ≥10% 触发确认时状态点点亮呼吸。 */
-function OilQuoteItem({ name, q }: { name: string; q: OilQuote }) {
-  if (q.value == null) return null
-  const chg = q.change_20d_pct
-  const chgCls =
-    chg == null ? '' : chg >= 10 ? 'oil-surge' : chg > 0 ? 'oil-up' : chg < 0 ? 'oil-down' : ''
-  return (
-    <span className="oil-q">
-      <span className="oil-q-name">{name}</span>
-      <b className="mono">{q.value.toFixed(2)}</b>
-      {chg != null && (
-        <b className={`mono ${chgCls}`}>
-          {chg > 0 ? '▲' : chg < 0 ? '▼' : ''}
-          {Math.abs(chg).toFixed(1)}%
-        </b>
-      )}
-    </span>
-  )
+/** 三条哨兵（油/债/金）共用的 20 日变化量着色：≥触发阈值红、>0 橙、≤0 绿。 */
+function chgClsOf(v: number, threshold: number): string {
+  return v >= threshold ? 'surge' : v > 0 ? 'up' : 'down'
 }
 
+/** 油价观察：变灯距离卡内第一条哨兵（WTI / 布伦特 + 20 日涨幅迷你量规）。
+ * 量规范围 0~15%，阈值 +10%（通胀压力证据）；超出打满。
+ * 语义色 = 风险方向（涨=风险升温）；触发确认时状态点点亮呼吸。 */
 function OilStrip({ m }: { m: Snapshot }) {
   const oil = m.oil_watch
   if (!oil || (oil.wti?.value == null && oil.brent?.value == null)) return null
@@ -464,74 +453,82 @@ function OilStrip({ m }: { m: Snapshot }) {
     : surge
       ? '20日急涨，已计入风险确认'
       : '地缘风险的第一管道'
+  const chg = oil.wti?.change_20d_pct ?? oil.brent?.change_20d_pct ?? null
   const date = oil.wti?.date || oil.brent?.date
   const source = srcLabel(oil.wti?.source || oil.brent?.source)
   return (
-    <div className="oil-strip" aria-label="油价观察">
-      <span className={`oil-dot${surge ? ' on' : ''}`} aria-hidden="true" />
-      <span className="oil-name">油价</span>
-      <OilQuoteItem name="WTI" q={oil.wti ?? { value: null }} />
-      <OilQuoteItem name="布伦特" q={oil.brent ?? { value: null }} />
-      <span className="oil-note">{note}</span>
-      {date && (
-        <span className="oil-date mono">
-          {[source, mmdd(date)].filter(Boolean).join(' · ')}
-        </span>
-      )}
+    <div className="sent" aria-label="油价观察">
+      <div className="sent-head">
+        <span className={`oil-dot${surge ? ' on' : ''}`} aria-hidden="true" />
+        <span className="sent-name">油价</span>
+        {oil.wti?.value != null && (
+          <span className="sent-q">
+            <span className="sent-q-name">WTI</span>
+            <b className="mono">{oil.wti.value.toFixed(2)}</b>
+          </span>
+        )}
+        {oil.brent?.value != null && (
+          <span className="sent-q">
+            <span className="sent-q-name">布伦特</span>
+            <b className="mono">{oil.brent.value.toFixed(2)}</b>
+          </span>
+        )}
+        <span className="sent-note">{note}</span>
+        {date && (
+          <span className="sent-src mono">
+            {[source, mmdd(date)].filter(Boolean).join(' · ')}
+          </span>
+        )}
+      </div>
+      <div className="sent-bar">
+        <span className="sent-bar-cap">20日涨幅</span>
+        <SentinelGauge
+          value={chg}
+          max={15}
+          threshold={10}
+          thresholdLabel="+10%"
+          ariaLabel={`WTI 20日涨幅 ${chg != null ? `${chg.toFixed(1)}%` : '—'}，通胀压力触发阈值 +10%`}
+        />
+        {chg != null && (
+          <b className={`sent-chg mono ${chgClsOf(chg, 10)}`}>
+            {chg > 0 ? '▲' : chg < 0 ? '▼' : ''}
+            {Math.abs(chg).toFixed(1)}%
+          </b>
+        )}
+      </div>
     </div>
   )
 }
 
-/** 美债收益率观察：与油价横条对称的第二条紧凑横条。
- * 语义色 = 利率风险方向（上行=风险升温）：20 日上行 ≥30bp 红、>0 橙、≤0 绿；
- * 长端异动标记触发时状态点点亮呼吸。仅作证据展示，不参与灯号判定。 */
-function RateQuoteItem({
+/** 美债单期限读数：Tushare 美债官方曲线 / Yahoo 网关收盘在场时主显，
+ * FRED 官方值作缩短副标（FRED 4.68·07-30）。 */
+function RateVal({
   name,
   q,
   live,
 }: {
   name: string
-  q: RateQuote
+  q?: RateQuote
   live?: LatestQuote | null
 }) {
-  const chg = q.change_20d_bp
-  const chgCls =
-    chg == null ? '' : chg >= 30 ? 'oil-surge' : chg > 0 ? 'oil-up' : 'oil-down'
-  // Yahoo 网关当日收盘在场：主显它，FRED 官方值作副标。
-  if (live?.value != null) {
-    return (
-      <span className="oil-q">
-        <span className="oil-q-name">{name}</span>
-        <b className="mono">{live.value.toFixed(2)}%</b>
-        {chg != null && (
-          <b className={`mono ${chgCls}`}>
-            {chg > 0 ? '▲' : chg < 0 ? '▼' : ''}
-            {Math.abs(chg).toFixed(0)}bp
-          </b>
-        )}
-        {q.value != null && (
-          <span className="oil-src">
-            FRED {q.value.toFixed(2)} · {mmdd(q.date)}
-          </span>
-        )}
-      </span>
-    )
-  }
-  if (q.value == null) return null
+  const main = live?.value != null ? live.value : q?.value
+  if (main == null) return null
   return (
-    <span className="oil-q">
-      <span className="oil-q-name">{name}</span>
-      <b className="mono">{q.value.toFixed(2)}%</b>
-      {chg != null && (
-        <b className={`mono ${chgCls}`}>
-          {chg > 0 ? '▲' : chg < 0 ? '▼' : ''}
-          {Math.abs(chg).toFixed(0)}bp
-        </b>
+    <span className="sent-q">
+      <span className="sent-q-name">{name}</span>
+      <b className="mono">{main.toFixed(2)}%</b>
+      {live?.value != null && q?.value != null && (
+        <span className="oil-src">
+          FRED {q.value.toFixed(2)}·{mmdd(q.date)}
+        </span>
       )}
     </span>
   )
 }
 
+/** 美债收益率观察：第二条哨兵。第一行 10Y + 30Y 数值，
+ * 第二行 20 日 bp 变动迷你量规（取 10Y/30Y 较大者，范围 0~30bp，阈值 +30bp）+ 2s10s。
+ * 长端抛售标记触发时状态点点亮呼吸。仅作证据展示，不参与灯号判定。 */
 function RatesStrip({ m }: { m: Snapshot }) {
   const rates = m.rates_watch
   if (!rates || (rates.us10y?.value == null && rates.us30y?.value == null)) return null
@@ -542,68 +539,112 @@ function RatesStrip({ m }: { m: Snapshot }) {
   const live10 = rates.latest_quotes?.us10y
   const live30 = rates.latest_quotes?.us30y
   const hasLive = live10?.value != null || live30?.value != null
+  const chg10 = rates.us10y?.change_20d_bp ?? rates.long_end_selloff?.us10y_change_20d_bp ?? null
+  const chg30 = rates.us30y?.change_20d_bp ?? rates.long_end_selloff?.us30y_change_20d_bp ?? null
+  const chg = chg10 != null && chg30 != null ? Math.max(chg10, chg30) : (chg10 ?? chg30)
   return (
-    <div className="oil-strip rates-strip" aria-label="美债收益率观察">
-      <span className={`oil-dot rates-dot${selloff ? ' on' : ''}`} aria-hidden="true" />
-      <span className="oil-name">美债</span>
-      <RateQuoteItem name="10Y" q={rates.us10y ?? { value: null }} live={live10} />
-      <RateQuoteItem name="30Y" q={rates.us30y ?? { value: null }} live={live30} />
-      {spread != null && (
-        <span className="oil-q">
-          <span className="oil-q-name">2s10s</span>
-          <b className="mono">
-            {spread > 0 ? '+' : ''}
-            {spread.toFixed(0)}bp
-          </b>
-        </span>
-      )}
-      <span className="oil-note">{note}</span>
-      {hasLive ? (
-        <span className="oil-date mono">Yahoo网关 · 收盘</span>
-      ) : (
-        date && (
-          <span className="oil-date mono">
-            {[srcLabel(rates.us10y?.source), mmdd(date)].filter(Boolean).join(' · ')}
+    <div className="sent" aria-label="美债收益率观察">
+      <div className="sent-head">
+        <span className={`oil-dot rates-dot${selloff ? ' on' : ''}`} aria-hidden="true" />
+        <span className="sent-name">美债</span>
+        <RateVal name="10Y" q={rates.us10y} live={live10} />
+        <RateVal name="30Y" q={rates.us30y} live={live30} />
+        <span className="sent-note">{note}</span>
+        {hasLive ? (
+          <span className="sent-src mono">
+            {(() => {
+              // 两个期限同源同日时标签最干净；只有单腿在场时如实标注“部分”。
+              const pair =
+                live10?.value != null && live30?.value != null
+                  ? live10
+                  : (live10?.value != null ? live10 : live30)
+              const partial = live10?.value == null || live30?.value == null
+              return (
+                [srcLabel(pair?.source), mmdd(pair?.date)].filter(Boolean).join(' · ') +
+                (partial ? '（部分）' : '')
+              )
+            })()}
           </span>
-        )
-      )}
+        ) : (
+          date && (
+            <span className="sent-src mono">
+              {[srcLabel(rates.us10y?.source), mmdd(date)].filter(Boolean).join(' · ')}
+            </span>
+          )
+        )}
+      </div>
+      <div className="sent-bar">
+        <span className="sent-bar-cap">20日变动</span>
+        <SentinelGauge
+          value={chg}
+          max={30}
+          threshold={30}
+          thresholdLabel="+30bp"
+          ariaLabel={`长端收益率 20 日上行 ${chg != null ? `${chg.toFixed(0)}bp` : '—'}（取 10Y/30Y 较大者），抛售压力触发阈值 +30bp`}
+        />
+        {chg != null && (
+          <b className={`sent-chg mono ${chgClsOf(chg, 30)}`}>
+            {chg > 0 ? '▲' : chg < 0 ? '▼' : ''}
+            {Math.abs(chg).toFixed(0)}bp
+          </b>
+        )}
+        {spread != null && (
+          <span className="sent-extra">
+            <span className="sent-q-name">2s10s</span>{' '}
+            <b className="mono">
+              {spread > 0 ? '+' : ''}
+              {spread.toFixed(0)}bp
+            </b>
+          </span>
+        )}
+      </div>
     </div>
   )
 }
 
-/** 黄金观察：与油价/美债横条同族的第三条紧凑横条（避险温度计）。
- * 语义色 = 避险方向：20 日上涨 ≥8% 红（避险升温）、>0 橙、≤0 绿；
- * 避险标记触发时状态点点亮呼吸。仅作证据展示，不参与灯号判定。 */
+/** 黄金观察：第三条哨兵（避险温度计）。现货读数 + 20 日涨幅迷你量规
+ * （范围 0~8%，阈值 +8% 避险升温）；触发时状态点点亮呼吸。
+ * 仅作证据展示，不参与灯号判定。 */
 function GoldStrip({ m }: { m: Snapshot }) {
   const gold = m.gold_watch
   const spot = gold?.spot
   if (!gold || !spot || spot.value == null) return null
   const riskOff = !!gold.risk_off_signal?.active
-  const chg = spot.change_20d_pct
-  const chgCls =
-    chg == null ? '' : chg >= 8 ? 'oil-surge' : chg > 0 ? 'oil-up' : 'oil-down'
+  const chg = spot.change_20d_pct ?? gold.risk_off_signal?.change_20d_pct ?? null
   const note = riskOff ? '避险升温，已作证据记录' : '避险与去美元化的温度计'
   return (
-    <div className="oil-strip gold-strip" aria-label="黄金价格观察">
-      <span className={`oil-dot gold-dot${riskOff ? ' on' : ''}`} aria-hidden="true" />
-      <span className="oil-name">黄金</span>
-      <span className="oil-q">
-        <b className="mono">
-          {spot.value.toLocaleString('en-US', { maximumFractionDigits: 0 })}
-        </b>
+    <div className="sent" aria-label="黄金价格观察">
+      <div className="sent-head">
+        <span className={`oil-dot gold-dot${riskOff ? ' on' : ''}`} aria-hidden="true" />
+        <span className="sent-name">黄金</span>
+        <span className="sent-q">
+          <b className="mono">
+            {spot.value.toLocaleString('en-US', { maximumFractionDigits: 0 })}
+          </b>
+        </span>
+        <span className="sent-note">{note}</span>
+        {spot.date && (
+          <span className="sent-src mono">
+            {[srcLabel(spot.source), mmdd(spot.date)].filter(Boolean).join(' · ')}
+          </span>
+        )}
+      </div>
+      <div className="sent-bar">
+        <span className="sent-bar-cap">20日涨幅</span>
+        <SentinelGauge
+          value={chg}
+          max={8}
+          threshold={8}
+          thresholdLabel="+8%"
+          ariaLabel={`金价 20 日涨幅 ${chg != null ? `${chg.toFixed(1)}%` : '—'}，避险升温触发阈值 +8%`}
+        />
         {chg != null && (
-          <b className={`mono ${chgCls}`}>
+          <b className={`sent-chg mono ${chgClsOf(chg, 8)}`}>
             {chg > 0 ? '▲' : chg < 0 ? '▼' : ''}
-            {Math.abs(chg).toFixed(1)}%（20日）
+            {Math.abs(chg).toFixed(1)}%
           </b>
         )}
-      </span>
-      <span className="oil-note">{note}</span>
-      {spot.date && (
-        <span className="oil-date mono">
-          {[srcLabel(spot.source), mmdd(spot.date)].filter(Boolean).join(' · ')}
-        </span>
-      )}
+      </div>
     </div>
   )
 }
@@ -714,7 +755,9 @@ function RegionCard({
         <ul className="region-ind">
           {signalInds.map((ind) => (
             <li key={ind.id}>
-              <span className="ind-name">{ind.name}</span>
+              <span className="ind-name" title={ind.name}>
+                {ind.name}
+              </span>
               <span className="ind-val mono">{fmtRegionValue(ind.value, ind.unit)}</span>
               <span className="ind-date mono">{ind.date}</span>
             </li>
@@ -906,6 +949,9 @@ export default function Home() {
             active={activeRegion}
             onActive={setActiveRegion}
           />
+          <div className="region-swipe" aria-hidden="true">
+            左右滑动查看全部 {regionKeys.length} 个区域 →
+          </div>
           <div className="region-grid">
             {regionKeys.map((k) => (
               <RegionCard

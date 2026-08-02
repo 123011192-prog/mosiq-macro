@@ -67,7 +67,12 @@ export interface RegionSnapshot {
 
 /** 行情来源标签：yahoo_gw=Yahoo网关（不经限流）、yahoo_direct=Yahoo直连、
  * local_cache=本地缓存、fred=FRED 官方日频。 */
-export type QuoteSource = 'yahoo_gw' | 'yahoo_direct' | 'local_cache' | 'fred'
+export type QuoteSource =
+  | 'yahoo_gw'
+  | 'yahoo_direct'
+  | 'local_cache'
+  | 'fred'
+  | 'tushare'
 
 /** 油价观察：WTI / 布伦特读数与涨跌幅。
  * inflation_evidence 仅作证据记录，不参与六维判定。 */
@@ -100,7 +105,8 @@ export interface RateQuote {
   source?: QuoteSource
 }
 
-/** agent-gw Yahoo 当日收盘补充（取不到为 null，FRED 仍为主源）。 */
+/** 最新收盘补充：优先 Tushare 美债官方曲线（全期限同源同日），
+ * 其次 agent-gw Yahoo；取不到为 null，FRED 仍为主源。 */
 export interface LatestQuote {
   value: number | null
   date?: string | null
