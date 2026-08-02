@@ -67,6 +67,9 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_cli_br",
+      "refresh:oecd:oecd_bci_br",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -76,7 +79,8 @@
       "regions:china",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -700,25 +704,15 @@
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
-        "growth": "neutral",
+        "growth": "degraded",
         "policy": "up",
         "credit": "neutral",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 103.5152,
-          "date": "2026-06-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.039
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -740,16 +734,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 342.7509,
-          "date": "2026-06-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -11.25
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.97,
@@ -760,13 +744,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 100.3868,
-          "date": "2026-06-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 218.9329,
@@ -775,28 +752,34 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长平稳、信贷平稳、市场平稳，区域绿灯",
-      "degraded": []
+      "summary": "巴西：增长缺失、信贷平稳、市场缺失，区域绿灯",
+      "degraded": [
+        "oecd_cli_br",
+        "oecd_share_br",
+        "oecd_bci_br"
+      ]
     }
   },
   "oil_watch": {
     "wti": {
-      "value": 84.25,
-      "date": "2026-07-27",
-      "change_20d_pct": 19.4,
-      "change_3m_pct": -20.05
+      "value": 84.669998,
+      "date": "2026-07-31",
+      "change_20d_pct": 23.26,
+      "change_3m_pct": -19.42,
+      "source": "local_cache"
     },
     "brent": {
-      "value": 91.82,
-      "date": "2026-07-27",
-      "change_20d_pct": 30.32,
-      "change_3m_pct": -22.36
+      "value": 90.120003,
+      "date": "2026-07-31",
+      "change_20d_pct": 31.22,
+      "change_3m_pct": -21.25,
+      "source": "local_cache"
     },
     "inflation_evidence": {
       "rule": "油价近3个月涨幅≥+15%记为通胀上行辅助压力信号",
       "active": false,
-      "wti_change_3m_pct": -20.05,
-      "brent_change_3m_pct": -22.36,
+      "wti_change_3m_pct": -19.42,
+      "brent_change_3m_pct": -21.25,
       "note": "仅作证据记录：不参与 inflation 维度 up/neutral/down 判定，六维判定路径保持不变"
     }
   },
@@ -804,17 +787,20 @@
     "us10y": {
       "value": 4.68,
       "date": "2026-07-30",
-      "change_20d_bp": 19.0
+      "change_20d_bp": 19.0,
+      "source": "fred"
     },
     "us30y": {
       "value": 5.21,
       "date": "2026-07-30",
-      "change_20d_bp": 23.0
+      "change_20d_bp": 23.0,
+      "source": "fred"
     },
     "us02y": {
       "value": 4.23,
       "date": "2026-07-30",
-      "change_20d_bp": 9.0
+      "change_20d_bp": 9.0,
+      "source": "fred"
     },
     "spread_2s10s": {
       "value_bp": 45.0,
@@ -827,21 +813,49 @@
       "us30y_change_20d_bp": 23.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
-    "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要"
+    "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
+    "latest_quotes": {
+      "us10y": null,
+      "us30y": null
+    }
   },
   "gold_watch": {
     "spot": {
-      "value": null,
-      "date": null,
-      "change_20d_pct": null,
-      "change_3m_pct": null
+      "value": 4107.0,
+      "date": "2026-07-31",
+      "change_20d_pct": -0.14,
+      "change_3m_pct": -11.0,
+      "source": "local_cache"
     },
     "risk_off_signal": {
       "rule": "金价20日上涨≥8%记为避险升温信号",
       "active": false,
-      "change_20d_pct": null,
+      "change_20d_pct": -0.14,
       "note": "仅作证据记录：不参与灯号判定，也不计入确认项计数，六维判定路径保持不变"
     },
     "note": "黄金是避险与去美元化的双重温度计——与实际利率和地缘局势联动解读"
-  }
+  },
+  "world_brief": [
+    {
+      "category": "地缘冲突",
+      "title": "ideaForge Technology Receives In - Principle Approval for ₹151 Crore Financial Assistance from Technology Development Board ( TDB )",
+      "source": "equitybulls.com",
+      "url": "https://www.equitybulls.com/category.php?id=373814",
+      "published": "2026-08-01T11:15:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
+      "title": "US Senate bill on Russia sanctions risks backfiring against Europe",
+      "source": "euronews.com",
+      "url": "https://www.euronews.com/my-europe/2026/08/01/us-senate-bill-on-russia-sanctions-risks-backfiring-against-european-allies",
+      "published": "2026-08-01T10:00:00+00:00"
+    },
+    {
+      "category": "能源",
+      "title": "Closely Monitoring : India on US Bill Seeking 100 % Tariffs on Russian Oil Buyers",
+      "source": "deccanchronicle.com",
+      "url": "https://www.deccanchronicle.com/nation/world/closely-monitoring-india-on-us-bill-seeking-100-tariffs-on-russian-oil-buyers-1975672",
+      "published": "2026-08-01T04:00:00+00:00"
+    }
+  ]
 }
