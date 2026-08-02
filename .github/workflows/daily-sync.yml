@@ -1,11 +1,12 @@
 name: daily-macro-snapshot
 
-# MOSIQ 全球宏观罗盘 · 云端每日管线
-# 每天 07:47 Asia/Shanghai（23:47 UTC）：拉取私有引擎仓库 → 跑快照 → 构建 → 双通道发布。
+# MOSIQ 全球宏观罗盘 · 云端管线
+# 每天 4 次：UTC 23:47/05:47/11:47/17:47（北京 7:47/13:47/19:47/次日1:47）：
+# 拉取私有引擎仓库 → 跑快照 → 行情历史回写引擎仓库 → 构建 → 双通道发布。
 
 on:
   schedule:
-    - cron: "47 23 * * *"
+    - cron: "47 23,5,11,17 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -40,12 +41,32 @@ jobs:
       - name: Install engine
         run: pip install -e ./engine
 
+      - name: Install agent-gw (Yahoo gateway, optional)
+        run: pip install "$(curl -s https://cdn.kimi.com/agentgw/pysdk/manifest.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["latest"]["url"])')"
+
       - name: Run daily snapshot
         working-directory: engine
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          # secret 缺失时 agent-gw 路径自动跳过，靠 FRED+本地CSV 降级，不会失败
+          KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
         run: python scripts/daily_snapshot.py
         timeout-minutes: 15
+
+      - name: Push engine quote history
+        working-directory: engine
+        run: |
+          git config user.name "MOSIQ Daily"
+          git config user.email "daily@mosiq.local"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "quote history unchanged"
+          else
+            git commit -m "chore: update quote history [skip ci]"
+            git fetch origin main
+            git rebase origin/main || git rebase --abort
+            git push origin HEAD:main || echo "::warning::quote history push failed, will retry next run"
+          fi
 
       - name: Sync snapshot into site
         run: |

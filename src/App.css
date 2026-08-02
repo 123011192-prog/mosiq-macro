@@ -1122,3 +1122,100 @@ a.news:focus-visible {
   border-color: var(--orange);
   --glow-rgb: 234, 88, 12;
 }
+
+
+/* ── 今日世界简报（创始人笔记正下方，纯展示窄条） ── */
+.world-brief {
+  margin-top: 12px;
+  padding: 10px 2px 0;
+  border-top: 1px solid var(--line);
+}
+.wb-lead {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--ink-4);
+  margin-bottom: 2px;
+}
+.wb-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.wb-list li + li {
+  border-top: 1px solid var(--line);
+}
+.wb-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 8px 0;
+  text-decoration: none;
+  color: inherit;
+}
+.wb-row:hover .wb-title {
+  color: var(--mosiq-blue);
+}
+.wb-chip {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.wb-chip::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ink-4);
+}
+.wb-chip.wb-blue::before { background: var(--mosiq-blue); }
+.wb-chip.wb-red::before { background: var(--red); }
+.wb-chip.wb-orange::before { background: var(--orange); }
+.wb-chip.wb-purple::before { background: #7c3aed; }
+.wb-title {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+.wb-meta {
+  flex: 0 0 auto;
+  font-size: 10.5px;
+  color: var(--ink-4);
+  white-space: nowrap;
+}
+
+/* ── 哨兵横条来源小字（FRED / Yahoo网关 / 本地缓存） ── */
+.oil-src {
+  font-size: 10px;
+  color: var(--ink-4);
+  font-weight: 400;
+}
+
+@media (max-width: 560px) {
+  .wb-row {
+    flex-wrap: wrap;
+    gap: 4px 8px;
+  }
+  .wb-title {
+    flex-basis: 100%;
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wb-row:hover .wb-title {
+    transition: none;
+  }
+}

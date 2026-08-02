@@ -65,6 +65,10 @@ export interface RegionSnapshot {
   degraded?: string[]
 }
 
+/** 行情来源标签：yahoo_gw=Yahoo网关（不经限流）、yahoo_direct=Yahoo直连、
+ * local_cache=本地缓存、fred=FRED 官方日频。 */
+export type QuoteSource = 'yahoo_gw' | 'yahoo_direct' | 'local_cache' | 'fred'
+
 /** 油价观察：WTI / 布伦特读数与涨跌幅。
  * inflation_evidence 仅作证据记录，不参与六维判定。 */
 export interface OilQuote {
@@ -72,6 +76,7 @@ export interface OilQuote {
   date?: string
   change_20d_pct?: number | null
   change_3m_pct?: number | null
+  source?: QuoteSource
 }
 
 export interface OilWatch {
@@ -92,6 +97,14 @@ export interface RateQuote {
   value: number | null
   date?: string | null
   change_20d_bp?: number | null
+  source?: QuoteSource
+}
+
+/** agent-gw Yahoo 当日收盘补充（取不到为 null，FRED 仍为主源）。 */
+export interface LatestQuote {
+  value: number | null
+  date?: string | null
+  source?: QuoteSource
 }
 
 export interface RatesWatch {
@@ -110,6 +123,11 @@ export interface RatesWatch {
     note?: string
   }
   geopolitical_note?: string
+  /** Yahoo 网关当日收盘补充：有值时主显，FRED 值作副标。 */
+  latest_quotes?: {
+    us10y?: LatestQuote | null
+    us30y?: LatestQuote | null
+  }
 }
 
 /** 黄金价格观察：现货读数（美元/盎司）、20 日与约 3 个月涨跌幅。
@@ -120,6 +138,7 @@ export interface GoldQuote {
   date?: string | null
   change_20d_pct?: number | null
   change_3m_pct?: number | null
+  source?: QuoteSource
 }
 
 export interface GoldWatch {
@@ -131,6 +150,16 @@ export interface GoldWatch {
     note?: string
   }
   note?: string
+}
+
+/** 今日世界简报：GDELT / Google News 抓取的全球宏观·地缘大事（纯展示，
+ * 不参与灯号与确认项）。双源都失败时为 null，页面整块隐藏。 */
+export interface WorldBriefItem {
+  category: string
+  title: string
+  source: string
+  url: string
+  published: string
 }
 
 export interface Snapshot {
@@ -156,6 +185,8 @@ export interface Snapshot {
   rates_watch?: RatesWatch
   /** 黄金价格观察（现货 + 20日/3个月涨幅 + 避险升温标记）。 */
   gold_watch?: GoldWatch
+  /** 今日世界简报（最多 3 条，纯展示；null 时页面隐藏该区域）。 */
+  world_brief?: WorldBriefItem[] | null
   news_link?: string
 }
 

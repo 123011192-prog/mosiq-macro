@@ -1,6 +1,13 @@
 import { useEffect, useState } from 'react'
 import type { CSSProperties } from 'react'
-import type { Light, OilQuote, RateQuote, RegionSnapshot, Snapshot } from '../types/snapshot'
+import type {
+  LatestQuote,
+  Light,
+  OilQuote,
+  RateQuote,
+  RegionSnapshot,
+  Snapshot,
+} from '../types/snapshot'
 import { useSnapshot } from '../hooks/use-snapshot'
 import { useReducedMotion } from '../hooks/use-reduced-motion'
 import RiskGauge from '../components/RiskGauge'
@@ -150,9 +157,9 @@ const SAMPLE: Snapshot = {
   health: { data_asof: '2026-07-24', stale_count: 0, degraded: [] },
   regions: SAMPLE_REGION,
   rates_watch: {
-    us10y: { value: 4.68, date: '2026-07-24', change_20d_bp: 19.0 },
-    us30y: { value: 5.21, date: '2026-07-24', change_20d_bp: 23.0 },
-    us02y: { value: 4.23, date: '2026-07-24', change_20d_bp: 9.0 },
+    us10y: { value: 4.68, date: '2026-07-24', change_20d_bp: 19.0, source: 'fred' },
+    us30y: { value: 5.21, date: '2026-07-24', change_20d_bp: 23.0, source: 'fred' },
+    us02y: { value: 4.23, date: '2026-07-24', change_20d_bp: 9.0, source: 'fred' },
     spread_2s10s: { value_bp: 45.0, date: '2026-07-24' },
     long_end_selloff: {
       rule: '10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力',
@@ -162,9 +169,10 @@ const SAMPLE: Snapshot = {
       note: '仅作证据记录，不参与灯号判定',
     },
     geopolitical_note: '避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要',
+    latest_quotes: { us10y: null, us30y: null },
   },
   gold_watch: {
-    spot: { value: 4074.1, date: '2026-07-21', change_20d_pct: 1.5, change_3m_pct: -10.7 },
+    spot: { value: 4074.1, date: '2026-07-21', change_20d_pct: 1.5, change_3m_pct: -10.7, source: 'local_cache' },
     risk_off_signal: {
       rule: '金价20日上涨≥8%记为避险升温信号',
       active: false,
@@ -173,6 +181,7 @@ const SAMPLE: Snapshot = {
     },
     note: '黄金是避险与去美元化的双重温度计——与实际利率和地缘局势联动解读',
   },
+  world_brief: null,
   news_link: 'https://finance.worldmonitor.app',
 }
 
@@ -271,6 +280,51 @@ const LIGHT_GUIDE: Array<{ light: Light; text: string }> = [
 
 function LightDot({ light }: { light: Light }) {
   return <span className={`px ${light}`} aria-hidden="true" />
+}
+
+/* ── 行情来源标签与今日世界简报辅助 ─────────────── */
+
+/** 行情来源 → 读者能懂的浅灰小字。 */
+function srcLabel(source?: string): string {
+  switch (source) {
+    case 'yahoo_gw':
+      return 'Yahoo网关'
+    case 'yahoo_direct':
+      return 'Yahoo直连'
+    case 'local_cache':
+      return '本地缓存'
+    case 'fred':
+      return 'FRED'
+    default:
+      return ''
+  }
+}
+
+/** ISO 日期 → MM-DD（紧凑展示）。 */
+function mmdd(date?: string | null): string {
+  const m = /^\d{4}-(\d{2})-(\d{2})/.exec(date || '')
+  return m ? `${m[1]}-${m[2]}` : ''
+}
+
+/** 发布时间 → 中文相对时间。 */
+function relTime(published: string): string {
+  const t = Date.parse(published)
+  if (Number.isNaN(t)) return ''
+  const mins = Math.max(0, Math.round((Date.now() - t) / 60000))
+  if (mins < 60) return `${mins}分钟前`
+  const hours = Math.round(mins / 60)
+  if (hours < 24) return `${hours}小时前`
+  const days = Math.floor(hours / 24)
+  return days <= 1 ? '昨天' : `${days}天前`
+}
+
+/** 简报分类 → chip 颜色类名（蓝=货币政策、红=地缘冲突、橙=能源、紫=科技产业链）。 */
+function wbCatClass(category: string): string {
+  if (category.includes('货币')) return 'wb-blue'
+  if (category.includes('地缘')) return 'wb-red'
+  if (category.includes('能源')) return 'wb-orange'
+  if (category.includes('科技')) return 'wb-purple'
+  return 'wb-blue'
 }
 
 /* ── 动效辅助 ───────────────────────── */
@@ -411,6 +465,7 @@ function OilStrip({ m }: { m: Snapshot }) {
       ? '20日急涨，已计入风险确认'
       : '地缘风险的第一管道'
   const date = oil.wti?.date || oil.brent?.date
+  const source = srcLabel(oil.wti?.source || oil.brent?.source)
   return (
     <div className="oil-strip" aria-label="油价观察">
       <span className={`oil-dot${surge ? ' on' : ''}`} aria-hidden="true" />
@@ -418,7 +473,11 @@ function OilStrip({ m }: { m: Snapshot }) {
       <OilQuoteItem name="WTI" q={oil.wti ?? { value: null }} />
       <OilQuoteItem name="布伦特" q={oil.brent ?? { value: null }} />
       <span className="oil-note">{note}</span>
-      {date && <span className="oil-date mono">{date}</span>}
+      {date && (
+        <span className="oil-date mono">
+          {[source, mmdd(date)].filter(Boolean).join(' · ')}
+        </span>
+      )}
     </div>
   )
 }
@@ -426,11 +485,39 @@ function OilStrip({ m }: { m: Snapshot }) {
 /** 美债收益率观察：与油价横条对称的第二条紧凑横条。
  * 语义色 = 利率风险方向（上行=风险升温）：20 日上行 ≥30bp 红、>0 橙、≤0 绿；
  * 长端异动标记触发时状态点点亮呼吸。仅作证据展示，不参与灯号判定。 */
-function RateQuoteItem({ name, q }: { name: string; q: RateQuote }) {
-  if (q.value == null) return null
+function RateQuoteItem({
+  name,
+  q,
+  live,
+}: {
+  name: string
+  q: RateQuote
+  live?: LatestQuote | null
+}) {
   const chg = q.change_20d_bp
   const chgCls =
     chg == null ? '' : chg >= 30 ? 'oil-surge' : chg > 0 ? 'oil-up' : 'oil-down'
+  // Yahoo 网关当日收盘在场：主显它，FRED 官方值作副标。
+  if (live?.value != null) {
+    return (
+      <span className="oil-q">
+        <span className="oil-q-name">{name}</span>
+        <b className="mono">{live.value.toFixed(2)}%</b>
+        {chg != null && (
+          <b className={`mono ${chgCls}`}>
+            {chg > 0 ? '▲' : chg < 0 ? '▼' : ''}
+            {Math.abs(chg).toFixed(0)}bp
+          </b>
+        )}
+        {q.value != null && (
+          <span className="oil-src">
+            FRED {q.value.toFixed(2)} · {mmdd(q.date)}
+          </span>
+        )}
+      </span>
+    )
+  }
+  if (q.value == null) return null
   return (
     <span className="oil-q">
       <span className="oil-q-name">{name}</span>
@@ -452,12 +539,15 @@ function RatesStrip({ m }: { m: Snapshot }) {
   const note = selloff ? '长端抛售压力，已作证据记录' : '方向比水平更重要'
   const date = rates.us10y?.date || rates.us30y?.date || rates.us02y?.date
   const spread = rates.spread_2s10s?.value_bp
+  const live10 = rates.latest_quotes?.us10y
+  const live30 = rates.latest_quotes?.us30y
+  const hasLive = live10?.value != null || live30?.value != null
   return (
     <div className="oil-strip rates-strip" aria-label="美债收益率观察">
       <span className={`oil-dot rates-dot${selloff ? ' on' : ''}`} aria-hidden="true" />
       <span className="oil-name">美债</span>
-      <RateQuoteItem name="10Y" q={rates.us10y ?? { value: null }} />
-      <RateQuoteItem name="30Y" q={rates.us30y ?? { value: null }} />
+      <RateQuoteItem name="10Y" q={rates.us10y ?? { value: null }} live={live10} />
+      <RateQuoteItem name="30Y" q={rates.us30y ?? { value: null }} live={live30} />
       {spread != null && (
         <span className="oil-q">
           <span className="oil-q-name">2s10s</span>
@@ -468,7 +558,15 @@ function RatesStrip({ m }: { m: Snapshot }) {
         </span>
       )}
       <span className="oil-note">{note}</span>
-      {date && <span className="oil-date mono">{date}</span>}
+      {hasLive ? (
+        <span className="oil-date mono">Yahoo网关 · 收盘</span>
+      ) : (
+        date && (
+          <span className="oil-date mono">
+            {[srcLabel(rates.us10y?.source), mmdd(date)].filter(Boolean).join(' · ')}
+          </span>
+        )
+      )}
     </div>
   )
 }
@@ -501,7 +599,11 @@ function GoldStrip({ m }: { m: Snapshot }) {
         )}
       </span>
       <span className="oil-note">{note}</span>
-      {spot.date && <span className="oil-date mono">{spot.date}</span>}
+      {spot.date && (
+        <span className="oil-date mono">
+          {[srcLabel(spot.source), mmdd(spot.date)].filter(Boolean).join(' · ')}
+        </span>
+      )}
     </div>
   )
 }
@@ -685,6 +787,33 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {m.world_brief && m.world_brief.length > 0 && (
+        <section className="world-brief reveal" style={reveal(3)} aria-label="今日世界">
+          <span className="wb-lead">今日世界</span>
+          <ul className="wb-list">
+            {m.world_brief.map((item, i) => (
+              <li key={i}>
+                <a
+                  className="wb-row"
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className={`wb-chip ${wbCatClass(item.category)}`}>
+                    {item.category}
+                  </span>
+                  <span className="wb-title">{item.title}</span>
+                  <span className="wb-meta">
+                    {item.source}
+                    {relTime(item.published) ? ` · ${relTime(item.published)}` : ''}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <ThresholdTrack m={m} />
 
