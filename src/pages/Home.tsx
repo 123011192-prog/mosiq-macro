@@ -49,6 +49,90 @@ const CYCLE_LABELS: Record<(typeof CYCLE_KEYS)[number], string> = {
 }
 
 /** 数据加载失败时的示例快照（显著标注"示例数据"，仅作兜底展示）。 */
+const SAMPLE_REGION: Record<string, RegionSnapshot> = {
+  euro_area: {
+    status: 'ok',
+    cycle: { growth: 'neutral', policy: 'neutral', credit: 'neutral', market: 'neutral', fx: 'neutral' },
+    indicators: [
+      { id: 'oecd_cli_eu', name: 'OECD 欧元区综合领先指标 CLI', value: 99.8, date: '2026-06-01', unit: '指数', signal: { '3m_change': 0.1 } },
+    ],
+    light: 'green',
+    summary: '增长动能平稳，政策路径温和。',
+  },
+  china: {
+    status: 'ok',
+    cycle: { growth: 'neutral', policy: 'up', credit: 'neutral', market: 'neutral', fx: 'neutral' },
+    indicators: [
+      { id: 'oecd_cli_cn', name: 'OECD 中国综合领先指标 CLI', value: 100.4, date: '2026-06-01', unit: '指数', signal: { '3m_change': 0.3 } },
+    ],
+    light: 'green',
+    summary: '政策托底延续，信贷节奏平稳。',
+  },
+  japan: {
+    status: 'ok',
+    cycle: { growth: 'neutral', policy: 'up', credit: 'neutral', market: 'neutral', fx: 'down' },
+    indicators: [
+      { id: 'oecd_cli_jp', name: 'OECD 日本综合领先指标 CLI', value: 100.1, date: '2026-06-01', unit: '指数', signal: { '3m_change': 0.2 } },
+    ],
+    light: 'yellow',
+    summary: '加息周期推进，日元波动加大。',
+  },
+  korea: {
+    status: 'ok',
+    cycle: { growth: 'down', policy: 'neutral', credit: 'down', market: 'down', fx: 'down' },
+    indicators: [
+      { id: 'oecd_cli_kr', name: 'OECD 韩国综合领先指标 CLI', value: 99.2, date: '2026-06-01', unit: '指数', signal: { '3m_change': -0.6 } },
+    ],
+    light: 'orange',
+    summary: '出口与信贷同步走弱，需重点跟踪。',
+  },
+  uk: {
+    status: 'ok',
+    cycle: { growth: 'neutral', policy: 'neutral', credit: 'neutral', market: 'up', fx: 'neutral' },
+    indicators: [
+      { id: 'oecd_cli_gb', name: 'OECD 英国综合领先指标 CLI', value: 100.2, date: '2026-06-01', unit: '指数', signal: { '3m_change': 0.2 } },
+    ],
+    light: 'green',
+    summary: '通胀回落，市场动能修复。',
+  },
+  canada: {
+    status: 'ok',
+    cycle: { growth: 'neutral', policy: 'neutral', credit: 'neutral', market: 'neutral', fx: 'neutral' },
+    indicators: [
+      { id: 'oecd_cli_ca', name: 'OECD 加拿大综合领先指标 CLI', value: 99.9, date: '2026-06-01', unit: '指数', signal: { '3m_change': 0.0 } },
+    ],
+    light: 'green',
+    summary: '商品周期平稳，增长温和。',
+  },
+  australia: {
+    status: 'ok',
+    cycle: { growth: 'neutral', policy: 'neutral', credit: 'neutral', market: 'up', fx: 'neutral' },
+    indicators: [
+      { id: 'oecd_cli_au', name: 'OECD 澳大利亚综合领先指标 CLI', value: 100.0, date: '2026-06-01', unit: '指数', signal: { '3m_change': 0.1 } },
+    ],
+    light: 'green',
+    summary: '资源出口稳健，市场偏强。',
+  },
+  india: {
+    status: 'ok',
+    cycle: { growth: 'up', policy: 'neutral', credit: 'up', market: 'up', fx: 'neutral' },
+    indicators: [
+      { id: 'oecd_cli_in', name: 'OECD 印度综合领先指标 CLI', value: 101.1, date: '2026-06-01', unit: '指数', signal: { '3m_change': 0.5 } },
+    ],
+    light: 'green',
+    summary: '高增长延续，信贷扩张积极。',
+  },
+  brazil: {
+    status: 'ok',
+    cycle: { growth: 'neutral', policy: 'up', credit: 'neutral', market: 'neutral', fx: 'down' },
+    indicators: [
+      { id: 'oecd_cli_br', name: 'OECD 巴西综合领先指标 CLI', value: 99.7, date: '2026-06-01', unit: '指数', signal: { '3m_change': -0.2 } },
+    ],
+    light: 'yellow',
+    summary: '高利率压制需求，汇率承压。',
+  },
+}
+
 const SAMPLE: Snapshot = {
   as_of: '2026-07-25',
   global_light: 'yellow',
@@ -64,11 +148,13 @@ const SAMPLE: Snapshot = {
   founder_note: '增长走弱而流动性仍宽，曲线倒挂未解，黄灯下保持耐心、不追风险。',
   advice: [{ text: '维持基准配置，关注信用利差走向；黄灯期间不加杠杆。', confidence: '中' }],
   health: { data_asof: '2026-07-24', stale_count: 0, degraded: [] },
+  regions: SAMPLE_REGION,
   news_link: 'https://finance.worldmonitor.app',
 }
 
-/** 今日结论：把灯号 + 核心信号翻译成大白话，给非专业读者一个明确 takeaway。 */
-function conclusion(m: Snapshot): { title: string; detail: string } {
+/** 创始人笔记区的辅助小字：把核心信号翻译成一句大白话背景，
+ * 次要呈现，不抢创始人一句话的主视觉。 */
+function conclSupport(m: Snapshot): string {
   const pct = m.core?.baa10y_pct
   const curve = m.core?.curve_10y3m
   const facts: string[] = []
@@ -82,44 +168,16 @@ function conclusion(m: Snapshot): { title: string; detail: string } {
   if (curve != null) {
     facts.push(curve >= 0 ? '国债长短期利差形态正常' : '国债曲线倒挂（历史上最可靠的衰退预警之一）')
   }
-  const factTxt = facts.length ? facts.join('，') + '。' : ''
-  switch (m.global_light) {
-    case 'green':
-      return {
-        title: '今日结论：风险平稳，无需动作',
-        detail: `${factTxt}四类危机雷达均无异常信号。按系统规则，今天保持现状即可。`,
-      }
-    case 'yellow':
-      return {
-        title: '今日结论：出现早期风险信号，保持关注',
-        detail: `${factTxt}有风险指标开始抬头但尚未形成共振。规则建议：不加杠杆、不追高，继续观察。`,
-      }
-    case 'orange':
-      return {
-        title: '今日结论：多个风险信号相互印证，应当警觉',
-        detail: `${factTxt}独立模块同时恶化。规则建议：降低风险仓位、提高现金与流动性。`,
-      }
-    case 'red':
-      return {
-        title: '今日结论：高危状态，防御优先',
-        detail: `${factTxt}风险信号已广泛确认。规则建议：防御姿态，等待系统解除信号。`,
-      }
-    default:
-      return {
-        title: '今日结论：数据不足，暂不判断',
-        detail: '核心数据尚未就位，请稍后再看。',
-      }
-  }
+  const radarAllGreen = (['banking', 'credit', 'nonbank', 'liquidity'] as const).every(
+    (k) => asLight(m.lights?.[k]) === 'green',
+  )
+  if (radarAllGreen) facts.push('四类危机雷达均无异常信号')
+  return facts.length ? `背景速读：${facts.join('，')}。` : ''
 }
 
-/** 创始人笔记兜底：引擎的"数据不全"是内部诚实机制，
- * 公网展示换成平静的解释；灯号主触发器数据完好时这句话才成立。 */
+/** 创始人笔记：引擎已输出纯市场口吻，兜底只保留"待填写"。 */
 function displayNote(m: Snapshot): string {
-  const note = m.founder_note || ''
-  if (note.includes('数据不全') || note.includes('数据完整性不足')) {
-    return '核心信号（Baa 利差分位 + 国债曲线）数据完好，今日灯号可信；个别增强指标受免费数据源限制未覆盖，已在页脚标注，不影响灯号判断。'
-  }
-  return note || '今日笔记待填写。'
+  return m.founder_note || '今日笔记待填写。'
 }
 
 /** 页脚健康信息：把内部代码翻译成读者能懂的话。 */
@@ -137,6 +195,11 @@ const REGION_DEGRADED_TXT: Record<string, string> = {
   china: '中国面板本次更新不完整',
   japan: '日本面板本次更新不完整',
   korea: '韩国面板本次更新不完整',
+  uk: '英国面板本次更新不完整',
+  canada: '加拿大面板本次更新不完整',
+  australia: '澳大利亚面板本次更新不完整',
+  india: '印度面板本次更新不完整',
+  brazil: '巴西面板本次更新不完整',
 }
 const RADAR_DEGRADED_TXT: Record<string, string> = {
   banking: '银行雷达个别增强指标未覆盖',
@@ -463,6 +526,15 @@ export default function Home() {
   const m = snapshot ?? SAMPLE
   const globalLight = asLight(m.global_light)
   const newsLink = m.news_link || 'https://finance.worldmonitor.app'
+  // 区域面板数据驱动：先按固定排序输出已知名称的区域，再兜底其余键。
+  const regionKeys = m.regions
+    ? [
+        ...REGION_ORDER.filter((k) => m.regions?.[k]),
+        ...Object.keys(m.regions).filter(
+          (k) => !(REGION_ORDER as readonly string[]).includes(k),
+        ),
+      ]
+    : []
 
   return (
     <main className="page">
@@ -484,7 +556,7 @@ export default function Home() {
 
       <section className="hero reveal" style={reveal(1)} aria-label="全局风险灯号">
         <div className="hero-left">
-          <RiskGauge light={globalLight} date={m.as_of} />
+          <RiskGauge light={globalLight} date={m.as_of} pct={m.core?.baa10y_pct} />
           <div className="hero-text">
             <span className={`hero-light lv-${globalLight}`}>{LIGHT_TXT[globalLight]}</span>
             <p className="hero-sub">
@@ -494,9 +566,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="concl reveal" style={reveal(2)} aria-label="今日结论">
-        <div className="concl-title">{conclusion(m).title}</div>
-        <p className="concl-detail">{conclusion(m).detail}</p>
+      <section className="concl reveal" style={reveal(2)} aria-label="创始人笔记">
+        <div className="note">
+          <img className="avatar" src="assets/grace-avatar.jpg" alt="Grace Yang" />
+          <div className="note-body">
+            <div className="who">Grace Yang · 创始人笔记</div>
+            <blockquote>{displayNote(m)}</blockquote>
+            {conclSupport(m) && <p className="concl-sub">{conclSupport(m)}</p>}
+          </div>
+        </div>
       </section>
 
       <ThresholdTrack m={m} />
@@ -577,21 +655,21 @@ export default function Home() {
         </div>
       </section>
 
-      {m.regions && REGION_ORDER.some((k) => m.regions?.[k]) && (
+      {regionKeys.length > 0 && (
         <section aria-label="全球区域面板" className="card reveal" style={reveal(6)}>
-          <h2>全球区域面板 · 美国以外</h2>
+          <h2>全球九区域 · 风险面板</h2>
           <p className="region-lead">
-            全球灯号由美国核心引擎判定，此面板补充美国以外视角。信贷 / 宏观数据按官方节奏滞后
+            全球灯号由美国核心引擎判定，此面板补充美国以外九大区域视角。信贷 / 宏观数据按官方节奏滞后
             1–2 个季度属正常，时效已逐卡逐条标注。
           </p>
           <WorldDotMap
             regions={m.regions!}
-            order={REGION_ORDER}
+            order={regionKeys}
             active={activeRegion}
             onActive={setActiveRegion}
           />
           <div className="region-grid">
-            {REGION_ORDER.filter((k) => m.regions?.[k]).map((k) => (
+            {regionKeys.map((k) => (
               <RegionCard
                 key={k}
                 regionKey={k}
@@ -630,18 +708,8 @@ export default function Home() {
         </section>
       </div>
 
-      <section aria-label="创始人笔记" className="card reveal" style={reveal(8)}>
-        <div className="note">
-          <img className="avatar" src="assets/grace-avatar.jpg" alt="Grace Yang" />
-          <div>
-            <div className="who">Grace Yang · 创始人笔记</div>
-            <blockquote>{displayNote(m)}</blockquote>
-          </div>
-        </div>
-      </section>
-
       {briefs && briefs.items.length > 0 && (
-        <section aria-label="今日事件" className="card reveal" style={reveal(9)}>
+        <section aria-label="今日事件" className="card reveal" style={reveal(8)}>
           <h2>今日事件 · worldmonitor 新闻雷达</h2>
           <ul className="briefs">
             {briefs.items.map((b, i) => (
@@ -660,7 +728,7 @@ export default function Home() {
         </section>
       )}
 
-      <section aria-label="灯号使用说明" className="card guide reveal" style={reveal(10)}>
+      <section aria-label="灯号使用说明" className="card guide reveal" style={reveal(9)}>
         <h2>这个盘面怎么用</h2>
         <p className="guide-lead">每天早上回答一个问题：今天全球金融系统有没有正在酝酿的危机？按灯号行动——</p>
         <ul className="guide-list">
@@ -674,7 +742,7 @@ export default function Home() {
         <p className="guide-note">以上为系统性规则的方向性参考，不构成个性化投资建议。</p>
       </section>
 
-      <footer className="foot reveal" style={reveal(11)}>
+      <footer className="foot reveal" style={reveal(10)}>
         <span>{healthText(m)}</span>
         <a className="news" href={newsLink} target="_blank" rel="noopener noreferrer">
           新闻雷达 worldmonitor ↗

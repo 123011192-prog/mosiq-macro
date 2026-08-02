@@ -129,7 +129,7 @@ body {
 .lv-red { color: var(--red); }
 .lv-unknown { color: var(--ink-4); }
 
-/* ── 今日结论 ───────────────────────── */
+/* ── 创始人笔记（首屏主文案位） ────────── */
 .concl {
   margin-top: 14px;
   padding: 22px 28px;
@@ -137,16 +137,29 @@ body {
   border: 1px solid #cfe5ff;
   border-radius: 14px;
 }
-.concl-title {
-  font-size: 19px;
-  font-weight: 700;
-  color: var(--mosiq-navy);
+.concl .note {
+  align-items: center;
 }
-.concl-detail {
-  margin: 8px 0 0;
-  font-size: 13.5px;
-  line-height: 1.65;
-  color: var(--ink-2);
+.concl .avatar {
+  width: 56px;
+  height: 56px;
+}
+.note-body {
+  min-width: 0;
+}
+.concl .note blockquote {
+  font-size: 17px;
+  font-weight: 600;
+  border-inline-start: none;
+  padding-inline-start: 0;
+}
+.concl-sub {
+  margin: 10px 0 0;
+  padding-top: 8px;
+  border-top: 1px dashed #cfe5ff;
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: var(--ink-3);
 }
 
 /* 指标解释小字 */
@@ -394,6 +407,9 @@ a.news:focus-visible {
 .foot .err { color: var(--yellow); }
 
 /* 响应式 */
+@media (max-width: 900px) {
+  .region-grid { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 640px) {
   .radar { grid-template-columns: repeat(2, 1fr); }
   .cyc { grid-template-columns: repeat(2, 1fr); }
@@ -411,7 +427,7 @@ a.news:focus-visible {
   color: var(--ink-3);
 }
 
-/* ── 全球区域面板（美国以外） ────────── */
+/* ── 全球九区域面板 ─────────────────── */
 .region-lead {
   margin: -6px 0 12px;
   font-size: 12px;
@@ -420,7 +436,7 @@ a.news:focus-visible {
 }
 .region-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 14px;
 }
 .region-card {
@@ -546,13 +562,14 @@ a.news:focus-visible {
   animation: mosiq-breathe 3.2s ease-in-out infinite;
 }
 
-/* ── 2b. 圆环仪表盘（全局灯号） ── */
+/* ── 2b. 罗盘仪表盘（全局灯号） ── */
 .gauge {
   position: relative;
-  width: 168px;
-  height: 168px;
+  width: 190px;
+  height: 190px;
   flex: 0 0 auto;
   border-radius: 50%;
+  --glow-rgb: 10, 132, 255;
 }
 .gauge-svg {
   display: block;
@@ -583,14 +600,94 @@ a.news:focus-visible {
   justify-content: center;
   gap: 3px;
 }
+/* 中心表盘贴面：指针从下方掠过，文字保持清晰 */
+.gauge-center::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 104px;
+  height: 104px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.95) 50%,
+    rgba(255, 255, 255, 0) 74%
+  );
+}
+.gauge-center > * {
+  position: relative;
+}
 .gauge-word {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 1.1;
+}
+.gauge-pct {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
 }
 .gauge-date {
   font-size: 10.5px;
   color: var(--ink-3);
+}
+
+/* 罗盘外圈刻度：0–100 分位 */
+.gauge-ticks .tick {
+  stroke: #c9d7e8;
+  stroke-width: 1;
+}
+.gauge-ticks .tick-major {
+  stroke: var(--ink-3);
+  stroke-width: 1.7;
+}
+.gauge-ticks .tick-label {
+  font-size: 8.5px;
+  fill: var(--ink-3);
+  text-anchor: middle;
+  dominant-baseline: central;
+  font-variant-numeric: tabular-nums;
+}
+/* 变灯阈值棱标（70 黄 / 75 橙 / 92 红） */
+.compass-thresh {
+  stroke: #fff;
+  stroke-width: 1;
+}
+.ct-yellow { fill: var(--yellow); }
+.ct-orange { fill: var(--orange); }
+.ct-red { fill: var(--red); }
+
+/* 刻度环流光：低透明短弧缓慢绕环 */
+.gauge-comet {
+  fill: none;
+  stroke-width: 14;
+  stroke-linecap: round;
+  opacity: 0.32;
+}
+
+/* 罗盘指针：深藏青针体 + 呼吸光晕 */
+.needle-body {
+  fill: var(--mosiq-navy);
+}
+.needle-hub {
+  fill: #fff;
+  stroke: var(--mosiq-navy);
+  stroke-width: 2;
+}
+.gauge-needle {
+  animation: mosiq-needle-glow 3s ease-in-out infinite;
+}
+@keyframes mosiq-needle-glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 2px rgba(var(--glow-rgb), 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 7px rgba(var(--glow-rgb), 0.55));
+  }
 }
 /* 呼吸光晕：颜色随灯号（沿用 --glow-rgb 体系） */
 .gauge-green { --glow-rgb: 22, 163, 74; }
@@ -727,6 +824,7 @@ a.news:focus-visible {
   .reveal,
   .px,
   .gauge,
+  .gauge-needle,
   .hero::before,
   .loading-spinner,
   .skel,

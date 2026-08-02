@@ -118,7 +118,7 @@ export default function WorldDotMap({ regions, order, active, onActive }: WorldD
           className="map-canvas"
           style={{ aspectRatio: `${WORLD_GRID_W} / ${WORLD_GRID_H}` }}
           role="img"
-          aria-label="抽象点阵世界地图，标注欧元区、中国、日本、韩国四个区域的风险灯号"
+          aria-label="抽象点阵世界地图，标注全球九个区域的风险灯号"
         />
         {order
           .filter((k) => regions[k] && REGION_GEO[k])

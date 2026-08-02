@@ -15,20 +15,40 @@ export const LIGHT_SHORT: Record<Light, string> = {
   unknown: '—',
 }
 
-/* ── 全球区域面板（美国以外） ── */
-export const REGION_ORDER = ['euro_area', 'china', 'japan', 'korea'] as const
+/* ── 全球区域面板（美国以外 · 九区域） ── */
+export const REGION_ORDER = [
+  'euro_area',
+  'china',
+  'japan',
+  'korea',
+  'uk',
+  'canada',
+  'australia',
+  'india',
+  'brazil',
+] as const
 export const REGION_NAMES: Record<string, string> = {
   euro_area: '欧元区',
   china: '中国',
   japan: '日本',
   korea: '韩国',
+  uk: '英国',
+  canada: '加拿大',
+  australia: '澳大利亚',
+  india: '印度',
+  brazil: '巴西',
 }
-/** 区域在点阵世界地图上的标记位置（经度, 纬度）。 */
+/** 区域在点阵世界地图上的标记位置（经度, 纬度，取各国经济中心）。 */
 export const REGION_GEO: Record<string, [number, number]> = {
   euro_area: [10, 50],
   china: [104, 34],
   japan: [139.5, 36.5],
   korea: [127.5, 38.5],
+  uk: [-0.1, 51.5], // 伦敦
+  canada: [-79.4, 43.7], // 多伦多
+  australia: [151.2, -33.9], // 悉尼
+  india: [77.2, 28.6], // 新德里
+  brazil: [-46.6, -23.5], // 圣保罗
 }
 export const REGION_CYCLE_KEYS = ['growth', 'policy', 'credit', 'market', 'fx'] as const
 export const REGION_CYCLE_LABELS: Record<(typeof REGION_CYCLE_KEYS)[number], string> = {
