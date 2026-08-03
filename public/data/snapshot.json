@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.64,
-    "baa10y_pct": 13.749498,
+    "baa10y_pct": 13.75502,
     "curve_10y3m": 0.86,
     "curve_inverted": false
   },
@@ -55,7 +55,7 @@
       "active": false
     }
   ],
-  "founder_note": "盘面平稳，按自己的节奏来；韩国要当心",
+  "founder_note": "盘面平稳，按自己的节奏来；欧元区要当心",
   "advice": [
     {
       "text": "维持中性观察；触发：核心分位升至70或曲线倒挂；失效：两项条件均未持续。",
@@ -283,11 +283,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 64362.02,
-          "date": "2026-07-31",
+          "value": 63754.9,
+          "date": "2026-08-03",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -11.06
+            "drawdown_pct": -11.9
           }
         },
         {
@@ -325,7 +325,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "down",
-        "market": "down",
+        "market": "up",
         "fx": "down"
       },
       "indicators": [
@@ -360,13 +360,13 @@
           }
         },
         {
-          "id": "fred_sox",
+          "id": "oecd_share_kr",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11311.08,
-          "date": "2026-07-31",
+          "value": 421.8348,
+          "date": "2026-06-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -22.71
+            "drawdown_pct": 0.0
           }
         },
         {
@@ -394,8 +394,8 @@
           "unit": "指数"
         }
       ],
-      "light": "red",
-      "summary": "韩国：增长走强、信贷走弱、市场走弱，区域红灯",
+      "light": "orange",
+      "summary": "韩国：增长走强、信贷走弱、市场走强，区域橙灯",
       "degraded": []
     },
     "uk": {
@@ -865,24 +865,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "比特币在亚洲交易时段走弱，因美联储利率决议即将公布 - Moomoo",
-      "source": "Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOSmk3bHZDY0NUZTZLN1pLbGdFLUJjU1dfeko1MHhzQkQ1czJ1Vnc4OEhqMDFYU3ZVM180dXVqb1VPdUtoMHhyVVpLRU9rZDRGeXFrdmI2N0FYRENRTVBSZHBXWmVkNElVT0txVDYyV2tFNU9jUWg2WmFYbWdfbDZaeVA2YTJXNmN2MWllMVlaSmNHdVF0bmdiYUZRRUVtWGNuYmFiWVU5a3Q?oc=5",
-      "published": "2026-08-02T17:33:10+00:00"
+      "title": "美联储利率维稳，比特币陷入区间震荡 - finance.sina.com.cn",
+      "source": "finance.sina.com.cn",
+      "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxNT2s3WFJhVzctWko4dy1CSVY1cktLMkJ0Y3JNY19tX3RsQ0VjS2NlNko1eGJoaTZ5MjYwU0xyOWU4S0FaVVB5N1Y4Z1Z0UzNoR2NUeHozZjA5NFItM2d0WFpWN0d4VFU4UEFQT2JVdzVmMkh2R3J2Q092RWY1RWE0R0g4NWpvX0xwczY0dlZtVm5Qb2tnSER6X29DQ3RfVmM4cWNJTEFiTzJDRmFRWjdNVnpURzBOc0JpSVRDVXhhYnlVVXhKaHNSWi1Rd1RUbEVlRDlreklkeUZjVnlfblR2ZktIRGw3di1uSWdCQnAxenppa3pkNnA2d1I2anV2eUppOE52SC1iYTB2UU0tTV9ieF9EUGJwdWZCNWRGZFN3UnlmZGx2cTlJdmN0QkM0WW14a3FrS2JR?oc=5",
+      "published": "2026-08-03T10:34:21+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "特朗普指示，美国伊朗空袭迫在眉睫……中东紧急撤离: 财经日报 - 재경일보",
-      "source": "재경일보",
-      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFB1YkpYNjdZQWppQUJmRUFQLXA1WngwdEFVai01YlBURmN5VkZPNUVDbFYzeENPMDUzdGZCbnlBd0VGU3VGWkJjcUtB?oc=5",
-      "published": "2026-08-02T13:40:00+00:00"
+      "category": "货币政策",
+      "title": "胡涛：科技股对美联储利率不敏感 近期为其内生调整 - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQRXJwZ1luYmYydnBtSG91QUd2Rm9wX2Jrd1lWblc1OVpIZmNsb3U3QXhhWUVRSWpRTDc1M3dkb3JNaXJJekJuSDlWc0VRcGpHLTN1dlQ3M3M3ak0zNGF6aFNiSm1iTUpqbHg4bjR6ZEZsR01xZjFpOGZEcmQ0czNtY1M0V2lQWXhx?oc=5",
+      "published": "2026-08-03T10:28:03+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "漫条撕理｜韩国股市为何坐上“过山车” - 21财经",
-      "source": "21财经",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNTFV3Xzlvdi01ZGpWTy11ZGJLaWY1Wi1jSTRXYWxIdXdXMkk4S0dUWk5jQzQ1bDZ1NnJnZGlNTy1TdW9CNVRGX2tXM0VHMFpCanV1amR1ZHJaYkRoLS05bVFvR3UzN2phSkJUYVl2NVRKTTVxSnBIcGdyLVNheGpfUllEa1RUXzFmVURFaA?oc=5",
-      "published": "2026-08-02T13:13:00+00:00"
+      "category": "货币政策",
+      "title": "胡涛：科技股对美联储利率不敏感 近期为其内生调整 - 第一财经",
+      "source": "第一财经",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBCSGVlWk1IVy1MTlNwT0NpeDZ1aWYtQU5wbU00YjZYZTFpZEtQLVhNRWZ3ckhUUUlLaERURUlmRWFSVGpldXRBcmpuSk1WT2p6eEtNZw?oc=5",
+      "published": "2026-08-03T09:53:44+00:00"
     }
   ]
 }
