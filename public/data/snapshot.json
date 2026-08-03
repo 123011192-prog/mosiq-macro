@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-07-31",
+  "as_of": "2026-08-01",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -8,9 +8,9 @@
     "liquidity": "yellow"
   },
   "core": {
-    "baa10y": 1.64,
-    "baa10y_pct": 13.75502,
-    "curve_10y3m": 0.86,
+    "baa10y": 1.63,
+    "baa10y_pct": 13.046969,
+    "curve_10y3m": 0.92,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,8 +63,8 @@
     }
   ],
   "health": {
-    "data_asof": "2026-07-30",
-    "stale_count": 24,
+    "data_asof": "2026-07-31",
+    "stale_count": 23,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
@@ -804,32 +804,32 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.68,
-      "date": "2026-07-30",
-      "change_20d_bp": 19.0,
+      "value": 4.75,
+      "date": "2026-07-31",
+      "change_20d_bp": 26.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.21,
-      "date": "2026-07-30",
-      "change_20d_bp": 23.0,
+      "value": 5.27,
+      "date": "2026-07-31",
+      "change_20d_bp": 29.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.23,
-      "date": "2026-07-30",
-      "change_20d_bp": 9.0,
+      "value": 4.28,
+      "date": "2026-07-31",
+      "change_20d_bp": 14.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 45.0,
-      "date": "2026-07-30"
+      "value_bp": 47.0,
+      "date": "2026-07-31"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 19.0,
-      "us30y_change_20d_bp": 23.0,
+      "us10y_change_20d_bp": 26.0,
+      "us30y_change_20d_bp": 29.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -867,22 +867,22 @@
       "category": "货币政策",
       "title": "美联储利率维稳，比特币陷入区间震荡 - finance.sina.com.cn",
       "source": "finance.sina.com.cn",
-      "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxNT2s3WFJhVzctWko4dy1CSVY1cktLMkJ0Y3JNY19tX3RsQ0VjS2NlNko1eGJoaTZ5MjYwU0xyOWU4S0FaVVB5N1Y4Z1Z0UzNoR2NUeHozZjA5NFItM2d0WFpWN0d4VFU4UEFQT2JVdzVmMkh2R3J2Q092RWY1RWE0R0g4NWpvX0xwczY0dlZtVm5Qb2tnSER6X29DQ3RfVmM4cWNJTEFiTzJDRmFRWjdNVnpURzBOc0JpSVRDVXhhYnlVVXhKaHNSWi1Rd1RUbEVlRDlreklkeUZjVnlfblR2ZktIRGw3di1uSWdCQnAxenppa3pkNnA2d1I2anV2eUppOE52SC1iYTB2UU0tTV9ieF9EUGJwdWZCNWRGZFN3UnlmZGx2cTlJdmN0QkM0WW14a3FrS2JR?oc=5",
-      "published": "2026-08-03T10:34:21+00:00"
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOQ1Q2RkZzOGd6Y09mRnk2SC1iei0tTjA0Y3F4UTE0ZnBzbmwxQnFOWEt4ZWoybTUwWXJ0c0FxbTFFTjNHaUh2X1Bia3dpSVpSVFdKN1pDckxDUXBXazJZQ0pjcjBRNUFYNHhic2ZWdFQ4X1VGNzVQcEVRRExMS193RGRnZ3pZT2ZSX3RvWnZnQWdWaURBTG9abmk0N3Rib1BCTnEyaEhKbnpjWk40c3B4cmNFdVdDenJfRmxjamo1Z190SThTX09ibmMwM2JlTjJnMkxBQVVEUGNQY08xRWlxMkNwYmExSEt0cUQ4dkJoYw?oc=5",
+      "published": "2026-08-03T16:46:56+00:00"
     },
     {
       "category": "货币政策",
-      "title": "胡涛：科技股对美联储利率不敏感 近期为其内生调整 - 搜狐网",
-      "source": "搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQRXJwZ1luYmYydnBtSG91QUd2Rm9wX2Jrd1lWblc1OVpIZmNsb3U3QXhhWUVRSWpRTDc1M3dkb3JNaXJJekJuSDlWc0VRcGpHLTN1dlQ3M3M3ak0zNGF6aFNiSm1iTUpqbHg4bjR6ZEZsR01xZjFpOGZEcmQ0czNtY1M0V2lQWXhx?oc=5",
-      "published": "2026-08-03T10:28:03+00:00"
+      "title": "美联储“三把手”：当前利率处于“良好位置”，预计今年下半年通胀将降温 - 华尔街见闻",
+      "source": "华尔街见闻",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFA2c2MtTnZjY1pVR2xOMkdmTm5Mb2w4VEZPdWtscnk4QVA3WFJwSEZQRDdKb0dvT1lIZ1lPamRjVmhLR0J4alU2dWp5TG9RVDdDMlpZ?oc=5",
+      "published": "2026-08-03T12:12:20+00:00"
     },
     {
       "category": "货币政策",
-      "title": "胡涛：科技股对美联储利率不敏感 近期为其内生调整 - 第一财经",
-      "source": "第一财经",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBCSGVlWk1IVy1MTlNwT0NpeDZ1aWYtQU5wbU00YjZYZTFpZEtQLVhNRWZ3ckhUUUlLaERURUlmRWFSVGpldXRBcmpuSk1WT2p6eEtNZw?oc=5",
-      "published": "2026-08-03T09:53:44+00:00"
+      "title": "美联储利率的三种可能，分别会造成什么影响？ - OKX",
+      "source": "OKX",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9LY2MtdkhnNHNFV0tNZU15VkpYVkRVRVNyVlBVbkI3UHQ1cVBiTzNEOW5OUUo5YnNiTmExaHg3cW9uZVozcDFrQUx6cVBNWnpsWjFmTjZHZGVxVkxXTTl3eFhyeUI?oc=5",
+      "published": "2026-08-03T11:13:28+00:00"
     }
   ]
 }
