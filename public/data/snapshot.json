@@ -283,11 +283,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 63754.9,
-          "date": "2026-08-03",
+          "value": 63957.53,
+          "date": "2026-08-04",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -11.9
+            "drawdown_pct": -11.62
           }
         },
         {
@@ -864,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "“降温”措施见效？韩国半导体杠杆ETF的交易量明显萎缩 - 凤凰网",
-      "source": "凤凰网",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5yRGptTFBsaEwxSjY0M1hmMmk0NnBRejk5OW1lamZCRUFvRmFleEQ5dW15SW5vLWFGVUtnTEJJdl9TbXdSSDcxdHRRejcxTVg1?oc=5",
-      "published": "2026-08-04T07:42:43+00:00"
+      "category": "货币政策",
+      "title": "美联储“三号人物”最新发声！黄金4100美元下方苦战，技术面信号不妙 - fx168news.com",
+      "source": "fx168news.com",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5qVkhYWmpJVmNQMXQ0S1BhLS1OUTlyY3hfVHpIZjUyT21EZEN1V19CWmhSaVhiaWxxNnBZeHlGeXBvTGNYMDNaSl9FSjRLOFhWcGVxTlI0WS0xSFIwejhjeW9VS0VWWDYzSjNmQw?oc=5",
+      "published": "2026-08-04T10:19:49+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美联储利率维稳，比特币陷入区间震荡 - 新浪网",
-      "source": "新浪网",
-      "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxQTE9aN0tEVHZSUThQaTZqRG1BSjN1NVM3OUt4Nnl6b3ozbEtoMUQ5WHNJVkFiYTUydXZfZDB2YzhRa2RHTU5ObWxod2xaNUMtYXBIRnZsUWxMOWZfNnZ1dmtKMmhzSXI0c3NSR1hHeUV3Z1VPSVlNYkdCVmtGWFV0YjFObnBaYTF1NWV4VkNtRnMwTTlLMmYxb2k4Yzc4Mm1QcEhidW1LR1dFMWNfSUJyZUxnZDNVWDJ1WlhISVQtV3JDMUFUUHVUcUI4TU9LT2txVWJhSEdIeTBYQWFCM2JCNzlITmFkZEY3bjhoOEVxcjJwaTdzb0FMazFfZmRKVXYtczlvVF9sbHlHRGR3c1pZNG5jT3ZVLWRET29lY19wWGFHQ2dxdk9mcC1NRDZTX2MzN0ZISFlzS0xqb3g4dmhkMDJFWldjT2U5ZGtDek9ONA?oc=5",
-      "published": "2026-08-04T05:19:03+00:00"
+      "title": "美联储利率维稳，比特币陷入区间震荡 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMizgJBVV95cUxOMzdNQ2NwMDFNTXVvQ3RpeV9GbXE1bmhHRzVqUFBfd01lakxVNk0xQlhpeVlQWjlOdHhhVFVsazdMZzRoVFZsWUlDN1hmX0JpbXRVbUo3VEVmMGxRN0VlaG1VYjlKX3FWNVJsVjZxbmFvUXJuTUxIOWpCdy0zcXlsdVAwMHZIYnVPRGk3UC1GRDlYdkkyYmQ0NVkwT3lHR2hEY3FnRlh5T3NaaTRmajJXaXMtenhqRzhLWDEzMGRxUXNYdjQxM3Rvcy02YXNwaTFpR01KQ2p6a2Y4YWxTQXdPdWZDY0RkWS1BdURISENxMkxxMHVzblFwSGpXVUhwTkNCejBnQ3Y0MUtQeUxNSC02Yll4SGVWYXpxQ213UWtFbHYtUGlEdWp1WkZNV2NHM21XYjQzVzBoREZlT3J0bkRTeU1XaC1CR0tWdHZKOU9R?oc=5",
+      "published": "2026-08-04T08:26:15+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "韩国半导体集群获政策加码，政府最高100%承担基础设施建设成本 - 搜狐网",
-      "source": "搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOaWhKbExnZHc2cmdybkhQZlMyV0ZJdEI2WHd6ZG5BMjQzekR0aC1BcE0tWDgzSHBSbjFxaXV4QXpOaFppSTNZWGRUS29zWmRGWWdJQllPZFFJelBDZWUtUTUxSmF0bnNkMG1UcU5qTVRfM2ZVNW94UDY5UHBqcndBNVlIdENaQ2gzcVV1UQ?oc=5",
-      "published": "2026-08-04T04:27:00+00:00"
+      "category": "货币政策",
+      "title": "30万亿美元市场发出警报，沃什能否压住下一场风暴？ - fx168news.com",
+      "source": "fx168news.com",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTUtEWi1KTTR4SVNpdllBZDlWY0hZVTdXWFUzbTV6bzZSRU1zVFB6X2l6MjRQUDRZNWQ4NExwTkJsWkxXak5VczBEekR2b0RxUzd1cklrUDZfY3dmcWY1Z0lLNzItLTcxYmNqMzlhcjNOZk9hSEgxRlp2ZHFuQ2kwRC1vUzQ?oc=5",
+      "published": "2026-08-04T08:21:51+00:00"
     }
   ]
 }
