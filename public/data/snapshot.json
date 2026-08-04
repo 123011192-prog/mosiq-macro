@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.63,
-    "baa10y_pct": 13.046969,
+    "baa10y_pct": 13.052209,
     "curve_10y3m": 0.92,
     "curve_inverted": false
   },
@@ -67,6 +67,7 @@
     "stale_count": 23,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -76,7 +77,8 @@
       "regions:china",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -700,12 +702,12 @@
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "neutral",
         "policy": "up",
         "credit": "neutral",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -740,16 +742,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 342.7509,
-          "date": "2026-06-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -11.25
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.97,
@@ -775,8 +767,10 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长平稳、信贷平稳、市场平稳，区域绿灯",
-      "degraded": []
+      "summary": "巴西：增长平稳、信贷平稳、市场缺失，区域绿灯",
+      "degraded": [
+        "oecd_share_br"
+      ]
     }
   },
   "oil_watch": {
@@ -835,13 +829,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.75,
-        "date": "2026-07-31",
+        "value": 4.7,
+        "date": "2026-08-03",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.27,
-        "date": "2026-07-31",
+        "value": 5.23,
+        "date": "2026-08-03",
         "source": "tushare"
       }
     }
@@ -864,25 +858,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "美联储利率维稳，比特币陷入区间震荡 - finance.sina.com.cn",
-      "source": "finance.sina.com.cn",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOQ1Q2RkZzOGd6Y09mRnk2SC1iei0tTjA0Y3F4UTE0ZnBzbmwxQnFOWEt4ZWoybTUwWXJ0c0FxbTFFTjNHaUh2X1Bia3dpSVpSVFdKN1pDckxDUXBXazJZQ0pjcjBRNUFYNHhic2ZWdFQ4X1VGNzVQcEVRRExMS193RGRnZ3pZT2ZSX3RvWnZnQWdWaURBTG9abmk0N3Rib1BCTnEyaEhKbnpjWk40c3B4cmNFdVdDenJfRmxjamo1Z190SThTX09ibmMwM2JlTjJnMkxBQVVEUGNQY08xRWlxMkNwYmExSEt0cUQ4dkJoYw?oc=5",
-      "published": "2026-08-03T16:46:56+00:00"
+      "category": "科技产业链",
+      "title": "韩国综指飙升2%后跳水，芯片股走强，SK海力士涨超3% - 21财经",
+      "source": "21财经",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQTlhna1M2RS14clBneFFya0NrYXN1MGNLVmJEM21rVG11aEtVQzhWc0daaVZUVjdfSS1kbFN2VlYxQUc3QXFQdFlNVlV6alFoMzhmOEtrWmU5NzVNbE5iU3BQaGJQV08tVU1ncXNkSFhoUHptVF9WbHZobF9TQnpPMk5oMHFud250cWJ5dw?oc=5",
+      "published": "2026-08-04T01:00:00+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "韩国综指飙升2%后跳水，日韩芯片股走强，SK海力士涨超3%，黄金白银、国际油价拉升 - 21财经",
+      "source": "21财经",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQRlVWaWY5ZjV2U09lVUxHcVlZd25KbTg1ZVQxdTNQMkNYSXhEajZhZGl6YXZsWXNqV0xzTDZDVlFOVWRxNGF5Vmxvd00zNkVQN3BjcENxMFR1Z1hBckx2bWs2dDRBcWNkX20yWmRwd1JPSlpEQ0huVEEzbEh5Ul9SYTNtWXc1TzBidllZRQ?oc=5",
+      "published": "2026-08-04T00:49:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美联储“三把手”：当前利率处于“良好位置”，预计今年下半年通胀将降温 - 华尔街见闻",
-      "source": "华尔街见闻",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFA2c2MtTnZjY1pVR2xOMkdmTm5Mb2w4VEZPdWtscnk4QVA3WFJwSEZQRDdKb0dvT1lIZ1lPamRjVmhLR0J4alU2dWp5TG9RVDdDMlpZ?oc=5",
-      "published": "2026-08-03T12:12:20+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "美联储利率的三种可能，分别会造成什么影响？ - OKX",
-      "source": "OKX",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9LY2MtdkhnNHNFV0tNZU15VkpYVkRVRVNyVlBVbkI3UHQ1cVBiTzNEOW5OUUo5YnNiTmExaHg3cW9uZVozcDFrQUx6cVBNWnpsWjFmTjZHZGVxVkxXTTl3eFhyeUI?oc=5",
-      "published": "2026-08-03T11:13:28+00:00"
+      "title": "美联储利率维稳，比特币陷入区间震荡 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMiugZBVV95cUxPVGFhMGRKS1Rac2pBUXdrT0hpeHFiZzE4R1RkZGJQY3hlY1V2enR1VXZmS0NsdG1nY24wMVpJSnp3MF92bDlTUk50SWQ2cG9wSU1pSU1wbjZkR0s1aF9vcldPdHlXdnBxMlRwcDFMdlBIeDJQTDEydDRkYlEtSTNkN1puTGZsN3V3RUdTY0NYMHJTdDd0TXlEb3FIdF9UaHdQY2tZM3ZXRGNzSGNJRU1ydU5PcW9Ja1AzRUM5MmRiZkM2c1BsMEYtRjdFM0IwYng3WnNfQmp4bDQyN3BEX3owelNEZ0RMb2twOUxWbjhna1lUQVhoUTBCNlA5X1dmNjU3ekIwUENXbGdxVDQ3TzNVMGF5eWstSHJtSHRxRHhsWVVEUmgxbmpPMEZ6aDBHYWY4VVpnSHFNTEJQcnlHbTdiellCaWJlbG93UG1DRmxOMmNyZnBjTnBud01qb1hCcUo2VTlfOTA4bjZBOEt4WGp2NkFzd1p2UTA4LUcyTDRoUV9SeDgtdVUxSVpiaDBheDBVVWdMWHdWaHFETk9XcFJwNHdMMldWQXBnY2xEZWd5VGs1OVA1MHo3NTBUa0kyalJYWHQwTmtpUkt0eE5KeEVBTkZMeFo2WmNBeDVNcUZ6Z0NMd3h0RzdGM0UtcmdEaklZZUtkUTU0aWhxWk9HeG42QjIxSE9DRU1HQk5RYkd4N3JEQjNyUG9MNDVGd1I3S3BmWHp1empFOEotQjN6ZFVWT1kwZWlNYnpPUHVSeTFlTXc1R1hYZEdjTkZlV0hCbFRrczZOM1JSWXdaZnVMcmJVbW10bkxrY1ZDR244NGdMQ1ptalNGWEk5dXNLaHBHMExZTmQ0RFQtay14cldvV2pWdklFSUVNalBnQ0VZM3ZMWDRaWWo0bktlamFQS09qNFNIMl85S1c5Y19SV0x1RUdqeUdnMkVzLU5oU2tNR3RXeFZMcXBOWWpycmdnS1puT1dSSGlpSDc2WGsxajdQVEI2TmEzSmI4OHRRdnkxbzllcDQ5S242YzZqRlFJT0xhZzdzMGtIcklfbHRPc253RjhKNmctRTBYd190NWZYZ09sdEwxNkVDLXZPaFVn?oc=5",
+      "published": "2026-08-03T19:35:50+00:00"
     }
   ]
 }
