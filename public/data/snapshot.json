@@ -55,7 +55,7 @@
       "active": false
     }
   ],
-  "founder_note": "盘面平稳，按自己的节奏来；欧元区要当心",
+  "founder_note": "盘面平稳，按自己的节奏来；韩国要当心",
   "advice": [
     {
       "text": "维持中性观察；触发：核心分位升至70或曲线倒挂；失效：两项条件均未持续。",
@@ -67,7 +67,6 @@
     "stale_count": 23,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -77,8 +76,7 @@
       "regions:china",
       "regions:canada",
       "regions:australia",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -327,7 +325,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "down",
-        "market": "up",
+        "market": "down",
         "fx": "down"
       },
       "indicators": [
@@ -362,13 +360,13 @@
           }
         },
         {
-          "id": "oecd_share_kr",
+          "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 421.8348,
-          "date": "2026-06-01",
+          "value": 11430.35,
+          "date": "2026-08-03",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": 0.0
+            "drawdown_pct": -21.9
           }
         },
         {
@@ -396,8 +394,8 @@
           "unit": "指数"
         }
       ],
-      "light": "orange",
-      "summary": "韩国：增长走强、信贷走弱、市场走强，区域橙灯",
+      "light": "red",
+      "summary": "韩国：增长走强、信贷走弱、市场走弱，区域红灯",
       "degraded": []
     },
     "uk": {
@@ -702,12 +700,12 @@
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "neutral",
         "policy": "up",
         "credit": "neutral",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -742,6 +740,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 342.7509,
+          "date": "2026-06-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -11.25
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.97,
@@ -767,10 +775,8 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长平稳、信贷平稳、市场缺失，区域绿灯",
-      "degraded": [
-        "oecd_share_br"
-      ]
+      "summary": "巴西：增长平稳、信贷平稳、市场平稳，区域绿灯",
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -859,24 +865,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "韩国综指飙升2%后跳水，芯片股走强，SK海力士涨超3% - 21财经",
-      "source": "21财经",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQTlhna1M2RS14clBneFFya0NrYXN1MGNLVmJEM21rVG11aEtVQzhWc0daaVZUVjdfSS1kbFN2VlYxQUc3QXFQdFlNVlV6alFoMzhmOEtrWmU5NzVNbE5iU3BQaGJQV08tVU1ncXNkSFhoUHptVF9WbHZobF9TQnpPMk5oMHFud250cWJ5dw?oc=5",
-      "published": "2026-08-04T01:00:00+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "韩国综指飙升2%后跳水，日韩芯片股走强，SK海力士涨超3%，黄金白银、国际油价拉升 - 21财经",
-      "source": "21财经",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQRlVWaWY5ZjV2U09lVUxHcVlZd25KbTg1ZVQxdTNQMkNYSXhEajZhZGl6YXZsWXNqV0xzTDZDVlFOVWRxNGF5Vmxvd00zNkVQN3BjcENxMFR1Z1hBckx2bWs2dDRBcWNkX20yWmRwd1JPSlpEQ0huVEEzbEh5Ul9SYTNtWXc1TzBidllZRQ?oc=5",
-      "published": "2026-08-04T00:49:00+00:00"
+      "title": "“降温”措施见效？韩国半导体杠杆ETF的交易量明显萎缩 - 凤凰网",
+      "source": "凤凰网",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5yRGptTFBsaEwxSjY0M1hmMmk0NnBRejk5OW1lamZCRUFvRmFleEQ5dW15SW5vLWFGVUtnTEJJdl9TbXdSSDcxdHRRejcxTVg1?oc=5",
+      "published": "2026-08-04T07:42:43+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美联储利率维稳，比特币陷入区间震荡 - 新浪财经",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMiugZBVV95cUxPVGFhMGRKS1Rac2pBUXdrT0hpeHFiZzE4R1RkZGJQY3hlY1V2enR1VXZmS0NsdG1nY24wMVpJSnp3MF92bDlTUk50SWQ2cG9wSU1pSU1wbjZkR0s1aF9vcldPdHlXdnBxMlRwcDFMdlBIeDJQTDEydDRkYlEtSTNkN1puTGZsN3V3RUdTY0NYMHJTdDd0TXlEb3FIdF9UaHdQY2tZM3ZXRGNzSGNJRU1ydU5PcW9Ja1AzRUM5MmRiZkM2c1BsMEYtRjdFM0IwYng3WnNfQmp4bDQyN3BEX3owelNEZ0RMb2twOUxWbjhna1lUQVhoUTBCNlA5X1dmNjU3ekIwUENXbGdxVDQ3TzNVMGF5eWstSHJtSHRxRHhsWVVEUmgxbmpPMEZ6aDBHYWY4VVpnSHFNTEJQcnlHbTdiellCaWJlbG93UG1DRmxOMmNyZnBjTnBud01qb1hCcUo2VTlfOTA4bjZBOEt4WGp2NkFzd1p2UTA4LUcyTDRoUV9SeDgtdVUxSVpiaDBheDBVVWdMWHdWaHFETk9XcFJwNHdMMldWQXBnY2xEZWd5VGs1OVA1MHo3NTBUa0kyalJYWHQwTmtpUkt0eE5KeEVBTkZMeFo2WmNBeDVNcUZ6Z0NMd3h0RzdGM0UtcmdEaklZZUtkUTU0aWhxWk9HeG42QjIxSE9DRU1HQk5RYkd4N3JEQjNyUG9MNDVGd1I3S3BmWHp1empFOEotQjN6ZFVWT1kwZWlNYnpPUHVSeTFlTXc1R1hYZEdjTkZlV0hCbFRrczZOM1JSWXdaZnVMcmJVbW10bkxrY1ZDR244NGdMQ1ptalNGWEk5dXNLaHBHMExZTmQ0RFQtay14cldvV2pWdklFSUVNalBnQ0VZM3ZMWDRaWWo0bktlamFQS09qNFNIMl85S1c5Y19SV0x1RUdqeUdnMkVzLU5oU2tNR3RXeFZMcXBOWWpycmdnS1puT1dSSGlpSDc2WGsxajdQVEI2TmEzSmI4OHRRdnkxbzllcDQ5S242YzZqRlFJT0xhZzdzMGtIcklfbHRPc253RjhKNmctRTBYd190NWZYZ09sdEwxNkVDLXZPaFVn?oc=5",
-      "published": "2026-08-03T19:35:50+00:00"
+      "title": "美联储利率维稳，比特币陷入区间震荡 - 新浪网",
+      "source": "新浪网",
+      "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxQTE9aN0tEVHZSUThQaTZqRG1BSjN1NVM3OUt4Nnl6b3ozbEtoMUQ5WHNJVkFiYTUydXZfZDB2YzhRa2RHTU5ObWxod2xaNUMtYXBIRnZsUWxMOWZfNnZ1dmtKMmhzSXI0c3NSR1hHeUV3Z1VPSVlNYkdCVmtGWFV0YjFObnBaYTF1NWV4VkNtRnMwTTlLMmYxb2k4Yzc4Mm1QcEhidW1LR1dFMWNfSUJyZUxnZDNVWDJ1WlhISVQtV3JDMUFUUHVUcUI4TU9LT2txVWJhSEdIeTBYQWFCM2JCNzlITmFkZEY3bjhoOEVxcjJwaTdzb0FMazFfZmRKVXYtczlvVF9sbHlHRGR3c1pZNG5jT3ZVLWRET29lY19wWGFHQ2dxdk9mcC1NRDZTX2MzN0ZISFlzS0xqb3g4dmhkMDJFWldjT2U5ZGtDek9ONA?oc=5",
+      "published": "2026-08-04T05:19:03+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "韩国半导体集群获政策加码，政府最高100%承担基础设施建设成本 - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOaWhKbExnZHc2cmdybkhQZlMyV0ZJdEI2WHd6ZG5BMjQzekR0aC1BcE0tWDgzSHBSbjFxaXV4QXpOaFppSTNZWGRUS29zWmRGWWdJQllPZFFJelBDZWUtUTUxSmF0bnNkMG1UcU5qTVRfM2ZVNW94UDY5UHBqcndBNVlIdENaQ2gzcVV1UQ?oc=5",
+      "published": "2026-08-04T04:27:00+00:00"
     }
   ]
 }
