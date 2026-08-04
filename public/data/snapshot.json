@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-01",
+  "as_of": "2026-08-04",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.63,
     "baa10y_pct": 13.052209,
-    "curve_10y3m": 0.92,
+    "curve_10y3m": 0.79,
     "curve_inverted": false
   },
   "cycle": {
@@ -18,7 +18,7 @@
     "inflation": "degraded",
     "liquidity": "neutral",
     "credit": "degraded",
-    "policy": "neutral",
+    "policy": "degraded",
     "market_stress": "degraded"
   },
   "confirmations": [
@@ -63,15 +63,17 @@
     }
   ],
   "health": {
-    "data_asof": "2026-07-31",
-    "stale_count": 23,
+    "data_asof": "2026-08-03",
+    "stale_count": 31,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
+      "cycle:policy",
       "cycle:market_stress",
       "radar:banking",
+      "radar:credit",
       "radar:nonbank",
       "regions:china",
       "regions:canada",
@@ -806,19 +808,19 @@
     "us10y": {
       "value": 4.75,
       "date": "2026-07-31",
-      "change_20d_bp": 26.0,
+      "change_20d_bp": 27.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.27,
       "date": "2026-07-31",
-      "change_20d_bp": 29.0,
+      "change_20d_bp": 28.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.28,
       "date": "2026-07-31",
-      "change_20d_bp": 14.0,
+      "change_20d_bp": 15.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -828,8 +830,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 26.0,
-      "us30y_change_20d_bp": 29.0,
+      "us10y_change_20d_bp": 27.0,
+      "us30y_change_20d_bp": 28.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -864,25 +866,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "美联储“三号人物”最新发声！黄金4100美元下方苦战，技术面信号不妙 - fx168news.com",
-      "source": "fx168news.com",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5qVkhYWmpJVmNQMXQ0S1BhLS1OUTlyY3hfVHpIZjUyT21EZEN1V19CWmhSaVhiaWxxNnBZeHlGeXBvTGNYMDNaSl9FSjRLOFhWcGVxTlI0WS0xSFIwejhjeW9VS0VWWDYzSjNmQw?oc=5",
-      "published": "2026-08-04T10:19:49+00:00"
+      "category": "地缘冲突",
+      "title": "Philippine exports seen resilient despite 12 . 5 % US tariff",
+      "source": "bworldonline.com",
+      "url": "https://bworldonline.com/top-stories/2026/08/05/768089/philippine-exports-seen-resilient-despite-12-5-us-tariff/",
+      "published": "2026-08-04T18:15:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美联储利率维稳，比特币陷入区间震荡 - 新浪财经",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMizgJBVV95cUxOMzdNQ2NwMDFNTXVvQ3RpeV9GbXE1bmhHRzVqUFBfd01lakxVNk0xQlhpeVlQWjlOdHhhVFVsazdMZzRoVFZsWUlDN1hmX0JpbXRVbUo3VEVmMGxRN0VlaG1VYjlKX3FWNVJsVjZxbmFvUXJuTUxIOWpCdy0zcXlsdVAwMHZIYnVPRGk3UC1GRDlYdkkyYmQ0NVkwT3lHR2hEY3FnRlh5T3NaaTRmajJXaXMtenhqRzhLWDEzMGRxUXNYdjQxM3Rvcy02YXNwaTFpR01KQ2p6a2Y4YWxTQXdPdWZDY0RkWS1BdURISENxMkxxMHVzblFwSGpXVUhwTkNCejBnQ3Y0MUtQeUxNSC02Yll4SGVWYXpxQ213UWtFbHYtUGlEdWp1WkZNV2NHM21XYjQzVzBoREZlT3J0bkRTeU1XaC1CR0tWdHZKOU9R?oc=5",
-      "published": "2026-08-04T08:26:15+00:00"
+      "category": "地缘冲突",
+      "title": "What Mexico richest man thinks Trump should do in his second term",
+      "source": "newdelhitimes.com",
+      "url": "https://www.newdelhitimes.com/what-mexicos-richest-man-thinks-trump-should-do-in-his-second-term/",
+      "published": "2026-08-04T17:15:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "30万亿美元市场发出警报，沃什能否压住下一场风暴？ - fx168news.com",
-      "source": "fx168news.com",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTUtEWi1KTTR4SVNpdllBZDlWY0hZVTdXWFUzbTV6bzZSRU1zVFB6X2l6MjRQUDRZNWQ4NExwTkJsWkxXak5VczBEekR2b0RxUzd1cklrUDZfY3dmcWY1Z0lLNzItLTcxYmNqMzlhcjNOZk9hSEgxRlp2ZHFuQ2kwRC1vUzQ?oc=5",
-      "published": "2026-08-04T08:21:51+00:00"
+      "category": "地缘冲突",
+      "title": "South Korea Kospi drops as Asian stocks dip after US tech rally ; yen steadies",
+      "source": "businesstimes.com.sg",
+      "url": "https://www.businesstimes.com.sg/companies-markets/capital-markets-currencies/south-koreas-kospi-drops-asian-stocks-dip-after-us-tech-rally-yen-steadies",
+      "published": "2026-08-04T08:30:00+00:00"
     }
   ]
 }
