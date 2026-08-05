@@ -283,11 +283,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 63957.53,
-          "date": "2026-08-04",
+          "value": 66300.44,
+          "date": "2026-08-05",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -11.62
+            "drawdown_pct": -8.38
           }
         },
         {
@@ -865,24 +865,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "Samsung , SK Hynix test Chinese chip tools to counter US sanction risks",
-      "source": "thenews.com.pk",
-      "url": "https://www.thenews.com.pk/latest/1411291-samsung-sk-hynix-test-chinese-chip-tools-to-counter-us-sanction-risks",
-      "published": "2026-08-05T07:45:00+00:00"
+      "title": "2031年之前中国别想超越！韩国喊话：内存霸主还是我 - 电子工程专辑",
+      "source": "电子工程专辑",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBVeUtSRU4ycm54OVZxTVItTERWLTlYaUwxZGdRUExqRTJvd0VnTFlfOVdDX25CWlIxV05PTzJMdEFIei1LU2NIUHp5UlRoalotb3dr?oc=5",
+      "published": "2026-08-05T10:56:00+00:00"
     },
     {
-      "category": "能源",
-      "title": "US stocks close at record highs as oil tumbles , earnings fuel tech rally",
-      "source": "aa.com.tr",
-      "url": "https://aa.com.tr/en/americas/us-stocks-close-at-record-highs-as-oil-tumbles-earnings-fuel-tech-rally/4018566",
-      "published": "2026-08-05T06:15:00+00:00"
+      "category": "科技产业链",
+      "title": "“降温”措施见效？韩国半导体杠杆ETF的交易量明显萎缩 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBrRnV4dDZualZLZEZETlNpZk9Rb21NSXFZV1BaZTMwbzc3NElLQmdkRjVPaXhYUDVDSDNyb2pZV1dqVnFuUUctNg?oc=5",
+      "published": "2026-08-05T09:53:27+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "US stocks , Nikkei to Kospi : Global equity heatmap you must know before Dalal Street opens on Wednesday 5 August 2026",
-      "source": "livemint.com",
-      "url": "https://www.livemint.com/market/stock-market-news/us-stocks-nikkei-225-to-kospi-stock-index-global-markets-today-heatmap-when-dalal-street-opens-wednesday-5-august-2026-11785898312471.html",
-      "published": "2026-08-05T04:45:00+00:00"
+      "category": "科技产业链",
+      "title": "中微设备将杀入三星、SK海力士等韩国巨头供应链？ - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRDJXeGgwZkpZUmhfME83N3BOY3NqMk5aV0FoemtveGlueUJ3cU9FaW5ZSGlNTEl4RXlZdjgwVkJIT08wcllWdGw1SEMwNkxhM0JQSEF4QVY3UnRCNzlGM1BPeW1LRDBsSmtuVVZucjBGbVFzTVhmRGpHN2lmUy1xY3hCNzJvcnVM?oc=5",
+      "published": "2026-08-05T08:56:10+00:00"
     }
   ]
 }
