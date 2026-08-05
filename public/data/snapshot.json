@@ -362,11 +362,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11430.35,
-          "date": "2026-08-03",
+          "value": 12179.26,
+          "date": "2026-08-04",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -21.9
+            "drawdown_pct": -16.78
           }
         },
         {
@@ -864,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "油价大跌振奋人心！预测市场押注逆转：美联储9月可能不加息…… - 搜狐网",
-      "source": "搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNN09zQzJWcmxGdGo3QWVfdE5KVW80Mm50UU5KSDNwVzk1VlJfOWdVQjdqVVBXMVd5QXhNSkRoeVN6LXdmenQ3OThHbV9VZWhLWm94d255MFhwTHd3TVd0aUVXMksyR0g0SnMzYzlETTVxSm9tcjZFUVR3YTZuNlhBNElHRjVQR1Vn?oc=5",
-      "published": "2026-08-05T00:46:00+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "本周，市场最重要的事件即将到来——美联储利率决议。 我认为，... | OKX Orbit - OKX",
-      "source": "OKX",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE56LUJGck5ab2Qyc2xSOGR2RVZ4bFIzNTljcmRITE5qeWYwSHpjVlluemk2Rnc3RjVsSTZDbkJiaHdPLVNIXzM1ai1OQ0FWQ3BhTnVjeUpBR1dCZFF5eGR4X25RMU8?oc=5",
-      "published": "2026-08-04T14:54:26+00:00"
-    },
-    {
       "category": "科技产业链",
-      "title": "韩国产业部下半年将加快推进大型项目审批 打造半导体集群 - 观点网",
-      "source": "观点网",
-      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1qRmZaUlp5WVNVdHhaUnhPU3c3WHlZR1dQaVlPSzRCdFVGWkpoMXhSSVFBbWtTSnBueE5SaDZzTkZURVFCUlNyVlJNX2I5dw?oc=5",
-      "published": "2026-08-04T14:33:00+00:00"
+      "title": "Samsung , SK Hynix test Chinese chip tools to counter US sanction risks",
+      "source": "thenews.com.pk",
+      "url": "https://www.thenews.com.pk/latest/1411291-samsung-sk-hynix-test-chinese-chip-tools-to-counter-us-sanction-risks",
+      "published": "2026-08-05T07:45:00+00:00"
+    },
+    {
+      "category": "能源",
+      "title": "US stocks close at record highs as oil tumbles , earnings fuel tech rally",
+      "source": "aa.com.tr",
+      "url": "https://aa.com.tr/en/americas/us-stocks-close-at-record-highs-as-oil-tumbles-earnings-fuel-tech-rally/4018566",
+      "published": "2026-08-05T06:15:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
+      "title": "US stocks , Nikkei to Kospi : Global equity heatmap you must know before Dalal Street opens on Wednesday 5 August 2026",
+      "source": "livemint.com",
+      "url": "https://www.livemint.com/market/stock-market-news/us-stocks-nikkei-225-to-kospi-stock-index-global-markets-today-heatmap-when-dalal-street-opens-wednesday-5-august-2026-11785898312471.html",
+      "published": "2026-08-05T04:45:00+00:00"
     }
   ]
 }
