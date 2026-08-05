@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-04",
+  "as_of": "2026-08-05",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.61,
     "baa10y_pct": 11.822561,
-    "curve_10y3m": 0.79,
+    "curve_10y3m": 0.74,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,7 +63,7 @@
     }
   ],
   "health": {
-    "data_asof": "2026-08-03",
+    "data_asof": "2026-08-04",
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
@@ -806,19 +806,19 @@
     "us10y": {
       "value": 4.7,
       "date": "2026-08-03",
-      "change_20d_bp": 22.0,
+      "change_20d_bp": 15.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.23,
       "date": "2026-08-03",
-      "change_20d_bp": 24.0,
+      "change_20d_bp": 18.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.25,
       "date": "2026-08-03",
-      "change_20d_bp": 12.0,
+      "change_20d_bp": 6.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -828,8 +828,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 22.0,
-      "us30y_change_20d_bp": 24.0,
+      "us10y_change_20d_bp": 15.0,
+      "us30y_change_20d_bp": 18.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -864,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "2031年之前中国别想超越！韩国喊话：内存霸主还是我 - 电子工程专辑",
-      "source": "电子工程专辑",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBVeUtSRU4ycm54OVZxTVItTERWLTlYaUwxZGdRUExqRTJvd0VnTFlfOVdDX25CWlIxV05PTzJMdEFIei1LU2NIUHp5UlRoalotb3dr?oc=5",
-      "published": "2026-08-05T10:56:00+00:00"
+      "category": "地缘冲突",
+      "title": "Why Australia lack of exposure to the AI trade is driving record gains on ASX 200",
+      "source": "afr.com",
+      "url": "https://www.afr.com/markets/equity-markets/asx-emerges-as-the-steven-bradbury-of-markets-with-all-time-high-20260805-p60lm1",
+      "published": "2026-08-05T08:45:00+00:00"
+    },
+    {
+      "category": "能源",
+      "title": "Gold hits one - month peak on lower oil and softer dollar",
+      "source": "thestar.com.my",
+      "url": "https://www.thestar.com.my/business/business-news/2026/08/05/gold-hits-one-month-peak-on-lower-oil-and-softer-dollar",
+      "published": "2026-08-05T08:45:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "“降温”措施见效？韩国半导体杠杆ETF的交易量明显萎缩 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBrRnV4dDZualZLZEZETlNpZk9Rb21NSXFZV1BaZTMwbzc3NElLQmdkRjVPaXhYUDVDSDNyb2pZV1dqVnFuUUctNg?oc=5",
-      "published": "2026-08-05T09:53:27+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "中微设备将杀入三星、SK海力士等韩国巨头供应链？ - 搜狐网",
-      "source": "搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRDJXeGgwZkpZUmhfME83N3BOY3NqMk5aV0FoemtveGlueUJ3cU9FaW5ZSGlNTEl4RXlZdjgwVkJIT08wcllWdGw1SEMwNkxhM0JQSEF4QVY3UnRCNzlGM1BPeW1LRDBsSmtuVVZucjBGbVFzTVhmRGpHN2lmUy1xY3hCNzJvcnVM?oc=5",
-      "published": "2026-08-05T08:56:10+00:00"
+      "title": "Samsung , SK Hynix test Chinese chip tools to counter US sanction risks",
+      "source": "thenews.com.pk",
+      "url": "https://www.thenews.com.pk/latest/1411291-samsung-sk-hynix-test-chinese-chip-tools-to-counter-us-sanction-risks",
+      "published": "2026-08-05T07:45:00+00:00"
     }
   ]
 }
