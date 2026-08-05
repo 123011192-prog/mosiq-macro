@@ -8,8 +8,8 @@
     "liquidity": "yellow"
   },
   "core": {
-    "baa10y": 1.63,
-    "baa10y_pct": 13.052209,
+    "baa10y": 1.61,
+    "baa10y_pct": 11.822561,
     "curve_10y3m": 0.79,
     "curve_inverted": false
   },
@@ -18,7 +18,7 @@
     "inflation": "degraded",
     "liquidity": "neutral",
     "credit": "degraded",
-    "policy": "degraded",
+    "policy": "neutral",
     "market_stress": "degraded"
   },
   "confirmations": [
@@ -64,16 +64,14 @@
   ],
   "health": {
     "data_asof": "2026-08-03",
-    "stale_count": 31,
+    "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
-      "cycle:policy",
       "cycle:market_stress",
       "radar:banking",
-      "radar:credit",
       "radar:nonbank",
       "regions:china",
       "regions:canada",
@@ -806,44 +804,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.75,
-      "date": "2026-07-31",
-      "change_20d_bp": 27.0,
+      "value": 4.7,
+      "date": "2026-08-03",
+      "change_20d_bp": 22.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.27,
-      "date": "2026-07-31",
-      "change_20d_bp": 28.0,
+      "value": 5.23,
+      "date": "2026-08-03",
+      "change_20d_bp": 24.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.28,
-      "date": "2026-07-31",
-      "change_20d_bp": 15.0,
+      "value": 4.25,
+      "date": "2026-08-03",
+      "change_20d_bp": 12.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 47.0,
-      "date": "2026-07-31"
+      "value_bp": 45.0,
+      "date": "2026-08-03"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 27.0,
-      "us30y_change_20d_bp": 28.0,
+      "us10y_change_20d_bp": 22.0,
+      "us30y_change_20d_bp": 24.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.7,
-        "date": "2026-08-03",
+        "value": 4.63,
+        "date": "2026-08-04",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.23,
-        "date": "2026-08-03",
+        "value": 5.18,
+        "date": "2026-08-04",
         "source": "tushare"
       }
     }
@@ -866,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "Philippine exports seen resilient despite 12 . 5 % US tariff",
-      "source": "bworldonline.com",
-      "url": "https://bworldonline.com/top-stories/2026/08/05/768089/philippine-exports-seen-resilient-despite-12-5-us-tariff/",
-      "published": "2026-08-04T18:15:00+00:00"
+      "category": "货币政策",
+      "title": "油价大跌振奋人心！预测市场押注逆转：美联储9月可能不加息…… - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNN09zQzJWcmxGdGo3QWVfdE5KVW80Mm50UU5KSDNwVzk1VlJfOWdVQjdqVVBXMVd5QXhNSkRoeVN6LXdmenQ3OThHbV9VZWhLWm94d255MFhwTHd3TVd0aUVXMksyR0g0SnMzYzlETTVxSm9tcjZFUVR3YTZuNlhBNElHRjVQR1Vn?oc=5",
+      "published": "2026-08-05T00:46:00+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "What Mexico richest man thinks Trump should do in his second term",
-      "source": "newdelhitimes.com",
-      "url": "https://www.newdelhitimes.com/what-mexicos-richest-man-thinks-trump-should-do-in-his-second-term/",
-      "published": "2026-08-04T17:15:00+00:00"
+      "category": "货币政策",
+      "title": "本周，市场最重要的事件即将到来——美联储利率决议。 我认为，... | OKX Orbit - OKX",
+      "source": "OKX",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE56LUJGck5ab2Qyc2xSOGR2RVZ4bFIzNTljcmRITE5qeWYwSHpjVlluemk2Rnc3RjVsSTZDbkJiaHdPLVNIXzM1ai1OQ0FWQ3BhTnVjeUpBR1dCZFF5eGR4X25RMU8?oc=5",
+      "published": "2026-08-04T14:54:26+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "South Korea Kospi drops as Asian stocks dip after US tech rally ; yen steadies",
-      "source": "businesstimes.com.sg",
-      "url": "https://www.businesstimes.com.sg/companies-markets/capital-markets-currencies/south-koreas-kospi-drops-asian-stocks-dip-after-us-tech-rally-yen-steadies",
-      "published": "2026-08-04T08:30:00+00:00"
+      "category": "科技产业链",
+      "title": "韩国产业部下半年将加快推进大型项目审批 打造半导体集群 - 观点网",
+      "source": "观点网",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1qRmZaUlp5WVNVdHhaUnhPU3c3WHlZR1dQaVlPSzRCdFVGWkpoMXhSSVFBbWtTSnBueE5SaDZzTkZURVFCUlNyVlJNX2I5dw?oc=5",
+      "published": "2026-08-04T14:33:00+00:00"
     }
   ]
 }
