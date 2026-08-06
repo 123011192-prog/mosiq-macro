@@ -264,7 +264,7 @@
           "id": "bis_policy_jp",
           "name": "BIS 日本央行政策利率",
           "value": 1.0,
-          "date": "2026-06-01",
+          "date": "2026-07-01",
           "unit": "%",
           "signal": {
             "6m_change_pp": 0.25
@@ -362,11 +362,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 12179.26,
-          "date": "2026-08-04",
+          "value": 12008.88,
+          "date": "2026-08-05",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -16.78
+            "drawdown_pct": -17.94
           }
         },
         {
@@ -422,7 +422,7 @@
           "id": "bis_policy_gb",
           "name": "BIS 英国央行政策利率",
           "value": 3.75,
-          "date": "2026-06-01",
+          "date": "2026-07-01",
           "unit": "%",
           "signal": {
             "6m_change_pp": 0.0
@@ -501,7 +501,7 @@
           "id": "bis_policy_ca",
           "name": "BIS 加拿大央行政策利率",
           "value": 2.25,
-          "date": "2026-06-01",
+          "date": "2026-07-01",
           "unit": "%",
           "signal": {
             "6m_change_pp": 0.0
@@ -723,7 +723,7 @@
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
           "value": 14.25,
-          "date": "2026-06-01",
+          "date": "2026-07-01",
           "unit": "%",
           "signal": {
             "6m_change_pp": -0.75
@@ -864,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "能源",
-      "title": "Dow Surges 900 Points , S & P 500 Closes Above 7 , 700 as Oil Falls on Iran Deal Hopes – NaturalNews . com",
-      "source": "naturalnews.com",
-      "url": "https://www.naturalnews.com/2026-08-05-dow-surges-900-points-on-iran-deal-hopes.html",
-      "published": "2026-08-05T21:30:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "Why Australia lack of exposure to the AI trade is driving record gains on ASX 200",
-      "source": "afr.com",
-      "url": "https://www.afr.com/markets/equity-markets/asx-emerges-as-the-steven-bradbury-of-markets-with-all-time-high-20260805-p60lm1",
-      "published": "2026-08-05T08:45:00+00:00"
+      "category": "科技产业链",
+      "title": "中国重回韩国第一大出口市场，AI红利下韩国今年出口有望新高 - finance.sina.com.cn",
+      "source": "finance.sina.com.cn",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE0yUzA0OGRfdGUwT1NGOExOY0JNUlplNzl4TTdrLW5XTGE3M0NKUDUzVXk2U0Y0Q0FHQkRxelVfUVpiOXhMTXpnV0ZMMUVmTHBVX1kwdXhpUFduM3VWM05QWmhOd0ZqQ2tHWDVtbHhmcWc1cDZBWlFaUw?oc=5",
+      "published": "2026-08-06T07:41:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "Samsung , SK Hynix test Chinese chip tools to counter US sanction risks",
-      "source": "thenews.com.pk",
-      "url": "https://www.thenews.com.pk/latest/1411291-samsung-sk-hynix-test-chinese-chip-tools-to-counter-us-sanction-risks",
-      "published": "2026-08-05T07:45:00+00:00"
+      "title": "韩官员：中国大举发展半导体 韩国须加快晶片投资 - 早晨报",
+      "source": "早晨报",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5MeFd5SDZBNmVZdy1nSXAzNEd3ZEc0aWh5SjdJSHJwazZZcnN1eDJ6ZzRxVDVuRXQ3bjRieFpQVHcwbDZaUGMwQlZVMEVnMTBOb1JhMXAyZUwxWnZTX0JpN0VRa19nRUlw?oc=5",
+      "published": "2026-08-06T07:30:00+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "SK海力士跌超10%！韩国KOSPI指数收跌，韩国官员：正努力保持芯片行业优势 - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSTY3a0VyaUhDQkxPMTNsb19hcFcxZjRwQnFLYk1DTkFaM24tMWdBN0V6cGEwXzZMQnB6aEVIWG9naFdGcWhNdE9pTFV2UEdrNVFTc3UzNTNVSVJ5aU1kWF9nWEpxSHdtWHBVdTh1T19BZnVQQmlQZU5tOFI1cGRjZHVESWF3UFFSQVA1bA?oc=5",
+      "published": "2026-08-06T06:48:00+00:00"
     }
   ]
 }
