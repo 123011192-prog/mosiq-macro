@@ -283,11 +283,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 66300.44,
-          "date": "2026-08-05",
+          "value": 65683.26,
+          "date": "2026-08-06",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -8.38
+            "drawdown_pct": -9.24
           }
         },
         {
@@ -865,24 +865,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "中国重回韩国第一大出口市场，AI红利下韩国今年出口有望新高 - finance.sina.com.cn",
-      "source": "finance.sina.com.cn",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE0yUzA0OGRfdGUwT1NGOExOY0JNUlplNzl4TTdrLW5XTGE3M0NKUDUzVXk2U0Y0Q0FHQkRxelVfUVpiOXhMTXpnV0ZMMUVmTHBVX1kwdXhpUFduM3VWM05QWmhOd0ZqQ2tHWDVtbHhmcWc1cDZBWlFaUw?oc=5",
-      "published": "2026-08-06T07:41:00+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "韩官员：中国大举发展半导体 韩国须加快晶片投资 - 早晨报",
-      "source": "早晨报",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5MeFd5SDZBNmVZdy1nSXAzNEd3ZEc0aWh5SjdJSHJwazZZcnN1eDJ6ZzRxVDVuRXQ3bjRieFpQVHcwbDZaUGMwQlZVMEVnMTBOb1JhMXAyZUwxWnZTX0JpN0VRa19nRUlw?oc=5",
-      "published": "2026-08-06T07:30:00+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "SK海力士跌超10%！韩国KOSPI指数收跌，韩国官员：正努力保持芯片行业优势 - 搜狐网",
+      "title": "韩高官：“中国的发展速度超乎想象，让我有一种强烈的紧迫感……” - 搜狐网",
       "source": "搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSTY3a0VyaUhDQkxPMTNsb19hcFcxZjRwQnFLYk1DTkFaM24tMWdBN0V6cGEwXzZMQnB6aEVIWG9naFdGcWhNdE9pTFV2UEdrNVFTc3UzNTNVSVJ5aU1kWF9nWEpxSHdtWHBVdTh1T19BZnVQQmlQZU5tOFI1cGRjZHVESWF3UFFSQVA1bA?oc=5",
-      "published": "2026-08-06T06:48:00+00:00"
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaFhzcWdVYW9jcGQ3RTgzLXhFSEZzRkVadTQ2b1llTmw2X3liYU5ULUFOLVI5Y0tEUGZxeFpPcGFFOHg3V2JWaU4xclkxQWhaRmdhT1VmX2pkR09hclNudVN5cWZMUW1EaHJ6TjlKNVllNGtPZmxCQWJaajZrQklDWE94TVhIYVFx?oc=5",
+      "published": "2026-08-06T12:54:10+00:00"
+    },
+    {
+      "category": "地缘冲突",
+      "title": "总理探访中东乘军机返新国人 聆听他们撤离经历 - 8world",
+      "source": "8world",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOdFE1ZTExMnRrR293T1U4YlJvTWVucUdIeFgxR1YwTkhjMUNtU212MDdHa1hkMWI1MUppMmgweTBVejM0YWYyVHJhSG0wa2NYVjFvTURfZTUteHVvcG1aM2JhZmJZSXRKTlpYWGZXUDNLVHpBWFBXZUZoZmRYTHYwWDlhZ0labU1Jbk1FbWVIYzNPaWYxRzlQMmVldHUwUHFEZmZpcEFhYXU?oc=5",
+      "published": "2026-08-06T12:01:57+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "中国重回韩国第一大出口市场 半导体超级周期助力 - 中华网",
+      "source": "中华网",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9mVFZRWUhpT1VOZHp1MFNCaFplMm9TZHA3N3RPTE9VUVBIcEhlQ0hfVEFxbkQ2eXZNQTJkZW1ka2hhUTRoRG01bFJ4NktNcGlXYzNfanBnVS1vZTdoZUFWeWtrcWp1SUl4dGpRMU5DSGE?oc=5",
+      "published": "2026-08-06T10:02:32+00:00"
     }
   ]
 }
