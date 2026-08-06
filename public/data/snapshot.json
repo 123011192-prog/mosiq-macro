@@ -8,8 +8,8 @@
     "liquidity": "yellow"
   },
   "core": {
-    "baa10y": 1.61,
-    "baa10y_pct": 11.822561,
+    "baa10y": 1.64,
+    "baa10y_pct": 13.844302,
     "curve_10y3m": 0.74,
     "curve_inverted": false
   },
@@ -804,44 +804,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.7,
-      "date": "2026-08-03",
-      "change_20d_bp": 15.0,
+      "value": 4.63,
+      "date": "2026-08-04",
+      "change_20d_bp": 8.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.23,
-      "date": "2026-08-03",
-      "change_20d_bp": 18.0,
+      "value": 5.18,
+      "date": "2026-08-04",
+      "change_20d_bp": 13.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.25,
-      "date": "2026-08-03",
-      "change_20d_bp": 6.0,
+      "value": 4.2,
+      "date": "2026-08-04",
+      "change_20d_bp": 1.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 45.0,
-      "date": "2026-08-03"
+      "value_bp": 43.0,
+      "date": "2026-08-04"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 15.0,
-      "us30y_change_20d_bp": 18.0,
+      "us10y_change_20d_bp": 8.0,
+      "us30y_change_20d_bp": 13.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
         "value": 4.63,
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.18,
-        "date": "2026-08-04",
+        "value": 5.17,
+        "date": "2026-08-05",
         "source": "tushare"
       }
     }
@@ -864,17 +864,17 @@
   },
   "world_brief": [
     {
+      "category": "能源",
+      "title": "Dow Surges 900 Points , S & P 500 Closes Above 7 , 700 as Oil Falls on Iran Deal Hopes – NaturalNews . com",
+      "source": "naturalnews.com",
+      "url": "https://www.naturalnews.com/2026-08-05-dow-surges-900-points-on-iran-deal-hopes.html",
+      "published": "2026-08-05T21:30:00+00:00"
+    },
+    {
       "category": "地缘冲突",
       "title": "Why Australia lack of exposure to the AI trade is driving record gains on ASX 200",
       "source": "afr.com",
       "url": "https://www.afr.com/markets/equity-markets/asx-emerges-as-the-steven-bradbury-of-markets-with-all-time-high-20260805-p60lm1",
-      "published": "2026-08-05T08:45:00+00:00"
-    },
-    {
-      "category": "能源",
-      "title": "Gold hits one - month peak on lower oil and softer dollar",
-      "source": "thestar.com.my",
-      "url": "https://www.thestar.com.my/business/business-news/2026/08/05/gold-hits-one-month-peak-on-lower-oil-and-softer-dollar",
       "published": "2026-08-05T08:45:00+00:00"
     },
     {
