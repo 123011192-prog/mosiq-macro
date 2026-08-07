@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-08-05",
+  "as_of": "2026-08-06",
   "global_light": "green",
   "lights": {
     "banking": "green",
     "credit": "green",
     "nonbank": "green",
-    "liquidity": "yellow"
+    "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.64,
-    "baa10y_pct": 13.844302,
+    "baa10y": 1.62,
+    "baa10y_pct": 12.479936,
     "curve_10y3m": 0.74,
     "curve_inverted": false
   },
@@ -63,8 +63,8 @@
     }
   ],
   "health": {
-    "data_asof": "2026-08-04",
-    "stale_count": 25,
+    "data_asof": "2026-08-05",
+    "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
@@ -805,43 +805,43 @@
   "rates_watch": {
     "us10y": {
       "value": 4.63,
-      "date": "2026-08-04",
-      "change_20d_bp": 8.0,
+      "date": "2026-08-05",
+      "change_20d_bp": 7.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.18,
-      "date": "2026-08-04",
-      "change_20d_bp": 13.0,
+      "value": 5.17,
+      "date": "2026-08-05",
+      "change_20d_bp": 11.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.2,
-      "date": "2026-08-04",
-      "change_20d_bp": 1.0,
+      "value": 4.18,
+      "date": "2026-08-05",
+      "change_20d_bp": -3.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 43.0,
-      "date": "2026-08-04"
+      "value_bp": 45.0,
+      "date": "2026-08-05"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 8.0,
-      "us30y_change_20d_bp": 13.0,
+      "us10y_change_20d_bp": 7.0,
+      "us30y_change_20d_bp": 11.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.63,
-        "date": "2026-08-05",
+        "value": 4.69,
+        "date": "2026-08-06",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.17,
-        "date": "2026-08-05",
+        "value": 5.22,
+        "date": "2026-08-06",
         "source": "tushare"
       }
     }
@@ -865,24 +865,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "韩高官：“中国的发展速度超乎想象，让我有一种强烈的紧迫感……” - 搜狐网",
+      "title": "韩高官：“中国的速度超乎想象，让我有一种强烈的紧迫感……” - 搜狐网",
       "source": "搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaFhzcWdVYW9jcGQ3RTgzLXhFSEZzRkVadTQ2b1llTmw2X3liYU5ULUFOLVI5Y0tEUGZxeFpPcGFFOHg3V2JWaU4xclkxQWhaRmdhT1VmX2pkR09hclNudVN5cWZMUW1EaHJ6TjlKNVllNGtPZmxCQWJaajZrQklDWE94TVhIYVFx?oc=5",
-      "published": "2026-08-06T12:54:10+00:00"
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQaFp2ck1KWmhDZ1JySUJua0RXbm91VmlrSVFsU3JWN1Q2eWsxdU5CY0FhaEhkdENLS180MUtTalJ2XzdWSXN4ZndrclJ5TmFJUGxyNDNqSDBYOW05TEY1VGdZYjhFaHFfWm1oMk1zTXRlLWlaOG1oWGkzR2FRLUowTmdJcWttREwtSEw4Yw?oc=5",
+      "published": "2026-08-06T23:15:31+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "总理探访中东乘军机返新国人 聆听他们撤离经历 - 8world",
-      "source": "8world",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOdFE1ZTExMnRrR293T1U4YlJvTWVucUdIeFgxR1YwTkhjMUNtU212MDdHa1hkMWI1MUppMmgweTBVejM0YWYyVHJhSG0wa2NYVjFvTURfZTUteHVvcG1aM2JhZmJZSXRKTlpYWGZXUDNLVHpBWFBXZUZoZmRYTHYwWDlhZ0labU1Jbk1FbWVIYzNPaWYxRzlQMmVldHUwUHFEZmZpcEFhYXU?oc=5",
-      "published": "2026-08-06T12:01:57+00:00"
+      "category": "货币政策",
+      "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
+      "published": "2026-08-06T22:53:24+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "中国重回韩国第一大出口市场 半导体超级周期助力 - 中华网",
-      "source": "中华网",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9mVFZRWUhpT1VOZHp1MFNCaFplMm9TZHA3N3RPTE9VUVBIcEhlQ0hfVEFxbkQ2eXZNQTJkZW1ka2hhUTRoRG01bFJ4NktNcGlXYzNfanBnVS1vZTdoZUFWeWtrcWp1SUl4dGpRMU5DSGE?oc=5",
-      "published": "2026-08-06T10:02:32+00:00"
+      "title": "涉及中国，韩国两大企业回应 - 新浪军事",
+      "source": "新浪军事",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9WMVZNYkJxa3pTbmIzaXRRX09yNERaOGlXMnhHRTBuR1c0anNsT0dDRlJwRnpOejN1aWVua2RkN2NXRThKTFBSSWtlNW5seUR5YlhSTXRCMGZnTFJCZG9INlRZcUNINzlqTlpXX1JsN0JKbkE?oc=5",
+      "published": "2026-08-06T21:51:00+00:00"
     }
   ]
 }
