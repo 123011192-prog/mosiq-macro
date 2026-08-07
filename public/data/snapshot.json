@@ -362,11 +362,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 12008.88,
-          "date": "2026-08-05",
+          "value": 12048.69,
+          "date": "2026-08-06",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -17.94
+            "drawdown_pct": -17.67
           }
         },
         {
@@ -865,24 +865,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "韩高官：“中国的速度超乎想象，让我有一种强烈的紧迫感……” - 搜狐网",
-      "source": "搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQaFp2ck1KWmhDZ1JySUJua0RXbm91VmlrSVFsU3JWN1Q2eWsxdU5CY0FhaEhkdENLS180MUtTalJ2XzdWSXN4ZndrclJ5TmFJUGxyNDNqSDBYOW05TEY1VGdZYjhFaHFfWm1oMk1zTXRlLWlaOG1oWGkzR2FRLUowTmdJcWttREwtSEw4Yw?oc=5",
-      "published": "2026-08-06T23:15:31+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
-      "published": "2026-08-06T22:53:24+00:00"
+      "title": "[社论]反对“湖南半导体”放宽管制，劳动长官在国策之上吗 - 朝鮮日報中文版",
+      "source": "朝鮮日報中文版",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOaWlsclBvS19RR3RueUdiMHlOTS1GdVhrakdveDBwbnBVVEtmU0JIZnR1bU92U2ZvcVM1QjliMzA0N2ZIdEhzRkYxT1l3dUR3bTBRVlVlTEJsZkt0bmQzcWtpTW16TDRKV2tMcHRqcUxRTVhTRlZOcURLMU8xaW52OUlfWU9KSkJqeTBTTnFUX0tnelVVVHNPNHZ4YWpadXc?oc=5",
+      "published": "2026-08-07T05:29:50+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "涉及中国，韩国两大企业回应 - 新浪军事",
-      "source": "新浪军事",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9WMVZNYkJxa3pTbmIzaXRRX09yNERaOGlXMnhHRTBuR1c0anNsT0dDRlJwRnpOejN1aWVua2RkN2NXRThKTFBSSWtlNW5seUR5YlhSTXRCMGZnTFJCZG9INlRZcUNINzlqTlpXX1JsN0JKbkE?oc=5",
-      "published": "2026-08-06T21:51:00+00:00"
+      "title": "韩国产业部长：中国半导体产业发展速度超乎想像 - Moomoo",
+      "source": "Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBQd0hhQ3RxajZQcVE4RVRZOUJyVHh3ejNndm5KVU9mY2pVeHhoMEV3ZHFHLVloWExVUEVPb2Nyenlod2lNT1Bob195bXRxMl83RWFTcFNPcnBydw?oc=5",
+      "published": "2026-08-07T05:28:30+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "“K型经济”撕裂韩国 半导体繁荣背后贫富差距扩大 - jpchinapress.com",
+      "source": "jpchinapress.com",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNWR6NGN4X1kxc1E1YzlGUGVZWHFDQzdTV3B5T0ZXY3BkR0RsUzBjSXp4ZlZXMGphUjJ3RHJPU3BFQTdzRndoQmJWUUYyb2x1akM4YWxyOVllNnNHQ1A0by1rSDVQVVlfei10ajIyclNWRnFwbEROS1BvSFkyNHRfbTF2Q1BzOUNqb0E?oc=5",
+      "published": "2026-08-07T04:34:56+00:00"
     }
   ]
 }
