@@ -283,11 +283,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 65683.26,
-          "date": "2026-08-06",
+          "value": 65606.71,
+          "date": "2026-08-07",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -9.24
+            "drawdown_pct": -9.34
           }
         },
         {
@@ -864,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "[社论]反对“湖南半导体”放宽管制，劳动长官在国策之上吗 - 朝鮮日報中文版",
-      "source": "朝鮮日報中文版",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOaWlsclBvS19RR3RueUdiMHlOTS1GdVhrakdveDBwbnBVVEtmU0JIZnR1bU92U2ZvcVM1QjliMzA0N2ZIdEhzRkYxT1l3dUR3bTBRVlVlTEJsZkt0bmQzcWtpTW16TDRKV2tMcHRqcUxRTVhTRlZOcURLMU8xaW52OUlfWU9KSkJqeTBTTnFUX0tnelVVVHNPNHZ4YWpadXc?oc=5",
-      "published": "2026-08-07T05:29:50+00:00"
+      "category": "货币政策",
+      "title": "美联储与财政部的通胀债务困局_外汇动态报道 - 汇通网 Fx678",
+      "source": "汇通网 Fx678",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE45a2o2Y0JBZzlCYzR5aG5tTy1XRGtrWWpDUDM2OHFyaTFoZmZpN19tNFpNOGdBbERNN1pYbUtUcW1qRGI4RjlZWDRKLURnTHZzcTBzV05wcFI?oc=5",
+      "published": "2026-08-07T10:32:36+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩国产业部长：中国半导体产业发展速度超乎想像 - Moomoo",
-      "source": "Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBQd0hhQ3RxajZQcVE4RVRZOUJyVHh3ejNndm5KVU9mY2pVeHhoMEV3ZHFHLVloWExVUEVPb2Nyenlod2lNT1Bob195bXRxMl83RWFTcFNPcnBydw?oc=5",
-      "published": "2026-08-07T05:28:30+00:00"
+      "title": "AI半导体特需推动！韩国、中国台湾出口额超日本 - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOT0NCLUNZSkRpQVUtMzRWV2s3OGNkQThHWDZFTzFCVTYzUENXZmEyd0ZEUW1pMXNtRnV6bzFaUk5Jdkk2bzFLdWxZcmpWRkUxQ0VVZFdRbmJxWGNfU051N2lxTWQwN3VDcTkzRkxyS19qTDVCZmxCZUJPb2hyZlBqQ3NKUHlaT3MzNVJONg?oc=5",
+      "published": "2026-08-07T08:27:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "“K型经济”撕裂韩国 半导体繁荣背后贫富差距扩大 - jpchinapress.com",
-      "source": "jpchinapress.com",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNWR6NGN4X1kxc1E1YzlGUGVZWHFDQzdTV3B5T0ZXY3BkR0RsUzBjSXp4ZlZXMGphUjJ3RHJPU3BFQTdzRndoQmJWUUYyb2x1akM4YWxyOVllNnNHQ1A0by1rSDVQVVlfei10ajIyclNWRnFwbEROS1BvSFkyNHRfbTF2Q1BzOUNqb0E?oc=5",
-      "published": "2026-08-07T04:34:56+00:00"
+      "title": "韩国高官称最大竞争对手是中国 倡半导体业放宽每周52小时工作制 - 香港01",
+      "source": "香港01",
+      "url": "https://news.google.com/rss/articles/CBMizgNBVV95cUxOTDJhbWYxQ2VPSTd1VlRFTnEwc25iekFHYm5xZW9XWVFLUklVNkVta241NTdrVF9UamlRT25NZ2pYRDVKdmo2WlRieXZoM0ZLbDJZWVREVy1KVkRrRWdWLW9GbXFkSjBfeWFEYXU4bmVqb1ZRNlZRVjA2VWozUWhVcUdGTFhYdlAwWkduU1ByZm1rWGR1QUduOW9VVmxJMERfWXVncmxHWUNVWTFNTHBOXzhtTkg1eF9OcUh1ZktxeGNta3QxN2MyeXpOYzlBQ2tkOTF4bUlRQXFVM0h5UVFUclNmZTFYOHlZR2dLcmRnYUF0UENZTWUwOFZxeWdhM0dqZUxHTkR5VUJmc0RhZTJ5RzlRbUdQYlZBSE5LYTdnN3UwZkY1ejdvNlgwZzFYM2RJVnVyeGczcXFfeWQwd09qUU43V2hOMEhDanVaeDRnTERreWozUnBRQlZFWEx3a1pKS3JlMFF1OEk0M2lidGR5V25jR2oydmt6MWVyWjNZejNDMU42ZFkzczlvb2tnQ1pUNl93LWpfVXZ0ejh2YWdGNUV1d2NBaERBOVN0NndsQjRQeDFmMV9jQUcxczNLaVN1dHpLSTNoVnZFSE4xTUE?oc=5",
+      "published": "2026-08-07T08:06:00+00:00"
     }
   ]
 }
