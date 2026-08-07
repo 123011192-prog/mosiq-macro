@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-06",
+  "as_of": "2026-08-07",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.62,
     "baa10y_pct": 12.479936,
-    "curve_10y3m": 0.74,
+    "curve_10y3m": 0.79,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,7 +63,7 @@
     }
   ],
   "health": {
-    "data_asof": "2026-08-05",
+    "data_asof": "2026-08-06",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
@@ -806,19 +806,19 @@
     "us10y": {
       "value": 4.63,
       "date": "2026-08-05",
-      "change_20d_bp": 7.0,
+      "change_20d_bp": 9.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.17,
       "date": "2026-08-05",
-      "change_20d_bp": 11.0,
+      "change_20d_bp": 12.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.18,
       "date": "2026-08-05",
-      "change_20d_bp": -3.0,
+      "change_20d_bp": 2.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -828,8 +828,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 7.0,
-      "us30y_change_20d_bp": 11.0,
+      "us10y_change_20d_bp": 9.0,
+      "us30y_change_20d_bp": 12.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -865,24 +865,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "美联储与财政部的通胀债务困局_外汇动态报道 - 汇通网 Fx678",
-      "source": "汇通网 Fx678",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE45a2o2Y0JBZzlCYzR5aG5tTy1XRGtrWWpDUDM2OHFyaTFoZmZpN19tNFpNOGdBbERNN1pYbUtUcW1qRGI4RjlZWDRKLURnTHZzcTBzV05wcFI?oc=5",
-      "published": "2026-08-07T10:32:36+00:00"
+      "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
+      "published": "2026-08-07T14:45:45+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "AI半导体特需推动！韩国、中国台湾出口额超日本 - 搜狐网",
-      "source": "搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOT0NCLUNZSkRpQVUtMzRWV2s3OGNkQThHWDZFTzFCVTYzUENXZmEyd0ZEUW1pMXNtRnV6bzFaUk5Jdkk2bzFLdWxZcmpWRkUxQ0VVZFdRbmJxWGNfU051N2lxTWQwN3VDcTkzRkxyS19qTDVCZmxCZUJPb2hyZlBqQ3NKUHlaT3MzNVJONg?oc=5",
-      "published": "2026-08-07T08:27:00+00:00"
+      "title": "韩产业部长吁调整52小时工作制：须与中国竞争力比较 - 早晨报",
+      "source": "早晨报",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9oUElvNE0yYnMxLUJXVl9lOGhySnlCUFJCdXlnVUM3enpKY2c4TEZFUjJBcHRqRE83aFh3eG9fZkJtaUlqR01GQjRJMU84QmZSM08zemYyNURZVlZQVUhZX1Fjdnhaa3pwbjBmNQ?oc=5",
+      "published": "2026-08-07T12:31:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "韩国高官称最大竞争对手是中国 倡半导体业放宽每周52小时工作制 - 香港01",
-      "source": "香港01",
-      "url": "https://news.google.com/rss/articles/CBMizgNBVV95cUxOTDJhbWYxQ2VPSTd1VlRFTnEwc25iekFHYm5xZW9XWVFLUklVNkVta241NTdrVF9UamlRT25NZ2pYRDVKdmo2WlRieXZoM0ZLbDJZWVREVy1KVkRrRWdWLW9GbXFkSjBfeWFEYXU4bmVqb1ZRNlZRVjA2VWozUWhVcUdGTFhYdlAwWkduU1ByZm1rWGR1QUduOW9VVmxJMERfWXVncmxHWUNVWTFNTHBOXzhtTkg1eF9OcUh1ZktxeGNta3QxN2MyeXpOYzlBQ2tkOTF4bUlRQXFVM0h5UVFUclNmZTFYOHlZR2dLcmRnYUF0UENZTWUwOFZxeWdhM0dqZUxHTkR5VUJmc0RhZTJ5RzlRbUdQYlZBSE5LYTdnN3UwZkY1ejdvNlgwZzFYM2RJVnVyeGczcXFfeWQwd09qUU43V2hOMEhDanVaeDRnTERreWozUnBRQlZFWEx3a1pKS3JlMFF1OEk0M2lidGR5V25jR2oydmt6MWVyWjNZejNDMU42ZFkzczlvb2tnQ1pUNl93LWpfVXZ0ejh2YWdGNUV1d2NBaERBOVN0NndsQjRQeDFmMV9jQUcxczNLaVN1dHpLSTNoVnZFSE4xTUE?oc=5",
-      "published": "2026-08-07T08:06:00+00:00"
+      "category": "货币政策",
+      "title": "特朗普谈降息：希望利率下调，但这不完全取决于沃什一人 - 华尔街见闻",
+      "source": "华尔街见闻",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9XaVFvUWxya3hhS0h2RWo5VEJfM1o4QjgxV0dBX3RrSG43bTNzOWV0RHZzS3dJY1ZnUGVsQW5Md19wRjFXVUlPN0phWC1vYTdWbmxR?oc=5",
+      "published": "2026-08-07T11:32:46+00:00"
     }
   ]
 }
