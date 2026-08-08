@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.62,
-    "baa10y_pct": 12.479936,
+    "baa10y": 1.61,
+    "baa10y_pct": 11.837881,
     "curve_10y3m": 0.79,
     "curve_inverted": false
   },
@@ -804,44 +804,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.63,
-      "date": "2026-08-05",
-      "change_20d_bp": 9.0,
+      "value": 4.69,
+      "date": "2026-08-06",
+      "change_20d_bp": 15.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.17,
-      "date": "2026-08-05",
-      "change_20d_bp": 12.0,
+      "value": 5.22,
+      "date": "2026-08-06",
+      "change_20d_bp": 17.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.18,
-      "date": "2026-08-05",
-      "change_20d_bp": 2.0,
+      "value": 4.25,
+      "date": "2026-08-06",
+      "change_20d_bp": 9.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 45.0,
-      "date": "2026-08-05"
+      "value_bp": 44.0,
+      "date": "2026-08-06"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 9.0,
-      "us30y_change_20d_bp": 12.0,
+      "us10y_change_20d_bp": 15.0,
+      "us30y_change_20d_bp": 17.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.69,
-        "date": "2026-08-06",
+        "value": 4.65,
+        "date": "2026-08-07",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.22,
-        "date": "2026-08-06",
+        "value": 5.19,
+        "date": "2026-08-07",
         "source": "tushare"
       }
     }
@@ -865,24 +865,24 @@
   "world_brief": [
     {
       "category": "货币政策",
+      "title": "特朗普罕见力挺美联储掌门！称“不会批评沃什”，投行却大胆押注10月加息风险 - FX168财经",
+      "source": "FX168财经",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1KaERWeHJ3SnhXeXFSaGEySEZaRVlHMkh5SUFuSUdyZjgtcDItNjgxcTNmeEI5cmpVNTZjV2N6ZjZLVXhzVGFuM19xc3prZTdqY0d4dkh2YUtqVUVnLThXMm1acjkxRVhsdVdiLW5IM21ocEd1VDQ1aw?oc=5",
+      "published": "2026-08-07T16:20:08+00:00"
+    },
+    {
+      "category": "货币政策",
       "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
       "source": "财联社",
       "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
       "published": "2026-08-07T14:45:45+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "韩产业部长吁调整52小时工作制：须与中国竞争力比较 - 早晨报",
-      "source": "早晨报",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9oUElvNE0yYnMxLUJXVl9lOGhySnlCUFJCdXlnVUM3enpKY2c4TEZFUjJBcHRqRE83aFh3eG9fZkJtaUlqR01GQjRJMU84QmZSM08zemYyNURZVlZQVUhZX1Fjdnhaa3pwbjBmNQ?oc=5",
-      "published": "2026-08-07T12:31:00+00:00"
-    },
-    {
       "category": "货币政策",
-      "title": "特朗普谈降息：希望利率下调，但这不完全取决于沃什一人 - 华尔街见闻",
-      "source": "华尔街见闻",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9XaVFvUWxya3hhS0h2RWo5VEJfM1o4QjgxV0dBX3RrSG43bTNzOWV0RHZzS3dJY1ZnUGVsQW5Md19wRjFXVUlPN0phWC1vYTdWbmxR?oc=5",
-      "published": "2026-08-07T11:32:46+00:00"
+      "title": "今夜美联储利率决议深度前瞻：三大情景与全资产行情推演 一、... | OKX Orbit - OKX",
+      "source": "OKX",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBSTmZ3TkdUaE9iM1NlX3Jtc2x4Rkg3UzJabVcwSXRkUFY5dHZMc09vUnpfQzFIQURkUmlwNkhJTS1tem8zdXJWdDFOREFOVFUwYTRHM2FfMTJjbl84em40N0tIVjg?oc=5",
+      "published": "2026-08-07T13:49:24+00:00"
     }
   ]
 }
