@@ -362,11 +362,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 12048.69,
-          "date": "2026-08-06",
+          "value": 12356.79,
+          "date": "2026-08-07",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -17.67
+            "drawdown_pct": -15.57
           }
         },
         {
@@ -865,24 +865,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "特朗普罕见力挺美联储掌门！称“不会批评沃什”，投行却大胆押注10月加息风险 - FX168财经",
-      "source": "FX168财经",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1KaERWeHJ3SnhXeXFSaGEySEZaRVlHMkh5SUFuSUdyZjgtcDItNjgxcTNmeEI5cmpVNTZjV2N6ZjZLVXhzVGFuM19xc3prZTdqY0d4dkh2YUtqVUVnLThXMm1acjkxRVhsdVdiLW5IM21ocEd1VDQ1aw?oc=5",
-      "published": "2026-08-07T16:20:08+00:00"
-    },
-    {
-      "category": "货币政策",
       "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
       "source": "财联社",
       "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
-      "published": "2026-08-07T14:45:45+00:00"
+      "published": "2026-08-08T04:10:28+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "今夜美联储利率决议深度前瞻：三大情景与全资产行情推演 一、... | OKX Orbit - OKX",
-      "source": "OKX",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBSTmZ3TkdUaE9iM1NlX3Jtc2x4Rkg3UzJabVcwSXRkUFY5dHZMc09vUnpfQzFIQURkUmlwNkhJTS1tem8zdXJWdDFOREFOVFUwYTRHM2FfMTJjbl84em40N0tIVjg?oc=5",
-      "published": "2026-08-07T13:49:24+00:00"
+      "category": "科技产业链",
+      "title": "战略大转移？SK海力士评估出售重庆工厂，全力押注韩国本土扩产 - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQcWw4dW1ZeGZrN2hCTklWVXVvZElyYUFMTTNxVU56QnZjRlg4VVlBa0tUQ3VXWTZreXZDVjdyaXZWa05hZW5nRTBTWmpVMnBNUUc2em4zU3gwYUtseXAzR1RLSUd0Q1dteWduZGJTZlhoNXE3WDFENjB5OFZ2bThBX1I1OExYcC1XYnBsZQ?oc=5",
+      "published": "2026-08-08T03:17:00+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "日媒：日本在“AI时代”落后了 半导体出口逊色韩台 - news.china.com",
+      "source": "news.china.com",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9abVVyVFRHZ1JzaVVEYmxfS2FzdVZfNU1xUTV3aGhGM2ktWHRtYVktV1EweUVZanJSN19yOWNzSDBiMnRuQzAxeXRpRjA2akNSY29JamdXQmFLOTJRVWpYNlA5XzdVN3dFbmhlc3ZxNnU?oc=5",
+      "published": "2026-08-08T02:21:56+00:00"
     }
   ]
 }
