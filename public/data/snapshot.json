@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.61,
-    "baa10y_pct": 11.842633,
+    "baa10y_pct": 11.84739,
     "curve_10y3m": 0.79,
     "curve_inverted": false
   },
@@ -55,7 +55,7 @@
       "active": false
     }
   ],
-  "founder_note": "盘面平稳，按自己的节奏来；韩国要当心",
+  "founder_note": "盘面平稳，按自己的节奏来；欧元区要当心",
   "advice": [
     {
       "text": "维持中性观察；触发：核心分位升至70或曲线倒挂；失效：两项条件均未持续。",
@@ -74,6 +74,7 @@
       "radar:banking",
       "radar:nonbank",
       "regions:china",
+      "regions:japan",
       "regions:canada",
       "regions:australia",
       "regions:india"
@@ -241,12 +242,12 @@
       ]
     },
     "japan": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "neutral",
         "policy": "down",
         "credit": "neutral",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -281,16 +282,6 @@
           }
         },
         {
-          "id": "fred_nikkei225",
-          "name": "日经 225 指数",
-          "value": 65606.71,
-          "date": "2026-08-07",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -9.34
-          }
-        },
-        {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
           "value": 68.03,
@@ -316,8 +307,10 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷平稳、市场平稳，区域黄灯",
-      "degraded": []
+      "summary": "日本：增长平稳、信贷平稳、市场缺失，区域黄灯",
+      "degraded": [
+        "fred_nikkei225"
+      ]
     },
     "korea": {
       "status": "ok",
@@ -325,7 +318,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "down",
-        "market": "down",
+        "market": "up",
         "fx": "down"
       },
       "indicators": [
@@ -360,13 +353,13 @@
           }
         },
         {
-          "id": "fred_sox",
+          "id": "oecd_share_kr",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 12356.79,
-          "date": "2026-08-07",
+          "value": 421.8348,
+          "date": "2026-06-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -15.57
+            "drawdown_pct": 0.0
           }
         },
         {
@@ -394,8 +387,8 @@
           "unit": "指数"
         }
       ],
-      "light": "red",
-      "summary": "韩国：增长走强、信贷走弱、市场走弱，区域红灯",
+      "light": "orange",
+      "summary": "韩国：增长走强、信贷走弱、市场走强，区域橙灯",
       "degraded": []
     },
     "uk": {
@@ -864,25 +857,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "Donald Trump shoots from Senate shoulders to punish Russia , by making India and China pay",
-      "source": "timesofindia.indiatimes.com",
-      "url": "https://timesofindia.indiatimes.com/world/us/donald-trump-shoots-from-senate-shoulders-to-punish-russia-by-making-india-and-china-pay/articleshow/133055904.cms",
-      "published": "2026-08-08T17:15:00+00:00"
+      "category": "科技产业链",
+      "title": "美国半导体行业回暖，韩国股市有望反弹，外资是否会回归三星电子和SK海力士？ - 亚洲日报",
+      "source": "亚洲日报",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1lX2ZCRTFNV0ppNktucWVTcFktc3hYREs3MUxpWlU0Rlhuek9PRDdyZnRhQVpMUGZYMDNXSHFzVDE0Sm5RMmpxMlgwdERpSFg3NW5tQ2dwWjVYakE?oc=5",
+      "published": "2026-08-09T23:32:00+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "Senate passes Russia sanctions championed by Graham ; House next",
-      "source": "unionleader.com",
-      "url": "https://www.unionleader.com/news/politics/national/senate-passes-russia-sanctions-championed-by-graham-house-next/article_c2cf0475-d951-5a1a-9324-0d5b101cbc2c.html",
-      "published": "2026-08-08T03:30:00+00:00"
+      "category": "科技产业链",
+      "title": "[早安股市]韩国综指能否摆脱半导体遭冷落？聚焦美国通胀与科技企业业绩- 阿视亚经济 - 아시아경제",
+      "source": "아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBhbFlST1FtWU9yWHRpekRYTmhhY05pT203TmVJUzVxazdDWi0zZ3N5ajBwMGZybFZ4RmdzNTJtbnRRM3dJOHJnT2JlWXBQREgxVHowVVJ2bkozTTgtSlhpa3pFRFg?oc=5",
+      "published": "2026-08-09T23:10:16+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "US Senate passes Russia sanctions championed by Graham ; US House next",
-      "source": "arabnews.com",
-      "url": "https://www.arabnews.com/node/2653836/world",
-      "published": "2026-08-08T01:45:00+00:00"
+      "category": "科技产业链",
+      "title": "SK海力士宣布投资54.3万亿韩元，在韩国龙仁和清州建设半导体工厂 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5JMnlsbk5JT2hEX2tBVHozdWNPaFQzc1YzdURoZGZ0NXBVTHJpTFQ5ZDZqYWlFaHdKX0NFakVZRDRUcXBRMGVwSmUyMEEtQm8xR3NxMEFNN3FQblNyN3pSaFlsd255QndXTjVWQ0dvb2I?oc=5",
+      "published": "2026-08-09T22:38:40+00:00"
     }
   ]
 }
