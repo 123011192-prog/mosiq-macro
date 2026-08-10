@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-07",
+  "as_of": "2026-08-08",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.61,
     "baa10y_pct": 11.84739,
-    "curve_10y3m": 0.79,
+    "curve_10y3m": 0.78,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,7 +63,7 @@
     }
   ],
   "health": {
-    "data_asof": "2026-08-06",
+    "data_asof": "2026-08-07",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
@@ -806,19 +806,19 @@
     "us10y": {
       "value": 4.69,
       "date": "2026-08-06",
-      "change_20d_bp": 15.0,
+      "change_20d_bp": 13.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.22,
       "date": "2026-08-06",
-      "change_20d_bp": 17.0,
+      "change_20d_bp": 16.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.25,
       "date": "2026-08-06",
-      "change_20d_bp": 9.0,
+      "change_20d_bp": 4.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -828,8 +828,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 15.0,
-      "us30y_change_20d_bp": 17.0,
+      "us10y_change_20d_bp": 13.0,
+      "us30y_change_20d_bp": 16.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -864,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "韩国政府年内将制定“超级特区特别法”，支持半导体、AI与数据中心三大项目 - 新浪财经",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFAzcmFTRU8zRlVKdnVxS25FbjJ5b2RHUXJNbXRrN1lBcVZsTUlVM3BYbEVqdmszcFVSUS1VTG5QOXkzYm9oMXZoLWlLRFUyYzM0N2U1bFpOY1p0bGNyM2lMTVl5dGFfZzAxYWtEbnJKdVRYOWttdGh6Mw?oc=5",
-      "published": "2026-08-10T12:08:51+00:00"
+      "category": "货币政策",
+      "title": "美联储加息预期、中东局势持续牵动市场，金价持稳_外汇动态报道 - 汇通网 Fx678",
+      "source": "汇通网 Fx678",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5DX1VHRXY0QVp0T0JVS1dyNVUwZ1p0Tk9WdER2bUhnWHlrWGdUelU0OUtubFpqSFkxZmJWdjhKWTBmY0xibDhQbDVaRlBibHRNVU1JdDZNUVdBZw?oc=5",
+      "published": "2026-08-10T16:55:59+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "哈塞特：若身在美联储将维持利率不变或降息，排除接替库克可能 - 华尔街见闻",
+      "source": "华尔街见闻",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBkWDJxMndJS2EtRm1lTUZTSkYxVWlBUUVpcVA0MWNiaDJUeTVlQWplZEFnUTV1b2xIYmFZblYyT0R1MmEzdEZJNzI1bl9EMDlSRzBJ?oc=5",
+      "published": "2026-08-10T14:56:27+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩国提速半导体与AI“三大超级项目”，李在明亲督加速落地 - 搜狐网",
-      "source": "搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPS2JSU1JyYnYyZ0ZEUXhBbVlqc095RW55YkpmaXppN2M3TEdhM2JqeXVQRHBKQllUNVgybzVFb3BpemJhcTdaNEZoUXhsb3ZCbkRYVGRvSVA3TUJtTXRLQmRzeEt3MFhwNFk3VHdRTlVhanMwQTAwU0lzSURhZDN1MDFybzBrNEQwUGFXag?oc=5",
-      "published": "2026-08-10T11:26:43+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "韩国砸5万亿韩元补半导体短板，军用机场将为芯片项目让路 - 新浪财经",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBaeXV4ZmgzOXlmcXBnVzI3bzRPSFFVbkdSUEJFRFV1WndzYlFCZno3dWZsZXNjWnptVllyVzRxTmsySWVxT19HVW96YzAyYnpUVHpncDBiNVUtY3p0MEV2XzBkbmpnbS1KUHJoRzlLZXN6YVlFazQ2Q05FYXk4cEk?oc=5",
-      "published": "2026-08-10T10:01:47+00:00"
+      "title": "韓國投35億美元推半導體基金 加速打造芯片基地 - 大纪元",
+      "source": "大纪元",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9LR1ZCVGZIallLTzNpNDlHcVF0Y2dMNFJIOGdkNFY3X2o1VFhHSjBFTFUtVldjdTQzREgxYzgyc0luMTd4WFVOalJ2Y2FDOExpS3RCR2FiNzlnc2lWNEwzUtIBZkFVX3lxTE1heHdNZlZNdWlEVmstcEVPbWl1RngwcmdzRjR3UFU0bVQzZWV0SnktT01PNzdRZkU3RFNKSXRrX195RWJYTk5qOHljNGJkbFdUWmNXQTcwTXJndGctVVptMUF1SElQZw?oc=5",
+      "published": "2026-08-10T14:49:00+00:00"
     }
   ]
 }
