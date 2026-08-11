@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.61,
-    "baa10y_pct": 11.84739,
+    "baa10y": 1.64,
+    "baa10y_pct": 13.955823,
     "curve_10y3m": 0.78,
     "curve_inverted": false
   },
@@ -64,7 +64,7 @@
   ],
   "health": {
     "data_asof": "2026-08-07",
-    "stale_count": 24,
+    "stale_count": 23,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
@@ -804,44 +804,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.69,
-      "date": "2026-08-06",
-      "change_20d_bp": 13.0,
+      "value": 4.65,
+      "date": "2026-08-07",
+      "change_20d_bp": 9.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.22,
-      "date": "2026-08-06",
-      "change_20d_bp": 16.0,
+      "value": 5.19,
+      "date": "2026-08-07",
+      "change_20d_bp": 13.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.25,
-      "date": "2026-08-06",
-      "change_20d_bp": 4.0,
+      "value": 4.19,
+      "date": "2026-08-07",
+      "change_20d_bp": -2.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 44.0,
-      "date": "2026-08-06"
+      "value_bp": 46.0,
+      "date": "2026-08-07"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 13.0,
-      "us30y_change_20d_bp": 16.0,
+      "us10y_change_20d_bp": 9.0,
+      "us30y_change_20d_bp": 13.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.65,
-        "date": "2026-08-07",
+        "value": 4.72,
+        "date": "2026-08-10",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.19,
-        "date": "2026-08-07",
+        "value": 5.25,
+        "date": "2026-08-10",
         "source": "tushare"
       }
     }
@@ -864,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "美联储加息预期、中东局势持续牵动市场，金价持稳_外汇动态报道 - 汇通网 Fx678",
-      "source": "汇通网 Fx678",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5DX1VHRXY0QVp0T0JVS1dyNVUwZ1p0Tk9WdER2bUhnWHlrWGdUelU0OUtubFpqSFkxZmJWdjhKWTBmY0xibDhQbDVaRlBibHRNVU1JdDZNUVdBZw?oc=5",
-      "published": "2026-08-10T16:55:59+00:00"
+      "category": "地缘冲突",
+      "title": "US stocks : Wall Street ends down as expectations of Hormuz deal fade",
+      "source": "businesstimes.com.sg",
+      "url": "https://www.businesstimes.com.sg/companies-markets/capital-markets-currencies/us-stocks-wall-street-ends-down-expectations-hormuz-deal-fade",
+      "published": "2026-08-10T23:45:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "哈塞特：若身在美联储将维持利率不变或降息，排除接替库克可能 - 华尔街见闻",
-      "source": "华尔街见闻",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBkWDJxMndJS2EtRm1lTUZTSkYxVWlBUUVpcVA0MWNiaDJUeTVlQWplZEFnUTV1b2xIYmFZblYyT0R1MmEzdEZJNzI1bl9EMDlSRzBJ?oc=5",
-      "published": "2026-08-10T14:56:27+00:00"
+      "category": "地缘冲突",
+      "title": "Inflation Date , Earnings Momentum and Other Key Things to Watch this Week",
+      "source": "finance.yahoo.com",
+      "url": "https://finance.yahoo.com/economy/articles/inflation-date-earnings-momentum-other-170002840.html",
+      "published": "2026-08-10T23:45:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "韓國投35億美元推半導體基金 加速打造芯片基地 - 大纪元",
-      "source": "大纪元",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9LR1ZCVGZIallLTzNpNDlHcVF0Y2dMNFJIOGdkNFY3X2o1VFhHSjBFTFUtVldjdTQzREgxYzgyc0luMTd4WFVOalJ2Y2FDOExpS3RCR2FiNzlnc2lWNEwzUtIBZkFVX3lxTE1heHdNZlZNdWlEVmstcEVPbWl1RngwcmdzRjR3UFU0bVQzZWV0SnktT01PNzdRZkU3RFNKSXRrX195RWJYTk5qOHljNGJkbFdUWmNXQTcwTXJndGctVVptMUF1SElQZw?oc=5",
-      "published": "2026-08-10T14:49:00+00:00"
+      "category": "能源",
+      "title": "Oil prices rally , Wall Street retreats with Hormuz , inflation in focus",
+      "source": "freemalaysiatoday.com",
+      "url": "https://www.freemalaysiatoday.com/category/business/2026/08/11/oil-prices-rally-wall-street-retreats-with-hormuz-inflation-in-focus",
+      "published": "2026-08-10T23:30:00+00:00"
     }
   ]
 }
