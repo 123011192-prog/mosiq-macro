@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-08",
+  "as_of": "2026-08-11",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.64,
     "baa10y_pct": 13.955823,
-    "curve_10y3m": 0.78,
+    "curve_10y3m": 0.83,
     "curve_inverted": false
   },
   "cycle": {
@@ -18,7 +18,7 @@
     "inflation": "degraded",
     "liquidity": "neutral",
     "credit": "degraded",
-    "policy": "neutral",
+    "policy": "degraded",
     "market_stress": "degraded"
   },
   "confirmations": [
@@ -63,15 +63,17 @@
     }
   ],
   "health": {
-    "data_asof": "2026-08-07",
-    "stale_count": 23,
+    "data_asof": "2026-08-10",
+    "stale_count": 31,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
+      "cycle:policy",
       "cycle:market_stress",
       "radar:banking",
+      "radar:credit",
       "radar:nonbank",
       "regions:china",
       "regions:canada",
@@ -806,19 +808,19 @@
     "us10y": {
       "value": 4.65,
       "date": "2026-08-07",
-      "change_20d_bp": 9.0,
+      "change_20d_bp": 3.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.19,
       "date": "2026-08-07",
-      "change_20d_bp": 13.0,
+      "change_20d_bp": 9.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.19,
       "date": "2026-08-07",
-      "change_20d_bp": -2.0,
+      "change_20d_bp": -7.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -828,8 +830,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 9.0,
-      "us30y_change_20d_bp": 13.0,
+      "us10y_change_20d_bp": 3.0,
+      "us30y_change_20d_bp": 9.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -865,24 +867,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
+      "title": "三星押注人形机器人：整合半导体、AI与制造能力，或打造韩国版“机器人帝国” - sohu.com",
+      "source": "sohu.com",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcHUtdmRDVHRTTGMzNkdYTGJ5ZWluTlNTT1cwblU5MVVocUZ2ZFFCVGpqVkhQSm5QVmg4enhFYUVvb3JjX0I4LTJtSUIzNW5lOVU1cWd6STNqOXpERjE2MlVYRl9pSklYV0NQR0VVUEtzMzVmNGo2TFFlSFMtTXVjSGtqX0k1NWdD?oc=5",
+      "published": "2026-08-11T15:34:24+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
+      "published": "2026-08-11T11:28:59+00:00"
+    },
+    {
+      "category": "科技产业链",
       "title": "韩国央行副行长：通胀持续高于目标，预计将继续加息 - 华尔街见闻",
       "source": "华尔街见闻",
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBqekhmb1FIR2RIZFl6cTZJMWdFVlZHWTJlRzVYOFVlMjZkMW1nVjRvdWlvOUl2bS1WT0YxMU5EeWVxNW11XzBfNEQwb3lOUktyNDdV?oc=5",
       "published": "2026-08-11T10:18:08+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "暴涨155.4%！韩国芯片杀疯了 - 格隆汇",
-      "source": "格隆汇",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1yVWc5YUppZE9pQlU5MkEzZExPTXZoTUxZakRpMDY5TDNYU2hIMVNiLU5IX1ZvdVdiaHIyMndoU21Ia2NsQkdPb0FLMA?oc=5",
-      "published": "2026-08-11T09:52:23+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "【韩股收盘】 韩国半导体股走强推动KOSPI指数重返6300点 - 뉴스핌",
-      "source": "뉴스핌",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBvSnoxMm9HY0VBLW9kS24xWFdBX1VhMThzdm9LZGtzZm9fQ0FIbVZObmwwQkdzS1JQaTFjZlpPVHB1Sm1vRnB3dm83aDhTTWs5aUIza0wwdHVud2No?oc=5",
-      "published": "2026-08-11T07:21:00+00:00"
     }
   ]
 }
