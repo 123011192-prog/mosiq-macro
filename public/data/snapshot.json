@@ -362,11 +362,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11993.86,
-          "date": "2026-08-10",
+          "value": 12098.47,
+          "date": "2026-08-11",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -18.05
+            "drawdown_pct": -17.33
           }
         },
         {
@@ -865,24 +865,24 @@
   "world_brief": [
     {
       "category": "地缘冲突",
+      "title": "Global Market : Japan stocks muted as investors await US CPI report",
+      "source": "economictimes.indiatimes.com",
+      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-japan-stocks-muted-as-investors-await-us-cpi-report/articleshow/133169643.cms",
+      "published": "2026-08-12T05:15:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
+      "title": "Trump , PM Modi will  work it out , says Navarro amid 100 % tariff threat :  They have a very good relationship ...",
+      "source": "moneycontrol.com",
+      "url": "https://www.moneycontrol.com/world/trump-pm-modi-will-work-it-out-says-navarro-amid-100-tariff-threat-they-have-a-very-good-relationship-article-14002287.html",
+      "published": "2026-08-12T03:00:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
       "title": "China Targeted MP Materials for a Reason",
       "source": "investorplace.com",
       "url": "https://investorplace.com/hypergrowthinvesting/2026/08/china-targeted-mp-materials-for-a-reason/",
       "published": "2026-08-11T15:30:00+00:00"
-    },
-    {
-      "category": "能源",
-      "title": "GIFT Nifty drags , signals muted start for Sensex , Nifty ; markets cautious amid rising oil , US - Iran impasse",
-      "source": "moneycontrol.com",
-      "url": "https://www.moneycontrol.com/news/business/markets/gift-nifty-drags-signals-muted-start-for-sensex-nifty-markets-cautious-amid-rising-oil-us-iran-impasse-14000813.html",
-      "published": "2026-08-11T04:45:00+00:00"
-    },
-    {
-      "category": "能源",
-      "title": "Commodity Corner : Gold rises , oil prices steady at more than one - week highs",
-      "source": "moneycontrol.com",
-      "url": "https://www.moneycontrol.com/news/business/commodities/commodity-corner-gold-rises-oil-prices-steady-at-more-than-one-week-highs-14000774.html",
-      "published": "2026-08-11T04:45:00+00:00"
     }
   ]
 }
