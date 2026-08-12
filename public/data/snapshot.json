@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-11",
+  "as_of": "2026-08-12",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.62,
     "baa10y_pct": 12.545163,
-    "curve_10y3m": 0.83,
+    "curve_10y3m": 0.81,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,7 +63,7 @@
     }
   ],
   "health": {
-    "data_asof": "2026-08-10",
+    "data_asof": "2026-08-11",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
@@ -806,19 +806,19 @@
     "us10y": {
       "value": 4.72,
       "date": "2026-08-10",
-      "change_20d_bp": 10.0,
+      "change_20d_bp": 14.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.25,
       "date": "2026-08-10",
-      "change_20d_bp": 15.0,
+      "change_20d_bp": 17.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.25,
       "date": "2026-08-10",
-      "change_20d_bp": -1.0,
+      "change_20d_bp": 7.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -828,8 +828,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 10.0,
-      "us30y_change_20d_bp": 15.0,
+      "us10y_change_20d_bp": 14.0,
+      "us30y_change_20d_bp": 17.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -864,6 +864,13 @@
   },
   "world_brief": [
     {
+      "category": "能源",
+      "title": "Got firebombed by Indians on net : Trump aide Navarro recalls backlash after Russian oil , tariff remarks",
+      "source": "timesofindia.indiatimes.com",
+      "url": "https://timesofindia.indiatimes.com/india/got-firebombed-by-indians-on-net-trump-aide-navarro-recalls-backlash-after-russian-oil-tariff-remarks/articleshow/133183084.cms",
+      "published": "2026-08-12T13:30:00+00:00"
+    },
+    {
       "category": "地缘冲突",
       "title": "US Stock Market Today : S & P 500 Futures Stall As Traders Eye Inflation Signals",
       "source": "finance.yahoo.com",
@@ -876,13 +883,6 @@
       "source": "economictimes.indiatimes.com",
       "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-japan-stocks-muted-as-investors-await-us-cpi-report/articleshow/133169643.cms",
       "published": "2026-08-12T05:15:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "Trump , PM Modi will  work it out , says Navarro amid 100 % tariff threat :  They have a very good relationship ...",
-      "source": "moneycontrol.com",
-      "url": "https://www.moneycontrol.com/world/trump-pm-modi-will-work-it-out-says-navarro-amid-100-tariff-threat-they-have-a-very-good-relationship-article-14002287.html",
-      "published": "2026-08-12T03:00:00+00:00"
     }
   ]
 }
