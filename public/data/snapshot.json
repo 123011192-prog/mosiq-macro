@@ -246,7 +246,7 @@
         "growth": "neutral",
         "policy": "down",
         "credit": "neutral",
-        "market": "neutral",
+        "market": "up",
         "fx": "neutral"
       },
       "indicators": [
@@ -283,11 +283,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 66970.22,
-          "date": "2026-08-10",
+          "value": 67524.06,
+          "date": "2026-08-12",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -7.46
+            "drawdown_pct": -6.69
           }
         },
         {
@@ -316,7 +316,7 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷平稳、市场平稳，区域黄灯",
+      "summary": "日本：增长平稳、信贷平稳、市场走强，区域黄灯",
       "degraded": []
     },
     "korea": {
@@ -865,6 +865,13 @@
   "world_brief": [
     {
       "category": "地缘冲突",
+      "title": "US Stock Market Today : S & P 500 Futures Stall As Traders Eye Inflation Signals",
+      "source": "finance.yahoo.com",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/us-stock-market-today-p-081201698.html",
+      "published": "2026-08-12T08:45:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
       "title": "Global Market : Japan stocks muted as investors await US CPI report",
       "source": "economictimes.indiatimes.com",
       "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-japan-stocks-muted-as-investors-await-us-cpi-report/articleshow/133169643.cms",
@@ -876,13 +883,6 @@
       "source": "moneycontrol.com",
       "url": "https://www.moneycontrol.com/world/trump-pm-modi-will-work-it-out-says-navarro-amid-100-tariff-threat-they-have-a-very-good-relationship-article-14002287.html",
       "published": "2026-08-12T03:00:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "China Targeted MP Materials for a Reason",
-      "source": "investorplace.com",
-      "url": "https://investorplace.com/hypergrowthinvesting/2026/08/china-targeted-mp-materials-for-a-reason/",
-      "published": "2026-08-11T15:30:00+00:00"
     }
   ]
 }
