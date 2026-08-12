@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.64,
-    "baa10y_pct": 13.955823,
+    "baa10y": 1.62,
+    "baa10y_pct": 12.545163,
     "curve_10y3m": 0.83,
     "curve_inverted": false
   },
@@ -18,7 +18,7 @@
     "inflation": "degraded",
     "liquidity": "neutral",
     "credit": "degraded",
-    "policy": "degraded",
+    "policy": "neutral",
     "market_stress": "degraded"
   },
   "confirmations": [
@@ -64,16 +64,14 @@
   ],
   "health": {
     "data_asof": "2026-08-10",
-    "stale_count": 31,
+    "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
-      "cycle:policy",
       "cycle:market_stress",
       "radar:banking",
-      "radar:credit",
       "radar:nonbank",
       "regions:china",
       "regions:canada",
@@ -806,44 +804,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.65,
-      "date": "2026-08-07",
-      "change_20d_bp": 3.0,
+      "value": 4.72,
+      "date": "2026-08-10",
+      "change_20d_bp": 10.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.19,
-      "date": "2026-08-07",
-      "change_20d_bp": 9.0,
+      "value": 5.25,
+      "date": "2026-08-10",
+      "change_20d_bp": 15.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.19,
-      "date": "2026-08-07",
-      "change_20d_bp": -7.0,
+      "value": 4.25,
+      "date": "2026-08-10",
+      "change_20d_bp": -1.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 46.0,
-      "date": "2026-08-07"
+      "value_bp": 47.0,
+      "date": "2026-08-10"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 3.0,
-      "us30y_change_20d_bp": 9.0,
+      "us10y_change_20d_bp": 10.0,
+      "us30y_change_20d_bp": 15.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.72,
-        "date": "2026-08-10",
+        "value": 4.7,
+        "date": "2026-08-11",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.25,
-        "date": "2026-08-10",
+        "value": 5.24,
+        "date": "2026-08-11",
         "source": "tushare"
       }
     }
@@ -866,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "三星押注人形机器人：整合半导体、AI与制造能力，或打造韩国版“机器人帝国” - sohu.com",
-      "source": "sohu.com",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcHUtdmRDVHRTTGMzNkdYTGJ5ZWluTlNTT1cwblU5MVVocUZ2ZFFCVGpqVkhQSm5QVmg4enhFYUVvb3JjX0I4LTJtSUIzNW5lOVU1cWd6STNqOXpERjE2MlVYRl9pSklYV0NQR0VVUEtzMzVmNGo2TFFlSFMtTXVjSGtqX0k1NWdD?oc=5",
-      "published": "2026-08-11T15:34:24+00:00"
+      "category": "地缘冲突",
+      "title": "China Targeted MP Materials for a Reason",
+      "source": "investorplace.com",
+      "url": "https://investorplace.com/hypergrowthinvesting/2026/08/china-targeted-mp-materials-for-a-reason/",
+      "published": "2026-08-11T15:30:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
-      "published": "2026-08-11T11:28:59+00:00"
+      "category": "能源",
+      "title": "GIFT Nifty drags , signals muted start for Sensex , Nifty ; markets cautious amid rising oil , US - Iran impasse",
+      "source": "moneycontrol.com",
+      "url": "https://www.moneycontrol.com/news/business/markets/gift-nifty-drags-signals-muted-start-for-sensex-nifty-markets-cautious-amid-rising-oil-us-iran-impasse-14000813.html",
+      "published": "2026-08-11T04:45:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "韩国央行副行长：通胀持续高于目标，预计将继续加息 - 华尔街见闻",
-      "source": "华尔街见闻",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBqekhmb1FIR2RIZFl6cTZJMWdFVlZHWTJlRzVYOFVlMjZkMW1nVjRvdWlvOUl2bS1WT0YxMU5EeWVxNW11XzBfNEQwb3lOUktyNDdV?oc=5",
-      "published": "2026-08-11T10:18:08+00:00"
+      "category": "能源",
+      "title": "Commodity Corner : Gold rises , oil prices steady at more than one - week highs",
+      "source": "moneycontrol.com",
+      "url": "https://www.moneycontrol.com/news/business/commodities/commodity-corner-gold-rises-oil-prices-steady-at-more-than-one-week-highs-14000774.html",
+      "published": "2026-08-11T04:45:00+00:00"
     }
   ]
 }
