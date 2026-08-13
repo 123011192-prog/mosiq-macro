@@ -283,11 +283,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 67524.06,
-          "date": "2026-08-12",
+          "value": 68308.59,
+          "date": "2026-08-13",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -6.69
+            "drawdown_pct": -5.61
           }
         },
         {
@@ -323,7 +323,7 @@
       "status": "ok",
       "cycle": {
         "growth": "up",
-        "policy": "neutral",
+        "policy": "down",
         "credit": "down",
         "market": "down",
         "fx": "down"
@@ -342,11 +342,11 @@
         {
           "id": "bis_policy_kr",
           "name": "BIS 韩国央行政策利率",
-          "value": 2.5,
-          "date": "2026-06-01",
+          "value": 2.75,
+          "date": "2026-07-01",
           "unit": "%",
           "signal": {
-            "6m_change_pp": 0.0
+            "6m_change_pp": 0.25
           }
         },
         {
@@ -865,24 +865,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "主权财富基金入局全球科技竞赛，韩国政府在走一步险棋|京酿馆 - Sohu",
+      "title": "日本又对中国下黑手！80%市场垄断设备断供，却逼出中国替代狂潮 - Sohu",
       "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNZ0dDbUFFbXJpWDZpMmVfR1l1aHFGaGg4UW5MR3VfeE04Qml0WUNnU1huWnVSNmxfN1BFRGFyQUlJalp5Mk05RFpPQjNtRFJKTTUzYWFqUUhkamN0WHJ5aW8xR202bEdUYlpqc1V6SklnNklxUUJRa2twMVhYNDVIdm1oa0Y1SnBE?oc=5",
-      "published": "2026-08-13T06:56:22+00:00"
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOazh6NnJSdUlvLTZzTE11OGFnTDFjWWJ3TU9FWEt4ZURkSFZWdXkwb0JHWEpMMFJlZXk0YW9fM1BqQUFsMXJlLWxLaERQcDR3aWs4dGs3bkhmOFA0TnVCb0lhLUxFY1huWklZa2t6cFBuRko5YV83R2JBV2JIMmY5QUlEcHU4ZVVCNE5ZRw?oc=5",
+      "published": "2026-08-13T10:51:24+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "摩根大通劝诫美联储勿紧缩 高利率恐引爆危机 - news.china.com",
-      "source": "news.china.com",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9yNmJyNTAtZV9WMmhIcmcxQmFsckc5bEgwZ3JRd3hlQ1ZvUW5JRjdXSUxQN1h3bjZManBMNjlGZEpReERWQ01UZUc0alBSb1R6MGJVMkxQeWRIZS1DbnVzSGc1YS1pZG4ybEplMkpwVEc?oc=5",
-      "published": "2026-08-13T06:24:28+00:00"
+      "category": "科技产业链",
+      "title": "深度探访SK海力士：依托AI浪潮斥资7200亿美元大举扩产，重塑韩国半导体版图 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxORlMwWnNaUVNYN09rRVQwTktEYlNBYkdPUm90R3pRMmF2eFBvaDdjYTVsMV9oZ1lWX3RJOUFiTnlKQkJaSS1ZUS1mYWhoVmpiYzNsWFZ5ZlZfV1pYTUtfMVdRMUxMSS1XOHN5aVVjUXljMDFQakMyQUdaQUlOaXZHdUJObVcxSTg?oc=5",
+      "published": "2026-08-13T09:59:00+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "消息：美驻中东使馆准备长期精简人员 - 联合早报",
-      "source": "联合早报",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1YWklpZFNPUVhNZFJxekdqVEtUVHpIbUNmSXdHa0xVZmhTc2JaRUQ5ZzBKR3psZGpTdGdEd3lfWUJhUXBtLVRYTnZqMTZldFl6b19OUWVGWjlLc0YxYjV1TG1meWxxbTZRQlE?oc=5",
-      "published": "2026-08-13T05:10:30+00:00"
+      "category": "科技产业链",
+      "title": "韩国综合股价指数（KOSPI）强势触底反弹，本轮牛市还能持续多久？ - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNZ0lqMVM3QzU4V2FybkpqUjB6ZVJRUVJMal9uREFJRHFBVFc0SjM3MDU4MDhqNTVJMVdMRFV4OWlQbE9EaWs3VUVjVVR4OUpoeVotLTF5bEllNHE5d2wwNXZsSUdpTGcwbEZmbjk3cWpaQ2l5dUlxemp4WXJySWxWcWkyLW41MDA?oc=5",
+      "published": "2026-08-13T09:01:00+00:00"
     }
   ]
 }
