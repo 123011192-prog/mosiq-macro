@@ -804,44 +804,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.72,
-      "date": "2026-08-10",
-      "change_20d_bp": 14.0,
+      "value": 4.7,
+      "date": "2026-08-11",
+      "change_20d_bp": 12.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.25,
-      "date": "2026-08-10",
-      "change_20d_bp": 17.0,
+      "value": 5.24,
+      "date": "2026-08-11",
+      "change_20d_bp": 16.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.25,
-      "date": "2026-08-10",
-      "change_20d_bp": 7.0,
+      "value": 4.22,
+      "date": "2026-08-11",
+      "change_20d_bp": 4.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 47.0,
-      "date": "2026-08-10"
+      "value_bp": 48.0,
+      "date": "2026-08-11"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 14.0,
-      "us30y_change_20d_bp": 17.0,
+      "us10y_change_20d_bp": 12.0,
+      "us30y_change_20d_bp": 16.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.7,
-        "date": "2026-08-11",
+        "value": 4.68,
+        "date": "2026-08-12",
         "source": "tushare"
       },
       "us30y": {
         "value": 5.24,
-        "date": "2026-08-11",
+        "date": "2026-08-12",
         "source": "tushare"
       }
     }
@@ -864,25 +864,25 @@
   },
   "world_brief": [
     {
+      "category": "地缘冲突",
+      "title": "US stocks mostly up after data shows slightly lower inflation in July",
+      "source": "channelnewsasia.com",
+      "url": "https://www.channelnewsasia.com/world/us-stocks-inflation-wall-street-6315951",
+      "published": "2026-08-12T22:15:00+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "Why The Fed Will Raise Rates In September Despite Cooler CPI",
+      "source": "forbes.com",
+      "url": "https://www.forbes.com/sites/billconerly/2026/08/12/why-the-fed-will-raise-rates-in-september-despite-cooler-cpi/",
+      "published": "2026-08-12T19:30:00+00:00"
+    },
+    {
       "category": "能源",
       "title": "Got firebombed by Indians on net : Trump aide Navarro recalls backlash after Russian oil , tariff remarks",
       "source": "timesofindia.indiatimes.com",
       "url": "https://timesofindia.indiatimes.com/india/got-firebombed-by-indians-on-net-trump-aide-navarro-recalls-backlash-after-russian-oil-tariff-remarks/articleshow/133183084.cms",
       "published": "2026-08-12T13:30:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "US Stock Market Today : S & P 500 Futures Stall As Traders Eye Inflation Signals",
-      "source": "finance.yahoo.com",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/us-stock-market-today-p-081201698.html",
-      "published": "2026-08-12T08:45:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "Global Market : Japan stocks muted as investors await US CPI report",
-      "source": "economictimes.indiatimes.com",
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-japan-stocks-muted-as-investors-await-us-cpi-report/articleshow/133169643.cms",
-      "published": "2026-08-12T05:15:00+00:00"
     }
   ]
 }
