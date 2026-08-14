@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.62,
-    "baa10y_pct": 12.545163,
+    "baa10y": 1.66,
+    "baa10y_pct": 15.910915,
     "curve_10y3m": 0.81,
     "curve_inverted": false
   },
@@ -804,44 +804,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.7,
-      "date": "2026-08-11",
-      "change_20d_bp": 15.0,
+      "value": 4.68,
+      "date": "2026-08-12",
+      "change_20d_bp": 13.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.24,
-      "date": "2026-08-11",
+      "date": "2026-08-12",
       "change_20d_bp": 16.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.22,
-      "date": "2026-08-11",
-      "change_20d_bp": 9.0,
+      "value": 4.2,
+      "date": "2026-08-12",
+      "change_20d_bp": 7.0,
       "source": "fred"
     },
     "spread_2s10s": {
       "value_bp": 48.0,
-      "date": "2026-08-11"
+      "date": "2026-08-12"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 15.0,
+      "us10y_change_20d_bp": 13.0,
       "us30y_change_20d_bp": 16.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.68,
-        "date": "2026-08-12",
+        "value": 4.63,
+        "date": "2026-08-13",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.24,
-        "date": "2026-08-12",
+        "value": 5.21,
+        "date": "2026-08-13",
         "source": "tushare"
       }
     }
@@ -864,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "美联储在固定利率逆回购操作中总计接纳了1个对手方的4.5亿美元。 - 金融界",
-      "source": "金融界",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9fUlNXT1d0M2QwSUxXQnBfdEF1d0xRRDRmSkh5NGZZQkczUm50amhRN19acmhKUERjYUFfaU5fU244NEtFT044Ulg2aDA1N0dITXNwa2tpX3NMV21ncTdIWTlnV0oyaVl3dHE0R1NZTQ?oc=5",
-      "published": "2026-08-13T17:21:25+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "“1011内幕巨鲸”代理人：韩国半导体迎回踩买点，关注SpaceX后续解禁窗口 - TradingView",
-      "source": "TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5qeWR2NjN3Q185Zy1iUFB4X2s1T0lXdDZRbDMyZGRLaDA5Q2IwdE9yTkxRMi1OZlhMcVk3VHNwamhOWkhYbk5Uc3o4Sl9FOE5SQlU5Ml9HQ05CVlRMSkRUM2U5WXZoZw?oc=5",
-      "published": "2026-08-13T16:06:00+00:00"
+      "category": "地缘冲突",
+      "title": "Japan wholesale prices up 7 . 2 % in July amid Middle East tensions , AI demand",
+      "source": "japantoday.com",
+      "url": "https://japantoday.com/category/business/update1-japan-wholesale-prices-up-7.2-in-july-amid-middle-east-tensions-ai-demand",
+      "published": "2026-08-13T22:45:00+00:00"
     },
     {
       "category": "地缘冲突",
-      "title": "美军或将撤离中东中东国家提前做好准备 - VanPeople",
-      "source": "VanPeople",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1NYVIyT19PS0xSRUlnamVvNkRObHI3YzNobEdhS1VGQmdrendvTW1UVlN0S1Nxak5sUkNVeGlTUEMzeEZTRDFGbWlVLWdIQm1u?oc=5",
-      "published": "2026-08-13T14:44:36+00:00"
+      "title": "India wary as U Russia tariff Bill advances , keeps eye on trade talks",
+      "source": "business-standard.com",
+      "url": "https://www.business-standard.com/economy/news/us-russia-linked-tariff-bill-concerns-india-but-trade-talks-reassuring-126081302024_1.html",
+      "published": "2026-08-13T18:15:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
+      "title": "India In Contact With US Over Trade Deal Talks , Says Commerce Secretary",
+      "source": "freepressjournal.in",
+      "url": "https://www.freepressjournal.in/business/india-in-contact-with-us-over-trade-deal-talks-says-commerce-secretary",
+      "published": "2026-08-13T12:45:00+00:00"
     }
   ]
 }
