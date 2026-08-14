@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-13",
+  "as_of": "2026-08-14",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.66,
     "baa10y_pct": 15.910915,
-    "curve_10y3m": 0.81,
+    "curve_10y3m": 0.76,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,7 +63,7 @@
     }
   ],
   "health": {
-    "data_asof": "2026-08-12",
+    "data_asof": "2026-08-13",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
@@ -806,19 +806,19 @@
     "us10y": {
       "value": 4.68,
       "date": "2026-08-12",
-      "change_20d_bp": 13.0,
+      "change_20d_bp": 11.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.24,
       "date": "2026-08-12",
-      "change_20d_bp": 16.0,
+      "change_20d_bp": 15.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.2,
       "date": "2026-08-12",
-      "change_20d_bp": 7.0,
+      "change_20d_bp": 4.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -828,8 +828,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 13.0,
-      "us30y_change_20d_bp": 16.0,
+      "us10y_change_20d_bp": 11.0,
+      "us30y_change_20d_bp": 15.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -864,25 +864,25 @@
   },
   "world_brief": [
     {
+      "category": "地缘冲突",
+      "title": "Tech stocks pull Wall Street lower as investors weigh data , Middle East tensions",
+      "source": "finance.yahoo.com",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/wall-st-futures-muted-higher-111429941.html",
+      "published": "2026-08-14T17:45:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
+      "title": "India in U . S . crosshairs again White House report cites countries  enabling  China tariff evasions",
+      "source": "thehindu.com",
+      "url": "https://www.thehindu.com/newsletter/the-evening-wrap/india-in-us-crosshairs-again-white-house-report-cites-countries-enabling-chinas-tariff-evasions/article71346628.ece",
+      "published": "2026-08-14T17:15:00+00:00"
+    },
+    {
       "category": "科技产业链",
       "title": "KOSPI Eyes Best Weekly Gain Since June as Samsung , SK Hynix Rally",
       "source": "econotimes.com",
       "url": "http://www.econotimes.com/KOSPI-Eyes-Best-Weekly-Gain-Since-June-as-Samsung-SK-Hynix-Rally-1749495",
       "published": "2026-08-14T11:45:00+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "China stocks end mixed as semiconductor and AI gains offset US tariff concerns",
-      "source": "business-standard.com",
-      "url": "https://www.business-standard.com/markets/capital-market-news/china-stocks-end-mixed-as-semiconductor-and-ai-gains-offset-us-tariff-concerns-126081401206_1.html",
-      "published": "2026-08-14T11:15:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "Asian stocks rise as US inflation , tech spur gains ; Kospi up 1 %",
-      "source": "businesstimes.com.sg",
-      "url": "https://www.businesstimes.com.sg/companies-markets/capital-markets-currencies/asian-stocks-rise-us-inflation-tech-spur-gains-kospi-1",
-      "published": "2026-08-14T04:15:00+00:00"
     }
   ]
 }
