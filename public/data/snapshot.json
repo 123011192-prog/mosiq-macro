@@ -283,11 +283,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 68308.59,
-          "date": "2026-08-13",
+          "value": 68713.8,
+          "date": "2026-08-14",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -5.61
+            "drawdown_pct": -5.05
           }
         },
         {
@@ -862,5 +862,27 @@
     },
     "note": "黄金是避险与去美元化的双重温度计——与实际利率和地缘局势联动解读"
   },
-  "world_brief": null
+  "world_brief": [
+    {
+      "category": "科技产业链",
+      "title": "KOSPI Eyes Best Weekly Gain Since June as Samsung , SK Hynix Rally",
+      "source": "econotimes.com",
+      "url": "http://www.econotimes.com/KOSPI-Eyes-Best-Weekly-Gain-Since-June-as-Samsung-SK-Hynix-Rally-1749495",
+      "published": "2026-08-14T11:45:00+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "China stocks end mixed as semiconductor and AI gains offset US tariff concerns",
+      "source": "business-standard.com",
+      "url": "https://www.business-standard.com/markets/capital-market-news/china-stocks-end-mixed-as-semiconductor-and-ai-gains-offset-us-tariff-concerns-126081401206_1.html",
+      "published": "2026-08-14T11:15:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
+      "title": "Asian stocks rise as US inflation , tech spur gains ; Kospi up 1 %",
+      "source": "businesstimes.com.sg",
+      "url": "https://www.businesstimes.com.sg/companies-markets/capital-markets-currencies/asian-stocks-rise-us-inflation-tech-spur-gains-kospi-1",
+      "published": "2026-08-14T04:15:00+00:00"
+    }
+  ]
 }
