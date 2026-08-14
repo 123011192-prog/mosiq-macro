@@ -325,7 +325,7 @@
         "growth": "up",
         "policy": "down",
         "credit": "down",
-        "market": "down",
+        "market": "neutral",
         "fx": "down"
       },
       "indicators": [
@@ -362,11 +362,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 12399.38,
-          "date": "2026-08-12",
+          "value": 12456.0,
+          "date": "2026-08-13",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -15.27
+            "drawdown_pct": -14.89
           }
         },
         {
@@ -395,7 +395,7 @@
         }
       ],
       "light": "red",
-      "summary": "韩国：增长走强、信贷走弱、市场走弱，区域红灯",
+      "summary": "韩国：增长走强、信贷走弱、市场平稳，区域红灯",
       "degraded": []
     },
     "uk": {
@@ -862,27 +862,5 @@
     },
     "note": "黄金是避险与去美元化的双重温度计——与实际利率和地缘局势联动解读"
   },
-  "world_brief": [
-    {
-      "category": "地缘冲突",
-      "title": "Japan wholesale prices up 7 . 2 % in July amid Middle East tensions , AI demand",
-      "source": "japantoday.com",
-      "url": "https://japantoday.com/category/business/update1-japan-wholesale-prices-up-7.2-in-july-amid-middle-east-tensions-ai-demand",
-      "published": "2026-08-13T22:45:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "India wary as U Russia tariff Bill advances , keeps eye on trade talks",
-      "source": "business-standard.com",
-      "url": "https://www.business-standard.com/economy/news/us-russia-linked-tariff-bill-concerns-india-but-trade-talks-reassuring-126081302024_1.html",
-      "published": "2026-08-13T18:15:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "India In Contact With US Over Trade Deal Talks , Says Commerce Secretary",
-      "source": "freepressjournal.in",
-      "url": "https://www.freepressjournal.in/business/india-in-contact-with-us-over-trade-deal-talks-says-commerce-secretary",
-      "published": "2026-08-13T12:45:00+00:00"
-    }
-  ]
+  "world_brief": null
 }
