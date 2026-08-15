@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.66,
-    "baa10y_pct": 15.910915,
+    "baa10y": 1.67,
+    "baa10y_pct": 16.706779,
     "curve_10y3m": 0.76,
     "curve_inverted": false
   },
@@ -804,44 +804,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.68,
-      "date": "2026-08-12",
-      "change_20d_bp": 11.0,
+      "value": 4.63,
+      "date": "2026-08-13",
+      "change_20d_bp": 6.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.24,
-      "date": "2026-08-12",
-      "change_20d_bp": 15.0,
+      "value": 5.21,
+      "date": "2026-08-13",
+      "change_20d_bp": 12.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.2,
-      "date": "2026-08-12",
-      "change_20d_bp": 4.0,
+      "value": 4.15,
+      "date": "2026-08-13",
+      "change_20d_bp": -1.0,
       "source": "fred"
     },
     "spread_2s10s": {
       "value_bp": 48.0,
-      "date": "2026-08-12"
+      "date": "2026-08-13"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 11.0,
-      "us30y_change_20d_bp": 15.0,
+      "us10y_change_20d_bp": 6.0,
+      "us30y_change_20d_bp": 12.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.63,
-        "date": "2026-08-13",
+        "value": 4.68,
+        "date": "2026-08-14",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.21,
-        "date": "2026-08-13",
+        "value": 5.25,
+        "date": "2026-08-14",
         "source": "tushare"
       }
     }
@@ -864,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "Tech stocks pull Wall Street lower as investors weigh data , Middle East tensions",
-      "source": "finance.yahoo.com",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/wall-st-futures-muted-higher-111429941.html",
-      "published": "2026-08-14T17:45:00+00:00"
+      "category": "货币政策",
+      "title": "美联储9月维持利率不变的概率为67.5% - Sohu",
+      "source": "Sohu",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOejhmU0UzWDZLMVJfTVlsTlF2Nkd0V0tnVFdBbFd3WUwzRXU4Vm9Vbk1NelRaWnc1TnNHV054ZW5VcTVNa0cxdXNGQmVVT3YyZDVGQlJYYlowcEhDeFdHTmlpWDdoT0hpSHBnbC1pdFQtNzN5VzZKSDh1SmczbExxaW9lVnU1b1dE?oc=5",
+      "published": "2026-08-14T22:50:00+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "India in U . S . crosshairs again White House report cites countries  enabling  China tariff evasions",
-      "source": "thehindu.com",
-      "url": "https://www.thehindu.com/newsletter/the-evening-wrap/india-in-us-crosshairs-again-white-house-report-cites-countries-enabling-chinas-tariff-evasions/article71346628.ece",
-      "published": "2026-08-14T17:15:00+00:00"
+      "category": "货币政策",
+      "title": "美联储9月维持利率不变的概率为67.5% - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE51aWx4dnoxeWhwd1Fmbm11N21VZmlxM1dmdDQ1Z2hrSFpnS2ItbUVvb0dMM09GdW1fa1pCR3VLZHFucHNuU29Gc1p5RQ?oc=5",
+      "published": "2026-08-14T22:10:25+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "KOSPI Eyes Best Weekly Gain Since June as Samsung , SK Hynix Rally",
-      "source": "econotimes.com",
-      "url": "http://www.econotimes.com/KOSPI-Eyes-Best-Weekly-Gain-Since-June-as-Samsung-SK-Hynix-Rally-1749495",
-      "published": "2026-08-14T11:45:00+00:00"
+      "title": "本月12日,位于庆南密阳市武安面的韩国纳米职业高中。 该校半导体洁净室实习室与常见的高中科学实习室截然不同。 代替书桌和黑板，冰箱大小的设备非常齐全。 穿着防尘服、戴着头巾和口罩、还戴着手套的学生们小.. - 매일경제",
+      "source": "매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0tei1sS2pQOTNUTVFHc3ZESFRMSTI5UGMxT21MUmZzU1pZdXNMUWxYWUVfbjlxa3JiRjF3VXU0aXl3Ui1RNGRDYi16NFA3dDJRa0E?oc=5",
+      "published": "2026-08-14T21:30:29+00:00"
     }
   ]
 }
