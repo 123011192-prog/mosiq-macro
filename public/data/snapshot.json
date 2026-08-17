@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.67,
-    "baa10y_pct": 16.720193,
+    "baa10y_pct": 16.726908,
     "curve_10y3m": 0.76,
     "curve_inverted": false
   },
@@ -74,6 +74,7 @@
       "radar:banking",
       "radar:nonbank",
       "regions:china",
+      "regions:japan",
       "regions:canada",
       "regions:australia",
       "regions:india"
@@ -241,12 +242,12 @@
       ]
     },
     "japan": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "neutral",
         "policy": "down",
         "credit": "neutral",
-        "market": "up",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -281,16 +282,6 @@
           }
         },
         {
-          "id": "fred_nikkei225",
-          "name": "日经 225 指数",
-          "value": 68713.8,
-          "date": "2026-08-14",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -5.05
-          }
-        },
-        {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
           "value": 68.03,
@@ -316,8 +307,10 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷平稳、市场走强，区域黄灯",
-      "degraded": []
+      "summary": "日本：增长平稳、信贷平稳、市场缺失，区域黄灯",
+      "degraded": [
+        "fred_nikkei225"
+      ]
     },
     "korea": {
       "status": "ok",
@@ -325,7 +318,7 @@
         "growth": "up",
         "policy": "down",
         "credit": "down",
-        "market": "down",
+        "market": "up",
         "fx": "down"
       },
       "indicators": [
@@ -360,13 +353,13 @@
           }
         },
         {
-          "id": "fred_sox",
+          "id": "oecd_share_kr",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 12417.05,
-          "date": "2026-08-14",
+          "value": 421.8348,
+          "date": "2026-06-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -15.15
+            "drawdown_pct": 0.0
           }
         },
         {
@@ -395,7 +388,7 @@
         }
       ],
       "light": "red",
-      "summary": "韩国：增长走强、信贷走弱、市场走弱，区域红灯",
+      "summary": "韩国：增长走强、信贷走弱、市场走强，区域红灯",
       "degraded": []
     },
     "uk": {
@@ -862,27 +855,5 @@
     },
     "note": "黄金是避险与去美元化的双重温度计——与实际利率和地缘局势联动解读"
   },
-  "world_brief": [
-    {
-      "category": "货币政策",
-      "title": "美联储9月维持利率不变的概率为66.9% - 新浪网",
-      "source": "新浪网",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9qVk5VMnFwcEpRM0o5eEJlUzdScFlTclVVYlNFVWRGY2NsRVhJOUQ1NEgxLUFVUXNQakk5OFEzRU1TU3pUeWJIYzVlUEdsVXdCNEp6bjVhOU9uNW5VRE03M2l1aGxlNjd2eEJ0Y21EQkdQOE9VVzJBbg?oc=5",
-      "published": "2026-08-16T22:58:16+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "美联储9月维持利率不变的概率为66.9% - 搜狐网",
-      "source": "搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNSTJFZDNTemQzRzhyS1dxWTMwV3ExUHpUeVJ3a3dONVk0dTV1QkFuLXN0d29Jc052dXk3VjBORGRSTVNmdlhGVWIzTGVVeGhlMUEzMTMzaU1wWWtvby1RMkRPVmhZOVJpaUZabzlXWExUZWZwNWk5TnFkZ1NCb3RPNC1Ndk51dkZE?oc=5",
-      "published": "2026-08-16T22:26:05+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "韩国半导体狂热和焦躁（1）巨额投资 - 日经中文网",
-      "source": "日经中文网",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOQng0UHdxeU9Cc3ZqWHBrdDZvSnpGZURTSVFaZG1DYmE3bU5QLWFqNVhUUHEyVEViaGozeGFkR0tRUjZqaHBOQ0dUY2p6UnA5RWlETUxVcm8zSmtidU9mTjlFV2hBWkVCZ20waVlxXzRlaVAydHYzbHJYM2llVHdNcw?oc=5",
-      "published": "2026-08-16T21:28:20+00:00"
-    }
-  ]
+  "world_brief": null
 }
