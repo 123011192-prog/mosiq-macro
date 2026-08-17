@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-14",
+  "as_of": "2026-08-15",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.67,
     "baa10y_pct": 16.726908,
-    "curve_10y3m": 0.76,
+    "curve_10y3m": 0.82,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,7 +63,7 @@
     }
   ],
   "health": {
-    "data_asof": "2026-08-13",
+    "data_asof": "2026-08-14",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
@@ -74,7 +74,6 @@
       "radar:banking",
       "radar:nonbank",
       "regions:china",
-      "regions:japan",
       "regions:canada",
       "regions:australia",
       "regions:india"
@@ -242,12 +241,12 @@
       ]
     },
     "japan": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "neutral",
         "policy": "down",
         "credit": "neutral",
-        "market": "degraded",
+        "market": "up",
         "fx": "neutral"
       },
       "indicators": [
@@ -282,6 +281,16 @@
           }
         },
         {
+          "id": "fred_nikkei225",
+          "name": "日经 225 指数",
+          "value": 69220.25,
+          "date": "2026-08-17",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -4.35
+          }
+        },
+        {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
           "value": 68.03,
@@ -307,10 +316,8 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷平稳、市场缺失，区域黄灯",
-      "degraded": [
-        "fred_nikkei225"
-      ]
+      "summary": "日本：增长平稳、信贷平稳、市场走强，区域黄灯",
+      "degraded": []
     },
     "korea": {
       "status": "ok",
@@ -799,19 +806,19 @@
     "us10y": {
       "value": 4.63,
       "date": "2026-08-13",
-      "change_20d_bp": 6.0,
+      "change_20d_bp": 8.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.21,
       "date": "2026-08-13",
-      "change_20d_bp": 12.0,
+      "change_20d_bp": 15.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.15,
       "date": "2026-08-13",
-      "change_20d_bp": -1.0,
+      "change_20d_bp": -3.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -821,8 +828,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 6.0,
-      "us30y_change_20d_bp": 12.0,
+      "us10y_change_20d_bp": 8.0,
+      "us30y_change_20d_bp": 15.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -858,24 +865,24 @@
   "world_brief": [
     {
       "category": "地缘冲突",
+      "title": "Indian Embassy seeks urgent legal assistance for citizens facing challenges in Mongolia",
+      "source": "economictimes.indiatimes.com",
+      "url": "https://economictimes.indiatimes.com/nri/latest-updates/indian-embassy-seeks-urgent-legal-assistance-for-citizens-facing-challenges-in-mongolia/articleshow/133300365.cms",
+      "published": "2026-08-17T16:00:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
+      "title": "Where Trump and Sanders can agree on capitalism",
+      "source": "cnn.com",
+      "url": "https://www.cnn.com/2026/08/17/politics/trump-capitalism-nationalism",
+      "published": "2026-08-17T13:30:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
       "title": "One big , grand trade bargain with the U . S .? The devil is in the sectoral details",
       "source": "theglobeandmail.com",
       "url": "https://www.theglobeandmail.com/business/commentary/article-one-big-grand-trade-bargain-with-the-us-the-devil-is-in-the-sectoral/",
       "published": "2026-08-17T09:45:00+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "Global Market : China , Hong Kong stocks rise as chipmakers rally on strong earnings",
-      "source": "economictimes.indiatimes.com",
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-china-hong-kong-stocks-rise-as-chipmakers-rally-on-strong-earnings/articleshow/133287452.cms",
-      "published": "2026-08-17T06:00:00+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "Thai baht rally may fade on dovish central bank policy",
-      "source": "freemalaysiatoday.com",
-      "url": "https://www.freemalaysiatoday.com/category/business/2026/08/17/thai-baht-rally-may-fade-on-dovish-central-bank",
-      "published": "2026-08-17T05:45:00+00:00"
     }
   ]
 }
