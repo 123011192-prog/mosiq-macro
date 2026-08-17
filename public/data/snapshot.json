@@ -855,5 +855,27 @@
     },
     "note": "黄金是避险与去美元化的双重温度计——与实际利率和地缘局势联动解读"
   },
-  "world_brief": null
+  "world_brief": [
+    {
+      "category": "地缘冲突",
+      "title": "One big , grand trade bargain with the U . S .? The devil is in the sectoral details",
+      "source": "theglobeandmail.com",
+      "url": "https://www.theglobeandmail.com/business/commentary/article-one-big-grand-trade-bargain-with-the-us-the-devil-is-in-the-sectoral/",
+      "published": "2026-08-17T09:45:00+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "Global Market : China , Hong Kong stocks rise as chipmakers rally on strong earnings",
+      "source": "economictimes.indiatimes.com",
+      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-china-hong-kong-stocks-rise-as-chipmakers-rally-on-strong-earnings/articleshow/133287452.cms",
+      "published": "2026-08-17T06:00:00+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "Thai baht rally may fade on dovish central bank policy",
+      "source": "freemalaysiatoday.com",
+      "url": "https://www.freemalaysiatoday.com/category/business/2026/08/17/thai-baht-rally-may-fade-on-dovish-central-bank",
+      "published": "2026-08-17T05:45:00+00:00"
+    }
+  ]
 }
