@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-18",
+  "as_of": "2026-08-19",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -63,7 +63,7 @@
     }
   ],
   "health": {
-    "data_asof": "2026-08-17",
+    "data_asof": "2026-08-18",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
@@ -246,7 +246,7 @@
         "growth": "neutral",
         "policy": "down",
         "credit": "neutral",
-        "market": "up",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -283,11 +283,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 67460.73,
-          "date": "2026-08-18",
+          "value": 65326.42,
+          "date": "2026-08-19",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -6.78
+            "drawdown_pct": -9.73
           }
         },
         {
@@ -316,7 +316,7 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷平稳、市场走强，区域黄灯",
+      "summary": "日本：增长平稳、信贷平稳、市场平稳，区域黄灯",
       "degraded": []
     },
     "korea": {
@@ -325,7 +325,7 @@
         "growth": "up",
         "policy": "down",
         "credit": "down",
-        "market": "neutral",
+        "market": "down",
         "fx": "down"
       },
       "indicators": [
@@ -362,11 +362,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 12621.0,
-          "date": "2026-08-17",
+          "value": 11992.46,
+          "date": "2026-08-18",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -13.76
+            "drawdown_pct": -18.05
           }
         },
         {
@@ -395,7 +395,7 @@
         }
       ],
       "light": "red",
-      "summary": "韩国：增长走强、信贷走弱、市场平稳，区域红灯",
+      "summary": "韩国：增长走强、信贷走弱、市场走弱，区域红灯",
       "degraded": []
     },
     "uk": {
@@ -806,19 +806,19 @@
     "us10y": {
       "value": 4.72,
       "date": "2026-08-17",
-      "change_20d_bp": 12.0,
+      "change_20d_bp": 9.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.31,
       "date": "2026-08-17",
-      "change_20d_bp": 20.0,
+      "change_20d_bp": 18.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.19,
       "date": "2026-08-17",
-      "change_20d_bp": -2.0,
+      "change_20d_bp": -7.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -828,14 +828,22 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 12.0,
-      "us30y_change_20d_bp": 20.0,
+      "us10y_change_20d_bp": 9.0,
+      "us30y_change_20d_bp": 18.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
-      "us10y": null,
-      "us30y": null
+      "us10y": {
+        "value": 4.72,
+        "date": "2026-08-17",
+        "source": "tushare"
+      },
+      "us30y": {
+        "value": 5.31,
+        "date": "2026-08-17",
+        "source": "tushare"
+      }
     }
   },
   "gold_watch": {
@@ -856,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "纽约股市因利率飙升连续三日下跌，半导体疲软引发韩国股市波动关注 - 亚洲日报",
-      "source": "亚洲日报",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1MWllIaW50OGVSMTNSYjNPQVV0aGhTR0N0TFVQU19HLTBLQkJNV2JseEkwVUtkdi05ZWxXUUpWb1RpdjExRDRIaGh0UV9BTkxhdkZDVDY1MXFyWUU?oc=5",
-      "published": "2026-08-18T23:28:10+00:00"
+      "category": "货币政策",
+      "title": "美联储在固定利率逆回购操作中总计接纳了18个对手方的3.17亿美元。 - 金融界",
+      "source": "金融界",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE42TXJLcENaLVpkQzY1eDVaMC1yVllSdDVUSVRqelBLWG01OTFwUFNGemYtTUFYb2M1RXJpOXNuc3BlZXNtUUpNT1IzRnVlM3NBRkVVSjZ3SjdtSnR6dm5oY216Y2FjcEdEYXJoRDdTdw?oc=5",
+      "published": "2026-08-19T17:16:39+00:00"
     },
     {
       "category": "货币政策",
-      "title": "調查：近八成經濟學家預計美聯儲不調整利率 - 大纪元",
-      "source": "大纪元",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8tLTZoQ3Q4QkFiUThkcDZMZkJSQW9FcDRZSE9weFRGSTRta0M4NzJjWmhaZ21wbjVmenhQVjNOaUJjLWxYT2RjSEh1VGRVQjgwd29kR3lRdjUwWkdjb3k3aNIBZkFVX3lxTE04RW9OT3dQYWppMEdYM3pvRE5VUmsxZzI4M01WeTAtdnVlZTUzTDhTX2VLZU5rejdDSVR3QlpmLVNOVU1yTGdtVnowUmpDY0ltUDJkOXBaclp0QjZBTXhNYmx4Y2JPZw?oc=5",
-      "published": "2026-08-18T21:55:00+00:00"
+      "title": "美元指数在美联储会议纪要发布前走弱 - idnfinancials.com",
+      "source": "idnfinancials.com",
+      "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOcUpKSkxBZEFibUl3M0U3NkFXWkFlNXdqZlV6OXZtZ2dvcS1ZTHNYMXkwNXEwMWpqUHFHekNYMzNjTURoU25wM3RYZUJWbER1elk3djZ4SV9yR0VTV2Rnc01RU1JodDI1YUdNeW9MR3hvczlEU3NmZms3Qy1EeHo5RmttMUJhbXBLRHh3eEdkU1ZTelFVc0tQajBRdjJDMUxKS2VaeEhmTGkwbmY2X0RCMGZuSllvWDhRLW9tNmZFeFlGMkhNdlQyejFOdW11UUtUam9fSTlDb01wR3VrTjRRN3hqNTIzVzVOZGEwVWtQUEZVMEtKa3NnY2VaQTNHRU16al9KQ3R4b21Ud2dxbzlNQ2txTnc0Zjh0RzhoZ29zbW9NWUE?oc=5",
+      "published": "2026-08-19T15:00:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "韩国半导体狂热和焦躁（3）“技术三星”褪色 - 日经中文网",
-      "source": "日经中文网",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPT0N4eXNRTl9KUEFtay0zWndqY1d6b2ZUTnJDYmphSEJxMWkzaEdjZkt1ZzRfZlBNRlBuTWV2cVFVZHNHN3B2Um5VUzV0cVpDV3ZsMFNyUFlvMWNwY3pGTWdBMmZnU2x6VjR4NC1pTGhteXVKLXJYSTFiRUE2OWpqVw?oc=5",
-      "published": "2026-08-18T21:03:37+00:00"
+      "category": "货币政策",
+      "title": "美联储发布8月17日及18日有效联邦基金利率数据 - guandian.cn",
+      "source": "guandian.cn",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5aMEx3UkhlWHJZTVRFTHVBeWN6Q1FDVHdWdnBZTUkxRGhBM2pRNHh5VEFjQVpvcW9KMkN1bDlad0pEY1RNSnV1cjhTeFhYQUtxTGpkekhLU05mdmoyNHF3UmV3?oc=5",
+      "published": "2026-08-19T14:06:56+00:00"
     }
   ]
 }
