@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-15",
+  "as_of": "2026-08-18",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -9,8 +9,8 @@
   },
   "core": {
     "baa10y": 1.69,
-    "baa10y_pct": 18.727419,
-    "curve_10y3m": 0.82,
+    "baa10y_pct": 18.747491,
+    "curve_10y3m": 0.85,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,8 +63,8 @@
     }
   ],
   "health": {
-    "data_asof": "2026-08-14",
-    "stale_count": 23,
+    "data_asof": "2026-08-17",
+    "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
@@ -283,11 +283,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 69220.25,
-          "date": "2026-08-17",
+          "value": 67460.73,
+          "date": "2026-08-18",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -4.35
+            "drawdown_pct": -6.78
           }
         },
         {
@@ -325,7 +325,7 @@
         "growth": "up",
         "policy": "down",
         "credit": "down",
-        "market": "up",
+        "market": "neutral",
         "fx": "down"
       },
       "indicators": [
@@ -360,13 +360,13 @@
           }
         },
         {
-          "id": "oecd_share_kr",
+          "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 421.8348,
-          "date": "2026-06-01",
+          "value": 12621.0,
+          "date": "2026-08-17",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": 0.0
+            "drawdown_pct": -13.76
           }
         },
         {
@@ -395,7 +395,7 @@
         }
       ],
       "light": "red",
-      "summary": "韩国：增长走强、信贷走弱、市场走强，区域红灯",
+      "summary": "韩国：增长走强、信贷走弱、市场平稳，区域红灯",
       "degraded": []
     },
     "uk": {
@@ -804,46 +804,38 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.68,
-      "date": "2026-08-14",
-      "change_20d_bp": 13.0,
+      "value": 4.72,
+      "date": "2026-08-17",
+      "change_20d_bp": 12.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.25,
-      "date": "2026-08-14",
-      "change_20d_bp": 19.0,
+      "value": 5.31,
+      "date": "2026-08-17",
+      "change_20d_bp": 20.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.17,
-      "date": "2026-08-14",
-      "change_20d_bp": -1.0,
+      "value": 4.19,
+      "date": "2026-08-17",
+      "change_20d_bp": -2.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 51.0,
-      "date": "2026-08-14"
+      "value_bp": 53.0,
+      "date": "2026-08-17"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 13.0,
-      "us30y_change_20d_bp": 19.0,
+      "us10y_change_20d_bp": 12.0,
+      "us30y_change_20d_bp": 20.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
-      "us10y": {
-        "value": 4.72,
-        "date": "2026-08-17",
-        "source": "tushare"
-      },
-      "us30y": {
-        "value": 5.31,
-        "date": "2026-08-17",
-        "source": "tushare"
-      }
+      "us10y": null,
+      "us30y": null
     }
   },
   "gold_watch": {
@@ -864,25 +856,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "美联储9月维持利率不变的概率为65% - 搜狐网",
-      "source": "搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcnprdlhCejdXT0NHU2dpZG9yM3pJbEpablRaUnhNT0VzOWhxT29UaXdxRDI0ckFoV0NHek9YMW1SbXdWdk5XeXhaMDZGcHRJY1NKTy1tdkszSEJNUzZXZS1xdkZjaE5mTkc4Z295SUJNdjk4dkYwWF85V1Q2MlJaQVpfQ1FhUUl3?oc=5",
-      "published": "2026-08-17T22:27:45+00:00"
+      "category": "科技产业链",
+      "title": "纽约股市因利率飙升连续三日下跌，半导体疲软引发韩国股市波动关注 - 亚洲日报",
+      "source": "亚洲日报",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1MWllIaW50OGVSMTNSYjNPQVV0aGhTR0N0TFVQU19HLTBLQkJNV2JseEkwVUtkdi05ZWxXUUpWb1RpdjExRDRIaGh0UV9BTkxhdkZDVDY1MXFyWUU?oc=5",
+      "published": "2026-08-18T23:28:10+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美联储9月维持利率不变的概率为65% - 新浪网",
-      "source": "新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1XRjJIbVIwVWZRRkhiZU95d3VGbGZESTRjdmZ5TS1VbGQtTzN1V2VLS014ejdOYTZjX3F6dVpiYzJTMl9vUDAzTWpxMA?oc=5",
-      "published": "2026-08-17T22:00:36+00:00"
+      "title": "調查：近八成經濟學家預計美聯儲不調整利率 - 大纪元",
+      "source": "大纪元",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8tLTZoQ3Q4QkFiUThkcDZMZkJSQW9FcDRZSE9weFRGSTRta0M4NzJjWmhaZ21wbjVmenhQVjNOaUJjLWxYT2RjSEh1VGRVQjgwd29kR3lRdjUwWkdjb3k3aNIBZkFVX3lxTE04RW9OT3dQYWppMEdYM3pvRE5VUmsxZzI4M01WeTAtdnVlZTUzTDhTX2VLZU5rejdDSVR3QlpmLVNOVU1yTGdtVnowUmpDY0ltUDJkOXBaclp0QjZBTXhNYmx4Y2JPZw?oc=5",
+      "published": "2026-08-18T21:55:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩国半导体狂热和焦躁（2）三星的宿命 - cn.nikkei.com",
-      "source": "cn.nikkei.com",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNU0dMTDZKVFI1NmJ5T2RROUlKeGk0WkRwcGJUMW1ubHE1Z2doVXhmaFRBY21nRUhSTkdhbTl4VDZZc19MQ3NtYzFYVGdwaWtzc01fVjVXTFVObDNzbzlGWWowSjkzSHNsNld1bVlieFdlYWVwSktNckRrdkw1ei0xLQ?oc=5",
-      "published": "2026-08-17T21:01:07+00:00"
+      "title": "韩国半导体狂热和焦躁（3）“技术三星”褪色 - 日经中文网",
+      "source": "日经中文网",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPT0N4eXNRTl9KUEFtay0zWndqY1d6b2ZUTnJDYmphSEJxMWkzaEdjZkt1ZzRfZlBNRlBuTWV2cVFVZHNHN3B2Um5VUzV0cVpDV3ZsMFNyUFlvMWNwY3pGTWdBMmZnU2x6VjR4NC1pTGhteXVKLXJYSTFiRUE2OWpqVw?oc=5",
+      "published": "2026-08-18T21:03:37+00:00"
     }
   ]
 }
