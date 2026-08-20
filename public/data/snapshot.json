@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.69,
-    "baa10y_pct": 18.747491,
+    "baa10y": 1.68,
+    "baa10y_pct": 17.636437,
     "curve_10y3m": 0.85,
     "curve_inverted": false
   },
@@ -804,44 +804,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.72,
-      "date": "2026-08-17",
-      "change_20d_bp": 9.0,
+      "value": 4.71,
+      "date": "2026-08-18",
+      "change_20d_bp": 8.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.31,
-      "date": "2026-08-17",
-      "change_20d_bp": 18.0,
+      "value": 5.28,
+      "date": "2026-08-18",
+      "change_20d_bp": 15.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.19,
-      "date": "2026-08-17",
+      "date": "2026-08-18",
       "change_20d_bp": -7.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 53.0,
-      "date": "2026-08-17"
+      "value_bp": 52.0,
+      "date": "2026-08-18"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 9.0,
-      "us30y_change_20d_bp": 18.0,
+      "us10y_change_20d_bp": 8.0,
+      "us30y_change_20d_bp": 15.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.72,
-        "date": "2026-08-17",
+        "value": 4.71,
+        "date": "2026-08-18",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.31,
-        "date": "2026-08-17",
+        "value": 5.28,
+        "date": "2026-08-18",
         "source": "tushare"
       }
     }
@@ -865,24 +865,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "美联储在固定利率逆回购操作中总计接纳了18个对手方的3.17亿美元。 - 金融界",
-      "source": "金融界",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE42TXJLcENaLVpkQzY1eDVaMC1yVllSdDVUSVRqelBLWG01OTFwUFNGemYtTUFYb2M1RXJpOXNuc3BlZXNtUUpNT1IzRnVlM3NBRkVVSjZ3SjdtSnR6dm5oY216Y2FjcEdEYXJoRDdTdw?oc=5",
-      "published": "2026-08-19T17:16:39+00:00"
+      "title": "特朗普再次“炮轰”美联储！瑞士意外“躺枪”：凭什么美国要付3.5%利率？ - FX168财经",
+      "source": "FX168财经",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE4tejUtRG95ZHBLVkYtTS1BRDl1cDFQN2MwbGxWU0xyOXhTWHU3UmZXb1VjSzJGb05GUW1FSW1lN2JDbUZuZFNnZFprWElKLU11V0s3eElFVGJvWGNjcFFRbDJKcW5ib191YVNKREdRUXZMMFRMZDdKWg?oc=5",
+      "published": "2026-08-19T23:35:39+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美元指数在美联储会议纪要发布前走弱 - idnfinancials.com",
-      "source": "idnfinancials.com",
-      "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOcUpKSkxBZEFibUl3M0U3NkFXWkFlNXdqZlV6OXZtZ2dvcS1ZTHNYMXkwNXEwMWpqUHFHekNYMzNjTURoU25wM3RYZUJWbER1elk3djZ4SV9yR0VTV2Rnc01RU1JodDI1YUdNeW9MR3hvczlEU3NmZms3Qy1EeHo5RmttMUJhbXBLRHh3eEdkU1ZTelFVc0tQajBRdjJDMUxKS2VaeEhmTGkwbmY2X0RCMGZuSllvWDhRLW9tNmZFeFlGMkhNdlQyejFOdW11UUtUam9fSTlDb01wR3VrTjRRN3hqNTIzVzVOZGEwVWtQUEZVMEtKa3NnY2VaQTNHRU16al9KQ3R4b21Ud2dxbzlNQ2txTnc0Zjh0RzhoZ29zbW9NWUE?oc=5",
-      "published": "2026-08-19T15:00:00+00:00"
+      "title": "特朗普抱怨美联储利率政策，称美国应支付低得多的利率 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNT0dmTU5NOE04M3pFUldwSWZmVFNNOV9vSEphcE5PNndtZmRYbG9GaHlHeE1FblViOWNEbWJYZWxScWhZZWJBMUZQX0VoZlJfaVdseFNXY3RJX3pSQ2V3MUxPaXJmalNtMk9LWHRWV0Q4ZXo0NGFGQlZyUUNiT2dnS0htc2JMS3FBS3lwMldveUt6VmZ2RmdVQ2w3VUo4OGZGU1c0REZaMnJadw?oc=5",
+      "published": "2026-08-19T22:41:15+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美联储发布8月17日及18日有效联邦基金利率数据 - guandian.cn",
-      "source": "guandian.cn",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5aMEx3UkhlWHJZTVRFTHVBeWN6Q1FDVHdWdnBZTUkxRGhBM2pRNHh5VEFjQVpvcW9KMkN1bDlad0pEY1RNSnV1cjhTeFhYQUtxTGpkekhLU05mdmoyNHF3UmV3?oc=5",
-      "published": "2026-08-19T14:06:56+00:00"
+      "category": "科技产业链",
+      "title": "韩国半导体狂热和焦躁（4）社会扭曲加剧 - 日经中文网",
+      "source": "日经中文网",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOc29XSWFhLXJlSjUtYkU4MGhkRmtqOUgxWEdMUU00TlpFRkM4OHkwQTBKUFQweHZZalNWd0pYUFRmTmkteUQyd2dNb1BEYWdhMWRXTVFkZUlsNHNfSmszY3UzSTFMdTR5Y2c2SFIzXy1yR0VXZlR5UVZLMjNwUGNVSg?oc=5",
+      "published": "2026-08-19T21:04:20+00:00"
     }
   ]
 }
