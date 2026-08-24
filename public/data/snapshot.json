@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-21",
+  "as_of": "2026-08-22",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.64,
     "baa10y_pct": 14.056225,
-    "curve_10y3m": 0.82,
+    "curve_10y3m": 0.86,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,7 +63,7 @@
     }
   ],
   "health": {
-    "data_asof": "2026-08-20",
+    "data_asof": "2026-08-21",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
@@ -74,7 +74,6 @@
       "radar:banking",
       "radar:nonbank",
       "regions:china",
-      "regions:japan",
       "regions:canada",
       "regions:australia",
       "regions:india"
@@ -242,12 +241,12 @@
       ]
     },
     "japan": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "neutral",
         "policy": "down",
         "credit": "neutral",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -282,6 +281,16 @@
           }
         },
         {
+          "id": "fred_nikkei225",
+          "name": "日经 225 指数",
+          "value": 65528.09,
+          "date": "2026-08-24",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -9.45
+          }
+        },
+        {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
           "value": 67.57,
@@ -307,10 +316,8 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷平稳、市场缺失，区域黄灯",
-      "degraded": [
-        "fred_nikkei225"
-      ]
+      "summary": "日本：增长平稳、信贷平稳、市场平稳，区域黄灯",
+      "degraded": []
     },
     "korea": {
       "status": "ok",
@@ -799,19 +806,19 @@
     "us10y": {
       "value": 4.69,
       "date": "2026-08-20",
-      "change_20d_bp": -2.0,
+      "change_20d_bp": 0.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.23,
       "date": "2026-08-20",
-      "change_20d_bp": 6.0,
+      "change_20d_bp": 7.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.19,
       "date": "2026-08-20",
-      "change_20d_bp": -18.0,
+      "change_20d_bp": -14.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -821,8 +828,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -2.0,
-      "us30y_change_20d_bp": 6.0,
+      "us10y_change_20d_bp": 0.0,
+      "us30y_change_20d_bp": 7.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -857,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "Traders remain selective in anticipation of corporate results",
-      "source": "thestar.com.my",
-      "url": "https://www.thestar.com.my/business/business-news/2026/08/24/traders-remain-selective-in-anticipation-of-corporate-results",
-      "published": "2026-08-24T02:30:00+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "Markets Weekly 24 to 28 / 08 : At a Tense Crossroads of Rates",
-      "source": "dailyforex.com",
-      "url": "https://www.dailyforex.com/forex-technical-analysis/2026/08/mayor-markets-showing-contrasting-signals-week-from-24th-to-28th-august-2026/248904",
-      "published": "2026-08-23T12:00:00+00:00"
+      "category": "地缘冲突",
+      "title": "Week ahead : Nvidia , inflation and Jackson Hole set the tone for Wall Street",
+      "source": "proactiveinvestors.com",
+      "url": "https://www.proactiveinvestors.com/companies/news/1097497/week-ahead-nvidia-inflation-and-jackson-hole-set-the-tone-for-wall-street-1097497.html",
+      "published": "2026-08-24T16:30:00+00:00"
     },
     {
       "category": "地缘冲突",
-      "title": "Jumpy bond markets make it clear : Trump risks driving US into debt crisis | Heather Stewart",
-      "source": "theguardian.com",
-      "url": "https://www.theguardian.com/business/2026/aug/23/jumpy-bond-markets-make-it-clear-trump-risks-driving-us-into-debt-crisis",
-      "published": "2026-08-23T11:30:00+00:00"
+      "title": "Iran shadow looms over Dalal Street as Nifty ends in red - The HinduBusinessLine",
+      "source": "thehindubusinessline.com",
+      "url": "https://www.thehindubusinessline.com/markets/iran-shadow-looms-over-dalal-street-as-nifty-ends-in-red/article71384445.ece",
+      "published": "2026-08-24T15:30:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
+      "title": "KLA ( KLAC ) Gains From Advanced Nodes , HBM and Packaging",
+      "source": "finance.yahoo.com",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/kla-klac-gains-advanced-nodes-132424736.html",
+      "published": "2026-08-24T14:00:00+00:00"
     }
   ]
 }
