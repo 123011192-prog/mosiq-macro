@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-19",
+  "as_of": "2026-08-21",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -8,9 +8,9 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.68,
-    "baa10y_pct": 17.636437,
-    "curve_10y3m": 0.85,
+    "baa10y": 1.64,
+    "baa10y_pct": 14.050582,
+    "curve_10y3m": 0.82,
     "curve_inverted": false
   },
   "cycle": {
@@ -55,7 +55,7 @@
       "active": false
     }
   ],
-  "founder_note": "盘面平稳，按自己的节奏来；韩国要当心",
+  "founder_note": "盘面平稳，按自己的节奏来；欧元区要当心",
   "advice": [
     {
       "text": "维持中性观察；触发：核心分位升至70或曲线倒挂；失效：两项条件均未持续。",
@@ -63,7 +63,7 @@
     }
   ],
   "health": {
-    "data_asof": "2026-08-18",
+    "data_asof": "2026-08-20",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
@@ -74,6 +74,7 @@
       "radar:banking",
       "radar:nonbank",
       "regions:china",
+      "regions:japan",
       "regions:canada",
       "regions:australia",
       "regions:india"
@@ -133,11 +134,11 @@
         {
           "id": "bis_eer_eur",
           "name": "BIS 欧元名义有效汇率",
-          "value": 108.77,
-          "date": "2026-06-01",
+          "value": 108.66,
+          "date": "2026-07-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": -0.658
+            "3m_change_pct": -1.065
           }
         },
         {
@@ -219,11 +220,11 @@
         {
           "id": "bis_eer_cn",
           "name": "BIS 人民币名义有效汇率",
-          "value": 113.62,
-          "date": "2026-06-01",
+          "value": 114.29,
+          "date": "2026-07-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": 2.37
+            "3m_change_pct": 2.65
           }
         },
         {
@@ -241,12 +242,12 @@
       ]
     },
     "japan": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "neutral",
         "policy": "down",
         "credit": "neutral",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -281,23 +282,13 @@
           }
         },
         {
-          "id": "fred_nikkei225",
-          "name": "日经 225 指数",
-          "value": 65326.42,
-          "date": "2026-08-19",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -9.73
-          }
-        },
-        {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
-          "value": 68.03,
-          "date": "2026-06-01",
+          "value": 67.57,
+          "date": "2026-07-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": -1.534
+            "3m_change_pct": -1.3
           }
         },
         {
@@ -316,8 +307,10 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷平稳、市场平稳，区域黄灯",
-      "degraded": []
+      "summary": "日本：增长平稳、信贷平稳、市场缺失，区域黄灯",
+      "degraded": [
+        "fred_nikkei225"
+      ]
     },
     "korea": {
       "status": "ok",
@@ -325,8 +318,8 @@
         "growth": "up",
         "policy": "down",
         "credit": "down",
-        "market": "down",
-        "fx": "down"
+        "market": "up",
+        "fx": "neutral"
       },
       "indicators": [
         {
@@ -360,23 +353,23 @@
           }
         },
         {
-          "id": "fred_sox",
+          "id": "oecd_share_kr",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11992.46,
-          "date": "2026-08-18",
+          "value": 421.8348,
+          "date": "2026-06-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -18.05
+            "drawdown_pct": 0.0
           }
         },
         {
           "id": "bis_eer_kr",
           "name": "BIS 韩元名义有效汇率",
-          "value": 81.99,
-          "date": "2026-06-01",
+          "value": 84.67,
+          "date": "2026-07-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": -2.821
+            "3m_change_pct": 0.463
           }
         },
         {
@@ -394,8 +387,8 @@
           "unit": "指数"
         }
       ],
-      "light": "red",
-      "summary": "韩国：增长走强、信贷走弱、市场走弱，区域红灯",
+      "light": "orange",
+      "summary": "韩国：增长走强、信贷走弱、市场走强，区域橙灯",
       "degraded": []
     },
     "uk": {
@@ -451,11 +444,11 @@
         {
           "id": "bis_eer_gb",
           "name": "BIS 英镑名义有效汇率",
-          "value": 110.59,
-          "date": "2026-06-01",
+          "value": 111.75,
+          "date": "2026-07-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": -0.126
+            "3m_change_pct": 1.031
           }
         },
         {
@@ -530,11 +523,11 @@
         {
           "id": "bis_eer_ca",
           "name": "BIS 加元名义有效汇率",
-          "value": 96.98,
-          "date": "2026-06-01",
+          "value": 96.64,
+          "date": "2026-07-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": -2.523
+            "3m_change_pct": -2.077
           }
         },
         {
@@ -575,7 +568,7 @@
           "id": "bis_policy_au",
           "name": "BIS 澳大利亚央行政策利率",
           "value": 4.35,
-          "date": "2026-06-01",
+          "date": "2026-07-01",
           "unit": "%",
           "signal": {
             "6m_change_pp": 0.75
@@ -604,11 +597,11 @@
         {
           "id": "bis_eer_au",
           "name": "BIS 澳元名义有效汇率",
-          "value": 106.73,
-          "date": "2026-06-01",
+          "value": 106.23,
+          "date": "2026-07-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": 0.075
+            "3m_change_pct": -0.757
           }
         },
         {
@@ -632,7 +625,7 @@
         "policy": "neutral",
         "credit": "up",
         "market": "neutral",
-        "fx": "down"
+        "fx": "neutral"
       },
       "indicators": [
         {
@@ -678,11 +671,11 @@
         {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
-          "value": 81.5,
-          "date": "2026-06-01",
+          "value": 81.08,
+          "date": "2026-07-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": -2.395
+            "3m_change_pct": -1.602
           }
         },
         {
@@ -693,8 +686,8 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域黄灯",
+      "light": "green",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
         "oecd_bci_in"
       ]
@@ -752,11 +745,11 @@
         {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
-          "value": 113.97,
-          "date": "2026-06-01",
+          "value": 114.73,
+          "date": "2026-07-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": 1.841
+            "3m_change_pct": -0.572
           }
         },
         {
@@ -804,44 +797,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.71,
-      "date": "2026-08-18",
-      "change_20d_bp": 8.0,
+      "value": 4.69,
+      "date": "2026-08-20",
+      "change_20d_bp": -2.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.28,
-      "date": "2026-08-18",
-      "change_20d_bp": 15.0,
+      "value": 5.23,
+      "date": "2026-08-20",
+      "change_20d_bp": 6.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.19,
-      "date": "2026-08-18",
-      "change_20d_bp": -7.0,
+      "date": "2026-08-20",
+      "change_20d_bp": -18.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 52.0,
-      "date": "2026-08-18"
+      "value_bp": 50.0,
+      "date": "2026-08-20"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 8.0,
-      "us30y_change_20d_bp": 15.0,
+      "us10y_change_20d_bp": -2.0,
+      "us30y_change_20d_bp": 6.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.71,
-        "date": "2026-08-18",
+        "value": 4.74,
+        "date": "2026-08-21",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.28,
-        "date": "2026-08-18",
+        "value": 5.27,
+        "date": "2026-08-21",
         "source": "tushare"
       }
     }
@@ -865,24 +858,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "特朗普再次“炮轰”美联储！瑞士意外“躺枪”：凭什么美国要付3.5%利率？ - FX168财经",
-      "source": "FX168财经",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE4tejUtRG95ZHBLVkYtTS1BRDl1cDFQN2MwbGxWU0xyOXhTWHU3UmZXb1VjSzJGb05GUW1FSW1lN2JDbUZuZFNnZFprWElKLU11V0s3eElFVGJvWGNjcFFRbDJKcW5ib191YVNKREdRUXZMMFRMZDdKWg?oc=5",
-      "published": "2026-08-19T23:35:39+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "特朗普抱怨美联储利率政策，称美国应支付低得多的利率 - 新浪财经",
+      "title": "美联储9月维持利率不变的概率为59.0% - 新浪财经",
       "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNT0dmTU5NOE04M3pFUldwSWZmVFNNOV9vSEphcE5PNndtZmRYbG9GaHlHeE1FblViOWNEbWJYZWxScWhZZWJBMUZQX0VoZlJfaVdseFNXY3RJX3pSQ2V3MUxPaXJmalNtMk9LWHRWV0Q4ZXo0NGFGQlZyUUNiT2dnS0htc2JMS3FBS3lwMldveUt6VmZ2RmdVQ2w3VUo4OGZGU1c0REZaMnJadw?oc=5",
-      "published": "2026-08-19T22:41:15+00:00"
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5LZVdwMzREMGF2aUx1bEVhQmhQelV5VVRtNW5IekpIYnJnakg4RmNCbzFaT1M0VktMeUxLYTl1SG1ybzZGRGp3amc3ek8wM0U?oc=5",
+      "published": "2026-08-23T21:51:49+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩国半导体狂热和焦躁（4）社会扭曲加剧 - 日经中文网",
-      "source": "日经中文网",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOc29XSWFhLXJlSjUtYkU4MGhkRmtqOUgxWEdMUU00TlpFRkM4OHkwQTBKUFQweHZZalNWd0pYUFRmTmkteUQyd2dNb1BEYWdhMWRXTVFkZUlsNHNfSmszY3UzSTFMdTR5Y2c2SFIzXy1yR0VXZlR5UVZLMjNwUGNVSg?oc=5",
-      "published": "2026-08-19T21:04:20+00:00"
+      "title": "芯片、制造、航班和非遗，中韩经贸深度融合 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9XanJab3dfUkI1enNCdEpkNV9XZ0VtbVJ0ZXpfMzRQVkZMNU53a29zckhYS1hJOVh5VkpBbWhvVlhHVS1UVEo4dktIZFlBRnRFcDFnQWRmdGxnRlF4TEhRbGhRWGFVVDJDM2s0OGhR?oc=5",
+      "published": "2026-08-23T13:33:15+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "美联储利率决议杀过来了 大饼今天被锤得亲妈都不认识。 大饼... - OKX",
+      "source": "OKX",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE51UmM1N0ZlV0JJZ3hqN2ZGMzlrNHhkNnh3WTNJOHA0TXJ0TnozQ0ViaDFqSGk3aFdJQUo3eXlBQTNPYWQ4aHF0SkVnRS0ySFZZRWt4LXRNUFhUWU1Ed3hicw?oc=5",
+      "published": "2026-08-22T23:34:40+00:00"
     }
   ]
 }
