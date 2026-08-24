@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.64,
-    "baa10y_pct": 14.050582,
+    "baa10y_pct": 14.056225,
     "curve_10y3m": 0.82,
     "curve_inverted": false
   },
@@ -858,24 +858,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "美联储9月维持利率不变的概率为59.0% - 新浪财经",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5LZVdwMzREMGF2aUx1bEVhQmhQelV5VVRtNW5IekpIYnJnakg4RmNCbzFaT1M0VktMeUxLYTl1SG1ybzZGRGp3amc3ek8wM0U?oc=5",
-      "published": "2026-08-23T21:51:49+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "芯片、制造、航班和非遗，中韩经贸深度融合 - 新浪财经",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9XanJab3dfUkI1enNCdEpkNV9XZ0VtbVJ0ZXpfMzRQVkZMNU53a29zckhYS1hJOVh5VkpBbWhvVlhHVS1UVEo4dktIZFlBRnRFcDFnQWRmdGxnRlF4TEhRbGhRWGFVVDJDM2s0OGhR?oc=5",
-      "published": "2026-08-23T13:33:15+00:00"
+      "title": "Traders remain selective in anticipation of corporate results",
+      "source": "thestar.com.my",
+      "url": "https://www.thestar.com.my/business/business-news/2026/08/24/traders-remain-selective-in-anticipation-of-corporate-results",
+      "published": "2026-08-24T02:30:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美联储利率决议杀过来了 大饼今天被锤得亲妈都不认识。 大饼... - OKX",
-      "source": "OKX",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE51UmM1N0ZlV0JJZ3hqN2ZGMzlrNHhkNnh3WTNJOHA0TXJ0TnozQ0ViaDFqSGk3aFdJQUo3eXlBQTNPYWQ4aHF0SkVnRS0ySFZZRWt4LXRNUFhUWU1Ed3hicw?oc=5",
-      "published": "2026-08-22T23:34:40+00:00"
+      "title": "Markets Weekly 24 to 28 / 08 : At a Tense Crossroads of Rates",
+      "source": "dailyforex.com",
+      "url": "https://www.dailyforex.com/forex-technical-analysis/2026/08/mayor-markets-showing-contrasting-signals-week-from-24th-to-28th-august-2026/248904",
+      "published": "2026-08-23T12:00:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
+      "title": "Jumpy bond markets make it clear : Trump risks driving US into debt crisis | Heather Stewart",
+      "source": "theguardian.com",
+      "url": "https://www.theguardian.com/business/2026/aug/23/jumpy-bond-markets-make-it-clear-trump-risks-driving-us-into-debt-crisis",
+      "published": "2026-08-23T11:30:00+00:00"
     }
   ]
 }
