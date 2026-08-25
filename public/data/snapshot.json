@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.63,
-    "baa10y_pct": 13.227619,
+    "baa10y_pct": 13.232932,
     "curve_10y3m": 0.86,
     "curve_inverted": false
   },
@@ -55,7 +55,7 @@
       "active": false
     }
   ],
-  "founder_note": "盘面平稳，按自己的节奏来；欧元区要当心",
+  "founder_note": "盘面平稳，按自己的节奏来；韩国要当心",
   "advice": [
     {
       "text": "维持中性观察；触发：核心分位升至70或曲线倒挂；失效：两项条件均未持续。",
@@ -325,7 +325,7 @@
         "growth": "up",
         "policy": "down",
         "credit": "down",
-        "market": "up",
+        "market": "down",
         "fx": "neutral"
       },
       "indicators": [
@@ -360,13 +360,13 @@
           }
         },
         {
-          "id": "oecd_share_kr",
+          "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 421.8348,
-          "date": "2026-06-01",
+          "value": 11423.17,
+          "date": "2026-08-24",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": 0.0
+            "drawdown_pct": -21.94
           }
         },
         {
@@ -394,8 +394,8 @@
           "unit": "指数"
         }
       ],
-      "light": "orange",
-      "summary": "韩国：增长走强、信贷走弱、市场走强，区域橙灯",
+      "light": "red",
+      "summary": "韩国：增长走强、信贷走弱、市场走弱，区域红灯",
       "degraded": []
     },
     "uk": {
@@ -864,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "美联储9月维持利率不变的概率为58.6% - 搜狐网",
-      "source": "搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOZ3NqeXdQM2ZWRjczME9HdkMyS0xGeDlMa0VUVW11YnVNWXZkWGNpcmlIRGFfS2NiTkMxZG5ZcklwOVotYjlfeVVKVXl5bWhJbGxNSDhaM3hvMnhHcXNjTlEyb2pFSlFiVExiV3VMeHF2Vmd4OTE4elA3UEJLaENkcFdSQU9aV2Zw?oc=5",
-      "published": "2026-08-24T22:27:45+00:00"
+      "category": "地缘冲突",
+      "title": "Trump declares economic war on Canada and Iran as US capitalism crashes into bankruptcy !",
+      "source": "wrp.org.uk",
+      "url": "https://wrp.org.uk/editorials/trump-declares-economic-war-on-canada-and-iran-as-us-capitalism-crashes-into-bankruptcy/",
+      "published": "2026-08-25T01:45:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美联储9月维持利率不变的概率为58.6% - 新浪财经",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9kTDQxTXg2anhSQnRDX1JTaEpaRnVoM1FSMmoxYkd3RTU4eVhaMnNDRkpoOXc4VDQ4R1lrUXEzZUQxbkdDaXZyc3hxRQ?oc=5",
-      "published": "2026-08-24T22:03:18+00:00"
+      "category": "地缘冲突",
+      "title": "How Trump tariffs are hitting Canadian goods",
+      "source": "niagarafallsreview.ca",
+      "url": "https://www.niagarafallsreview.ca/business/how-trumps-tariffs-are-hitting-canadian-goods/article_dd208a95-3bc1-5dce-bb79-bfde7ea33845.html",
+      "published": "2026-08-24T22:15:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "ATFX本周前瞻:杰克逊霍尔央行年会 美国7月PCE欧央行会议纪要 - 新浪财经",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQYnFUU1Bwc3hXUjRHQkd4dGZEa1diZWNYWDFWOHBmd2w2RVpxdEZESUpQS094YmRFSFEzcmRuUTJiU2ZIamJnQ2J0S1dmMHJCa3A2LUhRR0Y4STlFQTFIbUZyRlZ5N0M2b3dicjBfMHlGNV9SNE44Qm5vWk5mWTRQaGZXZ0w5N3JKeWptZFFuUFJ6SUF2M2xzeFpyakt4Nl9nLTAzQVlfaGttSHBpR2t6d3NfWVBzTlhaVXN1QlZNNzlacWlxOHZTQ3Z4TC1Qb2xVR0dWeW9NWVRGemFIdnVqZVRvaTAxT2dHR1NoMXY5LVFrVmJ5ZFNUM2FIWTY?oc=5",
-      "published": "2026-08-24T21:29:48+00:00"
+      "category": "地缘冲突",
+      "title": "US stocks today : S & P 500 , Nasdaq decline as tech sector falls , US prepares to impose more Iran sanctions",
+      "source": "economictimes.indiatimes.com",
+      "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-today-sp-500-nasdaq-decline-as-tech-sector-falls-us-prepares-to-impose-more-iran-sanctions/articleshow/133478615.cms",
+      "published": "2026-08-24T21:30:00+00:00"
     }
   ]
 }
