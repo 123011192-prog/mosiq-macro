@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.64,
-    "baa10y_pct": 14.056225,
+    "baa10y": 1.63,
+    "baa10y_pct": 13.227619,
     "curve_10y3m": 0.86,
     "curve_inverted": false
   },
@@ -64,7 +64,7 @@
   ],
   "health": {
     "data_asof": "2026-08-21",
-    "stale_count": 24,
+    "stale_count": 23,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
@@ -804,44 +804,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.69,
-      "date": "2026-08-20",
-      "change_20d_bp": 0.0,
+      "value": 4.74,
+      "date": "2026-08-21",
+      "change_20d_bp": 5.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.23,
-      "date": "2026-08-20",
-      "change_20d_bp": 7.0,
+      "value": 5.27,
+      "date": "2026-08-21",
+      "change_20d_bp": 11.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.19,
-      "date": "2026-08-20",
-      "change_20d_bp": -14.0,
+      "value": 4.24,
+      "date": "2026-08-21",
+      "change_20d_bp": -9.0,
       "source": "fred"
     },
     "spread_2s10s": {
       "value_bp": 50.0,
-      "date": "2026-08-20"
+      "date": "2026-08-21"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 0.0,
-      "us30y_change_20d_bp": 7.0,
+      "us10y_change_20d_bp": 5.0,
+      "us30y_change_20d_bp": 11.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.74,
-        "date": "2026-08-21",
+        "value": 4.7,
+        "date": "2026-08-24",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.27,
-        "date": "2026-08-21",
+        "value": 5.23,
+        "date": "2026-08-24",
         "source": "tushare"
       }
     }
@@ -864,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "Week ahead : Nvidia , inflation and Jackson Hole set the tone for Wall Street",
-      "source": "proactiveinvestors.com",
-      "url": "https://www.proactiveinvestors.com/companies/news/1097497/week-ahead-nvidia-inflation-and-jackson-hole-set-the-tone-for-wall-street-1097497.html",
-      "published": "2026-08-24T16:30:00+00:00"
+      "category": "货币政策",
+      "title": "美联储9月维持利率不变的概率为58.6% - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOZ3NqeXdQM2ZWRjczME9HdkMyS0xGeDlMa0VUVW11YnVNWXZkWGNpcmlIRGFfS2NiTkMxZG5ZcklwOVotYjlfeVVKVXl5bWhJbGxNSDhaM3hvMnhHcXNjTlEyb2pFSlFiVExiV3VMeHF2Vmd4OTE4elA3UEJLaENkcFdSQU9aV2Zw?oc=5",
+      "published": "2026-08-24T22:27:45+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "Iran shadow looms over Dalal Street as Nifty ends in red - The HinduBusinessLine",
-      "source": "thehindubusinessline.com",
-      "url": "https://www.thehindubusinessline.com/markets/iran-shadow-looms-over-dalal-street-as-nifty-ends-in-red/article71384445.ece",
-      "published": "2026-08-24T15:30:00+00:00"
+      "category": "货币政策",
+      "title": "美联储9月维持利率不变的概率为58.6% - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9kTDQxTXg2anhSQnRDX1JTaEpaRnVoM1FSMmoxYkd3RTU4eVhaMnNDRkpoOXc4VDQ4R1lrUXEzZUQxbkdDaXZyc3hxRQ?oc=5",
+      "published": "2026-08-24T22:03:18+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "KLA ( KLAC ) Gains From Advanced Nodes , HBM and Packaging",
-      "source": "finance.yahoo.com",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/kla-klac-gains-advanced-nodes-132424736.html",
-      "published": "2026-08-24T14:00:00+00:00"
+      "category": "货币政策",
+      "title": "ATFX本周前瞻:杰克逊霍尔央行年会 美国7月PCE欧央行会议纪要 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQYnFUU1Bwc3hXUjRHQkd4dGZEa1diZWNYWDFWOHBmd2w2RVpxdEZESUpQS094YmRFSFEzcmRuUTJiU2ZIamJnQ2J0S1dmMHJCa3A2LUhRR0Y4STlFQTFIbUZyRlZ5N0M2b3dicjBfMHlGNV9SNE44Qm5vWk5mWTRQaGZXZ0w5N3JKeWptZFFuUFJ6SUF2M2xzeFpyakt4Nl9nLTAzQVlfaGttSHBpR2t6d3NfWVBzTlhaVXN1QlZNNzlacWlxOHZTQ3Z4TC1Qb2xVR0dWeW9NWVRGemFIdnVqZVRvaTAxT2dHR1NoMXY5LVFrVmJ5ZFNUM2FIWTY?oc=5",
+      "published": "2026-08-24T21:29:48+00:00"
     }
   ]
 }
