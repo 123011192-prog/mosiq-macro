@@ -283,11 +283,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 65528.09,
-          "date": "2026-08-24",
+          "value": 65856.43,
+          "date": "2026-08-25",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -9.45
+            "drawdown_pct": -9.0
           }
         },
         {
@@ -865,24 +865,24 @@
   "world_brief": [
     {
       "category": "地缘冲突",
-      "title": "Trump declares economic war on Canada and Iran as US capitalism crashes into bankruptcy !",
-      "source": "wrp.org.uk",
-      "url": "https://wrp.org.uk/editorials/trump-declares-economic-war-on-canada-and-iran-as-us-capitalism-crashes-into-bankruptcy/",
-      "published": "2026-08-25T01:45:00+00:00"
+      "title": "Vodafone Idea stock surges 8 % today on SBI funding progress reports ; tariff hike hopes in focus",
+      "source": "moneycontrol.com",
+      "url": "https://www.moneycontrol.com/news/business/markets/vodafone-idea-stock-surges-8-today-on-sbi-funding-progress-reports-tariff-hike-hopes-in-focus-14015017.html",
+      "published": "2026-08-25T10:00:00+00:00"
     },
     {
       "category": "地缘冲突",
-      "title": "How Trump tariffs are hitting Canadian goods",
-      "source": "niagarafallsreview.ca",
-      "url": "https://www.niagarafallsreview.ca/business/how-trumps-tariffs-are-hitting-canadian-goods/article_dd208a95-3bc1-5dce-bb79-bfde7ea33845.html",
-      "published": "2026-08-24T22:15:00+00:00"
+      "title": "Iran Threatens Retaliation as U . S . Widens Sanctions",
+      "source": "oilprice.com",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Iran-Threatens-Retaliation-as-US-Widens-Sanctions.html",
+      "published": "2026-08-25T08:15:00+00:00"
     },
     {
       "category": "地缘冲突",
-      "title": "US stocks today : S & P 500 , Nasdaq decline as tech sector falls , US prepares to impose more Iran sanctions",
-      "source": "economictimes.indiatimes.com",
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-today-sp-500-nasdaq-decline-as-tech-sector-falls-us-prepares-to-impose-more-iran-sanctions/articleshow/133478615.cms",
-      "published": "2026-08-24T21:30:00+00:00"
+      "title": "Dow Jones Top Markets Headlines at 1 AM ET : AI Jitters and Geopolitical Threats Mark Start of Busy Week in Markets | Oura ...",
+      "source": "morningstar.com",
+      "url": "https://www.morningstar.com/news/dow-jones/20260825304/dow-jones-top-markets-headlines-at-1-am-et-ai-jitters-and-geopolitical-threats-mark-start-of-busy-week-in-markets-oura",
+      "published": "2026-08-25T07:00:00+00:00"
     }
   ]
 }
