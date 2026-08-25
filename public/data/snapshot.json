@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-22",
+  "as_of": "2026-08-25",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.63,
     "baa10y_pct": 13.232932,
-    "curve_10y3m": 0.86,
+    "curve_10y3m": 0.83,
     "curve_inverted": false
   },
   "cycle": {
@@ -18,7 +18,7 @@
     "inflation": "degraded",
     "liquidity": "neutral",
     "credit": "degraded",
-    "policy": "neutral",
+    "policy": "degraded",
     "market_stress": "degraded"
   },
   "confirmations": [
@@ -63,15 +63,17 @@
     }
   ],
   "health": {
-    "data_asof": "2026-08-21",
-    "stale_count": 23,
+    "data_asof": "2026-08-24",
+    "stale_count": 31,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
+      "cycle:policy",
       "cycle:market_stress",
       "radar:banking",
+      "radar:credit",
       "radar:nonbank",
       "regions:china",
       "regions:canada",
@@ -806,19 +808,19 @@
     "us10y": {
       "value": 4.74,
       "date": "2026-08-21",
-      "change_20d_bp": 5.0,
+      "change_20d_bp": 9.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.27,
       "date": "2026-08-21",
-      "change_20d_bp": 11.0,
+      "change_20d_bp": 15.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.24,
       "date": "2026-08-21",
-      "change_20d_bp": -9.0,
+      "change_20d_bp": -7.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -828,8 +830,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 5.0,
-      "us30y_change_20d_bp": 11.0,
+      "us10y_change_20d_bp": 9.0,
+      "us30y_change_20d_bp": 15.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
