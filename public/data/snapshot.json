@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-25",
+  "as_of": "2026-08-26",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.63,
     "baa10y_pct": 13.247692,
-    "curve_10y3m": 0.83,
+    "curve_10y3m": 0.78,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,7 +63,7 @@
     }
   ],
   "health": {
-    "data_asof": "2026-08-24",
+    "data_asof": "2026-08-25",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
@@ -806,19 +806,19 @@
     "us10y": {
       "value": 4.7,
       "date": "2026-08-24",
-      "change_20d_bp": 5.0,
+      "change_20d_bp": 9.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.23,
       "date": "2026-08-24",
-      "change_20d_bp": 11.0,
+      "change_20d_bp": 14.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.24,
       "date": "2026-08-24",
-      "change_20d_bp": -7.0,
+      "change_20d_bp": -2.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -828,8 +828,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 5.0,
-      "us30y_change_20d_bp": 11.0,
+      "us10y_change_20d_bp": 9.0,
+      "us30y_change_20d_bp": 14.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -864,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "能源",
-      "title": "Stock Market Today Live Updates : Sensex , Nifty eye higher opening as oil prices ease on Iran - Oman talks",
-      "source": "timesofindia.indiatimes.com",
-      "url": "https://timesofindia.indiatimes.com/business/india-business/sensex-stock-market-today-26-august-2026-live-updates-nse-bse-gift-nifty-50-top-gainers-losers-mcx-stocks-in-focus-market-news/liveblog/133527997.cms",
-      "published": "2026-08-26T04:00:00+00:00"
+      "category": "地缘冲突",
+      "title": "Photronics ( PLAB ) Stock Is Up , What You Need To Know",
+      "source": "finance.yahoo.com",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/photronics-plab-stock-know-183513489.html",
+      "published": "2026-08-26T19:00:00+00:00"
     },
     {
       "category": "地缘冲突",
-      "title": "Emerging Markets Lead Strong Q2 Rebound for Canadian DB Plans",
-      "source": "ai-cio.com",
-      "url": "https://www.ai-cio.com/news/emerging-markets-lead-strong-q2-rebound-for-canadian-db-plans/",
-      "published": "2026-08-26T01:00:00+00:00"
+      "title": "How the Iran war could end up causing a burst of deflation",
+      "source": "aol.com",
+      "url": "https://www.aol.com/articles/iran-war-could-end-causing-145123000.html",
+      "published": "2026-08-26T16:15:00+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "Dollar edges lower as Iran sanctions , Treasury buybacks weighed",
-      "source": "livemint.com",
-      "url": "https://www.livemint.com/market/dollar-edges-lower-as-iran-sanctions-treasury-buybacks-weighed-11787684911184.html",
-      "published": "2026-08-25T20:30:00+00:00"
+      "category": "货币政策",
+      "title": "Key Inflation Gauge Unchanged In July Here Why Interest Rate Hikes Are Likely",
+      "source": "forbes.com",
+      "url": "https://www.forbes.com/sites/tylerroush/2026/08/26/feds-preferred-inflation-meter-unchanged-in-july-heres-why-interest-rates-hikes-are-now-more-likely/",
+      "published": "2026-08-26T15:00:00+00:00"
     }
   ]
 }
