@@ -362,11 +362,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11423.17,
-          "date": "2026-08-24",
+          "value": 11588.04,
+          "date": "2026-08-25",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -21.94
+            "drawdown_pct": -20.82
           }
         },
         {
@@ -864,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "Dollar edges lower as Iran sanctions , Treasury buybacks weighed",
-      "source": "livemint.com",
-      "url": "https://www.livemint.com/market/dollar-edges-lower-as-iran-sanctions-treasury-buybacks-weighed-11787684911184.html",
-      "published": "2026-08-25T20:30:00+00:00"
+      "category": "科技产业链",
+      "title": "半导体持续向好叠加暑期旺季 8月企业景气创近4年新高 - KOREA.net",
+      "source": "KOREA.net",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1PZVdvcm9Bd3BtY2lDaTdoQ0lnZ3lpZ3BrUUVGYXVYcndjS195bXlEWUVyTkNNMzRJVWZScDJBekNDVTlycmdoN0E1clVmYXlmRHAtckJPcjgtQjFPSi04RlJsclo0cVFfaGxwY2s1TWR3LW9T?oc=5",
+      "published": "2026-08-26T05:05:08+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "Exynas 和 Bose Semiconductor 登上 Hot Chips 舞台......韩国半导体初创公司成为焦点 - 매일경제",
+      "source": "매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBXVmJULTBlalhPWDhxWG1KZzI4X29aRFZ5WFFVVzk1OVAxNjNNeTVtMk5VNjlENHlkaVJrT3BjQ01SamxSRnlyMDEtOWI3ZGVCaFIw?oc=5",
+      "published": "2026-08-26T04:43:36+00:00"
     },
     {
       "category": "地缘冲突",
-      "title": "Vodafone Idea stock surges 8 % today on SBI funding progress reports ; tariff hike hopes in focus",
-      "source": "moneycontrol.com",
-      "url": "https://www.moneycontrol.com/news/business/markets/vodafone-idea-stock-surges-8-today-on-sbi-funding-progress-reports-tariff-hike-hopes-in-focus-14015017.html",
-      "published": "2026-08-25T10:00:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "Iran Threatens Retaliation as U . S . Widens Sanctions",
-      "source": "oilprice.com",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Iran-Threatens-Retaliation-as-US-Widens-Sanctions.html",
-      "published": "2026-08-25T08:15:00+00:00"
+      "title": "据悉美国将向中东各大使馆重新派驻外交人员 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOblNiclRDOTNHLUNaUlhySXI5ZGJXeERhNmNNUVhIcW5INFdrX09neDloV3lqcm1iMTF5X2RWUVFRNGtSM0t5NF9vajdMbWlMM1g4eVFWZjNzSktmNjZrNjRGLVQwODg0dXgzRDlWTUlKNTR6TzM2eFNQb292VFhRR2ZtZWRacjBBd3UyOWcwR2NiMDV1d3g5eHlwemtxSnlVSnNJdy14VW8zYTAtVFgyOWc4Z2NFUVpxbGFUYmFzRkRHcUZWLVA4UkpWVEREOWtpcEdLLUF4MUhoZWZnVmVjOHNlVlZycHJMZmFMQTNScnhuYm5Dbl81UWJJZ1lET28?oc=5",
+      "published": "2026-08-26T03:11:15+00:00"
     }
   ]
 }
