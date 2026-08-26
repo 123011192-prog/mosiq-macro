@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.63,
-    "baa10y_pct": 13.232932,
+    "baa10y_pct": 13.247692,
     "curve_10y3m": 0.83,
     "curve_inverted": false
   },
@@ -18,7 +18,7 @@
     "inflation": "degraded",
     "liquidity": "neutral",
     "credit": "degraded",
-    "policy": "degraded",
+    "policy": "neutral",
     "market_stress": "degraded"
   },
   "confirmations": [
@@ -64,16 +64,14 @@
   ],
   "health": {
     "data_asof": "2026-08-24",
-    "stale_count": 31,
+    "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
-      "cycle:policy",
       "cycle:market_stress",
       "radar:banking",
-      "radar:credit",
       "radar:nonbank",
       "regions:china",
       "regions:canada",
@@ -806,44 +804,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.74,
-      "date": "2026-08-21",
-      "change_20d_bp": 9.0,
+      "value": 4.7,
+      "date": "2026-08-24",
+      "change_20d_bp": 5.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.27,
-      "date": "2026-08-21",
-      "change_20d_bp": 15.0,
+      "value": 5.23,
+      "date": "2026-08-24",
+      "change_20d_bp": 11.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.24,
-      "date": "2026-08-21",
+      "date": "2026-08-24",
       "change_20d_bp": -7.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 50.0,
-      "date": "2026-08-21"
+      "value_bp": 46.0,
+      "date": "2026-08-24"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 9.0,
-      "us30y_change_20d_bp": 15.0,
+      "us10y_change_20d_bp": 5.0,
+      "us30y_change_20d_bp": 11.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.7,
-        "date": "2026-08-24",
+        "value": 4.64,
+        "date": "2026-08-25",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.23,
-        "date": "2026-08-24",
+        "value": 5.17,
+        "date": "2026-08-25",
         "source": "tushare"
       }
     }
@@ -867,6 +865,13 @@
   "world_brief": [
     {
       "category": "地缘冲突",
+      "title": "Dollar edges lower as Iran sanctions , Treasury buybacks weighed",
+      "source": "livemint.com",
+      "url": "https://www.livemint.com/market/dollar-edges-lower-as-iran-sanctions-treasury-buybacks-weighed-11787684911184.html",
+      "published": "2026-08-25T20:30:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
       "title": "Vodafone Idea stock surges 8 % today on SBI funding progress reports ; tariff hike hopes in focus",
       "source": "moneycontrol.com",
       "url": "https://www.moneycontrol.com/news/business/markets/vodafone-idea-stock-surges-8-today-on-sbi-funding-progress-reports-tariff-hike-hopes-in-focus-14015017.html",
@@ -878,13 +883,6 @@
       "source": "oilprice.com",
       "url": "https://oilprice.com/Latest-Energy-News/World-News/Iran-Threatens-Retaliation-as-US-Widens-Sanctions.html",
       "published": "2026-08-25T08:15:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "Dow Jones Top Markets Headlines at 1 AM ET : AI Jitters and Geopolitical Threats Mark Start of Busy Week in Markets | Oura ...",
-      "source": "morningstar.com",
-      "url": "https://www.morningstar.com/news/dow-jones/20260825304/dow-jones-top-markets-headlines-at-1-am-et-ai-jitters-and-geopolitical-threats-mark-start-of-busy-week-in-markets-oura",
-      "published": "2026-08-25T07:00:00+00:00"
     }
   ]
 }
