@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.63,
-    "baa10y_pct": 13.247692,
+    "baa10y": 1.62,
+    "baa10y_pct": 12.560193,
     "curve_10y3m": 0.78,
     "curve_inverted": false
   },
@@ -362,11 +362,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11588.04,
-          "date": "2026-08-25",
+          "value": 11611.24,
+          "date": "2026-08-26",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -20.82
+            "drawdown_pct": -20.66
           }
         },
         {
@@ -804,44 +804,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.7,
-      "date": "2026-08-24",
-      "change_20d_bp": 9.0,
+      "value": 4.64,
+      "date": "2026-08-25",
+      "change_20d_bp": 3.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.23,
-      "date": "2026-08-24",
-      "change_20d_bp": 14.0,
+      "value": 5.17,
+      "date": "2026-08-25",
+      "change_20d_bp": 8.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.24,
-      "date": "2026-08-24",
-      "change_20d_bp": -2.0,
+      "value": 4.17,
+      "date": "2026-08-25",
+      "change_20d_bp": -9.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 46.0,
-      "date": "2026-08-24"
+      "value_bp": 47.0,
+      "date": "2026-08-25"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 9.0,
-      "us30y_change_20d_bp": 14.0,
+      "us10y_change_20d_bp": 3.0,
+      "us30y_change_20d_bp": 8.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.64,
-        "date": "2026-08-25",
+        "value": 4.66,
+        "date": "2026-08-26",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.17,
-        "date": "2026-08-25",
+        "value": 5.18,
+        "date": "2026-08-26",
         "source": "tushare"
       }
     }
@@ -864,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "Photronics ( PLAB ) Stock Is Up , What You Need To Know",
-      "source": "finance.yahoo.com",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/photronics-plab-stock-know-183513489.html",
-      "published": "2026-08-26T19:00:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "How the Iran war could end up causing a burst of deflation",
-      "source": "aol.com",
-      "url": "https://www.aol.com/articles/iran-war-could-end-causing-145123000.html",
-      "published": "2026-08-26T16:15:00+00:00"
+      "category": "科技产业链",
+      "title": "South Korea Lee meets Samsung chief amid chip investment pressure",
+      "source": "upi.com",
+      "url": "https://www.upi.com/Top_News/World-News/2026/08/26/South-Koreas-Lee-meets-Samsung-chief-amid-chip-investment-pressure/2821787788538/",
+      "published": "2026-08-27T03:30:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "Key Inflation Gauge Unchanged In July Here Why Interest Rate Hikes Are Likely",
-      "source": "forbes.com",
-      "url": "https://www.forbes.com/sites/tylerroush/2026/08/26/feds-preferred-inflation-meter-unchanged-in-july-heres-why-interest-rates-hikes-are-now-more-likely/",
-      "published": "2026-08-26T15:00:00+00:00"
+      "title": "Bank of Korea delivers back - to - back rate hike to curb inflation risks",
+      "source": "businesstimes.com.sg",
+      "url": "https://www.businesstimes.com.sg/companies-markets/banking-finance/bank-korea-delivers-back-back-rate-hike-curb-inflation-risks",
+      "published": "2026-08-27T02:30:00+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "[ BREAKING ] BOK raises benchmark rate to 3 % as inflation woes persist",
+      "source": "koreatimes.co.kr",
+      "url": "https://www.koreatimes.co.kr/economy/20260827/bok-raises-benchmark-rate-to-3-as-inflation-woes-persist",
+      "published": "2026-08-27T02:15:00+00:00"
     }
   ]
 }
