@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-26",
+  "as_of": "2026-08-27",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.62,
     "baa10y_pct": 12.560193,
-    "curve_10y3m": 0.78,
+    "curve_10y3m": 0.81,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,7 +63,7 @@
     }
   ],
   "health": {
-    "data_asof": "2026-08-25",
+    "data_asof": "2026-08-26",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
@@ -150,15 +150,15 @@
         {
           "id": "ecb_m3_idx",
           "name": "ECB M3 货币总量指数",
-          "value": 186.636,
-          "date": "2026-06-01",
+          "value": 186.6924,
+          "date": "2026-07-01",
           "unit": "指数"
         },
         {
           "id": "ecb_loan_idx",
           "name": "ECB 非金融企业贷款指数",
-          "value": 129.0791,
-          "date": "2026-06-01",
+          "value": 129.6322,
+          "date": "2026-07-01",
           "unit": "指数"
         }
       ],
@@ -283,11 +283,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 66262.16,
-          "date": "2026-08-26",
+          "value": 66131.98,
+          "date": "2026-08-27",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -8.44
+            "drawdown_pct": -8.61
           }
         },
         {
@@ -769,7 +769,7 @@
         {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
-          "value": 218.9329,
+          "value": 227.2867,
           "date": "2026-01-01",
           "unit": "指数"
         }
@@ -806,19 +806,19 @@
     "us10y": {
       "value": 4.64,
       "date": "2026-08-25",
-      "change_20d_bp": 3.0,
+      "change_20d_bp": -3.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.17,
       "date": "2026-08-25",
-      "change_20d_bp": 8.0,
+      "change_20d_bp": -3.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.17,
       "date": "2026-08-25",
-      "change_20d_bp": -9.0,
+      "change_20d_bp": -5.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -828,8 +828,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 3.0,
-      "us30y_change_20d_bp": 8.0,
+      "us10y_change_20d_bp": -3.0,
+      "us30y_change_20d_bp": -3.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -864,25 +864,25 @@
   },
   "world_brief": [
     {
+      "category": "货币政策",
+      "title": "世界利率分歧，美联储预计将保持不变，欧洲央行和日本银行预计将上涨 - VOI.ID",
+      "source": "VOI.ID",
+      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE40WlVDd0dBQ2N3aDZfekdXV0R4bGFPMGJCOTVDSXhxWm4yUlRVeW0tTmJVSXQ3aWlESV9ZX1NLRHdjTkZUNEgw0gFCQVVfeXFMT3lDM3JjNnF0SDBmaGVwOFJDYVhZaEhNMEhiYUxrMVVKUmNxYXFFVVdObnpmZUFtX0I4OFZBV2JZQUd3?oc=5",
+      "published": "2026-08-27T15:19:01+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "美联储施密德：当前利率未对经济形成限制，暗示支持继续加息 提供者 Investing.com - 英为财情 Investing.com",
+      "source": "英为财情 Investing.com",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5iRU10aTdjX0RBZGtMaThpdFNlSjc5S2p5VmVtbVV5Y05yUFhWMkdaemh4MzBGTm41SUtzUDRXUXlad3Fta3dEUjhDMVdrT3ZWeHZuN1g2WVFjZFdFTWFmZ1Z5QXNZU0pyNmc?oc=5",
+      "published": "2026-08-27T11:52:00+00:00"
+    },
+    {
       "category": "科技产业链",
-      "title": "South Korea Lee meets Samsung chief amid chip investment pressure",
-      "source": "upi.com",
-      "url": "https://www.upi.com/Top_News/World-News/2026/08/26/South-Koreas-Lee-meets-Samsung-chief-amid-chip-investment-pressure/2821787788538/",
-      "published": "2026-08-27T03:30:00+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "Bank of Korea delivers back - to - back rate hike to curb inflation risks",
-      "source": "businesstimes.com.sg",
-      "url": "https://www.businesstimes.com.sg/companies-markets/banking-finance/bank-korea-delivers-back-back-rate-hike-curb-inflation-risks",
-      "published": "2026-08-27T02:30:00+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "[ BREAKING ] BOK raises benchmark rate to 3 % as inflation woes persist",
-      "source": "koreatimes.co.kr",
-      "url": "https://www.koreatimes.co.kr/economy/20260827/bok-raises-benchmark-rate-to-3-as-inflation-woes-persist",
-      "published": "2026-08-27T02:15:00+00:00"
+      "title": "韩国央行连续加息 - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPU2xYZjNaZk9IWFJmLUJoRmdSakNvajRNbU5abjA2d3J2Ty1EVU9ma2lGQTBlbDJTcnBNNjNwbWNqZEVuUFVzZkg3VjJjdkp0UWc4LXpuYVpOa1g3VkVIUDRsTU8wTjR6a3RvVXJOTnRMRThYMkNlRFBWaXFYNEQ5dy1vVUpfdWQ2cDZzNg?oc=5",
+      "published": "2026-08-27T11:23:45+00:00"
     }
   ]
 }
