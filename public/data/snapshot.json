@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-27",
+  "as_of": "2026-08-28",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.61,
     "baa10y_pct": 11.857945,
-    "curve_10y3m": 0.81,
+    "curve_10y3m": 0.83,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,8 +63,8 @@
     }
   ],
   "health": {
-    "data_asof": "2026-08-26",
-    "stale_count": 24,
+    "data_asof": "2026-08-27",
+    "stale_count": 26,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
@@ -234,11 +234,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 66131.98,
-          "date": "2026-08-27",
+          "value": 66405.56,
+          "date": "2026-08-28",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -8.61
+            "drawdown_pct": -8.24
           }
         },
         {
@@ -299,11 +299,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11611.24,
-          "date": "2026-08-26",
+          "value": 11882.17,
+          "date": "2026-08-27",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -20.66
+            "drawdown_pct": -18.81
           }
         },
         {
@@ -630,19 +630,19 @@
     "us10y": {
       "value": 4.66,
       "date": "2026-08-26",
-      "change_20d_bp": -1.0,
+      "change_20d_bp": -2.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.18,
       "date": "2026-08-26",
-      "change_20d_bp": -2.0,
+      "change_20d_bp": -3.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.19,
       "date": "2026-08-26",
-      "change_20d_bp": -3.0,
+      "change_20d_bp": -4.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -652,8 +652,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -1.0,
-      "us30y_change_20d_bp": -2.0,
+      "us10y_change_20d_bp": -2.0,
+      "us30y_change_20d_bp": -3.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -689,24 +689,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "BOJ deputy chief calls for more rate hikes on inflation risks",
-      "source": "japantoday.com",
-      "url": "https://japantoday.com/category/business/update2-boj-deputy-chief-calls-for-more-rate-hikes-on-inflation-risks",
-      "published": "2026-08-27T22:30:00+00:00"
-    },
-    {
-      "category": "能源",
-      "title": "Alberta Premier Rejects Using Oil As A Weapon Against Trump",
-      "source": "zerohedge.com",
-      "url": "https://www.zerohedge.com/energy/alberta-premier-rejects-using-oil-weapon-against-trump",
-      "published": "2026-08-27T21:45:00+00:00"
+      "title": "Bank of Canada rate hold expected on Sept . 2 . Here why",
+      "source": "bramptonguardian.com",
+      "url": "https://www.bramptonguardian.com/news/bank-canada-interest-rate-september/article_54b4258f-b53e-5cc1-88fd-22460cc80936.html",
+      "published": "2026-08-28T17:15:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "What the US semiconductor tariff does and does not currently touch",
-      "source": "thenextweb.com",
-      "url": "https://thenextweb.com/news/semiconductor-tariffs-data-centre-exemption-phase-two",
-      "published": "2026-08-27T15:30:00+00:00"
+      "title": "Trump Chip Tariff Phase 2 Targets Servers , Kills Data Center Carve - Outs",
+      "source": "techtimes.com",
+      "url": "https://www.techtimes.com/articles/325864/20260828/trump-chip-tariff-phase-2-targets-servers-kills-data-center-carve-outs.htm",
+      "published": "2026-08-28T15:00:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
+      "title": "Asian Currencies Steady Ahead of Warsh Speech",
+      "source": "econotimes.com",
+      "url": "http://www.econotimes.com/Asian-Currencies-Steady-Ahead-of-Warsh-Speech-1750671",
+      "published": "2026-08-28T06:15:00+00:00"
     }
   ]
 }
