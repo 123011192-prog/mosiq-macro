@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.61,
-    "baa10y_pct": 11.857945,
+    "baa10y": 1.6,
+    "baa10y_pct": 11.256019,
     "curve_10y3m": 0.83,
     "curve_inverted": false
   },
@@ -628,44 +628,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.66,
-      "date": "2026-08-26",
-      "change_20d_bp": -2.0,
+      "value": 4.67,
+      "date": "2026-08-27",
+      "change_20d_bp": -1.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.18,
-      "date": "2026-08-26",
-      "change_20d_bp": -3.0,
+      "value": 5.19,
+      "date": "2026-08-27",
+      "change_20d_bp": -2.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.19,
-      "date": "2026-08-26",
-      "change_20d_bp": -4.0,
+      "value": 4.2,
+      "date": "2026-08-27",
+      "change_20d_bp": -3.0,
       "source": "fred"
     },
     "spread_2s10s": {
       "value_bp": 47.0,
-      "date": "2026-08-26"
+      "date": "2026-08-27"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -2.0,
-      "us30y_change_20d_bp": -3.0,
+      "us10y_change_20d_bp": -1.0,
+      "us30y_change_20d_bp": -2.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.67,
-        "date": "2026-08-27",
+        "value": 4.73,
+        "date": "2026-08-28",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.19,
-        "date": "2026-08-27",
+        "value": 5.22,
+        "date": "2026-08-28",
         "source": "tushare"
       }
     }
@@ -689,24 +689,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "Bank of Canada rate hold expected on Sept . 2 . Here why",
-      "source": "bramptonguardian.com",
-      "url": "https://www.bramptonguardian.com/news/bank-canada-interest-rate-september/article_54b4258f-b53e-5cc1-88fd-22460cc80936.html",
-      "published": "2026-08-28T17:15:00+00:00"
+      "title": "利空突袭！凌晨超9.6万人爆仓，黄金比特币集体重挫 - 凤凰网",
+      "source": "凤凰网",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9VTG5KNEdvcE1TenJuTzNyaHhxcW1LTG90OU5xelZ6WXhkWUFEOWVEZHF5TEkzUVE3Rndhcm9hUWdXMThyUW5aS0R3b1E5LVdu?oc=5",
+      "published": "2026-08-28T23:40:47+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "Trump Chip Tariff Phase 2 Targets Servers , Kills Data Center Carve - Outs",
-      "source": "techtimes.com",
-      "url": "https://www.techtimes.com/articles/325864/20260828/trump-chip-tariff-phase-2-targets-servers-kills-data-center-carve-outs.htm",
-      "published": "2026-08-28T15:00:00+00:00"
+      "category": "货币政策",
+      "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
+      "published": "2026-08-28T19:44:47+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "Asian Currencies Steady Ahead of Warsh Speech",
-      "source": "econotimes.com",
-      "url": "http://www.econotimes.com/Asian-Currencies-Steady-Ahead-of-Warsh-Speech-1750671",
-      "published": "2026-08-28T06:15:00+00:00"
+      "category": "货币政策",
+      "title": "沃什鹰派表态缓解美联储抗通胀决心疑虑，短债跳水、黄金盘中跌超3% - 华尔街见闻",
+      "source": "华尔街见闻",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFAzME5namRLNHhJMk5FeG5TSjkyV1pUYXFybnNScEttZ09DUjBvMkRyTUR0dFh3UENvd0REZlpHc2IzYld2OWpfVEUxOVJrZFdURTBj?oc=5",
+      "published": "2026-08-28T18:04:29+00:00"
     }
   ]
 }
