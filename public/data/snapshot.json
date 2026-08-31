@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-28",
+  "as_of": "2026-08-29",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.6,
-    "baa10y_pct": 11.26506,
+    "baa10y": 1.54,
+    "baa10y_pct": 7.326375,
     "curve_10y3m": 0.83,
     "curve_inverted": false
   },
@@ -63,13 +63,10 @@
     }
   ],
   "health": {
-    "data_asof": "2026-08-27",
-    "stale_count": 26,
+    "data_asof": "2026-08-28",
+    "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_share_in",
-      "refresh:oecd:oecd_cli_br",
-      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -210,7 +207,7 @@
         "growth": "degraded",
         "policy": "down",
         "credit": "neutral",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -235,6 +232,16 @@
           }
         },
         {
+          "id": "fred_nikkei225",
+          "name": "日经 225 指数",
+          "value": 66311.93,
+          "date": "2026-08-31",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -8.37
+          }
+        },
+        {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
           "value": 67.57,
@@ -253,10 +260,9 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长缺失、信贷平稳、市场缺失，区域黄灯",
+      "summary": "日本：增长缺失、信贷平稳、市场平稳，区域黄灯",
       "degraded": [
         "oecd_cli_jp",
-        "fred_nikkei225",
         "oecd_bci_jp"
       ]
     },
@@ -614,32 +620,32 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.67,
-      "date": "2026-08-27",
-      "change_20d_bp": -1.0,
-      "source": "fred"
-    },
-    "us30y": {
-      "value": 5.19,
-      "date": "2026-08-27",
+      "value": 4.73,
+      "date": "2026-08-28",
       "change_20d_bp": -2.0,
       "source": "fred"
     },
+    "us30y": {
+      "value": 5.22,
+      "date": "2026-08-28",
+      "change_20d_bp": -5.0,
+      "source": "fred"
+    },
     "us02y": {
-      "value": 4.2,
-      "date": "2026-08-27",
-      "change_20d_bp": -3.0,
+      "value": 4.34,
+      "date": "2026-08-28",
+      "change_20d_bp": 6.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 47.0,
-      "date": "2026-08-27"
+      "value_bp": 39.0,
+      "date": "2026-08-28"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -1.0,
-      "us30y_change_20d_bp": -2.0,
+      "us10y_change_20d_bp": -2.0,
+      "us30y_change_20d_bp": -5.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -674,25 +680,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
-      "published": "2026-08-31T10:52:33+00:00"
+      "category": "地缘冲突",
+      "title": "Canadian dollar rebounds from two - week low , helped by month - end hedging flows",
+      "source": "theglobeandmail.com",
+      "url": "https://www.theglobeandmail.com/investing/article-canadian-dollar-rebounds-from-two-week-low-helped-by-month-end-hedging/",
+      "published": "2026-08-31T19:15:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "三星电子和SK海力士加大投资,外资半导体材料设备企业招聘激增 - 매일경제",
-      "source": "매일경제",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBtLWV5OWRkTzhOOS1IMGdMR2EzUkNSMjVMNVVCcFlUMkxzTVV4NVprUHVUSlZxMDBJcGlkdjB0dnV2MUhhTTlpOHZpeGxsMDZPdnZZ?oc=5",
-      "published": "2026-08-31T08:46:41+00:00"
+      "category": "地缘冲突",
+      "title": "India economic activity , inflation  remain stable  despite external risks : FinMin",
+      "source": "moneycontrol.com",
+      "url": "https://www.moneycontrol.com/news/business/india-s-economic-activity-inflation-remain-stable-despite-external-risks-finmin-14019186.html",
+      "published": "2026-08-31T14:15:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "韩日芯片合作升温，SK海力士研究在日本合资建存储芯片厂 - 华尔街见闻",
-      "source": "华尔街见闻",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFByaEpNbG9OaE9PVE1mUTNzeE95SVRBeFRPQUN4SU40OXpSLW11eVRvT0ZzdmlScFFmQ0ZsTWdFa2JQRzdlVzZXUFFNTjRKTnRIMDlr?oc=5",
-      "published": "2026-08-31T08:32:37+00:00"
+      "category": "能源",
+      "title": "Indian Stock Market Declines Amid West Asia Tensions , Rising Crude Oil Prices",
+      "source": "rediff.com",
+      "url": "https://www.rediff.com/business/report/indian-stock-market-declines-amid-west-asia-tensions-rising-crude-oil-prices/20260831.htm",
+      "published": "2026-08-31T12:00:00+00:00"
     }
   ]
 }
