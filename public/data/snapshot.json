@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.6,
-    "baa10y_pct": 11.260538,
+    "baa10y_pct": 11.26506,
     "curve_10y3m": 0.83,
     "curve_inverted": false
   },
@@ -55,7 +55,7 @@
       "active": false
     }
   ],
-  "founder_note": "盘面平稳，按自己的节奏来；韩国要当心",
+  "founder_note": "盘面平稳，按自己的节奏来；欧元区要当心",
   "advice": [
     {
       "text": "维持中性观察；触发：核心分位升至70或曲线倒挂；失效：两项条件均未持续。",
@@ -207,7 +207,7 @@
         "growth": "degraded",
         "policy": "down",
         "credit": "neutral",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -232,16 +232,6 @@
           }
         },
         {
-          "id": "fred_nikkei225",
-          "name": "日经 225 指数",
-          "value": 66405.56,
-          "date": "2026-08-28",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -8.24
-          }
-        },
-        {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
           "value": 67.57,
@@ -260,9 +250,10 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长缺失、信贷平稳、市场平稳，区域黄灯",
+      "summary": "日本：增长缺失、信贷平稳、市场缺失，区域黄灯",
       "degraded": [
         "oecd_cli_jp",
+        "fred_nikkei225",
         "oecd_bci_jp"
       ]
     },
@@ -272,7 +263,7 @@
         "growth": "degraded",
         "policy": "down",
         "credit": "down",
-        "market": "down",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -297,16 +288,6 @@
           }
         },
         {
-          "id": "fred_sox",
-          "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11469.66,
-          "date": "2026-08-28",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -21.63
-          }
-        },
-        {
           "id": "bis_eer_kr",
           "name": "BIS 韩元名义有效汇率",
           "value": 84.67,
@@ -324,10 +305,12 @@
           "unit": "指数"
         }
       ],
-      "light": "red",
-      "summary": "韩国：增长缺失、信贷走弱、市场走弱，区域红灯",
+      "light": "orange",
+      "summary": "韩国：增长缺失、信贷走弱、市场缺失，区域橙灯",
       "degraded": [
         "oecd_cli_kr",
+        "fred_sox",
+        "oecd_share_kr",
         "oecd_bci_kr"
       ]
     },
@@ -689,24 +672,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "韩国忧CPO时代成HBM 2.0 业界疾呼300mm验证平台重要性 - DIGITIMES",
-      "source": "DIGITIMES",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNOUFHdlp6RVR3THFTSzBXVGFsd1kxemI2T2FabEhUUXN5alhCVHZfbWd0cW5RbDNIT0hlZ2RZdzVvOFEyRFpCRkxTaUM0Y1VxNGI5S25rNDI1YlhkMVEzclNyRlFLdEhXSzdXVnhzSTkzTTFsQ084dzZTZml0bVJXZEJ1VlNmMzBOVE42T2ZNUmJBcW5MTFI2N2xzSWNTOTR5VHBnemY4T1h1Y0ZQbkptUQ?oc=5",
-      "published": "2026-08-30T18:49:00+00:00"
+      "title": "日韩半导体股重挫，SK海力士跌超4%，爱德万测试跌超7%，日经225指数跌超1400点 - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNWlRDRk16T2M4Vzc4YllnanBWTXBMWWZHQmZPSWdHRmlDUTB1QjEyZmhJOWh3WWlZdE9Nd0F1QXhJZ1ZZTlgyNjdGNnhFVFBNZjJQZVdKZURQcVRTWVZSZVlETkJnYUNVMjB0NjRMcWdsQ1V1RjVDWnA3U2Q2ZzVWSjdrMVVMdjVNdlVSZw?oc=5",
+      "published": "2026-08-31T01:16:55+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩国宣布半导体、AI数据中心、物理AI“三大超级项目”，企业总投资1500万亿韩元 - 集微网",
-      "source": "集微网",
-      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE0tTDJrckVtUlQxblJ1X3FLbkZVV0lPTnRud21Rblg0MmMzdGZQMmtLVm1ZTmFHVnYyTDZvR1VScVp2d00?oc=5",
-      "published": "2026-08-30T17:22:39+00:00"
+      "title": "韩国股市因美联储加息忧虑和半导体股疲软大幅下跌 - 亚洲日报",
+      "source": "亚洲日报",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE84MDdSWEJTTEYtYVZnQXdfd1dSVGt4MHd4WHloSlFERjBDZTJpV2o1cVpiXzc0d3ZJZDhZNUdveXNBXzBwYlE5c1pYWGRSbDl6ZFdZeElxY1BPZzQ?oc=5",
+      "published": "2026-08-31T00:20:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美联储主席Warsh在杰克逊霍尔的鹰派转向，利好飙升的银行业，打压处境艰难的新加坡房地产投资信托 - The Business Times",
-      "source": "The Business Times",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNVTV4YVREc1FyQkdqcm5FN09vMUs2ZFZGZ2JrOEpOWXBTZHd6RkFCUkpscW5EYUcxdEhEaG8tWHh4REk4NHhYbFdXQXRlcWhna3FBSkVQSWtjREZwS2pONlloZ1hrQTJDZktCN01wcGZhd2RWUFA3dHc2VFlRZWw5VWEzQVh2b2lMZk92VldxZ1lXYS1LYWZEUkQxYWdLTlRQbmhGTnc4aUZpMTZkbktNQkJaMVl5d0t6QWFVMG1UWHZGWWg4cUJxR08tQk5TNElyRGZsM0F6NUVBSEE1X3VZ?oc=5",
-      "published": "2026-08-30T12:19:00+00:00"
+      "title": "美联储9月维持利率不变的概率为43.1% - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOajRpbnlHZy1INlVBLUJXa1RydFZNRENydmF1T3NXSHhWOGxpQWE2TDRURUdSdVRLWWlnWHppOTZJWU52d2gzSlNLeGNaY2JjcFhxMWtNV0FmdlZMYlpBS3pWMG9Ud1FURGdqaF9MR3QzRDdZMUNzZ0NOVFhxYXQ4Ml9IQVQzTFo2?oc=5",
+      "published": "2026-08-30T22:45:37+00:00"
     }
   ]
 }
