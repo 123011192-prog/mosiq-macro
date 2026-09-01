@@ -55,7 +55,7 @@
       "active": false
     }
   ],
-  "founder_note": "盘面平稳，按自己的节奏来；欧元区要当心",
+  "founder_note": "盘面平稳，按自己的节奏来；韩国要当心",
   "advice": [
     {
       "text": "维持中性观察；触发：核心分位升至70或曲线倒挂；失效：两项条件均未持续。",
@@ -128,8 +128,8 @@
         {
           "id": "ecb_hicp_yoy",
           "name": "ECB HICP 通胀同比",
-          "value": 2.9,
-          "date": "2026-07-01",
+          "value": 3.3,
+          "date": "2026-08-01",
           "unit": "%"
         },
         {
@@ -272,7 +272,7 @@
         "growth": "degraded",
         "policy": "down",
         "credit": "down",
-        "market": "degraded",
+        "market": "down",
         "fx": "neutral"
       },
       "indicators": [
@@ -297,6 +297,16 @@
           }
         },
         {
+          "id": "fred_sox",
+          "name": "费城半导体指数 SOX / OECD 韩国股价指数",
+          "value": 11535.05,
+          "date": "2026-08-31",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -21.18
+          }
+        },
+        {
           "id": "bis_eer_kr",
           "name": "BIS 韩元名义有效汇率",
           "value": 84.67,
@@ -314,12 +324,10 @@
           "unit": "指数"
         }
       ],
-      "light": "orange",
-      "summary": "韩国：增长缺失、信贷走弱、市场缺失，区域橙灯",
+      "light": "red",
+      "summary": "韩国：增长缺失、信贷走弱、市场走弱，区域红灯",
       "degraded": [
         "oecd_cli_kr",
-        "fred_sox",
-        "oecd_share_kr",
         "oecd_bci_kr"
       ]
     },
@@ -680,25 +688,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "Canadian dollar rebounds from two - week low , helped by month - end hedging flows",
-      "source": "theglobeandmail.com",
-      "url": "https://www.theglobeandmail.com/investing/article-canadian-dollar-rebounds-from-two-week-low-helped-by-month-end-hedging/",
-      "published": "2026-08-31T19:15:00+00:00"
+      "category": "能源",
+      "title": "Bond rout and oil spike rattle world markets – Shafaqna English | International Shia News & Fatwas",
+      "source": "en.shafaqna.com",
+      "url": "https://en.shafaqna.com/474523/bond-rout-and-oil-spike-rattle-world-markets/",
+      "published": "2026-09-01T08:00:00+00:00"
     },
     {
       "category": "地缘冲突",
-      "title": "India economic activity , inflation  remain stable  despite external risks : FinMin",
-      "source": "moneycontrol.com",
-      "url": "https://www.moneycontrol.com/news/business/india-s-economic-activity-inflation-remain-stable-despite-external-risks-finmin-14019186.html",
-      "published": "2026-08-31T14:15:00+00:00"
+      "title": "Global Market : China equities muted as Hong Kong stocks slide amid global risks",
+      "source": "economictimes.indiatimes.com",
+      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-china-equities-muted-as-hong-kong-stocks-slide-amid-global-risks/articleshow/133670250.cms",
+      "published": "2026-09-01T07:00:00+00:00"
     },
     {
       "category": "能源",
-      "title": "Indian Stock Market Declines Amid West Asia Tensions , Rising Crude Oil Prices",
-      "source": "rediff.com",
-      "url": "https://www.rediff.com/business/report/indian-stock-market-declines-amid-west-asia-tensions-rising-crude-oil-prices/20260831.htm",
-      "published": "2026-08-31T12:00:00+00:00"
+      "title": "Bond selloff pressures stocks as oil crosses US$91 a barrel",
+      "source": "freemalaysiatoday.com",
+      "url": "https://www.freemalaysiatoday.com/category/business/2026/09/01/bond-selloff-pressures-stocks-as-oil-crosses-us-91-a-barrel",
+      "published": "2026-09-01T02:45:00+00:00"
     }
   ]
 }
