@@ -317,11 +317,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11535.05,
-          "date": "2026-08-31",
+          "value": 11288.61,
+          "date": "2026-09-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -21.18
+            "drawdown_pct": -22.86
           }
         },
         {
@@ -751,25 +751,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "韩国银行总裁申贤松：应及时应对人口结构变化，半导体繁荣是机遇 - 亚洲日报",
-      "source": "亚洲日报",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE00OVB6NmkteW51S1VGaGFlZGtlNUV3ZV9pUXJLV0ZCTXFCMlE4X0Nxa3MzOFhHVzNsdldHU1MtNGpOdVBySWhMRldrNHJSTnM1dFNCcnlWS0xzekU?oc=5",
-      "published": "2026-09-02T00:32:00+00:00"
+      "category": "地缘冲突",
+      "title": "Korea on track to become fourth country to hit $1 trillion in annual exports",
+      "source": "hani.co.kr",
+      "url": "https://www.hani.co.kr/arti/english_edition/e_business/1275909.html",
+      "published": "2026-09-02T09:15:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "华泰 | 宏观：韩国8月AI链出口仍然强劲 - Sohu",
-      "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPS2h0bEdRN3Z0bXpESW16aFNlMHZaLTNYRkpacmFzMlp5VndHNHpTcXpkamNOamNIcTVWZlFVdFdfamkxTXZFX1ozSzVJanVYMWRDZzJaN2xiQnVZbDY2ZEx6aTYzb2R3WWd6QXZ4UndRN3ZjNXNqeG4yZWgxVnowSmpiZVpJTkpualozaw?oc=5",
-      "published": "2026-09-01T23:45:45+00:00"
+      "category": "货币政策",
+      "title": "Bank of Canada set to make 6th interest rate decision of the year",
+      "source": "panow.com",
+      "url": "https://panow.com/2026/09/02/bank-of-canada-set-to-make-6th-interest-rate-decision-of-the-year/",
+      "published": "2026-09-02T09:15:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
-      "published": "2026-09-01T20:21:26+00:00"
+      "category": "能源",
+      "title": "U . S . Stocks Seeing Further Downside As Crude Oil Extends Surge",
+      "source": "finanzen.ch",
+      "url": "https://www.finanzen.ch/nachrichten/aktien/u-s-stocks-seeing-further-downside-as-crude-oil-extends-surge-1036512074",
+      "published": "2026-09-01T15:45:00+00:00"
     }
   ]
 }
