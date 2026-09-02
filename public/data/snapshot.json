@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-01",
+  "as_of": "2026-09-02",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.59,
     "baa10y_pct": 10.698515,
-    "curve_10y3m": 0.84,
+    "curve_10y3m": 0.87,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,7 +63,7 @@
     }
   ],
   "health": {
-    "data_asof": "2026-08-31",
+    "data_asof": "2026-09-01",
     "stale_count": 26,
     "degraded": [
       "refresh:unexpected_failure",
@@ -252,11 +252,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 66215.34,
-          "date": "2026-09-01",
+          "value": 64325.64,
+          "date": "2026-09-02",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -8.5
+            "drawdown_pct": -11.11
           }
         },
         {
@@ -693,19 +693,19 @@
     "us10y": {
       "value": 4.75,
       "date": "2026-08-31",
-      "change_20d_bp": 5.0,
+      "change_20d_bp": 12.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.25,
       "date": "2026-08-31",
-      "change_20d_bp": 2.0,
+      "change_20d_bp": 7.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.34,
       "date": "2026-08-31",
-      "change_20d_bp": 9.0,
+      "change_20d_bp": 14.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -715,8 +715,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 5.0,
-      "us30y_change_20d_bp": 2.0,
+      "us10y_change_20d_bp": 12.0,
+      "us30y_change_20d_bp": 7.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -751,25 +751,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "Korea on track to become fourth country to hit $1 trillion in annual exports",
-      "source": "hani.co.kr",
-      "url": "https://www.hani.co.kr/arti/english_edition/e_business/1275909.html",
-      "published": "2026-09-02T09:15:00+00:00"
+      "category": "货币政策",
+      "title": "美股讯号 | 美联储威廉姆斯支持维持利率不变，通胀回落引关注 ｜#美股资讯# #美联储# #利率决策# - sohu.com",
+      "source": "sohu.com",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNdGJ4T2JzNnhqUHprNGIzRFNwaFFPTzdhZkxmMUx1YUIxMW9tR2p5NloyTEcxWWF6SHUwckZuS1lHQW9qeFBPQmZOUTZka1RfTElibmNNWk5pNnIteHNqREJyYlhBZWxqc29LSm10RV9EQ0lpdUkwWURsMFFhRHN5TnZrcUgwWGpNelFyMg?oc=5",
+      "published": "2026-09-02T13:24:38+00:00"
     },
     {
       "category": "货币政策",
-      "title": "Bank of Canada set to make 6th interest rate decision of the year",
-      "source": "panow.com",
-      "url": "https://panow.com/2026/09/02/bank-of-canada-set-to-make-6th-interest-rate-decision-of-the-year/",
-      "published": "2026-09-02T09:15:00+00:00"
+      "title": "美股讯号 | 美联储威廉姆斯支持维持利率不变，通胀压力仍需关注 ｜#美股资讯# #美联储# #市场信号# - sohu.com",
+      "source": "sohu.com",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPOXNJU0pXRVhhTGNrZFhFTzBWZFhxbDZLV2kwVndta2NwNnJkZnltN0I2RmlPTTVWdks0UGZ2b0tXd2JTQVBRTEpiLUhSYmpicHN1ZHJTX043ZVF1RF9VY211anQ5ejRla1dtZjBZODN3UG5BQ1Y5eEgxNDZKX2VBWllfUklKU2drRDNXSg?oc=5",
+      "published": "2026-09-02T13:19:23+00:00"
     },
     {
-      "category": "能源",
-      "title": "U . S . Stocks Seeing Further Downside As Crude Oil Extends Surge",
-      "source": "finanzen.ch",
-      "url": "https://www.finanzen.ch/nachrichten/aktien/u-s-stocks-seeing-further-downside-as-crude-oil-extends-surge-1036512074",
-      "published": "2026-09-01T15:45:00+00:00"
+      "category": "货币政策",
+      "title": "持续半年的伊朗战争，打乱美联储9月利率决策 - sohu.com",
+      "source": "sohu.com",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNQ3k5d2Q3U0JhYmVXRXBXVVVyMHd6QU1pc3RnQkNMRExWQm1tTGpXZTdQUUVHUlcwUHVtdS00Qk8xT0IzNjg2Z21tQXpoSXYyb0hQSFpIZXBoeDU1UHNQaV9QUmpacjJJdEJxOUU5TU9yTVpJOXlvVDhYXzVsTDFjNC1SZEY2UDdD?oc=5",
+      "published": "2026-09-02T10:29:19+00:00"
     }
   ]
 }
