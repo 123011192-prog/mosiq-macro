@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-02",
+  "as_of": "2026-09-03",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -63,7 +63,7 @@
     }
   ],
   "health": {
-    "data_asof": "2026-09-01",
+    "data_asof": "2026-09-02",
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
@@ -261,11 +261,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 64325.64,
-          "date": "2026-09-02",
+          "value": 64214.48,
+          "date": "2026-09-03",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -11.11
+            "drawdown_pct": -11.26
           }
         },
         {
@@ -708,13 +708,13 @@
     "us30y": {
       "value": 5.27,
       "date": "2026-09-01",
-      "change_20d_bp": 9.0,
+      "change_20d_bp": 10.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.39,
       "date": "2026-09-01",
-      "change_20d_bp": 19.0,
+      "change_20d_bp": 21.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -725,7 +725,7 @@
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
       "us10y_change_20d_bp": 16.0,
-      "us30y_change_20d_bp": 9.0,
+      "us30y_change_20d_bp": 10.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -760,25 +760,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "AI热潮推升中国半导体出口 韩国半导体面临结构性挑战 - 新浪网",
-      "source": "新浪网",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQNmJKZ0pYVThtMmJqZHlPOWtJaVNDSEZrVncxX0Z6dVBtOUV0RWpSLVRDS190c0h4SG5TelJEenJSUk4wYlByanFJOFlkU1VLcVVDMUlxZ1VUbFFXWHRNLUc3a2tUR19RX1BsbnR6VTBETmh3VXg5cW5uSFdiOGRtZFV6UQ?oc=5",
-      "published": "2026-09-03T09:17:24+00:00"
+      "category": "地缘冲突",
+      "title": "美官员称“福特”号航母将于近日撤离中东返美 - 华人头条",
+      "source": "华人头条",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWXJGRUF2QjNqSkxuV2lQTW94a21OT3h4ZG51UWZtYWZRRjJURUctaEphODFldE12M2k5N1Z0eHJaX3Ezc0FuWkFxMVZaQ0x5LWN5ZHpVLTRvU1hVcUlsR2NQMDZobFJUSzV5WFZZNkt2ZUxTakZjdDJmUzlmZGYwSTl4dEtGMDFrVFRCYmh3?oc=5",
+      "published": "2026-08-30T00:03:04+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "AI芯片为韩国带来出口“意外之财” 分析师担忧热潮降温后恐留下增长缺口 - 富途牛牛",
-      "source": "富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQQ2tidmktYVVtYUMzLTRZZ2Y2c3hhZWIwZ3h1V3NZWFdOS1BEVWNFWGNZbFhEVXhSODNPSEJiQjBzeHBxUUhhbkEzdERMRnR1QXdwUUFTY2toSHBwbWd2QkV0NHZJRlBVV2dMWE1RLVVYN3JQSDFjZERKMVJKeHpuYWd5OFd6cjFOWGhpRkppLUNUbVljMlpOVzBEQzZxa2c?oc=5",
-      "published": "2026-09-03T08:28:54+00:00"
+      "category": "地缘冲突",
+      "title": "撤离中东的美国外交人员将陆续返岗，报道称此举表明美方预计不再与伊朗爆发全面冲突 - 腾讯新闻",
+      "source": "腾讯新闻",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5VaE5wbm5VRFNRNXpsZ3dqZUJtM2w4UXhoeVRXZ28xZHlHYzhCTXB4Z3RnWFVhbnV2SjRiRTZlVmhhNjVObzdPMzcxSTVtVUZvYWNwdkFB?oc=5",
+      "published": "2026-08-26T06:34:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "专访IMF前首席经济学家肯尼斯·罗格夫：超低利率是“迷信”，高债务才是现实，美联储无力左右实际利率，不排除美国债务违约 - nbd.com.cn",
-      "source": "nbd.com.cn",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9FRVVRUTVXeVJEejloM3hKRW9LVW9GYko2YndheExEQmZuRC0ySVNQQmhrWlU3OXlHV09MZGdxRlhZZDgwdlBhY3lKTFdneVpBSkJwMmw3VERqMW9YdWpVNTZpVWtRdw?oc=5",
-      "published": "2026-09-03T07:48:00+00:00"
+      "category": "地缘冲突",
+      "title": "美国计划让因伊朗战事撤离中东的外交官返岗 - 大河财立方",
+      "source": "大河财立方",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1sMVpkUEoxMDlBclViRlprcWNIOVhJQkU1eUh5R0E0QzlBb2NTdEFXczgyVlNYNDV1UV9jR0o0bGtFQ3FPZE5QUnJWbzR4SWxhS3RLLUZoSGtYSGVuY0pJR2t0WV9td1cxODFSWXZ6STlwX3pC?oc=5",
+      "published": "2026-08-25T23:42:08+00:00"
     }
   ]
 }
