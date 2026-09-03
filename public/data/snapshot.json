@@ -167,12 +167,22 @@
       "status": "degraded",
       "cycle": {
         "growth": "degraded",
-        "policy": "degraded",
+        "policy": "neutral",
         "credit": "up",
         "market": "up",
         "fx": "up"
       },
       "indicators": [
+        {
+          "id": "bis_policy_cn",
+          "name": "BIS 中国央行政策利率",
+          "value": 3.0,
+          "date": "2026-08-01",
+          "unit": "%",
+          "signal": {
+            "6m_change_pp": 0.0
+          }
+        },
         {
           "id": "bis_tc_cn_gdp",
           "name": "BIS 中国私人非金融信贷/GDP",
@@ -215,7 +225,6 @@
       "summary": "中国：增长缺失、信贷走强、市场走强，区域绿灯",
       "degraded": [
         "oecd_cli_cn",
-        "bis_policy_cn",
         "oecd_bci_cn"
       ]
     },
@@ -233,7 +242,7 @@
           "id": "bis_policy_jp",
           "name": "BIS 日本央行政策利率",
           "value": 1.0,
-          "date": "2026-07-01",
+          "date": "2026-08-01",
           "unit": "%",
           "signal": {
             "6m_change_pp": 0.25
@@ -317,11 +326,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11288.61,
-          "date": "2026-09-01",
+          "value": 11339.25,
+          "date": "2026-09-02",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -22.86
+            "drawdown_pct": -22.52
           }
         },
         {
@@ -428,7 +437,7 @@
           "id": "bis_policy_ca",
           "name": "BIS 加拿大央行政策利率",
           "value": 2.25,
-          "date": "2026-07-01",
+          "date": "2026-08-01",
           "unit": "%",
           "signal": {
             "6m_change_pp": 0.0
@@ -613,11 +622,11 @@
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
-          "value": 14.25,
-          "date": "2026-07-01",
+          "value": 14.0,
+          "date": "2026-08-01",
           "unit": "%",
           "signal": {
-            "6m_change_pp": -0.75
+            "6m_change_pp": -1.0
           }
         },
         {
@@ -752,24 +761,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "Howard Lutnick says the White House is preparing new tariffs on semiconductors .",
-      "source": "investmentwatchblog.com",
-      "url": "https://www.investmentwatchblog.com/howard-lutnick-says-the-white-house-is-preparing-new-tariffs-on-semiconductors/",
-      "published": "2026-09-02T23:00:00+00:00"
+      "title": "AI热潮推升中国半导体出口 韩国半导体面临结构性挑战 - 新浪网",
+      "source": "新浪网",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQNmJKZ0pYVThtMmJqZHlPOWtJaVNDSEZrVncxX0Z6dVBtOUV0RWpSLVRDS190c0h4SG5TelJEenJSUk4wYlByanFJOFlkU1VLcVVDMUlxZ1VUbFFXWHRNLUc3a2tUR19RX1BsbnR6VTBETmh3VXg5cW5uSFdiOGRtZFV6UQ?oc=5",
+      "published": "2026-09-03T09:17:24+00:00"
     },
     {
-      "category": "能源",
-      "title": "Samsung Loses 4 % as $95 Oil Hits Its AI - Memory Rally",
-      "source": "finance.yahoo.com",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/samsung-loses-4-95-oil-220232652.html",
-      "published": "2026-09-02T22:30:00+00:00"
+      "category": "科技产业链",
+      "title": "AI芯片为韩国带来出口“意外之财” 分析师担忧热潮降温后恐留下增长缺口 - 富途牛牛",
+      "source": "富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQQ2tidmktYVVtYUMzLTRZZ2Y2c3hhZWIwZ3h1V3NZWFdOS1BEVWNFWGNZbFhEVXhSODNPSEJiQjBzeHBxUUhhbkEzdERMRnR1QXdwUUFTY2toSHBwbWd2QkV0NHZJRlBVV2dMWE1RLVVYN3JQSDFjZERKMVJKeHpuYWd5OFd6cjFOWGhpRkppLUNUbVljMlpOVzBEQzZxa2c?oc=5",
+      "published": "2026-09-03T08:28:54+00:00"
     },
     {
       "category": "货币政策",
-      "title": "Bank of Canada holds key interest rate amid trade uncertainty , Iran war",
-      "source": "chch.com",
-      "url": "https://www.chch.com/chch-news/bank-of-canada-holds-key-interest-rate-amid-trade-uncertainty-iran-war/",
-      "published": "2026-09-02T21:15:00+00:00"
+      "title": "专访IMF前首席经济学家肯尼斯·罗格夫：超低利率是“迷信”，高债务才是现实，美联储无力左右实际利率，不排除美国债务违约 - nbd.com.cn",
+      "source": "nbd.com.cn",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9FRVVRUTVXeVJEejloM3hKRW9LVW9GYko2YndheExEQmZuRC0ySVNQQmhrWlU3OXlHV09MZGdxRlhZZDgwdlBhY3lKTFdneVpBSkJwMmw3VERqMW9YdWpVNTZpVWtRdw?oc=5",
+      "published": "2026-09-03T07:48:00+00:00"
     }
   ]
 }
