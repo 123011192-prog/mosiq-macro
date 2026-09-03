@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.59,
-    "baa10y_pct": 10.698515,
+    "baa10y": 1.58,
+    "baa10y_pct": 10.032103,
     "curve_10y3m": 0.87,
     "curve_inverted": false
   },
@@ -64,7 +64,7 @@
   ],
   "health": {
     "data_asof": "2026-09-01",
-    "stale_count": 26,
+    "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
@@ -691,44 +691,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.75,
-      "date": "2026-08-31",
-      "change_20d_bp": 12.0,
+      "value": 4.79,
+      "date": "2026-09-01",
+      "change_20d_bp": 16.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.25,
-      "date": "2026-08-31",
-      "change_20d_bp": 7.0,
+      "value": 5.27,
+      "date": "2026-09-01",
+      "change_20d_bp": 9.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.34,
-      "date": "2026-08-31",
-      "change_20d_bp": 14.0,
+      "value": 4.39,
+      "date": "2026-09-01",
+      "change_20d_bp": 19.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 41.0,
-      "date": "2026-08-31"
+      "value_bp": 40.0,
+      "date": "2026-09-01"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 12.0,
-      "us30y_change_20d_bp": 7.0,
+      "us10y_change_20d_bp": 16.0,
+      "us30y_change_20d_bp": 9.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
         "value": 4.79,
-        "date": "2026-09-01",
+        "date": "2026-09-02",
         "source": "tushare"
       },
       "us30y": {
         "value": 5.27,
-        "date": "2026-09-01",
+        "date": "2026-09-02",
         "source": "tushare"
       }
     }
@@ -752,24 +752,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "韩国AI预算暴增逾8成 1万颗GPU、三大巨型专案全面启动 - DIGITIMES",
-      "source": "DIGITIMES",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQSDd5WDBSTnVmdERGV09wQlR5YjBMeE5sWTlYNkdsVGtjemNyLV9KU3NGeTltZWlPbUFZZTN4WDlaYm8wa28yMXA0dkVCLW44NHp6Y3p6Um1mUjdQaDVSQzRPNkl2ZTRfXzFoV285Zlc2TmFJY3Z5N1NiZzcxQVpZOTBVbmVKT1M4VDhqQTh2bTRyT3JucXlXOGpyWTY?oc=5",
-      "published": "2026-09-02T18:27:00+00:00"
+      "title": "Howard Lutnick says the White House is preparing new tariffs on semiconductors .",
+      "source": "investmentwatchblog.com",
+      "url": "https://www.investmentwatchblog.com/howard-lutnick-says-the-white-house-is-preparing-new-tariffs-on-semiconductors/",
+      "published": "2026-09-02T23:00:00+00:00"
+    },
+    {
+      "category": "能源",
+      "title": "Samsung Loses 4 % as $95 Oil Hits Its AI - Memory Rally",
+      "source": "finance.yahoo.com",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/samsung-loses-4-95-oil-220232652.html",
+      "published": "2026-09-02T22:30:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "Impax资产管理公司：九月美联储利率决议是“真正的抛硬币”。 - 富途牛牛",
-      "source": "富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZDhxRy1mR01yWHJQdTJabFZZTjcxdFVCYnc0QktGWWNqd0g1b1lMYzNmc1UyRzkzTWxiY1E2a1JNUlZUQUdzYmhCcTdNMWxQcGwwMjhyNG5SVDdocnAyUWZ4cXAyYXNSMElRZWRfRE9LMlF2bWV1TlBOa2xKcXU0elg5YjVGWDZjN2QzVVAzcVFoLXllTDhsR0luX1lHY0xmc1d0bFRIREV3Mkk?oc=5",
-      "published": "2026-09-02T14:53:21+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "美股讯号 | 美联储威廉姆斯支持维持利率不变，通胀回落趋势显现 ｜#美股资讯# #美联储# #市场动态# - Sohu",
-      "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQeFMwMkVCdFVwdXNrMUg4aUUwUUw1R1psa09FelJPVDBxQlB4ZEpRcEotRDdza25QdkR5Z2RLWTRDU0JTWVB6SXZlMDRZT21hbV9LZTdIRkNCdmRsTkcxOVhaS3FOeTBmTWpNWDVzQWczS1VvNS12WVhsUk81RDU4LW5BWG5uVTI0bFE5Rw?oc=5",
-      "published": "2026-09-02T13:25:01+00:00"
+      "title": "Bank of Canada holds key interest rate amid trade uncertainty , Iran war",
+      "source": "chch.com",
+      "url": "https://www.chch.com/chch-news/bank-of-canada-holds-key-interest-rate-amid-trade-uncertainty-iran-war/",
+      "published": "2026-09-02T21:15:00+00:00"
     }
   ]
 }
