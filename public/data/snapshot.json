@@ -326,11 +326,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11339.25,
-          "date": "2026-09-02",
+          "value": 11352.13,
+          "date": "2026-09-03",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -22.52
+            "drawdown_pct": -22.43
           }
         },
         {
@@ -760,25 +760,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "美联储救市 美股大涨 利率不变预期提振市场 - 中华网",
-      "source": "中华网",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9NRWxHY0VRRGpkQ2hxV1JDUktYOXNPQ01neU1RX24za0FGTkhwcDlsOHc0NnFUTWFTMEhoTWhCNGkxcmRNVDg4WTlBV1J5UUROTUFiWUt1anJSMjRWdldGanJVaXR3a3VqLWJMZEt6aXI?oc=5",
-      "published": "2026-09-04T01:20:30+00:00"
-    },
-    {
       "category": "科技产业链",
-      "title": "韩国7月经常项目顺差创同期新高 半导体出口同比增176% - 亚洲日报",
-      "source": "亚洲日报",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9Zemh5dmVHWkJ6N0Z3Rk5OX3drajFHY09fdWN5TXZ2ZkVjQnhwTmk0S2ZRa2V1b1hUckI3ZDY2T24tQklxelZRelFQeW9RTFkxcnF5SDU1aENsSUU?oc=5",
-      "published": "2026-09-04T00:25:54+00:00"
+      "title": "韩国7月经常项目顺差创同期新高 半导体出口同比增176% - Sohu",
+      "source": "Sohu",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQZUJaeHVueGp1LWo0ZExmcmt2S1I3bnlkekdUbHM4Vy0tWFZCdzlDN0xvbjZlSldXN3lnTHpOUmxYbDhEeE41Tl9HVVh2Q0hiMjF5SlJJbElsSjNkdDNLZWRWSERHQkJYMlRnWkt3cXlWSEx2SUJnN281ZHVMNVluSWE2TFJxTzJjeU90VQ?oc=5",
+      "published": "2026-09-04T09:12:27+00:00"
     },
     {
       "category": "货币政策",
-      "title": "沃勒“鸽声”砸落美债收益率！今晚焦点转向美国非农数据 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9ENmNkb0U3ZTBQb0VUQ18xZTIxcXBmVHlyeTNmRFRYRXhJaE1ka1NXdHdrazFhaHdWNE52YUVLbFZlanhTaFdDUg?oc=5",
-      "published": "2026-09-04T00:10:00+00:00"
+      "title": "万斯又公开喊话美联储：应该降息 - wallstreetcn.com",
+      "source": "wallstreetcn.com",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5SdWdxZzdnNGw1OVhPZ2cycDNwamY1QUdZT2V1REt2bXRNUk1Uc1BuTkR1YWxzZ3JkZ3QyS25wSnRPaWxab0dlZEs0VF9PMERNQ0Uw?oc=5",
+      "published": "2026-09-04T06:43:21+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "沃勒：美国国债安全溢价消失，利率上升 - IDNFinancials",
+      "source": "IDNFinancials",
+      "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxOeVQ3WHpoNDJSSm9sbkNlM3Zuak1saGwxbWpFQnA1Tk5fVFltd0w3dkNXVkJRQXZ1NHZwdmd1dC1hSjMyS2pfZWhJTE00OG9tcFZJRkl0a1Z1YmF0R3UzVHcySVZJV0ZQMXZfRjZpT1JCdnBsUHV4NkQ3Q0VzTmQ1cVdFclRIeUJVdDVTT2JLVGwyUXJqQXh4dlAyQ0hsTlhUWVFqVmd2Q2prcFlyR0tHb2w4Sm1zd2xHTVZ0bjk4QkpkMXhCMTdPQmJHbFdWXzJSSVVFS0tTcC1XR2NNT1lnaWNUMXBRV0JpanBkd1NmSmVlNC1CV2RzRGRGYm5uWWZZVm9OaXJ1czFqTG85VUhOUkthLWIyd1k?oc=5",
+      "published": "2026-09-04T05:40:00+00:00"
     }
   ]
 }
