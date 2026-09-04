@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-03",
+  "as_of": "2026-09-04",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.58,
     "baa10y_pct": 10.048135,
-    "curve_10y3m": 0.87,
+    "curve_10y3m": 0.88,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,7 +63,7 @@
     }
   ],
   "health": {
-    "data_asof": "2026-09-02",
+    "data_asof": "2026-09-03",
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
@@ -261,11 +261,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 64214.48,
-          "date": "2026-09-03",
+          "value": 65020.94,
+          "date": "2026-09-04",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -11.26
+            "drawdown_pct": -10.15
           }
         },
         {
@@ -702,19 +702,19 @@
     "us10y": {
       "value": 4.79,
       "date": "2026-09-02",
-      "change_20d_bp": 16.0,
+      "change_20d_bp": 10.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.27,
       "date": "2026-09-02",
-      "change_20d_bp": 10.0,
+      "change_20d_bp": 5.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.39,
       "date": "2026-09-02",
-      "change_20d_bp": 21.0,
+      "change_20d_bp": 14.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -724,8 +724,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 16.0,
-      "us30y_change_20d_bp": 10.0,
+      "us10y_change_20d_bp": 10.0,
+      "us30y_change_20d_bp": 5.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -760,25 +760,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "韩国7月经常项目顺差创同期新高 半导体出口同比增176% - Sohu",
-      "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQZUJaeHVueGp1LWo0ZExmcmt2S1I3bnlkekdUbHM4Vy0tWFZCdzlDN0xvbjZlSldXN3lnTHpOUmxYbDhEeE41Tl9HVVh2Q0hiMjF5SlJJbElsSjNkdDNLZWRWSERHQkJYMlRnWkt3cXlWSEx2SUJnN281ZHVMNVluSWE2TFJxTzJjeU90VQ?oc=5",
-      "published": "2026-09-04T09:12:27+00:00"
+      "category": "货币政策",
+      "title": "美国联邦储备制度(Fed·美联储)委员们最近就通货膨胀趋势表现出立场差异,预计本月联邦公开市场委员会(FOMC)将冻结利率和上调利率针锋相对。 8月非农业工作岗位增加了16万2000名,雇佣呈现出稳定.. - 매일경제",
+      "source": "매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5UMzNSM3hyRmNzSmsxVWp4QmJGSE1QcHlKd0tkTEdRUGFpRFl3VWZybVVkcGNIYkpyTXM4MWpOWUpaRjRLMXJFTjdJRE5zd2c?oc=5",
+      "published": "2026-09-04T14:28:26+00:00"
     },
     {
       "category": "货币政策",
-      "title": "万斯又公开喊话美联储：应该降息 - wallstreetcn.com",
-      "source": "wallstreetcn.com",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5SdWdxZzdnNGw1OVhPZ2cycDNwamY1QUdZT2V1REt2bXRNUk1Uc1BuTkR1YWxzZ3JkZ3QyS25wSnRPaWxab0dlZEs0VF9PMERNQ0Uw?oc=5",
-      "published": "2026-09-04T06:43:21+00:00"
+      "title": "哈塞特：美联储维持利率不变的理由“相当充分” - 新浪网",
+      "source": "新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9PM1l1WUtuZGhvd05ZR1c0VUIxNkpNWXppeFVBd0dlYzBlYW9TNmdzVzVFdEFVNV9idnZqRXIwaWg2V01KbmtYdkJZQQ?oc=5",
+      "published": "2026-09-04T13:42:34+00:00"
     },
     {
       "category": "货币政策",
-      "title": "沃勒：美国国债安全溢价消失，利率上升 - IDNFinancials",
-      "source": "IDNFinancials",
-      "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxOeVQ3WHpoNDJSSm9sbkNlM3Zuak1saGwxbWpFQnA1Tk5fVFltd0w3dkNXVkJRQXZ1NHZwdmd1dC1hSjMyS2pfZWhJTE00OG9tcFZJRkl0a1Z1YmF0R3UzVHcySVZJV0ZQMXZfRjZpT1JCdnBsUHV4NkQ3Q0VzTmQ1cVdFclRIeUJVdDVTT2JLVGwyUXJqQXh4dlAyQ0hsTlhUWVFqVmd2Q2prcFlyR0tHb2w4Sm1zd2xHTVZ0bjk4QkpkMXhCMTdPQmJHbFdWXzJSSVVFS0tTcC1XR2NNT1lnaWNUMXBRV0JpanBkd1NmSmVlNC1CV2RzRGRGYm5uWWZZVm9OaXJ1czFqTG85VUhOUkthLWIyd1k?oc=5",
-      "published": "2026-09-04T05:40:00+00:00"
+      "title": "黄金突然“回血”：从4300下方杀回4475！今晚非农或决定下一波方向 - FX168财经",
+      "source": "FX168财经",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBIOU5yUE1RYjJpYmI4WHN5MFdPY2FsN1NFV1VnMHg4TkN1SEZWZ3ZKM2NjZTg1dDZIckpWLTRwNUNkeUJfdHJtN3g1S2J4N1NBM2tyQkF6Wm5XS1RxQV9XMWZHbm4zVlBPZ3Jaaw?oc=5",
+      "published": "2026-09-04T11:58:12+00:00"
     }
   ]
 }
