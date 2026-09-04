@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.58,
-    "baa10y_pct": 10.032103,
+    "baa10y_pct": 10.048135,
     "curve_10y3m": 0.87,
     "curve_inverted": false
   },
@@ -701,25 +701,25 @@
   "rates_watch": {
     "us10y": {
       "value": 4.79,
-      "date": "2026-09-01",
+      "date": "2026-09-02",
       "change_20d_bp": 16.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.27,
-      "date": "2026-09-01",
+      "date": "2026-09-02",
       "change_20d_bp": 10.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.39,
-      "date": "2026-09-01",
+      "date": "2026-09-02",
       "change_20d_bp": 21.0,
       "source": "fred"
     },
     "spread_2s10s": {
       "value_bp": 40.0,
-      "date": "2026-09-01"
+      "date": "2026-09-02"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
@@ -731,13 +731,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.79,
-        "date": "2026-09-02",
+        "value": 4.77,
+        "date": "2026-09-03",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.27,
-        "date": "2026-09-02",
+        "value": 5.25,
+        "date": "2026-09-03",
         "source": "tushare"
       }
     }
@@ -761,24 +761,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "美联储理事沃勒释放支持按兵不动的信号 美债市场“松了口气” - Sohu",
-      "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQWVpkX093ejBaY3U5VFdseFE3X0dCUEowa01ESFFjbURucTZRX2hLbG03Qi1EckpmNHg2QnZLWXFBOFh4N252MDVXQlFRTWFYanhrRkZ6VHJ3RHktaWo5dFVXbXFEYTF5U05SOWZQeVZqekg2LXVrNlBaaHU4UU9Bb0ZOanZJMGJaNUpHaA?oc=5",
-      "published": "2026-09-03T19:41:10+00:00"
+      "title": "美联储救市 美股大涨 利率不变预期提振市场 - 中华网",
+      "source": "中华网",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9NRWxHY0VRRGpkQ2hxV1JDUktYOXNPQ01neU1RX24za0FGTkhwcDlsOHc0NnFUTWFTMEhoTWhCNGkxcmRNVDg4WTlBV1J5UUROTUFiWUt1anJSMjRWdldGanJVaXR3a3VqLWJMZEt6aXI?oc=5",
+      "published": "2026-09-04T01:20:30+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "美国企业投资20亿美元，强化半导体、先进材料和海上风电供应链 - 亚洲日报",
+      "title": "韩国7月经常项目顺差创同期新高 半导体出口同比增176% - 亚洲日报",
       "source": "亚洲日报",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4zZ0I1NUtRYV9lcmNwTDlQcDRvVUxOamdBNnZicjhZLUhBUTlDeDJoa1VtaXdBaVdaOUF3Z01DR2Q1VGtnaVdyaUhWeHYxSENiTWwyWXJ1MlAwNHM?oc=5",
-      "published": "2026-09-03T19:00:20+00:00"
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9Zemh5dmVHWkJ6N0Z3Rk5OX3drajFHY09fdWN5TXZ2ZkVjQnhwTmk0S2ZRa2V1b1hUckI3ZDY2T24tQklxelZRelFQeW9RTFkxcnF5SDU1aENsSUU?oc=5",
+      "published": "2026-09-04T00:25:54+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美联储在固定利率逆回购操作中总计接纳了4个对手方的7.02亿美元。 - 金融界",
-      "source": "金融界",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1pNUVFQ2NjeUZGODJsYlFVTXVyYkJTQThLTUpFWW5aR1h6VGZHaEprZmVhQUZJSkhxc3lWUVFqQmctTm5OSXJma01yUFpFLWJ5QnlOWmQ4OXFVMWFhMl8xRTg4TF81LU5RZ2EwU1NXSQ?oc=5",
-      "published": "2026-09-03T17:17:42+00:00"
+      "title": "沃勒“鸽声”砸落美债收益率！今晚焦点转向美国非农数据 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9ENmNkb0U3ZTBQb0VUQ18xZTIxcXBmVHlyeTNmRFRYRXhJaE1ka1NXdHdrazFhaHdWNE52YUVLbFZlanhTaFdDUg?oc=5",
+      "published": "2026-09-04T00:10:00+00:00"
     }
   ]
 }
