@@ -326,11 +326,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11352.13,
-          "date": "2026-09-03",
+          "value": 11735.26,
+          "date": "2026-09-04",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -22.43
+            "drawdown_pct": -19.81
           }
         },
         {
@@ -760,25 +760,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "韩国官员确认韩美磋商韩企在美半导体投资议题 - 新浪财经",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOSU5henBSYmlwRUFDRy1TTmRjcWUzSElEUEVyZS1KSWRQOFlkQkNJZmZmQUc4VVppSGxQaVlTVjA3UkM5dUxsT09Yd1M5eTNoeWtOSWpSTnoydmtSdkZfMzZBUDdDWHFzamVBcVNYRWY0NnhUdjJkeWRLOWktQms1MUZIT3puY1QxT0I0OTE2OW45VlFURUwzMXdqNnFVOTBqWTVBTVBlR3cwdXFVV2JKdkVR?oc=5",
-      "published": "2026-09-05T00:18:56+00:00"
+      "category": "货币政策",
+      "title": "特朗普再次呼吁美联储降低利率_证券要闻 - 中金在线",
+      "source": "中金在线",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE8tcVh1SGdOY0U3RENJUTZjX0dyYmdFdHRUX3Ziand4cmlTcHJKQi1iR0FFUEF3LUR2MGpLWjE2Ul9ITFlveVotTmpQU0FXTjNES1hNVzN1VnFnSHF0bTg2SUk5UXJ3c0dOQzllam5B?oc=5",
+      "published": "2026-09-05T08:55:07+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "周线展望：韩国股市能否延续半导体反弹？美国物价与期权到期成变数 - 亚洲日报",
-      "source": "亚洲日报",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE13LVUxaTA1UEpRUXJQQVZOR2R3RXgyRlFielJtM1BoMmREdDRYWlE0MHpNOEo4WWNQdGU3d1FHcjVtWk1IUmludl9aV0NITXppQnA5Vk1YaXMwdVE?oc=5",
-      "published": "2026-09-04T21:04:00+00:00"
+      "title": "韩国出口突破年度历史纪录，AI芯片需求强劲推动半导体出货量激增 提供者 Investing.com - 英为财情 Investing.com",
+      "source": "英为财情 Investing.com",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1lQkRBWTV0R2tkNGx4WG8zakpDcTIydTVQNGNLSjYzSkNvYUw1QlJuSWhTcVpDRVpCUkNOMDNyS3lRTE85RFJVTEt4a0h0eUlZU0pmLXR3MWZnenU0UVZ2WEp0SzhLc1VrVHc?oc=5",
+      "published": "2026-09-05T08:37:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "特朗普施压沃什降息：高利率令美国陷入“不公平劣势”，否则停止与逆差国贸易 - 华尔街见闻",
-      "source": "华尔街见闻",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9uT0NNRHhwd2lldVRUVzkya0FnOXF1NnRtRkVnNndYeXVDMnBHZ0NFLUg5aVF2TV9kX1doN2l4MVJUUHFUQlNWVTlMNl9ScGZMbHBr?oc=5",
-      "published": "2026-09-04T16:08:10+00:00"
+      "title": "澳元兑美元走强，美元走软因市场重新定价美联储加息预期；美国非农就业与CPI成市场焦点 - VT Markets",
+      "source": "VT Markets",
+      "url": "https://news.google.com/rss/articles/CBMi3gJBVV95cUxNUUpsWVFjOFhLUXVmM3djVlhWQ0VCSkgxVXRnY3p6LVpNOHdFZW5iUFdFcHNSOFRaWTl1NlMzR29HY05fVWUtSGFndW9wdHZvMXhOYlVyTHU0ODZSQ1pKLWxVWU1hLTlYVHFGY0dTZ2dNVE1TcWdpdlRpWXBMM0pMZ2Yya0R3dVJGTE1tVzFWMGt3MzRYMnpWYjZLQ0lRMzh1bzI4bUFQdGdTRG96aTZhZTJ0akdoOTl5N0Q1RU0zb0p5VHlPNUR6OWgzOGJuZU41S1B3NTdxN2xLNlI4VzBMc1FqdUpTUGVMVlFYVmhIRC1ka0JJMm93cENEbF9DTUdkRlExTnFkSk1KSnBhZkJaYnhXZmQ5cDBmVTU4dHRqSThzZ1paM2pnQ3FhS2loYkJJVmtUZEpTMUw1LTZCT1RxaVMtWXZCejlMYzFWdjRULTI2RUFQWldlWVpnOFZNQQ?oc=5",
+      "published": "2026-09-05T08:23:34+00:00"
     }
   ]
 }
