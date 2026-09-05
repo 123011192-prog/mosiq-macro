@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.58,
-    "baa10y_pct": 10.048135,
+    "baa10y": 1.57,
+    "baa10y_pct": 9.426394,
     "curve_10y3m": 0.88,
     "curve_inverted": false
   },
@@ -700,44 +700,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.79,
-      "date": "2026-09-02",
-      "change_20d_bp": 10.0,
+      "value": 4.77,
+      "date": "2026-09-03",
+      "change_20d_bp": 8.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.27,
-      "date": "2026-09-02",
-      "change_20d_bp": 5.0,
+      "value": 5.25,
+      "date": "2026-09-03",
+      "change_20d_bp": 3.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.39,
-      "date": "2026-09-02",
-      "change_20d_bp": 14.0,
+      "value": 4.34,
+      "date": "2026-09-03",
+      "change_20d_bp": 9.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 40.0,
-      "date": "2026-09-02"
+      "value_bp": 43.0,
+      "date": "2026-09-03"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 10.0,
-      "us30y_change_20d_bp": 5.0,
+      "us10y_change_20d_bp": 8.0,
+      "us30y_change_20d_bp": 3.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.77,
-        "date": "2026-09-03",
+        "value": 4.78,
+        "date": "2026-09-04",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.25,
-        "date": "2026-09-03",
+        "value": 5.24,
+        "date": "2026-09-04",
         "source": "tushare"
       }
     }
@@ -760,25 +760,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "万斯：美联储应该降息 - 新浪网",
-      "source": "新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQaU5DRjZQOWNjZFZNVGNRZWgyNC13TEhQdF9zc2VORU11V2dlNVR4S0FkVDMzNjZkUUN1VWZ6SUFNS0NfZDlLQVZJXzByanJqZ3JzRURvN1FVekNVTGV0RFd2XzFNMXJNZFF2ektjRDJOdFo1NFE4NmZoX0ljX1k0X1ByNFRjdlYtN0Jr?oc=5",
-      "published": "2026-09-04T16:55:28+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "金银大跌！白宫经济顾问：支持美联储维持利率不变的理由“相当充分” - Sohu",
-      "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQQ3hiUjJOMmZwSFB2bW9VYjJpSXFnOVhXN3owb2d2U3NPdG1lUUtYanRxTEoyVHZLVS03ZVJJS2cxMi1fV1dsNGhWV3Z5U1ROVGN6eFJRZnFRNkktNWY0YUNNbnRMVXpvY0x6cHF5cTFGdUJQQVM5YWFtZFZ3WG1XWTBqMk9McWVXYnY5LQ?oc=5",
-      "published": "2026-09-04T13:28:00+00:00"
+      "category": "科技产业链",
+      "title": "韩国官员确认韩美磋商韩企在美半导体投资议题 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOSU5henBSYmlwRUFDRy1TTmRjcWUzSElEUEVyZS1KSWRQOFlkQkNJZmZmQUc4VVppSGxQaVlTVjA3UkM5dUxsT09Yd1M5eTNoeWtOSWpSTnoydmtSdkZfMzZBUDdDWHFzamVBcVNYRWY0NnhUdjJkeWRLOWktQms1MUZIT3puY1QxT0I0OTE2OW45VlFURUwzMXdqNnFVOTBqWTVBTVBlR3cwdXFVV2JKdkVR?oc=5",
+      "published": "2026-09-05T00:18:56+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
-      "published": "2026-09-04T13:23:57+00:00"
+      "title": "周线展望：韩国股市能否延续半导体反弹？美国物价与期权到期成变数 - 亚洲日报",
+      "source": "亚洲日报",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE13LVUxaTA1UEpRUXJQQVZOR2R3RXgyRlFielJtM1BoMmREdDRYWlE0MHpNOEo4WWNQdGU3d1FHcjVtWk1IUmludl9aV0NITXppQnA5Vk1YaXMwdVE?oc=5",
+      "published": "2026-09-04T21:04:00+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "特朗普施压沃什降息：高利率令美国陷入“不公平劣势”，否则停止与逆差国贸易 - 华尔街见闻",
+      "source": "华尔街见闻",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9uT0NNRHhwd2lldVRUVzkya0FnOXF1NnRtRkVnNndYeXVDMnBHZ0NFLUg5aVF2TV9kX1doN2l4MVJUUHFUQlNWVTlMNl9ScGZMbHBr?oc=5",
+      "published": "2026-09-04T16:08:10+00:00"
     }
   ]
 }
