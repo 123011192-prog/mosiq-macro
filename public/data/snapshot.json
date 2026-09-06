@@ -67,7 +67,6 @@
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_cli_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -762,24 +761,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
-      "published": "2026-09-06T11:19:45+00:00"
+      "title": "Upcoming inflation data could determine if the Federal Reserve hikes interest rates soon",
+      "source": "fortune.com",
+      "url": "https://fortune.com/2026/09/06/fed-rate-hikes-inflation-data-ppi-cpi-august-tariffs-oil-prices/",
+      "published": "2026-09-06T18:15:00+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "美媒披露现场画面：8架美军F-35战机撤离中东抵达英国 - 凤凰网",
-      "source": "凤凰网",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1fOXY5M3lETEpWZW4xREhtU3owcWNTUnE0UG5OZ041TmdIdm55cEdnNjVQckVDTWE2OWk4dzJ6cl82bXA2Mk5JTQ?oc=5",
-      "published": "2026-09-06T11:18:20+00:00"
+      "category": "科技产业链",
+      "title": "US , Japan emerge as Korean chipmaker production bases amid AI boom",
+      "source": "koreatimes.co.kr",
+      "url": "https://www.koreatimes.co.kr/business/tech-science/20260906/us-japan-emerge-as-korean-chipmakers-production-bases-amid-ai-boom",
+      "published": "2026-09-06T08:45:00+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "美媒披露现场画面：8架美军F-35战机撤离中东抵达英国 - finance.sina.com.cn",
-      "source": "finance.sina.com.cn",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9Uano4cXI4QXQ4MC1lNDNvWVEyZmZ1MFA4MU5wZ25GM3p3TmUtV3ZIYVg4UHA3NS14RWowQWN4OThVT242cWVXTV9LTFlDSnVkdTlRakZMY2xreG9sV3FjVlNQbFUtemNnNWFhNWNlTWlSQXhEaE5qUQ?oc=5",
-      "published": "2026-09-06T11:18:00+00:00"
+      "category": "货币政策",
+      "title": "Jittery Wall Street Awaits Inflation Data . Uncertainty Looms Over Rate Trajectory .",
+      "source": "ibtimes.com",
+      "url": "https://www.ibtimes.com/jittery-wall-street-awaits-inflation-data-uncertainty-looms-over-rate-trajectory-3807183",
+      "published": "2026-09-05T19:00:00+00:00"
     }
   ]
 }
