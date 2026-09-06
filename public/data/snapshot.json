@@ -67,6 +67,7 @@
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_cli_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -760,25 +761,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "Wall Street week ahead : The market focuses on key inflation updates",
-      "source": "abcnews.com",
-      "url": "https://abcnews.com/Business/wireStory/wall-street-week-ahead-market-focuses-key-inflation-136221835",
-      "published": "2026-09-05T13:30:00+00:00"
+      "category": "货币政策",
+      "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
+      "published": "2026-09-06T11:19:45+00:00"
     },
     {
       "category": "地缘冲突",
-      "title": "7 . 8 % GDP is good news but why skyrocketing KOSPI , Nikkei , Taiwan remain a major concern for Sensex , Nifty | Explained",
-      "source": "livemint.com",
-      "url": "https://www.livemint.com/market/stock-market-news/78-gdp-is-good-news-but-why-skyrocketing-kospi-nikkei-taiwan-remain-a-major-concern-for-sensex-nifty-explained-11788603071280.html",
-      "published": "2026-09-05T13:15:00+00:00"
+      "title": "美媒披露现场画面：8架美军F-35战机撤离中东抵达英国 - 凤凰网",
+      "source": "凤凰网",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1fOXY5M3lETEpWZW4xREhtU3owcWNTUnE0UG5OZ041TmdIdm55cEdnNjVQckVDTWE2OWk4dzJ6cl82bXA2Mk5JTQ?oc=5",
+      "published": "2026-09-06T11:18:20+00:00"
     },
     {
       "category": "地缘冲突",
-      "title": "Wall Street week ahead : The market focuses on key inflation updates – Winnipeg Free Press",
-      "source": "winnipegfreepress.com",
-      "url": "https://www.winnipegfreepress.com/business/2026/09/05/wall-street-week-ahead-the-market-focuses-on-key-inflation-updates",
-      "published": "2026-09-05T08:45:00+00:00"
+      "title": "美媒披露现场画面：8架美军F-35战机撤离中东抵达英国 - finance.sina.com.cn",
+      "source": "finance.sina.com.cn",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9Uano4cXI4QXQ4MC1lNDNvWVEyZmZ1MFA4MU5wZ25GM3p3TmUtV3ZIYVg4UHA3NS14RWowQWN4OThVT242cWVXTV9LTFlDSnVkdTlRakZMY2xreG9sV3FjVlNQbFUtemNnNWFhNWNlTWlSQXhEaE5qUQ?oc=5",
+      "published": "2026-09-06T11:18:00+00:00"
     }
   ]
 }
