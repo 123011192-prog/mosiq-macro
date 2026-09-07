@@ -251,7 +251,7 @@
         "growth": "neutral",
         "policy": "down",
         "credit": "neutral",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -286,6 +286,16 @@
           }
         },
         {
+          "id": "fred_nikkei225",
+          "name": "日经 225 指数",
+          "value": 66399.84,
+          "date": "2026-09-07",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -8.24
+          }
+        },
+        {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
           "value": 67.57,
@@ -304,9 +314,8 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷平稳、市场缺失，区域黄灯",
+      "summary": "日本：增长平稳、信贷平稳、市场平稳，区域黄灯",
       "degraded": [
-        "fred_nikkei225",
         "oecd_bci_jp"
       ]
     },
@@ -847,24 +856,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "特朗普又对美联储放狠话：不降息就停贸易！经济学家集体警告 - FX168财经",
-      "source": "FX168财经",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1MekxpRElUVXpMV3BBT0JhdXlFOGlycUFBVXFmemRXSElOS2gwY1BZblE3MUN3emdQc200SHJ3anFTUXR3b0JpbmVwcVllNW5OUUExajY5dnB1Ulp6blZ6MWc5TWEycV9DZFdKazIyMmJ2Mk9NMjcyUA?oc=5",
-      "published": "2026-09-07T10:16:34+00:00"
+      "title": "美国9月加息预期升温，特朗普政府极限施压美联储 - thepaper.cn",
+      "source": "thepaper.cn",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBMZGEwY0FpUENSalA0MzdQNEhaNTg1WUpLZUpKRUVtY0JWdnFPNnhKOTlUZ2RmRE9zeWk0MzRSdTJFbVlpWURKLW1Nb1o5ZmR4THh1cnh1cFowc2YxSmc?oc=5",
+      "published": "2026-09-07T13:30:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "广钢气体与AirFirst达成战略合作 推进Super-N方案落地韩国半导体市场 - 观点网",
-      "source": "观点网",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBtLTZfUjFkNlBURk9DUjVmbEVuN0QtNEZuSUMxeXE0UEcyRTBGLTBreHFKWmFHOVdtM2pnZlg0Q2xKcGJCMGdDOFhLQ0VObE5HMjVwa2JBbEl0RGt1eFJvNV9n?oc=5",
-      "published": "2026-09-07T09:55:03+00:00"
+      "title": "“领先中国的只有DRAM了”......52小时限制下,韩国半导体的超车优势正被追上 - 매일경제",
+      "source": "매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1kTFdwUzY2SVMyZm9MZXIxSm05eXhlRTdmMFlBNEtnV2lyUHVrQTAyeXoxV194VU1MNno3bmNnUWt0RVV4Y1Y3RXVyZ2preFRPd1pF?oc=5",
+      "published": "2026-09-07T11:48:05+00:00"
     },
     {
       "category": "货币政策",
-      "title": "道明证券预计8月通胀仍将保持温和，足以让美联储在9月维持利率不变，且核心通胀也似乎得到控制。 - Moomoo",
-      "source": "Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQMmRzNkRmN3UtY25iMHA0dzZ1SkduUUY2R21Mc1p0SllPZ1d5V3liS244ampEbzRmMm1nMWxmN3hUdm50dFpsTDhOVjY1SnRsZ3VqZkVmV1gwLTlRdFNwVjNrYlBWV2s2elpNZEY4Wk1IZWhtYzlZOHlfbGNnNm5kTm5uRG5SeFV3eHZObUdKNnlfeUZMSTd1LUZXWDloR0swUW9NelpUMG9Rb29RLXQzV2NDTmhsMkNIUUFVR2dpbFBOWllTMlN3?oc=5",
-      "published": "2026-09-07T09:49:06+00:00"
+      "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
+      "published": "2026-09-07T11:25:31+00:00"
     }
   ]
 }
