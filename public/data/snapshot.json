@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.57,
-    "baa10y_pct": 9.430177,
+    "baa10y_pct": 9.433962,
     "curve_10y3m": 0.88,
     "curve_inverted": false
   },
@@ -234,7 +234,7 @@
         "growth": "degraded",
         "policy": "down",
         "credit": "neutral",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -259,16 +259,6 @@
           }
         },
         {
-          "id": "fred_nikkei225",
-          "name": "日经 225 指数",
-          "value": 65020.94,
-          "date": "2026-09-04",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -10.15
-          }
-        },
-        {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
           "value": 67.57,
@@ -287,9 +277,10 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长缺失、信贷平稳、市场平稳，区域黄灯",
+      "summary": "日本：增长缺失、信贷平稳、市场缺失，区域黄灯",
       "degraded": [
         "oecd_cli_jp",
+        "fred_nikkei225",
         "oecd_bci_jp"
       ]
     },
@@ -324,13 +315,13 @@
           }
         },
         {
-          "id": "fred_sox",
+          "id": "oecd_share_kr",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11735.26,
-          "date": "2026-09-04",
+          "value": 330.6228,
+          "date": "2026-08-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -19.81
+            "drawdown_pct": -21.62
           }
         },
         {
@@ -760,25 +751,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "Upcoming inflation data could determine if the Federal Reserve hikes interest rates soon",
-      "source": "fortune.com",
-      "url": "https://fortune.com/2026/09/06/fed-rate-hikes-inflation-data-ppi-cpi-august-tariffs-oil-prices/",
-      "published": "2026-09-06T18:15:00+00:00"
+      "category": "科技产业链",
+      "title": "韩国综指飙涨超3%，日韩存储芯片股爆发 - 网易新闻客户端",
+      "source": "网易新闻客户端",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1yendVY3JvQzB5dkFvdnFVOHU4LTNSVTdvQk15V2lYcXhGOVhWT3lCcFM3bTFXX2sxYXJqN1lqV3dxZkZjeVNqTTc5d19qMjVIY1dqLTVQM21hdFA5?oc=5",
+      "published": "2026-09-07T01:02:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "US , Japan emerge as Korean chipmaker production bases amid AI boom",
-      "source": "koreatimes.co.kr",
-      "url": "https://www.koreatimes.co.kr/business/tech-science/20260906/us-japan-emerge-as-korean-chipmakers-production-bases-amid-ai-boom",
-      "published": "2026-09-06T08:45:00+00:00"
+      "title": "怕个股见顶又不想错过行情，韩国散户想出一套调仓方案 - Sohu",
+      "source": "Sohu",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPbGNReFZidHByYzhsdk9SWkc4M0pmTUs5NlpnVi10TWVVSFRfWEZhd0Z0NHJ3cVA3NHBlcThrRHZlamVWdEk0UVNQRGlPZGNHdFdQNnNkNk56blZQNlBtTDg2VFZjYldpMlJCdzE2bEx5TldVSGVLRG1BWWFCNnFxQnZYb2M4UlF2ZlhtZg?oc=5",
+      "published": "2026-09-07T00:29:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "Jittery Wall Street Awaits Inflation Data . Uncertainty Looms Over Rate Trajectory .",
-      "source": "ibtimes.com",
-      "url": "https://www.ibtimes.com/jittery-wall-street-awaits-inflation-data-uncertainty-looms-over-rate-trajectory-3807183",
-      "published": "2026-09-05T19:00:00+00:00"
+      "category": "科技产业链",
+      "title": "首届越韩知识对接论坛取得圆满成功 - Thông tấn xã Việt Nam",
+      "source": "Thông tấn xã Việt Nam",
+      "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxOblZnQ3RrbGNXVkhMTzgtUi1aZGRubjB6SkFkdjBhOTh6a0ZaWTZudnJDbVNIaWdjN1RQeXp0dHVPUWRzM3k1VUZFMVpvOU01YkxwM2Q0STJxLWRCdnJuem5PelA5TGo0UEJDVkJsQm90bFp4eDdjb0N0S1VMYm5ya3NvSG51bFVWRm1rQlBaSzlyakZJSUI5Y2dkMEd2QlpiT3dwZm1LYWpINVFxWnM2MWw0SGpRRHNwY3QwNlVSM1p6N3hCbUp3QTBFRlJ1VXQ0T3hKM2lMNnAycWFSVjRHWmZLLUxYMFVUckN4aWp2YUd2N01yQVFNSk5OaWNac3FkQjNnVk9rVUdsbGJ2VjhVYXBzS3NEbVMwTDllRHRsSFN0bDVM?oc=5",
+      "published": "2026-09-07T00:21:16+00:00"
     }
   ]
 }
