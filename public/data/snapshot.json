@@ -73,28 +73,33 @@
       "cycle:market_stress",
       "radar:banking",
       "radar:nonbank",
-      "regions:euro_area",
-      "regions:china",
       "regions:japan",
-      "regions:korea",
-      "regions:uk",
       "regions:canada",
       "regions:australia",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
     "euro_area": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
-        "growth": "degraded",
+        "growth": "up",
         "policy": "down",
         "credit": "down",
         "market": "up",
         "fx": "neutral"
       },
       "indicators": [
+        {
+          "id": "oecd_bci_ea20",
+          "name": "OECD 欧元区商业信心指数 BCI",
+          "value": 99.9078,
+          "date": "2026-08-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": 0.382
+          }
+        },
         {
           "id": "ecb_dfr",
           "name": "ECB 存款便利利率",
@@ -158,21 +163,29 @@
         }
       ],
       "light": "orange",
-      "summary": "欧元区：增长缺失、信贷走弱、市场走强，区域橙灯",
-      "degraded": [
-        "oecd_bci_ea20"
-      ]
+      "summary": "欧元区：增长走强、信贷走弱、市场走强，区域橙灯",
+      "degraded": []
     },
     "china": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
-        "growth": "degraded",
+        "growth": "down",
         "policy": "neutral",
         "credit": "up",
         "market": "up",
         "fx": "up"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_cn",
+          "name": "OECD 中国综合领先指标 CLI",
+          "value": 98.1046,
+          "date": "2026-08-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.46
+          }
+        },
         {
           "id": "bis_policy_cn",
           "name": "BIS 中国央行政策利率",
@@ -214,6 +227,13 @@
           }
         },
         {
+          "id": "oecd_bci_cn",
+          "name": "OECD 中国商业信心指数 BCI",
+          "value": 98.3586,
+          "date": "2026-08-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_cn",
           "name": "BIS 中国住宅房价指数",
           "value": 113.9785,
@@ -221,23 +241,30 @@
           "unit": "指数"
         }
       ],
-      "light": "green",
-      "summary": "中国：增长缺失、信贷走强、市场走强，区域绿灯",
-      "degraded": [
-        "oecd_cli_cn",
-        "oecd_bci_cn"
-      ]
+      "light": "yellow",
+      "summary": "中国：增长走弱、信贷走强、市场走强，区域黄灯",
+      "degraded": []
     },
     "japan": {
       "status": "degraded",
       "cycle": {
-        "growth": "degraded",
+        "growth": "neutral",
         "policy": "down",
         "credit": "neutral",
         "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_jp",
+          "name": "OECD 日本综合领先指标 CLI",
+          "value": 100.3034,
+          "date": "2026-08-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": 0.081
+          }
+        },
         {
           "id": "bis_policy_jp",
           "name": "BIS 日本央行政策利率",
@@ -277,23 +304,32 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长缺失、信贷平稳、市场缺失，区域黄灯",
+      "summary": "日本：增长平稳、信贷平稳、市场缺失，区域黄灯",
       "degraded": [
-        "oecd_cli_jp",
         "fred_nikkei225",
         "oecd_bci_jp"
       ]
     },
     "korea": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
-        "growth": "degraded",
+        "growth": "up",
         "policy": "down",
         "credit": "down",
         "market": "down",
         "fx": "neutral"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_kr",
+          "name": "OECD 韩国综合领先指标 CLI",
+          "value": 102.8694,
+          "date": "2026-08-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": 0.488
+          }
+        },
         {
           "id": "bis_policy_kr",
           "name": "BIS 韩国央行政策利率",
@@ -335,6 +371,13 @@
           }
         },
         {
+          "id": "oecd_bci_kr",
+          "name": "OECD 韩国商业信心指数 BCI",
+          "value": 99.615,
+          "date": "2026-08-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_kr",
           "name": "BIS 韩国住宅房价指数",
           "value": 144.8397,
@@ -343,22 +386,29 @@
         }
       ],
       "light": "red",
-      "summary": "韩国：增长缺失、信贷走弱、市场走弱，区域红灯",
-      "degraded": [
-        "oecd_cli_kr",
-        "oecd_bci_kr"
-      ]
+      "summary": "韩国：增长走强、信贷走弱、市场走弱，区域红灯",
+      "degraded": []
     },
     "uk": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
-        "growth": "degraded",
+        "growth": "up",
         "policy": "neutral",
         "credit": "down",
         "market": "up",
         "fx": "neutral"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_gb",
+          "name": "OECD 英国综合领先指标 CLI",
+          "value": 101.1102,
+          "date": "2026-08-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": 0.506
+          }
+        },
         {
           "id": "bis_policy_gb",
           "name": "BIS 英国央行政策利率",
@@ -400,6 +450,13 @@
           }
         },
         {
+          "id": "oecd_bci_gb",
+          "name": "OECD 英国商业信心指数 BCI",
+          "value": 99.1149,
+          "date": "2026-08-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_gb",
           "name": "BIS 英国住宅房价指数",
           "value": 171.4048,
@@ -408,22 +465,29 @@
         }
       ],
       "light": "yellow",
-      "summary": "英国：增长缺失、信贷走弱、市场走强，区域黄灯",
-      "degraded": [
-        "oecd_cli_gb",
-        "oecd_bci_gb"
-      ]
+      "summary": "英国：增长走强、信贷走弱、市场走强，区域黄灯",
+      "degraded": []
     },
     "canada": {
       "status": "degraded",
       "cycle": {
-        "growth": "degraded",
+        "growth": "up",
         "policy": "neutral",
         "credit": "neutral",
         "market": "up",
         "fx": "down"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_ca",
+          "name": "OECD 加拿大综合领先指标 CLI",
+          "value": 101.9858,
+          "date": "2026-08-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": 0.472
+          }
+        },
         {
           "id": "bis_policy_ca",
           "name": "BIS 加拿大央行政策利率",
@@ -473,22 +537,31 @@
         }
       ],
       "light": "yellow",
-      "summary": "加拿大：增长缺失、信贷平稳、市场走强，区域黄灯",
+      "summary": "加拿大：增长走强、信贷平稳、市场走强，区域黄灯",
       "degraded": [
-        "oecd_cli_ca",
         "oecd_bci_ca"
       ]
     },
     "australia": {
       "status": "degraded",
       "cycle": {
-        "growth": "degraded",
+        "growth": "neutral",
         "policy": "down",
         "credit": "up",
         "market": "up",
         "fx": "neutral"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_au",
+          "name": "OECD 澳大利亚综合领先指标 CLI",
+          "value": 100.0414,
+          "date": "2026-08-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.133
+          }
+        },
         {
           "id": "bis_policy_au",
           "name": "BIS 澳大利亚央行政策利率",
@@ -538,22 +611,31 @@
         }
       ],
       "light": "yellow",
-      "summary": "澳大利亚：增长缺失、信贷走强、市场走强，区域黄灯",
+      "summary": "澳大利亚：增长平稳、信贷走强、市场走强，区域黄灯",
       "degraded": [
-        "oecd_cli_au",
         "oecd_bci_au"
       ]
     },
     "india": {
       "status": "degraded",
       "cycle": {
-        "growth": "degraded",
+        "growth": "up",
         "policy": "degraded",
         "credit": "up",
         "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_in",
+          "name": "OECD 印度综合领先指标 CLI",
+          "value": 101.604,
+          "date": "2026-08-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": 0.411
+          }
+        },
         {
           "id": "bis_tc_in_gdp",
           "name": "BIS 印度私人非金融信贷/GDP",
@@ -593,23 +675,32 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长缺失、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
-        "oecd_cli_in",
         "bis_policy_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
-        "growth": "degraded",
+        "growth": "down",
         "policy": "up",
         "credit": "neutral",
         "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_br",
+          "name": "OECD 巴西综合领先指标 CLI",
+          "value": 102.6276,
+          "date": "2026-08-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.807
+          }
+        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -651,6 +742,13 @@
           }
         },
         {
+          "id": "oecd_bci_br",
+          "name": "OECD 巴西商业信心指数 BCI",
+          "value": 99.5684,
+          "date": "2026-08-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 227.2867,
@@ -658,12 +756,9 @@
           "unit": "指数"
         }
       ],
-      "light": "green",
-      "summary": "巴西：增长缺失、信贷平稳、市场平稳，区域绿灯",
-      "degraded": [
-        "oecd_cli_br",
-        "oecd_bci_br"
-      ]
+      "light": "yellow",
+      "summary": "巴西：增长走弱、信贷平稳、市场平稳，区域黄灯",
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -751,25 +846,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "韩国综指飙涨超3%，日韩存储芯片股爆发 - 网易新闻客户端",
-      "source": "网易新闻客户端",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1yendVY3JvQzB5dkFvdnFVOHU4LTNSVTdvQk15V2lYcXhGOVhWT3lCcFM3bTFXX2sxYXJqN1lqV3dxZkZjeVNqTTc5d19qMjVIY1dqLTVQM21hdFA5?oc=5",
-      "published": "2026-09-07T01:02:00+00:00"
+      "category": "货币政策",
+      "title": "特朗普又对美联储放狠话：不降息就停贸易！经济学家集体警告 - FX168财经",
+      "source": "FX168财经",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1MekxpRElUVXpMV3BBT0JhdXlFOGlycUFBVXFmemRXSElOS2gwY1BZblE3MUN3emdQc200SHJ3anFTUXR3b0JpbmVwcVllNW5OUUExajY5dnB1Ulp6blZ6MWc5TWEycV9DZFdKazIyMmJ2Mk9NMjcyUA?oc=5",
+      "published": "2026-09-07T10:16:34+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "怕个股见顶又不想错过行情，韩国散户想出一套调仓方案 - Sohu",
-      "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPbGNReFZidHByYzhsdk9SWkc4M0pmTUs5NlpnVi10TWVVSFRfWEZhd0Z0NHJ3cVA3NHBlcThrRHZlamVWdEk0UVNQRGlPZGNHdFdQNnNkNk56blZQNlBtTDg2VFZjYldpMlJCdzE2bEx5TldVSGVLRG1BWWFCNnFxQnZYb2M4UlF2ZlhtZg?oc=5",
-      "published": "2026-09-07T00:29:00+00:00"
+      "title": "广钢气体与AirFirst达成战略合作 推进Super-N方案落地韩国半导体市场 - 观点网",
+      "source": "观点网",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBtLTZfUjFkNlBURk9DUjVmbEVuN0QtNEZuSUMxeXE0UEcyRTBGLTBreHFKWmFHOVdtM2pnZlg0Q2xKcGJCMGdDOFhLQ0VObE5HMjVwa2JBbEl0RGt1eFJvNV9n?oc=5",
+      "published": "2026-09-07T09:55:03+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "首届越韩知识对接论坛取得圆满成功 - Thông tấn xã Việt Nam",
-      "source": "Thông tấn xã Việt Nam",
-      "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxOblZnQ3RrbGNXVkhMTzgtUi1aZGRubjB6SkFkdjBhOTh6a0ZaWTZudnJDbVNIaWdjN1RQeXp0dHVPUWRzM3k1VUZFMVpvOU01YkxwM2Q0STJxLWRCdnJuem5PelA5TGo0UEJDVkJsQm90bFp4eDdjb0N0S1VMYm5ya3NvSG51bFVWRm1rQlBaSzlyakZJSUI5Y2dkMEd2QlpiT3dwZm1LYWpINVFxWnM2MWw0SGpRRHNwY3QwNlVSM1p6N3hCbUp3QTBFRlJ1VXQ0T3hKM2lMNnAycWFSVjRHWmZLLUxYMFVUckN4aWp2YUd2N01yQVFNSk5OaWNac3FkQjNnVk9rVUdsbGJ2VjhVYXBzS3NEbVMwTDllRHRsSFN0bDVM?oc=5",
-      "published": "2026-09-07T00:21:16+00:00"
+      "category": "货币政策",
+      "title": "道明证券预计8月通胀仍将保持温和，足以让美联储在9月维持利率不变，且核心通胀也似乎得到控制。 - Moomoo",
+      "source": "Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQMmRzNkRmN3UtY25iMHA0dzZ1SkduUUY2R21Mc1p0SllPZ1d5V3liS244ampEbzRmMm1nMWxmN3hUdm50dFpsTDhOVjY1SnRsZ3VqZkVmV1gwLTlRdFNwVjNrYlBWV2s2elpNZEY4Wk1IZWhtYzlZOHlfbGNnNm5kTm5uRG5SeFV3eHZObUdKNnlfeUZMSTd1LUZXWDloR0swUW9NelpUMG9Rb29RLXQzV2NDTmhsMkNIUUFVR2dpbFBOWllTMlN3?oc=5",
+      "published": "2026-09-07T09:49:06+00:00"
     }
   ]
 }
