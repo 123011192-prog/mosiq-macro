@@ -798,32 +798,32 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.77,
-      "date": "2026-09-03",
-      "change_20d_bp": 5.0,
+      "value": 4.78,
+      "date": "2026-09-04",
+      "change_20d_bp": 6.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.25,
-      "date": "2026-09-03",
-      "change_20d_bp": 0.0,
+      "value": 5.24,
+      "date": "2026-09-04",
+      "change_20d_bp": -1.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.34,
-      "date": "2026-09-03",
-      "change_20d_bp": 9.0,
+      "value": 4.37,
+      "date": "2026-09-04",
+      "change_20d_bp": 12.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 43.0,
-      "date": "2026-09-03"
+      "value_bp": 41.0,
+      "date": "2026-09-04"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 5.0,
-      "us30y_change_20d_bp": 0.0,
+      "us10y_change_20d_bp": 6.0,
+      "us30y_change_20d_bp": -1.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -858,25 +858,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
-      "published": "2026-09-08T12:53:46+00:00"
+      "category": "地缘冲突",
+      "title": "S & P 500 falls as AI worries hit software makers",
+      "source": "finance.yahoo.com",
+      "url": "https://finance.yahoo.com/markets/articles/wall-st-futures-slip-oil-091327897.html",
+      "published": "2026-09-08T20:00:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "未来资产管理旗下全球X日本在日本上市韩国半导体ETF - 亚洲日报",
-      "source": "亚洲日报",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1yYnlqRzJPM3I4MExmYkRmVFFwckxCZ1A5MHlFaU11UXQxSVFIU3E5bDNBRUllbWZsOFh4Y2JEU0ZGNFhOOGlGaUFUbnhUTzhJSzZvdXJZRzJqYkU?oc=5",
-      "published": "2026-09-08T11:40:00+00:00"
+      "category": "地缘冲突",
+      "title": "FxWirePro : GBP / USD edges lower amid geopolitical tensions and inflation fears",
+      "source": "econotimes.com",
+      "url": "http://www.econotimes.com/FxWirePro-GBP-USD-edges-lower-amid-geopolitical-tensions-and-inflation-fears-1751547",
+      "published": "2026-09-08T19:30:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "历史的镜鉴：欧央行与美联储的利率抉择 - news.fx678.com",
-      "source": "news.fx678.com",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA0UjBjaTVKZnhpeUFPTVBleDNZQmdtUEJaUnZ1elI4UWhZbUswYjU2U29ZQVFjaTVtdThsTGxWSlUtT1dQZGtHUmxWX1FWLVBxTkZMeHlrMG9lMHM?oc=5",
-      "published": "2026-09-08T11:31:00+00:00"
+      "category": "地缘冲突",
+      "title": "Douglas Elliman ( DOUG ) Is Down , But Is the Stock a Bargain ?",
+      "source": "finance.yahoo.com",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/douglas-elliman-doug-down-stock-165348999.html",
+      "published": "2026-09-08T17:30:00+00:00"
     }
   ]
 }
