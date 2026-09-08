@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-04",
+  "as_of": "2026-09-08",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,15 +10,15 @@
   "core": {
     "baa10y": 1.57,
     "baa10y_pct": 9.437751,
-    "curve_10y3m": 0.88,
+    "curve_10y3m": 0.87,
     "curve_inverted": false
   },
   "cycle": {
     "growth": "degraded",
     "inflation": "degraded",
-    "liquidity": "neutral",
+    "liquidity": "degraded",
     "credit": "degraded",
-    "policy": "neutral",
+    "policy": "degraded",
     "market_stress": "degraded"
   },
   "confirmations": [
@@ -63,15 +63,18 @@
     }
   ],
   "health": {
-    "data_asof": "2026-09-03",
-    "stale_count": 25,
+    "data_asof": "2026-09-07",
+    "stale_count": 36,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
       "cycle:inflation",
+      "cycle:liquidity",
       "cycle:credit",
+      "cycle:policy",
       "cycle:market_stress",
       "radar:banking",
+      "radar:credit",
       "radar:nonbank",
       "regions:japan",
       "regions:canada",
@@ -288,11 +291,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 66399.84,
-          "date": "2026-09-07",
+          "value": 65269.33,
+          "date": "2026-09-08",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -8.24
+            "drawdown_pct": -9.81
           }
         },
         {
@@ -797,13 +800,13 @@
     "us10y": {
       "value": 4.77,
       "date": "2026-09-03",
-      "change_20d_bp": 8.0,
+      "change_20d_bp": 5.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.25,
       "date": "2026-09-03",
-      "change_20d_bp": 3.0,
+      "change_20d_bp": 0.0,
       "source": "fred"
     },
     "us02y": {
@@ -819,8 +822,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 8.0,
-      "us30y_change_20d_bp": 3.0,
+      "us10y_change_20d_bp": 5.0,
+      "us30y_change_20d_bp": 0.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -855,25 +858,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "China exports surge on demand for high - tech , AI",
-      "source": "rte.ie",
-      "url": "https://www.rte.ie/news/business/2026/0908/1590690-chinas-exports-surge-on-demand-for-high-tech-ai/",
-      "published": "2026-09-08T07:30:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "China exports surge 25 % as demand for high - tech , AI help prop up economic growth",
-      "source": "businesstimes.com.sg",
-      "url": "https://www.businesstimes.com.sg/international/global/chinas-exports-surge-25-demand-high-tech-ai-help-prop-economic-growth",
-      "published": "2026-09-08T07:30:00+00:00"
+      "category": "科技产业链",
+      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
+      "published": "2026-09-08T12:53:46+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "Asian Stocks Mixed as Korean Chipmakers Rally",
-      "source": "econotimes.com",
-      "url": "http://www.econotimes.com/Asian-Stocks-Mixed-as-Korean-Chipmakers-Rally-1751483",
-      "published": "2026-09-08T06:00:00+00:00"
+      "title": "未来资产管理旗下全球X日本在日本上市韩国半导体ETF - 亚洲日报",
+      "source": "亚洲日报",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1yYnlqRzJPM3I4MExmYkRmVFFwckxCZ1A5MHlFaU11UXQxSVFIU3E5bDNBRUllbWZsOFh4Y2JEU0ZGNFhOOGlGaUFUbnhUTzhJSzZvdXJZRzJqYkU?oc=5",
+      "published": "2026-09-08T11:40:00+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "历史的镜鉴：欧央行与美联储的利率抉择 - news.fx678.com",
+      "source": "news.fx678.com",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA0UjBjaTVKZnhpeUFPTVBleDNZQmdtUEJaUnZ1elI4UWhZbUswYjU2U29ZQVFjaTVtdThsTGxWSlUtT1dQZGtHUmxWX1FWLVBxTkZMeHlrMG9lMHM?oc=5",
+      "published": "2026-09-08T11:31:00+00:00"
     }
   ]
 }
