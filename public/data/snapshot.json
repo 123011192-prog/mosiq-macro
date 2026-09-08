@@ -67,14 +67,12 @@
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:ecb:ecb_loan_idx",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
       "cycle:market_stress",
       "radar:banking",
       "radar:nonbank",
-      "regions:euro_area",
       "regions:japan",
       "regions:canada",
       "regions:australia",
@@ -83,7 +81,7 @@
   },
   "regions": {
     "euro_area": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "up",
         "policy": "down",
@@ -155,13 +153,18 @@
           "value": 186.6924,
           "date": "2026-07-01",
           "unit": "指数"
+        },
+        {
+          "id": "ecb_loan_idx",
+          "name": "ECB 非金融企业贷款指数",
+          "value": 129.6322,
+          "date": "2026-07-01",
+          "unit": "指数"
         }
       ],
       "light": "orange",
       "summary": "欧元区：增长走强、信贷走弱、市场走强，区域橙灯",
-      "degraded": [
-        "ecb_loan_idx"
-      ]
+      "degraded": []
     },
     "china": {
       "status": "ok",
@@ -852,25 +855,25 @@
   },
   "world_brief": [
     {
-      "category": "能源",
-      "title": "Russia Vows to Keep Selling Oil to India Despite U . S . Tariff Threat",
-      "source": "oilprice.com",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Russia-Vows-to-Keep-Selling-Oil-to-India-Despite-US-Tariff-Threat.html",
-      "published": "2026-09-07T20:15:00+00:00"
+      "category": "地缘冲突",
+      "title": "China exports surge on demand for high - tech , AI",
+      "source": "rte.ie",
+      "url": "https://www.rte.ie/news/business/2026/0908/1590690-chinas-exports-surge-on-demand-for-high-tech-ai/",
+      "published": "2026-09-08T07:30:00+00:00"
     },
     {
       "category": "地缘冲突",
-      "title": "FWO Seeks to Recover $432 Million Pipeline Investment in 4 Years",
-      "source": "propakistani.pk",
-      "url": "https://propakistani.pk/2026/09/07/fwo-seeks-to-recover-432-million-pipeline-investment-in-4-years/",
-      "published": "2026-09-07T06:45:00+00:00"
+      "title": "China exports surge 25 % as demand for high - tech , AI help prop up economic growth",
+      "source": "businesstimes.com.sg",
+      "url": "https://www.businesstimes.com.sg/international/global/chinas-exports-surge-25-demand-high-tech-ai-help-prop-economic-growth",
+      "published": "2026-09-08T07:30:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "Markets decline amid West Asia conflict , concerns over possible US interest - rate hike",
-      "source": "tribuneindia.com",
-      "url": "https://www.tribuneindia.com/news/business/markets-decline-amid-west-asia-conflict-concerns-over-possible-us-interest-rate-hike/",
-      "published": "2026-09-07T06:30:00+00:00"
+      "category": "科技产业链",
+      "title": "Asian Stocks Mixed as Korean Chipmakers Rally",
+      "source": "econotimes.com",
+      "url": "http://www.econotimes.com/Asian-Stocks-Mixed-as-Korean-Chipmakers-Rally-1751483",
+      "published": "2026-09-08T06:00:00+00:00"
     }
   ]
 }
