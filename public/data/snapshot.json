@@ -363,13 +363,13 @@
           }
         },
         {
-          "id": "oecd_share_kr",
+          "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 330.6228,
-          "date": "2026-08-01",
+          "value": 11887.87,
+          "date": "2026-09-08",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -21.62
+            "drawdown_pct": -18.77
           }
         },
         {
@@ -859,24 +859,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "韩国综指飙升，日韩芯片股上涨，软银5日大涨超37%，SK海力士涨3%，金银油集体走高 - 新浪财经",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5rRW1uWmxGSmY5a29BV0JOVG5HWURzZUpVOGU3VUk1YWRfZ25EWkR0TEdTdmJqbTdrSE41QlZtOTRzZFBQTnRadlJPR1NZWUtYbENkNDRDVGhRTzVPczZGRHQ2RGNRREJYTkJ6a2t3?oc=5",
-      "published": "2026-09-09T01:14:16+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "韩国股市在中东不确定性中恢复7000点，半导体股表现强劲 - 亚洲日报",
+      "title": "[半导体三强登陆] 半导体闭关主义必败…韩国制造竞争力维持需扩展生态系统 - 亚洲日报",
       "source": "亚洲日报",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5tVTNvdVNsc1I1TE1kc1o0Vlc0eEVJRlVKdmRiSlRCTEtpTWY4OEJjSFRPa0hfRWhJVFVlTVJWdnJ2MVJPODFZUlI5TjVhUmU5NkRuODJ3MnZVWG8?oc=5",
-      "published": "2026-09-09T00:20:00+00:00"
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9UNHU4aHQ1YmhjNWMteF9HVU00aklCbF9la2dIRVgxeWNYdDlIeUlIa040RVVBX1hYOUM2dHVyTGlTcEJkd3JvaE8yWk9LTnc1SWdlQVlVN3kycnM?oc=5",
+      "published": "2026-09-09T09:04:10+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "“SOL人工智能半导体材料·零部件·设备”ETF近1个月收益率23.14% - 아시아경제",
-      "source": "아시아경제",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE94b0NUdG1jSzJVVGNLcFduMVZMM08xZDItSVRMVW0xbmdjbzg2NV9OZmRSWGRFME5UNnRvUERoV3pOWi1LMlZBYlhJbFRXcUNfNk1Jd3dXdHNKUE9lRnpJU2tjQXg?oc=5",
-      "published": "2026-09-08T23:59:40+00:00"
+      "title": "韩国因AI用电需求上升重新评估新建核电站 - 深圳核博会",
+      "source": "深圳核博会",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBHUHloUXlxUWFlcW1icGdCNEVvQVAwTjZCbkxfandyY1huTjA1ZExVMl9BcTY0MFJ6S2pqTUwwQXVKQWNsa0lTNWtuTjI4NnhJNFE?oc=5",
+      "published": "2026-09-09T07:01:00+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "OpenAI韩国负责人：与三星电子的下一代芯片合作取得良好进展 - 凤凰网科技",
+      "source": "凤凰网科技",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1ZOWhxeklPNmhycDkwWTBKWU5DSVRleGkyWHdscENDeHYya2J0QlNnY2wtaUdRckVMbmFDcGpZMFgtaThEVHpueko0NUk?oc=5",
+      "published": "2026-09-09T06:26:33+00:00"
     }
   ]
 }
