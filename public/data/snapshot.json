@@ -829,13 +829,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.78,
-        "date": "2026-09-04",
+        "value": 4.8,
+        "date": "2026-09-08",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.24,
-        "date": "2026-09-04",
+        "value": 5.25,
+        "date": "2026-09-08",
         "source": "tushare"
       }
     }
@@ -858,25 +858,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "S & P 500 falls as AI worries hit software makers",
-      "source": "finance.yahoo.com",
-      "url": "https://finance.yahoo.com/markets/articles/wall-st-futures-slip-oil-091327897.html",
-      "published": "2026-09-08T20:00:00+00:00"
+      "category": "科技产业链",
+      "title": "韩国综指飙升，日韩芯片股上涨，软银5日大涨超37%，SK海力士涨3%，金银油集体走高 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5rRW1uWmxGSmY5a29BV0JOVG5HWURzZUpVOGU3VUk1YWRfZ25EWkR0TEdTdmJqbTdrSE41QlZtOTRzZFBQTnRadlJPR1NZWUtYbENkNDRDVGhRTzVPczZGRHQ2RGNRREJYTkJ6a2t3?oc=5",
+      "published": "2026-09-09T01:14:16+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "FxWirePro : GBP / USD edges lower amid geopolitical tensions and inflation fears",
-      "source": "econotimes.com",
-      "url": "http://www.econotimes.com/FxWirePro-GBP-USD-edges-lower-amid-geopolitical-tensions-and-inflation-fears-1751547",
-      "published": "2026-09-08T19:30:00+00:00"
+      "category": "科技产业链",
+      "title": "韩国股市在中东不确定性中恢复7000点，半导体股表现强劲 - 亚洲日报",
+      "source": "亚洲日报",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5tVTNvdVNsc1I1TE1kc1o0Vlc0eEVJRlVKdmRiSlRCTEtpTWY4OEJjSFRPa0hfRWhJVFVlTVJWdnJ2MVJPODFZUlI5TjVhUmU5NkRuODJ3MnZVWG8?oc=5",
+      "published": "2026-09-09T00:20:00+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "Douglas Elliman ( DOUG ) Is Down , But Is the Stock a Bargain ?",
-      "source": "finance.yahoo.com",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/douglas-elliman-doug-down-stock-165348999.html",
-      "published": "2026-09-08T17:30:00+00:00"
+      "category": "科技产业链",
+      "title": "“SOL人工智能半导体材料·零部件·设备”ETF近1个月收益率23.14% - 아시아경제",
+      "source": "아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE94b0NUdG1jSzJVVGNLcFduMVZMM08xZDItSVRMVW0xbmdjbzg2NV9OZmRSWGRFME5UNnRvUERoV3pOWi1LMlZBYlhJbFRXcUNfNk1Jd3dXdHNKUE9lRnpJU2tjQXg?oc=5",
+      "published": "2026-09-08T23:59:40+00:00"
     }
   ]
 }
