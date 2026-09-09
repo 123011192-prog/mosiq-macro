@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-09",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,13 +10,13 @@
   "core": {
     "baa10y": 1.57,
     "baa10y_pct": 9.437751,
-    "curve_10y3m": 0.87,
+    "curve_10y3m": 0.86,
     "curve_inverted": false
   },
   "cycle": {
     "growth": "degraded",
     "inflation": "degraded",
-    "liquidity": "degraded",
+    "liquidity": "neutral",
     "credit": "degraded",
     "policy": "degraded",
     "market_stress": "degraded"
@@ -63,13 +63,12 @@
     }
   ],
   "health": {
-    "data_asof": "2026-09-07",
-    "stale_count": 36,
+    "data_asof": "2026-09-08",
+    "stale_count": 32,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
       "cycle:inflation",
-      "cycle:liquidity",
       "cycle:credit",
       "cycle:policy",
       "cycle:market_stress",
@@ -291,11 +290,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 65269.33,
-          "date": "2026-09-08",
+          "value": 65142.78,
+          "date": "2026-09-09",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -9.81
+            "drawdown_pct": -9.98
           }
         },
         {
@@ -800,19 +799,19 @@
     "us10y": {
       "value": 4.78,
       "date": "2026-09-04",
-      "change_20d_bp": 6.0,
+      "change_20d_bp": 8.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.24,
       "date": "2026-09-04",
-      "change_20d_bp": -1.0,
+      "change_20d_bp": 0.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.37,
       "date": "2026-09-04",
-      "change_20d_bp": 12.0,
+      "change_20d_bp": 15.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -822,8 +821,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 6.0,
-      "us30y_change_20d_bp": -1.0,
+      "us10y_change_20d_bp": 8.0,
+      "us30y_change_20d_bp": 0.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -858,25 +857,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "[半导体三强登陆] 半导体闭关主义必败…韩国制造竞争力维持需扩展生态系统 - 亚洲日报",
-      "source": "亚洲日报",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9UNHU4aHQ1YmhjNWMteF9HVU00aklCbF9la2dIRVgxeWNYdDlIeUlIa040RVVBX1hYOUM2dHVyTGlTcEJkd3JvaE8yWk9LTnc1SWdlQVlVN3kycnM?oc=5",
-      "published": "2026-09-09T09:04:10+00:00"
+      "category": "货币政策",
+      "title": "Oil extends gains as traders reassess supply risks , inflation outlook , path for interest rates",
+      "source": "geo.tv",
+      "url": "https://www.geo.tv/latest/681268-oil-extends-gains-as-traders-reassess-supply-risks-inflation-outlook-path-for-interest-rates",
+      "published": "2026-09-09T06:15:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩国因AI用电需求上升重新评估新建核电站 - 深圳核博会",
-      "source": "深圳核博会",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBHUHloUXlxUWFlcW1icGdCNEVvQVAwTjZCbkxfandyY1huTjA1ZExVMl9BcTY0MFJ6S2pqTUwwQXVKQWNsa0lTNWtuTjI4NnhJNFE?oc=5",
-      "published": "2026-09-09T07:01:00+00:00"
+      "title": "Global Market : Nikkei gains as AI , semiconductor stocks lift Japanese shares",
+      "source": "economictimes.indiatimes.com",
+      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-nikkei-gains-as-ai-semiconductor-stocks-lift-japanese-shares/articleshow/133952040.cms",
+      "published": "2026-09-09T05:00:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "OpenAI韩国负责人：与三星电子的下一代芯片合作取得良好进展 - 凤凰网科技",
-      "source": "凤凰网科技",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1ZOWhxeklPNmhycDkwWTBKWU5DSVRleGkyWHdscENDeHYya2J0QlNnY2wtaUdRckVMbmFDcGpZMFgtaThEVHpueko0NUk?oc=5",
-      "published": "2026-09-09T06:26:33+00:00"
+      "category": "地缘冲突",
+      "title": "S & P 500 falls as AI worries hit software makers",
+      "source": "freemalaysiatoday.com",
+      "url": "https://www.freemalaysiatoday.com/category/business/2026/09/09/s-p-500-falls-as-ai-worries-hit-software-makers",
+      "published": "2026-09-09T00:30:00+00:00"
     }
   ]
 }
