@@ -67,11 +67,6 @@
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
-      "refresh:oecd:oecd_share_in",
-      "refresh:oecd:oecd_cli_br",
-      "refresh:oecd:oecd_bci_br",
-      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -81,8 +76,7 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -109,11 +103,11 @@
         {
           "id": "ecb_dfr",
           "name": "ECB 存款便利利率",
-          "value": 2.25,
-          "date": "2026-06-17",
+          "value": 2.5,
+          "date": "2026-09-16",
           "unit": "%",
           "signal": {
-            "6m_change_pp": 0.25
+            "6m_change_pp": 0.5
           }
         },
         {
@@ -637,7 +631,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -662,6 +656,16 @@
           }
         },
         {
+          "id": "oecd_share_in",
+          "name": "OECD 印度股价指数（NIFTY 代理）",
+          "value": 284.5038,
+          "date": "2026-08-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -8.5
+          }
+        },
+        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 81.08,
@@ -680,23 +684,32 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
         "bis_policy_in",
-        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
-        "growth": "degraded",
+        "growth": "down",
         "policy": "up",
         "credit": "neutral",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_br",
+          "name": "OECD 巴西综合领先指标 CLI",
+          "value": 102.6276,
+          "date": "2026-08-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.807
+          }
+        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -718,6 +731,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 345.572,
+          "date": "2026-08-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -10.52
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 114.73,
@@ -728,6 +751,13 @@
           }
         },
         {
+          "id": "oecd_bci_br",
+          "name": "OECD 巴西商业信心指数 BCI",
+          "value": 99.5684,
+          "date": "2026-08-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 227.2867,
@@ -735,13 +765,9 @@
           "unit": "指数"
         }
       ],
-      "light": "green",
-      "summary": "巴西：增长缺失、信贷平稳、市场缺失，区域绿灯",
-      "degraded": [
-        "oecd_cli_br",
-        "oecd_share_br",
-        "oecd_bci_br"
-      ]
+      "light": "yellow",
+      "summary": "巴西：增长走弱、信贷平稳、市场平稳，区域黄灯",
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -829,25 +855,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "白宫强力施压美联储，9月利率博弈白热化，美联储面临独立性大考 - 新浪网",
+      "category": "科技产业链",
+      "title": "SK 海力士节水目标：到 2030 年韩国生产基地累计节约 6 亿吨水 - 新浪网",
       "source": "新浪网",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQcm5UdGhIMGVSWV9jdXo3UGVzcUxxXzNNcTVnaG5kRVJlVGU4OEpRaDNob3kwUno4dzhKZV9PbEtQMVJmQ205Qkcxb2pLcjZULTNvNW9hMVhGNkZhX21ITzB6Y1lMZXNUTXNoaDM3c0xnRmNySTRjQXpWQ3ZIdlQtRV9MMEVvWmhzUnYtMV9XSkt5elExX195NGJaOUo3S3R0d2trLS1Waw?oc=5",
-      "published": "2026-09-10T08:56:21+00:00"
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOODVka2dHMElLNmxnbXFmc2pzVU5hR1NoZGtOSlNVUFF5dVhuQXRqenpBZ1NSMUwtb1pnN3RwWlpieGl6TTdqSFBiV1NKM1BDMVo5LXpkamNLQWNBVWlfeGgtcnZ1c0otS2tfbGZpOXB5bFE5amlDaGllX19JNzdXN2J3?oc=5",
+      "published": "2026-09-10T12:25:50+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "愈演愈烈的中国攻势......“韩国半导体亟须以一体化团队应对” - 매일경제",
+      "title": "有“三星海力士”在,韩国却处于劣势?......2030年半导体“灭亡战” [半导体Plus] - 매일경제",
       "source": "매일경제",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1zOW0wLW9fbHBaUnpyZVdIMjVtMVZObWxjNEhWcWpLUG5GZTYtc3lDTmh3a0xrajZEU0xWZkJYMUR6TWlZdUhzYlBQM3JaMFpLWmxZ?oc=5",
-      "published": "2026-09-10T08:53:36+00:00"
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5yZ3dwQUVPRmlkcGJIb2Y1RmFzdXVNdGhTcGFaSGwzRnRfS1BjTldsS3RNSFFuUnRqQ3NFWUwwaTZxVEktZnZXY2ZpcEJyYXZZQTQw?oc=5",
+      "published": "2026-09-10T11:12:24+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "受益三星、SK海力士扩产 韩国多家半导体设备商积压订单翻番 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBPemxFemNST3hJMmVrUkNGTTNzNEU5TDdxZ1pucVNlRFdwbzZ5V1huX2pXei1ra0JQaUgxaUZtQUlPd1llZHlOUA?oc=5",
-      "published": "2026-09-10T08:06:39+00:00"
+      "title": "韩国三星在日本横滨开设半导体研究基地 - 共同网",
+      "source": "共同网",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBIbUdEd2hQcGh3UXVrTm9SSzZiNXZOMEliX2NwWm5fOG03UThiUUtfMDJvR2s4a0hIX0RwWTZMNkY3c2RkcXFxQ0JTbEx3STFzZVZkX21pYw?oc=5",
+      "published": "2026-09-10T11:00:56+00:00"
     }
   ]
 }
