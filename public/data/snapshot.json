@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.57,
-    "baa10y_pct": 9.437751,
+    "baa10y_pct": 9.490369,
     "curve_10y3m": 0.86,
     "curve_inverted": false
   },
@@ -18,7 +18,7 @@
     "inflation": "degraded",
     "liquidity": "neutral",
     "credit": "degraded",
-    "policy": "degraded",
+    "policy": "neutral",
     "market_stress": "degraded"
   },
   "confirmations": [
@@ -64,16 +64,14 @@
   ],
   "health": {
     "data_asof": "2026-09-08",
-    "stale_count": 32,
+    "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
-      "cycle:policy",
       "cycle:market_stress",
       "radar:banking",
-      "radar:credit",
       "radar:nonbank",
       "regions:japan",
       "regions:canada",
@@ -797,44 +795,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.78,
-      "date": "2026-09-04",
-      "change_20d_bp": 8.0,
+      "value": 4.8,
+      "date": "2026-09-08",
+      "change_20d_bp": 10.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.24,
-      "date": "2026-09-04",
-      "change_20d_bp": 0.0,
+      "value": 5.25,
+      "date": "2026-09-08",
+      "change_20d_bp": 1.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.37,
-      "date": "2026-09-04",
-      "change_20d_bp": 15.0,
+      "value": 4.39,
+      "date": "2026-09-08",
+      "change_20d_bp": 17.0,
       "source": "fred"
     },
     "spread_2s10s": {
       "value_bp": 41.0,
-      "date": "2026-09-04"
+      "date": "2026-09-08"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 8.0,
-      "us30y_change_20d_bp": 0.0,
+      "us10y_change_20d_bp": 10.0,
+      "us30y_change_20d_bp": 1.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.8,
-        "date": "2026-09-08",
+        "value": 4.83,
+        "date": "2026-09-09",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.25,
-        "date": "2026-09-08",
+        "value": 5.28,
+        "date": "2026-09-09",
         "source": "tushare"
       }
     }
@@ -857,25 +855,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "Oil extends gains as traders reassess supply risks , inflation outlook , path for interest rates",
-      "source": "geo.tv",
-      "url": "https://www.geo.tv/latest/681268-oil-extends-gains-as-traders-reassess-supply-risks-inflation-outlook-path-for-interest-rates",
-      "published": "2026-09-09T06:15:00+00:00"
+      "category": "科技产业链",
+      "title": "韩国三星在日本横滨开设半导体研究基地 - 共同网",
+      "source": "共同网",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBIbUdEd2hQcGh3UXVrTm9SSzZiNXZOMEliX2NwWm5fOG03UThiUUtfMDJvR2s4a0hIX0RwWTZMNkY3c2RkcXFxQ0JTbEx3STFzZVZkX21pYw?oc=5",
+      "published": "2026-09-09T18:13:39+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "Global Market : Nikkei gains as AI , semiconductor stocks lift Japanese shares",
-      "source": "economictimes.indiatimes.com",
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-nikkei-gains-as-ai-semiconductor-stocks-lift-japanese-shares/articleshow/133952040.cms",
-      "published": "2026-09-09T05:00:00+00:00"
+      "title": "韩国与法国签署谅解备忘录，强化AI、半导体领域合作 - video.sina.com.cn",
+      "source": "video.sina.com.cn",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPVENWRFhSTTZwWVhaZTZtZUs1c255MDF1ZXFfLUlIUkV1MEZYTGVoX2hrYXZ4VTV5TzJCOGRTOXd1eGpUbTRIUkdPVmthX29NbE96N1gzam1ZS2ZpMS16Q3U1b2V3emJhcldXRXlUbnZYa0tzZ1d6TktlRTItdTUtNU9R?oc=5",
+      "published": "2026-09-09T14:51:30+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "S & P 500 falls as AI worries hit software makers",
-      "source": "freemalaysiatoday.com",
-      "url": "https://www.freemalaysiatoday.com/category/business/2026/09/09/s-p-500-falls-as-ai-worries-hit-software-makers",
-      "published": "2026-09-09T00:30:00+00:00"
+      "category": "科技产业链",
+      "title": "韩国与法国签署谅解备忘录，强化AI、半导体领域合作 - 新浪网",
+      "source": "新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFAzWHd6eGhZU0dRUEluNjBhMmJJTEJsSnpHYXBKaVBNcWNGNkQ0d0pxODBLU3Nuajg3VjduZDdRZENIT0RjTENuZm1wbw?oc=5",
+      "published": "2026-09-09T14:47:09+00:00"
     }
   ]
 }
