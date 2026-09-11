@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-09",
+  "as_of": "2026-09-10",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -8,9 +8,9 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.57,
-    "baa10y_pct": 9.490369,
-    "curve_10y3m": 0.86,
+    "baa10y": 1.55,
+    "baa10y_pct": 8.045746,
+    "curve_10y3m": 0.88,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,10 +63,14 @@
     }
   ],
   "health": {
-    "data_asof": "2026-09-08",
+    "data_asof": "2026-09-09",
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_cli_br",
+      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -76,7 +80,8 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -288,11 +293,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 65142.78,
-          "date": "2026-09-09",
+          "value": 65270.95,
+          "date": "2026-09-10",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -9.98
+            "drawdown_pct": -9.8
           }
         },
         {
@@ -631,7 +636,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -656,16 +661,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 284.5038,
-          "date": "2026-08-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -8.5
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 81.08,
@@ -684,32 +679,23 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
         "bis_policy_in",
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "degraded",
         "policy": "up",
         "credit": "neutral",
         "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.6276,
-          "date": "2026-08-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.807
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -751,13 +737,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.5684,
-          "date": "2026-08-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 227.2867,
@@ -765,9 +744,12 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "巴西：增长走弱、信贷平稳、市场平稳，区域黄灯",
-      "degraded": []
+      "light": "green",
+      "summary": "巴西：增长缺失、信贷平稳、市场平稳，区域绿灯",
+      "degraded": [
+        "oecd_cli_br",
+        "oecd_bci_br"
+      ]
     }
   },
   "oil_watch": {
@@ -795,44 +777,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.8,
-      "date": "2026-09-08",
-      "change_20d_bp": 10.0,
+      "value": 4.83,
+      "date": "2026-09-09",
+      "change_20d_bp": 15.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.25,
-      "date": "2026-09-08",
-      "change_20d_bp": 1.0,
+      "value": 5.28,
+      "date": "2026-09-09",
+      "change_20d_bp": 4.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.39,
-      "date": "2026-09-08",
-      "change_20d_bp": 17.0,
+      "value": 4.43,
+      "date": "2026-09-09",
+      "change_20d_bp": 23.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 41.0,
-      "date": "2026-09-08"
+      "value_bp": 40.0,
+      "date": "2026-09-09"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 10.0,
-      "us30y_change_20d_bp": 1.0,
+      "us10y_change_20d_bp": 15.0,
+      "us30y_change_20d_bp": 4.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.83,
-        "date": "2026-09-09",
+        "value": 4.95,
+        "date": "2026-09-10",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.28,
-        "date": "2026-09-09",
+        "value": 5.37,
+        "date": "2026-09-10",
         "source": "tushare"
       }
     }
@@ -856,24 +838,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "SK 海力士节水目标：到 2030 年韩国生产基地累计节约 6 亿吨水 - 新浪网",
-      "source": "新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOODVka2dHMElLNmxnbXFmc2pzVU5hR1NoZGtOSlNVUFF5dVhuQXRqenpBZ1NSMUwtb1pnN3RwWlpieGl6TTdqSFBiV1NKM1BDMVo5LXpkamNLQWNBVWlfeGgtcnZ1c0otS2tfbGZpOXB5bFE5amlDaGllX19JNzdXN2J3?oc=5",
-      "published": "2026-09-10T12:25:50+00:00"
+      "title": "韩国海关数据显示，9月1日至10日半导体出口同比增长270.1%。 - 富途牛牛",
+      "source": "富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPejJqMUk4ZDBZcU9xZ3lXTU5mY3dMaDFXOU1WdHlmSWNGNG90OGZwb2NMa1RQbmhBTDhOZ1g2LTgzRUQ2TTNndDQyNGpmSjNnNnljcUY4Q05JLXUwamVleE5qeHVCajRjb1hxQUttUUtPM004Mlk4TEVMemlnYzh1dGhoNFUtaVctMFB4N002YzJkVDdLQTRoZUphRG80cjdpTDZwTkNaYVYxX25lUVBJU1N3?oc=5",
+      "published": "2026-09-11T00:00:22+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "有“三星海力士”在,韩国却处于劣势?......2030年半导体“灭亡战” [半导体Plus] - 매일경제",
-      "source": "매일경제",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5yZ3dwQUVPRmlkcGJIb2Y1RmFzdXVNdGhTcGFaSGwzRnRfS1BjTldsS3RNSFFuUnRqQ3NFWUwwaTZxVEktZnZXY2ZpcEJyYXZZQTQw?oc=5",
-      "published": "2026-09-10T11:12:24+00:00"
+      "title": "韩国人均国民总收入有望突破4万美元，但生活水平改善有限 - 亚洲日报",
+      "source": "亚洲日报",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBlYkZKXy1UQzU2Q0NJMzROcGZDZkxTeXN0ZTUxNFFObmYxOUIzMzBYczZzanEwcnNCVDVkaXMySWRXMWdZaEZPbm9MNi13UENpLUowZDZ4M2wzdjg?oc=5",
+      "published": "2026-09-10T22:48:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "韩国三星在日本横滨开设半导体研究基地 - 共同网",
-      "source": "共同网",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBIbUdEd2hQcGh3UXVrTm9SSzZiNXZOMEliX2NwWm5fOG03UThiUUtfMDJvR2s4a0hIX0RwWTZMNkY3c2RkcXFxQ0JTbEx3STFzZVZkX21pYw?oc=5",
-      "published": "2026-09-10T11:00:56+00:00"
+      "category": "货币政策",
+      "title": "德鲁肯米勒称美国利率过低，批评美联储立场 提供者 Investing.com - 英为财情 Investing.com",
+      "source": "英为财情 Investing.com",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1xYWRSMy1Xb2hUZEdObXkxemdGWXJJRnFtczhac1pqZXRwTXVkZXBSM1FrVkVjekxROGZTR2hVcTlZcWlWTTl4MVcwSTdLX0pWaTFITWtVa1RUQzhGTHJUY2thMUZCRW1TOXRYVmY5dkY?oc=5",
+      "published": "2026-09-10T18:31:00+00:00"
     }
   ]
 }
