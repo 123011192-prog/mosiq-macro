@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-10",
+  "as_of": "2026-09-11",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.55,
     "baa10y_pct": 8.045746,
-    "curve_10y3m": 0.88,
+    "curve_10y3m": 0.95,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,14 +63,14 @@
     }
   ],
   "health": {
-    "data_asof": "2026-09-09",
+    "data_asof": "2026-09-10",
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
       "refresh:oecd:oecd_share_in",
       "refresh:oecd:oecd_cli_br",
       "refresh:oecd:oecd_bci_br",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -293,11 +293,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 65270.95,
-          "date": "2026-09-10",
+          "value": 64011.34,
+          "date": "2026-09-11",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -9.8
+            "drawdown_pct": -11.55
           }
         },
         {
@@ -367,11 +367,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11931.32,
-          "date": "2026-09-09",
+          "value": 11614.17,
+          "date": "2026-09-10",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -18.47
+            "drawdown_pct": -20.64
           }
         },
         {
@@ -692,7 +692,7 @@
         "growth": "degraded",
         "policy": "up",
         "credit": "neutral",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -717,16 +717,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 345.572,
-          "date": "2026-08-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -10.52
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 114.73,
@@ -745,9 +735,10 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长缺失、信贷平稳、市场平稳，区域绿灯",
+      "summary": "巴西：增长缺失、信贷平稳、市场缺失，区域绿灯",
       "degraded": [
         "oecd_cli_br",
+        "oecd_share_br",
         "oecd_bci_br"
       ]
     }
@@ -779,19 +770,19 @@
     "us10y": {
       "value": 4.83,
       "date": "2026-09-09",
-      "change_20d_bp": 15.0,
+      "change_20d_bp": 20.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.28,
       "date": "2026-09-09",
-      "change_20d_bp": 4.0,
+      "change_20d_bp": 7.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.43,
       "date": "2026-09-09",
-      "change_20d_bp": 23.0,
+      "change_20d_bp": 28.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -801,8 +792,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 15.0,
-      "us30y_change_20d_bp": 4.0,
+      "us10y_change_20d_bp": 20.0,
+      "us30y_change_20d_bp": 7.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -837,25 +828,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "韩国海关数据显示，9月1日至10日半导体出口同比增长270.1%。 - 富途牛牛",
-      "source": "富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPejJqMUk4ZDBZcU9xZ3lXTU5mY3dMaDFXOU1WdHlmSWNGNG90OGZwb2NMa1RQbmhBTDhOZ1g2LTgzRUQ2TTNndDQyNGpmSjNnNnljcUY4Q05JLXUwamVleE5qeHVCajRjb1hxQUttUUtPM004Mlk4TEVMemlnYzh1dGhoNFUtaVctMFB4N002YzJkVDdLQTRoZUphRG80cjdpTDZwTkNaYVYxX25lUVBJU1N3?oc=5",
-      "published": "2026-09-11T00:00:22+00:00"
+      "category": "地缘冲突",
+      "title": "Ringgit ends firmer against most currencies , down versus US dollar",
+      "source": "thestar.com.my",
+      "url": "https://www.thestar.com.my/business/business-news/2026/09/11/ringgit-ends-firmer-against-most-currencies-down-versus-us-dollar",
+      "published": "2026-09-11T12:00:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "韩国人均国民总收入有望突破4万美元，但生活水平改善有限 - 亚洲日报",
-      "source": "亚洲日报",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBlYkZKXy1UQzU2Q0NJMzROcGZDZkxTeXN0ZTUxNFFObmYxOUIzMzBYczZzanEwcnNCVDVkaXMySWRXMWdZaEZPbm9MNi13UENpLUowZDZ4M2wzdjg?oc=5",
-      "published": "2026-09-10T22:48:00+00:00"
+      "category": "地缘冲突",
+      "title": "European stocks rise but head for sharp weekly declines",
+      "source": "aol.com",
+      "url": "https://www.aol.com/articles/european-stocks-rise-head-sharp-072447000.html",
+      "published": "2026-09-11T10:45:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "德鲁肯米勒称美国利率过低，批评美联储立场 提供者 Investing.com - 英为财情 Investing.com",
-      "source": "英为财情 Investing.com",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1xYWRSMy1Xb2hUZEdObXkxemdGWXJJRnFtczhac1pqZXRwTXVkZXBSM1FrVkVjekxROGZTR2hVcTlZcWlWTTl4MVcwSTdLX0pWaTFITWtVa1RUQzhGTHJUY2thMUZCRW1TOXRYVmY5dkY?oc=5",
-      "published": "2026-09-10T18:31:00+00:00"
+      "category": "能源",
+      "title": "Oil Prices Leap to Their Highest Since May",
+      "source": "newser.com",
+      "url": "https://www.newser.com/story/396242/oil-prices-leap-to-their-highest-since-may.html",
+      "published": "2026-09-10T21:30:00+00:00"
     }
   ]
 }
