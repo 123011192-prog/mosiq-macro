@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.55,
-    "baa10y_pct": 8.045746,
+    "baa10y": 1.51,
+    "baa10y_pct": 5.698234,
     "curve_10y3m": 0.95,
     "curve_inverted": false
   },
@@ -48,7 +48,7 @@
     },
     {
       "label": "美债长端20日急升≥30bp",
-      "active": false
+      "active": true
     },
     {
       "label": "金价20日上涨≥8%",
@@ -67,10 +67,10 @@
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
       "refresh:oecd:oecd_share_in",
       "refresh:oecd:oecd_cli_br",
       "refresh:oecd:oecd_bci_br",
-      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -692,7 +692,7 @@
         "growth": "degraded",
         "policy": "up",
         "credit": "neutral",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -717,6 +717,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 345.572,
+          "date": "2026-08-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -10.52
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 114.73,
@@ -735,10 +745,9 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长缺失、信贷平稳、市场缺失，区域绿灯",
+      "summary": "巴西：增长缺失、信贷平稳、市场平稳，区域绿灯",
       "degraded": [
         "oecd_cli_br",
-        "oecd_share_br",
         "oecd_bci_br"
       ]
     }
@@ -768,44 +777,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.83,
-      "date": "2026-09-09",
-      "change_20d_bp": 20.0,
+      "value": 4.95,
+      "date": "2026-09-10",
+      "change_20d_bp": 32.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.28,
-      "date": "2026-09-09",
-      "change_20d_bp": 7.0,
+      "value": 5.37,
+      "date": "2026-09-10",
+      "change_20d_bp": 16.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.43,
-      "date": "2026-09-09",
-      "change_20d_bp": 28.0,
+      "value": 4.56,
+      "date": "2026-09-10",
+      "change_20d_bp": 41.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 40.0,
-      "date": "2026-09-09"
+      "value_bp": 39.0,
+      "date": "2026-09-10"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
-      "active": false,
-      "us10y_change_20d_bp": 20.0,
-      "us30y_change_20d_bp": 7.0,
+      "active": true,
+      "us10y_change_20d_bp": 32.0,
+      "us30y_change_20d_bp": 16.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.95,
-        "date": "2026-09-10",
+        "value": 4.96,
+        "date": "2026-09-11",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.37,
-        "date": "2026-09-10",
+        "value": 5.35,
+        "date": "2026-09-11",
         "source": "tushare"
       }
     }
@@ -828,25 +837,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "Ringgit ends firmer against most currencies , down versus US dollar",
-      "source": "thestar.com.my",
-      "url": "https://www.thestar.com.my/business/business-news/2026/09/11/ringgit-ends-firmer-against-most-currencies-down-versus-us-dollar",
-      "published": "2026-09-11T12:00:00+00:00"
+      "category": "货币政策",
+      "title": "高盛调整预期：美联储9月加息，此前预计维持利率不变 - Sohu",
+      "source": "Sohu",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQZ0JxVWRRSl9pa0xUSWx3YjMwLTJwTGZaeTlLM3ptNllpVmR1bUpuM1hyX0ViRXVRN3RGdTJQa09OaG0wWGRnSGlNN0tsekZKV2FGS1hfYjlKZlctTm1XclZGYmFLdmN4LVBuYnZmemRuQkZjWFhzZFdhQkx2VVp5emk3bWEwR1B3YWRtNA?oc=5",
+      "published": "2026-09-12T01:20:00+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "European stocks rise but head for sharp weekly declines",
-      "source": "aol.com",
-      "url": "https://www.aol.com/articles/european-stocks-rise-head-sharp-072447000.html",
-      "published": "2026-09-11T10:45:00+00:00"
+      "category": "货币政策",
+      "title": "美股讯号 | 高盛预计美联储将于9月加息25个基点 ｜#美股资讯# #高盛# #市场事件# - Sohu",
+      "source": "Sohu",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNWnZLWWd0Vi1IYlZlX05acnZzODE5MzA2WVZ3TWZmSmpGQ0RONjk0czNDbFM4cE1IWEpaNFNNM1U3Y3NNcVpjM2hvU0hRWFg4RDZOX21Zd0NfT2ZJXzBmR1pqU2xBWEdlVXhrTUk2dG1IMDdkcTd6MHJkV2psanE2YXM1TC1ONDJSNmg3Xw?oc=5",
+      "published": "2026-09-11T23:49:25+00:00"
     },
     {
-      "category": "能源",
-      "title": "Oil Prices Leap to Their Highest Since May",
-      "source": "newser.com",
-      "url": "https://www.newser.com/story/396242/oil-prices-leap-to-their-highest-since-may.html",
-      "published": "2026-09-10T21:30:00+00:00"
+      "category": "货币政策",
+      "title": "高盛调整预期：美联储9月加息，此前预计维持利率不变 - 新浪网",
+      "source": "新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE85UjZ0LUdKcmJpS0JXLU91Wm1sZFNKYXlXYXhZT2tqZlRybGRXMUVITENjUEktdzljMWREMVl2b0QtX2NuaTgyR0d1NA?oc=5",
+      "published": "2026-09-11T23:32:05+00:00"
     }
   ]
 }
