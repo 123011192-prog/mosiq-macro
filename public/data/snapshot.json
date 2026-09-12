@@ -67,10 +67,6 @@
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
-      "refresh:oecd:oecd_share_in",
-      "refresh:oecd:oecd_cli_br",
-      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -80,8 +76,7 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -367,11 +362,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11614.17,
-          "date": "2026-09-10",
+          "value": 11824.0,
+          "date": "2026-09-11",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -20.64
+            "drawdown_pct": -19.21
           }
         },
         {
@@ -636,7 +631,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -661,6 +656,16 @@
           }
         },
         {
+          "id": "oecd_share_in",
+          "name": "OECD 印度股价指数（NIFTY 代理）",
+          "value": 284.5038,
+          "date": "2026-08-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -8.5
+          }
+        },
+        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 81.08,
@@ -679,23 +684,32 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
         "bis_policy_in",
-        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
-        "growth": "degraded",
+        "growth": "down",
         "policy": "up",
         "credit": "neutral",
         "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_br",
+          "name": "OECD 巴西综合领先指标 CLI",
+          "value": 102.6276,
+          "date": "2026-08-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.807
+          }
+        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -737,6 +751,13 @@
           }
         },
         {
+          "id": "oecd_bci_br",
+          "name": "OECD 巴西商业信心指数 BCI",
+          "value": 99.5684,
+          "date": "2026-08-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 227.2867,
@@ -744,12 +765,9 @@
           "unit": "指数"
         }
       ],
-      "light": "green",
-      "summary": "巴西：增长缺失、信贷平稳、市场平稳，区域绿灯",
-      "degraded": [
-        "oecd_cli_br",
-        "oecd_bci_br"
-      ]
+      "light": "yellow",
+      "summary": "巴西：增长走弱、信贷平稳、市场平稳，区域黄灯",
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -838,24 +856,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "高盛调整预期：美联储9月加息，此前预计维持利率不变 - Sohu",
-      "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQZ0JxVWRRSl9pa0xUSWx3YjMwLTJwTGZaeTlLM3ptNllpVmR1bUpuM1hyX0ViRXVRN3RGdTJQa09OaG0wWGRnSGlNN0tsekZKV2FGS1hfYjlKZlctTm1XclZGYmFLdmN4LVBuYnZmemRuQkZjWFhzZFdhQkx2VVp5emk3bWEwR1B3YWRtNA?oc=5",
-      "published": "2026-09-12T01:20:00+00:00"
+      "title": "Wall Street week ahead : Federal Reserve decision on interest rates , retail sales update",
+      "source": "newsday.com",
+      "url": "https://www.newsday.com/business/federal-reserve-inflation-interest-rates-y23116",
+      "published": "2026-09-12T08:30:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美股讯号 | 高盛预计美联储将于9月加息25个基点 ｜#美股资讯# #高盛# #市场事件# - Sohu",
-      "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNWnZLWWd0Vi1IYlZlX05acnZzODE5MzA2WVZ3TWZmSmpGQ0RONjk0czNDbFM4cE1IWEpaNFNNM1U3Y3NNcVpjM2hvU0hRWFg4RDZOX21Zd0NfT2ZJXzBmR1pqU2xBWEdlVXhrTUk2dG1IMDdkcTd6MHJkV2psanE2YXM1TC1ONDJSNmg3Xw?oc=5",
-      "published": "2026-09-11T23:49:25+00:00"
+      "title": "Inflation heated up last month , boosting the case for a Fed rate hike",
+      "source": "kitv.com",
+      "url": "https://www.kitv.com/news/business/inflation-heated-up-last-month-boosting-the-case-for-a-fed-rate-hike/article_6e85b165-ecc5-5b96-b20a-706123da894c.html",
+      "published": "2026-09-12T04:30:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "高盛调整预期：美联储9月加息，此前预计维持利率不变 - 新浪网",
-      "source": "新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE85UjZ0LUdKcmJpS0JXLU91Wm1sZFNKYXlXYXhZT2tqZlRybGRXMUVITENjUEktdzljMWREMVl2b0QtX2NuaTgyR0d1NA?oc=5",
-      "published": "2026-09-11T23:32:05+00:00"
+      "category": "地缘冲突",
+      "title": "US House of Representatives to vote on Russia sanctions bill that could hit India with tariffs",
+      "source": "moneycontrol.com",
+      "url": "https://www.moneycontrol.com/world/us-house-of-representatives-to-vote-on-russia-sanctions-bill-that-could-hit-india-with-tariffs-article-14028262.html",
+      "published": "2026-09-12T03:30:00+00:00"
     }
   ]
 }
