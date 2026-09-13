@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.51,
-    "baa10y_pct": 5.698234,
+    "baa10y_pct": 5.700522,
     "curve_10y3m": 0.95,
     "curve_inverted": false
   },
@@ -67,7 +67,9 @@
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_share_br",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_cli_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -633,7 +635,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -658,16 +660,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 284.5038,
-          "date": "2026-08-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -8.5
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 81.08,
@@ -686,32 +678,23 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
         "bis_policy_in",
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
       "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "degraded",
         "policy": "up",
         "credit": "neutral",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.6276,
-          "date": "2026-08-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.807
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -730,6 +713,16 @@
           "unit": "% GDP",
           "signal": {
             "4q_change_pp": -0.2
+          }
+        },
+        {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 345.572,
+          "date": "2026-08-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -10.52
           }
         },
         {
@@ -757,10 +750,10 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "巴西：增长走弱、信贷平稳、市场缺失，区域黄灯",
+      "light": "green",
+      "summary": "巴西：增长缺失、信贷平稳、市场平稳，区域绿灯",
       "degraded": [
-        "oecd_share_br"
+        "oecd_cli_br"
       ]
     }
   },
@@ -850,24 +843,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
-      "published": "2026-09-12T13:08:09+00:00"
+      "title": "金市前瞻：黄金真正的大考来了！美联储三大看点齐聚，4400美元附近迎关键一战 - FX168财经",
+      "source": "FX168财经",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOUXRnMmRwY0JTU29iSnpjV01sUkZxcW9HMXBnSE9CTE9MbEF6MkxPdmxrdWtDb2x6eGRpcWMwdlM4MzhyUFh3UE96UDI2VWMtX3lXeEpVN1JxS1VhQW1VRFBzOE1SeldYeHJOVGhZeUdILXMtQkJ1MHhMUzN6aGRoRDdyemQ?oc=5",
+      "published": "2026-09-12T23:42:50+00:00"
     },
     {
       "category": "货币政策",
-      "title": "金价周五回弹寻得短期支持 市场紧盯美联储利率会议 - 联合早报",
+      "title": "美联储，加息大消息！高盛、小摩，重大转变！ - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5aRGhXMkZaVlRFdHMwa19uN2t6b05JbU5GMUZOdGZfT05pcWlMVG4xLXVtTkp2TDNTc3BkTE4yRENyaFNJeEJTMjFJSWx1dGJhLUJMZ3ZESWpabkZiMFdrNDJUbUNzdFpsWVdBbnJ1WllBYUhXUHc0WQ?oc=5",
+      "published": "2026-09-12T21:40:55+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "美联储政策沟通方式改变 利率波动料成新常态 - 联合早报",
       "source": "联合早报",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5WZG9NMlh6QVg0a0F6czRuYXgzNXZsYncwNVNoelN0Vlhwd3pCOUx3YWhRTm9JMVd4N1NvbjJxQmRVNzNhYl9CQnZzX2ZsZ3UyZ2FkLU16SU5aTVlrcTB1OGhsNG5CT0FTdW1OY2Zn?oc=5",
-      "published": "2026-09-12T10:46:37+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "华尔街撕报告，下周美联储必加息？#美联储 #美元 #利率决议 #美股 - Sohu",
-      "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9zaVBCb3FTdjI1QzZTZUVLN09fYl9zYjMzMmNOVFc5LXpNNE00NGZxUlUwR3Z0LVVBWk9uendTQ0g0SERxeU5aVGtxVlJ4MEw5cFE?oc=5",
-      "published": "2026-09-12T08:43:54+00:00"
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFB0U29wNjJ0bkRCTVUxcUliTlJPcVU4LUlBR0V2R0JzZEw0RThJTW9DTTMwang5cW9sNHVzS21FX0FqVko3ZXJDbXViRkNnZFVONnZwWEZTUmI4ZloxVHptVi1pRFVHTDVST3c0cDln?oc=5",
+      "published": "2026-09-12T21:00:00+00:00"
     }
   ]
 }
