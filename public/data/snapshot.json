@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-11",
+  "as_of": "2026-09-12",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.51,
     "baa10y_pct": 5.702811,
-    "curve_10y3m": 0.95,
+    "curve_10y3m": 0.89,
     "curve_inverted": false
   },
   "cycle": {
@@ -48,7 +48,7 @@
     },
     {
       "label": "美债长端20日急升≥30bp",
-      "active": true
+      "active": false
     },
     {
       "label": "金价20日上涨≥8%",
@@ -63,8 +63,8 @@
     }
   ],
   "health": {
-    "data_asof": "2026-09-10",
-    "stale_count": 25,
+    "data_asof": "2026-09-11",
+    "stale_count": 23,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
@@ -113,11 +113,11 @@
         {
           "id": "bis_tc_ea_gdp",
           "name": "BIS 欧元区私人非金融信贷/GDP",
-          "value": 153.6,
-          "date": "2025-10-01",
+          "value": 153.5,
+          "date": "2026-01-01",
           "unit": "% GDP",
           "signal": {
-            "4q_change_pp": -2.7
+            "4q_change_pp": -1.8
           }
         },
         {
@@ -199,11 +199,11 @@
         {
           "id": "bis_tc_cn_gdp",
           "name": "BIS 中国私人非金融信贷/GDP",
-          "value": 200.8,
-          "date": "2025-10-01",
+          "value": 204.1,
+          "date": "2026-01-01",
           "unit": "% GDP",
           "signal": {
-            "4q_change_pp": 2.9
+            "4q_change_pp": 2.2
           }
         },
         {
@@ -250,8 +250,8 @@
       "cycle": {
         "growth": "neutral",
         "policy": "down",
-        "credit": "neutral",
-        "market": "degraded",
+        "credit": "up",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -278,11 +278,21 @@
         {
           "id": "bis_tc_jp_gdp",
           "name": "BIS 日本私人非金融信贷/GDP",
-          "value": 175.1,
-          "date": "2025-10-01",
+          "value": 173.7,
+          "date": "2026-01-01",
           "unit": "% GDP",
           "signal": {
-            "4q_change_pp": 0.8
+            "4q_change_pp": 2.7
+          }
+        },
+        {
+          "id": "fred_nikkei225",
+          "name": "日经 225 指数",
+          "value": 63492.99,
+          "date": "2026-09-14",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -12.26
           }
         },
         {
@@ -304,9 +314,8 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷平稳、市场缺失，区域黄灯",
+      "summary": "日本：增长平稳、信贷走强、市场平稳，区域黄灯",
       "degraded": [
-        "fred_nikkei225",
         "oecd_bci_jp"
       ]
     },
@@ -343,11 +352,11 @@
         {
           "id": "bis_tc_kr_gdp",
           "name": "BIS 韩国私人非金融信贷/GDP",
-          "value": 199.0,
-          "date": "2025-10-01",
+          "value": 191.5,
+          "date": "2026-01-01",
           "unit": "% GDP",
           "signal": {
-            "4q_change_pp": -1.3
+            "4q_change_pp": -8.5
           }
         },
         {
@@ -422,11 +431,11 @@
         {
           "id": "bis_tc_gb_gdp",
           "name": "BIS 英国私人非金融信贷/GDP",
-          "value": 132.6,
-          "date": "2025-10-01",
+          "value": 128.4,
+          "date": "2026-01-01",
           "unit": "% GDP",
           "signal": {
-            "4q_change_pp": -5.1
+            "4q_change_pp": -4.2
           }
         },
         {
@@ -786,32 +795,32 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.95,
-      "date": "2026-09-10",
-      "change_20d_bp": 32.0,
+      "value": 4.96,
+      "date": "2026-09-11",
+      "change_20d_bp": 28.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.37,
-      "date": "2026-09-10",
-      "change_20d_bp": 16.0,
+      "value": 5.35,
+      "date": "2026-09-11",
+      "change_20d_bp": 10.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.56,
-      "date": "2026-09-10",
-      "change_20d_bp": 41.0,
+      "value": 4.63,
+      "date": "2026-09-11",
+      "change_20d_bp": 46.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 39.0,
-      "date": "2026-09-10"
+      "value_bp": 33.0,
+      "date": "2026-09-11"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
-      "active": true,
-      "us10y_change_20d_bp": 32.0,
-      "us30y_change_20d_bp": 16.0,
+      "active": false,
+      "us10y_change_20d_bp": 28.0,
+      "us30y_change_20d_bp": 10.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -847,24 +856,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "扩厂被要求预付5年电费 三星、SK海力士拒绝 - 亚洲电视新闻",
-      "source": "亚洲电视新闻",
-      "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxNeFhXRjhPUnl6aU9rNTRaSWxBVzlRNmthZlhGZWU0ZkRJQkdxc0NJRW5JZmdxaG5lX19oWEwwU3dKRjQ4VHdOMURBQnNuQTVZUGFnOTNBV0Z6MTlUNVdkbVFjeUR0TmJ3RDk2QkNsb2tsV2VITTFsVWdOUW1ZWGpCSGpnRldCWFVTZC1zYnJUTFRhVXFka3ZyTDZ6Z1ROdGVjWEotbkdLRDhmR1BTcTUtWEFEVWlqeUNGUlVDMXZVWlhwZXlTUkJFejh1VWI4WktoenQ1MDJPcGNqREpzY1dSRmlBMkhaOVR5VS03RFhQQV90V2NmekFkV1Z6bVJlU0dOa0FKZURtTU9KOUd5dUtUdU9XQjV1YXNheHdlOHQ5czFaWHhfc1E?oc=5",
-      "published": "2026-09-14T10:34:18+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "逃离半导体！外资上周抛售约4万亿韩元三星和SK海力士股票 - 21财经",
-      "source": "21财经",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPZm0ya0tCX1lZWUVxbzNPTTNvdXhtR2poX2ZiczJQZjVIbDdDY2oyMWI4U2VISGlQWHZIM1JLZDBIMWtZd3VsU3RtLVVGOFBxWXR5T3hSY0x5MnB1UTBnUzhlU0lfSEFwenZ2YUFMdW4yUzZkSTdhZG0zUFRzNG5iYWJLeVgxbFhKZDR3cA?oc=5",
-      "published": "2026-09-14T09:59:00+00:00"
+      "title": "韩国NPU卡在量产前 业界吁扩大验证、降低海外PoC门槛 - gb-www.digitimes.com.tw",
+      "source": "gb-www.digitimes.com.tw",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRlFNUUpUZUtsZzNHNW5TWUlIYjIxa1N1NVJMdEptMFI1dTJWU3NLUjFKaHNWeV9fQ3ZEOTFCTzZjU0ZuQ2ZsSHJTMndMcDlkY2l6S09Id2JiSVVndmJJVUotNDBHWldoRThSbVQ2c2VHbXZmVXp3STlYYVd0TWQ3bFNlUTh4SUVGNkhjTWt2UUZLT0VjRTgyRGhISU4?oc=5",
+      "published": "2026-09-14T18:52:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美联储、英格兰银行、日本银行利率决议：加密货币一周前瞻 - CoinDesk",
-      "source": "CoinDesk",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQdEJfR2ZvWU1IbHh4cVVlRVFXQ1Z5Z0VTbWJaa1FIVDg0aWJ6ZVJNLWt2YVZwc2hXZktpcG5WQm1VVXd2aVVYZEs3QWJvUmhINlk5aE9iQlNjTGZXd0QxanRXUnV5dWxJRUtlTHhsLTNSX2drWmJGdVVYek9QTktqTDFONHRUTkRaQ1hsazl4NEZQa21kR3g0Uy1SSVVBcEtCeGc?oc=5",
-      "published": "2026-09-14T09:29:57+00:00"
+      "title": "美联储利率担忧升温，10年期美国国债收益率突破5% - 新闻和统计 - IndexBox",
+      "source": "IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNcm5ZOTlPYldqTU9yYjgtRE5hcHhpYlpBckVWWlZSNS1zYVpZaGJmRXZpWEVuNkZZMEtnZXhYaTBtYlltUk1zTDYtMUE0a1FOYkszZGw3YTV6eHpmcVVjWm5DUWhVUm1lREh4MmhyM3BOZURLM0pOeW1UZzV4OUxfb1J4ZzItOWdYbGRldjRDaTQzMVpfVDZiOGFBRmxwUkNtY2M4?oc=5",
+      "published": "2026-09-14T17:24:19+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "利息雪球越滚越大！若美联储年内加息75基点，美国一年利息支出将增加500亿美元 - 华尔街见闻",
+      "source": "华尔街见闻",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xQ0VrMm84R0JsaDdOTDVBUms2aVRIay11eUROdTg1ZHZLcEVscm1XZzZNUHRhQ0VDNEFIQkZSNDNndm5zSXRUZDkzTEFkRW4tQXZR?oc=5",
+      "published": "2026-09-14T13:19:20+00:00"
     }
   ]
 }
