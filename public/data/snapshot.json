@@ -501,11 +501,11 @@
         {
           "id": "bis_tc_ca_gdp",
           "name": "BIS 加拿大私人非金融信贷/GDP",
-          "value": 218.9,
-          "date": "2025-10-01",
+          "value": 218.8,
+          "date": "2026-01-01",
           "unit": "% GDP",
           "signal": {
-            "4q_change_pp": 0.1
+            "4q_change_pp": 0.9
           }
         },
         {
@@ -575,11 +575,11 @@
         {
           "id": "bis_tc_au_gdp",
           "name": "BIS 澳大利亚私人非金融信贷/GDP",
-          "value": 176.1,
-          "date": "2025-10-01",
+          "value": 175.8,
+          "date": "2026-01-01",
           "unit": "% GDP",
           "signal": {
-            "4q_change_pp": 2.7
+            "4q_change_pp": 1.4
           }
         },
         {
@@ -639,11 +639,11 @@
         {
           "id": "bis_tc_in_gdp",
           "name": "BIS 印度私人非金融信贷/GDP",
-          "value": 102.3,
-          "date": "2025-10-01",
+          "value": 105.1,
+          "date": "2026-01-01",
           "unit": "% GDP",
           "signal": {
-            "4q_change_pp": 7.0
+            "4q_change_pp": 9.1
           }
         },
         {
@@ -686,7 +686,7 @@
       "cycle": {
         "growth": "down",
         "policy": "up",
-        "credit": "neutral",
+        "credit": "up",
         "market": "neutral",
         "fx": "neutral"
       },
@@ -714,11 +714,11 @@
         {
           "id": "bis_tc_br_gdp",
           "name": "BIS 巴西私人非金融信贷/GDP",
-          "value": 93.0,
-          "date": "2025-10-01",
+          "value": 92.5,
+          "date": "2026-01-01",
           "unit": "% GDP",
           "signal": {
-            "4q_change_pp": -0.2
+            "4q_change_pp": 1.2
           }
         },
         {
@@ -757,7 +757,7 @@
         }
       ],
       "light": "yellow",
-      "summary": "巴西：增长走弱、信贷平稳、市场平稳，区域黄灯",
+      "summary": "巴西：增长走弱、信贷走强、市场平稳，区域黄灯",
       "degraded": []
     }
   },
@@ -846,25 +846,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "比特币危险时刻！美联储加息概率狂飙至86.5%，华尔街却盯上了财政部 - fx168news.com",
-      "source": "fx168news.com",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1nTWd4R0c4Nmt3THU1YTFFZlNXMTBOQVlqYndVemRSdVZnazFOUVVWeHZHNzU3YTc0QjB4dTNaRFFDQlhCbzM0NTlPTnF5bUJIanZBb0NQQnlYNlQxckpFdFJ6RDhCVC1VSG13SExGN29FWHZrZXpMUA?oc=5",
-      "published": "2026-09-14T01:28:42+00:00"
+      "category": "科技产业链",
+      "title": "扩厂被要求预付5年电费 三星、SK海力士拒绝 - 亚洲电视新闻",
+      "source": "亚洲电视新闻",
+      "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxNeFhXRjhPUnl6aU9rNTRaSWxBVzlRNmthZlhGZWU0ZkRJQkdxc0NJRW5JZmdxaG5lX19oWEwwU3dKRjQ4VHdOMURBQnNuQTVZUGFnOTNBV0Z6MTlUNVdkbVFjeUR0TmJ3RDk2QkNsb2tsV2VITTFsVWdOUW1ZWGpCSGpnRldCWFVTZC1zYnJUTFRhVXFka3ZyTDZ6Z1ROdGVjWEotbkdLRDhmR1BTcTUtWEFEVWlqeUNGUlVDMXZVWlhwZXlTUkJFejh1VWI4WktoenQ1MDJPcGNqREpzY1dSRmlBMkhaOVR5VS03RFhQQV90V2NmekFkV1Z6bVJlU0dOa0FKZURtTU9KOUd5dUtUdU9XQjV1YXNheHdlOHQ5czFaWHhfc1E?oc=5",
+      "published": "2026-09-14T10:34:18+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩国扩大“间谍罪”范围，强化芯片技术保护 - 电子工程专辑",
-      "source": "电子工程专辑",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9falpnZTk2anQ2SkdqLUJZODA0QVF0NWlHay0zTG1BeWZjeTRfYThnQ0h4eXFTSXhPcUR2eThCUEhtN1I0VmZPZmNkdFhMR0RFSVRj?oc=5",
-      "published": "2026-09-14T01:18:00+00:00"
+      "title": "逃离半导体！外资上周抛售约4万亿韩元三星和SK海力士股票 - 21财经",
+      "source": "21财经",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPZm0ya0tCX1lZWUVxbzNPTTNvdXhtR2poX2ZiczJQZjVIbDdDY2oyMWI4U2VISGlQWHZIM1JLZDBIMWtZd3VsU3RtLVVGOFBxWXR5T3hSY0x5MnB1UTBnUzhlU0lfSEFwenZ2YUFMdW4yUzZkSTdhZG0zUFRzNG5iYWJLeVgxbFhKZDR3cA?oc=5",
+      "published": "2026-09-14T09:59:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "一张表看懂！华尔街“彻底信了”：美联储本周加息 - Sohu",
-      "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNOVd3RmRJZnI0ZTdUeHhQWHpPS2t2bmQ1d0h0ZEUxbVJSY3pUaW1WTldGZUNXRmRINWl2UUozWElWMEx5dXlLekdqOWozU05FLUhkYUllUHBGVnVmUVBNcjBYNDBRMVI1MDFWYjNHWDVfaXNIZU5GenN0ZFQwUkFRMWJnZ1J1d09q?oc=5",
-      "published": "2026-09-14T01:01:00+00:00"
+      "title": "美联储、英格兰银行、日本银行利率决议：加密货币一周前瞻 - CoinDesk",
+      "source": "CoinDesk",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQdEJfR2ZvWU1IbHh4cVVlRVFXQ1Z5Z0VTbWJaa1FIVDg0aWJ6ZVJNLWt2YVZwc2hXZktpcG5WQm1VVXd2aVVYZEs3QWJvUmhINlk5aE9iQlNjTGZXd0QxanRXUnV5dWxJRUtlTHhsLTNSX2drWmJGdVVYek9QTktqTDFONHRUTkRaQ1hsazl4NEZQa21kR3g0Uy1SSVVBcEtCeGc?oc=5",
+      "published": "2026-09-14T09:29:57+00:00"
     }
   ]
 }
