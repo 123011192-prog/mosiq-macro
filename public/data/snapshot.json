@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.51,
-    "baa10y_pct": 5.702811,
+    "baa10y": 1.5,
+    "baa10y_pct": 5.381526,
     "curve_10y3m": 0.89,
     "curve_inverted": false
   },
@@ -67,6 +67,8 @@
     "stale_count": 23,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -76,7 +78,8 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -691,7 +694,7 @@
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "down",
         "policy": "up",
@@ -751,13 +754,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.5684,
-          "date": "2026-08-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 227.2867,
@@ -767,7 +763,9 @@
       ],
       "light": "yellow",
       "summary": "巴西：增长走弱、信贷走强、市场平稳，区域黄灯",
-      "degraded": []
+      "degraded": [
+        "oecd_bci_br"
+      ]
     }
   },
   "oil_watch": {
@@ -826,13 +824,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.96,
-        "date": "2026-09-11",
+        "value": 4.97,
+        "date": "2026-09-14",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.35,
-        "date": "2026-09-11",
+        "value": 5.34,
+        "date": "2026-09-14",
         "source": "tushare"
       }
     }
@@ -855,25 +853,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "韩国NPU卡在量产前 业界吁扩大验证、降低海外PoC门槛 - gb-www.digitimes.com.tw",
-      "source": "gb-www.digitimes.com.tw",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRlFNUUpUZUtsZzNHNW5TWUlIYjIxa1N1NVJMdEptMFI1dTJWU3NLUjFKaHNWeV9fQ3ZEOTFCTzZjU0ZuQ2ZsSHJTMndMcDlkY2l6S09Id2JiSVVndmJJVUotNDBHWldoRThSbVQ2c2VHbXZmVXp3STlYYVd0TWQ3bFNlUTh4SUVGNkhjTWt2UUZLT0VjRTgyRGhISU4?oc=5",
-      "published": "2026-09-14T18:52:00+00:00"
+      "category": "能源",
+      "title": "Canada oil windfall may yet wipe out its losses from tariffs",
+      "source": "cbc.ca",
+      "url": "https://www.cbc.ca/news/politics/canada-oil-prices-trump-iran-trade-war-tariffs-9.7341298",
+      "published": "2026-09-13T09:00:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美联储利率担忧升温，10年期美国国债收益率突破5% - 新闻和统计 - IndexBox",
-      "source": "IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNcm5ZOTlPYldqTU9yYjgtRE5hcHhpYlpBckVWWlZSNS1zYVpZaGJmRXZpWEVuNkZZMEtnZXhYaTBtYlltUk1zTDYtMUE0a1FOYkszZGw3YTV6eHpmcVVjWm5DUWhVUm1lREh4MmhyM3BOZURLM0pOeW1UZzV4OUxfb1J4ZzItOWdYbGRldjRDaTQzMVpfVDZiOGFBRmxwUkNtY2M4?oc=5",
-      "published": "2026-09-14T17:24:19+00:00"
+      "title": "This is the test : All eyes on US Fed to tackle high inflation",
+      "source": "hurriyetdailynews.com",
+      "url": "https://www.hurriyetdailynews.com/this-is-the-test-all-eyes-on-us-fed-to-tackle-high-inflation-226812",
+      "published": "2026-09-13T08:45:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "利息雪球越滚越大！若美联储年内加息75基点，美国一年利息支出将增加500亿美元 - 华尔街见闻",
-      "source": "华尔街见闻",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xQ0VrMm84R0JsaDdOTDVBUms2aVRIay11eUROdTg1ZHZLcEVscm1XZzZNUHRhQ0VDNEFIQkZSNDNndm5zSXRUZDkzTEFkRW4tQXZR?oc=5",
-      "published": "2026-09-14T13:19:20+00:00"
+      "title": "Loan interest rates , EMIs to rise ? Two back - to - back 25 bps repo rate hike from RBI soon ?",
+      "source": "livemint.com",
+      "url": "https://www.livemint.com/money/loan-interest-rates-emis-to-rise-two-back-to-back-25-bps-repo-rate-hike-from-rbi-soon-11789280033749.html",
+      "published": "2026-09-13T08:15:00+00:00"
     }
   ]
 }
