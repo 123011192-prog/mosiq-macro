@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-12",
+  "as_of": "2026-09-15",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.5,
     "baa10y_pct": 5.381526,
-    "curve_10y3m": 0.89,
+    "curve_10y3m": 0.86,
     "curve_inverted": false
   },
   "cycle": {
@@ -18,7 +18,7 @@
     "inflation": "degraded",
     "liquidity": "neutral",
     "credit": "degraded",
-    "policy": "neutral",
+    "policy": "degraded",
     "market_stress": "degraded"
   },
   "confirmations": [
@@ -63,26 +63,22 @@
     }
   ],
   "health": {
-    "data_asof": "2026-09-11",
-    "stale_count": 23,
+    "data_asof": "2026-09-14",
+    "stale_count": 31,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
-      "refresh:oecd:oecd_share_in",
-      "refresh:oecd:oecd_cli_br",
-      "refresh:oecd:oecd_bci_br",
-      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
+      "cycle:policy",
       "cycle:market_stress",
       "radar:banking",
+      "radar:credit",
       "radar:nonbank",
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -637,7 +633,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -662,6 +658,16 @@
           }
         },
         {
+          "id": "oecd_share_in",
+          "name": "OECD 印度股价指数（NIFTY 代理）",
+          "value": 284.5038,
+          "date": "2026-08-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -8.5
+          }
+        },
+        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 81.08,
@@ -680,23 +686,32 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
         "bis_policy_in",
-        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
-        "growth": "degraded",
+        "growth": "down",
         "policy": "up",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_br",
+          "name": "OECD 巴西综合领先指标 CLI",
+          "value": 102.6276,
+          "date": "2026-08-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.807
+          }
+        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -718,6 +733,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 345.572,
+          "date": "2026-08-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -10.52
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 114.73,
@@ -728,6 +753,13 @@
           }
         },
         {
+          "id": "oecd_bci_br",
+          "name": "OECD 巴西商业信心指数 BCI",
+          "value": 99.5684,
+          "date": "2026-08-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 227.2867,
@@ -735,13 +767,9 @@
           "unit": "指数"
         }
       ],
-      "light": "green",
-      "summary": "巴西：增长缺失、信贷走强、市场缺失，区域绿灯",
-      "degraded": [
-        "oecd_cli_br",
-        "oecd_share_br",
-        "oecd_bci_br"
-      ]
+      "light": "yellow",
+      "summary": "巴西：增长走弱、信贷走强、市场平稳，区域黄灯",
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -771,19 +799,19 @@
     "us10y": {
       "value": 4.96,
       "date": "2026-09-11",
-      "change_20d_bp": 28.0,
+      "change_20d_bp": 24.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.35,
       "date": "2026-09-11",
-      "change_20d_bp": 10.0,
+      "change_20d_bp": 4.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.63,
       "date": "2026-09-11",
-      "change_20d_bp": 46.0,
+      "change_20d_bp": 44.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -793,8 +821,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 28.0,
-      "us30y_change_20d_bp": 10.0,
+      "us10y_change_20d_bp": 24.0,
+      "us30y_change_20d_bp": 4.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -830,24 +858,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "全球黄金ETF强势吸金，美联储利率决议在即，金价何去何从？ - Sohu",
-      "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNRnR1NDIwclB4SDdidEtVaExabmRZckdCWllwQy1kcTFlcEVGWXBmbUhaVDEwUXNEN3hLdndSSktmdXVvRGw3MEdsZ29NaV9Ld0JiSm9NSDE5N1RkRXBCMWtkX1NIMVU4Sk40Y2dqQlhRNnI5akZkVTJ6R0ZYdzlaQnN3Sjl4MVFkdE5oNA?oc=5",
-      "published": "2026-09-15T09:30:00+00:00"
+      "title": "美联储加息在即 新元隔夜利率料缓慢调整 - 联合早报",
+      "source": "联合早报",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFByRXJMVUV4akRUMWN3V1dHUUJwSTNkUUxjajNvZjRXTTVmVmdtLWV5WFU5TVJhNUhJV2xUelQ2SGZtYmhIZV81YjlFbllnT1BBdHRrdkE4U3c1UjNraFBoUWRTYnVJYlJYU0NyeVZSTmYzQ3c?oc=5",
+      "published": "2026-09-15T13:54:31+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩国交易所：电池股强劲，半导体股疲软，波动性管理频繁 - 亚洲日报",
-      "source": "亚洲日报",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5oT0djajQtZFFIYlFIb1VCUkl6UzNJdmVzVDgxclQ1eDVaN0ktcU1FSTlPcjRGX3VwY3E3MVoyUXp4dkFfdVhUZzR2d201S2JzUHJOTzE0S2Z0cjg?oc=5",
-      "published": "2026-09-15T09:08:00+00:00"
+      "title": "工信部与国家发改委联合印发《电子信息制造业发展\"十五五\"规划》 半导体全链条攻关提上日程 - 虎嗅网",
+      "source": "虎嗅网",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA4OVpjbnRiU1pySWZvMnZwMG1zd2RmdjJlR0lfazdFMmZCZTFOUjFsQUM1ZWNrZDNIVmpuVGl3ZnpWM1U3NVVwRVh3TlVvc0dESnVEMlVJX0F1Z2RZNHFJ?oc=5",
+      "published": "2026-09-15T13:30:16+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "进入本月以来,韩国综合股价指数超过7000点后反复下降和上升,徘徊在6600点~6800点之间,虽然出现了半导体速度调节论等,但证券界仍然维持着半导体股的积极预测。 同时,将收益性防御相对较好的银行 - 매일경제",
-      "source": "매일경제",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5mZF9CaXRQMk5EcHZ1SjY5dmFXcTBaUS1KTmdqSWp3czk2eXlWd2J1WGVpZUF6QzdGdlROUW05azltLWhhd0RaSVVHbFZqQjQ?oc=5",
-      "published": "2026-09-15T08:07:27+00:00"
+      "category": "货币政策",
+      "title": "10年期美债收益率突破5%，向美联储发出“警告信号”？ - 凤凰网",
+      "source": "凤凰网",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5rZEo0eHRydmVlM2t3MXFIcEYwYnp6OWxwcVhsZ0JkRkZqdEpiWTJST3lOTjhDdGtIWXVJdklZNEFDVW4wN3RCY1p1b29jVm5L?oc=5",
+      "published": "2026-09-15T12:41:54+00:00"
     }
   ]
 }
