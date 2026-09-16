@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.5,
-    "baa10y_pct": 5.381526,
+    "baa10y": 1.47,
+    "baa10y_pct": 4.094741,
     "curve_10y3m": 0.86,
     "curve_inverted": false
   },
@@ -64,16 +64,16 @@
   ],
   "health": {
     "data_asof": "2026-09-14",
-    "stale_count": 27,
+    "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_br",
       "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
       "cycle:market_stress",
       "radar:banking",
-      "radar:credit",
       "radar:nonbank",
       "regions:japan",
       "regions:canada",
@@ -744,13 +744,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.5684,
-          "date": "2026-08-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 227.2867,
@@ -761,7 +754,8 @@
       "light": "yellow",
       "summary": "巴西：增长走弱、信贷走强、市场缺失，区域黄灯",
       "degraded": [
-        "oecd_share_br"
+        "oecd_share_br",
+        "oecd_bci_br"
       ]
     }
   },
@@ -821,13 +815,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.97,
-        "date": "2026-09-14",
+        "value": 5.0,
+        "date": "2026-09-15",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.34,
-        "date": "2026-09-14",
+        "value": 5.36,
+        "date": "2026-09-15",
         "source": "tushare"
       }
     }
@@ -850,25 +844,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "半导体荣景狂注韩国国库 2027年法人税估破200万亿韩元 - DIGITIMES",
-      "source": "DIGITIMES",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOTlhFV3ItQ21VTF9xRnhkN0dEcnhRU21jUnFINWM1TlJ5MzdIYjRCTGRrREplLW15T2Zkc2lYYUxtbkFUcUo1WUFjT013N3dicXRUbVYwZnFmaGZfeVBCTjgySHVxM09SV1V5TUgyQjlwVzZwRm9VQkNqaE0tUHBDS2VoOEN5REVxazNmZUJaeTd5ZVhMUHBLSHA2eXg4OE9OLWx0cTVNbw?oc=5",
-      "published": "2026-09-15T18:40:00+00:00"
+      "category": "货币政策",
+      "title": "杨山海：美联储利率决议来袭！黄金能否逆势翻盘？_名家点金 - 黄金网",
+      "source": "黄金网",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1tZ0hhVmswS0trcDBOZ0xQSjh1b3VXTWJaRUt5OXp4a0pIbmJfWlhJblM0NHZmQ2U4b19WbmZBaGNaa1NnU2I5Tk1wRmgySDZCckhJQzQybDRpdVJzaTdqTy1oOEZlZzlnZkZySg?oc=5",
+      "published": "2026-09-16T01:40:02+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "美联储加息在即！10年期美债收益率突破5%，创近十九年新高，全球借贷成本要变天？_外汇动态报道 - 汇通网 Fx678",
+      "source": "汇通网 Fx678",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9tR1lFczNHc0Y1MGdJVFE5ZDhvdFpOMGlfeUI2Z2pReUFUakQ4MkxrcTJtc0tfVUtkTE5SOFlva24yWHpNOEo5Wko2TEM1dDhhQVd2aUJEYnBXZw?oc=5",
+      "published": "2026-09-16T01:24:37+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "中国晶圆厂扩大本土设备采购 韩国企业营收衰退面临转型阵痛 - DIGITIMES",
-      "source": "DIGITIMES",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNRlowOENfUG0yS2x1a0VyZFdDdkNxa3FFU1pHNHRLVkpXcE1KbnRkWWlJaTVYT25fM3ZuZmZlNVlmR0xqdjd0dVdhSEx6ZzVwVWxwVW1XQlBWZmxCbjB3cHJfc1Q1dG9icTVsRGpNWnhGRzNVaWhfeTcyaUNBSEV1R1hVUU1oN2lXT3NlRGl6UXNfSDhQWEk5ai1hYW5mbzVNek14NGpxUQ?oc=5",
-      "published": "2026-09-15T18:35:00+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "黄钦勇：台湾、韩国应停止比较 从互补中找AI时代合作解方 - DIGITIMES",
-      "source": "DIGITIMES",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQc2kzOEY5bk9FWm5HZ0FjbVRKNFlQc3NaUlJIS1J6dnVEUl9iVmRmYWxubjZiWmtkNW5wb29ZazdMZm5HZjd4Ny1GSjZja09rQ3dFNHAzUTZFNHZYQjFmXy1ZM1p0cWQwYlMtcW50aEY5M0NDQmEtNC1TX08yVFNfN1duNDRYRkxFX0JrdGZWRnd2M2FBVmtqd0pWT0o?oc=5",
-      "published": "2026-09-15T18:24:00+00:00"
+      "title": "促进越南与韩国在半导体和电子领域的合作。 - Vietnam.vn",
+      "source": "Vietnam.vn",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQUFVQaWxXbDNvUWFGQjNrWkhtc3VfMXFsUmE0VGRXY0ZEZTd3bDU3MHBTTlFnY1VBZmFhVERBYU9GZXVkS2dBQXRWZ2doNzd6YWh1YmNITFZmSGI4dm9neHFVRUlpRFBBVndZbi1MVFRvbDhyQ1U4NHNxd1FGaExGbHd4WV94VlVHQ2ZaSzRlcDhERFQtWFQ4VQ?oc=5",
+      "published": "2026-09-15T23:26:53+00:00"
     }
   ]
 }
