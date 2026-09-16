@@ -67,8 +67,6 @@
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_br",
-      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -78,8 +76,7 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -365,11 +362,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11131.28,
-          "date": "2026-09-14",
+          "value": 11175.55,
+          "date": "2026-09-15",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -23.94
+            "drawdown_pct": -23.64
           }
         },
         {
@@ -694,12 +691,12 @@
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "down",
         "policy": "up",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -734,6 +731,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 345.572,
+          "date": "2026-08-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -10.52
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 114.73,
@@ -744,6 +751,13 @@
           }
         },
         {
+          "id": "oecd_bci_br",
+          "name": "OECD 巴西商业信心指数 BCI",
+          "value": 99.5684,
+          "date": "2026-08-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 227.2867,
@@ -752,11 +766,8 @@
         }
       ],
       "light": "yellow",
-      "summary": "巴西：增长走弱、信贷走强、市场缺失，区域黄灯",
-      "degraded": [
-        "oecd_share_br",
-        "oecd_bci_br"
-      ]
+      "summary": "巴西：增长走弱、信贷走强、市场平稳，区域黄灯",
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -845,24 +856,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "杨山海：美联储利率决议来袭！黄金能否逆势翻盘？_名家点金 - 黄金网",
-      "source": "黄金网",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1tZ0hhVmswS0trcDBOZ0xQSjh1b3VXTWJaRUt5OXp4a0pIbmJfWlhJblM0NHZmQ2U4b19WbmZBaGNaa1NnU2I5Tk1wRmgySDZCckhJQzQybDRpdVJzaTdqTy1oOEZlZzlnZkZySg?oc=5",
-      "published": "2026-09-16T01:40:02+00:00"
+      "title": "美元走强叠加美联储决议临近，美元/加元反弹至下降趋势线附近，等待压力测试 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNdG1IVkdMSWtTQmtfQ0hwSGZkcUFFcjBpR3ZIWnNvRTk4TzRTR2VPZ3dST2dheWNzM2ptZ3VxUzZBZFlnTE1ma0pFOVBRVFBPU0xHdnphSGtwQzVpWDlEOEo5TG9lSk1pbVVjelVRbXRrb0FSS2Q2ekVKQmNXTkdpbGJsZm52UWh5OV9zSEhrVURwMEZoM1lmT08zWWdCN3NOeW1oRDlJMA?oc=5",
+      "published": "2026-09-16T10:18:06+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美联储加息在即！10年期美债收益率突破5%，创近十九年新高，全球借贷成本要变天？_外汇动态报道 - 汇通网 Fx678",
-      "source": "汇通网 Fx678",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9tR1lFczNHc0Y1MGdJVFE5ZDhvdFpOMGlfeUI2Z2pReUFUakQ4MkxrcTJtc0tfVUtkTE5SOFlva24yWHpNOEo5Wko2TEM1dDhhQVd2aUJEYnBXZw?oc=5",
-      "published": "2026-09-16T01:24:37+00:00"
+      "title": "ATFX:美联储利率决议来袭 加息25基点概率超九成 - Sohu",
+      "source": "Sohu",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNb0dXWDFabUpaZnlWUlpBcTFDZ1ZGX05BNWk0QzRqU0o0Tlk3SGEtU3hva0V1eGFFWEQ2aVVlOURISGsybWFRbHA3aGEybERTenhnem9JeW9TRUNlZ0RMWXRzODh3WjlFMlRCSFhSTm1aRi1TbnFtTHFWMk9CbkxSaVFvM29wd2oyRGhBeQ?oc=5",
+      "published": "2026-09-16T10:11:18+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "促进越南与韩国在半导体和电子领域的合作。 - Vietnam.vn",
-      "source": "Vietnam.vn",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQUFVQaWxXbDNvUWFGQjNrWkhtc3VfMXFsUmE0VGRXY0ZEZTd3bDU3MHBTTlFnY1VBZmFhVERBYU9GZXVkS2dBQXRWZ2doNzd6YWh1YmNITFZmSGI4dm9neHFVRUlpRFBBVndZbi1MVFRvbDhyQ1U4NHNxd1FGaExGbHd4WV94VlVHQ2ZaSzRlcDhERFQtWFQ4VQ?oc=5",
-      "published": "2026-09-15T23:26:53+00:00"
+      "category": "货币政策",
+      "title": "机构：美联储利率决策及其可信度对投资者至关重要 - 富途牛牛",
+      "source": "富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOUXF2emlfd3BvaDdnRjhkdXhUUXhIYUdxcUZ3bEhfNW5VZWlaS0ZLLTNvemZoQUI4aUpIX3lvX3pZUTg2RmhjWVdCNUxoOVZfX0tycFhPbkdtaUxCaVI0em9SU0ZBcVZidDhXcmhFNzV6WVZtaDMxcjV0b1pERkVZMFpWZ3htNXFxbzZtOVFYRlgwOTZRRjl3MVFvUGF1TldXQXJvVDhwTmI1TFU?oc=5",
+      "published": "2026-09-16T09:45:03+00:00"
     }
   ]
 }
