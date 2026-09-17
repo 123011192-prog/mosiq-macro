@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.47,
-    "baa10y_pct": 4.094741,
+    "baa10y": 1.48,
+    "baa10y_pct": 4.594703,
     "curve_10y3m": 0.89,
     "curve_inverted": false
   },
@@ -67,6 +67,9 @@
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_cli_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -76,7 +79,8 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -631,7 +635,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -656,16 +660,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 284.5038,
-          "date": "2026-08-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -8.5
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 81.08,
@@ -684,32 +678,23 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
         "bis_policy_in",
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
         "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.6276,
-          "date": "2026-08-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.807
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -765,9 +750,11 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "巴西：增长走弱、信贷走强、市场平稳，区域黄灯",
-      "degraded": []
+      "light": "green",
+      "summary": "巴西：增长缺失、信贷走强、市场平稳，区域绿灯",
+      "degraded": [
+        "oecd_cli_br"
+      ]
     }
   },
   "oil_watch": {
@@ -826,13 +813,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 5.0,
-        "date": "2026-09-15",
+        "value": 5.01,
+        "date": "2026-09-16",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.36,
-        "date": "2026-09-15",
+        "value": 5.35,
+        "date": "2026-09-16",
         "source": "tushare"
       }
     }
@@ -856,24 +843,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "时隔三年多！美联储重启加息 25个基点符合市场预期 - 东方财富",
-      "source": "东方财富",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB3czVTOGtfbUM0Z28wTXo4ejZGSjV3Y3hXb05hT2NjLW13SVNSQjBkVFBTZlZhM0pxanhkSUwwX0dQWUFnTEtmbnFrUTNMelplQ1ZZVmdSSlU3blBNQTcteQ?oc=5",
-      "published": "2026-09-16T18:24:04+00:00"
+      "title": "美联储暗示今年将再加息一次，12月可能性更大 - 亚洲日报",
+      "source": "亚洲日报",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA4ZkpNeHNJb1ZLQTkyQXZoMVNDRHVYSHhDQVFuQjFSZFJraUxsRVd4SnNqQXA0QVFyQVVMYmhRa2dSQnZHMVl3MlRLUzh2b0ZzSEhMTmNOZ29uamM?oc=5",
+      "published": "2026-09-17T01:16:10+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "韩国科学技术信息通信部在Hanyang University成立AI半导体创新研究所，SK hynix、LG Electronics等参与共建 - 디지털투데이",
+      "source": "디지털투데이",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNckhHTnZHU3JVREtCbDBLOXBQSWg0Ty0zeVAyQTZEdWlPQks2X0hNMkNZbE1jOHd2cEVaYk1odGFUQjlJVmxoUkNpdDRsYW9US2Fwdzl2cVAyRG5BZGFIV19Lb1hmLTE4WWVxZ1FfWnMxNTJFMmxtTnFBVlZmRWVFbkZsOS13SGFhbWlPT1hJZnA5NmdjUGF0dkdRS3FHNUM5V2pmTGZhUF91NE9vV0dBNE9SRU0wVjhFWkNrM0FEWEpJa201Rkd3dGVWNV9XaEZkZjFjYWM0Tnd0eVpWTDM2SGNpVjM0Z2N2SHJrblF3?oc=5",
+      "published": "2026-09-17T01:00:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "现货白银在美联储利率决议后转跌，现报63.585美元/盎司。 - cj.sina.cn",
-      "source": "cj.sina.cn",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBYbVlXbGJ6YmlkZkZaOFVMZ0xrM3I4TW9FQnZVVFJGMlFjYXNEOFZyV0NnODZPdVhsc1pjaUFqbE5lV0hjXzZ5NnI4anAzbFk?oc=5",
-      "published": "2026-09-16T18:17:49+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "三年多来首次加息，美联储把通胀预期推到了2029 年|美联储_新浪新闻 - 新浪网",
-      "source": "新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9SdnROX0N0Q2pyWmJmc3lVZDNLVmFabkdFaFhlRWJ0Q2lHZGNaVlNPNEhIc25qeHVXUWJuanMxbFAwYV9Qd1Q2WjFFODJTb0QyOE1xbi1SdHR1N2x6UmJLTXhhNA?oc=5",
-      "published": "2026-09-16T18:08:00+00:00"
+      "title": "一图看懂：美联储三年来首度加息 以史为鉴美股会怎么走？ - 21财经",
+      "source": "21财经",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNR0NYczJnbmtFTzhaS29PTHh1cGFBWnBkbHpMT1J3SjdpTWFMWUx5M0daZ2N1TGx2YVViTGRoOFFOenRONTItaExVREplM282SGE0dHRlT0hOTUNaNWVGVHkwb2tucnBjUWxCRk0zeFpsOEJvUGxMYzE4YVB0dWVrRkI2ZWFtOUdnczN6bGdmNA?oc=5",
+      "published": "2026-09-17T00:44:00+00:00"
     }
   ]
 }
