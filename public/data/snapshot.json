@@ -70,6 +70,7 @@
       "refresh:oecd:oecd_bci_in",
       "refresh:oecd:oecd_share_in",
       "refresh:oecd:oecd_cli_br",
+      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -137,17 +138,17 @@
         {
           "id": "bis_eer_eur",
           "name": "BIS 欧元名义有效汇率",
-          "value": 108.66,
-          "date": "2026-07-01",
+          "value": 109.38,
+          "date": "2026-08-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": -1.065
+            "3m_change_pct": 0.009
           }
         },
         {
           "id": "ecb_hicp_yoy",
           "name": "ECB HICP 通胀同比",
-          "value": 3.3,
+          "value": 3.2,
           "date": "2026-08-01",
           "unit": "%"
         },
@@ -177,7 +178,7 @@
         "policy": "neutral",
         "credit": "up",
         "market": "up",
-        "fx": "up"
+        "fx": "neutral"
       },
       "indicators": [
         {
@@ -223,11 +224,11 @@
         {
           "id": "bis_eer_cn",
           "name": "BIS 人民币名义有效汇率",
-          "value": 114.29,
-          "date": "2026-07-01",
+          "value": 113.15,
+          "date": "2026-08-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": 2.65
+            "3m_change_pct": 1.18
           }
         },
         {
@@ -302,11 +303,11 @@
         {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
-          "value": 67.57,
-          "date": "2026-07-01",
+          "value": 68.46,
+          "date": "2026-08-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": -1.3
+            "3m_change_pct": -0.393
           }
         },
         {
@@ -330,7 +331,7 @@
         "policy": "down",
         "credit": "down",
         "market": "down",
-        "fx": "neutral"
+        "fx": "up"
       },
       "indicators": [
         {
@@ -366,21 +367,21 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11175.55,
-          "date": "2026-09-15",
+          "value": 11246.11,
+          "date": "2026-09-16",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -23.64
+            "drawdown_pct": -23.15
           }
         },
         {
           "id": "bis_eer_kr",
           "name": "BIS 韩元名义有效汇率",
-          "value": 84.67,
-          "date": "2026-07-01",
+          "value": 89.15,
+          "date": "2026-08-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": 0.463
+            "3m_change_pct": 6.524
           }
         },
         {
@@ -455,11 +456,11 @@
         {
           "id": "bis_eer_gb",
           "name": "BIS 英镑名义有效汇率",
-          "value": 111.75,
-          "date": "2026-07-01",
+          "value": 112.0,
+          "date": "2026-08-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": 1.031
+            "3m_change_pct": 1.019
           }
         },
         {
@@ -488,7 +489,7 @@
         "policy": "neutral",
         "credit": "neutral",
         "market": "up",
-        "fx": "down"
+        "fx": "neutral"
       },
       "indicators": [
         {
@@ -534,11 +535,11 @@
         {
           "id": "bis_eer_ca",
           "name": "BIS 加元名义有效汇率",
-          "value": 96.64,
-          "date": "2026-07-01",
+          "value": 97.5,
+          "date": "2026-08-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": -2.077
+            "3m_change_pct": -1.386
           }
         },
         {
@@ -549,8 +550,8 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "加拿大：增长走强、信贷平稳、市场走强，区域黄灯",
+      "light": "green",
+      "summary": "加拿大：增长走强、信贷平稳、市场走强，区域绿灯",
       "degraded": [
         "oecd_bci_ca"
       ]
@@ -608,11 +609,11 @@
         {
           "id": "bis_eer_au",
           "name": "BIS 澳元名义有效汇率",
-          "value": 106.23,
-          "date": "2026-07-01",
+          "value": 107.14,
+          "date": "2026-08-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": -0.757
+            "3m_change_pct": -1.135
           }
         },
         {
@@ -662,11 +663,11 @@
         {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
-          "value": 81.08,
-          "date": "2026-07-01",
+          "value": 80.56,
+          "date": "2026-08-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": -1.602
+            "3m_change_pct": 0.211
           }
         },
         {
@@ -692,7 +693,7 @@
         "policy": "up",
         "credit": "up",
         "market": "neutral",
-        "fx": "neutral"
+        "fx": "down"
       },
       "indicators": [
         {
@@ -728,19 +729,12 @@
         {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
-          "value": 114.73,
-          "date": "2026-07-01",
+          "value": 113.18,
+          "date": "2026-08-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": -0.572
+            "3m_change_pct": -2.733
           }
-        },
-        {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.5684,
-          "date": "2026-08-01",
-          "unit": "指数"
         },
         {
           "id": "bis_spp_br",
@@ -750,10 +744,11 @@
           "unit": "指数"
         }
       ],
-      "light": "green",
-      "summary": "巴西：增长缺失、信贷走强、市场平稳，区域绿灯",
+      "light": "yellow",
+      "summary": "巴西：增长缺失、信贷走强、市场平稳，区域黄灯",
       "degraded": [
-        "oecd_cli_br"
+        "oecd_cli_br",
+        "oecd_bci_br"
       ]
     }
   },
@@ -843,24 +838,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "美联储暗示今年将再加息一次，12月可能性更大 - 亚洲日报",
-      "source": "亚洲日报",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA4ZkpNeHNJb1ZLQTkyQXZoMVNDRHVYSHhDQVFuQjFSZFJraUxsRVd4SnNqQXA0QVFyQVVMYmhRa2dSQnZHMVl3MlRLUzh2b0ZzSEhMTmNOZ29uamM?oc=5",
-      "published": "2026-09-17T01:16:10+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "韩国科学技术信息通信部在Hanyang University成立AI半导体创新研究所，SK hynix、LG Electronics等参与共建 - 디지털투데이",
-      "source": "디지털투데이",
-      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNckhHTnZHU3JVREtCbDBLOXBQSWg0Ty0zeVAyQTZEdWlPQks2X0hNMkNZbE1jOHd2cEVaYk1odGFUQjlJVmxoUkNpdDRsYW9US2Fwdzl2cVAyRG5BZGFIV19Lb1hmLTE4WWVxZ1FfWnMxNTJFMmxtTnFBVlZmRWVFbkZsOS13SGFhbWlPT1hJZnA5NmdjUGF0dkdRS3FHNUM5V2pmTGZhUF91NE9vV0dBNE9SRU0wVjhFWkNrM0FEWEpJa201Rkd3dGVWNV9XaEZkZjFjYWM0Tnd0eVpWTDM2SGNpVjM0Z2N2SHJrblF3?oc=5",
-      "published": "2026-09-17T01:00:00+00:00"
+      "title": "美联储加息，也拦不住黄金上涨 - finance.sina.com.cn",
+      "source": "finance.sina.com.cn",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9faUFhbVZ4ZEc2VkxLekVPSFhKVVpLamVONUVJRTFPYUdxbXNITHZMaEVvM2RsVW11Y3NZQ0pTNVZpM1hUcTBHdXg4V3I0V1NxQzRfRDItcUVTWDBWX0FQM21DSmM0WERFRDc0ZTQzN28tSExzYUdNMQ?oc=5",
+      "published": "2026-09-17T10:27:38+00:00"
     },
     {
       "category": "货币政策",
-      "title": "一图看懂：美联储三年来首度加息 以史为鉴美股会怎么走？ - 21财经",
-      "source": "21财经",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNR0NYczJnbmtFTzhaS29PTHh1cGFBWnBkbHpMT1J3SjdpTWFMWUx5M0daZ2N1TGx2YVViTGRoOFFOenRONTItaExVREplM282SGE0dHRlT0hOTUNaNWVGVHkwb2tucnBjUWxCRk0zeFpsOEJvUGxMYzE4YVB0dWVrRkI2ZWFtOUdnczN6bGdmNA?oc=5",
-      "published": "2026-09-17T00:44:00+00:00"
+      "title": "美联储“鹰派加息”冲击波：强美元、高油价、高利率“三重绞杀”，亚洲汇市再临资本外流风暴 - finance.sina.com.cn",
+      "source": "finance.sina.com.cn",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPb0IzaENXWFFiYVoyRkZZSDA3RmxfRngxcjJOZEozSFZ3SGZGeTZlTmM0YWZUc1FvbmREZ2pOVWw1Sm1LaldlbTE0VGo4TktRX1JteFNSbGE1YWo1NUdIQmw1Q3ZUck01YkpNbWtsb1pDOG8wUmZTbVRjSzBkd01ZZEk3UGlfT2E3SWtQcERtR3F4Y0JzQkNNVFlXdTlMSjVfbHc4ZWNBcw?oc=5",
+      "published": "2026-09-17T10:07:30+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "花旗预计美联储10月及12月维持利率不变 2027年6月恢复降息 - 观点网",
+      "source": "观点网",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5FUHZucWJyNlhMYkphM2g1YUhnY0RRSEtJOEJyaTVMbzJCZEpxcWZUYWNlSzFwM0RlWmVOOXJjZW1MODkwTjNJdGx6Wjl6bVJjNjVNLVlmWkJGOFM4T1ZDeFBn?oc=5",
+      "published": "2026-09-17T10:03:34+00:00"
     }
   ]
 }
