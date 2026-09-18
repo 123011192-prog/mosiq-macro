@@ -67,9 +67,6 @@
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
-      "refresh:oecd:oecd_share_in",
-      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -79,8 +76,7 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -366,11 +362,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11246.11,
-          "date": "2026-09-16",
+          "value": 11599.49,
+          "date": "2026-09-17",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -23.15
+            "drawdown_pct": -20.74
           }
         },
         {
@@ -635,7 +631,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -660,6 +656,16 @@
           }
         },
         {
+          "id": "oecd_share_in",
+          "name": "OECD 印度股价指数（NIFTY 代理）",
+          "value": 284.5038,
+          "date": "2026-08-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -8.5
+          }
+        },
+        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.56,
@@ -678,15 +684,14 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
         "bis_policy_in",
-        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "down",
         "policy": "up",
@@ -746,6 +751,13 @@
           }
         },
         {
+          "id": "oecd_bci_br",
+          "name": "OECD 巴西商业信心指数 BCI",
+          "value": 99.5684,
+          "date": "2026-08-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 227.2867,
@@ -755,9 +767,7 @@
       ],
       "light": "orange",
       "summary": "巴西：增长走弱、信贷走强、市场平稳，区域橙灯",
-      "degraded": [
-        "oecd_bci_br"
-      ]
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -846,24 +856,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "美聯儲升息震撼市場 AI燒錢太快成利率新推手 - 新唐人電視台",
-      "source": "新唐人電視台",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1NWFloZjh4ZHRkcWZIdFA3c29XcHBsVnBDSWNiakhKZUZrOFUyWTBJcnVkdUljQkVrU1RFWjBXa3J2V2syNG55VW8yLUZSVERUZmhuMUNGbklLcm9BSVUwctIBZkFVX3lxTE1FQ1ZqdVB3dUFia0trc0hTU0VSSjAyRTd0d0ZVY3lrb3V6Y2IyTldBMHNtWTFMX2VpOHktdkRmVldQZWw2bkNxMDRlLXgtYTNMV2R3WEx5NTR3VXMyZ2x0WjdLbGtqQQ?oc=5",
-      "published": "2026-09-18T01:27:54+00:00"
+      "title": "陈峻齐:上涨启动黄金继续多 - finance.sina.cn",
+      "source": "finance.sina.cn",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUTliOTNreENPRGdfTUdJWXdIUUNfelF4NExfVElhSmU5aHI0M3ZqNVZSemxfWVBESWEwYjZ0eTVKY0JqdVJTajZ0T1VRaXVzTm5oZUYwcDZkeVpWeVZ6NDZVbmo2RW9aXzF3NmxicFRjZWdyUWpmV2pKR01YRndkdXpuNEl6Z2c3RWlLZUlIZnpKcUFucjhtYlFIcjFaSDJrVE11dVJmUVdHYTd0WWJIOFhR?oc=5",
+      "published": "2026-09-18T07:46:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩国股市大涨，“存储双雄”猛拉，AI、半导体，突传利好 - 凤凰网财经",
-      "source": "凤凰网财经",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBCamZmNFlKRzJxTlA0R0FCV2tMSnZNeE5FSTdJYzlVa0ZOVjZPaUZnU2kxQjBtOFZiRHJEMFVCNnlnWDk3YnVOUmE1Q01DU3lv?oc=5",
-      "published": "2026-09-18T01:01:38+00:00"
+      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
+      "published": "2026-09-18T07:26:51+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩国综指大涨超2%，日韩存储芯片股爆发 - 21财经",
-      "source": "21财经",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxON1c5T25fUlhrN1MtN2RpbWJEQlRUT0Z0VFJaUE9sSzBUdTRkVVVjUHh5RHhSUElOaXBKS1RHbnZKNmdONlE3MFh4RDZocmNWNExZVmN2TjlFMzFJMldHQ3RvXzB3eWozbnAxaVh5U3lIdmNnaGJjeWttTXZOV1JMc0ZXem4tOTZRanN3VURjWQ?oc=5",
-      "published": "2026-09-18T00:52:00+00:00"
+      "title": "韩国半导体设备供应紧张！SK海力士收涨超6%，李在明承认单一股票杠杆ETF存在不足 - Sohu",
+      "source": "Sohu",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPcFhXRUJTVEg3cFMzU3R5TF9iSVRkT0JTX202bFBKRUMxMGx5MkRmMTRXWUlHdDBBZXF0LXNGOTBrOXpnekJ1ZWJwcWxpeVZ6SC1jMUF2MkRsYzdHeTNBWGhrNERrM0VUM3RrS3NhTHd1YWdaUy1FeXY2ZDhfeWp3RGdTZTdHQ05Mc0wwcA?oc=5",
+      "published": "2026-09-18T06:48:00+00:00"
     }
   ]
 }
