@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-17",
+  "as_of": "2026-09-18",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.43,
     "baa10y_pct": 1.444623,
-    "curve_10y3m": 0.87,
+    "curve_10y3m": 0.82,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,7 +63,7 @@
     }
   ],
   "health": {
-    "data_asof": "2026-09-16",
+    "data_asof": "2026-09-17",
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
@@ -288,11 +288,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 64136.25,
-          "date": "2026-09-17",
+          "value": 65018.95,
+          "date": "2026-09-18",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -11.37
+            "drawdown_pct": -10.15
           }
         },
         {
@@ -797,13 +797,13 @@
     "us10y": {
       "value": 5.01,
       "date": "2026-09-16",
-      "change_20d_bp": 36.0,
+      "change_20d_bp": 32.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.35,
       "date": "2026-09-16",
-      "change_20d_bp": 16.0,
+      "change_20d_bp": 12.0,
       "source": "fred"
     },
     "us02y": {
@@ -819,8 +819,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": true,
-      "us10y_change_20d_bp": 36.0,
-      "us30y_change_20d_bp": 16.0,
+      "us10y_change_20d_bp": 32.0,
+      "us30y_change_20d_bp": 12.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -856,24 +856,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "陈峻齐:上涨启动黄金继续多 - finance.sina.cn",
-      "source": "finance.sina.cn",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUTliOTNreENPRGdfTUdJWXdIUUNfelF4NExfVElhSmU5aHI0M3ZqNVZSemxfWVBESWEwYjZ0eTVKY0JqdVJTajZ0T1VRaXVzTm5oZUYwcDZkeVpWeVZ6NDZVbmo2RW9aXzF3NmxicFRjZWdyUWpmV2pKR01YRndkdXpuNEl6Z2c3RWlLZUlIZnpKcUFucjhtYlFIcjFaSDJrVE11dVJmUVdHYTd0WWJIOFhR?oc=5",
-      "published": "2026-09-18T07:46:00+00:00"
+      "title": "美联储重启加息周期 本地利率预期升温 房贷利率已涨 - 联合早报",
+      "source": "联合早报",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9uZVl1RVFzQUtXc19CbW9sYnA4RzdFN05HYW94TjNQVnROOHlGWmpwZDZocWp0ekZBazFBZ1RJbVlYVHNoZlJJOTd6SWJGeUE1RXNhNkJOMlA2ZV9Hc3dEOThOMTdPMkpNQjVmV0o5WmFYdE0?oc=5",
+      "published": "2026-09-18T13:03:23+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "美联储加息的全球意义 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQNDVnOGF6U3B4NHBuOWxpLUptYVdqaFVIRHhnT2E5bS0zeVNYTzZxQVBtS2dSMm5mU2lYRVVrSVVEVGFRMk1tTVlEM1lERG44ZFQ3Z3kxLWxnQUlzT2tJa1dXOXJYMHN5Z3RUcHNGdVY1by1kUkhncjVtRVlaMG4xcGNhZ0Z1QQ?oc=5",
+      "published": "2026-09-18T10:43:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
-      "published": "2026-09-18T07:26:51+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "韩国半导体设备供应紧张！SK海力士收涨超6%，李在明承认单一股票杠杆ETF存在不足 - Sohu",
-      "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPcFhXRUJTVEg3cFMzU3R5TF9iSVRkT0JTX202bFBKRUMxMGx5MkRmMTRXWUlHdDBBZXF0LXNGOTBrOXpnekJ1ZWJwcWxpeVZ6SC1jMUF2MkRsYzdHeTNBWGhrNERrM0VUM3RrS3NhTHd1YWdaUy1FeXY2ZDhfeWp3RGdTZTdHQ05Mc0wwcA?oc=5",
-      "published": "2026-09-18T06:48:00+00:00"
+      "title": "一公司再获韩国半导体厂商CNT订单！ - 电子工程专辑",
+      "source": "电子工程专辑",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5qUC0yb2pZVHl2VVBaZVRQUFhMVTRsay1LeHV0WVRDTURqY0RSamN1NkhUNzVwT1hfbHctcURSNmExeEgyaV96RFpaSEs5RVJZLWFF?oc=5",
+      "published": "2026-09-18T10:30:00+00:00"
     }
   ]
 }
