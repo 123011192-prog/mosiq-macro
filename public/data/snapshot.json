@@ -67,8 +67,10 @@
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_cli_br",
       "refresh:oecd:oecd_bci_br",
-      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -634,7 +636,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -659,16 +661,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 284.5038,
-          "date": "2026-08-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -8.5
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.56,
@@ -687,32 +679,23 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
         "bis_policy_in",
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
       "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "down"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.6276,
-          "date": "2026-08-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.807
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -734,6 +717,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 345.572,
+          "date": "2026-08-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -10.52
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.18,
@@ -751,10 +744,10 @@
           "unit": "指数"
         }
       ],
-      "light": "orange",
-      "summary": "巴西：增长走弱、信贷走强、市场缺失，区域橙灯",
+      "light": "yellow",
+      "summary": "巴西：增长缺失、信贷走强、市场平稳，区域黄灯",
       "degraded": [
-        "oecd_share_br",
+        "oecd_cli_br",
         "oecd_bci_br"
       ]
     }
@@ -845,24 +838,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "欧洲、日本集体加息，“低利率时代结束”！科技股要跌？专家：美国房地产等可能先承压！高盛 - 同花顺财经",
+      "title": "美国、欧洲、日本集体加息，“低利率时代结束”！科技股要跌？专家：美国房地产等可能先承压！高盛：利率上升越快，股市压力越大 - 同花顺财经",
       "source": "同花顺财经",
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE0xWDhidnhmbTh0Z1ZSSTlwZ3Q4eFpvb21Kd3Y4WlRCbVluQlRveWVwQWw1Ui00elF2TmNocGo4eFdoWW1YZmlVMVZWZjRidENyM0JtOTNIbC1xX1hUQlhZZTln?oc=5",
-      "published": "2026-09-19T13:18:45+00:00"
+      "published": "2026-09-19T17:54:48+00:00"
     },
     {
       "category": "货币政策",
-      "title": "深度解析黄金和美联储关系！黄金，降息一定涨吗？加息一定跌吗？ - 财经号",
-      "source": "财经号",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBBUWxsUHRhbHVLRUNyRVB4R0tFTEx3bUpoeWpDbXNPX1VlLUxiTFBWYnZEZXFDSE9CUTR6N1h0V1BQcTdvUzZqYWVoclIwdDNhVjliaC1YMkZONEF6NU9oMjZVUkM3YlRDVWc?oc=5",
-      "published": "2026-09-19T07:53:29+00:00"
+      "title": "美联储加息\"靴子\"落地：全球央行接连登场，普通投资者该盯住什么？ - Sohu",
+      "source": "Sohu",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNQ09KYk9yLU9FLWhCT21kQUZzbDRtVjd1TkQ1azcwMVBuUk1ha1d4N1J5Xy1LMzdHVkQ0WS1YSDVFTWR1d1dmd0hGOGRsLXl2V0ZwaGk1YXpoNExrQVY0aUJ1RjhIUkxYZG1uVThQSDRrd2xSaEREa0ZBQ2dGU3Uyb2pGZ2RHZVVfTi1VOQ?oc=5",
+      "published": "2026-09-19T16:53:13+00:00"
     },
     {
       "category": "货币政策",
-      "title": "英国零售销售意外增长0.5%，英镑兑美元守住1.3360但美联储鹰派预期限制反弹 - 新浪财经_金融信息服务商",
-      "source": "新浪财经_金融信息服务商",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNV1NNNEdFcU9pYlphcjkxaE1Qbml4MHoxbGhTeUJablpIbGJpaXlmVWxvendYTHpyRWRWVVZwWlQwanJWeUFveTR1em9qYl9WNUxWeGNIU25NSWRQajh6OS1MVW9fTXdCVjdEQ3BvcVNNdnctSDBtZVF5b2FfSmNKQ0FzSlpPZ01nUjRsV1hNNVc3WWFGYmwzQzBoaVVxOG1YVG5fTWh4bw?oc=5",
-      "published": "2026-09-19T07:07:30+00:00"
+      "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
+      "published": "2026-09-19T11:07:26+00:00"
     }
   ]
 }
