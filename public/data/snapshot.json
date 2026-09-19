@@ -67,7 +67,7 @@
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_br",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -364,11 +364,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11599.49,
-          "date": "2026-09-17",
+          "value": 11921.69,
+          "date": "2026-09-18",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -20.74
+            "drawdown_pct": -18.54
           }
         },
         {
@@ -698,7 +698,7 @@
         "growth": "down",
         "policy": "up",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "down"
       },
       "indicators": [
@@ -733,16 +733,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 345.572,
-          "date": "2026-08-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -10.52
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.18,
@@ -753,6 +743,13 @@
           }
         },
         {
+          "id": "oecd_bci_br",
+          "name": "OECD 巴西商业信心指数 BCI",
+          "value": 99.5684,
+          "date": "2026-08-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 227.2867,
@@ -761,9 +758,9 @@
         }
       ],
       "light": "orange",
-      "summary": "巴西：增长走弱、信贷走强、市场平稳，区域橙灯",
+      "summary": "巴西：增长走弱、信贷走强、市场缺失，区域橙灯",
       "degraded": [
-        "oecd_bci_br"
+        "oecd_share_br"
       ]
     }
   },
@@ -853,24 +850,24 @@
   "world_brief": [
     {
       "category": "货币政策",
+      "title": "英国零售销售意外增长0.5%，英镑兑美元守住1.3360但美联储鹰派预期限制反弹 - 新浪财经_金融信息服务商",
+      "source": "新浪财经_金融信息服务商",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNV1NNNEdFcU9pYlphcjkxaE1Qbml4MHoxbGhTeUJablpIbGJpaXlmVWxvendYTHpyRWRWVVZwWlQwanJWeUFveTR1em9qYl9WNUxWeGNIU25NSWRQajh6OS1MVW9fTXdCVjdEQ3BvcVNNdnctSDBtZVF5b2FfSmNKQ0FzSlpPZ01nUjRsV1hNNVc3WWFGYmwzQzBoaVVxOG1YVG5fTWh4bw?oc=5",
+      "published": "2026-09-19T07:07:30+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "“低利率时代结束了！”全球加息潮卷土重来，每年1万亿美元AI投资直面高利率大考 - 每日经济新闻",
+      "source": "每日经济新闻",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE54WFl4Y2I3R0ZjRlBXNlNwX2dLcThzQ3RUTDJYM3BFdlRVU2tiOG15bGY3eDhoRGRGWG52YjdLWjdfVWxFcVp3XzhJdUNxLVV1X0s3ZF9Ga1ZaU3dTdTlkV1d3bWdrdw?oc=5",
+      "published": "2026-09-19T03:28:00+00:00"
+    },
+    {
+      "category": "货币政策",
       "title": "美联储重演2022年式加息？美银警告：预测利率重返5%上方，建议做空两年期美债提供者智通财经 - 英为财情 Investing.com",
       "source": "英为财情 Investing.com",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE82M3NDanlpcVZJVlhwYVZCV0VmREI4X2tCVlQxbm5acXpTaTVOYXFTR3JheGlPUWJ3UHBTQ2I3bGRnWnVrNkQtd3Q0TWdnXzdHUW14UVRIb3FidlB1bXdmT2FobktKTTdKWWdza3R6ZFY?oc=5",
       "published": "2026-09-19T00:30:00+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "美聯儲升息 房貸利率逼近7% 儲蓄族迎利好 - 大纪元",
-      "source": "大纪元",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9ZaGFOblNQTno2dzlWRl9FRDVLUU13LUlsUnZaakJVel8yV3o3NVFaMzNzbFFMSGJiY2d2b3NZYmhTMmY1N3MyeGNILS02SUZYWXFsdXpqSTZxVEs0R1JRRNIBZkFVX3lxTE9nY29WVmJLRFo2NHB6VEQxb1VuYThSS1Iwanhhc3Y4VUljU3ZFd01UcXltelh0NG9hVUQ2TE84ZEM4QnFQMGROZ1U0RnU0eURDV2JBc0VjSnhSTzN2aXZ5SlR3OTNtUQ?oc=5",
-      "published": "2026-09-18T21:12:00+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - cls.cn",
-      "source": "cls.cn",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
-      "published": "2026-09-18T20:22:44+00:00"
     }
   ]
 }
