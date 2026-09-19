@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.43,
-    "baa10y_pct": 1.444623,
+    "baa10y": 1.44,
+    "baa10y_pct": 1.986356,
     "curve_10y3m": 0.82,
     "curve_inverted": false
   },
@@ -48,7 +48,7 @@
     },
     {
       "label": "美债长端20日急升≥30bp",
-      "active": true
+      "active": false
     },
     {
       "label": "金价20日上涨≥8%",
@@ -67,6 +67,7 @@
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -76,7 +77,8 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -691,7 +693,7 @@
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "down",
         "policy": "up",
@@ -751,13 +753,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.5684,
-          "date": "2026-08-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 227.2867,
@@ -767,7 +762,9 @@
       ],
       "light": "orange",
       "summary": "巴西：增长走弱、信贷走强、市场平稳，区域橙灯",
-      "degraded": []
+      "degraded": [
+        "oecd_bci_br"
+      ]
     }
   },
   "oil_watch": {
@@ -795,44 +792,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 5.01,
-      "date": "2026-09-16",
-      "change_20d_bp": 32.0,
+      "value": 4.94,
+      "date": "2026-09-17",
+      "change_20d_bp": 25.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.35,
-      "date": "2026-09-16",
-      "change_20d_bp": 12.0,
+      "value": 5.29,
+      "date": "2026-09-17",
+      "change_20d_bp": 6.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.74,
-      "date": "2026-09-16",
-      "change_20d_bp": 55.0,
+      "value": 4.67,
+      "date": "2026-09-17",
+      "change_20d_bp": 48.0,
       "source": "fred"
     },
     "spread_2s10s": {
       "value_bp": 27.0,
-      "date": "2026-09-16"
+      "date": "2026-09-17"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
-      "active": true,
-      "us10y_change_20d_bp": 32.0,
-      "us30y_change_20d_bp": 12.0,
+      "active": false,
+      "us10y_change_20d_bp": 25.0,
+      "us30y_change_20d_bp": 6.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.94,
-        "date": "2026-09-17",
+        "value": 5.01,
+        "date": "2026-09-18",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.29,
-        "date": "2026-09-17",
+        "value": 5.34,
+        "date": "2026-09-18",
         "source": "tushare"
       }
     }
@@ -856,24 +853,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "美联储重启加息周期 本地利率预期升温 房贷利率已涨 - 联合早报",
-      "source": "联合早报",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9uZVl1RVFzQUtXc19CbW9sYnA4RzdFN05HYW94TjNQVnROOHlGWmpwZDZocWp0ekZBazFBZ1RJbVlYVHNoZlJJOTd6SWJGeUE1RXNhNkJOMlA2ZV9Hc3dEOThOMTdPMkpNQjVmV0o5WmFYdE0?oc=5",
-      "published": "2026-09-18T13:03:23+00:00"
+      "title": "美联储重演2022年式加息？美银警告：预测利率重返5%上方，建议做空两年期美债提供者智通财经 - 英为财情 Investing.com",
+      "source": "英为财情 Investing.com",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE82M3NDanlpcVZJVlhwYVZCV0VmREI4X2tCVlQxbm5acXpTaTVOYXFTR3JheGlPUWJ3UHBTQ2I3bGRnWnVrNkQtd3Q0TWdnXzdHUW14UVRIb3FidlB1bXdmT2FobktKTTdKWWdza3R6ZFY?oc=5",
+      "published": "2026-09-19T00:30:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
-      "published": "2026-09-18T11:03:43+00:00"
+      "title": "美聯儲升息 房貸利率逼近7% 儲蓄族迎利好 - 大纪元",
+      "source": "大纪元",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9ZaGFOblNQTno2dzlWRl9FRDVLUU13LUlsUnZaakJVel8yV3o3NVFaMzNzbFFMSGJiY2d2b3NZYmhTMmY1N3MyeGNILS02SUZYWXFsdXpqSTZxVEs0R1JRRNIBZkFVX3lxTE9nY29WVmJLRFo2NHB6VEQxb1VuYThSS1Iwanhhc3Y4VUljU3ZFd01UcXltelh0NG9hVUQ2TE84ZEM4QnFQMGROZ1U0RnU0eURDV2JBc0VjSnhSTzN2aXZ5SlR3OTNtUQ?oc=5",
+      "published": "2026-09-18T21:12:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美联储加息的全球意义 - 新浪财经",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQNDVnOGF6U3B4NHBuOWxpLUptYVdqaFVIRHhnT2E5bS0zeVNYTzZxQVBtS2dSMm5mU2lYRVVrSVVEVGFRMk1tTVlEM1lERG44ZFQ3Z3kxLWxnQUlzT2tJa1dXOXJYMHN5Z3RUcHNGdVY1by1kUkhncjVtRVlaMG4xcGNhZ0Z1QQ?oc=5",
-      "published": "2026-09-18T10:43:00+00:00"
+      "category": "科技产业链",
+      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - cls.cn",
+      "source": "cls.cn",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
+      "published": "2026-09-18T20:22:44+00:00"
     }
   ]
 }
