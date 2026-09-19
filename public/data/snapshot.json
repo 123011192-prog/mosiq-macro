@@ -67,6 +67,7 @@
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_br",
       "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
@@ -743,13 +744,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.5684,
-          "date": "2026-08-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 227.2867,
@@ -760,7 +754,8 @@
       "light": "orange",
       "summary": "巴西：增长走弱、信贷走强、市场缺失，区域橙灯",
       "degraded": [
-        "oecd_share_br"
+        "oecd_share_br",
+        "oecd_bci_br"
       ]
     }
   },
@@ -850,24 +845,24 @@
   "world_brief": [
     {
       "category": "货币政策",
+      "title": "欧洲、日本集体加息，“低利率时代结束”！科技股要跌？专家：美国房地产等可能先承压！高盛 - 同花顺财经",
+      "source": "同花顺财经",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE0xWDhidnhmbTh0Z1ZSSTlwZ3Q4eFpvb21Kd3Y4WlRCbVluQlRveWVwQWw1Ui00elF2TmNocGo4eFdoWW1YZmlVMVZWZjRidENyM0JtOTNIbC1xX1hUQlhZZTln?oc=5",
+      "published": "2026-09-19T13:18:45+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "深度解析黄金和美联储关系！黄金，降息一定涨吗？加息一定跌吗？ - 财经号",
+      "source": "财经号",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBBUWxsUHRhbHVLRUNyRVB4R0tFTEx3bUpoeWpDbXNPX1VlLUxiTFBWYnZEZXFDSE9CUTR6N1h0V1BQcTdvUzZqYWVoclIwdDNhVjliaC1YMkZONEF6NU9oMjZVUkM3YlRDVWc?oc=5",
+      "published": "2026-09-19T07:53:29+00:00"
+    },
+    {
+      "category": "货币政策",
       "title": "英国零售销售意外增长0.5%，英镑兑美元守住1.3360但美联储鹰派预期限制反弹 - 新浪财经_金融信息服务商",
       "source": "新浪财经_金融信息服务商",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNV1NNNEdFcU9pYlphcjkxaE1Qbml4MHoxbGhTeUJablpIbGJpaXlmVWxvendYTHpyRWRWVVZwWlQwanJWeUFveTR1em9qYl9WNUxWeGNIU25NSWRQajh6OS1MVW9fTXdCVjdEQ3BvcVNNdnctSDBtZVF5b2FfSmNKQ0FzSlpPZ01nUjRsV1hNNVc3WWFGYmwzQzBoaVVxOG1YVG5fTWh4bw?oc=5",
       "published": "2026-09-19T07:07:30+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "“低利率时代结束了！”全球加息潮卷土重来，每年1万亿美元AI投资直面高利率大考 - 每日经济新闻",
-      "source": "每日经济新闻",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE54WFl4Y2I3R0ZjRlBXNlNwX2dLcThzQ3RUTDJYM3BFdlRVU2tiOG15bGY3eDhoRGRGWG52YjdLWjdfVWxFcVp3XzhJdUNxLVV1X0s3ZF9Ga1ZaU3dTdTlkV1d3bWdrdw?oc=5",
-      "published": "2026-09-19T03:28:00+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "美联储重演2022年式加息？美银警告：预测利率重返5%上方，建议做空两年期美债提供者智通财经 - 英为财情 Investing.com",
-      "source": "英为财情 Investing.com",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE82M3NDanlpcVZJVlhwYVZCV0VmREI4X2tCVlQxbm5acXpTaTVOYXFTR3JheGlPUWJ3UHBTQ2I3bGRnWnVrNkQtd3Q0TWdnXzdHUW14UVRIb3FidlB1bXdmT2FobktKTTdKWWdza3R6ZFY?oc=5",
-      "published": "2026-09-19T00:30:00+00:00"
     }
   ]
 }
