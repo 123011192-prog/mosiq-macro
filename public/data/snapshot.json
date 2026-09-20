@@ -71,6 +71,7 @@
       "refresh:oecd:oecd_share_in",
       "refresh:oecd:oecd_cli_br",
       "refresh:oecd:oecd_bci_br",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -692,7 +693,7 @@
         "growth": "degraded",
         "policy": "up",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "down"
       },
       "indicators": [
@@ -717,16 +718,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 345.572,
-          "date": "2026-08-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -10.52
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.18,
@@ -745,9 +736,10 @@
         }
       ],
       "light": "yellow",
-      "summary": "巴西：增长缺失、信贷走强、市场平稳，区域黄灯",
+      "summary": "巴西：增长缺失、信贷走强、市场缺失，区域黄灯",
       "degraded": [
         "oecd_cli_br",
+        "oecd_share_br",
         "oecd_bci_br"
       ]
     }
@@ -837,25 +829,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "US , China to discuss AI , trade , and rare earths ahead of Trump - Xi summit",
-      "source": "thenews.com.pk",
-      "url": "https://www.thenews.com.pk/latest/1416924-us-china-to-discuss-ai-trade-and-rare-earths-ahead-of-trump-xi-summit",
-      "published": "2026-09-20T09:15:00+00:00"
+      "category": "货币政策",
+      "title": "美联储重启加息 机构探讨后市资产配置 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZi1BWjY1RnhpX0Zlb2s2eFlsV1dVM0xVcHI1UnRjZU1tV0toNDllNENYTGtmZTJVSXJGcXZfS2hvNkk3QkNEcEFRLWdEUlZMMjZORl9vYlJrWGNIWVhpVEctWHJVM1UwNEhta2RzcXludFRSTWVpaDhTLVh3QlNTbkM0aGFzLS1xOG5yNWxrSHZzOTFKd2NVa1NtWEdReXZD?oc=5",
+      "published": "2026-09-20T14:26:35+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "Semicon India 2026 draws global chipmakers as companies eye expansion in India",
-      "source": "moneycontrol.com",
-      "url": "https://www.moneycontrol.com/news/india/semicon-india-2026-draws-global-chipmakers-as-companies-eye-expansion-in-india-14033810.html",
-      "published": "2026-09-20T09:15:00+00:00"
+      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
+      "published": "2026-09-20T12:17:47+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "Vaishnaw cautions industry about cyberattacks , disruption that may target India growing chip might - Moneycontrol . com",
-      "source": "moneycontrol.com",
-      "url": "https://www.moneycontrol.com/news/india/vaishnaw-cautions-industry-about-cyberattacks-disruption-that-may-target-india-s-growing-chip-might-14033799.html",
-      "published": "2026-09-20T09:15:00+00:00"
+      "category": "货币政策",
+      "title": "美联储如期加息，金价走出“靴子落地”的行情 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPLVdGekdBdG5OdHNzWU9LaE9uMFJ6dFF3c05jMVFlVklBN0NWVU90Nlk1V1JodUNuamJTdjNMOHVaOXpLbWltOXZuWXVXZjZ2Qy0wMkRONkl0NmRmZlpTa1pEZ2FSLU03dEFPMnF5MXU1OHQ1N05aemxxVVNJS0NPZE9aTDRMWkV1eTZyczhUVUlBUQ?oc=5",
+      "published": "2026-09-20T11:03:19+00:00"
     }
   ]
 }
