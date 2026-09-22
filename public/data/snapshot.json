@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-18",
+  "as_of": "2026-09-19",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -8,9 +8,9 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.44,
-    "baa10y_pct": 1.987154,
-    "curve_10y3m": 0.82,
+    "baa10y": 1.4,
+    "baa10y_pct": 0.441767,
+    "curve_10y3m": 0.87,
     "curve_inverted": false
   },
   "cycle": {
@@ -18,7 +18,7 @@
     "inflation": "degraded",
     "liquidity": "neutral",
     "credit": "degraded",
-    "policy": "neutral",
+    "policy": "up",
     "market_stress": "degraded"
   },
   "confirmations": [
@@ -63,13 +63,10 @@
     }
   ],
   "health": {
-    "data_asof": "2026-09-17",
-    "stale_count": 25,
+    "data_asof": "2026-09-18",
+    "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_cli_br",
-      "refresh:oecd:oecd_bci_br",
-      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -79,8 +76,7 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -255,7 +251,7 @@
         "growth": "neutral",
         "policy": "down",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -290,16 +286,6 @@
           }
         },
         {
-          "id": "fred_nikkei225",
-          "name": "日经 225 指数",
-          "value": 65018.95,
-          "date": "2026-09-18",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -10.15
-          }
-        },
-        {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
           "value": 68.46,
@@ -318,8 +304,9 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷走强、市场平稳，区域黄灯",
+      "summary": "日本：增长平稳、信贷走强、市场缺失，区域黄灯",
       "degraded": [
+        "fred_nikkei225",
         "oecd_bci_jp"
       ]
     },
@@ -364,13 +351,13 @@
           }
         },
         {
-          "id": "fred_sox",
+          "id": "oecd_share_kr",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11921.69,
-          "date": "2026-09-18",
+          "value": 330.6228,
+          "date": "2026-08-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -18.54
+            "drawdown_pct": -21.62
           }
         },
         {
@@ -695,15 +682,25 @@
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
-        "growth": "degraded",
+        "growth": "down",
         "policy": "up",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "down"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_br",
+          "name": "OECD 巴西综合领先指标 CLI",
+          "value": 102.6276,
+          "date": "2026-08-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.807
+          }
+        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -725,6 +722,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 345.572,
+          "date": "2026-08-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -10.52
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.18,
@@ -735,6 +742,13 @@
           }
         },
         {
+          "id": "oecd_bci_br",
+          "name": "OECD 巴西商业信心指数 BCI",
+          "value": 99.5684,
+          "date": "2026-08-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 227.2867,
@@ -742,13 +756,9 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "巴西：增长缺失、信贷走强、市场缺失，区域黄灯",
-      "degraded": [
-        "oecd_cli_br",
-        "oecd_share_br",
-        "oecd_bci_br"
-      ]
+      "light": "orange",
+      "summary": "巴西：增长走弱、信贷走强、市场平稳，区域橙灯",
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -776,44 +786,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.94,
-      "date": "2026-09-17",
-      "change_20d_bp": 25.0,
+      "value": 5.01,
+      "date": "2026-09-18",
+      "change_20d_bp": 27.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.29,
-      "date": "2026-09-17",
-      "change_20d_bp": 6.0,
+      "value": 5.34,
+      "date": "2026-09-18",
+      "change_20d_bp": 7.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.67,
-      "date": "2026-09-17",
-      "change_20d_bp": 48.0,
+      "value": 4.76,
+      "date": "2026-09-18",
+      "change_20d_bp": 52.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 27.0,
-      "date": "2026-09-17"
+      "value_bp": 25.0,
+      "date": "2026-09-18"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 25.0,
-      "us30y_change_20d_bp": 6.0,
+      "us10y_change_20d_bp": 27.0,
+      "us30y_change_20d_bp": 7.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 5.01,
-        "date": "2026-09-18",
+        "value": 4.96,
+        "date": "2026-09-21",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.34,
-        "date": "2026-09-18",
+        "value": 5.29,
+        "date": "2026-09-21",
         "source": "tushare"
       }
     }
@@ -836,25 +846,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "人才留在韩国、未必留在三星 韩芯片双雄抢人战升温 - DIGITIMES",
-      "source": "DIGITIMES",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPVjJ4a2EtZ2ctcTBueWFOTk4tSUxfZzM0bmFqTlNpYTZleGlZY2xfYkgxWFFxb0FMV3JaSExDV2JnQ1dselZ2QWE2NDFJTEYxcm9FRXQxeG52eWhjclN5d0MzMHk0TDRtMDl2TF9QVlc3UklLZjVLQ29Bd3o3eFQxdmwyaGRzZmg1VzZiZTgtU2ZES0luWjNWN1NNaEk?oc=5",
-      "published": "2026-09-20T18:50:00+00:00"
+      "category": "能源",
+      "title": "Wall Street Surges as Meta Leads AI Rally , Oil Prices Fall",
+      "source": "econotimes.com",
+      "url": "http://www.econotimes.com/Wall-Street-Surges-as-Meta-Leads-AI-Rally-Oil-Prices-Fall-1752632",
+      "published": "2026-09-22T01:00:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "利用韩国综合股价指数（KOSPI）判断美国半导体股票走势 - Moomoo",
-      "source": "Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTnA2MktXWmVHVkJmOWhqR2xUdVdreHlKY1dERXNycU5XQVVvOGwyUjZJR0JETUpieW04Y1JkaWt5VDFMMGdNY2Z0eUI1RkhXSElENVlweERvUTRBcTJnUGswQ3FGRjNZNW9kWEpzUTBLdlFCWC1kNl85VEpYRjJPYnZqZ2FiZ3FYeE56bDdEcGVZSFo3RW1JcDFTVGJMUmdsRUx5ZTBpdTdoMjlyQ29kaFFocmpGQmxH?oc=5",
-      "published": "2026-09-20T14:50:18+00:00"
+      "title": "FinancialContent - Why Are Lattice Semiconductor ( LSCC ) Shares Soaring Today",
+      "source": "markets.financialcontent.com",
+      "url": "https://markets.financialcontent.com/stocks/article/stockstory-2026-9-21-why-are-lattice-semiconductor-lscc-shares-soaring-today",
+      "published": "2026-09-21T21:45:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美联储重启加息 机构探讨后市资产配置 - 新浪财经",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZi1BWjY1RnhpX0Zlb2s2eFlsV1dVM0xVcHI1UnRjZU1tV0toNDllNENYTGtmZTJVSXJGcXZfS2hvNkk3QkNEcEFRLWdEUlZMMjZORl9vYlJrWGNIWVhpVEctWHJVM1UwNEhta2RzcXludFRSTWVpaDhTLVh3QlNTbkM0aGFzLS1xOG5yNWxrSHZzOTFKd2NVa1NtWEdReXZD?oc=5",
-      "published": "2026-09-20T14:26:35+00:00"
+      "category": "地缘冲突",
+      "title": "FinancialContent - Marvell Technology ( MRVL ) Shares Skyrocket , What You Need To Know",
+      "source": "markets.financialcontent.com",
+      "url": "https://markets.financialcontent.com/stocks/article/stockstory-2026-9-21-marvell-technology-mrvl-shares-skyrocket-what-you-need-to-know",
+      "published": "2026-09-21T21:45:00+00:00"
     }
   ]
 }
