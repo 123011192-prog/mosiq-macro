@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-19",
+  "as_of": "2026-09-22",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.4,
     "baa10y_pct": 0.441767,
-    "curve_10y3m": 0.87,
+    "curve_10y3m": 0.79,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,8 +63,8 @@
     }
   ],
   "health": {
-    "data_asof": "2026-09-18",
-    "stale_count": 24,
+    "data_asof": "2026-09-21",
+    "stale_count": 26,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
@@ -72,6 +72,7 @@
       "cycle:credit",
       "cycle:market_stress",
       "radar:banking",
+      "radar:credit",
       "radar:nonbank",
       "regions:japan",
       "regions:canada",
@@ -351,13 +352,13 @@
           }
         },
         {
-          "id": "oecd_share_kr",
+          "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 330.6228,
-          "date": "2026-08-01",
+          "value": 12433.17,
+          "date": "2026-09-21",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -21.62
+            "drawdown_pct": -15.04
           }
         },
         {
@@ -786,32 +787,32 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 5.01,
-      "date": "2026-09-18",
-      "change_20d_bp": 27.0,
+      "value": 4.96,
+      "date": "2026-09-21",
+      "change_20d_bp": 26.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.34,
-      "date": "2026-09-18",
-      "change_20d_bp": 7.0,
+      "value": 5.29,
+      "date": "2026-09-21",
+      "change_20d_bp": 6.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.76,
-      "date": "2026-09-18",
+      "date": "2026-09-21",
       "change_20d_bp": 52.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 25.0,
-      "date": "2026-09-18"
+      "value_bp": 20.0,
+      "date": "2026-09-21"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 27.0,
-      "us30y_change_20d_bp": 7.0,
+      "us10y_change_20d_bp": 26.0,
+      "us30y_change_20d_bp": 6.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -846,25 +847,25 @@
   },
   "world_brief": [
     {
-      "category": "能源",
-      "title": "Wall Street Surges as Meta Leads AI Rally , Oil Prices Fall",
-      "source": "econotimes.com",
-      "url": "http://www.econotimes.com/Wall-Street-Surges-as-Meta-Leads-AI-Rally-Oil-Prices-Fall-1752632",
-      "published": "2026-09-22T01:00:00+00:00"
+      "category": "货币政策",
+      "title": "纽元反弹在0.5800下方受阻，美联储利率前景令NZD/USD持续承压 - VT Markets",
+      "source": "VT Markets",
+      "url": "https://news.google.com/rss/articles/CBMi3gJBVV95cUxPbTZjRE5TX1JHLXUzcTJ2UHBlQWRaUHdFUEdEdXI4bWEzUGVfbE9RUy13R21id19adlljMEVqYzlkM1ZpT2Y3XzBSbjhtQmN1b2doazNfYmNhWTZLd3J4OV92R2RkMlBmdE9rdzBTb013MlFOX3F2U0doSGFEenNYUy1RS1dVMHplTVcyVUdfYzVacjdMY3JRdFhON1UyMmlNWXN4enhmelowMFAzUVo3OS1DU0FYVkNOd2hBVXJTbXdTajQwRFpIdnMxWURBa0hsZWVIZEZJQjRXSlVnRnF6YnVxZ0c1enRuRjAxX1d4WENrRVZzdTJVdk5TR2FJVV9VZHI3WHM5RmVJQ1hBc05yUG1SVmZ3aVZyVEE0SUl3cWEzbjJ0bU9KTHA1NndReG5PSGc4SlQ3eWdFanBCZ0UtRVU5M3BMZXAteUNWSTk0TGdEMXBzblluS1VUNGUwUQ?oc=5",
+      "published": "2026-09-22T16:03:41+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "威廉姆斯：美联储利率调控体系一直非常有效。 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5MVTlUQnMyanlRVFVFWGZhejBkaklJckZNSVVqREpVM0x1OEpHWlpRRjlRUXFyRVROdzJDc2VjRkt5OV9uUTVPQm8wRQ?oc=5",
+      "published": "2026-09-22T14:05:34+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "FinancialContent - Why Are Lattice Semiconductor ( LSCC ) Shares Soaring Today",
-      "source": "markets.financialcontent.com",
-      "url": "https://markets.financialcontent.com/stocks/article/stockstory-2026-9-21-why-are-lattice-semiconductor-lscc-shares-soaring-today",
-      "published": "2026-09-21T21:45:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "FinancialContent - Marvell Technology ( MRVL ) Shares Skyrocket , What You Need To Know",
-      "source": "markets.financialcontent.com",
-      "url": "https://markets.financialcontent.com/stocks/article/stockstory-2026-9-21-marvell-technology-mrvl-shares-skyrocket-what-you-need-to-know",
-      "published": "2026-09-21T21:45:00+00:00"
+      "title": "韩国半导体巨头清算其在越南的公司。 - Vietnam.vn",
+      "source": "Vietnam.vn",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQQlVmaWEya25xb0ZidmxpTkNON0h0YU9OQ05uQzRCdk5nbFlISGphRkVLSEhJZ21mQ3pZVllqQzE4Vi1zXzNEMkptclNSTGEwZDI5Q0JWdHZ1YldSeC1JZHd0R3hfMzNJdHdtaGx5UjBUdkR4QVd4VnlEOXlkR1ZtRlJIa181T1RPbzVQNw?oc=5",
+      "published": "2026-09-22T12:31:36+00:00"
     }
   ]
 }
