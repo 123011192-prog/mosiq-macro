@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.4,
-    "baa10y_pct": 0.441767,
+    "baa10y": 1.42,
+    "baa10y_pct": 1.043758,
     "curve_10y3m": 0.79,
     "curve_inverted": false
   },
@@ -64,7 +64,7 @@
   ],
   "health": {
     "data_asof": "2026-09-21",
-    "stale_count": 26,
+    "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
@@ -72,7 +72,6 @@
       "cycle:credit",
       "cycle:market_stress",
       "radar:banking",
-      "radar:credit",
       "radar:nonbank",
       "regions:japan",
       "regions:canada",
@@ -819,12 +818,12 @@
     "latest_quotes": {
       "us10y": {
         "value": 4.96,
-        "date": "2026-09-21",
+        "date": "2026-09-22",
         "source": "tushare"
       },
       "us30y": {
         "value": 5.29,
-        "date": "2026-09-21",
+        "date": "2026-09-22",
         "source": "tushare"
       }
     }
@@ -848,24 +847,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "纽元反弹在0.5800下方受阻，美联储利率前景令NZD/USD持续承压 - VT Markets",
-      "source": "VT Markets",
-      "url": "https://news.google.com/rss/articles/CBMi3gJBVV95cUxPbTZjRE5TX1JHLXUzcTJ2UHBlQWRaUHdFUEdEdXI4bWEzUGVfbE9RUy13R21id19adlljMEVqYzlkM1ZpT2Y3XzBSbjhtQmN1b2doazNfYmNhWTZLd3J4OV92R2RkMlBmdE9rdzBTb013MlFOX3F2U0doSGFEenNYUy1RS1dVMHplTVcyVUdfYzVacjdMY3JRdFhON1UyMmlNWXN4enhmelowMFAzUVo3OS1DU0FYVkNOd2hBVXJTbXdTajQwRFpIdnMxWURBa0hsZWVIZEZJQjRXSlVnRnF6YnVxZ0c1enRuRjAxX1d4WENrRVZzdTJVdk5TR2FJVV9VZHI3WHM5RmVJQ1hBc05yUG1SVmZ3aVZyVEE0SUl3cWEzbjJ0bU9KTHA1NndReG5PSGc4SlQ3eWdFanBCZ0UtRVU5M3BMZXAteUNWSTk0TGdEMXBzblluS1VUNGUwUQ?oc=5",
-      "published": "2026-09-22T16:03:41+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "威廉姆斯：美联储利率调控体系一直非常有效。 - 新浪财经",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5MVTlUQnMyanlRVFVFWGZhejBkaklJckZNSVVqREpVM0x1OEpHWlpRRjlRUXFyRVROdzJDc2VjRkt5OV9uUTVPQm8wRQ?oc=5",
-      "published": "2026-09-22T14:05:34+00:00"
+      "title": "伯恩斯坦研报：即便美联储持续加息，黄金为何仍能冲击5700美元？ - PANews",
+      "source": "PANews",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBNd0pkNXlrREtGTnM0dmRhelM2ZS05d2FiSVBJUW5xQlMwRERiSlA0OFYyZ0hpV3RFZWJiZ2ZadDI4cnFzSFViS1VZalFLUGVKeFRyVFFIbEZuZENvMENndGpuWFhDSXVhUTVPYlBoMlNFMGNvV1NlMFJwbWlGVVk?oc=5",
+      "published": "2026-09-23T00:51:22+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩国半导体巨头清算其在越南的公司。 - Vietnam.vn",
-      "source": "Vietnam.vn",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQQlVmaWEya25xb0ZidmxpTkNON0h0YU9OQ05uQzRCdk5nbFlISGphRkVLSEhJZ21mQ3pZVllqQzE4Vi1zXzNEMkptclNSTGEwZDI5Q0JWdHZ1YldSeC1JZHd0R3hfMzNJdHdtaGx5UjBUdkR4QVd4VnlEOXlkR1ZtRlJIa181T1RPbzVQNw?oc=5",
-      "published": "2026-09-22T12:31:36+00:00"
+      "title": "[早安股市]美国半导体股走强……韩国综指料高开- 阿视亚经济 - asiae.co.kr",
+      "source": "asiae.co.kr",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1oZVdUUmFuUDhnZUxQUG1WemFRVUR0d3FLRnpxMm5xOGJfMzlQaUdxSWlNZllQWkhHYkRYdjBtb1p5d29ZZWduQXdNS1pBRXVKRTU5cVJuNjZNelkxejA2cHNGTjk?oc=5",
+      "published": "2026-09-22T23:10:44+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
+      "published": "2026-09-22T19:29:45+00:00"
     }
   ]
 }
