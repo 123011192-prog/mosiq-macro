@@ -67,6 +67,7 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_cli_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -76,7 +77,8 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -682,25 +684,15 @@
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
         "market": "neutral",
         "fx": "down"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.6276,
-          "date": "2026-08-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.807
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -756,9 +748,11 @@
           "unit": "指数"
         }
       ],
-      "light": "orange",
-      "summary": "巴西：增长走弱、信贷走强、市场平稳，区域橙灯",
-      "degraded": []
+      "light": "yellow",
+      "summary": "巴西：增长缺失、信贷走强、市场平稳，区域黄灯",
+      "degraded": [
+        "oecd_cli_br"
+      ]
     }
   },
   "oil_watch": {
@@ -787,25 +781,25 @@
   "rates_watch": {
     "us10y": {
       "value": 4.96,
-      "date": "2026-09-21",
+      "date": "2026-09-22",
       "change_20d_bp": 32.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.29,
-      "date": "2026-09-21",
+      "date": "2026-09-22",
       "change_20d_bp": 12.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.76,
-      "date": "2026-09-21",
-      "change_20d_bp": 59.0,
+      "value": 4.71,
+      "date": "2026-09-22",
+      "change_20d_bp": 54.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 20.0,
-      "date": "2026-09-21"
+      "value_bp": 25.0,
+      "date": "2026-09-22"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
@@ -846,25 +840,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "美联储加息余波：部分美元存款利率超4％，理财业绩基准水涨船高 - 大河财立方",
-      "source": "大河财立方",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9EU0pmZE5mTlhveWE4YzFFbTlNUll4OGxvaTZadGN0R0U0SDB3aC1pVlBZZTlpSURKeHRHQXJRVFdGVkltbjZ0R05pbkNoNklLY294UjY3Z2RMNnA4UjdyN3h1RnZDWlZDRXc?oc=5",
-      "published": "2026-09-23T12:11:49+00:00"
+      "category": "科技产业链",
+      "title": "韩国半导体强国却缺300mm研究基础 专家吁设国家研究所 - DIGITIMES",
+      "source": "DIGITIMES",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNVUZCQ3ViOTdxNjJ4YWhHUl9HRWUtczZNZ1lHdG83SWc4T1pGUlAzeWdRb0RCODREbGR1Vk9GTVZIOVp0YXF3d3N3X0ZqTG5uMk9uMXpvT0FWQnNDUEF3SHBFT1ROeU02VFhCckN4SzdrVE53X1BTLWlJTVZNWjYxTGpaWi12OHdhS3pzSjY0bzlCdS1aOC0wU1VmcENGOXZ5MHhQa2pTTQ?oc=5",
+      "published": "2026-09-23T18:56:00+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "Serenity：已布局多家韩国小型半导体公司，看好AI带来业绩拐点 - 富途牛牛",
+      "source": "富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOZGpHX21ILTNqWmgxc29tdFpIdV94TjlQUUVBZG9FdWRKS3FEOVUwYi1ORk5TdWNyOVRDVGJValBRQUlCYjNWcTIzNWh3SnFmUnlyVG1uczdtdnZxQ1ZqWmNBZ0VYczRRWmNfSm53TzdpdllFVmZ1S2FxbmY4N1VWMEVtYUlRNjItYXlQM2lrUVVKbmh0X21LNFdaLTZmUnBEOFJzUTkzRFNxT1JHalJPUUdKZ21vQmttUHZDZQ?oc=5",
+      "published": "2026-09-23T16:22:52+00:00"
     },
     {
       "category": "货币政策",
-      "title": "黄金的逻辑变了 - 搜狐网",
-      "source": "搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPU0RmbENIX3ZvV2swNmZEWkpfSGFrYi10TjU0cnBwTnpxOG1jT29POVpYSGttSmlnOVpSV2tUQVF6STh4UnYwdFp4NXhFZ0lTakh4X0JEZk85RGRIdVg2andyMVRFbzJwU3dYUjdhODBZSENqd1k5VHpLM2dhUlRHcmp6T3hQVWNIeXVRZQ?oc=5",
-      "published": "2026-09-23T11:15:20+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "美新西兰元反弹受阻于0.5800下方，美联储利率前景令NZD/USD持续承压 - VT Markets",
-      "source": "VT Markets",
-      "url": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxOUnpJLVo1a3hoY3VmQ0ktbDBlMWJpXzg2MnhDcGZNdHlVVjcyVHhSMXZqZUhFWGp5QlN5Sk9VNy13dVRHS2h4bnBjRkJwejZrTXFCVDZZYk93aDVoM1JSdDJ1YURKVER2RnRwMTVHcVpSaVRJc3NhXzRiaGZ5OEhWVlI1TDVZNEFvT20xQ3R3eFZJRGxEejVPal9UdE95V3c5b1hQZHc1WVg5QWF4QU9HYy1zdWR0YS1hTE1UbE5Rd1pJbWFkS1FBU01ES0J1OXNHY3VVRVBHV0Jfa083Q3lrME1NcWZkTXRZQ0NuOWpiNTh4ZTEtVG1ELTF1V2dFUk5tczYxLWxmU1VNMU9RbDNXbGI3cklBdVJ0TTR2SDNEZVRjTjUyQVBWcFNOeXhzNXczU012NV8zbHc3WmlhSUhaMmZSRGdjNXFEOFZ3UkxLTDFTRHdVV2t3UGdtNnRBYTZq?oc=5",
-      "published": "2026-09-23T10:43:24+00:00"
+      "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
+      "published": "2026-09-23T15:54:10+00:00"
     }
   ]
 }
