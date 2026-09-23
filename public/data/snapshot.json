@@ -55,7 +55,7 @@
       "active": false
     }
   ],
-  "founder_note": "盘面平稳，按自己的节奏来；韩国要当心",
+  "founder_note": "盘面平稳，按自己的节奏来；欧元区要当心",
   "advice": [
     {
       "text": "维持中性观察；触发：核心分位升至70或曲线倒挂；失效：两项条件均未持续。",
@@ -316,7 +316,7 @@
         "growth": "up",
         "policy": "down",
         "credit": "down",
-        "market": "down",
+        "market": "neutral",
         "fx": "up"
       },
       "indicators": [
@@ -353,11 +353,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 12433.17,
-          "date": "2026-09-21",
+          "value": 12689.82,
+          "date": "2026-09-22",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -15.04
+            "drawdown_pct": -13.29
           }
         },
         {
@@ -385,8 +385,8 @@
           "unit": "指数"
         }
       ],
-      "light": "red",
-      "summary": "韩国：增长走强、信贷走弱、市场走弱，区域红灯",
+      "light": "orange",
+      "summary": "韩国：增长走强、信贷走弱、市场平稳，区域橙灯",
       "degraded": []
     },
     "uk": {
@@ -846,25 +846,25 @@
   },
   "world_brief": [
     {
+      "category": "科技产业链",
+      "title": "韩国国内股市以半导体大型股为中心同时上涨。23日，韩国综合股价指数比前一个交易日上涨63.01点（0.90%），以7080.92点收盘。 KOSDAQ指数上升10.10点（1.21%），以844.48.. - 매일경제",
+      "source": "매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5od3JsSDh0Y1BUTWFsSFNHMHR6enVEQVBpd1BhOWVka2dOSkhNUS1TQWViMkVINTBfQ0FBV1pPSTBIZWVGUTlRSUgtRmJxNlU?oc=5",
+      "published": "2026-09-23T06:51:25+00:00"
+    },
+    {
       "category": "货币政策",
-      "title": "伯恩斯坦研报：即便美联储持续加息，黄金为何仍能冲击5700美元？ - PANews",
-      "source": "PANews",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBNd0pkNXlrREtGTnM0dmRhelM2ZS05d2FiSVBJUW5xQlMwRERiSlA0OFYyZ0hpV3RFZWJiZ2ZadDI4cnFzSFViS1VZalFLUGVKeFRyVFFIbEZuZENvMENndGpuWFhDSXVhUTVPYlBoMlNFMGNvV1NlMFJwbWlGVVk?oc=5",
-      "published": "2026-09-23T00:51:22+00:00"
+      "title": "市场定价美联储还要加息三次？期权交易员“不服”：加不了那么多 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1EYVVNMDlJZUt4NVdXSTNuOXpxcDc4VENRS2xiUW1kMmZuM0x0c3VCM0NvTVNHQlhKQ3pjNVBTZXNvLUhXQ25PWER5UXl0WVJVTDZvWExsZTdaRHk5bmEyU2J0dmtFcDNQV1Jndm5MQlU3YVVKbURVdg?oc=5",
+      "published": "2026-09-23T06:39:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "[早安股市]美国半导体股走强……韩国综指料高开- 阿视亚经济 - asiae.co.kr",
-      "source": "asiae.co.kr",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1oZVdUUmFuUDhnZUxQUG1WemFRVUR0d3FLRnpxMm5xOGJfMzlQaUdxSWlNZllQWkhHYkRYdjBtb1p5d29ZZWduQXdNS1pBRXVKRTU5cVJuNjZNelkxejA2cHNGTjk?oc=5",
-      "published": "2026-09-22T23:10:44+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
-      "published": "2026-09-22T19:29:45+00:00"
+      "category": "货币政策",
+      "title": "《汇市简讯》英镑兑美元支撑位失守，因美联储利率前景预期 - tradingview.com",
+      "source": "tradingview.com",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE92SjMxcE8tUTV0RXpBS283SG9ycnQza1lEQk1ib1NpbnBFRHh4eWZXUkZTQ28wdWlTeFU4TUg1WUpiTHBFUU80LWFrVS1lVjdsMFd1NEIzc2ljcGRsbnZIdzk0T3NDNkREb0xhYlFXTExiQm04Q0k5Qw?oc=5",
+      "published": "2026-09-23T03:00:00+00:00"
     }
   ]
 }
