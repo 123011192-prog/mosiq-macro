@@ -251,7 +251,7 @@
         "growth": "neutral",
         "policy": "down",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -286,6 +286,16 @@
           }
         },
         {
+          "id": "fred_nikkei225",
+          "name": "日经 225 指数",
+          "value": 65513.99,
+          "date": "2026-09-24",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -9.47
+          }
+        },
+        {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
           "value": 68.46,
@@ -304,9 +314,8 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷走强、市场缺失，区域黄灯",
+      "summary": "日本：增长平稳、信贷走强、市场平稳，区域黄灯",
       "degraded": [
-        "fred_nikkei225",
         "oecd_bci_jp"
       ]
     },
