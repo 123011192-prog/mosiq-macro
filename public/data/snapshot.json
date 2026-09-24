@@ -236,8 +236,8 @@
         {
           "id": "bis_spp_cn",
           "name": "BIS 中国住宅房价指数",
-          "value": 113.9785,
-          "date": "2026-01-01",
+          "value": 112.9201,
+          "date": "2026-04-01",
           "unit": "指数"
         }
       ],
@@ -353,11 +353,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 12689.82,
-          "date": "2026-09-22",
+          "value": 12534.27,
+          "date": "2026-09-23",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -13.29
+            "drawdown_pct": -14.35
           }
         },
         {
@@ -380,8 +380,8 @@
         {
           "id": "bis_spp_kr",
           "name": "BIS 韩国住宅房价指数",
-          "value": 144.8397,
-          "date": "2026-01-01",
+          "value": 145.9221,
+          "date": "2026-04-01",
           "unit": "指数"
         }
       ],
@@ -459,8 +459,8 @@
         {
           "id": "bis_spp_gb",
           "name": "BIS 英国住宅房价指数",
-          "value": 171.4048,
-          "date": "2026-01-01",
+          "value": 172.7348,
+          "date": "2026-04-01",
           "unit": "指数"
         }
       ],
@@ -531,8 +531,8 @@
         {
           "id": "bis_spp_ca",
           "name": "BIS 加拿大住宅房价指数",
-          "value": 200.2448,
-          "date": "2026-01-01",
+          "value": 201.8646,
+          "date": "2026-04-01",
           "unit": "指数"
         }
       ],
@@ -605,8 +605,8 @@
         {
           "id": "bis_spp_au",
           "name": "BIS 澳大利亚住宅房价指数",
-          "value": 216.1282,
-          "date": "2026-01-01",
+          "value": 216.4473,
+          "date": "2026-04-01",
           "unit": "指数"
         }
       ],
@@ -751,8 +751,8 @@
         {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
-          "value": 227.2867,
-          "date": "2026-01-01",
+          "value": 223.8036,
+          "date": "2026-04-01",
           "unit": "指数"
         }
       ],
@@ -846,25 +846,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "韩国总统李在明承诺五年内将半导体产能扩大一倍 - 富途牛牛",
-      "source": "富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNeHBFS3pTcWhtRmNOd0FmTXNiMEpidjRmdnRQRzZmMzRuYUt2VzhaZXhWbzZlSzQ3TVEtb2xaY09TZnN6dUZQTGJxakxZSHE3MVZJZHd0WVE2SWFOOHhudVQ0bTJHNEh5Y3lDNXk1MzN1YmQ4NHpRQmoyREJCbTVXSFJtVVJCY3R4djNSS0ktcXZJR1d4X3JjLU1IM1U5clg2?oc=5",
-      "published": "2026-09-23T23:54:41+00:00"
+      "category": "地缘冲突",
+      "title": "Russia faces 30 , 000+ sanctions ; new US curbs wont change objective : Envoy Denis Alipov",
+      "source": "moneycontrol.com",
+      "url": "https://www.moneycontrol.com/news/india/russia-faces-30-000-sanctions-new-us-curbs-won-t-change-objectives-envoy-denis-alipov-14037248.html",
+      "published": "2026-09-24T08:00:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
+      "title": "FBM KLCI claws back early losses to trade higher at midday",
+      "source": "thestar.com.my",
+      "url": "https://www.thestar.com.my/business/business-news/2026/09/24/fbm-klci-claws-back-early-losses-to-trade-higher-at-midday",
+      "published": "2026-09-24T06:15:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "特朗普天天叫嚣利率应降至1%，他的逻辑究竟是啥？-市场参考 - 金十数据",
-      "source": "金十数据",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1ZZTlMRzl5T20wVHFLY2FiMkRwODBsa1VRWURDbThBbEJodTBJUzhsU0MweG9jM0kxZUFEd3RDTlRpVkgxdUJuSmkxYTQ0b00?oc=5",
-      "published": "2026-09-23T23:46:55+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "美联储加息余波 部分美元存款利率超4%，理财业绩基准水涨船高 - 新浪财经",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOZzN3akNQTEt6NTkxSjhUM09SVDJPanUtUHNYc0g4elQ0dzlfNTM4QW91SkhNcXYtSlBqcTRfTDRyeXI5UFI5alA1Y2dleXNyZDQ0Z3pMU2tocUdRZVV2RkFHR3RDcU5zdkpPNFNGSHMxbnlHZ0lQdEl6UHlxZkZCZjRQUlB4azlxVFZpcGJwblhRZ092LVRDQzlSb0ZiSkFpN3Z0Qm1nTEk5NUFQMVg3UTJFQmZQeUx3cDQzRGxnMWNnRmF3eUNuUDYyb0czdE0?oc=5",
-      "published": "2026-09-23T23:00:00+00:00"
+      "title": "Gold and silver price today , September 24 : Check rates of 24K , 22K gold in Delhi , Mumbai , Kolkata other cities",
+      "source": "moneycontrol.com",
+      "url": "https://www.moneycontrol.com/news/business/personal-finance/gold-and-silver-price-today-september-24-check-rates-of-24k-22k-gold-in-delhi-mumbai-kolkata-other-cities-14036955.html",
+      "published": "2026-09-24T05:30:00+00:00"
     }
   ]
 }
