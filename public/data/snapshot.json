@@ -288,11 +288,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 65513.99,
-          "date": "2026-09-24",
+          "value": 66364.2,
+          "date": "2026-09-25",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -9.47
+            "drawdown_pct": -8.29
           }
         },
         {
