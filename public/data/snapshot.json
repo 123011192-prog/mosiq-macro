@@ -150,15 +150,15 @@
         {
           "id": "ecb_m3_idx",
           "name": "ECB M3 货币总量指数",
-          "value": 186.6924,
-          "date": "2026-07-01",
+          "value": 187.0325,
+          "date": "2026-08-01",
           "unit": "指数"
         },
         {
           "id": "ecb_loan_idx",
           "name": "ECB 非金融企业贷款指数",
-          "value": 129.6322,
-          "date": "2026-07-01",
+          "value": 129.8895,
+          "date": "2026-08-01",
           "unit": "指数"
         }
       ],
@@ -362,11 +362,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 12534.27,
-          "date": "2026-09-23",
+          "value": 12492.54,
+          "date": "2026-09-24",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -14.35
+            "drawdown_pct": -14.64
           }
         },
         {
@@ -855,6 +855,13 @@
   },
   "world_brief": [
     {
+      "category": "地缘冲突",
+      "title": "President Trump Signs Graham Sanctions Act , Expanding Russia Sanctions And Tariff Authorities",
+      "source": "mondaq.com",
+      "url": "https://www.mondaq.com:443/unitedstates/export-controls-trade-investment-sanctions/1847308/president-trump-signs-graham-sanctions-act-expanding-russia-sanctions-and-tariff-authorities",
+      "published": "2026-09-25T06:45:00+00:00"
+    },
+    {
       "category": "能源",
       "title": "Oil jump sends 30 - year yields to two - decade high",
       "source": "livemint.com",
@@ -862,18 +869,11 @@
       "published": "2026-09-24T23:15:00+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "Russia faces 30 , 000+ sanctions ; new US curbs wont change objective : Envoy Denis Alipov",
-      "source": "moneycontrol.com",
-      "url": "https://www.moneycontrol.com/news/india/russia-faces-30-000-sanctions-new-us-curbs-won-t-change-objectives-envoy-denis-alipov-14037248.html",
-      "published": "2026-09-24T08:00:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "FBM KLCI claws back early losses to trade higher at midday",
-      "source": "thestar.com.my",
-      "url": "https://www.thestar.com.my/business/business-news/2026/09/24/fbm-klci-claws-back-early-losses-to-trade-higher-at-midday",
-      "published": "2026-09-24T06:15:00+00:00"
+      "category": "货币政策",
+      "title": "Fed Paulson says modest further rate increases may be needed",
+      "source": "spokesman.com",
+      "url": "https://www.spokesman.com/stories/2026/sep/24/feds-paulson-says-modest-further-rate-increases-ma/",
+      "published": "2026-09-24T20:30:00+00:00"
     }
   ]
 }
