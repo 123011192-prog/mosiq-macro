@@ -70,7 +70,6 @@
       "refresh:oecd:oecd_bci_in",
       "refresh:oecd:oecd_share_in",
       "refresh:oecd:oecd_cli_br",
-      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -730,6 +729,13 @@
           }
         },
         {
+          "id": "oecd_bci_br",
+          "name": "OECD 巴西商业信心指数 BCI",
+          "value": 99.5684,
+          "date": "2026-08-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 223.8036,
@@ -740,8 +746,7 @@
       "light": "yellow",
       "summary": "巴西：增长缺失、信贷走强、市场平稳，区域黄灯",
       "degraded": [
-        "oecd_cli_br",
-        "oecd_bci_br"
+        "oecd_cli_br"
       ]
     }
   },
@@ -830,25 +835,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "US trade deal could shield India from 100 % tariff under Russian sanctions law : Sources",
-      "source": "thehindubusinessline.com",
-      "url": "https://www.thehindubusinessline.com/economy/us-trade-deal-could-shield-india-from-100-tariff-under-russian-sanctions-law-sources/article71516388.ece",
-      "published": "2026-09-27T15:30:00+00:00"
+      "category": "科技产业链",
+      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
+      "published": "2026-09-27T16:50:08+00:00"
     },
     {
       "category": "货币政策",
-      "title": "US Stocks Face Jobs , Inflation Test as Fed Rate Hike Bets Rise",
-      "source": "econotimes.com",
-      "url": "http://www.econotimes.com/US-Stocks-Face-Jobs-Inflation-Test-as-Fed-Rate-Hike-Bets-Rise-1753165",
-      "published": "2026-09-27T15:15:00+00:00"
+      "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
+      "published": "2026-09-27T16:43:23+00:00"
     },
     {
       "category": "货币政策",
-      "title": "The Next Phase of Trumpflation Has Arrived , and It Terrible News for the Federal Reserve and Wall Street",
-      "source": "fool.com",
-      "url": "https://www.fool.com/investing/2026/09/27/next-phase-of-trumpflation-has-arrived-terrible-news-for-fed-and-wall-street/",
-      "published": "2026-09-27T15:00:00+00:00"
+      "title": "一周展望：非农与PCE考验美联储利率路径，特朗普一句话再掀地缘波澜？-市场参考 - 金十数据",
+      "source": "金十数据",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBuakVsa1RsM1VkOXRPRGJ4ald2T0FpRS1DR3ZtTVFmY2xRWlJNNFJhNkk4Q1VnU0JKNW05Z3d3RU11aUUwOVNlb1RyLTZhNDQ?oc=5",
+      "published": "2026-09-27T08:09:43+00:00"
     }
   ]
 }
