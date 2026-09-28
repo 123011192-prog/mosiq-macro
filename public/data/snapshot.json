@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.42,
-    "baa10y_pct": 1.064685,
+    "baa10y_pct": 1.065113,
     "curve_10y3m": 0.8,
     "curve_inverted": false
   },
@@ -67,9 +67,6 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
-      "refresh:oecd:oecd_share_in",
-      "refresh:oecd:oecd_cli_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -80,8 +77,7 @@
       "regions:korea",
       "regions:canada",
       "regions:australia",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -256,7 +252,7 @@
         "growth": "neutral",
         "policy": "down",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -291,16 +287,6 @@
           }
         },
         {
-          "id": "fred_nikkei225",
-          "name": "日经 225 指数",
-          "value": 66364.2,
-          "date": "2026-09-25",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -8.29
-          }
-        },
-        {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
           "value": 68.46,
@@ -319,8 +305,9 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷走强、市场平稳，区域黄灯",
+      "summary": "日本：增长平稳、信贷走强、市场缺失，区域黄灯",
       "degraded": [
+        "fred_nikkei225",
         "oecd_bci_jp"
       ]
     },
@@ -330,7 +317,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "down",
-        "market": "neutral",
+        "market": "down",
         "fx": "up"
       },
       "indicators": [
@@ -355,13 +342,13 @@
           }
         },
         {
-          "id": "fred_sox",
+          "id": "oecd_share_kr",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 12668.93,
-          "date": "2026-09-25",
+          "value": 330.6228,
+          "date": "2026-08-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -13.43
+            "drawdown_pct": -21.62
           }
         },
         {
@@ -389,8 +376,8 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "韩国：增长走强、信贷走弱、市场平稳，区域黄灯",
+      "light": "orange",
+      "summary": "韩国：增长走强、信贷走弱、市场走弱，区域橙灯",
       "degraded": [
         "bis_policy_kr"
       ]
@@ -628,7 +615,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -653,6 +640,16 @@
           }
         },
         {
+          "id": "oecd_share_in",
+          "name": "OECD 印度股价指数（NIFTY 代理）",
+          "value": 284.5038,
+          "date": "2026-08-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -8.5
+          }
+        },
+        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.56,
@@ -671,23 +668,32 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
         "bis_policy_in",
-        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
-        "growth": "degraded",
+        "growth": "down",
         "policy": "up",
         "credit": "up",
         "market": "neutral",
         "fx": "down"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_br",
+          "name": "OECD 巴西综合领先指标 CLI",
+          "value": 102.6276,
+          "date": "2026-08-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.807
+          }
+        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -743,11 +749,9 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "巴西：增长缺失、信贷走强、市场平稳，区域黄灯",
-      "degraded": [
-        "oecd_cli_br"
-      ]
+      "light": "orange",
+      "summary": "巴西：增长走弱、信贷走强、市场平稳，区域橙灯",
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -835,25 +839,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
-      "published": "2026-09-27T16:50:08+00:00"
+      "category": "货币政策",
+      "title": "150 , 000 words , zero guarantees : Bullock high - stakes interest rate revolution",
+      "source": "watoday.com.au",
+      "url": "https://www.watoday.com.au/politics/federal/150-000-words-zero-guarantees-bullock-s-high-stakes-interest-rate-revolution-20260928-p60tmx.html",
+      "published": "2026-09-27T21:15:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
-      "published": "2026-09-27T16:43:23+00:00"
+      "category": "能源",
+      "title": "Households urged to submit meter readings days before energy bills set to rise",
+      "source": "lbc.co.uk",
+      "url": "https://www.lbc.co.uk/article/households-send-in-meter-readings-energy-rise-5Hjdj7L_2/",
+      "published": "2026-09-27T17:45:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "一周展望：非农与PCE考验美联储利率路径，特朗普一句话再掀地缘波澜？-市场参考 - 金十数据",
-      "source": "金十数据",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBuakVsa1RsM1VkOXRPRGJ4ald2T0FpRS1DR3ZtTVFmY2xRWlJNNFJhNkk4Q1VnU0JKNW05Z3d3RU11aUUwOVNlb1RyLTZhNDQ?oc=5",
-      "published": "2026-09-27T08:09:43+00:00"
+      "category": "地缘冲突",
+      "title": "US trade deal could shield India from 100 % tariff under Russian sanctions law : Sources",
+      "source": "thehindubusinessline.com",
+      "url": "https://www.thehindubusinessline.com/economy/us-trade-deal-could-shield-india-from-100-tariff-under-russian-sanctions-law-sources/article71516388.ece",
+      "published": "2026-09-27T15:30:00+00:00"
     }
   ]
 }
