@@ -69,7 +69,9 @@
       "refresh:unexpected_failure",
       "refresh:oecd:oecd_bci_in",
       "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_cli_br",
       "refresh:oecd:oecd_bci_br",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -357,11 +359,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 12465.24,
-          "date": "2026-09-28",
+          "value": 12629.16,
+          "date": "2026-09-29",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -14.82
+            "drawdown_pct": -13.7
           }
         },
         {
@@ -681,23 +683,13 @@
     "brazil": {
       "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "down"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.6276,
-          "date": "2026-08-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.807
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -719,16 +711,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 345.572,
-          "date": "2026-08-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -10.52
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.18,
@@ -746,9 +728,11 @@
           "unit": "指数"
         }
       ],
-      "light": "orange",
-      "summary": "巴西：增长走弱、信贷走强、市场平稳，区域橙灯",
+      "light": "yellow",
+      "summary": "巴西：增长缺失、信贷走强、市场缺失，区域黄灯",
       "degraded": [
+        "oecd_cli_br",
+        "oecd_share_br",
         "oecd_bci_br"
       ]
     }
@@ -838,25 +822,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "油价回落施压美联储加息预期，黄金超跌反弹_外汇动态报道 - 汇通网 Fx678",
-      "source": "汇通网 Fx678",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5SREZ6ZjVtdXoyOGtJX3JqV1A2eDF2Rjg0d2tkMWxDWnVKSlRPQ2RiN1l1VmRBR2tDaXlBbDBHTFN4bzlQUEcyQURIVTRIdW9ERF9adFlMSDk?oc=5",
-      "published": "2026-09-30T02:03:44+00:00"
+      "category": "地缘冲突",
+      "title": "Electricity tariff for Singapore households to fall by 10 . 4 % in 4th quarter of 2026",
+      "source": "businesstimes.com.sg",
+      "url": "https://www.businesstimes.com.sg/singapore/electricity-tariff-singapore-households-fall-10-4-4th-quarter-2026",
+      "published": "2026-09-30T07:15:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "金价逼近4200美元 美联储加息预期施压 - 中华网",
-      "source": "中华网",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBfaGU4ZUhhaENlLWQ1VFRHZjJSeUh6cnpyU19meHJpd3V5RzZ3QjFfYktRbE0xMGxhRnhpam9PdFhqNXlkbnN2UVM4NWFyNXJYT21TQk9vdnVjYW9VR3d1R0U5N3hiQTFBRmZUM0hfUTk?oc=5",
-      "published": "2026-09-30T02:00:24+00:00"
+      "category": "地缘冲突",
+      "title": "Electricity tariff in Singapore to fall 10 . 4 % in Q4 2026",
+      "source": "straitstimes.com",
+      "url": "https://www.straitstimes.com/singapore/electricity-tariff-for-spore-households-to-fall-by-10-4-in-4th-quarter-of-2026",
+      "published": "2026-09-30T06:00:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "“世界科先声”编译：AI让韩国赚翻，但也带来了一个问题 - 手机新浪网",
-      "source": "手机新浪网",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPQW9xQTRBN2U2ek4ybHMweWg5aVB4Wkw5aHl1bVB4cDluT1NwWEY4VlZ5RVN0SkIteXl3LWJMWF9VVGVwMjFRZEVPdXZZQk1hd21rZEJzMWM4N2dDWWl1QzczZ05aU2pVQ2d0dzJmS3BFaWV0b0pyV0c2MTJiVWxHRmdrOA?oc=5",
-      "published": "2026-09-30T01:26:24+00:00"
+      "category": "地缘冲突",
+      "title": "Global Market : European stocks edge higher , tech shares lead gains",
+      "source": "economictimes.indiatimes.com",
+      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-european-stocks-edge-higher-tech-shares-lead-gains/articleshow/134562690.cms",
+      "published": "2026-09-29T10:45:00+00:00"
     }
   ]
 }
