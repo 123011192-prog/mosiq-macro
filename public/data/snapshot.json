@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.46,
-    "baa10y_pct": 3.693296,
+    "baa10y_pct": 3.711878,
     "curve_10y3m": 1.01,
     "curve_inverted": false
   },
@@ -67,6 +67,7 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -77,7 +78,8 @@
       "regions:korea",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -684,12 +686,12 @@
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "down",
         "policy": "up",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "down"
       },
       "indicators": [
@@ -724,16 +726,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 345.572,
-          "date": "2026-08-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -10.52
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.18,
@@ -759,8 +751,10 @@
         }
       ],
       "light": "orange",
-      "summary": "巴西：增长走弱、信贷走强、市场平稳，区域橙灯",
-      "degraded": []
+      "summary": "巴西：增长走弱、信贷走强、市场缺失，区域橙灯",
+      "degraded": [
+        "oecd_share_br"
+      ]
     }
   },
   "oil_watch": {
@@ -788,32 +782,32 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 5.24,
-      "date": "2026-09-28",
-      "change_20d_bp": 45.0,
+      "value": 5.26,
+      "date": "2026-09-29",
+      "change_20d_bp": 47.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.56,
-      "date": "2026-09-28",
-      "change_20d_bp": 29.0,
+      "value": 5.59,
+      "date": "2026-09-29",
+      "change_20d_bp": 32.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.92,
-      "date": "2026-09-28",
-      "change_20d_bp": 53.0,
+      "value": 4.89,
+      "date": "2026-09-29",
+      "change_20d_bp": 50.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 32.0,
-      "date": "2026-09-28"
+      "value_bp": 37.0,
+      "date": "2026-09-29"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": true,
-      "us10y_change_20d_bp": 45.0,
-      "us30y_change_20d_bp": 29.0,
+      "us10y_change_20d_bp": 47.0,
+      "us30y_change_20d_bp": 32.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -848,25 +842,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
-      "published": "2026-09-30T13:22:30+00:00"
-    },
-    {
       "category": "货币政策",
-      "title": "交易员押注美联储10月将连续加息，或许有些操之过急_外汇动态报道 - 汇通网 Fx678",
-      "source": "汇通网 Fx678",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9OeVFBdllURVlWSENqYjJqVERucENrV3JPUTFmZjBKeEVuT3dualM5VGZSaGJUb192R2Uta2gtV3dGU3BKRnI0dndZRmkxaWlXZTRRM3RyTmdQdw?oc=5",
-      "published": "2026-09-30T09:46:07+00:00"
+      "title": "Capital Economics argues to limit Bank of Canada rate hikes",
+      "source": "bnnbloomberg.ca",
+      "url": "https://www.bnnbloomberg.ca/business/economics/2026/09/30/soft-economy-should-limit-bank-of-canadas-rate-hikes-capital-economics/",
+      "published": "2026-09-30T17:45:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "消息称AMD苏姿丰下个月前往韩国，与三星达成新合作 - 凤凰网科技",
-      "source": "凤凰网科技",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9xY2hTcDNRWjBSYklZRHVrV2gyOEVyMmw1Mkk3RFFZQVFjZ3k1VUZZa1ZlV0IzVWtKMTR2ZnVXRzlfRTFFYjUzZkJCdVA?oc=5",
-      "published": "2026-09-30T09:27:04+00:00"
+      "category": "地缘冲突",
+      "title": "USD / CAD : Why the 1 . 4200 Level Is Drawing Attention",
+      "source": "dailyforex.com",
+      "url": "https://www.dailyforex.com/forex-technical-analysis/2026/09/usdcad-forecast-30-september-2026/250235",
+      "published": "2026-09-30T14:00:00+00:00"
+    },
+    {
+      "category": "能源",
+      "title": "Indian refiners may trim Russian oil imports , assess US tariff risks",
+      "source": "moneycontrol.com",
+      "url": "https://www.moneycontrol.com/news/business/economy/indian-refiners-may-trim-russian-oil-imports-assess-us-tariff-risks-14042006.html",
+      "published": "2026-09-30T13:15:00+00:00"
     }
   ]
 }
