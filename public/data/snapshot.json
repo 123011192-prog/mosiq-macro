@@ -67,6 +67,9 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -77,7 +80,8 @@
       "regions:korea",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -624,7 +628,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -649,16 +653,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 284.5038,
-          "date": "2026-08-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -8.5
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.56,
@@ -677,14 +671,15 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
         "bis_policy_in",
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "down",
         "policy": "up",
@@ -744,13 +739,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.5684,
-          "date": "2026-08-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 223.8036,
@@ -760,7 +748,9 @@
       ],
       "light": "orange",
       "summary": "巴西：增长走弱、信贷走强、市场平稳，区域橙灯",
-      "degraded": []
+      "degraded": [
+        "oecd_bci_br"
+      ]
     }
   },
   "oil_watch": {
@@ -819,13 +809,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 5.24,
-        "date": "2026-09-28",
+        "value": 5.26,
+        "date": "2026-09-29",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.56,
-        "date": "2026-09-28",
+        "value": 5.59,
+        "date": "2026-09-29",
         "source": "tushare"
       }
     }
@@ -848,25 +838,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "Global Market : European stocks edge higher , tech shares lead gains",
-      "source": "economictimes.indiatimes.com",
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-european-stocks-edge-higher-tech-shares-lead-gains/articleshow/134562690.cms",
-      "published": "2026-09-29T10:45:00+00:00"
+      "category": "货币政策",
+      "title": "油价回落施压美联储加息预期，黄金超跌反弹_外汇动态报道 - 汇通网 Fx678",
+      "source": "汇通网 Fx678",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5SREZ6ZjVtdXoyOGtJX3JqV1A2eDF2Rjg0d2tkMWxDWnVKSlRPQ2RiN1l1VmRBR2tDaXlBbDBHTFN4bzlQUEcyQURIVTRIdW9ERF9adFlMSDk?oc=5",
+      "published": "2026-09-30T02:03:44+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "Global Market : South Korean stocks under pressure ahead of trade data , Micron results",
-      "source": "economictimes.indiatimes.com",
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/global-market-south-korean-stocks-under-pressure-ahead-of-trade-data-micron-results/articleshow/134555448.cms",
-      "published": "2026-09-29T04:30:00+00:00"
+      "category": "货币政策",
+      "title": "金价逼近4200美元 美联储加息预期施压 - 中华网",
+      "source": "中华网",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBfaGU4ZUhhaENlLWQ1VFRHZjJSeUh6cnpyU19meHJpd3V5RzZ3QjFfYktRbE0xMGxhRnhpam9PdFhqNXlkbnN2UVM4NWFyNXJYT21TQk9vdnVjYW9VR3d1R0U5N3hiQTFBRmZUM0hfUTk?oc=5",
+      "published": "2026-09-30T02:00:24+00:00"
     },
     {
-      "category": "能源",
-      "title": "Iran Oil Shock , Warsh Hike , Trump - Xi Truce Reshape Tech Investing After Summit",
-      "source": "techtimes.com",
-      "url": "https://www.techtimes.com/articles/328143/20260928/iran-oil-shock-warsh-hike-trump-xi-truce-reshape-tech-investing-after-summit.htm",
-      "published": "2026-09-29T01:00:00+00:00"
+      "category": "科技产业链",
+      "title": "“世界科先声”编译：AI让韩国赚翻，但也带来了一个问题 - 手机新浪网",
+      "source": "手机新浪网",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPQW9xQTRBN2U2ek4ybHMweWg5aVB4Wkw5aHl1bVB4cDluT1NwWEY4VlZ5RVN0SkIteXl3LWJMWF9VVGVwMjFRZEVPdXZZQk1hd21rZEJzMWM4N2dDWWl1QzczZ05aU2pVQ2d0dzJmS3BFaWV0b0pyV0c2MTJiVWxHRmdrOA?oc=5",
+      "published": "2026-09-30T01:26:24+00:00"
     }
   ]
 }
