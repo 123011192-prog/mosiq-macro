@@ -67,7 +67,7 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_share_br",
+      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -691,7 +691,7 @@
         "growth": "down",
         "policy": "up",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "down"
       },
       "indicators": [
@@ -726,6 +726,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 345.572,
+          "date": "2026-08-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -10.52
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.18,
@@ -736,13 +746,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.5684,
-          "date": "2026-08-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 223.8036,
@@ -751,9 +754,9 @@
         }
       ],
       "light": "orange",
-      "summary": "巴西：增长走弱、信贷走强、市场缺失，区域橙灯",
+      "summary": "巴西：增长走弱、信贷走强、市场平稳，区域橙灯",
       "degraded": [
-        "oecd_share_br"
+        "oecd_bci_br"
       ]
     }
   },
@@ -813,13 +816,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 5.26,
-        "date": "2026-09-29",
+        "value": 5.29,
+        "date": "2026-09-30",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.59,
-        "date": "2026-09-29",
+        "value": 5.64,
+        "date": "2026-09-30",
         "source": "tushare"
       }
     }
@@ -842,25 +845,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "Capital Economics argues to limit Bank of Canada rate hikes",
-      "source": "bnnbloomberg.ca",
-      "url": "https://www.bnnbloomberg.ca/business/economics/2026/09/30/soft-economy-should-limit-bank-of-canadas-rate-hikes-capital-economics/",
-      "published": "2026-09-30T17:45:00+00:00"
+      "category": "科技产业链",
+      "title": "晶片外销额飙2.6倍 韩国9月出口翻倍创新高 - chinapress.com.my",
+      "source": "chinapress.com.my",
+      "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxPSU9pWEl1VDhXZE5iRFJRZ013Q2dMcE9FcTJLMzBIaWVYdWdVc3ZYNHMxQVBkUV9IZzFtcjRLYV90UElOQjM1TGMta2tqa0E5QWZMTUtIdnZMVFBMZkVfU3JkZE5kVHRQS3dUUDJ6aG9fWFc3dElwNzFPdVczNDc1U21OcmUzQVpoRWJrenM3aGRLT3BfazJNNWJtYm1zTFVyNkd2WGtnN2xvaGI2NVNIajNVVkxuMzRoQ2dkLXIxRUxlZlFzNWlTZXB4UkkwZXpKRUJObGptSVB3dnNVdzZRcFBKZl9wT1hEa2w0UGJweTBpdndWS2RrbWExNEprbXVwWWk1bnkwRDlyU2RSSU5wNUt2RmZHb1FiM2RPSklfU3p6OFF2?oc=5",
+      "published": "2026-10-01T02:19:50+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "USD / CAD : Why the 1 . 4200 Level Is Drawing Attention",
-      "source": "dailyforex.com",
-      "url": "https://www.dailyforex.com/forex-technical-analysis/2026/09/usdcad-forecast-30-september-2026/250235",
-      "published": "2026-09-30T14:00:00+00:00"
+      "category": "科技产业链",
+      "title": "AI热潮推动韩国9月出口突破1200亿美元 半导体出口再创纪录高位 - video.sina.com.cn",
+      "source": "video.sina.com.cn",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNcGtXRzlKMldZWWIwTWUtVzAzdWJhT1A3SFNBTExWZDlWWFFnQmRtaUpxNkxhV3lpbzlJYjlPN3lsOWMzR01tOF9fOFA5OFJ3VXZDQ1NqdDY0MGF6bTVjbkdnU0ZWTmVxb0NEajZRTEVJU1hTX0pGdGFYdTQzQVp6YkR3?oc=5",
+      "published": "2026-10-01T00:30:26+00:00"
     },
     {
-      "category": "能源",
-      "title": "Indian refiners may trim Russian oil imports , assess US tariff risks",
-      "source": "moneycontrol.com",
-      "url": "https://www.moneycontrol.com/news/business/economy/indian-refiners-may-trim-russian-oil-imports-assess-us-tariff-risks-14042006.html",
-      "published": "2026-09-30T13:15:00+00:00"
+      "category": "科技产业链",
+      "title": "韩国海关：韩国九月半导体出口创历史新高。 - 富途牛牛",
+      "source": "富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUnJkY05hTmdZU0hJbGEtM2sydEd6MGpoUjZOeHBzRmszeU1mZDZfdVg1X2xrUHpTcy1MQnFjWWxPTG9hSzY4UXBxN2V5OHRhRUFEWjROV0E5WVBMMDhOY3IwQWs3QVNQSU4wNGphb1pXZ2ZBaUt0SlQ4eUtsaDBvN3V3MTdNRHJJT0Rwbl9rQzV4clhWc3ZkSFNmdnA2YW1CU1NKcw?oc=5",
+      "published": "2026-10-01T00:02:39+00:00"
     }
   ]
 }
