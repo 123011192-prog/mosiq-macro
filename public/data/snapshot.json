@@ -67,7 +67,11 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_cli_br",
       "refresh:oecd:oecd_bci_br",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -355,11 +359,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 12629.16,
-          "date": "2026-09-29",
+          "value": 12628.62,
+          "date": "2026-09-30",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -13.7
+            "drawdown_pct": -13.71
           }
         },
         {
@@ -626,7 +630,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -651,16 +655,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 284.5038,
-          "date": "2026-08-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -8.5
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.56,
@@ -679,32 +673,23 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
         "bis_policy_in",
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
       "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "down"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.6276,
-          "date": "2026-08-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.807
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -726,16 +711,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 345.572,
-          "date": "2026-08-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -10.52
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.18,
@@ -753,9 +728,11 @@
           "unit": "指数"
         }
       ],
-      "light": "orange",
-      "summary": "巴西：增长走弱、信贷走强、市场平稳，区域橙灯",
+      "light": "yellow",
+      "summary": "巴西：增长缺失、信贷走强、市场缺失，区域黄灯",
       "degraded": [
+        "oecd_cli_br",
+        "oecd_share_br",
         "oecd_bci_br"
       ]
     }
@@ -845,25 +822,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "晶片外销额飙2.6倍 韩国9月出口翻倍创新高 - chinapress.com.my",
-      "source": "chinapress.com.my",
-      "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxPSU9pWEl1VDhXZE5iRFJRZ013Q2dMcE9FcTJLMzBIaWVYdWdVc3ZYNHMxQVBkUV9IZzFtcjRLYV90UElOQjM1TGMta2tqa0E5QWZMTUtIdnZMVFBMZkVfU3JkZE5kVHRQS3dUUDJ6aG9fWFc3dElwNzFPdVczNDc1U21OcmUzQVpoRWJrenM3aGRLT3BfazJNNWJtYm1zTFVyNkd2WGtnN2xvaGI2NVNIajNVVkxuMzRoQ2dkLXIxRUxlZlFzNWlTZXB4UkkwZXpKRUJObGptSVB3dnNVdzZRcFBKZl9wT1hEa2w0UGJweTBpdndWS2RrbWExNEprbXVwWWk1bnkwRDlyU2RSSU5wNUt2RmZHb1FiM2RPSklfU3p6OFF2?oc=5",
-      "published": "2026-10-01T02:19:50+00:00"
+      "category": "地缘冲突",
+      "title": "Brazil seeks  full tariff reduction  in US trade pact",
+      "source": "aol.com",
+      "url": "https://www.aol.com/articles/brazil-us-set-working-group-171638000.html",
+      "published": "2026-10-01T01:45:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "AI热潮推动韩国9月出口突破1200亿美元 半导体出口再创纪录高位 - video.sina.com.cn",
-      "source": "video.sina.com.cn",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNcGtXRzlKMldZWWIwTWUtVzAzdWJhT1A3SFNBTExWZDlWWFFnQmRtaUpxNkxhV3lpbzlJYjlPN3lsOWMzR01tOF9fOFA5OFJ3VXZDQ1NqdDY0MGF6bTVjbkdnU0ZWTmVxb0NEajZRTEVJU1hTX0pGdGFYdTQzQVp6YkR3?oc=5",
-      "published": "2026-10-01T00:30:26+00:00"
+      "category": "地缘冲突",
+      "title": "What the Trump - Xi tariff deal means for American consumers",
+      "source": "foxbusiness.com",
+      "url": "https://www.foxbusiness.com/politics/trade-expert-reveals-what-trump-xi-30b-deal-means-holiday-season-approaches",
+      "published": "2026-10-01T00:45:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "韩国海关：韩国九月半导体出口创历史新高。 - 富途牛牛",
-      "source": "富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUnJkY05hTmdZU0hJbGEtM2sydEd6MGpoUjZOeHBzRmszeU1mZDZfdVg1X2xrUHpTcy1MQnFjWWxPTG9hSzY4UXBxN2V5OHRhRUFEWjROV0E5WVBMMDhOY3IwQWs3QVNQSU4wNGphb1pXZ2ZBaUt0SlQ4eUtsaDBvN3V3MTdNRHJJT0Rwbl9rQzV4clhWc3ZkSFNmdnA2YW1CU1NKcw?oc=5",
-      "published": "2026-10-01T00:02:39+00:00"
+      "category": "货币政策",
+      "title": "Capital Economics argues to limit Bank of Canada rate hikes",
+      "source": "bnnbloomberg.ca",
+      "url": "https://www.bnnbloomberg.ca/business/economics/2026/09/30/soft-economy-should-limit-bank-of-canadas-rate-hikes-capital-economics/",
+      "published": "2026-09-30T17:45:00+00:00"
     }
   ]
 }
