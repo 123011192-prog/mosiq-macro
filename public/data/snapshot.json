@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-01",
+  "as_of": "2026-10-02",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.47,
     "baa10y_pct": 4.514446,
-    "curve_10y3m": 1.09,
+    "curve_10y3m": 1.07,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,10 +63,13 @@
     }
   ],
   "health": {
-    "data_asof": "2026-09-30",
+    "data_asof": "2026-10-01",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -77,7 +80,8 @@
       "regions:korea",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -289,11 +293,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 68956.72,
-          "date": "2026-10-01",
+          "value": 68309.46,
+          "date": "2026-10-02",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -4.71
+            "drawdown_pct": -5.61
           }
         },
         {
@@ -624,7 +628,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -649,16 +653,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 284.5038,
-          "date": "2026-08-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -8.5
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.56,
@@ -677,14 +671,15 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
         "bis_policy_in",
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "down",
         "policy": "up",
@@ -744,13 +739,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.5684,
-          "date": "2026-08-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 223.8036,
@@ -760,7 +748,9 @@
       ],
       "light": "orange",
       "summary": "巴西：增长走弱、信贷走强、市场平稳，区域橙灯",
-      "degraded": []
+      "degraded": [
+        "oecd_bci_br"
+      ]
     }
   },
   "oil_watch": {
@@ -790,19 +780,19 @@
     "us10y": {
       "value": 5.29,
       "date": "2026-09-30",
-      "change_20d_bp": 50.0,
+      "change_20d_bp": 52.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.64,
       "date": "2026-09-30",
-      "change_20d_bp": 37.0,
+      "change_20d_bp": 39.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.88,
       "date": "2026-09-30",
-      "change_20d_bp": 49.0,
+      "change_20d_bp": 54.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -812,8 +802,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": true,
-      "us10y_change_20d_bp": 50.0,
-      "us30y_change_20d_bp": 37.0,
+      "us10y_change_20d_bp": 52.0,
+      "us30y_change_20d_bp": 39.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -848,25 +838,25 @@
   },
   "world_brief": [
     {
-      "category": "能源",
-      "title": "Will Russian oil be economically viable for India if Trump tariffs return ?",
-      "source": "timesofindia.indiatimes.com",
-      "url": "https://timesofindia.indiatimes.com/business/india-business/will-russian-oil-be-economically-viable-for-india-if-trump-tariffs-return/articleshow/134636107.cms",
-      "published": "2026-10-02T10:45:00+00:00"
+      "category": "货币政策",
+      "title": "非农意外“大爆冷”！仅增2.9万远逊预期、失业率升至4.2% 美联储10月加息悬了 - FX168财经",
+      "source": "FX168财经",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPaGxreS11c3VURTI2V3R0T29rS3Q1d2preWR0cnlRYzFWckJQeV96MUdoYUdiNjFmMHY2NVVhNEF5dWdqQ29RaHUtTDA0LXVIdVl5dFllMWlnOFl4ckc3S1NjVXZzSkZvVHVNdVF1cENodFpxcEN1d2pUSGw3ek82bmdlbzN5c2ZUUGtzRDc4OWN3dU1GQ0pmNmxyeHNibUNianVtZVB6ek1TRlZtb3VFLVBPaWY?oc=5",
+      "published": "2026-10-02T15:50:09+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "Electricity tariffs cut 10 . 4 % in Q4",
-      "source": "sbr.com.sg",
-      "url": "https://sbr.com.sg/energy-offshore/news/electricity-tariffs-cut-104-in-q4",
-      "published": "2026-10-02T03:15:00+00:00"
+      "category": "货币政策",
+      "title": "与美联储政策利率挂钩的掉期合约已不再定价今年内一次完整的加息（25个基点）。 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5TaHEwNDRGQWt1cUZqcjRnejJmci1acGFsUkxqODFiXzVzOHl6dTFBMGgtOW1FUC14TWZNRDlmZ1NLbE8zdXd4czk2VQ?oc=5",
+      "published": "2026-10-02T12:40:21+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "FinancialContent - Why Are MACOM ( MTSI ) Shares Soaring Today",
-      "source": "markets.financialcontent.com",
-      "url": "https://markets.financialcontent.com/stocks/article/stockstory-2026-10-1-why-are-macom-mtsi-shares-soaring-today",
-      "published": "2026-10-01T21:00:00+00:00"
+      "category": "货币政策",
+      "title": "与美联储政策利率挂钩的掉期合约已不再定价今年内一次完整的加息（25个基点） - 东方财富",
+      "source": "东方财富",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1ZUlpJTWxjbHVoTU12RlVvaGNlbi1EaEMtaHlrQ0xZRTgtaVB0YkdwU2pIVldHWE5HWF9WdzQxQm5aNXNWWFpFLVlOQ3ZBYTN6dV9TYWRCNTRSSVR0WlNZT05sdFpGdw?oc=5",
+      "published": "2026-10-02T12:40:04+00:00"
     }
   ]
 }
