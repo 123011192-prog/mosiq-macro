@@ -67,10 +67,6 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
-      "refresh:oecd:oecd_share_in",
-      "refresh:oecd:oecd_cli_br",
-      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -81,8 +77,7 @@
       "regions:korea",
       "regions:canada",
       "regions:australia",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -149,8 +144,8 @@
         {
           "id": "ecb_hicp_yoy",
           "name": "ECB HICP 通胀同比",
-          "value": 3.2,
-          "date": "2026-08-01",
+          "value": 3.8,
+          "date": "2026-09-01",
           "unit": "%"
         },
         {
@@ -358,11 +353,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 12628.62,
-          "date": "2026-09-30",
+          "value": 12829.0,
+          "date": "2026-10-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -13.71
+            "drawdown_pct": -12.34
           }
         },
         {
@@ -629,7 +624,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -654,6 +649,16 @@
           }
         },
         {
+          "id": "oecd_share_in",
+          "name": "OECD 印度股价指数（NIFTY 代理）",
+          "value": 284.5038,
+          "date": "2026-08-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -8.5
+          }
+        },
+        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.56,
@@ -672,23 +677,32 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
         "bis_policy_in",
-        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
-        "growth": "degraded",
+        "growth": "down",
         "policy": "up",
         "credit": "up",
         "market": "neutral",
         "fx": "down"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_br",
+          "name": "OECD 巴西综合领先指标 CLI",
+          "value": 102.6276,
+          "date": "2026-08-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.807
+          }
+        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -730,6 +744,13 @@
           }
         },
         {
+          "id": "oecd_bci_br",
+          "name": "OECD 巴西商业信心指数 BCI",
+          "value": 99.5684,
+          "date": "2026-08-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 223.8036,
@@ -737,12 +758,9 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "巴西：增长缺失、信贷走强、市场平稳，区域黄灯",
-      "degraded": [
-        "oecd_cli_br",
-        "oecd_bci_br"
-      ]
+      "light": "orange",
+      "summary": "巴西：增长走弱、信贷走强、市场平稳，区域橙灯",
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -830,25 +848,25 @@
   },
   "world_brief": [
     {
+      "category": "能源",
+      "title": "Will Russian oil be economically viable for India if Trump tariffs return ?",
+      "source": "timesofindia.indiatimes.com",
+      "url": "https://timesofindia.indiatimes.com/business/india-business/will-russian-oil-be-economically-viable-for-india-if-trump-tariffs-return/articleshow/134636107.cms",
+      "published": "2026-10-02T10:45:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
+      "title": "Electricity tariffs cut 10 . 4 % in Q4",
+      "source": "sbr.com.sg",
+      "url": "https://sbr.com.sg/energy-offshore/news/electricity-tariffs-cut-104-in-q4",
+      "published": "2026-10-02T03:15:00+00:00"
+    },
+    {
       "category": "地缘冲突",
       "title": "FinancialContent - Why Are MACOM ( MTSI ) Shares Soaring Today",
       "source": "markets.financialcontent.com",
       "url": "https://markets.financialcontent.com/stocks/article/stockstory-2026-10-1-why-are-macom-mtsi-shares-soaring-today",
       "published": "2026-10-01T21:00:00+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "Fed Bowman Calls for Modernizing Financial Regulation in Atlantic Council Speech",
-      "source": "newsroomamerica.com",
-      "url": "https://newsroomamerica.com/a/GO06oCbbnRXmiaqkMjKuparavyE/federal_reserve_vice_chair_for_supervision_bowman_addressed_the_atlantic_council_2026_ceo_senior_management_summit_in_washington_d_c_outlining_her_views_on_modernizing_financial_regulation.html",
-      "published": "2026-10-01T19:45:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "7 Charts on Q3 Market Highlights : Stocks Tread Water While the Bond Market Shudders",
-      "source": "morningstar.com",
-      "url": "https://www.morningstar.com/markets/7-charts-q3-market-highlights-stocks-tread-water-while-bond-market-shudders",
-      "published": "2026-10-01T17:30:00+00:00"
     }
   ]
 }
