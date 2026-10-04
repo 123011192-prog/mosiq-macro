@@ -67,6 +67,10 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_cli_br",
+      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -77,7 +81,8 @@
       "regions:korea",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -624,7 +629,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -649,16 +654,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 284.5038,
-          "date": "2026-08-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -8.5
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.56,
@@ -677,32 +672,23 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
         "bis_policy_in",
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
         "market": "neutral",
         "fx": "down"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.6276,
-          "date": "2026-08-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.807
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -744,13 +730,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.5684,
-          "date": "2026-08-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 223.8036,
@@ -758,9 +737,12 @@
           "unit": "指数"
         }
       ],
-      "light": "orange",
-      "summary": "巴西：增长走弱、信贷走强、市场平稳，区域橙灯",
-      "degraded": []
+      "light": "yellow",
+      "summary": "巴西：增长缺失、信贷走强、市场平稳，区域黄灯",
+      "degraded": [
+        "oecd_cli_br",
+        "oecd_bci_br"
+      ]
     }
   },
   "oil_watch": {
@@ -849,6 +831,13 @@
   "world_brief": [
     {
       "category": "科技产业链",
+      "title": "从造船到半导体，韩国专家早已清楚：中国已在核心技术上全面超越 - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQQy1KMkllS1hjQ0xoNGx2Y3NkQnExZE1OLXc3RTdqNzd5djJ4d1NPT1E3NXdJSzg4ejMwcVhiWXdtMEYxOG14RlVIVkJHQVJ2bG9qbW44RFdCd0FhU3M5R3JBNGI0dUtHdHJURUk5eXoxUTYza3ZGMkJvSHNXejI0S1FEZmhyaHhDdG9NTw?oc=5",
+      "published": "2026-10-04T15:24:00+00:00"
+    },
+    {
+      "category": "科技产业链",
       "title": "试图将半导体、显示器等韩国尖端技术转移到海外的手法越来越巧妙。 超越人才流失,在伪装公司就业,窃取技术或窃取需要经过数百个阶段的复杂工程的大胆行为也接连不断。 特别是,与国家产业竞争力直接相关的国家核.. - 매일경제",
       "source": "매일경제",
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9mb0JCS0tXR0tmWGNGSG55TTd1UWtKcjhoLVVzdjZjcGRydUVCaFhzYXlEUjB3RHFGYU9mLUIzeFFjRjN5VHJWdXhHOWIwX0ZpSWc?oc=5",
@@ -860,13 +849,6 @@
       "source": "财联社",
       "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
       "published": "2026-10-04T08:28:37+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "公布在即！美联储，加息大消息！ - 新浪财经",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1VT3hpWnplZlIyWlI2bHFEZ3ZKQ3BYZU1HUEw5bTZJYjZWcF9sSS0yLXVNcmtvMlVLYmtCY3VJdTluOUdWWlBLV3JvQUxFX3dwYjcwcmUxNlQ0eTA0Sm9MV3JkSzRoWllfQy1icDFpbGlxNDUzLXVXZg?oc=5",
-      "published": "2026-10-04T07:42:42+00:00"
     }
   ]
 }
