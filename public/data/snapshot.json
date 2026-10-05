@@ -67,7 +67,10 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_share_br",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_cli_br",
+      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -254,7 +257,7 @@
         "growth": "neutral",
         "policy": "down",
         "credit": "up",
-        "market": "degraded",
+        "market": "up",
         "fx": "neutral"
       },
       "indicators": [
@@ -289,6 +292,16 @@
           }
         },
         {
+          "id": "fred_nikkei225",
+          "name": "日经 225 指数",
+          "value": 69946.86,
+          "date": "2026-10-05",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -3.34
+          }
+        },
+        {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
           "value": 68.46,
@@ -307,9 +320,8 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷走强、市场缺失，区域黄灯",
+      "summary": "日本：增长平稳、信贷走强、市场走强，区域黄灯",
       "degraded": [
-        "fred_nikkei225",
         "oecd_bci_jp"
       ]
     },
@@ -617,7 +629,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -642,16 +654,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 284.5038,
-          "date": "2026-08-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -8.5
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.56,
@@ -670,32 +672,23 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
         "bis_policy_in",
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
       "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "down"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.6276,
-          "date": "2026-08-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.807
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -717,6 +710,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 345.572,
+          "date": "2026-08-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -10.52
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.18,
@@ -727,13 +730,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.5684,
-          "date": "2026-08-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 223.8036,
@@ -741,10 +737,11 @@
           "unit": "指数"
         }
       ],
-      "light": "orange",
-      "summary": "巴西：增长走弱、信贷走强、市场缺失，区域橙灯",
+      "light": "yellow",
+      "summary": "巴西：增长缺失、信贷走强、市场平稳，区域黄灯",
       "degraded": [
-        "oecd_share_br"
+        "oecd_cli_br",
+        "oecd_bci_br"
       ]
     }
   },
@@ -833,25 +830,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "美联储10月维持利率不变概率升至77.9% - 观点网",
-      "source": "观点网",
-      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5aaVpEak0zRlBtLVlXaVBvZ20wc1dHUFM4bXYyZTFLc2FKWlBEUzBmQ3dOcnpNQlRzZXBpNWpnazlKLXFRV20tM1lpTjlfUQ?oc=5",
-      "published": "2026-10-05T00:32:39+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "美联储10月维持利率不变的概率升至77.9% - 东方财富",
-      "source": "东方财富",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5Ca2JPQklIWG1YY3U4NHpBY3BTaGdwU2lZVEZIanhwRXUwb3VPZ3RBMENCOFZ0NTM1MG5sWnVhcWhOR0ZUbUV0d0hCU3hYbHgwM09hRzlzRzVFdW9UOW5FSQ?oc=5",
-      "published": "2026-10-04T22:32:30+00:00"
+      "category": "科技产业链",
+      "title": "韩国总统表态不参与台海冲突，被美众院盯了？ - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQOGUxZ1lOZ3JrMGNxdzhFdm1wZVhBNDBCLUxjR2FPbXNNbUJoWlVMZHlOZzZTbUVCcTFnSGJKV1pFS1lRRTh2XzJON1FkUHlickxUbTZIY01FYTZaYkJYT0hSbEZTSXRPVTRpSXhGc1ZpQm9tZTM1TWNnTVV6MTFIWHZhYWdnakVpalVfcw?oc=5",
+      "published": "2026-10-05T11:13:20+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "试图将半导体、显示器等韩国尖端技术转移到海外的手法越来越巧妙。 超越人才流失,在伪装公司就业,窃取技术或窃取需要经过数百个阶段的复杂工程的大胆行为也接连不断。特别是,与国家产业竞争力直接相关的国家核心.. - 매일경제",
-      "source": "매일경제",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1qLU93S1hmMlJ5MWF3NVZ6aG14a0pKRjZfazA1Nnk5dm1MbGtjQXE4c3pmZFlPR1R6Qk1yMHl0Nm45cXliNU9WRlJKckhSSmJJTWc?oc=5",
-      "published": "2026-10-04T20:59:59+00:00"
+      "title": "资金涌向AI半导体 韩国制药股遇冷年内跌逾36% - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1xc0ZwZTI4T3NlN2tNZV9kTHhnRjJIVEc1Uk9fZmZwQ2hjaEJwRGFQdW1xQ3ZCcjJsTVNtWmx0bGcxZXZuYXRjYUxzT0pmTzl1WnRpSHlfSm1qSWNYa2tNdFlvSjF0cXhRRXNNeUlrNFA1cE9YTzZnYg?oc=5",
+      "published": "2026-10-05T08:53:00+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - cls.cn",
+      "source": "cls.cn",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
+      "published": "2026-10-05T06:33:10+00:00"
     }
   ]
 }
