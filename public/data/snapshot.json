@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -8,9 +8,9 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.49,
-    "baa10y_pct": 5.562249,
-    "curve_10y3m": 1.07,
+    "baa10y": 1.47,
+    "baa10y_pct": 4.536331,
+    "curve_10y3m": 1.09,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,13 +63,10 @@
     }
   ],
   "health": {
-    "data_asof": "2026-10-01",
-    "stale_count": 24,
+    "data_asof": "2026-10-02",
+    "stale_count": 23,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
-      "refresh:oecd:oecd_share_in",
-      "refresh:oecd:oecd_cli_br",
       "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
@@ -129,11 +126,11 @@
         {
           "id": "oecd_share_ea20",
           "name": "OECD 欧元区股价指数（STOXX 代理）",
-          "value": 191.4828,
-          "date": "2026-08-01",
+          "value": 186.972,
+          "date": "2026-09-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": 0.0
+            "drawdown_pct": -2.36
           }
         },
         {
@@ -215,11 +212,11 @@
         {
           "id": "oecd_share_cn",
           "name": "OECD 中国股价指数（A 股代理）",
-          "value": 106.0427,
-          "date": "2026-08-01",
+          "value": 105.7402,
+          "date": "2026-09-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -5.46
+            "drawdown_pct": -5.73
           }
         },
         {
@@ -358,11 +355,11 @@
         {
           "id": "oecd_share_kr",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 330.6228,
-          "date": "2026-08-01",
+          "value": 341.5358,
+          "date": "2026-09-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -21.62
+            "drawdown_pct": -19.04
           }
         },
         {
@@ -439,11 +436,11 @@
         {
           "id": "oecd_share_gb",
           "name": "OECD 英国股价指数（富时代理）",
-          "value": 164.1073,
-          "date": "2026-08-01",
+          "value": 162.4881,
+          "date": "2026-09-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": 0.0
+            "drawdown_pct": -0.99
           }
         },
         {
@@ -518,11 +515,11 @@
         {
           "id": "oecd_share_ca",
           "name": "OECD 加拿大股价指数（TSX 代理）",
-          "value": 254.1654,
-          "date": "2026-08-01",
+          "value": 250.1293,
+          "date": "2026-09-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": 0.0
+            "drawdown_pct": -1.59
           }
         },
         {
@@ -592,11 +589,11 @@
         {
           "id": "oecd_share_au",
           "name": "OECD 澳大利亚股价指数（ASX 代理）",
-          "value": 166.3475,
-          "date": "2026-08-01",
+          "value": 160.4344,
+          "date": "2026-09-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": 0.0
+            "drawdown_pct": -3.55
           }
         },
         {
@@ -629,7 +626,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -654,6 +651,16 @@
           }
         },
         {
+          "id": "oecd_share_in",
+          "name": "OECD 印度股价指数（NIFTY 代理）",
+          "value": 273.0816,
+          "date": "2026-09-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -12.18
+          }
+        },
+        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.56,
@@ -672,23 +679,32 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
         "bis_policy_in",
-        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
       "status": "degraded",
       "cycle": {
-        "growth": "degraded",
+        "growth": "down",
         "policy": "up",
         "credit": "up",
-        "market": "neutral",
+        "market": "up",
         "fx": "down"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_br",
+          "name": "OECD 巴西综合领先指标 CLI",
+          "value": 102.6276,
+          "date": "2026-08-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.807
+          }
+        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -712,11 +728,11 @@
         {
           "id": "oecd_share_br",
           "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 345.572,
-          "date": "2026-08-01",
+          "value": 372.3822,
+          "date": "2026-09-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -10.52
+            "drawdown_pct": -3.58
           }
         },
         {
@@ -737,10 +753,9 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "巴西：增长缺失、信贷走强、市场平稳，区域黄灯",
+      "light": "orange",
+      "summary": "巴西：增长走弱、信贷走强、市场走强，区域橙灯",
       "degraded": [
-        "oecd_cli_br",
         "oecd_bci_br"
       ]
     }
@@ -770,44 +785,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 5.24,
-      "date": "2026-10-01",
-      "change_20d_bp": 47.0,
+      "value": 5.28,
+      "date": "2026-10-02",
+      "change_20d_bp": 50.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.61,
-      "date": "2026-10-01",
-      "change_20d_bp": 36.0,
+      "value": 5.63,
+      "date": "2026-10-02",
+      "change_20d_bp": 39.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.78,
-      "date": "2026-10-01",
-      "change_20d_bp": 44.0,
+      "value": 4.83,
+      "date": "2026-10-02",
+      "change_20d_bp": 46.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 46.0,
-      "date": "2026-10-01"
+      "value_bp": 45.0,
+      "date": "2026-10-02"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": true,
-      "us10y_change_20d_bp": 47.0,
-      "us30y_change_20d_bp": 36.0,
+      "us10y_change_20d_bp": 50.0,
+      "us30y_change_20d_bp": 39.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 5.28,
-        "date": "2026-10-02",
+        "value": 5.31,
+        "date": "2026-10-05",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.63,
-        "date": "2026-10-02",
+        "value": 5.66,
+        "date": "2026-10-05",
         "source": "tushare"
       }
     }
@@ -831,24 +846,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "韩国总统表态不参与台海冲突，被美众院盯了？ - 搜狐网",
-      "source": "搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQOGUxZ1lOZ3JrMGNxdzhFdm1wZVhBNDBCLUxjR2FPbXNNbUJoWlVMZHlOZzZTbUVCcTFnSGJKV1pFS1lRRTh2XzJON1FkUHlickxUbTZIY01FYTZaYkJYT0hSbEZTSXRPVTRpSXhGc1ZpQm9tZTM1TWNnTVV6MTFIWHZhYWdnakVpalVfcw?oc=5",
-      "published": "2026-10-05T11:13:20+00:00"
+      "title": "韩国9月出口大暴冲 半导体狂卷603亿美元撑起半边天 - DIGITIMES",
+      "source": "DIGITIMES",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZzZDYTh2dGNnOTlrWU5ZY2t6RmJvbVJvUk5tUzlBd0xJU2xXRWJSMXNFeGpLTm12YlM5clY3UVFueFVMRGtrQXZoZ0JZdzF0WnlEVnI5MVkxeUo2QkxReXQ2VmxmaW1mUk1YakNwRzIzWFF5Q2IxeW4weHhSdXNlcDVMbWE5Q0J3dGRUbUtUYk12YlpJQU9ZcHU2dlY?oc=5",
+      "published": "2026-10-05T18:34:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "资金涌向AI半导体 韩国制药股遇冷年内跌逾36% - 新浪财经",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1xc0ZwZTI4T3NlN2tNZV9kTHhnRjJIVEc1Uk9fZmZwQ2hjaEJwRGFQdW1xQ3ZCcjJsTVNtWmx0bGcxZXZuYXRjYUxzT0pmTzl1WnRpSHlfSm1qSWNYa2tNdFlvSjF0cXhRRXNNeUlrNFA1cE9YTzZnYg?oc=5",
-      "published": "2026-10-05T08:53:00+00:00"
+      "title": "韩国PCB搭上AI顺风车 2026年出口额有望突破4年前高峰 - DIGITIMES",
+      "source": "DIGITIMES",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNUZGSWdaTnFMd3lmZENybUhSdkMtcnBJTUJldC1MbDJZemZ6aGhRRVAyTFBpSnNnOTBLZThrNVMtMUZQVTk3OTlaNFZ4bDBkSWc4NkxaUTdtYXpVTE51ZHc4dEF4b0ttalhRaGtfM25TQ1JlZkdEN1VXWEI4dk91UHFhbDBRUk1XZE4wWWh4dEFoQlFVbjZlek1XSFpKUERuN19PYzBWTQ?oc=5",
+      "published": "2026-10-05T18:20:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - cls.cn",
-      "source": "cls.cn",
+      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
+      "source": "财联社",
       "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
-      "published": "2026-10-05T06:33:10+00:00"
+      "published": "2026-10-05T16:06:42+00:00"
     }
   ]
 }
