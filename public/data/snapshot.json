@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-03",
+  "as_of": "2026-10-08",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -8,9 +8,9 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.47,
-    "baa10y_pct": 4.536331,
-    "curve_10y3m": 1.09,
+    "baa10y": 1.46,
+    "baa10y_pct": 3.770558,
+    "curve_10y3m": 1.06,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,21 +63,21 @@
     }
   ],
   "health": {
-    "data_asof": "2026-10-02",
-    "stale_count": 23,
+    "data_asof": "2026-10-07",
+    "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_cli_br",
       "refresh:oecd:oecd_bci_br",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
       "cycle:market_stress",
       "radar:banking",
       "radar:nonbank",
-      "regions:japan",
       "regions:korea",
       "regions:canada",
-      "regions:australia",
       "regions:india",
       "regions:brazil"
     ]
@@ -96,11 +96,11 @@
         {
           "id": "oecd_bci_ea20",
           "name": "OECD 欧元区商业信心指数 BCI",
-          "value": 99.9078,
-          "date": "2026-08-01",
+          "value": 100.1932,
+          "date": "2026-09-01",
           "unit": "指数",
           "signal": {
-            "3m_change": 0.382
+            "3m_change": 0.582
           }
         },
         {
@@ -182,18 +182,18 @@
         {
           "id": "oecd_cli_cn",
           "name": "OECD 中国综合领先指标 CLI",
-          "value": 98.1046,
-          "date": "2026-08-01",
+          "value": 97.4103,
+          "date": "2026-09-01",
           "unit": "指数",
           "signal": {
-            "3m_change": -0.46
+            "3m_change": -0.74
           }
         },
         {
           "id": "bis_policy_cn",
           "name": "BIS 中国央行政策利率",
           "value": 3.0,
-          "date": "2026-08-01",
+          "date": "2026-09-01",
           "unit": "%",
           "signal": {
             "6m_change_pp": 0.0
@@ -232,7 +232,7 @@
         {
           "id": "oecd_bci_cn",
           "name": "OECD 中国商业信心指数 BCI",
-          "value": 98.3586,
+          "value": 98.3612,
           "date": "2026-08-01",
           "unit": "指数"
         },
@@ -249,7 +249,7 @@
       "degraded": []
     },
     "japan": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "neutral",
         "policy": "down",
@@ -261,21 +261,21 @@
         {
           "id": "oecd_cli_jp",
           "name": "OECD 日本综合领先指标 CLI",
-          "value": 100.3034,
-          "date": "2026-08-01",
+          "value": 100.3472,
+          "date": "2026-09-01",
           "unit": "指数",
           "signal": {
-            "3m_change": 0.081
+            "3m_change": 0.104
           }
         },
         {
           "id": "bis_policy_jp",
           "name": "BIS 日本央行政策利率",
-          "value": 1.0,
-          "date": "2026-08-01",
+          "value": 1.25,
+          "date": "2026-09-01",
           "unit": "%",
           "signal": {
-            "6m_change_pp": 0.25
+            "6m_change_pp": 0.5
           }
         },
         {
@@ -291,11 +291,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 69946.86,
-          "date": "2026-10-05",
+          "value": 69042.11,
+          "date": "2026-10-08",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -3.34
+            "drawdown_pct": -4.59
           }
         },
         {
@@ -309,6 +309,13 @@
           }
         },
         {
+          "id": "oecd_bci_jp",
+          "name": "OECD 日本商业信心指数 BCI",
+          "value": 101.6759,
+          "date": "2026-09-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_jp",
           "name": "BIS 日本住宅房价指数",
           "value": 144.6454,
@@ -318,28 +325,26 @@
       ],
       "light": "yellow",
       "summary": "日本：增长平稳、信贷走强、市场走强，区域黄灯",
-      "degraded": [
-        "oecd_bci_jp"
-      ]
+      "degraded": []
     },
     "korea": {
       "status": "degraded",
       "cycle": {
-        "growth": "up",
+        "growth": "neutral",
         "policy": "degraded",
         "credit": "down",
-        "market": "down",
+        "market": "neutral",
         "fx": "up"
       },
       "indicators": [
         {
           "id": "oecd_cli_kr",
           "name": "OECD 韩国综合领先指标 CLI",
-          "value": 102.8694,
-          "date": "2026-08-01",
+          "value": 102.531,
+          "date": "2026-09-01",
           "unit": "指数",
           "signal": {
-            "3m_change": 0.488
+            "3m_change": -0.055
           }
         },
         {
@@ -353,13 +358,13 @@
           }
         },
         {
-          "id": "oecd_share_kr",
+          "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 341.5358,
-          "date": "2026-09-01",
+          "value": 13066.15,
+          "date": "2026-10-07",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -19.04
+            "drawdown_pct": -10.72
           }
         },
         {
@@ -375,8 +380,8 @@
         {
           "id": "oecd_bci_kr",
           "name": "OECD 韩国商业信心指数 BCI",
-          "value": 99.615,
-          "date": "2026-08-01",
+          "value": 99.4137,
+          "date": "2026-09-01",
           "unit": "指数"
         },
         {
@@ -387,8 +392,8 @@
           "unit": "指数"
         }
       ],
-      "light": "orange",
-      "summary": "韩国：增长走强、信贷走弱、市场走弱，区域橙灯",
+      "light": "yellow",
+      "summary": "韩国：增长平稳、信贷走弱、市场平稳，区域黄灯",
       "degraded": [
         "bis_policy_kr"
       ]
@@ -406,18 +411,18 @@
         {
           "id": "oecd_cli_gb",
           "name": "OECD 英国综合领先指标 CLI",
-          "value": 101.1102,
-          "date": "2026-08-01",
+          "value": 101.3762,
+          "date": "2026-09-01",
           "unit": "指数",
           "signal": {
-            "3m_change": 0.506
+            "3m_change": 0.77
           }
         },
         {
           "id": "bis_policy_gb",
           "name": "BIS 英国央行政策利率",
           "value": 3.75,
-          "date": "2026-08-01",
+          "date": "2026-09-01",
           "unit": "%",
           "signal": {
             "6m_change_pp": 0.0
@@ -456,8 +461,8 @@
         {
           "id": "oecd_bci_gb",
           "name": "OECD 英国商业信心指数 BCI",
-          "value": 99.1149,
-          "date": "2026-08-01",
+          "value": 101.4473,
+          "date": "2026-09-01",
           "unit": "指数"
         },
         {
@@ -485,18 +490,18 @@
         {
           "id": "oecd_cli_ca",
           "name": "OECD 加拿大综合领先指标 CLI",
-          "value": 101.9858,
-          "date": "2026-08-01",
+          "value": 101.9154,
+          "date": "2026-09-01",
           "unit": "指数",
           "signal": {
-            "3m_change": 0.472
+            "3m_change": 0.357
           }
         },
         {
           "id": "bis_policy_ca",
           "name": "BIS 加拿大央行政策利率",
           "value": 2.25,
-          "date": "2026-08-01",
+          "date": "2026-09-01",
           "unit": "%",
           "signal": {
             "6m_change_pp": 0.0
@@ -547,9 +552,9 @@
       ]
     },
     "australia": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
-        "growth": "neutral",
+        "growth": "down",
         "policy": "down",
         "credit": "up",
         "market": "up",
@@ -559,11 +564,11 @@
         {
           "id": "oecd_cli_au",
           "name": "OECD 澳大利亚综合领先指标 CLI",
-          "value": 100.0414,
-          "date": "2026-08-01",
+          "value": 99.9505,
+          "date": "2026-09-01",
           "unit": "指数",
           "signal": {
-            "3m_change": -0.133
+            "3m_change": -0.181
           }
         },
         {
@@ -607,6 +612,13 @@
           }
         },
         {
+          "id": "oecd_bci_au",
+          "name": "OECD 澳大利亚商业信心指数 BCI",
+          "value": 99.923,
+          "date": "2026-08-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_au",
           "name": "BIS 澳大利亚住宅房价指数",
           "value": 216.4473,
@@ -614,11 +626,9 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "澳大利亚：增长平稳、信贷走强、市场走强，区域黄灯",
-      "degraded": [
-        "oecd_bci_au"
-      ]
+      "light": "orange",
+      "summary": "澳大利亚：增长走弱、信贷走强、市场走强，区域橙灯",
+      "degraded": []
     },
     "india": {
       "status": "degraded",
@@ -633,11 +643,11 @@
         {
           "id": "oecd_cli_in",
           "name": "OECD 印度综合领先指标 CLI",
-          "value": 101.604,
-          "date": "2026-08-01",
+          "value": 102.0041,
+          "date": "2026-09-01",
           "unit": "指数",
           "signal": {
-            "3m_change": 0.411
+            "3m_change": 0.552
           }
         },
         {
@@ -688,28 +698,18 @@
     "brazil": {
       "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
-        "market": "up",
+        "market": "degraded",
         "fx": "down"
       },
       "indicators": [
         {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.6276,
-          "date": "2026-08-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.807
-          }
-        },
-        {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
-          "value": 14.0,
-          "date": "2026-08-01",
+          "value": 13.75,
+          "date": "2026-09-01",
           "unit": "%",
           "signal": {
             "6m_change_pp": -1.0
@@ -723,16 +723,6 @@
           "unit": "% GDP",
           "signal": {
             "4q_change_pp": 1.2
-          }
-        },
-        {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 372.3822,
-          "date": "2026-09-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -3.58
           }
         },
         {
@@ -753,9 +743,11 @@
           "unit": "指数"
         }
       ],
-      "light": "orange",
-      "summary": "巴西：增长走弱、信贷走强、市场走强，区域橙灯",
+      "light": "yellow",
+      "summary": "巴西：增长缺失、信贷走强、市场缺失，区域黄灯",
       "degraded": [
+        "oecd_cli_br",
+        "oecd_share_br",
         "oecd_bci_br"
       ]
     }
@@ -786,43 +778,43 @@
   "rates_watch": {
     "us10y": {
       "value": 5.28,
-      "date": "2026-10-02",
-      "change_20d_bp": 50.0,
+      "date": "2026-10-07",
+      "change_20d_bp": 45.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.63,
-      "date": "2026-10-02",
+      "value": 5.67,
+      "date": "2026-10-07",
       "change_20d_bp": 39.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.83,
-      "date": "2026-10-02",
-      "change_20d_bp": 46.0,
+      "value": 4.77,
+      "date": "2026-10-07",
+      "change_20d_bp": 34.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 45.0,
-      "date": "2026-10-02"
+      "value_bp": 51.0,
+      "date": "2026-10-07"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": true,
-      "us10y_change_20d_bp": 50.0,
+      "us10y_change_20d_bp": 45.0,
       "us30y_change_20d_bp": 39.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 5.31,
-        "date": "2026-10-05",
+        "value": 5.22,
+        "date": "2026-10-08",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.66,
-        "date": "2026-10-05",
+        "value": 5.6,
+        "date": "2026-10-08",
         "source": "tushare"
       }
     }
@@ -846,24 +838,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "韩国9月出口大暴冲 半导体狂卷603亿美元撑起半边天 - DIGITIMES",
-      "source": "DIGITIMES",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZzZDYTh2dGNnOTlrWU5ZY2t6RmJvbVJvUk5tUzlBd0xJU2xXRWJSMXNFeGpLTm12YlM5clY3UVFueFVMRGtrQXZoZ0JZdzF0WnlEVnI5MVkxeUo2QkxReXQ2VmxmaW1mUk1YakNwRzIzWFF5Q2IxeW4weHhSdXNlcDVMbWE5Q0J3dGRUbUtUYk12YlpJQU9ZcHU2dlY?oc=5",
-      "published": "2026-10-05T18:34:00+00:00"
+      "title": "费城半导体 vs 韩股：谁错了？ - 华尔街见闻",
+      "source": "华尔街见闻",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9QVVRubnVjX3hrSzhscGkxc3ZJc0JhMUZLdnlrY3M5YUdtZTNFelVjYjRTeUNpOUxEVTViVkFuaTk4NlRuVHBGVWNCTUhVSG01UkE?oc=5",
+      "published": "2026-10-09T00:17:11+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "韩国PCB搭上AI顺风车 2026年出口额有望突破4年前高峰 - DIGITIMES",
-      "source": "DIGITIMES",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNUZGSWdaTnFMd3lmZENybUhSdkMtcnBJTUJldC1MbDJZemZ6aGhRRVAyTFBpSnNnOTBLZThrNVMtMUZQVTk3OTlaNFZ4bDBkSWc4NkxaUTdtYXpVTE51ZHc4dEF4b0ttalhRaGtfM25TQ1JlZkdEN1VXWEI4dk91UHFhbDBRUk1XZE4wWWh4dEFoQlFVbjZlek1XSFpKUERuN19PYzBWTQ?oc=5",
-      "published": "2026-10-05T18:20:00+00:00"
+      "category": "货币政策",
+      "title": "随着交易员权衡美联储利率路径，黄金上涨至接近4,150美元 - www.tmgm.com",
+      "source": "www.tmgm.com",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPMm91OHg5QldPVy1tYWR5WlFEdjVQS0pqZFlENFBSRVEtUDNUeWh2ZVRaTnJlajk2YmJibk0xRGlIaHM2dW05SHhyNFdxd0dIQjFCUC1ydTRGM1c4bEduX3FPTWJkQ082M0J1S1Zjanh3a1VrWHVrUDNqM0xCRUVWWEtHOFg1OHNMQkw2YlpoQ2Jub2FUSE5Dd3FVUUFlOEJzSUZCa24tODJpR25JeEtLQW1xUXFnUzZYRDc4S05zbEVVcFVFbGtCMkhMR1N0QQ?oc=5",
+      "published": "2026-10-08T23:44:09+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
-      "published": "2026-10-05T16:06:42+00:00"
+      "category": "货币政策",
+      "title": "美联储10月维持利率不变概率82.3% 12月为18.7%_公司新闻_财经 - 证券之星",
+      "source": "证券之星",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE05dV9mYnlCVU93cl9uYXR6QjAydHhLcXJsaTBYazUxNnY2N09KNTEyMkdwUzJPTFJqb1FFenlSY2lFVVBBQUd6RmtGclhHTjRwdGlSemZ6NEhWV2t4dEFYaA?oc=5",
+      "published": "2026-10-08T22:52:00+00:00"
     }
   ]
 }
