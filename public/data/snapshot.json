@@ -362,11 +362,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 12623.71,
-          "date": "2026-10-08",
+          "value": 12572.42,
+          "date": "2026-10-09",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -13.74
+            "drawdown_pct": -14.09
           }
         },
         {
@@ -830,25 +830,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "Q2 Earnings Preview : Banks , financials to drive strong double - digit growth",
-      "source": "business-standard.com",
-      "url": "https://www.business-standard.com/markets/news/q2-earnings-preview-banks-financials-to-drive-strong-double-digit-growth-126100800201_1.html",
-      "published": "2026-10-08T05:30:00+00:00"
+      "category": "科技产业链",
+      "title": "韩国经济遭遇“冰与火”，半导体超热，个体经济麻烦了 - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOWWFDbnd4c2pyeDJwXzZVT1Rfc3JiSXJKZmxmSkpGbzBJX2FLcmpXRHVqSlJwM3pmekt3d0JiZVhUWi14ejUwZ2FSSTROWHJBTUk1U2s2TXlGWk02czdUcmZKOENZYnJ3blRtVnl4eDJvNXZBM0dwWFdXZk5fbmNjTG1YVEdMRUp3U3Z2dw?oc=5",
+      "published": "2026-10-10T04:13:00+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "US prepares military for possible new Iran strikes , Trump yet to decide",
-      "source": "business-standard.com",
-      "url": "https://www.business-standard.com/world-news/us-prepares-military-for-possible-new-iran-strikes-trump-yet-to-decide-126100800105_1.html",
-      "published": "2026-10-08T05:30:00+00:00"
+      "category": "科技产业链",
+      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
+      "published": "2026-10-10T03:08:52+00:00"
     },
     {
       "category": "货币政策",
-      "title": "RBI increases repo rate to 5 . 50 %: How does it impact a consumer ?",
-      "source": "sentinelassam.com",
-      "url": "https://www.sentinelassam.com/topheadlines/rbi-increases-repo-rate-to-550-how-does-it-impact-a-consumer",
-      "published": "2026-10-08T05:30:00+00:00"
+      "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
+      "published": "2026-10-10T02:57:52+00:00"
     }
   ]
 }
