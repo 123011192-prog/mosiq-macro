@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.48,
-    "baa10y_pct": 5.21251,
+    "baa10y_pct": 5.214601,
     "curve_10y3m": 0.99,
     "curve_inverted": false
   },
@@ -801,13 +801,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 5.22,
-        "date": "2026-10-08",
+        "value": 5.24,
+        "date": "2026-10-09",
         "source": "tushare"
       },
       "us30y": {
         "value": 5.6,
-        "date": "2026-10-08",
+        "date": "2026-10-09",
         "source": "tushare"
       }
     }
@@ -830,25 +830,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
-      "published": "2026-10-09T16:11:22+00:00"
+      "category": "地缘冲突",
+      "title": "Q2 Earnings Preview : Banks , financials to drive strong double - digit growth",
+      "source": "business-standard.com",
+      "url": "https://www.business-standard.com/markets/news/q2-earnings-preview-banks-financials-to-drive-strong-double-digit-growth-126100800201_1.html",
+      "published": "2026-10-08T05:30:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
+      "title": "US prepares military for possible new Iran strikes , Trump yet to decide",
+      "source": "business-standard.com",
+      "url": "https://www.business-standard.com/world-news/us-prepares-military-for-possible-new-iran-strikes-trump-yet-to-decide-126100800105_1.html",
+      "published": "2026-10-08T05:30:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美联储按兵不动但释放鹰派信号 年内利率变化预期由降息变加息 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Xck1rVVBQNVpBcWxUbVNWREstX1NDSEpEMkpXTkJ1R0wtdEJjR0tYRW5IUEc1a0hrZnpmSnZwbHdNZ2tIcUpUUQ?oc=5",
-      "published": "2026-10-09T15:05:53+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "下周前瞻：美公布CPI与褐皮书 AI成色待检验 - 汇通网 Fx678",
-      "source": "汇通网 Fx678",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBrUVJQM3BiQnZISklwaG8xTHdMMWxyMk4tNUdVWXgtTUVVRjB3SjBZdy1Nc1J2bFE2emZPN05vZE9jX0pHbHJNR1ZMcTZvSENuOXotZTVFejlSQkk?oc=5",
-      "published": "2026-10-09T12:39:00+00:00"
+      "title": "RBI increases repo rate to 5 . 50 %: How does it impact a consumer ?",
+      "source": "sentinelassam.com",
+      "url": "https://www.sentinelassam.com/topheadlines/rbi-increases-repo-rate-to-550-how-does-it-impact-a-consumer",
+      "published": "2026-10-08T05:30:00+00:00"
     }
   ]
 }
