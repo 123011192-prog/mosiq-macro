@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.48,
-    "baa10y_pct": 5.218788,
+    "baa10y_pct": 5.220884,
     "curve_10y3m": 0.99,
     "curve_inverted": false
   },
@@ -67,8 +67,6 @@
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
-      "refresh:oecd:oecd_share_in",
       "refresh:oecd:oecd_cli_br",
       "refresh:oecd:oecd_bci_br",
       "refresh:oecd:oecd_share_br",
@@ -347,13 +345,13 @@
           }
         },
         {
-          "id": "oecd_share_kr",
+          "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 341.5358,
-          "date": "2026-09-01",
+          "value": 12236.79,
+          "date": "2026-10-12",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -19.04
+            "drawdown_pct": -16.39
           }
         },
         {
@@ -625,7 +623,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -650,6 +648,16 @@
           }
         },
         {
+          "id": "oecd_share_in",
+          "name": "OECD 印度股价指数（NIFTY 代理）",
+          "value": 273.0816,
+          "date": "2026-09-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -12.18
+          }
+        },
+        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.56,
@@ -668,10 +676,9 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
         "bis_policy_in",
-        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
@@ -818,24 +825,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "油价上涨、半导体股遭抛售……韩国股市将连续第五个交易日下跌吗？[早安股市] - 아시아경제",
+      "title": "中国汽车出口迈入1200万辆时代……韩国出口与内需双重承压[C冲击，悬崖边缘的韩国产业｜汽车]① - 아시아경제",
       "source": "아시아경제",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE81Vm1xY2hOT0o0WW4tSVluSGxhdGFMUXpUYlF1a3BkSkIwRVFha3VxcFhGbXRPZWlSWkpGdzEyT1BFUFllX1hXV0NoU2VyTFVxVENzWlhCVGhYTWs3ZnIxTUlsZTU?oc=5",
-      "published": "2026-10-12T23:02:47+00:00"
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBqUzRtc2JqT2h0ZnBWbjItNzYxZFJrdDctNkRDNnlET0tBTFllcE5fYTBRZ2NJRUpXUm1vaFdrdXBDMV84MlpBdXBGQ2JuOUJ0NWt2U0ZzQ01RM3BHR1Z0RWgyN2Q?oc=5",
+      "published": "2026-10-13T02:18:28+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "黄金交易提醒：美元狂飙+油价暴涨双杀，美联储加息阴云压顶，金价再度剑指4000关口？_外汇动态报道 - 汇通网 Fx678",
-      "source": "汇通网 Fx678",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5hT0MxZ0NjUDJLWDVnUEc2M2FwejFJMmVCTmFoRl9taUxuZkNSbGF2QnRma280UTRvNzUxeUxKOW9pRTNPSW95UWZTM3VKZ18xdlNNdVR1OEhWUQ?oc=5",
-      "published": "2026-10-12T22:58:35+00:00"
+      "category": "科技产业链",
+      "title": "国际货币基金组织(IMF)上调韩国经济增长率至3.3%，半导体出口强劲 - 亚洲日报",
+      "source": "亚洲日报",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9JSXZBWFdoTjV0V0E0WVlqTzFKTXlPQ294dlVQaDJsUlRBdFRabUtPRTZMQjVhWVRSa1l6eG1qak5FWEdDLUhvZERXaXlISzlrSTJLNVh4Wk1CT2s?oc=5",
+      "published": "2026-10-13T02:04:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美联储10月维持利率不变的概率为79.5%_7x24快讯_新浪财经 - 手机新浪网",
-      "source": "手机新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE54UXU4N2p3YkdtdzNmcG1lTUZnZWh3dzBxZXZtSXVLZlh1Z1F1bGpzME5EVmI0d3BYQ1pWTWFoN19IZE9tU0V2LXdXRQ?oc=5",
-      "published": "2026-10-12T22:05:37+00:00"
+      "category": "科技产业链",
+      "title": "2026年韩国半导体展览会举办在即，三星电子、SK海力士将展出下一代内存技术 - 36 Kr",
+      "source": "36 Kr",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFA1LUZERExTMzctT2t5Y0FyNEVNV0VXeFVYalNDMnYzWmpSRk5pNVRfVWdNcV9odllKczdUalNDd003YkRBTFhyRHM3c2NuZTAyekw0UFVmNkRvU3lXRnc?oc=5",
+      "published": "2026-10-13T01:18:55+00:00"
     }
   ]
 }
