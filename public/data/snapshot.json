@@ -18,7 +18,7 @@
     "inflation": "degraded",
     "liquidity": "neutral",
     "credit": "degraded",
-    "policy": "degraded",
+    "policy": "neutral",
     "market_stress": "degraded"
   },
   "confirmations": [
@@ -64,13 +64,14 @@
   ],
   "health": {
     "data_asof": "2026-10-13",
-    "stale_count": 31,
+    "stale_count": 26,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
-      "cycle:policy",
       "cycle:market_stress",
       "radar:banking",
       "radar:credit",
@@ -78,7 +79,8 @@
       "regions:japan",
       "regions:korea",
       "regions:canada",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -690,7 +692,7 @@
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "down",
         "policy": "up",
@@ -750,13 +752,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.0359,
-          "date": "2026-09-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 223.8036,
@@ -766,7 +761,9 @@
       ],
       "light": "orange",
       "summary": "巴西：增长走弱、信贷走强、市场走强，区域橙灯",
-      "degraded": []
+      "degraded": [
+        "oecd_bci_br"
+      ]
     }
   },
   "oil_watch": {
@@ -794,32 +791,32 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 5.24,
-      "date": "2026-10-09",
-      "change_20d_bp": 24.0,
+      "value": 5.21,
+      "date": "2026-10-13",
+      "change_20d_bp": 21.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.6,
-      "date": "2026-10-09",
-      "change_20d_bp": 24.0,
+      "value": 5.56,
+      "date": "2026-10-13",
+      "change_20d_bp": 20.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.8,
-      "date": "2026-10-09",
-      "change_20d_bp": 13.0,
+      "value": 4.79,
+      "date": "2026-10-13",
+      "change_20d_bp": 12.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 44.0,
-      "date": "2026-10-09"
+      "value_bp": 42.0,
+      "date": "2026-10-13"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 24.0,
-      "us30y_change_20d_bp": 24.0,
+      "us10y_change_20d_bp": 21.0,
+      "us30y_change_20d_bp": 20.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -855,24 +852,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "韩国股市大跌，却加仓中国创业板：产业链对冲思维，背后什么逻辑 - 新浪网",
-      "source": "新浪网",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE0tYWpfdDFfeTBDOTRsM1FPRnJaSWpWbldDbHVXaENyYVJwWE5mR3RnM0pOOTlzQzFhekVsWEF2ZXEyZnBMbmZucTRpemJ2V1ZQY3Itaklua2JWYWR5Q0tMUzNiNW1CVkRFaGJaU3lvVnlUZw?oc=5",
-      "published": "2026-10-14T15:24:00+00:00"
+      "title": "韩国解开法规紧箍咒 20台人形机器人进驻半导体与车厂 - DIGITIMES",
+      "source": "DIGITIMES",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPZmo2eGNqVW1vdkxSdjVHaUp4UVh4UGtmVGwxNFFNQ2EyYXNtR19YbHZ0WU5qd0NCRzhSNDAzR2J1dUJPWk5KX05ydFYzLTUwcU5VejRXbVlvOFE5bHdhb2JDZ2lVMnNZNXNiVVVpZzRlNmtQOVNoZXdxVWp3RlEtN3N2eGFmbUN5M0hhYTU3OGlpMUN1ZDBzanpmQkt1OEhNWTZzQ2pB?oc=5",
+      "published": "2026-10-14T18:27:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩资“扫货”中国硬科技，“囤”起算力链 - 21财经",
-      "source": "21财经",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNaHNrTHlBSjBoM1ZPcGd2UnlfV21mZTBmQ1dUb1pXWVJ0WjB5cEpLUE5rX2lNSUY0aTY3Sy1hSnJZMkFXQS1VZTR0OExtbFN0VmRfZWVaZUVNRGRZRGMyeVpscjJyUHBCOWdXaUNwU010VDdzZkJFUWhRMWRHYXMxc1N3RFp1UzBGYnNfWWRqOA?oc=5",
-      "published": "2026-10-14T15:00:00+00:00"
+      "title": "领2倍年薪去中国…窃取韩国产半导体核心技术的3人团伙被起诉 - 朝鮮日報中文版",
+      "source": "朝鮮日報中文版",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNcGctM2RJMEt0N2dVWDBvZzdlTzJEZTZid1dQZGswdXhLcWNMU2Z5X214WENBZWRYQUU0UVFMN0VmVFNzdUdYVGtTeWhyd2Q2VExFRWdhdmhQMDl6V1ZBSVRGWmpjZXA2TlZpZjFUNE9wUkd4VzFiOXlZZks5cDBmT0FteFpYbEIxS284dDY3bXB0Zw?oc=5",
+      "published": "2026-10-14T18:23:31+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美国9月CPI今晚揭晓：整体通胀或创5个月最大涨幅，可能重塑美联储利率路径-市场参考 - 金十数据",
-      "source": "金十数据",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9IYkZhbHBibEFNZlVPUllrdTItbnVldk1IZ0hpODlGbXlKQnNhQXFQRUtuZE1Wbm1JZEF5WldRRWd2VXNqRTBpb1N6U0JydUU?oc=5",
-      "published": "2026-10-14T14:15:59+00:00"
+      "category": "科技产业链",
+      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
+      "published": "2026-10-14T17:10:02+00:00"
     }
   ]
 }
