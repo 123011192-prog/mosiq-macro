@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-13",
+  "as_of": "2026-10-14",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,13 +10,13 @@
   "core": {
     "baa10y": 1.45,
     "baa10y_pct": 2.850261,
-    "curve_10y3m": 0.99,
+    "curve_10y3m": 0.95,
     "curve_inverted": false
   },
   "cycle": {
     "growth": "degraded",
     "inflation": "degraded",
-    "liquidity": "degraded",
+    "liquidity": "neutral",
     "credit": "degraded",
     "policy": "degraded",
     "market_stress": "degraded"
@@ -63,14 +63,12 @@
     }
   ],
   "health": {
-    "data_asof": "2026-10-12",
-    "stale_count": 35,
+    "data_asof": "2026-10-13",
+    "stale_count": 31,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
-      "cycle:liquidity",
       "cycle:credit",
       "cycle:policy",
       "cycle:market_stress",
@@ -80,8 +78,7 @@
       "regions:japan",
       "regions:korea",
       "regions:canada",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -256,7 +253,7 @@
         "growth": "neutral",
         "policy": "down",
         "credit": "up",
-        "market": "degraded",
+        "market": "up",
         "fx": "neutral"
       },
       "indicators": [
@@ -291,6 +288,16 @@
           }
         },
         {
+          "id": "fred_nikkei225",
+          "name": "日经 225 指数",
+          "value": 67744.29,
+          "date": "2026-10-14",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -6.39
+          }
+        },
+        {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
           "value": 68.46,
@@ -309,9 +316,8 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷走强、市场缺失，区域黄灯",
+      "summary": "日本：增长平稳、信贷走强、市场走强，区域黄灯",
       "degraded": [
-        "fred_nikkei225",
         "bis_spp_jp"
       ]
     },
@@ -684,7 +690,7 @@
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "down",
         "policy": "up",
@@ -744,6 +750,13 @@
           }
         },
         {
+          "id": "oecd_bci_br",
+          "name": "OECD 巴西商业信心指数 BCI",
+          "value": 99.0359,
+          "date": "2026-09-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 223.8036,
@@ -753,9 +766,7 @@
       ],
       "light": "orange",
       "summary": "巴西：增长走弱、信贷走强、市场走强，区域橙灯",
-      "degraded": [
-        "oecd_bci_br"
-      ]
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -785,19 +796,19 @@
     "us10y": {
       "value": 5.24,
       "date": "2026-10-09",
-      "change_20d_bp": 27.0,
+      "change_20d_bp": 24.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.6,
       "date": "2026-10-09",
-      "change_20d_bp": 26.0,
+      "change_20d_bp": 24.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.8,
       "date": "2026-10-09",
-      "change_20d_bp": 15.0,
+      "change_20d_bp": 13.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -807,8 +818,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 27.0,
-      "us30y_change_20d_bp": 26.0,
+      "us10y_change_20d_bp": 24.0,
+      "us30y_change_20d_bp": 24.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -843,25 +854,25 @@
   },
   "world_brief": [
     {
+      "category": "科技产业链",
+      "title": "韩国股市大跌，却加仓中国创业板：产业链对冲思维，背后什么逻辑 - 新浪网",
+      "source": "新浪网",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE0tYWpfdDFfeTBDOTRsM1FPRnJaSWpWbldDbHVXaENyYVJwWE5mR3RnM0pOOTlzQzFhekVsWEF2ZXEyZnBMbmZucTRpemJ2V1ZQY3Itaklua2JWYWR5Q0tMUzNiNW1CVkRFaGJaU3lvVnlUZw?oc=5",
+      "published": "2026-10-14T15:24:00+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "韩资“扫货”中国硬科技，“囤”起算力链 - 21财经",
+      "source": "21财经",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNaHNrTHlBSjBoM1ZPcGd2UnlfV21mZTBmQ1dUb1pXWVJ0WjB5cEpLUE5rX2lNSUY0aTY3Sy1hSnJZMkFXQS1VZTR0OExtbFN0VmRfZWVaZUVNRGRZRGMyeVpscjJyUHBCOWdXaUNwU010VDdzZkJFUWhRMWRHYXMxc1N3RFp1UzBGYnNfWWRqOA?oc=5",
+      "published": "2026-10-14T15:00:00+00:00"
+    },
+    {
       "category": "货币政策",
-      "title": "鲍曼：目前不认为美联储需急于调整利率_7x24快讯_新浪财经 - 手机新浪网",
-      "source": "手机新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1oM2FlbkJHTUVSZEpDc2Q1S2lTd1BybzVBWDdQajhsQlNBVjJEQ3VZTVE2Y1ZMUHRVVVdtOFg4cjdXUXVSZl9hcWRlcw?oc=5",
-      "published": "2026-10-14T10:01:22+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "韩国KOSPI六连跌失守6000点：外资单日净卖出7896亿韩元 - 华尔街见闻",
-      "source": "华尔街见闻",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBGVmVPeVdkVGR1b0tPaU9GS0MyWC04RDNYLWhpT3A1WElvMkpQRmFqc1RLSnpwdC1LX082SjB3LXFHZ3hyZzJYbTJ2bUlBQ0pNaGRv?oc=5",
-      "published": "2026-10-14T08:58:45+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "韩国国防部长官姜信哲14日来到\"湖南半导体制造厂\"入驻的全南光州的空军第一战斗飞行团（1战备），叮嘱道:\"在维持坚定的领空应对态势的同时，要完成临时部署和军用机场迁移任务，以支持国家战略产业政策。\" - 매일경제",
-      "source": "매일경제",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5vMjZaUGY5SU9XbGhQVmZuTExtUXJkb1BSa2V4eDRrQkRiQnExUnNwUF9CWlFwc0t5ODJLTXBkM19jOTd4QVpaNm1jTDlqY3BUYzhn?oc=5",
-      "published": "2026-10-14T08:18:23+00:00"
+      "title": "美国9月CPI今晚揭晓：整体通胀或创5个月最大涨幅，可能重塑美联储利率路径-市场参考 - 金十数据",
+      "source": "金十数据",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9IYkZhbHBibEFNZlVPUllrdTItbnVldk1IZ0hpODlGbXlKQnNhQXFQRUtuZE1Wbm1JZEF5WldRRWd2VXNqRTBpb1N6U0JydUU?oc=5",
+      "published": "2026-10-14T14:15:59+00:00"
     }
   ]
 }
