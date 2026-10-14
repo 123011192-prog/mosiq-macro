@@ -348,11 +348,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 12236.79,
-          "date": "2026-10-12",
+          "value": 12208.79,
+          "date": "2026-10-13",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -16.39
+            "drawdown_pct": -16.58
           }
         },
         {
@@ -843,25 +843,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "韩资逆势加仓中国硬科技 坚定持有科技资产 - 中华军事",
-      "source": "中华军事",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5UQzRZM3kyRVFTSW5hQTk1TzdrNmtiYkZDVVJaaGNIbkhRRmpMR1V2VE1HTWxaVW5pRTBwUXZNek5Ca0JnQ1B6dExiWFFoNF9ZbUhsQVBoZUhxQWJabFR5MGV6TlpMQ0J1SFJaZVpUOGs?oc=5",
-      "published": "2026-10-14T01:33:04+00:00"
+      "category": "货币政策",
+      "title": "鲍曼：目前不认为美联储需急于调整利率_7x24快讯_新浪财经 - 手机新浪网",
+      "source": "手机新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1oM2FlbkJHTUVSZEpDc2Q1S2lTd1BybzVBWDdQajhsQlNBVjJEQ3VZTVE2Y1ZMUHRVVVdtOFg4cjdXUXVSZl9hcWRlcw?oc=5",
+      "published": "2026-10-14T10:01:22+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩国存储股遭遇抛售风暴 半导体股集体跳水 - 中华网",
-      "source": "中华网",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1ReDE5YXVoalZZZXZGU2NYbDAzQ0Y1bDF5ejRZYVVsR2Mza3R1dW9MQ0ptTlBxMjdyYjJ0djRvV01ENFpFOWZDQ2pDN2ZJMnJOR1Boa3QxaF8tWHBOMWNJc2ZHcGYtNVgwc2w0TjlwcHY?oc=5",
-      "published": "2026-10-14T01:25:05+00:00"
+      "title": "韩国KOSPI六连跌失守6000点：外资单日净卖出7896亿韩元 - 华尔街见闻",
+      "source": "华尔街见闻",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBGVmVPeVdkVGR1b0tPaU9GS0MyWC04RDNYLWhpT3A1WElvMkpQRmFqc1RLSnpwdC1LX082SjB3LXFHZ3hyZzJYbTJ2bUlBQ0pNaGRv?oc=5",
+      "published": "2026-10-14T08:58:45+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "IMF上调韩国今年实际GDP增速至3.3% - 韩联社",
-      "source": "韩联社",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1lV1VhZHM5cDM4dFFNVDNWcmlpZHVlM1lPNE9rMnNuMXNsMlp5QzBtZHFNazBQeXRrLThhOFBfRS0yUTZjNWVLMEF3QVo3TTdFdmstOU1NcUtFaEVXVVdyaUtNN1gxS3hfVnVGa082aWpvajRiUHc?oc=5",
-      "published": "2026-10-14T01:06:33+00:00"
+      "title": "韩国国防部长官姜信哲14日来到\"湖南半导体制造厂\"入驻的全南光州的空军第一战斗飞行团（1战备），叮嘱道:\"在维持坚定的领空应对态势的同时，要完成临时部署和军用机场迁移任务，以支持国家战略产业政策。\" - 매일경제",
+      "source": "매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5vMjZaUGY5SU9XbGhQVmZuTExtUXJkb1BSa2V4eDRrQkRiQnExUnNwUF9CWlFwc0t5ODJLTXBkM19jOTd4QVpaNm1jTDlqY3BUYzhn?oc=5",
+      "published": "2026-10-14T08:18:23+00:00"
     }
   ]
 }
