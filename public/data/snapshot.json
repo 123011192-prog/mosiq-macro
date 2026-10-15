@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-14",
+  "as_of": "2026-10-15",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.46,
     "baa10y_pct": 3.832263,
-    "curve_10y3m": 0.95,
+    "curve_10y3m": 0.91,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,10 +63,13 @@
     }
   ],
   "health": {
-    "data_asof": "2026-10-13",
+    "data_asof": "2026-10-14",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_cli_br",
       "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
@@ -252,7 +255,7 @@
         "growth": "neutral",
         "policy": "down",
         "credit": "up",
-        "market": "up",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -289,11 +292,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 67744.29,
-          "date": "2026-10-14",
+          "value": 64425.95,
+          "date": "2026-10-15",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -6.39
+            "drawdown_pct": -10.97
           }
         },
         {
@@ -315,7 +318,7 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷走强、市场走强，区域黄灯",
+      "summary": "日本：增长平稳、信贷走强、市场平稳，区域黄灯",
       "degraded": [
         "bis_spp_jp"
       ]
@@ -637,7 +640,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -662,16 +665,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 273.0816,
-          "date": "2026-09-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -12.18
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.56,
@@ -690,32 +683,23 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
         "bis_policy_in",
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
       "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
         "market": "up",
         "fx": "down"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.3614,
-          "date": "2026-09-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.491
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -764,9 +748,10 @@
           "unit": "指数"
         }
       ],
-      "light": "orange",
-      "summary": "巴西：增长走弱、信贷走强、市场走强，区域橙灯",
+      "light": "yellow",
+      "summary": "巴西：增长缺失、信贷走强、市场走强，区域黄灯",
       "degraded": [
+        "oecd_cli_br",
         "oecd_bci_br"
       ]
     }
@@ -798,19 +783,19 @@
     "us10y": {
       "value": 5.21,
       "date": "2026-10-13",
-      "change_20d_bp": 21.0,
+      "change_20d_bp": 20.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.56,
       "date": "2026-10-13",
-      "change_20d_bp": 20.0,
+      "change_20d_bp": 21.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.79,
       "date": "2026-10-13",
-      "change_20d_bp": 12.0,
+      "change_20d_bp": 5.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -820,8 +805,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 21.0,
-      "us30y_change_20d_bp": 20.0,
+      "us10y_change_20d_bp": 20.0,
+      "us30y_change_20d_bp": 21.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -857,24 +842,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "韩国股市7天蒸发5.8万亿，中国长鑫新技术引发的惨剧？ - finance.sina.com.cn",
-      "source": "finance.sina.com.cn",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1MQzJwZkJZSEVxajBpR1FlclFpamp1U1k0S0NWdy1HdG9LLUFYeVlHSE9XLWJrZjNsZl85a3pJRkg1bnBQMFdDamFZLWJzd2oza3RDUlhGNzlhenZpUTIwRng2Z0VrM2IyZlFVVDY5Zw?oc=5",
-      "published": "2026-10-15T09:09:36+00:00"
+      "title": "今夜，美股巨震！费城半导体走熊，韩国紧急救市 - 21财经",
+      "source": "21财经",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQMTNuQnhWZklVUW1meUhyZW9qRkphVHUzN2FwSG5hdDBBVm96MTVHZmx2RzZoQjVuY0JDZXBMN3hLRHRNV3UyLV9GempzR2l5NWFWM0k3N0xfZnI0MFlha0RPeEsycUZOWTBSRk1WcWpxMkFSTFhjb3pWVG1PXzVDbTlzNnVQVkZTankySFB3?oc=5",
+      "published": "2026-10-15T15:07:05+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "中国半导体追赶速度惊人，D램与闪存市场竞争加剧 - 亚洲日报",
-      "source": "亚洲日报",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1IMnhvUFd1X0RkWm9STkdvSWZYLU5fVTFFVlVkQVVnQTNPMFdBQ2hjOU5kTTlxbzZQLW9hVDJyLTA0dkc4VmVJenI5ODRCUkVSR3B1WGJqSExUVVE?oc=5",
-      "published": "2026-10-15T09:04:10+00:00"
+      "title": "长鑫存储技术取得重大突破，韩媒称“好日子恐怕只剩下2-3年” - 凤凰网",
+      "source": "凤凰网",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBCN3hNYm9IQTZqcGJIVzRpc2RsWGQ4SzU4S0VFZl83eGhEeXNDdjlQX21rOWs0TGlueUFkYWZjOW9aM2JjdEtQX2R0V1U?oc=5",
+      "published": "2026-10-15T13:44:08+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "因来自中国的半导体不利因素而动摇的韩国综合股价指数此次受到美国半导体股弱势的影响,瞬间跌至5500点。 随着美国标准利率上调的恐惧再次增大,对人工智能(AI)相关股的警戒心扩散,成为了股市调整的扳机。.. - 매일경제",
-      "source": "매일경제",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE85SUdmZUJrQUg0ejZ4U3FVUk1aS3ZVd2V5dnFOVHI3d09JTDhUUVVUT0JfaVl5OVRCRzkwUkhsTGZuSnpEQW52ejgxckRRWFE?oc=5",
-      "published": "2026-10-15T08:46:54+00:00"
+      "title": "韩国股市暴跌 - 搜狐",
+      "source": "搜狐",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNM1UzcVo4NnItcG9vRy11Z0ZkTHo0S1YwdnBQb2M5SUV0MDdPNXRZTWVnZGNGR0VreFhzbG1lS3NRLVpLdi1NYmcwYlN6MWVLYTREYklXd1FYZlh3RmxvcjZlUWpqZlpTUHo4a3hXckFRaDVQczZjSjN4TUgyTk1lRTMybTdBNXZr?oc=5",
+      "published": "2026-10-15T13:05:00+00:00"
     }
   ]
 }
