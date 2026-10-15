@@ -55,7 +55,7 @@
       "active": false
     }
   ],
-  "founder_note": "盘面平稳，按自己的节奏来；欧元区要当心",
+  "founder_note": "盘面平稳，按自己的节奏来；韩国要当心",
   "advice": [
     {
       "text": "维持中性观察；触发：核心分位升至70或曲线倒挂；失效：两项条件均未持续。",
@@ -67,9 +67,6 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
-      "refresh:oecd:oecd_share_in",
-      "refresh:oecd:oecd_cli_br",
       "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
@@ -78,7 +75,6 @@
       "radar:banking",
       "radar:nonbank",
       "regions:japan",
-      "regions:korea",
       "regions:canada",
       "regions:india",
       "regions:brazil"
@@ -325,10 +321,10 @@
       ]
     },
     "korea": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "neutral",
-        "policy": "degraded",
+        "policy": "down",
         "credit": "down",
         "market": "down",
         "fx": "up"
@@ -345,6 +341,16 @@
           }
         },
         {
+          "id": "bis_policy_kr",
+          "name": "BIS 韩国央行政策利率",
+          "value": 3.0,
+          "date": "2026-09-01",
+          "unit": "%",
+          "signal": {
+            "6m_change_pp": 0.5
+          }
+        },
+        {
           "id": "bis_tc_kr_gdp",
           "name": "BIS 韩国私人非金融信贷/GDP",
           "value": 191.5,
@@ -357,11 +363,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 12208.79,
-          "date": "2026-10-13",
+          "value": 11684.38,
+          "date": "2026-10-14",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -16.58
+            "drawdown_pct": -20.16
           }
         },
         {
@@ -389,11 +395,9 @@
           "unit": "指数"
         }
       ],
-      "light": "orange",
-      "summary": "韩国：增长平稳、信贷走弱、市场走弱，区域橙灯",
-      "degraded": [
-        "bis_policy_kr"
-      ]
+      "light": "red",
+      "summary": "韩国：增长平稳、信贷走弱、市场走弱，区域红灯",
+      "degraded": []
     },
     "uk": {
       "status": "ok",
@@ -571,8 +575,8 @@
         {
           "id": "bis_policy_au",
           "name": "BIS 澳大利亚央行政策利率",
-          "value": 4.35,
-          "date": "2026-08-01",
+          "value": 4.6,
+          "date": "2026-09-01",
           "unit": "%",
           "signal": {
             "6m_change_pp": 0.5
@@ -633,7 +637,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -658,6 +662,16 @@
           }
         },
         {
+          "id": "oecd_share_in",
+          "name": "OECD 印度股价指数（NIFTY 代理）",
+          "value": 273.0816,
+          "date": "2026-09-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -12.18
+          }
+        },
+        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.56,
@@ -676,23 +690,32 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
         "bis_policy_in",
-        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
       "status": "degraded",
       "cycle": {
-        "growth": "degraded",
+        "growth": "down",
         "policy": "up",
         "credit": "up",
         "market": "up",
         "fx": "down"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_br",
+          "name": "OECD 巴西综合领先指标 CLI",
+          "value": 102.3614,
+          "date": "2026-09-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.491
+          }
+        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -741,10 +764,9 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "巴西：增长缺失、信贷走强、市场走强，区域黄灯",
+      "light": "orange",
+      "summary": "巴西：增长走弱、信贷走强、市场走强，区域橙灯",
       "degraded": [
-        "oecd_cli_br",
         "oecd_bci_br"
       ]
     }
@@ -835,24 +857,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "长鑫存储加码DRAM投资 韩国半导体设备企业迎新机遇 - 뉴스핌",
-      "source": "뉴스핌",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE0xQjJNcVZwMlQxTVFicE80VWtsRXNDZWdGVmhlRS1IaFBVdnh4dXZZZ29JcVpranFlTVJHV0hhWDVLcktuY1puRjB3ekJvMjVxUGViZkttU25YLUx4?oc=5",
-      "published": "2026-10-15T00:06:00+00:00"
+      "title": "韩国股市7天蒸发5.8万亿，中国长鑫新技术引发的惨剧？ - finance.sina.com.cn",
+      "source": "finance.sina.com.cn",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1MQzJwZkJZSEVxajBpR1FlclFpamp1U1k0S0NWdy1HdG9LLUFYeVlHSE9XLWJrZjNsZl85a3pJRkg1bnBQMFdDamFZLWJzd2oza3RDUlhGNzlhenZpUTIwRng2Z0VrM2IyZlFVVDY5Zw?oc=5",
+      "published": "2026-10-15T09:09:36+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩国青年人才在半导体设计大赛中获总统奖 - 亚洲日报",
+      "title": "中国半导体追赶速度惊人，D램与闪存市场竞争加剧 - 亚洲日报",
       "source": "亚洲日报",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1OTnR0SWg2TU9FWG12N3dJaXVWMm9LR25iNm5HU3JRekptZlBmOXc3WUtyT2pLaUdpOEdKQVhuMlVBR2RLWlByanJzOHk4Ul9YMXlvWjk0QXdNSXc?oc=5",
-      "published": "2026-10-14T21:04:10+00:00"
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1IMnhvUFd1X0RkWm9STkdvSWZYLU5fVTFFVlVkQVVnQTNPMFdBQ2hjOU5kTTlxbzZQLW9hVDJyLTA0dkc4VmVJenI5ODRCUkVSR3B1WGJqSExUVVE?oc=5",
+      "published": "2026-10-15T09:04:10+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩国解开法规紧箍咒 20台人形机器人进驻半导体与车厂 - DIGITIMES",
-      "source": "DIGITIMES",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPZmo2eGNqVW1vdkxSdjVHaUp4UVh4UGtmVGwxNFFNQ2EyYXNtR19YbHZ0WU5qd0NCRzhSNDAzR2J1dUJPWk5KX05ydFYzLTUwcU5VejRXbVlvOFE5bHdhb2JDZ2lVMnNZNXNiVVVpZzRlNmtQOVNoZXdxVWp3RlEtN3N2eGFmbUN5M0hhYTU3OGlpMUN1ZDBzanpmQkt1OEhNWTZzQ2pB?oc=5",
-      "published": "2026-10-14T18:27:00+00:00"
+      "title": "因来自中国的半导体不利因素而动摇的韩国综合股价指数此次受到美国半导体股弱势的影响,瞬间跌至5500点。 随着美国标准利率上调的恐惧再次增大,对人工智能(AI)相关股的警戒心扩散,成为了股市调整的扳机。.. - 매일경제",
+      "source": "매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE85SUdmZUJrQUg0ejZ4U3FVUk1aS3ZVd2V5dnFOVHI3d09JTDhUUVVUT0JfaVl5OVRCRzkwUkhsTGZuSnpEQW52ejgxckRRWFE?oc=5",
+      "published": "2026-10-15T08:46:54+00:00"
     }
   ]
 }
