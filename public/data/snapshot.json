@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-15",
+  "as_of": "2026-10-16",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.44,
     "baa10y_pct": 2.207063,
-    "curve_10y3m": 0.91,
+    "curve_10y3m": 0.82,
     "curve_inverted": false
   },
   "cycle": {
@@ -18,7 +18,7 @@
     "inflation": "degraded",
     "liquidity": "neutral",
     "credit": "degraded",
-    "policy": "neutral",
+    "policy": "up",
     "market_stress": "degraded"
   },
   "confirmations": [
@@ -63,7 +63,7 @@
     }
   ],
   "health": {
-    "data_asof": "2026-10-14",
+    "data_asof": "2026-10-15",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
@@ -287,11 +287,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 64425.95,
-          "date": "2026-10-15",
+          "value": 65324.29,
+          "date": "2026-10-16",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -10.97
+            "drawdown_pct": -9.73
           }
         },
         {
@@ -801,19 +801,19 @@
     "us10y": {
       "value": 5.19,
       "date": "2026-10-14",
-      "change_20d_bp": 18.0,
+      "change_20d_bp": 25.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.52,
       "date": "2026-10-14",
-      "change_20d_bp": 17.0,
+      "change_20d_bp": 23.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.82,
       "date": "2026-10-14",
-      "change_20d_bp": 8.0,
+      "change_20d_bp": 15.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -823,8 +823,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 18.0,
-      "us30y_change_20d_bp": 17.0,
+      "us10y_change_20d_bp": 25.0,
+      "us30y_change_20d_bp": 23.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -860,24 +860,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "韩国巨头SK海力士给美方开出条件，去美国建厂可以，前提是答应一个涉华要求 - 搜狐",
-      "source": "搜狐",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPVUhfQk91NUZCeDRVV2hkNVRVTzRkSjNYZVU4WnpZMkhJYS1UbVpTZ2lIR1RycF9WcGh3Y3NoYVJycGxEc3puRlBXdzRBSUhrN2EzbXZlcm9MQ0ZKYktTR3lfZHcycVJ0SHRLY2FlQkt3OUZTY0pxQk5tWlo0bTRzSm4wOXBaY1NKVEh1VQ?oc=5",
-      "published": "2026-10-16T09:03:47+00:00"
+      "title": "Chip Rout Finally Does What Scott Bessent Buybacks Couldnt : Pulls Treasury Yields Back From 24 - Year High",
+      "source": "aol.com",
+      "url": "https://www.aol.com/articles/chip-rout-finally-does-scott-100349000.html",
+      "published": "2026-10-16T11:00:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "今日外汇：美联储主席沃什未暗示利率路径，美元延续跌势 - www.tmgm.com",
-      "source": "www.tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQVXkyeE5naEhaN3V1ZElhRFNlZ2hTS01vbnRsTmhRSFFIdFZBb2EtejBKZE5xX28zcDNaRDJNTnZOUzI0cUZJZmpNdjBON2JGZ0NVMjlhenlId0draDVacENNMmhBclNpdk5VMU1NRlo1empseEw5Vms0UkpvcWVpRDNPT2tKU2VDMFRnWVd0V2NJb3ZNU19DX1ZWZG9WVFJzYjZIRU9peEl0TFVUY3Jqd1RMVEhGT1hPRVEtMDc4ZkpTOXdNa0tfN0ktQWcyTnlVd2NGYnN5RUtQQkVxb2dJZDJfWFNHUEk3R0FraEJkYTl4QQ?oc=5",
-      "published": "2026-10-16T08:39:27+00:00"
+      "category": "地缘冲突",
+      "title": "S & P 500 ends higher as traders shift from AI to healthcare",
+      "source": "spokesman.com",
+      "url": "https://www.spokesman.com/stories/2026/oct/15/sp-500-ends-higher-as-traders-shift-from-ai-to-hea/",
+      "published": "2026-10-16T06:00:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "沃什看好美國經濟 拒透露美聯儲利率走向 - 大紀元",
-      "source": "大紀元",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9QYm9zQ2FReVBQVzRnd3VIdjVWMmpxS052UnRpTW9zT2E3bExwZEVMcWxIRzMta0xWcGp6ZTNjSWhkS3haSkxEY1NmaklYSkU4djV3MXpCV1M5aTlUZkhqYndB0gFnQVVfeXFMTTRXZUpvN1JnTWNNSDNWS2hFWVZadEJXM3NKeUZpQU5xcEdsZlhLNFpJZDh1Mm9QQ2NzOUthR0NtZ1hKdmZVY1FfcEx4TU1BSWFqRktqSlNlSE91UlRrMkpMcldFRnBSQQ?oc=5",
-      "published": "2026-10-16T08:10:47+00:00"
+      "category": "地缘冲突",
+      "title": "How India Can Counter Trump Tariff Threat",
+      "source": "rediff.com",
+      "url": "https://www.rediff.com/news/column/how-india-can-counter-trumps-tariff-threat/20261016.htm",
+      "published": "2026-10-16T05:15:00+00:00"
     }
   ]
 }
