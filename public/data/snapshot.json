@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.46,
-    "baa10y_pct": 3.832263,
+    "baa10y": 1.44,
+    "baa10y_pct": 2.207063,
     "curve_10y3m": 0.91,
     "curve_inverted": false
   },
@@ -67,11 +67,6 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
-      "refresh:oecd:oecd_share_in",
-      "refresh:oecd:oecd_cli_br",
-      "refresh:oecd:oecd_bci_br",
-      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -80,8 +75,7 @@
       "radar:nonbank",
       "regions:japan",
       "regions:canada",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -641,7 +635,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -666,6 +660,16 @@
           }
         },
         {
+          "id": "oecd_share_in",
+          "name": "OECD 印度股价指数（NIFTY 代理）",
+          "value": 273.0816,
+          "date": "2026-09-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -12.18
+          }
+        },
+        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.56,
@@ -684,23 +688,32 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
         "bis_policy_in",
-        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
-        "growth": "degraded",
+        "growth": "down",
         "policy": "up",
         "credit": "up",
-        "market": "degraded",
+        "market": "up",
         "fx": "down"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_br",
+          "name": "OECD 巴西综合领先指标 CLI",
+          "value": 102.3614,
+          "date": "2026-09-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.491
+          }
+        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -722,6 +735,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 372.3822,
+          "date": "2026-09-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -3.58
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.18,
@@ -732,6 +755,13 @@
           }
         },
         {
+          "id": "oecd_bci_br",
+          "name": "OECD 巴西商业信心指数 BCI",
+          "value": 99.0359,
+          "date": "2026-09-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 223.8036,
@@ -739,13 +769,9 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "巴西：增长缺失、信贷走强、市场缺失，区域黄灯",
-      "degraded": [
-        "oecd_cli_br",
-        "oecd_share_br",
-        "oecd_bci_br"
-      ]
+      "light": "orange",
+      "summary": "巴西：增长走弱、信贷走强、市场走强，区域橙灯",
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -804,13 +830,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 5.19,
-        "date": "2026-10-14",
+        "value": 5.1,
+        "date": "2026-10-15",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.52,
-        "date": "2026-10-14",
+        "value": 5.43,
+        "date": "2026-10-15",
         "source": "tushare"
       }
     }
@@ -833,25 +859,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "高盛解读：预计2027年下半年才降息，高利率还要持续多久？ - FX168",
-      "source": "FX168",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9seTVuT3o2TnNKQklKdHc4bHB0WGFCbUN6UU1BclJwQjRMZXEwNDFJME0yek9mR0p0WndTNnJST3JHX2FWd0dlQ2lvblBYc2xHN3hKV1paS1lUd0lnM3BWR29KdXo1UlJMNmt0Zk13ZjNSbG9DaHJOeA?oc=5",
-      "published": "2026-10-15T17:56:59+00:00"
+      "category": "科技产业链",
+      "title": "韩国股市市盈率仅4倍，日本15倍……三星电子、SK海力士跌至8年前水平- 阿视亚经济 - 아시아경제",
+      "source": "아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5MeDI4Qy1wRmdtV25jWldDSlBmRjE4ZjRaRXhULTBOZVNSY3EwVEdpM2RzdGh5ZzZxY3dqVmVMZGthZWRDcUUzWkFrVzNfbk4tcGV5NUJ2SXh4VVdZdEtmM2ViVUg?oc=5",
+      "published": "2026-10-16T01:04:53+00:00"
     },
     {
       "category": "货币政策",
-      "title": "我是如何借助Moomoo AI专家模式解读美联储利率路径与行业轮动的 - Moomoo",
-      "source": "Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPakFjSzBCN2pFMWZDVHVwd21BY2RVWklndXFIY0RUWV9ManJwV1labHZLNkJ3LU1ZTV9pWUFBMy1FNU5UUHhVS0FjOFZSQ010cUZVRmxnemRnSXo3V1BuWmxuUEt1ZE1PM0JjUjFMUm9rU2VNbno5dllVN1Vaa3djWVVwanhaYTNxaTBaVkl6WVlXYm4wazJDMTJIcllyQnRIQnlxR2dQenU?oc=5",
-      "published": "2026-10-15T15:53:46+00:00"
+      "title": "瑞银“撕报告”：美联储本轮紧缩周期将加息三次 下一次行动在12月 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFA4Q1J1RlZQcmpVWDNabmd0d09ISnFFeDVJMlVOZkpXSnRFT05qZ1ViQWZ4aW04S0ZsRWtpSDR2dkxuS1hmWXIzZQ?oc=5",
+      "published": "2026-10-15T23:59:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "受益三星、SK海力士扩产 韩国多家半导体设备商积压订单翻番 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBPemxFemNST3hJMmVrUkNGTTNzNEU5TDdxZ1pucVNlRFdwbzZ5V1huX2pXei1ra0JQaUgxaUZtQUlPd1llZHlOUA?oc=5",
-      "published": "2026-10-15T15:48:41+00:00"
+      "title": "韩国综合股指波动过大……“举债投资人工智能”的警报日益频繁| 东亚日报 - 동아일보",
+      "source": "동아일보",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFAtVTBkOUw4dUtxSGlyMjN6eWNUeFY4bTNub0dyTVBFellkdEl4RVFveDA1b0dXcUdIellTU2dNalhvb1FoNGhoWTFGdmhkSVM2MEVEN0c0ZVBpLWZBQ3BOb0lpbTZFdw?oc=5",
+      "published": "2026-10-15T23:52:41+00:00"
     }
   ]
 }
