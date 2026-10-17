@@ -67,6 +67,11 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_cli_br",
+      "refresh:oecd:oecd_bci_br",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -75,7 +80,8 @@
       "radar:nonbank",
       "regions:japan",
       "regions:canada",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -635,7 +641,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -660,16 +666,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 273.0816,
-          "date": "2026-09-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -12.18
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.56,
@@ -688,32 +684,23 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
         "bis_policy_in",
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
-        "market": "up",
+        "market": "degraded",
         "fx": "down"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.3614,
-          "date": "2026-09-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.491
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -735,16 +722,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 372.3822,
-          "date": "2026-09-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -3.58
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.18,
@@ -755,13 +732,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.0359,
-          "date": "2026-09-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 223.8036,
@@ -769,9 +739,13 @@
           "unit": "指数"
         }
       ],
-      "light": "orange",
-      "summary": "巴西：增长走弱、信贷走强、市场走强，区域橙灯",
-      "degraded": []
+      "light": "yellow",
+      "summary": "巴西：增长缺失、信贷走强、市场缺失，区域黄灯",
+      "degraded": [
+        "oecd_cli_br",
+        "oecd_share_br",
+        "oecd_bci_br"
+      ]
     }
   },
   "oil_watch": {
@@ -859,25 +833,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "Nowhere to hide : Tech selloff hits software and chip stocks alike",
-      "source": "morningstar.com",
-      "url": "https://www.morningstar.com/news/marketwatch/20261016439/nowhere-to-hide-tech-selloff-hits-software-and-chip-stocks-alike",
-      "published": "2026-10-17T00:15:00+00:00"
+      "category": "货币政策",
+      "title": "美联储主席：全球经济韧性超乎预期 通膨压力未歇 - 亚洲电视新闻",
+      "source": "亚洲电视新闻",
+      "url": "https://news.google.com/rss/articles/CBMi1gJBVV95cUxPdWJvZVVQUGdHSW05dUlORzU3TENXQVBUcXBBR3pQdUFYUG13NXdhQ05BYVNBSWZ5VEZtWW5zcE5CYzhGbE41cnBidm5GbVctVjdXNVFSbkdIc3hLbWFGM1B5VTlQSXBBWUk5NXcwSHdmYnoySmlqekxIRVBueldESm8yc2ZGelBaN2hiUm5icXNHaGFLS3VVR1hHTV8xeEc1bmFWQ0I2bUZVT294TXVxMnFhOVlERmlMVjJNUDFmdXBMckdQOVVpRGFwcnZTUktQWjhqa2JzUEVkaW9fckZNZXJER2dkWTlETjl1MEhaVDhaSjNDQjlQQWV5M19WMzRzR2x3TlB5dGVlU0FyejFYdUJkSFdHOWZ1MnYtSlhuaXdicFNGUXBEVUNfcnhrMTBGaHZxR3RlRUVOUDF2WTMyVjhIeWQ2dnRTcEdtS0hKa1NzOXo1ZlE?oc=5",
+      "published": "2026-10-17T00:30:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "Chip Rout Finally Does What Scott Bessent Buybacks Couldnt : Pulls Treasury Yields Back From 24 - Year High",
-      "source": "aol.com",
-      "url": "https://www.aol.com/articles/chip-rout-finally-does-scott-100349000.html",
-      "published": "2026-10-16T11:00:00+00:00"
+      "category": "货币政策",
+      "title": "中期选举民主党领先，比特币走势竟由美联储利率主导？|美国参议院|美国大选|货币政策|监管|立法 - finance.sina.com.cn",
+      "source": "finance.sina.com.cn",
+      "url": "https://news.google.com/rss/articles/CBMi5AVBVV95cUxPOG9McmlsdmVnUDlwREtxNUlMUE54M3B0LWpOWUJkM29sOHNJQXlCZWdNaktIWEx5MGdnOVgwV25tVENOQWM1YnhRWDJ2MEdRM3RBQTY5Q1dvLUpQT2ZtSEJ2VGU3cjMyTUFnSlo0NkM5cEw0MFh0UDNKY3k4ZnI5THdNRVRkV000djJrYjhxMG51WnUwd0ExMkJ0R2VvckcySm9NWUdTYlVMa2UtbXpRUVByX1gtU0JCSXlPUHBWUHU1NThXNWdrQkQwZzNNc2V1TTJha0JkMms4ZV92RkdmS1NUNDVkUF9HVVlubTI0WE5UbFRMcWZNeGhKVDhKV05WZWotWVZmSTRWcnItR1k2UGt4bFQwRjk1MzhwZTctTkY5dEE0dERLN056bWxWNWhybVFvRXU1TnltelRYODRLSnQ2T3JobVZoYkxibWRDVlRfd3QxMkowdzdwZ2RsNmY4cGt3V3R6cGQ3YzB5UEdBR0gwTzVmTEZwQ1E0Tnpsc0RhaC0yVU5pam1TWnRkZ3B2amJSQ1UxalhyOEdqcnRINUZONkZUZllEcXpXMW9sRVlVemZPZFlzVnVtclNNWHRSSnYwT0l1Z29SLWVVN19kLU1Eb3VEX3ktYU5qOTF3Q1V5UURuMV94R2hlUktpQ1NBc01PMTc0T21fZ1liNW9zUDhXSUFpUGNGUDhwVVkzb3BLSzI4aUc1aDlkR1l1aVg3cUNCRFQyZnl1R1FycEZiTXpjV2ppWGRMdUluLV9EVUMzY2E3UzhPMHItWEIxTkpuUXV0bk9FYXpiaXZvWEg2TGZmd1RNRm85Q0NDVklyT1pfTnZxU2xwT0NFVExLWlZ6bmcxd3VvT09vRDZ0OGpycm4tUUxqSTFSVnpWN1VOZ0k1Q0FjUGNnU1RoM3RLQmhNZk5uT2pVR2dyXzFWdzk4UWtZRkpURGVoclFmY05VTXllTGFncVJ6SV9JbHZzalRtaFhZaw?oc=5",
+      "published": "2026-10-16T21:37:48+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "S & P 500 ends higher as traders shift from AI to healthcare",
-      "source": "spokesman.com",
-      "url": "https://www.spokesman.com/stories/2026/oct/15/sp-500-ends-higher-as-traders-shift-from-ai-to-hea/",
-      "published": "2026-10-16T06:00:00+00:00"
+      "category": "货币政策",
+      "title": "市场普遍预期美联储10月维持利率不变，但凯文・沃什可能带来意外 - 搜狐",
+      "source": "搜狐",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQcVFXUDhpcVlsdXJCUFFvUEtxaHN3SWNXSHA4MWVQdGV0MmFEZFVCMmhJdHhweUdqc3UxRHZELTRJOFVOWlE0WERQczlMakFwaFBJUGRnbFJqNFJOWll3Uzk2QkdmcmNHSzBfSHk4QXExa3NDYVByY0lYSDVYMzZUdGFTaUt6d0lBc3cwYg?oc=5",
+      "published": "2026-10-16T16:46:54+00:00"
     }
   ]
 }
