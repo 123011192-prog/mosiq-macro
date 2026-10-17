@@ -69,9 +69,6 @@
       "refresh:unexpected_failure",
       "refresh:oecd:oecd_bci_in",
       "refresh:oecd:oecd_share_in",
-      "refresh:oecd:oecd_cli_br",
-      "refresh:oecd:oecd_bci_br",
-      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -80,8 +77,7 @@
       "radar:nonbank",
       "regions:japan",
       "regions:canada",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -692,15 +688,25 @@
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
-        "growth": "degraded",
+        "growth": "down",
         "policy": "up",
         "credit": "up",
-        "market": "degraded",
+        "market": "up",
         "fx": "down"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_br",
+          "name": "OECD 巴西综合领先指标 CLI",
+          "value": 102.3614,
+          "date": "2026-09-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.491
+          }
+        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -722,6 +728,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 372.3822,
+          "date": "2026-09-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -3.58
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.18,
@@ -732,6 +748,13 @@
           }
         },
         {
+          "id": "oecd_bci_br",
+          "name": "OECD 巴西商业信心指数 BCI",
+          "value": 99.0359,
+          "date": "2026-09-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 223.8036,
@@ -739,13 +762,9 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "巴西：增长缺失、信贷走强、市场缺失，区域黄灯",
-      "degraded": [
-        "oecd_cli_br",
-        "oecd_share_br",
-        "oecd_bci_br"
-      ]
+      "light": "orange",
+      "summary": "巴西：增长走弱、信贷走强、市场走强，区域橙灯",
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -833,25 +852,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "盛松成：美联储利率路径仍有不确定性 - 财新",
-      "source": "财新",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBJU1ZNTUtTTExWMnFza2pkbUd4SGcycjlwVjY4bnFoQzhnUXFFa0M5MkRXc0RJZEtzbVJsSjQ0LUp5R3dnU2NJVmRSMXlkMmV1MTFEdnN5M0U3MFRYVF94eTNn?oc=5",
-      "published": "2026-10-17T09:42:00+00:00"
+      "category": "科技产业链",
+      "title": "South Korea minister sees chip boom lasting through 2027",
+      "source": "cnbc.com",
+      "url": "https://www.cnbc.com/2026/10/17/south-korea-semiconductor-outlook-lee-hyoung-il.html",
+      "published": "2026-10-17T17:00:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "中期选举民主党领先，比特币走势竟由美联储利率主导？|美国参议院|美国大选|货币政策|监管|立法 - finance.sina.com.cn",
-      "source": "finance.sina.com.cn",
-      "url": "https://news.google.com/rss/articles/CBMi0ANBVV95cUxOcUJraGRRRk41RmQ1LVAzcFJGQUZabHhVZ2huN1BlTThQVHNWdU5ZYzJjbWxsb3FzNU5ESmRfNXNMWXlqeFRRODdYa1JodjFJOFF2RUZkMzZRaEpDZ3pMYnhCaldNM2QyNVlNYi1UQlpxRGIwVldHWHJ1T1BtajFfekh2d1pJOVUzMl9fYzBVWUk0aUZTRlI1ek5yWkstWE1adzJxVXYwMU1Ba2VoUHhVUkZrSzhXamlLLW5Vbk9EVWlRRHQzMG5uM0o3Mm9VOW5XVVpsTnJsOWxCOFVJZFJvNERCNUNxanpSZk1FY2dlUU9qQk9ZSzAwUndUaTFHbkRfSjFiRExKTEFBMEZ4WndYZHlGN1ROekwwbmNZUHpvdERoNzJKSFRTd3pTU1ZNZUxfNmxsNW1KZVRWRUc1TU94TG93NllpRkc1Sm1pNjRSSWw0eGtPWm5CbG5JMG1PMkdlNGtKRkxvWU1DamtqX2tGNTNyXzh5d3NNTmNhRy1zb05FclZ5MTUzaHdFazlReGRTX08zNXJfZlRONGR2d1kxQmVVelZsRVozNUpUQm9zRkstQ3RwWDZLYS1tOTVjY0xKcHJUQlFraUZVd1lTVERoMw?oc=5",
-      "published": "2026-10-17T08:02:11+00:00"
+      "category": "地缘冲突",
+      "title": "Inflation hits Akron families from more than one direction | Opinion",
+      "source": "aol.com",
+      "url": "https://www.aol.com/articles/inflation-hits-akron-families-more-100214000.html",
+      "published": "2026-10-17T11:00:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美联储主席沃什：不会预先判定在后续议息会议上的利率决议|国际货币基金组织|凯文·沃什|基准利率|世界银行|美国 - finance.sina.com.cn",
-      "source": "finance.sina.com.cn",
-      "url": "https://news.google.com/rss/articles/CBMijgVBVV95cUxOQjM0cHYtdWc2T3Q5LW13LU9yWTJ2eWFGQzhYNWp3OU9rSjJ1a3VwOXVzblQ5M01NLXZhNEM3MnhJY2JTUno2RGlybjM5Tm80Mno0dU4waFFvMWxUZmJteHpSWl9DZ0xUM3NKMi0zaVc3QjFmRGktWVNxNmFCbE5wS0ZfcjlkSGx3X2xWbUJxT1BzakNCRXdTZGdmb0M3QlRmUzdVT2VVU2VKZTA0UTAtMW9lRXhONk5oY0EtdEdIVFdvWGpSZ2hpcFI0Y1YxZ2NnSXhfcTdKanpPTVBLamZrcmFac2ZsT0ZDUkx3dXZGakN4blU4djJWcm5mbDFNbzdGUjJ0SXE2U3dpaFB1WU9PRmZ2MTQ0dzNHMkp0azFUSGRFYjBjcWNYeEZ4VVhkSXBud1BiNUYwSzRMdHpsTkNFYzR5WWNXMDN3Q3AxR2JwMWdSdWJLa1FmN3ZxN0RUZXR3bFRlVnQyMWZTcTBiaks1eWJVdEpKZnc5OVQyZkJqcXo3bnp6M1Jxa3N6WGhCNEY1NHZZN2N5dWV1Ukd4aXAxaHpqV2lRbVVFV2k1dnlOa2s2Q3RCbkVjdmJzN0tTajFfSlhqeFl5Um9nc2MyWUZCaVZUVmZRS19JeVZYNzVzanA0aml0UVJxY1Z0MllaS05DWE1xNkNkTGREZFFRWVZRZUtoU2hyYVNjOVBVY0NOODczX3ZIR1RtV1UtWjgtcDBJMmJibU0zRnhOTk5LanRaa3g3NUJkQnlEa1dSckN1ckJwSHQ0cHNQb0haTkpabVRDNWFILURvd2hoUTFaY0Z4bTJPLWkxR1U4OWhSWVAzd0JBT2xmd25oOUY3ZmtrY0YyNjNpd1Z6ZXp5RVBtVWc?oc=5",
-      "published": "2026-10-17T00:31:29+00:00"
+      "category": "能源",
+      "title": "He spoke to Putin to buy diesel : Ex - diplomat Fabian after Trump waives sanctions over Russian oil | India News",
+      "source": "timesofindia.indiatimes.com",
+      "url": "https://timesofindia.indiatimes.com/india/he-spoke-to-putin-to-buy-diesel-ex-diplomat-fabian-after-trump-waives-sanctions-over-russian-oil/articleshow/135008650.cms",
+      "published": "2026-10-17T07:15:00+00:00"
     }
   ]
 }
