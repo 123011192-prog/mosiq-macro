@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.44,
-    "baa10y_pct": 2.207063,
+    "baa10y_pct": 2.227127,
     "curve_10y3m": 0.82,
     "curve_inverted": false
   },
@@ -799,44 +799,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 5.19,
-      "date": "2026-10-14",
-      "change_20d_bp": 25.0,
+      "value": 5.1,
+      "date": "2026-10-15",
+      "change_20d_bp": 16.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.52,
-      "date": "2026-10-14",
-      "change_20d_bp": 23.0,
+      "value": 5.43,
+      "date": "2026-10-15",
+      "change_20d_bp": 14.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.82,
-      "date": "2026-10-14",
-      "change_20d_bp": 15.0,
+      "value": 4.77,
+      "date": "2026-10-15",
+      "change_20d_bp": 10.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 37.0,
-      "date": "2026-10-14"
+      "value_bp": 33.0,
+      "date": "2026-10-15"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 25.0,
-      "us30y_change_20d_bp": 23.0,
+      "us10y_change_20d_bp": 16.0,
+      "us30y_change_20d_bp": 14.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 5.1,
-        "date": "2026-10-15",
+        "value": 5.09,
+        "date": "2026-10-16",
         "source": "tushare"
       },
       "us30y": {
         "value": 5.43,
-        "date": "2026-10-15",
+        "date": "2026-10-16",
         "source": "tushare"
       }
     }
@@ -859,25 +859,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "市场普遍预期美联储10月维持利率不变，但凯文・沃什可能带来意外 - 搜狐",
-      "source": "搜狐",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQcVFXUDhpcVlsdXJCUFFvUEtxaHN3SWNXSHA4MWVQdGV0MmFEZFVCMmhJdHhweUdqc3UxRHZELTRJOFVOWlE0WERQczlMakFwaFBJUGRnbFJqNFJOWll3Uzk2QkdmcmNHSzBfSHk4QXExa3NDYVByY0lYSDVYMzZUdGFTaUt6d0lBc3cwYg?oc=5",
-      "published": "2026-10-16T16:46:54+00:00"
+      "category": "科技产业链",
+      "title": "Nowhere to hide : Tech selloff hits software and chip stocks alike",
+      "source": "morningstar.com",
+      "url": "https://www.morningstar.com/news/marketwatch/20261016439/nowhere-to-hide-tech-selloff-hits-software-and-chip-stocks-alike",
+      "published": "2026-10-17T00:15:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
-      "published": "2026-10-16T14:52:49+00:00"
+      "title": "Chip Rout Finally Does What Scott Bessent Buybacks Couldnt : Pulls Treasury Yields Back From 24 - Year High",
+      "source": "aol.com",
+      "url": "https://www.aol.com/articles/chip-rout-finally-does-scott-100349000.html",
+      "published": "2026-10-16T11:00:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "现货黄金站上4330美元，市场密切等待美联储利率决议|COMEX黄金|黄金连续AU0|浙商证券|货币政策|流动性 - finance.sina.com.cn",
-      "source": "finance.sina.com.cn",
-      "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQdXh2UFpsYXBKUnB0cExpbU5DaC1zVFdXZGZyM2xUVmh0STJ1UXNMdTZCYURVeWRHR0JPamRnXzRVOXNsSGtKYmtOaEtfcjl5ZGVPQUkzX01BcTY2MlZDbDdCampXZkxyZ2xlRHB5dndsaE9MVmI5T3JJbU5kOTBZU2hNSkxibkRXRF8wYUp4UUZzYnhpVlBBOXFHek9kVnlEZ2c5ak5pcE04UVNUMGZOdl9FbVF2TGxqRDJobjdxMWVEZnFPM3pxcWN2WVFnOHZ6QUNXekZ2bjZUVFBPdzFZdEtSQjJybjgwdnMtQXluMkdXUWVoZVZGRnEyMjFoVXBORjU5Sw?oc=5",
-      "published": "2026-10-16T14:05:27+00:00"
+      "category": "地缘冲突",
+      "title": "S & P 500 ends higher as traders shift from AI to healthcare",
+      "source": "spokesman.com",
+      "url": "https://www.spokesman.com/stories/2026/oct/15/sp-500-ends-higher-as-traders-shift-from-ai-to-hea/",
+      "published": "2026-10-16T06:00:00+00:00"
     }
   ]
 }
