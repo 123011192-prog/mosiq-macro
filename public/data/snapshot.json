@@ -18,7 +18,7 @@
     "inflation": "degraded",
     "liquidity": "neutral",
     "credit": "degraded",
-    "policy": "degraded",
+    "policy": "up",
     "market_stress": "degraded"
   },
   "confirmations": [
@@ -64,13 +64,12 @@
   ],
   "health": {
     "data_asof": "2026-10-19",
-    "stale_count": 31,
+    "stale_count": 27,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
-      "cycle:policy",
       "cycle:market_stress",
       "radar:banking",
       "radar:credit",
@@ -801,32 +800,32 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 5.09,
-      "date": "2026-10-16",
-      "change_20d_bp": 13.0,
+      "value": 5.15,
+      "date": "2026-10-19",
+      "change_20d_bp": 19.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.43,
-      "date": "2026-10-16",
-      "change_20d_bp": 14.0,
+      "value": 5.48,
+      "date": "2026-10-19",
+      "change_20d_bp": 19.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.74,
-      "date": "2026-10-16",
-      "change_20d_bp": -2.0,
+      "value": 4.77,
+      "date": "2026-10-19",
+      "change_20d_bp": 1.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 35.0,
-      "date": "2026-10-16"
+      "value_bp": 38.0,
+      "date": "2026-10-19"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 13.0,
-      "us30y_change_20d_bp": 14.0,
+      "us10y_change_20d_bp": 19.0,
+      "us30y_change_20d_bp": 19.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -862,24 +861,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
+      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
+      "published": "2026-10-20T19:24:17+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "美联储前副主席：美联储将继续推进利率上行，但加息节奏无需太快 - 证券时报网",
+      "source": "证券时报网",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5WOXI3YnR3ZnRpMEtEU0dXbUVKVUp6ODc5bUI2MFFDbkJuRFVlTUFadmZFQ05Ud2ZIcXRhbUlhSkx1YTBPQnB1a05ESlNyYVhxNU4wRHBWZTYwdV9KclE?oc=5",
+      "published": "2026-10-20T15:48:00+00:00"
+    },
+    {
+      "category": "科技产业链",
       "title": "《麻省理工科技评论韩国版》评选出引领韩国人工智能产业发展的30位领军人物……重点关注半导体、机器人和工业人工智能领域。 - 벤처스퀘어",
       "source": "벤처스퀘어",
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5pWjFlUDdHVHFnM1pqMFJhQlp2Qm5uSVFZa2Q3MDdPSmFaY1RHUy1GWjdLenpMd1NVdDNScTg5Q1ZVanFHOEpkaHJOXzdrSmVLYUFN?oc=5",
       "published": "2026-10-20T11:26:00+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
-      "published": "2026-10-20T10:43:34+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "市场押注美联储维持利率不变、科技股回暖，道琼斯指数期货上涨 - www.tmgm.com",
-      "source": "www.tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPX1k2SUZtSWQxWjF1SGRYdUV0bXZFWEh1WGdjMkJqZTB4TThPbzBIZUVwdDdvVHRGR3dqek5PTmN0dWJvWjdpSVhHaVI0cVYyR1FYN3NWUnNvRGJMeGZYSmhtN3Bfb3JjYy1LbUhBZERNdzdXM3JRZkVNbF9Ga0o3OUViekFJb3FEV3pnRVlQSmlXQ2w5YnJhWGh6SXdOMWtHUVcxQUVORkZCakZXOXVDUVFObHRfLWxvX3BmSEVvb1U3T1dSUDlWMTZhQ242ejFfaFN2MGZn?oc=5",
-      "published": "2026-10-20T10:06:27+00:00"
     }
   ]
 }
