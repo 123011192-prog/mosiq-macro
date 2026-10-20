@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-17",
+  "as_of": "2026-10-20",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.46,
     "baa10y_pct": 3.935743,
-    "curve_10y3m": 0.83,
+    "curve_10y3m": 0.88,
     "curve_inverted": false
   },
   "cycle": {
@@ -18,7 +18,7 @@
     "inflation": "degraded",
     "liquidity": "neutral",
     "credit": "degraded",
-    "policy": "up",
+    "policy": "degraded",
     "market_stress": "degraded"
   },
   "confirmations": [
@@ -63,15 +63,17 @@
     }
   ],
   "health": {
-    "data_asof": "2026-10-16",
-    "stale_count": 23,
+    "data_asof": "2026-10-19",
+    "stale_count": 31,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
+      "cycle:policy",
       "cycle:market_stress",
       "radar:banking",
+      "radar:credit",
       "radar:nonbank",
       "regions:japan",
       "regions:canada",
@@ -287,11 +289,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 64916.7,
-          "date": "2026-10-19",
+          "value": 64075.42,
+          "date": "2026-10-20",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -10.29
+            "drawdown_pct": -11.46
           }
         },
         {
@@ -801,13 +803,13 @@
     "us10y": {
       "value": 5.09,
       "date": "2026-10-16",
-      "change_20d_bp": 8.0,
+      "change_20d_bp": 13.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.43,
       "date": "2026-10-16",
-      "change_20d_bp": 9.0,
+      "change_20d_bp": 14.0,
       "source": "fred"
     },
     "us02y": {
@@ -823,8 +825,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 8.0,
-      "us30y_change_20d_bp": 9.0,
+      "us10y_change_20d_bp": 13.0,
+      "us30y_change_20d_bp": 14.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -859,25 +861,25 @@
   },
   "world_brief": [
     {
+      "category": "科技产业链",
+      "title": "《麻省理工科技评论韩国版》评选出引领韩国人工智能产业发展的30位领军人物……重点关注半导体、机器人和工业人工智能领域。 - 벤처스퀘어",
+      "source": "벤처스퀘어",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5pWjFlUDdHVHFnM1pqMFJhQlp2Qm5uSVFZa2Q3MDdPSmFaY1RHUy1GWjdLenpMd1NVdDNScTg5Q1ZVanFHOEpkaHJOXzdrSmVLYUFN?oc=5",
+      "published": "2026-10-20T11:26:00+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
+      "published": "2026-10-20T10:43:34+00:00"
+    },
+    {
       "category": "货币政策",
       "title": "市场押注美联储维持利率不变、科技股回暖，道琼斯指数期货上涨 - www.tmgm.com",
       "source": "www.tmgm.com",
       "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPX1k2SUZtSWQxWjF1SGRYdUV0bXZFWEh1WGdjMkJqZTB4TThPbzBIZUVwdDdvVHRGR3dqek5PTmN0dWJvWjdpSVhHaVI0cVYyR1FYN3NWUnNvRGJMeGZYSmhtN3Bfb3JjYy1LbUhBZERNdzdXM3JRZkVNbF9Ga0o3OUViekFJb3FEV3pnRVlQSmlXQ2w5YnJhWGh6SXdOMWtHUVcxQUVORkZCakZXOXVDUVFObHRfLWxvX3BmSEVvb1U3T1dSUDlWMTZhQ242ejFfaFN2MGZn?oc=5",
       "published": "2026-10-20T10:06:27+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "马斯克造芯新动作：Terafab与10余家韩国供应商谈判 - 凤凰网科技",
-      "source": "凤凰网科技",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE95Q0duVUI3Q1BTOVNFRE9rampGU0VFRVVJNUdZMTRyejJ5WDJYc3hGUDRHVEpxSE11dUxBb05qZEdMQnN1MkgzMlF0RDY?oc=5",
-      "published": "2026-10-20T09:31:19+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "通胀锁死美联储，资金抢夺拉高利率，金价利多不涨藏抛压 - 汇通网 Fx678",
-      "source": "汇通网 Fx678",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9IMFpqVWo2MGdWUDFyR0dUWHVyX1lUVHRYZDRMWExpODRqRmxnRG5YNmw1SThYX2J1VWt2clJ2ODhMRnBnSXhxckViaXNlTzY2T2lHbl9OU3dUdFE?oc=5",
-      "published": "2026-10-20T09:01:00+00:00"
     }
   ]
 }
