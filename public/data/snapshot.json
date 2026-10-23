@@ -808,32 +808,32 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 5.13,
-      "date": "2026-10-21",
-      "change_20d_bp": -5.0,
+      "value": 4.96,
+      "date": "2026-10-22",
+      "change_20d_bp": -22.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.42,
-      "date": "2026-10-21",
-      "change_20d_bp": -5.0,
+      "value": 5.29,
+      "date": "2026-10-22",
+      "change_20d_bp": -18.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.81,
-      "date": "2026-10-21",
-      "change_20d_bp": -6.0,
+      "value": 4.65,
+      "date": "2026-10-22",
+      "change_20d_bp": -22.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 32.0,
-      "date": "2026-10-21"
+      "value_bp": 31.0,
+      "date": "2026-10-22"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -5.0,
-      "us30y_change_20d_bp": -5.0,
+      "us10y_change_20d_bp": -22.0,
+      "us30y_change_20d_bp": -18.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -868,25 +868,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "半导体改变的出口强国…韩国超越日本，跻身“五大” - 朝鲜日报",
-      "source": "朝鲜日报",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQcVVTMlh1aGNka0VoSmd3Z3pBT0MxbzhVWmFIOXFIRVhUWVFZR1pjVTFRSUVWWWJIN2dLTUxnQVBmNW5lNXhzTllycUlfZjRZWmRUeWlncUU3SW9lQTlyS0UzY0xSbEdpbU5JaFVaNDhBNEtMbWhWWTM4RzE3OVlma2c3LTRxUG9WTm5QeU9hYVJPdw?oc=5",
-      "published": "2026-10-23T14:29:49+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "全韩国梭哈半导体，养老钱亏掉万亿，全民被三星套牢 - 手机网易网",
-      "source": "手机网易网",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBFQU9MM2RQMFFfV0VydnVfVVdmQXRwUzhfRGNxcy1KWmlkTjFMaXFieXc3eThiMDg2ZnBlZGVXT1ZjUTNPcTZaVkFWdDVSYTZHTTZOQjhGemY2RzlDSF9RbFlR?oc=5",
-      "published": "2026-10-23T11:12:12+00:00"
-    },
-    {
       "category": "地缘冲突",
-      "title": "图解风云丨外交官撤离、航母靠近 美国中东部署是收缩还是升级？ - 新蓝网",
-      "source": "新蓝网",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE04akVUOGJRTndvN2NPU0JVQUxaR0pZQTNuOXQ5SlcyTUpJdWJoNW1oY2RMOFUzVDhjLUc1UmYxM3RHdkpFeEE4N0hoSDJKTHc?oc=5",
-      "published": "2026-10-23T10:11:00+00:00"
+      "title": "Why Bonds Stumbled and Stocks ( Mostly ) Stood Strong in Q3 , and What Lies Ahead for Investors",
+      "source": "morningstar.com",
+      "url": "https://www.morningstar.com/markets/why-bonds-stumbled-stocks-mostly-stood-strong-q3-what-lies-ahead-investors",
+      "published": "2026-10-23T12:30:00+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "Earnings flood , Fed meeting pose pivotal tests for rickety AI market rally",
+      "source": "aol.com",
+      "url": "https://www.aol.com/articles/earnings-flood-fed-meeting-pose-100557000.html",
+      "published": "2026-10-23T11:30:00+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "Will the BoC hike next week ? Nail - biter decision awaits variable mortgage rate holders",
+      "source": "theglobeandmail.com",
+      "url": "https://www.theglobeandmail.com/investing/personal-finance/article-best-mortgage-rates-fixed-variable-boc-oct-22/",
+      "published": "2026-10-23T00:00:00+00:00"
     }
   ]
 }
