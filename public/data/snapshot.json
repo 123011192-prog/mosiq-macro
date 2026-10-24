@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.44,
-    "baa10y_pct": 2.267255,
+    "baa10y": 1.46,
+    "baa10y_pct": 4.05297,
     "curve_10y3m": 0.74,
     "curve_inverted": false
   },
@@ -839,13 +839,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.96,
-        "date": "2026-10-22",
+        "value": 5.0,
+        "date": "2026-10-23",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.29,
-        "date": "2026-10-22",
+        "value": 5.33,
+        "date": "2026-10-23",
         "source": "tushare"
       }
     }
@@ -868,11 +868,11 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "Why Bonds Stumbled and Stocks ( Mostly ) Stood Strong in Q3 , and What Lies Ahead for Investors",
+      "category": "能源",
+      "title": "Dow Jones Top Markets Headlines at 7 PM ET : U . S . Stocks Fall as Oil Prices Hit Five - Month High | Moody ...",
       "source": "morningstar.com",
-      "url": "https://www.morningstar.com/markets/why-bonds-stumbled-stocks-mostly-stood-strong-q3-what-lies-ahead-investors",
-      "published": "2026-10-23T12:30:00+00:00"
+      "url": "https://www.morningstar.com/news/dow-jones/202610239777/dow-jones-top-markets-headlines-at-7-pm-et-us-stocks-fall-as-oil-prices-hit-five-month-high-moodys",
+      "published": "2026-10-23T23:45:00+00:00"
     },
     {
       "category": "货币政策",
