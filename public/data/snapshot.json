@@ -67,6 +67,8 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_br",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -75,7 +77,8 @@
       "radar:nonbank",
       "regions:japan",
       "regions:canada",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -704,12 +707,12 @@
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "down",
         "policy": "up",
         "credit": "up",
-        "market": "up",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -744,16 +747,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 372.3822,
-          "date": "2026-09-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -3.58
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.48,
@@ -764,13 +757,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.0359,
-          "date": "2026-09-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 223.8036,
@@ -779,8 +765,11 @@
         }
       ],
       "light": "yellow",
-      "summary": "巴西：增长走弱、信贷走强、市场走强，区域黄灯",
-      "degraded": []
+      "summary": "巴西：增长走弱、信贷走强、市场缺失，区域黄灯",
+      "degraded": [
+        "oecd_share_br",
+        "oecd_bci_br"
+      ]
     }
   },
   "oil_watch": {
@@ -868,25 +857,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "Mitsubishi Estate signs pact for Hokkaido semiconductor research hub",
-      "source": "jp.ibtimes.com",
-      "url": "https://jp.ibtimes.com/mitsubishi-estate-signs-pact-hokkaido-semiconductor-research-hub-104915",
-      "published": "2026-10-25T09:30:00+00:00"
+      "category": "货币政策",
+      "title": "美国期中选举倒数 美联储下周利率料按兵不动 - 亚洲电视新闻",
+      "source": "亚洲电视新闻",
+      "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxOczM5bG9iR0t3WFRpN2pXcWU1MkdUczA1R3FCRk1YWWNfTV9TUUxVbUpveUhpWFlVcGxYYzVHY1owTlMtaHZrSGNZclNPVWZZclA0aFVianlSSkR3bmVRZE1zS210dkh6cWpYNnpFd3hrUlpiaHZadmxMNVEzTHhXT1duY1hxaGVLOTRjMjZrRlFMVHJOUVQ3MzFUOFdiVVE5TDRfRHh0V29ZUTJoUG9jdXgtS0Q0VXB0WHEyZTJHbzE1SVVLZ2gyNmNIQzZtOXBybTVWczhMV1R5bmJnQ0JhRzNUM0dEVzJqS2JFVzRYTmpBRGJZS0F3THVfUTJNbnlTNWc1VFNveTFCSks5QmhIaXNTUkZDYXhHZzFVUlViajVzSUhROV9fcmNjRllrY0hlVUp3azlyU2V0SS1hWmc?oc=5",
+      "published": "2026-10-25T08:00:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "President Donald Trump Just Proclaimed ,  Tariffs Dont Cause Inflation , They Cause Wealth , but Data From Federal Reserve Economists Show Otherwise",
-      "source": "fool.com",
-      "url": "https://www.fool.com/investing/2026/10/25/donald-trump-proclaimed-tariffs-dont-cause-inflation-they-cause-wealth-federal-reserve-economists/?source=iedfolrf0000001",
-      "published": "2026-10-25T08:30:00+00:00"
+      "category": "地缘冲突",
+      "title": "伊朗被指密谋袭击美官员，美悄悄从中东多国撤人，特朗普：也许25日动武 - 上观新闻",
+      "source": "上观新闻",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5raWdlNk9uUExSOENhSUxKazl4VFBicG9IU3F6Wkc5UTE4czlWOHY2eTBHVk9KZ25YTjVrb1JBbjE3STY3eUJPdWt2aS1MS2JCUGQ1c2ZDaUxlZw?oc=5",
+      "published": "2026-10-25T07:31:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "Bank of Korea holds rate at 3 % while assessing earlier increases",
-      "source": "econotimes.com",
-      "url": "https://econotimes.com/Bank-of-Korea-holds-rate-at-3-while-assessing-earlier-increases-1762307",
-      "published": "2026-10-24T15:15:00+00:00"
+      "category": "地缘冲突",
+      "title": "美国据报从中东撤离部分外交人员 国际油价跳涨逾3% - 联合早报",
+      "source": "联合早报",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBMWTI5ZHBvYWhHcHpVSE1UQlByRW4xaHhIR2xSbVVDdmNpMk10RkhDOVpVcTI2QmY3b0RFUHMtZUp4S3NEZHlKemlzbTUzRzY3WjQzMlEzZUlsbEZ5VWJNekpqZTlXRm92VUlOdk9R?oc=5",
+      "published": "2026-10-25T07:15:23+00:00"
     }
   ]
 }
