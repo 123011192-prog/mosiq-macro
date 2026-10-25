@@ -67,7 +67,6 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -76,8 +75,7 @@
       "radar:nonbank",
       "regions:japan",
       "regions:canada",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -706,12 +704,12 @@
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "down",
         "policy": "up",
         "credit": "up",
-        "market": "degraded",
+        "market": "up",
         "fx": "neutral"
       },
       "indicators": [
@@ -746,6 +744,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 372.3822,
+          "date": "2026-09-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -3.58
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.48,
@@ -771,10 +779,8 @@
         }
       ],
       "light": "yellow",
-      "summary": "巴西：增长走弱、信贷走强、市场缺失，区域黄灯",
-      "degraded": [
-        "oecd_share_br"
-      ]
+      "summary": "巴西：增长走弱、信贷走强、市场走强，区域黄灯",
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -862,25 +868,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "下周必关注｜美联储公布新一期利率决议；Strategy将公布Q3财报（10.26-11.1） - 区块周刊BlockWeeks",
-      "source": "区块周刊BlockWeeks",
-      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9NaU5DcGNIVXBHMGJqN3ByZ0JOdEEwWmpMMldRM2dLdElSdnlpRHJNQV9ZRDFra0VYU3BEM3lkM1otaUFoT2dyUU1R?oc=5",
-      "published": "2026-10-24T23:43:18+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "环球下周看点：AI巨头财报密集揭晓 美联储议息或为利率定调 - 东方财富",
-      "source": "东方财富",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1ULXd1alZmXzJDMHZYbDZkTlp2dl9ka01KTkJOdEhBbzlCbjVyN1RYMEl2Y1Nnenp5ekl0eWpIaWszZmppbTQ3VlpsODU4dEdwYmpMbmNJWHhtTjJPTTRMQThPcw?oc=5",
-      "published": "2026-10-24T22:03:31+00:00"
-    },
-    {
       "category": "科技产业链",
-      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
-      "published": "2026-10-24T21:08:32+00:00"
+      "title": "Mitsubishi Estate signs pact for Hokkaido semiconductor research hub",
+      "source": "jp.ibtimes.com",
+      "url": "https://jp.ibtimes.com/mitsubishi-estate-signs-pact-hokkaido-semiconductor-research-hub-104915",
+      "published": "2026-10-25T09:30:00+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "President Donald Trump Just Proclaimed ,  Tariffs Dont Cause Inflation , They Cause Wealth , but Data From Federal Reserve Economists Show Otherwise",
+      "source": "fool.com",
+      "url": "https://www.fool.com/investing/2026/10/25/donald-trump-proclaimed-tariffs-dont-cause-inflation-they-cause-wealth-federal-reserve-economists/?source=iedfolrf0000001",
+      "published": "2026-10-25T08:30:00+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "Bank of Korea holds rate at 3 % while assessing earlier increases",
+      "source": "econotimes.com",
+      "url": "https://econotimes.com/Bank-of-Korea-holds-rate-at-3-while-assessing-earlier-increases-1762307",
+      "published": "2026-10-24T15:15:00+00:00"
     }
   ]
 }
