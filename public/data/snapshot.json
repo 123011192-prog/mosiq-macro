@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.46,
-    "baa10y_pct": 4.056225,
+    "baa10y": 1.47,
+    "baa10y_pct": 5.038137,
     "curve_10y3m": 0.78,
     "curve_inverted": false
   },
@@ -64,10 +64,9 @@
   ],
   "health": {
     "data_asof": "2026-10-23",
-    "stale_count": 25,
+    "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -809,32 +808,32 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.96,
-      "date": "2026-10-22",
-      "change_20d_bp": -21.0,
+      "value": 5.0,
+      "date": "2026-10-23",
+      "change_20d_bp": -17.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.29,
-      "date": "2026-10-22",
-      "change_20d_bp": -20.0,
+      "value": 5.33,
+      "date": "2026-10-23",
+      "change_20d_bp": -16.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.65,
-      "date": "2026-10-22",
-      "change_20d_bp": -16.0,
+      "value": 4.69,
+      "date": "2026-10-23",
+      "change_20d_bp": -12.0,
       "source": "fred"
     },
     "spread_2s10s": {
       "value_bp": 31.0,
-      "date": "2026-10-22"
+      "date": "2026-10-23"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -21.0,
-      "us30y_change_20d_bp": -20.0,
+      "us10y_change_20d_bp": -17.0,
+      "us30y_change_20d_bp": -16.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -876,18 +875,18 @@
       "published": "2026-10-26T16:52:48+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "黄金重新站上4000大关，反弹恐被一句话打断！本周三大催化剂来袭 - FX168财经",
-      "source": "FX168财经",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBQY0ZzQXltWFFuYU9WaDNjeXZqYWtPTFNOUXQzYTVIZmZxcF90NXdWc0RWUlJnVjFwVmxBVFowbnB2YlZSTHlVU01rUndDVHZOSUFoeGxDbUg1WVlEcktodGhBVThycjJFUjlrdA?oc=5",
-      "published": "2026-10-26T14:06:41+00:00"
-    },
-    {
       "category": "科技产业链",
       "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
       "source": "财联社",
       "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
       "published": "2026-10-26T13:39:36+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "美联储本周决议重点不在利率，而在沃什会否向市场“解释” - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1sTVJ6WmRxY083dnJVNkNVTkh6eGlORGh1RThRcDJrOFY5VGdSYS1LNTVOYjdDMFhnZzhVUDZtVFhvOXpfek1TS1N5VW5xclYwcjNkQk1waHhEN04xcnItT2RKWnRvSUM5d2E1OEE3MVlmMVJKTEdkag?oc=5",
+      "published": "2026-10-26T13:04:47+00:00"
     }
   ]
 }
