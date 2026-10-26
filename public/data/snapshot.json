@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-24",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.46,
     "baa10y_pct": 4.056225,
-    "curve_10y3m": 0.74,
+    "curve_10y3m": 0.78,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,10 +63,11 @@
     }
   ],
   "health": {
-    "data_asof": "2026-10-22",
-    "stale_count": 24,
+    "data_asof": "2026-10-23",
+    "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -250,7 +251,7 @@
         "growth": "neutral",
         "policy": "down",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "up"
       },
       "indicators": [
@@ -285,6 +286,16 @@
           }
         },
         {
+          "id": "fred_nikkei225",
+          "name": "日经 225 指数",
+          "value": 62189.65,
+          "date": "2026-10-26",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -14.06
+          }
+        },
+        {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
           "value": 69.49,
@@ -303,9 +314,8 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷走强、市场缺失，区域黄灯",
+      "summary": "日本：增长平稳、信贷走强、市场平稳，区域黄灯",
       "degraded": [
-        "fred_nikkei225",
         "bis_spp_jp"
       ]
     },
@@ -801,19 +811,19 @@
     "us10y": {
       "value": 4.96,
       "date": "2026-10-22",
-      "change_20d_bp": -22.0,
+      "change_20d_bp": -21.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.29,
       "date": "2026-10-22",
-      "change_20d_bp": -18.0,
+      "change_20d_bp": -20.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.65,
       "date": "2026-10-22",
-      "change_20d_bp": -22.0,
+      "change_20d_bp": -16.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -823,8 +833,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -22.0,
-      "us30y_change_20d_bp": -18.0,
+      "us10y_change_20d_bp": -21.0,
+      "us30y_change_20d_bp": -20.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -859,25 +869,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "韩国7900名富豪净卖三星海力士1483亿韩元，转买杠杆芯片ETF - 华尔街见闻",
-      "source": "华尔街见闻",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE13V0V0azhMNXozbXdqdXd0SFhUSE55UHJ5XzV3RHNhUWo4elZzNHJCTFp2TUdQZi15bGxYaGxySm9EQUlOSEZfcmZfNEpfb3FYaldn?oc=5",
-      "published": "2026-10-26T10:36:00+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "韩国半年，从笑到哭 - 凤凰网",
-      "source": "凤凰网",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE42aUIteWtaSERhbjZDd2pKYTZUR0l3b1pxcGV0N2c4a0ttN1o1Ul9iZmQ2bmxwTWdZZ1FMbENHRzZfN3JfSnVmeHU0Skk?oc=5",
-      "published": "2026-10-26T10:23:29+00:00"
+      "category": "货币政策",
+      "title": "美联储与加拿大央行利率决议前夕，加元自六周高点回落 - www.tmgm.com",
+      "source": "www.tmgm.com",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPaVZsOUVGS1BjaE9nQ1ZyVExWVm9GRW5oT0tEeTlHWm5kVVJmQ1lkcm1ZWUhGRGhjT3ZGakNDVXVqcFJjd0lWRVlab1BOYXRUWEhpSkxuNFNZZkJQUEZ6Vkg5VU5meVFOZ1hUY0IxRmh3Q0QtZjBXbFJOc0pVQm0xdk90aXlhdF9ESTBDMW9LQlBPSDl2ZHVwM3d5VG1PV2NOa1M5V1lvY1NIeXYxTlVPaVc4VWJBbUt2eS1UeUhab1RibThjYVRWNS1zdXVGbzR6eENPWjRQWkNmVmFibUhNQXVGLTVMZUU?oc=5",
+      "published": "2026-10-26T16:52:48+00:00"
     },
     {
       "category": "货币政策",
-      "title": "英镑走软，美元企稳，市场静待美联储利率决议 提供者 Investing.com - 英为财情 Investing.com",
-      "source": "英为财情 Investing.com",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE50Qm5WcW4ybG01SGZXbmhPRFN1VDRWRjFhaFJ1bUExaWFLT2JwWEVxR2pCeWJLR0dkazZ4SHEweXRPQ05qTV9nQXh0bW53WFdaYlFGSzF2S3BWTWtyODh5c2lKUDEwWHc?oc=5",
-      "published": "2026-10-26T09:38:00+00:00"
+      "title": "黄金重新站上4000大关，反弹恐被一句话打断！本周三大催化剂来袭 - FX168财经",
+      "source": "FX168财经",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBQY0ZzQXltWFFuYU9WaDNjeXZqYWtPTFNOUXQzYTVIZmZxcF90NXdWc0RWUlJnVjFwVmxBVFowbnB2YlZSTHlVU01rUndDVHZOSUFoeGxDbUg1WVlEcktodGhBVThycjJFUjlrdA?oc=5",
+      "published": "2026-10-26T14:06:41+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
+      "published": "2026-10-26T13:39:36+00:00"
     }
   ]
 }
