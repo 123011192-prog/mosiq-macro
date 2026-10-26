@@ -67,11 +67,6 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
-      "refresh:oecd:oecd_share_in",
-      "refresh:oecd:oecd_cli_br",
-      "refresh:oecd:oecd_bci_br",
-      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -80,8 +75,7 @@
       "radar:nonbank",
       "regions:japan",
       "regions:canada",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -632,7 +626,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -667,6 +661,16 @@
           }
         },
         {
+          "id": "oecd_share_in",
+          "name": "OECD 印度股价指数（NIFTY 代理）",
+          "value": 273.0816,
+          "date": "2026-09-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -12.18
+          }
+        },
+        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.48,
@@ -685,22 +689,31 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
-        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
-        "growth": "degraded",
+        "growth": "down",
         "policy": "up",
         "credit": "up",
-        "market": "degraded",
+        "market": "up",
         "fx": "neutral"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_br",
+          "name": "OECD 巴西综合领先指标 CLI",
+          "value": 102.3614,
+          "date": "2026-09-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.491
+          }
+        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -722,6 +735,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 372.3822,
+          "date": "2026-09-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -3.58
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.48,
@@ -732,6 +755,13 @@
           }
         },
         {
+          "id": "oecd_bci_br",
+          "name": "OECD 巴西商业信心指数 BCI",
+          "value": 99.0359,
+          "date": "2026-09-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 223.8036,
@@ -739,13 +769,9 @@
           "unit": "指数"
         }
       ],
-      "light": "green",
-      "summary": "巴西：增长缺失、信贷走强、市场缺失，区域绿灯",
-      "degraded": [
-        "oecd_cli_br",
-        "oecd_share_br",
-        "oecd_bci_br"
-      ]
+      "light": "yellow",
+      "summary": "巴西：增长走弱、信贷走强、市场走强，区域黄灯",
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -833,25 +859,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "Interest rates unlikely to reach 4 . 75 % by next summer , say City economists",
-      "source": "theguardian.com",
-      "url": "https://www.theguardian.com/business/2026/oct/25/interest-rates-bank-of-england-rises-summer-2027",
-      "published": "2026-10-25T12:45:00+00:00"
+      "category": "科技产业链",
+      "title": "韩国7900名富豪净卖三星海力士1483亿韩元，转买杠杆芯片ETF - 华尔街见闻",
+      "source": "华尔街见闻",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE13V0V0azhMNXozbXdqdXd0SFhUSE55UHJ5XzV3RHNhUWo4elZzNHJCTFp2TUdQZi15bGxYaGxySm9EQUlOSEZfcmZfNEpfb3FYaldn?oc=5",
+      "published": "2026-10-26T10:36:00+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "韩国半年，从笑到哭 - 凤凰网",
+      "source": "凤凰网",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE42aUIteWtaSERhbjZDd2pKYTZUR0l3b1pxcGV0N2c4a0ttN1o1Ul9iZmQ2bmxwTWdZZ1FMbENHRzZfN3JfSnVmeHU0Skk?oc=5",
+      "published": "2026-10-26T10:23:29+00:00"
     },
     {
       "category": "货币政策",
-      "title": "Bond yields rise nearly 30 bps in Oct , to raise govt interest burden",
-      "source": "business-standard.com",
-      "url": "https://www.business-standard.com/markets/news/bond-yields-rise-nearly-30-bps-in-oct-to-raise-govt-s-interest-burden-126102500377_1.html",
-      "published": "2026-10-25T11:00:00+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "Q2 results , US Fed decision , crude oil may drive stock markets this week",
-      "source": "business-standard.com",
-      "url": "https://www.business-standard.com/markets/news/q2-results-us-fed-decision-crude-oil-may-drive-stock-markets-this-week-126102500192_1.html",
-      "published": "2026-10-25T10:30:00+00:00"
+      "title": "英镑走软，美元企稳，市场静待美联储利率决议 提供者 Investing.com - 英为财情 Investing.com",
+      "source": "英为财情 Investing.com",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE50Qm5WcW4ybG01SGZXbmhPRFN1VDRWRjFhaFJ1bUExaWFLT2JwWEVxR2pCeWJLR0dkazZ4SHEweXRPQ05qTV9nQXh0bW53WFdaYlFGSzF2S3BWTWtyODh5c2lKUDEwWHc?oc=5",
+      "published": "2026-10-26T09:38:00+00:00"
     }
   ]
 }
