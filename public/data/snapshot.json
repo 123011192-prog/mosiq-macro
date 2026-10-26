@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.46,
-    "baa10y_pct": 4.054597,
+    "baa10y_pct": 4.056225,
     "curve_10y3m": 0.74,
     "curve_inverted": false
   },
@@ -256,7 +256,7 @@
         "growth": "neutral",
         "policy": "down",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "up"
       },
       "indicators": [
@@ -291,16 +291,6 @@
           }
         },
         {
-          "id": "fred_nikkei225",
-          "name": "日经 225 指数",
-          "value": 62693.16,
-          "date": "2026-10-23",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -13.37
-          }
-        },
-        {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
           "value": 69.49,
@@ -319,8 +309,9 @@
         }
       ],
       "light": "yellow",
-      "summary": "日本：增长平稳、信贷走强、市场平稳，区域黄灯",
+      "summary": "日本：增长平稳、信贷走强、市场缺失，区域黄灯",
       "degraded": [
+        "fred_nikkei225",
         "bis_spp_jp"
       ]
     },
@@ -365,13 +356,13 @@
           }
         },
         {
-          "id": "fred_sox",
+          "id": "oecd_share_kr",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 10779.46,
-          "date": "2026-10-23",
+          "value": 341.5358,
+          "date": "2026-09-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -26.34
+            "drawdown_pct": -19.04
           }
         },
         {
