@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.47,
-    "baa10y_pct": 5.038137,
+    "baa10y_pct": 5.040161,
     "curve_10y3m": 0.78,
     "curve_inverted": false
   },
@@ -67,6 +67,7 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_cli_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -75,7 +76,8 @@
       "radar:nonbank",
       "regions:japan",
       "regions:canada",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -704,25 +706,15 @@
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
         "market": "up",
         "fx": "neutral"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.3614,
-          "date": "2026-09-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.491
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -778,9 +770,11 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "巴西：增长走弱、信贷走强、市场走强，区域黄灯",
-      "degraded": []
+      "light": "green",
+      "summary": "巴西：增长缺失、信贷走强、市场走强，区域绿灯",
+      "degraded": [
+        "oecd_cli_br"
+      ]
     }
   },
   "oil_watch": {
@@ -840,12 +834,12 @@
     "latest_quotes": {
       "us10y": {
         "value": 5.0,
-        "date": "2026-10-23",
+        "date": "2026-10-26",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.33,
-        "date": "2026-10-23",
+        "value": 5.31,
+        "date": "2026-10-26",
         "source": "tushare"
       }
     }
@@ -869,24 +863,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "美联储与加拿大央行利率决议前夕，加元自六周高点回落 - www.tmgm.com",
-      "source": "www.tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPaVZsOUVGS1BjaE9nQ1ZyVExWVm9GRW5oT0tEeTlHWm5kVVJmQ1lkcm1ZWUhGRGhjT3ZGakNDVXVqcFJjd0lWRVlab1BOYXRUWEhpSkxuNFNZZkJQUEZ6Vkg5VU5meVFOZ1hUY0IxRmh3Q0QtZjBXbFJOc0pVQm0xdk90aXlhdF9ESTBDMW9LQlBPSDl2ZHVwM3d5VG1PV2NOa1M5V1lvY1NIeXYxTlVPaVc4VWJBbUt2eS1UeUhab1RibThjYVRWNS1zdXVGbzR6eENPWjRQWkNmVmFibUhNQXVGLTVMZUU?oc=5",
-      "published": "2026-10-26T16:52:48+00:00"
+      "title": "本周日本央行和美联储将维持利率不变？ - IDNFinancials",
+      "source": "IDNFinancials",
+      "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOYU1YWG9BSVJyVWRpQm5jUEN0b0NPaHpMMUVsZjVBTXdub1ZINzZhRGFGUUZJeTYyZWd3ZjZ2cU1tX3RvSnMxeWN1ZDZyVHBuYXBUbU01R1ZKNzBGV29ndk1xeUdGY3VWN05iV3VhZlJOZjRXT3lpVnMxcUc3VTNoODNnTVZwMS0xNTMxQ1ByeERfQkd0eE9HeDM0bmhkckxqRWszcEczOXZTOGpkeEg2QzFYQWlvY2ZXblp2RmQ2Sll2aExEV2x5eUhZZG55MUhHN3I1RmY5S3NKb1d5NVlsd0VzZzQxcEpLMVRqQnZsN1REVnVkVzdMZmhVRGRudjdxNlZnSGhVX1llSVV5cW5wM2VwclNLX1puTGxHNjdOMFVzTWc?oc=5",
+      "published": "2026-10-27T01:40:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "五千亿级投资来袭！韩国两大芯片巨头建厂计划官宣 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5",
-      "published": "2026-10-26T13:39:36+00:00"
+      "title": "日韩股市拉升，存储芯片巨头集体上涨 - 21财经",
+      "source": "21财经",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPWTNXdGk4V2R0c3NHVzFFb2tsZGUwNUpNeUJuY1JYMFRMNmttS01kWWFObG5nWWEyWWhaZkZPSVJkVVplX05iVEpaMzU5QU5UWTVUY2Y4bmktTkRjdU5uamRwRXFBX09jc09TeFlGNGRlQ3RMXzU2bXdxZHFqSGoxemhzQU84M19IdWpDM2VWYw?oc=5",
+      "published": "2026-10-27T01:30:20+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美联储本周决议重点不在利率，而在沃什会否向市场“解释” - 新浪财经",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1sTVJ6WmRxY083dnJVNkNVTkh6eGlORGh1RThRcDJrOFY5VGdSYS1LNTVOYjdDMFhnZzhVUDZtVFhvOXpfek1TS1N5VW5xclYwcjNkQk1waHhEN04xcnItT2RKWnRvSUM5d2E1OEE3MVlmMVJKTEdkag?oc=5",
-      "published": "2026-10-26T13:04:47+00:00"
+      "category": "科技产业链",
+      "title": "从存储到设备封测全线暴涨！韩半导体上下游齐拉涨，央行预判明年芯片价格续涨 - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPUDRyNjJMSHJsd2RTbWt5UVdYUTQ4eTNRS2taTEJld0NRcjEtZEphbTFwT3Znbm9tNnluYklBcFZTSmNLTmpKT2w5Z3ZkOEhZdjBYNTRQWTRqa2JrbTlfMUJsSnlaX011akJXV0pVdl9nakdPaVNMaVlwZm8xVGdEaEd0aVBNcVVYT1hYTA?oc=5",
+      "published": "2026-10-27T01:20:00+00:00"
     }
   ]
 }
