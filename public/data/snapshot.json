@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-27",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -18,7 +18,7 @@
     "inflation": "degraded",
     "liquidity": "neutral",
     "credit": "degraded",
-    "policy": "up",
+    "policy": "degraded",
     "market_stress": "degraded"
   },
   "confirmations": [
@@ -63,21 +63,21 @@
     }
   ],
   "health": {
-    "data_asof": "2026-10-23",
-    "stale_count": 24,
+    "data_asof": "2026-10-26",
+    "stale_count": 31,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
+      "cycle:policy",
       "cycle:market_stress",
       "radar:banking",
+      "radar:credit",
       "radar:nonbank",
       "regions:japan",
       "regions:canada",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -289,11 +289,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 62189.65,
-          "date": "2026-10-26",
+          "value": 63268.37,
+          "date": "2026-10-27",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -14.06
+            "drawdown_pct": -12.57
           }
         },
         {
@@ -706,7 +706,7 @@
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "down",
         "policy": "up",
@@ -766,6 +766,13 @@
           }
         },
         {
+          "id": "oecd_bci_br",
+          "name": "OECD 巴西商业信心指数 BCI",
+          "value": 99.0359,
+          "date": "2026-09-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 223.8036,
@@ -775,9 +782,7 @@
       ],
       "light": "yellow",
       "summary": "巴西：增长走弱、信贷走强、市场走强，区域黄灯",
-      "degraded": [
-        "oecd_bci_br"
-      ]
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -807,19 +812,19 @@
     "us10y": {
       "value": 5.0,
       "date": "2026-10-23",
-      "change_20d_bp": -17.0,
+      "change_20d_bp": -24.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.33,
       "date": "2026-10-23",
-      "change_20d_bp": -16.0,
+      "change_20d_bp": -23.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.69,
       "date": "2026-10-23",
-      "change_20d_bp": -12.0,
+      "change_20d_bp": -23.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -829,8 +834,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -17.0,
-      "us30y_change_20d_bp": -16.0,
+      "us10y_change_20d_bp": -24.0,
+      "us30y_change_20d_bp": -23.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -866,24 +871,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "美联储本周料按兵不动大摩提醒：未来仍可能加息75至100个基点_滚动新闻_财经 - 证券之星",
-      "source": "证券之星",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5qc0ZCUjdrUzd5OG9YckpvZ1RVVXlsUzVQSE90dEFpZjZ4c3RTTV9YeC1rWHV3eHhLMjRWdUtQQUd4WkdraEM3VWtfcVVkNUN0QlRULWtXZzhqeGFDaFo1NA?oc=5",
-      "published": "2026-10-27T10:49:34+00:00"
+      "title": "白银价格预测：美联储利率决议前，XAG/USD自年初至今低点反弹 - www.tmgm.com",
+      "source": "www.tmgm.com",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPWDlDeFdoelVrWC10cEtDRDZMWExwOG5nR1BFV2hSZUkxYVpYcVozRmZhRndWeXNKR2FyQzRwTDRBZXN4VEsxVEs0LVB6am5wSUlhbGRDbjdoeHhtcHU3dEdJcGp0TVhZTy1vV09NQktUSGJ3cnJsSEVpSGNVNUs0WkZOMzAza2pzRGpWU0k2azNuTjVCMXVIc3E1ZFROVU5FNDNSQklELUk3eW9wZGVCSi1tNXZWRGYzdEZOa2tFckgzOUNZeno2eTVPdFlMRXBoVXlJRUluRm1FQzVPeHlDdEYwNjdZZ3AwQmc?oc=5",
+      "published": "2026-10-27T16:12:34+00:00"
     },
     {
       "category": "货币政策",
-      "title": "“美联储传声筒”：沃什试图让美联储保持沉默，但官员们似乎不听 - 搜狐网",
-      "source": "搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNXA0VkxXXzNqLXpQUWVxRFRwUmJ0WU5ISnBMek5FSXdtNE9ucnNocmZMd2g1TlNEd1d1MHdTaTkyY09GSjMwdHRyTWpCbUEySEUtZnFtdTJ5MXFndS1qanVsVU5ZbmZVdlJWQkxOTW1NOGJQbFlLSEYxc1JUTXZLNEdoMkswNWZi?oc=5",
-      "published": "2026-10-27T10:36:30+00:00"
+      "title": "Natixis：美联储料维持利率于4.0%，或现三张反对票，12月再加息一次 - 新闻和统计 - IndexBox",
+      "source": "IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOX3hwWU5HRlRfNGNLcG51bU0zbjAydlpiU1I2LVVJU0U5Mjl3WlVTTkk1bHFrSExoWjZLUWVHV1BSN3pqdkUzTW1qMC1ZT1hZX1JvVnF4ZGp6eVExYzNQdGYwYmxucUM2eHJ1bVFRaDlralF5dGxpRVNrenFtNWdCN1MwYUVYZ1paZi0wMmJnRmlCWUFZTThpMHZfZ2ZOd0JteU1qY3VLX0dlZm9STUVncA?oc=5",
+      "published": "2026-10-27T16:10:38+00:00"
     },
     {
       "category": "货币政策",
-      "title": "黄金一波急跌失守4000大关！小心美联储释放鹰派信号，技术面盯紧三张图 - FX168财经",
+      "title": "黄金突然反攻！金价重返4050美元，美联储决议前夜暗藏大风险 - FX168财经",
       "source": "FX168财经",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBsaXNGRU1DQ0ljWGpaVmpmN05sSXExWEJXMkJrMGhiSWYwU1lOOW1OOEdVdVBhNHhKdXZFR1JfVEhPZ1l1d1hGOFNPMUgwYm9jekRzVXRyT0RNM01PZTFTd3FYZmRDQVdSN0VZMw?oc=5",
-      "published": "2026-10-27T10:27:45+00:00"
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBKNWFnUzNYVVZtMUNrVFdMRkZ6dzJZR0gtVFhEenJMNkUtTUMtY1F1N3dGTjBqSVVxX2RZZURrdkRxM1VvSGtBc0ZzSGNYZ203eUNqdEFYUDBsMGlDMnR4YnRhNnRhVHdBaDBvQlFybWxUMDRGQy1SRQ?oc=5",
+      "published": "2026-10-27T15:42:42+00:00"
     }
   ]
 }
