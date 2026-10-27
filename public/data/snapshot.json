@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.47,
-    "baa10y_pct": 5.040161,
+    "baa10y": 1.45,
+    "baa10y_pct": 3.030911,
     "curve_10y3m": 0.78,
     "curve_inverted": false
   },
@@ -18,7 +18,7 @@
     "inflation": "degraded",
     "liquidity": "neutral",
     "credit": "degraded",
-    "policy": "degraded",
+    "policy": "up",
     "market_stress": "degraded"
   },
   "confirmations": [
@@ -64,16 +64,14 @@
   ],
   "health": {
     "data_asof": "2026-10-26",
-    "stale_count": 31,
+    "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
-      "cycle:policy",
       "cycle:market_stress",
       "radar:banking",
-      "radar:credit",
       "radar:nonbank",
       "regions:japan",
       "regions:canada",
@@ -811,31 +809,31 @@
   "rates_watch": {
     "us10y": {
       "value": 5.0,
-      "date": "2026-10-23",
+      "date": "2026-10-26",
       "change_20d_bp": -24.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.33,
-      "date": "2026-10-23",
-      "change_20d_bp": -23.0,
+      "value": 5.31,
+      "date": "2026-10-26",
+      "change_20d_bp": -25.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.69,
-      "date": "2026-10-23",
-      "change_20d_bp": -23.0,
+      "value": 4.68,
+      "date": "2026-10-26",
+      "change_20d_bp": -24.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 31.0,
-      "date": "2026-10-23"
+      "value_bp": 32.0,
+      "date": "2026-10-26"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
       "us10y_change_20d_bp": -24.0,
-      "us30y_change_20d_bp": -23.0,
+      "us30y_change_20d_bp": -25.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -871,24 +869,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "白银价格预测：美联储利率决议前，XAG/USD自年初至今低点反弹 - www.tmgm.com",
-      "source": "www.tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPWDlDeFdoelVrWC10cEtDRDZMWExwOG5nR1BFV2hSZUkxYVpYcVozRmZhRndWeXNKR2FyQzRwTDRBZXN4VEsxVEs0LVB6am5wSUlhbGRDbjdoeHhtcHU3dEdJcGp0TVhZTy1vV09NQktUSGJ3cnJsSEVpSGNVNUs0WkZOMzAza2pzRGpWU0k2azNuTjVCMXVIc3E1ZFROVU5FNDNSQklELUk3eW9wZGVCSi1tNXZWRGYzdEZOa2tFckgzOUNZeno2eTVPdFlMRXBoVXlJRUluRm1FQzVPeHlDdEYwNjdZZ3AwQmc?oc=5",
-      "published": "2026-10-27T16:12:34+00:00"
+      "title": "SBP raises interest rate to 12 % amid Iran - US tensions and rising oil prices",
+      "source": "pakistantimes.com",
+      "url": "https://www.pakistantimes.com/sbp-raises-interest-rate-to-12-amid-iran-us-tensions-and-rising-oil-prices-15846/",
+      "published": "2026-10-27T05:15:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "Natixis：美联储料维持利率于4.0%，或现三张反对票，12月再加息一次 - 新闻和统计 - IndexBox",
-      "source": "IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOX3hwWU5HRlRfNGNLcG51bU0zbjAydlpiU1I2LVVJU0U5Mjl3WlVTTkk1bHFrSExoWjZLUWVHV1BSN3pqdkUzTW1qMC1ZT1hZX1JvVnF4ZGp6eVExYzNQdGYwYmxucUM2eHJ1bVFRaDlralF5dGxpRVNrenFtNWdCN1MwYUVYZ1paZi0wMmJnRmlCWUFZTThpMHZfZ2ZOd0JteU1qY3VLX0dlZm9STUVncA?oc=5",
-      "published": "2026-10-27T16:10:38+00:00"
+      "category": "地缘冲突",
+      "title": "Indian Shares Seen Opening On Flat Note",
+      "source": "rttnews.com",
+      "url": "https://www.rttnews.com/3703087/indian-shares-seen-opening-on-flat-note.aspx",
+      "published": "2026-10-27T05:15:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "黄金突然反攻！金价重返4050美元，美联储决议前夜暗藏大风险 - FX168财经",
-      "source": "FX168财经",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBKNWFnUzNYVVZtMUNrVFdMRkZ6dzJZR0gtVFhEenJMNkUtTUMtY1F1N3dGTjBqSVVxX2RZZURrdkRxM1VvSGtBc0ZzSGNYZ203eUNqdEFYUDBsMGlDMnR4YnRhNnRhVHdBaDBvQlFybWxUMDRGQy1SRQ?oc=5",
-      "published": "2026-10-27T15:42:42+00:00"
+      "category": "地缘冲突",
+      "title": "Indian Shares Marginally Lower In Early Trade ; IT Stocks Underperform",
+      "source": "rttnews.com",
+      "url": "https://www.rttnews.com/3703096/indian-shares-marginally-lower-in-early-trade-it-stocks-underperform.aspx",
+      "published": "2026-10-27T05:15:00+00:00"
     }
   ]
 }
