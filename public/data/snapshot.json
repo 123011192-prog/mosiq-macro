@@ -67,15 +67,22 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_cli_br",
+      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
       "cycle:market_stress",
       "radar:banking",
       "radar:nonbank",
+      "regions:china",
       "regions:japan",
       "regions:canada",
-      "regions:india"
+      "regions:australia",
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -166,7 +173,7 @@
       "degraded": []
     },
     "china": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "down",
         "policy": "neutral",
@@ -226,13 +233,6 @@
           }
         },
         {
-          "id": "oecd_bci_cn",
-          "name": "OECD 中国商业信心指数 BCI",
-          "value": 98.3612,
-          "date": "2026-08-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_cn",
           "name": "BIS 中国住宅房价指数",
           "value": 112.9201,
@@ -242,7 +242,9 @@
       ],
       "light": "yellow",
       "summary": "中国：增长走弱、信贷走强、市场走强，区域黄灯",
-      "degraded": []
+      "degraded": [
+        "oecd_bci_cn"
+      ]
     },
     "japan": {
       "status": "degraded",
@@ -551,7 +553,7 @@
       ]
     },
     "australia": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "down",
         "policy": "down",
@@ -611,13 +613,6 @@
           }
         },
         {
-          "id": "oecd_bci_au",
-          "name": "OECD 澳大利亚商业信心指数 BCI",
-          "value": 99.923,
-          "date": "2026-08-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_au",
           "name": "BIS 澳大利亚住宅房价指数",
           "value": 216.4473,
@@ -627,7 +622,9 @@
       ],
       "light": "orange",
       "summary": "澳大利亚：增长走弱、信贷走强、市场走强，区域橙灯",
-      "degraded": []
+      "degraded": [
+        "oecd_bci_au"
+      ]
     },
     "india": {
       "status": "degraded",
@@ -635,7 +632,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -670,16 +667,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 273.0816,
-          "date": "2026-09-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -12.18
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.48,
@@ -698,31 +685,22 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
         "market": "up",
         "fx": "neutral"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.3614,
-          "date": "2026-09-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.491
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -764,13 +742,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.0359,
-          "date": "2026-09-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 223.8036,
@@ -778,9 +749,12 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "巴西：增长走弱、信贷走强、市场走强，区域黄灯",
-      "degraded": []
+      "light": "green",
+      "summary": "巴西：增长缺失、信贷走强、市场走强，区域绿灯",
+      "degraded": [
+        "oecd_cli_br",
+        "oecd_bci_br"
+      ]
     }
   },
   "oil_watch": {
@@ -839,13 +813,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 5.0,
-        "date": "2026-10-26",
+        "value": 4.99,
+        "date": "2026-10-27",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.31,
-        "date": "2026-10-26",
+        "value": 5.3,
+        "date": "2026-10-27",
         "source": "tushare"
       }
     }
@@ -869,24 +843,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "SBP raises interest rate to 12 % amid Iran - US tensions and rising oil prices",
-      "source": "pakistantimes.com",
-      "url": "https://www.pakistantimes.com/sbp-raises-interest-rate-to-12-amid-iran-us-tensions-and-rising-oil-prices-15846/",
-      "published": "2026-10-27T05:15:00+00:00"
+      "title": "黄金一波急跌失守4000大关！小心美联储释放鹰派信号，技术面盯紧三张图 - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPaU9XS29sOEVZMGhraTY4MERRTW1mdDVxa1J0akNQVlJHcGRUMjFrbVVHMjgxbTZfVXZ4Y0hPejd0N2xfWEt6U0UwZmNQRjl4QmJueGJ6SG9CX05QZ3RvQWpSUm83MTdOdnU4dThGQ0swN2pjS0dzN1NuX040bXVCdGdHOHByVHl2a3A3ak15cEdEVVo5WFVEeVlkdXU4MWp4?oc=5",
+      "published": "2026-10-28T02:03:32+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "Indian Shares Seen Opening On Flat Note",
-      "source": "rttnews.com",
-      "url": "https://www.rttnews.com/3703087/indian-shares-seen-opening-on-flat-note.aspx",
-      "published": "2026-10-27T05:15:00+00:00"
+      "category": "货币政策",
+      "title": "超级央行周持续发酵，美联储决议临近，美债波动扰动成长股估值 - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQZmk1T29iMk1kSklrUnJSWmJlWjdGT1h5VzZrZFdPeDhQNjB3d0F1dXVjRGRleF9qMFZEVEJheHhKTVRvdV9BU1pQLTlBaWdnbG9QbFRxUWxXWFFMd05ZdXJYVC0zMXZSTHJUemFyX1pWQkhhbGpwSnI1ZVBHdWM3bEVoX0dVS2FOY3Q3UA?oc=5",
+      "published": "2026-10-28T01:18:33+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "Indian Shares Marginally Lower In Early Trade ; IT Stocks Underperform",
-      "source": "rttnews.com",
-      "url": "https://www.rttnews.com/3703096/indian-shares-marginally-lower-in-early-trade-it-stocks-underperform.aspx",
-      "published": "2026-10-27T05:15:00+00:00"
+      "category": "货币政策",
+      "title": "今夜凌晨02:00美联储利率决议来袭：预期之外的交易线索在哪里？ - 富途牛牛",
+      "source": "富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOWEZuMl81TkF0MGFCdC1MU0FockxoWlkyTV9hZDQyVWJsbmhBVWdTTGFoTF9nX182V05qWW5sYUFpSE52RThrUjUzTlNxMVV2T1BvTGJScDJYRUhkVXBTZmR3TzNIbjc5eDBBcHk4ZUN3NjlyQ1VQa0xLc2pCMjhuY1pPSG9mYlVCMzR1djFNOHFnaEU?oc=5",
+      "published": "2026-10-28T01:13:00+00:00"
     }
   ]
 }
