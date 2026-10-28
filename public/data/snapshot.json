@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-27",
+  "as_of": "2026-10-28",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.45,
     "baa10y_pct": 3.030911,
-    "curve_10y3m": 0.78,
+    "curve_10y3m": 0.77,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,11 +63,15 @@
     }
   ],
   "health": {
-    "data_asof": "2026-10-26",
+    "data_asof": "2026-10-27",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_cli_br",
       "refresh:oecd:oecd_bci_br",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -286,11 +290,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 63268.37,
-          "date": "2026-10-27",
+          "value": 63954.19,
+          "date": "2026-10-28",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -12.57
+            "drawdown_pct": -11.62
           }
         },
         {
@@ -629,7 +633,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -664,16 +668,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 273.0816,
-          "date": "2026-09-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -12.18
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.48,
@@ -692,31 +686,22 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
       "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
-        "market": "up",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.3614,
-          "date": "2026-09-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.491
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -738,16 +723,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 372.3822,
-          "date": "2026-09-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -3.58
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.48,
@@ -765,9 +740,11 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "巴西：增长走弱、信贷走强、市场走强，区域黄灯",
+      "light": "green",
+      "summary": "巴西：增长缺失、信贷走强、市场缺失，区域绿灯",
       "degraded": [
+        "oecd_cli_br",
+        "oecd_share_br",
         "oecd_bci_br"
       ]
     }
@@ -799,19 +776,19 @@
     "us10y": {
       "value": 5.0,
       "date": "2026-10-26",
-      "change_20d_bp": -24.0,
+      "change_20d_bp": -26.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.31,
       "date": "2026-10-26",
-      "change_20d_bp": -25.0,
+      "change_20d_bp": -28.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.68,
       "date": "2026-10-26",
-      "change_20d_bp": -24.0,
+      "change_20d_bp": -21.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -821,8 +798,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -24.0,
-      "us30y_change_20d_bp": -25.0,
+      "us10y_change_20d_bp": -26.0,
+      "us30y_change_20d_bp": -28.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -858,24 +835,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "美股盘前：美联储10月维持利率不变的概率为90.6% - 新浪财经",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9wYURwQkQtbjFMYWNNd3E0YnFEZks5SFFMQ253Wl90eEoxUzJaMTdVSlRTUm1FWklpblJ2TVFNR1h4aEFmVy1PSkNGUzJEc0l5c0FTd1dlY2hhbm5XOGhIeF94WWplSWVVVHR4bDFISGNuYTZWVTRJWQ?oc=5",
-      "published": "2026-10-28T11:27:37+00:00"
+      "title": "黄金突遭双重夹击！美联储决议进入倒计时，金价能否守住4000美元？ - FX168财经",
+      "source": "FX168财经",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5rbTFkaXkyOWlVWklFWU9ZRTB1cFdFRk9tZkhKUFdyc1o0M29senFVR0ZaSEk0QzNFQjBpcGNCQkE2c0xoRVNocUd5SHFBY0JtMkxaamdXRlpud3dXTjdkeDZWM2NZS243MlZpV0dZVkFEbGZPWm5mRQ?oc=5",
+      "published": "2026-10-28T16:42:07+00:00"
     },
     {
       "category": "货币政策",
-      "title": "今日加密货币：美联储决议前夕，比特币、以太坊和XRP回升 - www.tmgm.com",
+      "title": "比特币与黄金展望：美联储决议前，BTC多头守住80,000美元，XAU捍卫4,000美元关口 - www.tmgm.com",
       "source": "www.tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPQTRwOEtkMm1mWkFSeXRSQkt5SmRldzFVMFc4aDFHN1RYME81TVB3a2ZvZjB2d1dwQk9GRjhES0czWGk1ZXlKQ2JCMFozSzZiVnFtVDlEc3VEUHl0S0hIeVFRcnhhWUlLNWdfTEN2enRVTUIwZ0RwWk9pWlZDZmlDZTFFVEVlQjFCczZXSjhYazdBZlZtNlVRVWxCUnlDMEtqR2xDekluUXFWR0VzdEZPb1RwOENWZEdpeDdCRVAtLVZxWExIRUx5WGc4ZjVXRGs?oc=5",
-      "published": "2026-10-28T10:57:12+00:00"
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNMk83elZMclhKMExOVEp2aWZiSV9nLVRZVGQxMU1TaWszalNyM3JvdTQzOWFheVBzY2VFOFB4NFhHQzhHTE9SVVNKZF9xSWZWS0lFSy1QV29FTWYxeWhsS3IwWU03UFNBUFI5NGRZNjBtbF94SEtVaDVpbU5Ia1BFSXlaSGt2RnR5aEppTUpEQjZnekVvd19fWWI2bVF0bDJvSnlkaHdhMG5zM2RjNG1tZUhmQWc5SGgzWU1lOW45bEU4VkpzTzEyTE1CZ3JVQnQwalpHNW1HNTZCcjNTcUVCSFhuaw?oc=5",
+      "published": "2026-10-28T16:20:57+00:00"
     },
     {
       "category": "货币政策",
-      "title": "【美股盘前】美联储10月利率决议凌晨公布；SK海力士涨超7%，称DRAM和HBM产能售罄至2029年；存储、光通信股集体上涨，闪迪、美光涨超4%，迈威尔涨超2%；谷歌涨1.25%，OpenAI拟采购其TPU芯片 - www.mrjjxw.com",
-      "source": "www.mrjjxw.com",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9HX0hnemViWmU2Y0xVZU5iNGl1YWpYWExxRWNFNWdpM1FhdHE0ZXZTWGEydjJiOFZKTE4xdk5vai0yMDZXX3FPM05LNmN1Nl81eGp6V2FVbmYtY29mc0lNRXh5MUxtdw?oc=5",
-      "published": "2026-10-28T10:18:48+00:00"
+      "title": "美联储周三利率决议：经济学家预计维持3.75%-4%不变 - 新闻和统计 - IndexBox",
+      "source": "IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZ3RvX0gzYTVSLWs3SlAyYkNRVjlXS3Q3MFpTTG5IREY5LU5GX25yX0EyNHp1YlBfM1I0YVlPamJkeTVlWVI5dnhwNEdLVGN1YXJ1TEppZnVjdWd6RGdpSm1ZNEN4NW9uOEFqVS1KWVR3UjJudGdmMTlOdXhmc1lJTVRDWGRNTl9KRUI0bi11TG9rME5YdG5nRGhPd0JuQ2thcmhvNV9QZ251dDVLTTZ1ZnFDVG8?oc=5",
+      "published": "2026-10-28T16:12:36+00:00"
     }
   ]
 }
