@@ -363,11 +363,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 11482.51,
-          "date": "2026-10-27",
+          "value": 11684.0,
+          "date": "2026-10-28",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -21.54
+            "drawdown_pct": -20.16
           }
         },
         {
@@ -390,7 +390,7 @@
         {
           "id": "bis_spp_kr",
           "name": "BIS 韩国住宅房价指数",
-          "value": 145.9221,
+          "value": 145.9223,
           "date": "2026-04-01",
           "unit": "指数"
         }
@@ -679,8 +679,8 @@
         {
           "id": "bis_spp_in",
           "name": "BIS 印度住宅房价指数",
-          "value": 366.8395,
-          "date": "2026-01-01",
+          "value": 372.0124,
+          "date": "2026-04-01",
           "unit": "指数"
         }
       ],
@@ -744,7 +744,7 @@
         {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
-          "value": 223.8036,
+          "value": 224.5801,
           "date": "2026-04-01",
           "unit": "指数"
         }
@@ -843,24 +843,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "美联储宣布维持利率不变 - 搜狐网",
+      "title": "美联储利率调控节奏变化 面临多重难题 - 搜狐网",
       "source": "搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQVnRpdS1Va2czcEptbTF3Ul8zTzRuMU0wUDhUSi1ZX2dfS05sNWgtOEs0cDhJLUVpTE95TjgxaHBVME5VSWNIMmxWMV95VFJJaVU3T3BRX29MZE85emJnaFNPUlJpcUpSU3Z2Sk9TdVVfRHJMdHppZUQ2dXBmejlmd0N1MjBUdTc3?oc=5",
-      "published": "2026-10-29T02:30:40+00:00"
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQdmJJemxxTzV2UVlmaURXeFE3aWxMV2cxWW44LUJIbWRkV3Rjb2VYSmpHVG5CVHJxaUNvUUdZN0xjZGtqdkNRVGtfTWRFSF8zN0FzTmJWNWlTdHE1YlRtVzl4VjZLS1BaNjMyYWM0ejJfRS14Y0VXZTNVamJQYjFfX3JGVVo0cFVHLWgyNA?oc=5",
+      "published": "2026-10-29T11:35:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美联储10月如期维持利率不变，30年国债ETF鹏扬（511090）近五日资金净流入约20.29亿元 - 证券之星",
-      "source": "证券之星",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9CdTZsQm1DNmtBNm53eVptN1B6Z3ZtZURHSW1sV3VXMldFZmZLN3hBQUlWRmkyZmFVazRsSnpoRGp3anA0azlKVmREYWhveVpMZzFBZzN3V1E1Z2ljYkVWYQ?oc=5",
-      "published": "2026-10-29T02:16:17+00:00"
+      "title": "美联储10月28日FOMC会议后维持利率于3.75%–4%不变 - 新闻和统计 - IndexBox",
+      "source": "IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOcmVEN2NFWU1uT2h1VHpWb3RKRlIxSzYySThiTmF6YlBKbW1XdE55YmY4WjFnb3BMZklhejhjTURIMjNtXzZNT0JtX3hpZi03VnhIMllBdHdwdW1GZkI1NG8wY3RYM3NKaUZzV0FKU21TZk1udlNQMlA5NmYtX1NfNmxuUm92X3dpT0o1SkJOZGk3MUhSV0tvcXdkVQ?oc=5",
+      "published": "2026-10-29T10:41:37+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "韩国企业景气指数创4年多来新高 半导体等主导产业带动经济回暖 - 亚洲日报",
-      "source": "亚洲日报",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE40eEV1MHZTMTM0NUZiOTB3RzVHQ2NDbDkxdjR6VkVsaGNiQnFnSVI3QkpDYmlRQlU2cU9OZDZiZWFOZi04QlJ0cmQyc24tdDlSWVgxNzJGbF9zMFk?oc=5",
-      "published": "2026-10-29T02:13:14+00:00"
+      "category": "货币政策",
+      "title": "比特币价格预测：美联储维持利率不变且措辞偏鹰，BTC跌破80,000美元 - www.tmgm.com",
+      "source": "www.tmgm.com",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNQVNHcnFzMmhISjA3Ym41c3JqQUViTEpYOEdhMnBVSVhjSS0ycnY3QVk3Wnc4X1pCcml2am5uTlV1Zy1mblR0YzBMM0hycFFodklUTFlPNHZhbFphdVJvWkkzdUdUNTJHMm9ZRVdWdENRMkpjVU8xQ2x3ODV4NWRNQU1pbEZyTS1LNEpPa2s5OVVyZ2hvaFpKbnBZTjlfWWp2NkdYaTdrQXVXb0tGNko3bGhoNGNrSUNqSkFfa3NLRGlUYy1QajlubUFxWG51VVh4X3pXMTNUbXh1V0lRRjFEXzFQWWVQTTZ4Ulo4bFQzaFR4SUtvQXc?oc=5",
+      "published": "2026-10-29T10:21:19+00:00"
     }
   ]
 }
