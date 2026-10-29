@@ -67,6 +67,9 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_cli_br",
       "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
@@ -629,7 +632,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -664,16 +667,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 273.0816,
-          "date": "2026-09-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -12.18
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.48,
@@ -692,31 +685,22 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
       "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
         "market": "up",
         "fx": "neutral"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.3614,
-          "date": "2026-09-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.491
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -765,9 +749,10 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "巴西：增长走弱、信贷走强、市场走强，区域黄灯",
+      "light": "green",
+      "summary": "巴西：增长缺失、信贷走强、市场走强，区域绿灯",
       "degraded": [
+        "oecd_cli_br",
         "oecd_bci_br"
       ]
     }
@@ -828,13 +813,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.99,
-        "date": "2026-10-27",
+        "value": 5.05,
+        "date": "2026-10-28",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.3,
-        "date": "2026-10-27",
+        "value": 5.37,
+        "date": "2026-10-28",
         "source": "tushare"
       }
     }
@@ -858,24 +843,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "美联储宣布维持利率不变；纳指收涨0.27%，甲骨文涨超10%，海力士涨超13%丨每经整点 - www.mrjjxw.com",
-      "source": "www.mrjjxw.com",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5JbEpra0pXYmk1YThXcjZhb0pwWUVEMGVCa1UxcnRLdFp3VC1HN0JHWHFQWG5kOVRmeGQ1bzhsYTlOSnFkci1IMTJqLXB6cjl1V2hzRUNRVkZiQlBtckZtT1ROX3Rydw?oc=5",
-      "published": "2026-10-28T21:44:23+00:00"
+      "title": "美联储宣布维持利率不变 - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQVnRpdS1Va2czcEptbTF3Ul8zTzRuMU0wUDhUSi1ZX2dfS05sNWgtOEs0cDhJLUVpTE95TjgxaHBVME5VSWNIMmxWMV95VFJJaVU3T3BRX29MZE85emJnaFNPUlJpcUpSU3Z2Sk9TdVVfRHJMdHppZUQ2dXBmejlmd0N1MjBUdTc3?oc=5",
+      "published": "2026-10-29T02:30:40+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美联储维持利率不变后，以太坊上涨1%，Coinbase溢价仍为负值 - www.tmgm.com",
-      "source": "www.tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxONVk5ZUVLdjBsVjRTbF9SS01vbzFMNU1fNHFQOEYtRnJVem01R29NQjdYZFFBdTUtOWtwcHIxOVpkSEhyRk9qZzNqUU10c3oyNDF0eFJTa2tpa1U5NURVa0JoZFdUNGlqVUpmT09UaGdMVlFaeFVLUnpmMnFGa0VKcTZ0TVJsUnpiMnRBM2pmaTN6SmRjUDJNd1ZFcHBSX2M3T1JUMEduSFpPSFEzTWhHWW9ZS3dxeHZ6RnZZamxNWU1KcDZsWkttaHlmdll3cWxIcE13?oc=5",
-      "published": "2026-10-28T21:41:48+00:00"
+      "title": "美联储10月如期维持利率不变，30年国债ETF鹏扬（511090）近五日资金净流入约20.29亿元 - 证券之星",
+      "source": "证券之星",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9CdTZsQm1DNmtBNm53eVptN1B6Z3ZtZURHSW1sV3VXMldFZmZLN3hBQUlWRmkyZmFVazRsSnpoRGp3anA0azlKVmREYWhveVpMZzFBZzN3V1E1Z2ljYkVWYQ?oc=5",
+      "published": "2026-10-29T02:16:17+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "沃什宣布明年起减少议息频次 对后续利率路径仍拒绝给出指引 - 东方财富",
-      "source": "东方财富",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE82NzVYRHJzWkVRMDlTa2JQN2VCTkNIXy1PLUlhMVVEbjBSVkhWV3BQSFAtTTJlUGhCYk5rOF93RmlPbk56Xy1MZFhiUEk2OHNZQ2R5TjdrR0NlZTdyRGJtZg?oc=5",
-      "published": "2026-10-28T21:18:17+00:00"
+      "category": "科技产业链",
+      "title": "韩国企业景气指数创4年多来新高 半导体等主导产业带动经济回暖 - 亚洲日报",
+      "source": "亚洲日报",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE40eEV1MHZTMTM0NUZiOTB3RzVHQ2NDbDkxdjR6VkVsaGNiQnFnSVI3QkpDYmlRQlU2cU9OZDZiZWFOZi04QlJ0cmQyc24tdDlSWVgxNzJGbF9zMFk?oc=5",
+      "published": "2026-10-29T02:13:14+00:00"
     }
   ]
 }
