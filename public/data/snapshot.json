@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-28",
+  "as_of": "2026-10-29",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.45,
     "baa10y_pct": 3.030911,
-    "curve_10y3m": 0.77,
+    "curve_10y3m": 0.87,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,13 +63,11 @@
     }
   ],
   "health": {
-    "data_asof": "2026-10-27",
+    "data_asof": "2026-10-28",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
       "refresh:oecd:oecd_bci_in",
-      "refresh:oecd:oecd_share_in",
-      "refresh:oecd:oecd_cli_br",
       "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
@@ -289,11 +287,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 63954.19,
-          "date": "2026-10-28",
+          "value": 64659.47,
+          "date": "2026-10-29",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -11.62
+            "drawdown_pct": -10.65
           }
         },
         {
@@ -632,7 +630,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -667,6 +665,16 @@
           }
         },
         {
+          "id": "oecd_share_in",
+          "name": "OECD 印度股价指数（NIFTY 代理）",
+          "value": 273.0816,
+          "date": "2026-09-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -12.18
+          }
+        },
+        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.48,
@@ -685,22 +693,31 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
-        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
       "status": "degraded",
       "cycle": {
-        "growth": "degraded",
+        "growth": "down",
         "policy": "up",
         "credit": "up",
         "market": "up",
         "fx": "neutral"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_br",
+          "name": "OECD 巴西综合领先指标 CLI",
+          "value": 102.3614,
+          "date": "2026-09-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.491
+          }
+        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -749,10 +766,9 @@
           "unit": "指数"
         }
       ],
-      "light": "green",
-      "summary": "巴西：增长缺失、信贷走强、市场走强，区域绿灯",
+      "light": "yellow",
+      "summary": "巴西：增长走弱、信贷走强、市场走强，区域黄灯",
       "degraded": [
-        "oecd_cli_br",
         "oecd_bci_br"
       ]
     }
@@ -784,19 +800,19 @@
     "us10y": {
       "value": 4.99,
       "date": "2026-10-27",
-      "change_20d_bp": -27.0,
+      "change_20d_bp": -30.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.3,
       "date": "2026-10-27",
-      "change_20d_bp": -29.0,
+      "change_20d_bp": -34.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.7,
       "date": "2026-10-27",
-      "change_20d_bp": -19.0,
+      "change_20d_bp": -18.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -806,8 +822,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -27.0,
-      "us30y_change_20d_bp": -29.0,
+      "us10y_change_20d_bp": -30.0,
+      "us30y_change_20d_bp": -34.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -843,24 +859,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "美联储利率调控节奏变化 面临多重难题 - 搜狐网",
-      "source": "搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQdmJJemxxTzV2UVlmaURXeFE3aWxMV2cxWW44LUJIbWRkV3Rjb2VYSmpHVG5CVHJxaUNvUUdZN0xjZGtqdkNRVGtfTWRFSF8zN0FzTmJWNWlTdHE1YlRtVzl4VjZLS1BaNjMyYWM0ejJfRS14Y0VXZTNVamJQYjFfX3JGVVo0cFVHLWgyNA?oc=5",
-      "published": "2026-10-29T11:35:00+00:00"
+      "title": "沃什：美联储日程安排将从明年秋季开始变化 2027年将有一次会议不进行利率投票 - 东方财富",
+      "source": "东方财富",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1vS2N4ZkIwWkJ4cHRZVXItVUM2Rk1LVmJKNGRrM1l5WGwwZzdVM1NTSmVDLWNRV0RPS3RTeEF1ejJsbENVNzZROUdjLXMwNk00TEdRYUNqWFk5ZXdsVlk1YzhXVF9BQQ?oc=5",
+      "published": "2026-10-29T15:26:27+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美联储10月28日FOMC会议后维持利率于3.75%–4%不变 - 新闻和统计 - IndexBox",
-      "source": "IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOcmVEN2NFWU1uT2h1VHpWb3RKRlIxSzYySThiTmF6YlBKbW1XdE55YmY4WjFnb3BMZklhejhjTURIMjNtXzZNT0JtX3hpZi03VnhIMllBdHdwdW1GZkI1NG8wY3RYM3NKaUZzV0FKU21TZk1udlNQMlA5NmYtX1NfNmxuUm92X3dpT0o1SkJOZGk3MUhSV0tvcXdkVQ?oc=5",
-      "published": "2026-10-29T10:41:37+00:00"
+      "title": "美联储宣布维持利率不变 香港金管局指符合市场预期 - 中国新闻网",
+      "source": "中国新闻网",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9oN3hFaDdKdDliSlJzZlVVc2hQbVQ2bWQ0Zmx5TnBQLU1ib0JsMWxjanJYQ3NJT01nZFR5d2R3MW9GVUtwMXc2RmtRR1I2MWYwWHVNUUxsaXdPX2szOHdiQ2RrTkE2NkRFYUE?oc=5",
+      "published": "2026-10-29T15:03:24+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "比特币价格预测：美联储维持利率不变且措辞偏鹰，BTC跌破80,000美元 - www.tmgm.com",
-      "source": "www.tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNQVNHcnFzMmhISjA3Ym41c3JqQUViTEpYOEdhMnBVSVhjSS0ycnY3QVk3Wnc4X1pCcml2am5uTlV1Zy1mblR0YzBMM0hycFFodklUTFlPNHZhbFphdVJvWkkzdUdUNTJHMm9ZRVdWdENRMkpjVU8xQ2x3ODV4NWRNQU1pbEZyTS1LNEpPa2s5OVVyZ2hvaFpKbnBZTjlfWWp2NkdYaTdrQXVXb0tGNko3bGhoNGNrSUNqSkFfa3NLRGlUYy1QajlubUFxWG51VVh4X3pXMTNUbXh1V0lRRjFEXzFQWWVQTTZ4Ulo4bFQzaFR4SUtvQXc?oc=5",
-      "published": "2026-10-29T10:21:19+00:00"
+      "category": "科技产业链",
+      "title": "韩资加速买入长鑫科技，还有多只半导体龙头也获加仓 - 财联社电报",
+      "source": "财联社电报",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5iR3dMM181S0dFeWxmN0c1MFh4a1RrbXpOcFJLQkxEX0ZuaWloWWhmY25IS0hBX2dZOUZJenI4Rk1mMGRPbkE?oc=5",
+      "published": "2026-10-29T14:24:39+00:00"
     }
   ]
 }
