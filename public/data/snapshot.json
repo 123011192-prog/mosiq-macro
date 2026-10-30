@@ -8,8 +8,8 @@
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.43,
-    "baa10y_pct": 1.665329,
+    "baa10y": 1.49,
+    "baa10y_pct": 6.297633,
     "curve_10y3m": 0.8,
     "curve_inverted": false
   },
@@ -800,32 +800,32 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 5.05,
-      "date": "2026-10-28",
-      "change_20d_bp": -19.0,
+      "value": 4.98,
+      "date": "2026-10-29",
+      "change_20d_bp": -26.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.37,
-      "date": "2026-10-28",
-      "change_20d_bp": -24.0,
+      "value": 5.32,
+      "date": "2026-10-29",
+      "change_20d_bp": -29.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.67,
-      "date": "2026-10-28",
-      "change_20d_bp": -11.0,
+      "value": 4.61,
+      "date": "2026-10-29",
+      "change_20d_bp": -17.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 38.0,
-      "date": "2026-10-28"
+      "value_bp": 37.0,
+      "date": "2026-10-29"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -19.0,
-      "us30y_change_20d_bp": -24.0,
+      "us10y_change_20d_bp": -26.0,
+      "us30y_change_20d_bp": -29.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -860,13 +860,6 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "黄金一日大跌超110美元，美联储12月加息概率飙升至86% - 同花顺财经",
-      "source": "同花顺财经",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1jNno2SlR3TWFReHB5TTB1MUFTWW1aN1VWX2ltMUJyWV81ajhSZGJsSjRydDdZRmtqUEZQNHhnbFZOVGdiMFR2UTlGb1d5cG95b1FsWEpGcUZYS1F1UXc1WGJB?oc=5",
-      "published": "2026-10-30T16:29:32+00:00"
-    },
-    {
       "category": "科技产业链",
       "title": "韩国半导体企业暨产业生态协同代表团来凤凰镇考察交流 - 搜狐网",
       "source": "搜狐网",
@@ -879,6 +872,13 @@
       "source": "新浪财经",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE90Rm1XUzI2VWIwX3IyNzZnbFJtWUFwNEtET2dzS3g0UnB2TWRnZkM2ZFljcUpxekg3TmxzNTlOc3ZsOUhRVk42eVA4bjc0Mm93NmVJMkFubE5GcDczbXI4TnlzTEw5UE1zZnlzVlFVSXpPSWtQRzQ5Uw?oc=5",
       "published": "2026-10-30T12:53:20+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "加息步伐暂缓，利率约束仍存——10月美联储利率决议点评 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5MdEduMV9nTkFyMGNGZ1BTSWtXM21qNnZBS1NTcFRvSUJCWmc2RktZREdIYWxHdUhpT29SSTNnT2UyYnhma1pLZ0ZoSFpsNm1qTHVFZ2c3cXZQeDJJWEZ1REJpSEIyTnA1NVdVUHdzb3o0M1NEQ1VEdg?oc=5",
+      "published": "2026-10-30T12:15:27+00:00"
     }
   ]
 }
