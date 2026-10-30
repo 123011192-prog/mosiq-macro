@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-29",
+  "as_of": "2026-10-30",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.43,
     "baa10y_pct": 1.665329,
-    "curve_10y3m": 0.87,
+    "curve_10y3m": 0.8,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,7 +63,7 @@
     }
   ],
   "health": {
-    "data_asof": "2026-10-28",
+    "data_asof": "2026-10-29",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
@@ -284,11 +284,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 64659.47,
-          "date": "2026-10-29",
+          "value": 63290.11,
+          "date": "2026-10-30",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -10.65
+            "drawdown_pct": -12.54
           }
         },
         {
@@ -802,19 +802,19 @@
     "us10y": {
       "value": 5.05,
       "date": "2026-10-28",
-      "change_20d_bp": -24.0,
+      "change_20d_bp": -19.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.37,
       "date": "2026-10-28",
-      "change_20d_bp": -27.0,
+      "change_20d_bp": -24.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.67,
       "date": "2026-10-28",
-      "change_20d_bp": -21.0,
+      "change_20d_bp": -11.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -824,8 +824,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -24.0,
-      "us30y_change_20d_bp": -27.0,
+      "us10y_change_20d_bp": -19.0,
+      "us30y_change_20d_bp": -24.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -860,25 +860,25 @@
   },
   "world_brief": [
     {
+      "category": "货币政策",
+      "title": "黄金一日大跌超110美元，美联储12月加息概率飙升至86% - 同花顺财经",
+      "source": "同花顺财经",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1jNno2SlR3TWFReHB5TTB1MUFTWW1aN1VWX2ltMUJyWV81ajhSZGJsSjRydDdZRmtqUEZQNHhnbFZOVGdiMFR2UTlGb1d5cG95b1FsWEpGcUZYS1F1UXc1WGJB?oc=5",
+      "published": "2026-10-30T16:29:32+00:00"
+    },
+    {
       "category": "科技产业链",
-      "title": "随着对美国Big Tech业绩不振和人工智能(AI)投资收益性的担忧扩散,亚洲主要股市同时暴跌。 在韩国、日本、台湾股市,以半导体、AI相关股为中心,抛售势头一致。 30日，韩国综合股价指数比前一天下.. - 매일경제",
-      "source": "매일경제",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE44WWFuY2VpOWYzVUdQS2ZxMzJKZV9Ta2tPR0VyVDRjcm55dTh3bVA4ZFU1SU1KYjUyTzJJdFZ5MlJsOWZ0M3JJVzBFb1JIazA?oc=5",
-      "published": "2026-10-30T08:36:08+00:00"
+      "title": "韩国半导体企业暨产业生态协同代表团来凤凰镇考察交流 - 搜狐网",
+      "source": "搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE04bkVNd3h6R3J0OWZWMmk0WkdyM3dKUnZOUUY2NFVaUTgwMFozUndhTDRCZk1VV0VDalhMLTRWeVd5U1hnb19GN0d3VHRRNXhsOTZuVTdn?oc=5",
+      "published": "2026-10-30T16:13:13+00:00"
     },
     {
       "category": "货币政策",
-      "title": "独家专访美联储前官员：明年或再加息，AI推高通胀 - 21财经",
-      "source": "21财经",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQVFpaTUoxMzBTNFljdWtPZmNGVDFCQnZsNU1oSW9FekRFM2RMVTNET3ZqZmV1T1ljVDNZUDBDTVZjQ0pMcmhuanZKaEN2RnRETE04RG1JZGxSc1JNNWFsTVY0Vy0yNHNWamJmTlNKZENza04zLXZzTUp1M05kS19xVW1ZdkRMa0F6aVc2am5pWQ?oc=5",
-      "published": "2026-10-30T08:12:00+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "【韩股收盘】 韩国KOSPI指数失守5800点 半导体股遭抛售 - 뉴스핌",
-      "source": "뉴스핌",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA4V0hvVHhlelQxUU85Uzk3blNKR1NIckMteWNUR1hZS2lySlZvQzhxRXZPZlpubUhEeTZZdy1kbHNZYjIxRFdOUl9keUNCUUtRbTBRVWFsSDJrQnNq?oc=5",
-      "published": "2026-10-30T07:33:00+00:00"
+      "title": "美联储拟减少年度利率决策次数 华尔街警告：32万亿美元美债市场波动恐加剧 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE90Rm1XUzI2VWIwX3IyNzZnbFJtWUFwNEtET2dzS3g0UnB2TWRnZkM2ZFljcUpxekg3TmxzNTlOc3ZsOUhRVk42eVA4bjc0Mm93NmVJMkFubE5GcDczbXI4TnlzTEw5UE1zZnlzVlFVSXpPSWtQRzQ5Uw?oc=5",
+      "published": "2026-10-30T12:53:20+00:00"
     }
   ]
 }
