@@ -67,6 +67,8 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -77,7 +79,8 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -696,7 +699,7 @@
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "down",
         "policy": "up",
@@ -756,13 +759,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.0359,
-          "date": "2026-09-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 224.5801,
@@ -772,7 +768,9 @@
       ],
       "light": "yellow",
       "summary": "巴西：增长走弱、信贷走强、市场走强，区域黄灯",
-      "degraded": []
+      "degraded": [
+        "oecd_bci_br"
+      ]
     }
   },
   "oil_watch": {
@@ -860,25 +858,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "沃什质疑AI热潮“无惧加息”！美联储究竟要把利率提到多高？-市场参考 - 金十数据",
-      "source": "金十数据",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5iUnZzSzFlbVdEamh6NURYTXRHUEJyaXVvc3FSZmVGdXFyLUUwUjN4T2tXcG4yS3A2VnZwalBtcFJ1MXBvbko4U3dweldWUDg?oc=5",
-      "published": "2026-10-31T20:34:01+00:00"
+      "category": "科技产业链",
+      "title": "韩国10月半导体出口额同比增长259% 达到564亿美元 - 新浪财经",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1Uam9jdjlueTE0WkNWQ3JkRWdQV1VrN0lSbEp5YklMdzd0LTJnWWdYZGZJMG1wdllsTGVzbXpjbl9LZzhueHRjN3ZTWjBIaU5KUVZfamw0TXZ2U2c4Tk5BWmZRTENoTkgtV3R4bTl2Y3UwWnFDY3BnSWNsZmI?oc=5",
+      "published": "2026-11-01T10:46:05+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美联储按兵不动 坚称利率决策无关中期选举 - 和平日报",
-      "source": "和平日报",
-      "url": "https://news.google.com/rss/articles/CBMivAJBVV95cUxPb01HTGVGNzY2QjZRY3NGT2lsbGJVSW9KUmFNLWIteGxiN0VmbURJMGJscWtfNnk1bmh3ZFMtU2ZVTFZWUmxlTUhJYnpvRW93amdsUHpfOGViN0tuck1USUtkaGV5MWRqdlEzZ1NmY2pUQ0JaM24wNGo1M0JyeEVrd1NwQ3ZVZ1Zaa2ZUZXpESE5MdTBBb29sS1V2NHhYQ1M4V0hvdHBlZFRLbEtKdUl1UU1CeHlOVmJ0ei1lSFdFWEE2YWNzTk4yVUVXeHJNT0Eyb3dwZlF2ZnVjVUtqRy1IV28zZWhJS0NMamR6Rmd3aGRna0ZhMU9BR0RzODY4amJjaEUyU01vV1l6VUhWTC10TVZsVW5qdmxyNXc4MTJvQkFxZUpMTDRNcnNPaWlRaDlCOWxCUDRuQTFuZ25P?oc=5",
-      "published": "2026-10-31T05:35:08+00:00"
+      "category": "科技产业链",
+      "title": "韩国10月半导体出口额同比增长259% 达564亿美元 - 观点网",
+      "source": "观点网",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5Ia1c1dUtoVWotbF9NS3J0c0VVVWZIX2xkRkl5WHg3NEhmajFyWE02Wm90ZHRubG1TRjhIRHYtSkxDUmctRl81eW1ZRjFaNEhJV0F1QlVSQW1ad3BkNnVic3RR?oc=5",
+      "published": "2026-11-01T10:44:40+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美联储官员接连放鹰：洛根预计至少再加息两次，穆萨莱姆呼吁尽快行动 - 华尔街见闻",
-      "source": "华尔街见闻",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5xNkpyNS1ZN0NCcVo3Q0t2M08xU0N1VzdlTGVJQWl1Smt1bUJ6X1RSWFNNVC00YTdfQmVFaGdKTDFaSjREU0pGTW50aWRaQVE5bDJN?oc=5",
-      "published": "2026-10-31T00:04:53+00:00"
+      "category": "科技产业链",
+      "title": "韩国10月半导体出口额同比增长259% 达到564亿美元 - 新浪网",
+      "source": "新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1MOGVSekJkcndqS3ZTVHNyeFpFaE1teEs5ME53aDZNVV9RRng1YVFLZkRNbExINXN2UmR0UE5jV25FeFhwRkdlQVMtbw?oc=5",
+      "published": "2026-11-01T10:33:55+00:00"
     }
   ]
 }
