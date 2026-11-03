@@ -1,16 +1,16 @@
 {
-  "as_of": "2026-10-30",
+  "as_of": "2026-10-31",
   "global_light": "green",
   "lights": {
-    "banking": "green",
+    "banking": "yellow",
     "credit": "green",
     "nonbank": "green",
     "liquidity": "green"
   },
   "core": {
-    "baa10y": 1.49,
-    "baa10y_pct": 6.305221,
-    "curve_10y3m": 0.8,
+    "baa10y": 1.53,
+    "baa10y_pct": 7.971888,
+    "curve_10y3m": 0.78,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,10 +63,15 @@
     }
   ],
   "health": {
-    "data_asof": "2026-10-29",
-    "stale_count": 24,
+    "data_asof": "2026-10-30",
+    "stale_count": 23,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_cli_br",
+      "refresh:oecd:oecd_bci_br",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -77,7 +82,8 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -627,7 +633,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -662,16 +668,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 273.0816,
-          "date": "2026-09-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -12.18
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.48,
@@ -690,31 +686,22 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
-        "market": "up",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.3614,
-          "date": "2026-09-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.491
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -736,16 +723,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 372.3822,
-          "date": "2026-09-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -3.58
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.48,
@@ -756,13 +733,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.0359,
-          "date": "2026-09-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 224.5801,
@@ -770,9 +740,13 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "巴西：增长走弱、信贷走强、市场走强，区域黄灯",
-      "degraded": []
+      "light": "green",
+      "summary": "巴西：增长缺失、信贷走强、市场缺失，区域绿灯",
+      "degraded": [
+        "oecd_cli_br",
+        "oecd_share_br",
+        "oecd_bci_br"
+      ]
     }
   },
   "oil_watch": {
@@ -800,44 +774,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.98,
-      "date": "2026-10-29",
-      "change_20d_bp": -26.0,
+      "value": 4.94,
+      "date": "2026-10-30",
+      "change_20d_bp": -34.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.32,
-      "date": "2026-10-29",
-      "change_20d_bp": -29.0,
+      "value": 5.31,
+      "date": "2026-10-30",
+      "change_20d_bp": -32.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.61,
-      "date": "2026-10-29",
-      "change_20d_bp": -17.0,
+      "value": 4.56,
+      "date": "2026-10-30",
+      "change_20d_bp": -27.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 37.0,
-      "date": "2026-10-29"
+      "value_bp": 38.0,
+      "date": "2026-10-30"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -26.0,
-      "us30y_change_20d_bp": -29.0,
+      "us10y_change_20d_bp": -34.0,
+      "us30y_change_20d_bp": -32.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.94,
-        "date": "2026-10-30",
+        "value": 4.91,
+        "date": "2026-11-02",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.31,
-        "date": "2026-10-30",
+        "value": 5.28,
+        "date": "2026-11-02",
         "source": "tushare"
       }
     }
@@ -861,24 +835,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
+      "title": "AI需求推动半导体出口增长 韩国年度出口额有望破1万亿美元大关 - 뉴스핌",
+      "source": "뉴스핌",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkVlhna2ZhXy1HSHRCREMyTS0td2M5T2ptU3I5UVRRU1ppUFExM3NaV1N2X2pOUWhLanNUN2toek94T1A2UV96T0tWNHNFVFBXMFNQRlQ5RU9zREJE?oc=5",
+      "published": "2026-11-02T22:29:00+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "韩国半导体产业“一枝独秀”存隐忧 - 中国经济网",
+      "source": "中国经济网",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFAtdDdoek9UQTJOSHZlSmpCWFF2eV9wNmFMbkxGNFAwU2N4MDFOZXU0X1R1UWIzRVVpY2U5ZHpFUi01TzdTNUJob0ZyRUVuV1FaWkJNcXI0R1A2bHAwWjFZbGVKSHMyX2xaWUw1dXZYNA?oc=5",
+      "published": "2026-11-02T22:23:00+00:00"
+    },
+    {
+      "category": "科技产业链",
       "title": "韩国拟明年翻倍投资AI与半导体 - 手机新浪网",
       "source": "手机新浪网",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9SZnJ4b1VZNFVXdkktM1dta1JRQUlfdjdxUXhpcVk2T3JYdERMQzQyUUZrcEJPazVjVlJTcng0S0ZHNGtYV1VnN3YteDU3WHJxdFl4UlVRd294dkpoWmpXbjVGVHpfb1hwaGJ4QVhERUJ6bmEzeF8yZVBnaHgyZw?oc=5",
       "published": "2026-11-02T13:49:00+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "韩国抛出史上最大AI半导体预算 - 搜狐网",
-      "source": "搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQUzB3VzliZ2x5U1l4VS03WWNUblRNWkIxUW85aGpkSmVFalVfUENzVkgzVExwYmpNREljd0xCTjZqME9pSHh4T3VQOE4wUVRwV2tzUkRSbUttWW8ycThObV8zeXhnWEVkMVdhR3dNRVVGMHNpYTIyS1RtUW5YZ1JmOFo2MUUtQzYzTjNubw?oc=5",
-      "published": "2026-11-02T10:40:24+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "韩国公布史上最大预算：AI、半导体和数据中心成投资重点 - 砍柴网",
-      "source": "砍柴网",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5WY2F4aUt3WWY3bFU1YW80T25wcHR1dDRrM3hyaWRWOWlMczl1aWFmOExjMGxLOHJtbGxvQjdnQXdqQnN3MzZFaHZBdXVIQXdFV1dmeTRIY0taMGJ2?oc=5",
-      "published": "2026-11-02T07:55:00+00:00"
     }
   ]
 }
