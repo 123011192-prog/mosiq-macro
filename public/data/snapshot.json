@@ -67,6 +67,8 @@
     "stale_count": 23,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:ecb:ecb_dfr",
+      "refresh:ecb:ecb_loan_idx",
       "refresh:oecd:oecd_bci_in",
       "refresh:oecd:oecd_share_in",
       "refresh:oecd:oecd_cli_br",
@@ -78,6 +80,7 @@
       "cycle:market_stress",
       "radar:banking",
       "radar:nonbank",
+      "regions:euro_area",
       "regions:china",
       "regions:japan",
       "regions:canada",
@@ -88,10 +91,10 @@
   },
   "regions": {
     "euro_area": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "up",
-        "policy": "down",
+        "policy": "degraded",
         "credit": "down",
         "market": "up",
         "fx": "neutral"
@@ -105,16 +108,6 @@
           "unit": "指数",
           "signal": {
             "3m_change": 0.582
-          }
-        },
-        {
-          "id": "ecb_dfr",
-          "name": "ECB 存款便利利率",
-          "value": 2.5,
-          "date": "2026-09-16",
-          "unit": "%",
-          "signal": {
-            "6m_change_pp": 0.5
           }
         },
         {
@@ -160,18 +153,14 @@
           "value": 187.6931,
           "date": "2026-09-01",
           "unit": "指数"
-        },
-        {
-          "id": "ecb_loan_idx",
-          "name": "ECB 非金融企业贷款指数",
-          "value": 130.1301,
-          "date": "2026-09-01",
-          "unit": "指数"
         }
       ],
-      "light": "orange",
-      "summary": "欧元区：增长走强、信贷走弱、市场走强，区域橙灯",
-      "degraded": []
+      "light": "yellow",
+      "summary": "欧元区：增长走强、信贷走弱、市场走强，区域黄灯",
+      "degraded": [
+        "ecb_dfr",
+        "ecb_loan_idx"
+      ]
     },
     "china": {
       "status": "degraded",
@@ -362,13 +351,13 @@
           }
         },
         {
-          "id": "oecd_share_kr",
+          "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 341.5358,
-          "date": "2026-09-01",
+          "value": 10328.33,
+          "date": "2026-11-02",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -19.04
+            "drawdown_pct": -29.43
           }
         },
         {
@@ -835,24 +824,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "AI需求推动半导体出口增长 韩国年度出口额有望破1万亿美元大关 - 뉴스핌",
-      "source": "뉴스핌",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkVlhna2ZhXy1HSHRCREMyTS0td2M5T2ptU3I5UVRRU1ppUFExM3NaV1N2X2pOUWhLanNUN2toek94T1A2UV96T0tWNHNFVFBXMFNQRlQ5RU9zREJE?oc=5",
-      "published": "2026-11-02T22:29:00+00:00"
+      "title": "韩国力争打造全球顶尖主权AI模型 4.7万亿韩元加码研发 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1NTVhjVVFGU2k4ekx5cmdNeWc5T29RdTkyZ3huN2Vkck1ScFJXTEVub1hLN0pLTFJ0akVYNlpIc0FJbW1XT1dDLQ?oc=5",
+      "published": "2026-11-03T08:22:01+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩国半导体产业“一枝独秀”存隐忧 - 中国经济网",
-      "source": "中国经济网",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFAtdDdoek9UQTJOSHZlSmpCWFF2eV9wNmFMbkxGNFAwU2N4MDFOZXU0X1R1UWIzRVVpY2U5ZHpFUi01TzdTNUJob0ZyRUVuV1FaWkJNcXI0R1A2bHAwWjFZbGVKSHMyX2xaWUw1dXZYNA?oc=5",
-      "published": "2026-11-02T22:23:00+00:00"
+      "title": "韩国抛出史上最大AI半导体预算 - ThePaper.cn",
+      "source": "ThePaper.cn",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9VLUFwN0drQm1SdnU5ay1lWjFCVWRscEJKTDJ5MmFMcUprQW5GUGg1SXpZVE91TldzRGdRVnJyMGRQNks0SEJXNlNlQ2J6MHdFT0wxM2Vyd2pValFNMGgxYQ?oc=5",
+      "published": "2026-11-03T06:19:09+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩国拟明年翻倍投资AI与半导体 - 手机新浪网",
-      "source": "手机新浪网",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9SZnJ4b1VZNFVXdkktM1dta1JRQUlfdjdxUXhpcVk2T3JYdERMQzQyUUZrcEJPazVjVlJTcng0S0ZHNGtYV1VnN3YteDU3WHJxdFl4UlVRd294dkpoWmpXbjVGVHpfb1hwaGJ4QVhERUJ6bmEzeF8yZVBnaHgyZw?oc=5",
-      "published": "2026-11-02T13:49:00+00:00"
+      "title": "利润太低不干了！三星被曝退出8英寸晶圆代工：韩国IC设计业者急寻救命产能 - 驱动之家",
+      "source": "驱动之家",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5UcU04UXVsWThVb0RKSTdKOW1LdEZNNzdkZ1p3OWoteDJuZUVDamdLYkJoWG42T1lwWEdfdHBoalp3Uy1zZXo4U01hN01CTEVnUFlPZlRiYWI?oc=5",
+      "published": "2026-11-03T06:04:00+00:00"
     }
   ]
 }
