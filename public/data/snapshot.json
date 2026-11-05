@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-04",
+  "as_of": "2026-11-05",
   "global_light": "green",
   "lights": {
     "banking": "yellow",
@@ -8,9 +8,9 @@
     "liquidity": "yellow"
   },
   "core": {
-    "baa10y": 1.54,
-    "baa10y_pct": 8.82825,
-    "curve_10y3m": 0.74,
+    "baa10y": 1.52,
+    "baa10y_pct": 7.440834,
+    "curve_10y3m": 0.69,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,10 +63,11 @@
     }
   ],
   "health": {
-    "data_asof": "2026-11-03",
+    "data_asof": "2026-11-04",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -77,7 +78,8 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -696,12 +698,12 @@
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "down",
         "policy": "up",
         "credit": "up",
-        "market": "up",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -736,16 +738,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 395.6927,
-          "date": "2026-10-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": 0.0
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.48,
@@ -771,8 +763,10 @@
         }
       ],
       "light": "yellow",
-      "summary": "巴西：增长走弱、信贷走强、市场走强，区域黄灯",
-      "degraded": []
+      "summary": "巴西：增长走弱、信贷走强、市场缺失，区域黄灯",
+      "degraded": [
+        "oecd_share_br"
+      ]
     }
   },
   "oil_watch": {
@@ -800,32 +794,32 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.95,
-      "date": "2026-11-03",
-      "change_20d_bp": -32.0,
+      "value": 4.9,
+      "date": "2026-11-04",
+      "change_20d_bp": -38.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.32,
-      "date": "2026-11-03",
-      "change_20d_bp": -32.0,
+      "value": 5.28,
+      "date": "2026-11-04",
+      "change_20d_bp": -39.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.61,
-      "date": "2026-11-03",
-      "change_20d_bp": -18.0,
+      "value": 4.58,
+      "date": "2026-11-04",
+      "change_20d_bp": -19.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 34.0,
-      "date": "2026-11-03"
+      "value_bp": 32.0,
+      "date": "2026-11-04"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -32.0,
-      "us30y_change_20d_bp": -32.0,
+      "us10y_change_20d_bp": -38.0,
+      "us30y_change_20d_bp": -39.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -860,25 +854,25 @@
   },
   "world_brief": [
     {
-      "category": "能源",
-      "title": "Chandigarh - based couple , their firms face  US sanctions over Iran oil links",
-      "source": "dailyexcelsior.com",
-      "url": "https://www.dailyexcelsior.com/chandigarh-based-couple-their-firms-face-us-sanctions-over-iran-oil-links/",
-      "published": "2026-11-05T07:15:00+00:00"
-    },
-    {
-      "category": "能源",
-      "title": "Bank of Canada can no longer look through energy price shock , Macklem warns MPs",
-      "source": "calgaryherald.com",
-      "url": "https://calgaryherald.com:443/economy/bank-of-canada-can-no-longer-look-through-energy-price-shock-macklem-warns-mps/wcm/4a7c7c62-a63c-45d7-8f5d-18f41d0d7b34",
-      "published": "2026-11-04T01:30:00+00:00"
+      "category": "地缘冲突",
+      "title": "Peso rebounds to P62 , helps stocks extend rally",
+      "source": "manilatimes.net",
+      "url": "https://www.manilatimes.net/2026/11/06/business/top-business/peso-rebounds-to-p62-helps-stocks-extend-rally/2463439",
+      "published": "2026-11-05T22:30:00+00:00"
     },
     {
       "category": "地缘冲突",
-      "title": "How Jio is unlocking hidden value for Reliance shareholders",
-      "source": "livemint.com",
-      "url": "https://www.livemint.com/market/stock-market-news/reliance-industries-holding-company-discount-jio-platforms-share-price-11793702625359.html",
-      "published": "2026-11-04T01:30:00+00:00"
+      "title": "Dont Underestimate the Importance of Tariffs As an Election Issue",
+      "source": "hotair.com",
+      "url": "https://hotair.com/david-strom/2026/11/05/dont-underestimate-the-importance-of-tariffs-as-an-election-issue-n3820698",
+      "published": "2026-11-05T22:30:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
+      "title": "MARKETS LIVE : Wall Street closes sharply lower as AI selloff wipes out post - election gains",
+      "source": "proactiveinvestors.com",
+      "url": "https://www.proactiveinvestors.com/companies/news/1101271/markets-live-wall-street-closes-sharply-lower-as-ai-selloff-wipes-out-post-election-gains-1101271.html",
+      "published": "2026-11-05T22:00:00+00:00"
     }
   ]
 }
