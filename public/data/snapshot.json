@@ -191,7 +191,7 @@
           "id": "bis_policy_cn",
           "name": "BIS 中国央行政策利率",
           "value": 3.0,
-          "date": "2026-09-01",
+          "date": "2026-10-01",
           "unit": "%",
           "signal": {
             "6m_change_pp": 0.0
@@ -247,7 +247,7 @@
         "growth": "neutral",
         "policy": "down",
         "credit": "up",
-        "market": "neutral",
+        "market": "down",
         "fx": "up"
       },
       "indicators": [
@@ -265,7 +265,7 @@
           "id": "bis_policy_jp",
           "name": "BIS 日本央行政策利率",
           "value": 1.25,
-          "date": "2026-09-01",
+          "date": "2026-10-01",
           "unit": "%",
           "signal": {
             "6m_change_pp": 0.5
@@ -284,11 +284,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 62188.63,
-          "date": "2026-11-04",
+          "value": 61077.9,
+          "date": "2026-11-05",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -14.06
+            "drawdown_pct": -15.6
           }
         },
         {
@@ -309,8 +309,8 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "日本：增长平稳、信贷走强、市场平稳，区域黄灯",
+      "light": "orange",
+      "summary": "日本：增长平稳、信贷走强、市场走弱，区域橙灯",
       "degraded": [
         "bis_spp_jp"
       ]
@@ -358,11 +358,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 10600.4,
-          "date": "2026-11-03",
+          "value": 10268.65,
+          "date": "2026-11-04",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -27.57
+            "drawdown_pct": -29.83
           }
         },
         {
@@ -418,7 +418,7 @@
           "id": "bis_policy_gb",
           "name": "BIS 英国央行政策利率",
           "value": 3.75,
-          "date": "2026-09-01",
+          "date": "2026-10-01",
           "unit": "%",
           "signal": {
             "6m_change_pp": 0.0
@@ -477,7 +477,7 @@
       "status": "degraded",
       "cycle": {
         "growth": "up",
-        "policy": "neutral",
+        "policy": "down",
         "credit": "neutral",
         "market": "up",
         "fx": "neutral"
@@ -496,11 +496,11 @@
         {
           "id": "bis_policy_ca",
           "name": "BIS 加拿大央行政策利率",
-          "value": 2.25,
-          "date": "2026-09-01",
+          "value": 2.5,
+          "date": "2026-10-01",
           "unit": "%",
           "signal": {
-            "6m_change_pp": 0.0
+            "6m_change_pp": 0.25
           }
         },
         {
@@ -541,8 +541,8 @@
           "unit": "指数"
         }
       ],
-      "light": "green",
-      "summary": "加拿大：增长走强、信贷平稳、市场走强，区域绿灯",
+      "light": "yellow",
+      "summary": "加拿大：增长走强、信贷平稳、市场走强，区域黄灯",
       "degraded": [
         "oecd_bci_ca"
       ]
@@ -719,10 +719,10 @@
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
           "value": 13.75,
-          "date": "2026-09-01",
+          "date": "2026-10-01",
           "unit": "%",
           "signal": {
-            "6m_change_pp": -1.0
+            "6m_change_pp": -0.75
           }
         },
         {
@@ -861,6 +861,13 @@
   "world_brief": [
     {
       "category": "能源",
+      "title": "Chandigarh - based couple , their firms face  US sanctions over Iran oil links",
+      "source": "dailyexcelsior.com",
+      "url": "https://www.dailyexcelsior.com/chandigarh-based-couple-their-firms-face-us-sanctions-over-iran-oil-links/",
+      "published": "2026-11-05T07:15:00+00:00"
+    },
+    {
+      "category": "能源",
       "title": "Bank of Canada can no longer look through energy price shock , Macklem warns MPs",
       "source": "calgaryherald.com",
       "url": "https://calgaryherald.com:443/economy/bank-of-canada-can-no-longer-look-through-energy-price-shock-macklem-warns-mps/wcm/4a7c7c62-a63c-45d7-8f5d-18f41d0d7b34",
@@ -871,13 +878,6 @@
       "title": "How Jio is unlocking hidden value for Reliance shareholders",
       "source": "livemint.com",
       "url": "https://www.livemint.com/market/stock-market-news/reliance-industries-holding-company-discount-jio-platforms-share-price-11793702625359.html",
-      "published": "2026-11-04T01:30:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "Japan Investment ‌Corp to sell JSR to Mitsui Chemicals in an over $8 . 20 bn deal : Report",
-      "source": "economictimes.indiatimes.com",
-      "url": "https://economictimes.indiatimes.com/news/international/business/japan-investment-corp-to-sell-jsr-to-mitsui-chemicals-in-an-over-8-20-bn-deal-report/articleshow/135517154.cms",
       "published": "2026-11-04T01:30:00+00:00"
     }
   ]
