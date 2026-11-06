@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.52,
-    "baa10y_pct": 7.440834,
+    "baa10y_pct": 7.44382,
     "curve_10y3m": 0.69,
     "curve_inverted": false
   },
@@ -67,7 +67,7 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_share_br",
+      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -703,7 +703,7 @@
         "growth": "down",
         "policy": "up",
         "credit": "up",
-        "market": "degraded",
+        "market": "up",
         "fx": "neutral"
       },
       "indicators": [
@@ -738,6 +738,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 395.6927,
+          "date": "2026-10-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": 0.0
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.48,
@@ -748,13 +758,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.0359,
-          "date": "2026-09-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 224.5801,
@@ -763,9 +766,9 @@
         }
       ],
       "light": "yellow",
-      "summary": "巴西：增长走弱、信贷走强、市场缺失，区域黄灯",
+      "summary": "巴西：增长走弱、信贷走强、市场走强，区域黄灯",
       "degraded": [
-        "oecd_share_br"
+        "oecd_bci_br"
       ]
     }
   },
@@ -825,13 +828,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.9,
-        "date": "2026-11-04",
+        "value": 4.84,
+        "date": "2026-11-05",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.28,
-        "date": "2026-11-04",
+        "value": 5.25,
+        "date": "2026-11-05",
         "source": "tushare"
       }
     }
@@ -855,24 +858,24 @@
   "world_brief": [
     {
       "category": "地缘冲突",
-      "title": "Peso rebounds to P62 , helps stocks extend rally",
-      "source": "manilatimes.net",
-      "url": "https://www.manilatimes.net/2026/11/06/business/top-business/peso-rebounds-to-p62-helps-stocks-extend-rally/2463439",
-      "published": "2026-11-05T22:30:00+00:00"
+      "title": "Asia stocks crumble after AI rout rocks US markets",
+      "source": "asiaone.com",
+      "url": "https://www.asiaone.com:443/money/asia-stocks-crumble-after-ai-rout-rocks-us-markets",
+      "published": "2026-11-06T03:00:00+00:00"
     },
     {
       "category": "地缘冲突",
-      "title": "Dont Underestimate the Importance of Tariffs As an Election Issue",
-      "source": "hotair.com",
-      "url": "https://hotair.com/david-strom/2026/11/05/dont-underestimate-the-importance-of-tariffs-as-an-election-issue-n3820698",
-      "published": "2026-11-05T22:30:00+00:00"
+      "title": "Global Market Today : Asian stocks join US selloff as AI slump deepens",
+      "source": "economictimes.indiatimes.com",
+      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-today-asian-stocks-join-us-selloff-as-ai-slump-deepens/articleshow/135589759.cms",
+      "published": "2026-11-06T02:00:00+00:00"
     },
     {
       "category": "地缘冲突",
-      "title": "MARKETS LIVE : Wall Street closes sharply lower as AI selloff wipes out post - election gains",
-      "source": "proactiveinvestors.com",
-      "url": "https://www.proactiveinvestors.com/companies/news/1101271/markets-live-wall-street-closes-sharply-lower-as-ai-selloff-wipes-out-post-election-gains-1101271.html",
-      "published": "2026-11-05T22:00:00+00:00"
+      "title": "Losing Streak May Continue For Japan Stock Market",
+      "source": "finanzen.ch",
+      "url": "https://www.finanzen.ch/nachrichten/aktien/losing-streak-may-continue-for-japan-stock-market-1036726023",
+      "published": "2026-11-06T01:00:00+00:00"
     }
   ]
 }
