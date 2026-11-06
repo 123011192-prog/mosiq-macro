@@ -67,7 +67,6 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -78,8 +77,7 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -286,11 +284,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 61077.9,
-          "date": "2026-11-05",
+          "value": 57434.77,
+          "date": "2026-11-06",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -15.6
+            "drawdown_pct": -20.63
           }
         },
         {
@@ -360,11 +358,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 10268.65,
-          "date": "2026-11-04",
+          "value": 9011.14,
+          "date": "2026-11-05",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -29.83
+            "drawdown_pct": -38.43
           }
         },
         {
@@ -698,7 +696,7 @@
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "down",
         "policy": "up",
@@ -758,6 +756,13 @@
           }
         },
         {
+          "id": "oecd_bci_br",
+          "name": "OECD 巴西商业信心指数 BCI",
+          "value": 99.0359,
+          "date": "2026-09-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 224.5801,
@@ -767,9 +772,7 @@
       ],
       "light": "yellow",
       "summary": "巴西：增长走弱、信贷走强、市场走强，区域黄灯",
-      "degraded": [
-        "oecd_bci_br"
-      ]
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -857,25 +860,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "Asia stocks crumble after AI rout rocks US markets",
-      "source": "asiaone.com",
-      "url": "https://www.asiaone.com:443/money/asia-stocks-crumble-after-ai-rout-rocks-us-markets",
-      "published": "2026-11-06T03:00:00+00:00"
+      "category": "科技产业链",
+      "title": "【韩股收盘】 美股半导体股暴跌拖累韩股 KOSPI跌逾6%勉强守住5000点 - 뉴스핌",
+      "source": "뉴스핌",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9HaDctRVc2TGEzZkV6OTlOSGZ4QllDS2dFanRWaEhNVWhHdnpxUzFpM2FYaGdjSjk4SUp1dTZndlQ0emhjMDgyY19rLXFvSEJNZzFiRnR5aHotM0RF?oc=5",
+      "published": "2026-11-06T07:13:00+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "Global Market Today : Asian stocks join US selloff as AI slump deepens",
-      "source": "economictimes.indiatimes.com",
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-today-asian-stocks-join-us-selloff-as-ai-slump-deepens/articleshow/135589759.cms",
-      "published": "2026-11-06T02:00:00+00:00"
+      "category": "科技产业链",
+      "title": "美国中期选举掀起“蓝色海啸”，AI监管预期冲击韩国半导体股: 财经新闻 - 韩民族日报",
+      "source": "韩民族日报",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9uOWtrcDFsWENKTFluTEFFVXFQbHlRZTFoSzBwVVFXeWFIdnZZeGNlcDhfSTczeVd5TTdvOXg0T1FsVkdMOWpXNGtSTFZVY2w4V3VTakpueVNoZ185?oc=5",
+      "published": "2026-11-06T06:55:00+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "Losing Streak May Continue For Japan Stock Market",
-      "source": "finanzen.ch",
-      "url": "https://www.finanzen.ch/nachrichten/aktien/losing-streak-may-continue-for-japan-stock-market-1036726023",
-      "published": "2026-11-06T01:00:00+00:00"
+      "category": "科技产业链",
+      "title": "韩国财政经济部副部长强基龙会见半导体专家，检查人工智能投资与需求 - 亚洲日报",
+      "source": "亚洲日报",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1NWE9vUWFtSGdzeU9TOE04VWlDd0dpWFRYc2V4d3Z1VkxnNTF3NlVWdzFZUkRVRjhnVUFJTmswZkNNb29xVHlNUnA1MGktZWFIbkhTWlp0TTFKaU4xZUNRdUtR?oc=5",
+      "published": "2026-11-06T06:52:00+00:00"
     }
   ]
 }
