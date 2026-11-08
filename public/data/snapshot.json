@@ -67,9 +67,6 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
-      "refresh:oecd:oecd_share_in",
-      "refresh:oecd:oecd_cli_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -80,8 +77,7 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -631,7 +627,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -666,6 +662,16 @@
           }
         },
         {
+          "id": "oecd_share_in",
+          "name": "OECD 印度股价指数（NIFTY 代理）",
+          "value": 267.4428,
+          "date": "2026-10-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -13.99
+          }
+        },
+        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.48,
@@ -684,22 +690,31 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
-        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
-        "growth": "degraded",
+        "growth": "down",
         "policy": "up",
         "credit": "up",
         "market": "up",
         "fx": "neutral"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_br",
+          "name": "OECD 巴西综合领先指标 CLI",
+          "value": 102.3614,
+          "date": "2026-09-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.491
+          }
+        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -755,11 +770,9 @@
           "unit": "指数"
         }
       ],
-      "light": "green",
-      "summary": "巴西：增长缺失、信贷走强、市场走强，区域绿灯",
-      "degraded": [
-        "oecd_cli_br"
-      ]
+      "light": "yellow",
+      "summary": "巴西：增长走弱、信贷走强、市场走强，区域黄灯",
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -847,25 +860,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "“看看这个数字……半导体投资放缓期，存储器最先走弱”［深度财富对话］ - 매일경제",
-      "source": "매일경제",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE54VXZ5ODRoaUZkUERXbzlXMG1JaTdKQmZHekR0MXhRcHNqZlBvbHRPc2hiUnVQRkkxTzRkalI5YnkzakdaOXRReklJaHJzVlBKcVc4?oc=5",
-      "published": "2026-11-08T08:19:06+00:00"
+      "category": "货币政策",
+      "title": "If the Fed Raises Interest Rates in December , Im Making This 1 Investing Move",
+      "source": "fool.com",
+      "url": "https://www.fool.com/investing/2026/11/08/if-the-fed-raises-interest-rates-in-december-im-ma/",
+      "published": "2026-11-08T09:00:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美国通胀报告将成美联储加息下一道考验 10月新增16.5万个岗位后市场押注12月再加息 - 币界网",
-      "source": "币界网",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1UX0Q2Q056Qnl2NjhHVzNEY3ZQLW5mdXBVOXduWFo5dkMxMDlNMnJkV2NWUUlJazQyY3BIY1FvQ2RZbndSQVl6WV9KWHo4X2FfR1E?oc=5",
-      "published": "2026-11-07T18:31:00+00:00"
+      "title": "Inflation , housing , jobs and corporate earnings will dominate the business calendar this week",
+      "source": "japantoday.com",
+      "url": "https://japantoday.com/category/business/inflation-housing-jobs-and-corporate-earnings-will-dominate-the-business-calendar-this-week",
+      "published": "2026-11-08T00:00:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美国银行警告：油价上涨或迫使美联储重新考虑利率政策 - TradingView",
-      "source": "TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE95RXh6Uml3LURWVXJBamVrMkxJa2F4SjhCU1huU0ZRYjg1MmY4b0EtX2wzTW1Xa0wxeWtOaXUydkRlczJZWDhpZlBNNlR3LTRzX2FrTHZCOUF6NWd3NTNLZXpmMnM0dw?oc=5",
-      "published": "2026-11-07T12:41:26+00:00"
+      "category": "地缘冲突",
+      "title": "From high - flying AI stocks to tariff - hit alcohol companies , the midterms shook up Wall Street",
+      "source": "abcnews.com",
+      "url": "https://abcnews.com/Business/wireStory/high-flying-ai-stocks-tariff-hit-alcohol-companies-137938660",
+      "published": "2026-11-07T18:00:00+00:00"
     }
   ]
 }
