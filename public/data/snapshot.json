@@ -67,7 +67,6 @@
     "stale_count": 23,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -77,8 +76,7 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -290,11 +288,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 58775.5,
-          "date": "2026-11-09",
+          "value": 60459.58,
+          "date": "2026-11-10",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -18.78
+            "drawdown_pct": -16.45
           }
         },
         {
@@ -362,13 +360,13 @@
           }
         },
         {
-          "id": "oecd_share_kr",
+          "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 304.1063,
-          "date": "2026-10-01",
+          "value": 10033.93,
+          "date": "2026-11-09",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -27.91
+            "drawdown_pct": -31.44
           }
         },
         {
@@ -702,12 +700,12 @@
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "neutral",
         "policy": "up",
         "credit": "up",
-        "market": "degraded",
+        "market": "up",
         "fx": "neutral"
       },
       "indicators": [
@@ -742,6 +740,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 395.6927,
+          "date": "2026-10-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": 0.0
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.48,
@@ -767,10 +775,8 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长平稳、信贷走强、市场缺失，区域绿灯",
-      "degraded": [
-        "oecd_share_br"
-      ]
+      "summary": "巴西：增长平稳、信贷走强、市场走强，区域绿灯",
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -858,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "Henkel Korea拟在首尔投资121亿韩元 扩建半导体先进封装材料研发中心 - 디지털투데이",
-      "source": "디지털투데이",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPalJpOW1fSDBRLXBmYnlzWHp1MDROMmNFbUZRaEZhSzdoVUlzTkI4ckxvN3J6a2UwSk1yYnBLSDB4aGN0VWJvVkVjWDB5eF9oVlByVWJjdUIwa19pWW1zN2RWZ2lXT0NSb2tpMmRpRkx6XzlIblFCT3l3ZlRtWmczWTRxbVhrdTlEQml5SjBqOW5Vc0g2eV9qM3Vja3BGYmFWaEQ2UDZ1WVp5TEg4UkgtajBidVRndw?oc=5",
-      "published": "2026-11-09T23:55:20+00:00"
+      "category": "地缘冲突",
+      "title": "Daily Voice : Double - digit equity returns possible by end of Samvat 2083 ? Nimesh Chandan bets on private sector banks , internet platforms",
+      "source": "moneycontrol.com",
+      "url": "https://www.moneycontrol.com/news/business/markets/daily-voice-double-digit-equity-returns-possible-by-end-of-samvat-2083-nimesh-chandan-bets-on-private-sector-banks-internet-platforms-14075900.html",
+      "published": "2026-11-10T04:30:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "科技股买盘涌入、国际油价骤跌……预计韩国股市高开[早安股市] - 아시아경제",
-      "source": "아시아경제",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE00bXB1QUd2X1paTHdOR2c3V3VSeW1YUkJwZk5ua3VhLWZ4dko0QndqSHhLdE9LLVVJdU92YWpvWDBYdHl3TDFFSUcyS0ZkTGx0S0tDQU1IRmt5Skh2U2lObXVXQkM?oc=5",
-      "published": "2026-11-09T22:58:39+00:00"
+      "category": "地缘冲突",
+      "title": "Canada expands US tariff exemptions , cuts some aluminum relief",
+      "source": "moneycontrol.com",
+      "url": "https://www.moneycontrol.com/world/canada-expands-us-tariff-exemptions-cuts-some-aluminum-relief-article-14075839.html",
+      "published": "2026-11-10T04:30:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美联储古尔斯比警告AI建设或致需求过热，巴尔金呼吁谨慎调整利率 - 新闻和统计 - IndexBox",
-      "source": "IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQYWV6Y29NcVJJQ0lUbGdXREE0QTdodVNOdVphMGY1WVdTczVZSThndm1mMExNZmp2NXJkX3ZaZzZiMHV0blNIVnlnTC11YThpa0VJdmlzZmd4NGV2N0g5ajhqcjRERGFTTnF3NUd5RVIyNmtoY2lJQmx2ajJKZkpzZE5pN2ZqY09oZ2J5T3RfT2tFcFRuQUdXeHlFUHUyd1p0RmVydFctSnpjU1U5UlQxSnVYd3V0NlNiYVctMl8yTXpyd0E?oc=5",
-      "published": "2026-11-09T20:10:54+00:00"
+      "category": "能源",
+      "title": "Asian stocks climb as sliding oil prices lift sentiment",
+      "source": "illawarramercury.com.au",
+      "url": "https://www.illawarramercury.com.au/story/9389055/asian-stocks-climb-as-sliding-oil-prices-lift-sentiment/",
+      "published": "2026-11-10T04:30:00+00:00"
     }
   ]
 }
