@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-07",
+  "as_of": "2026-11-10",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -8,9 +8,9 @@
     "liquidity": "yellow"
   },
   "core": {
-    "baa10y": 1.56,
-    "baa10y_pct": 10.357286,
-    "curve_10y3m": 0.67,
+    "baa10y": 1.51,
+    "baa10y_pct": 7.082665,
+    "curve_10y3m": 0.64,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,16 +63,18 @@
     }
   ],
   "health": {
-    "data_asof": "2026-11-06",
-    "stale_count": 23,
+    "data_asof": "2026-11-09",
+    "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:ecb:ecb_loan_idx",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
       "cycle:market_stress",
       "radar:banking",
       "radar:nonbank",
+      "regions:euro_area",
       "regions:japan",
       "regions:canada",
       "regions:australia",
@@ -81,7 +83,7 @@
   },
   "regions": {
     "euro_area": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "up",
         "policy": "down",
@@ -153,18 +155,13 @@
           "value": 187.6931,
           "date": "2026-09-01",
           "unit": "指数"
-        },
-        {
-          "id": "ecb_loan_idx",
-          "name": "ECB 非金融企业贷款指数",
-          "value": 130.1301,
-          "date": "2026-09-01",
-          "unit": "指数"
         }
       ],
       "light": "orange",
       "summary": "欧元区：增长走强、信贷走弱、市场走强，区域橙灯",
-      "degraded": []
+      "degraded": [
+        "ecb_loan_idx"
+      ]
     },
     "china": {
       "status": "ok",
@@ -804,31 +801,31 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.86,
-      "date": "2026-11-06",
-      "change_20d_bp": -38.0,
+      "value": 4.88,
+      "date": "2026-11-09",
+      "change_20d_bp": -36.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.26,
-      "date": "2026-11-06",
+      "date": "2026-11-09",
       "change_20d_bp": -34.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.51,
-      "date": "2026-11-06",
-      "change_20d_bp": -29.0,
+      "value": 4.56,
+      "date": "2026-11-09",
+      "change_20d_bp": -24.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 35.0,
-      "date": "2026-11-06"
+      "value_bp": 32.0,
+      "date": "2026-11-09"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -38.0,
+      "us10y_change_20d_bp": -36.0,
       "us30y_change_20d_bp": -34.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
