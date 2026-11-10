@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-11-06",
+  "as_of": "2026-11-07",
   "global_light": "green",
   "lights": {
-    "banking": "yellow",
+    "banking": "green",
     "credit": "green",
     "nonbank": "green",
     "liquidity": "yellow"
   },
   "core": {
-    "baa10y": 1.57,
-    "baa10y_pct": 11.120032,
+    "baa10y": 1.56,
+    "baa10y_pct": 10.357286,
     "curve_10y3m": 0.67,
     "curve_inverted": false
   },
@@ -63,21 +63,22 @@
     }
   ],
   "health": {
-    "data_asof": "2026-11-05",
-    "stale_count": 24,
+    "data_asof": "2026-11-06",
+    "stale_count": 23,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
       "cycle:market_stress",
       "radar:banking",
       "radar:nonbank",
-      "regions:china",
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -94,11 +95,11 @@
         {
           "id": "oecd_bci_ea20",
           "name": "OECD 欧元区商业信心指数 BCI",
-          "value": 100.1932,
-          "date": "2026-09-01",
+          "value": 100.3053,
+          "date": "2026-10-01",
           "unit": "指数",
           "signal": {
-            "3m_change": 0.582
+            "3m_change": 0.539
           }
         },
         {
@@ -168,7 +169,7 @@
       "degraded": []
     },
     "china": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "down",
         "policy": "neutral",
@@ -180,11 +181,11 @@
         {
           "id": "oecd_cli_cn",
           "name": "OECD 中国综合领先指标 CLI",
-          "value": 97.4103,
-          "date": "2026-09-01",
+          "value": 97.1306,
+          "date": "2026-10-01",
           "unit": "指数",
           "signal": {
-            "3m_change": -0.74
+            "3m_change": -0.841
           }
         },
         {
@@ -228,6 +229,13 @@
           }
         },
         {
+          "id": "oecd_bci_cn",
+          "name": "OECD 中国商业信心指数 BCI",
+          "value": 98.2725,
+          "date": "2026-10-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_cn",
           "name": "BIS 中国住宅房价指数",
           "value": 112.9201,
@@ -237,9 +245,7 @@
       ],
       "light": "yellow",
       "summary": "中国：增长走弱、信贷走强、市场平稳，区域黄灯",
-      "degraded": [
-        "oecd_bci_cn"
-      ]
+      "degraded": []
     },
     "japan": {
       "status": "degraded",
@@ -254,11 +260,11 @@
         {
           "id": "oecd_cli_jp",
           "name": "OECD 日本综合领先指标 CLI",
-          "value": 100.3472,
-          "date": "2026-09-01",
+          "value": 100.2095,
+          "date": "2026-10-01",
           "unit": "指数",
           "signal": {
-            "3m_change": 0.104
+            "3m_change": -0.029
           }
         },
         {
@@ -284,11 +290,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 57434.77,
-          "date": "2026-11-06",
+          "value": 58775.5,
+          "date": "2026-11-09",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -20.63
+            "drawdown_pct": -18.78
           }
         },
         {
@@ -318,7 +324,7 @@
     "korea": {
       "status": "ok",
       "cycle": {
-        "growth": "neutral",
+        "growth": "down",
         "policy": "down",
         "credit": "down",
         "market": "down",
@@ -328,11 +334,11 @@
         {
           "id": "oecd_cli_kr",
           "name": "OECD 韩国综合领先指标 CLI",
-          "value": 102.531,
-          "date": "2026-09-01",
+          "value": 101.9779,
+          "date": "2026-10-01",
           "unit": "指数",
           "signal": {
-            "3m_change": -0.055
+            "3m_change": -0.551
           }
         },
         {
@@ -356,13 +362,13 @@
           }
         },
         {
-          "id": "fred_sox",
+          "id": "oecd_share_kr",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 9390.25,
-          "date": "2026-11-06",
+          "value": 304.1063,
+          "date": "2026-10-01",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -35.84
+            "drawdown_pct": -27.91
           }
         },
         {
@@ -378,8 +384,8 @@
         {
           "id": "oecd_bci_kr",
           "name": "OECD 韩国商业信心指数 BCI",
-          "value": 99.4137,
-          "date": "2026-09-01",
+          "value": 99.6258,
+          "date": "2026-10-01",
           "unit": "指数"
         },
         {
@@ -391,7 +397,7 @@
         }
       ],
       "light": "red",
-      "summary": "韩国：增长平稳、信贷走弱、市场走弱，区域红灯",
+      "summary": "韩国：增长走弱、信贷走弱、市场走弱，区域红灯",
       "degraded": []
     },
     "uk": {
@@ -407,11 +413,11 @@
         {
           "id": "oecd_cli_gb",
           "name": "OECD 英国综合领先指标 CLI",
-          "value": 101.3762,
-          "date": "2026-09-01",
+          "value": 101.4263,
+          "date": "2026-10-01",
           "unit": "指数",
           "signal": {
-            "3m_change": 0.77
+            "3m_change": 0.483
           }
         },
         {
@@ -457,8 +463,8 @@
         {
           "id": "oecd_bci_gb",
           "name": "OECD 英国商业信心指数 BCI",
-          "value": 101.4473,
-          "date": "2026-09-01",
+          "value": 101.6612,
+          "date": "2026-10-01",
           "unit": "指数"
         },
         {
@@ -486,11 +492,11 @@
         {
           "id": "oecd_cli_ca",
           "name": "OECD 加拿大综合领先指标 CLI",
-          "value": 101.9154,
-          "date": "2026-09-01",
+          "value": 101.7892,
+          "date": "2026-10-01",
           "unit": "指数",
           "signal": {
-            "3m_change": 0.357
+            "3m_change": 0.172
           }
         },
         {
@@ -550,7 +556,7 @@
     "australia": {
       "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "neutral",
         "policy": "down",
         "credit": "up",
         "market": "up",
@@ -560,11 +566,11 @@
         {
           "id": "oecd_cli_au",
           "name": "OECD 澳大利亚综合领先指标 CLI",
-          "value": 99.9505,
-          "date": "2026-09-01",
+          "value": 99.9724,
+          "date": "2026-10-01",
           "unit": "指数",
           "signal": {
-            "3m_change": -0.181
+            "3m_change": -0.077
           }
         },
         {
@@ -615,8 +621,8 @@
           "unit": "指数"
         }
       ],
-      "light": "orange",
-      "summary": "澳大利亚：增长走弱、信贷走强、市场走强，区域橙灯",
+      "light": "yellow",
+      "summary": "澳大利亚：增长平稳、信贷走强、市场走强，区域黄灯",
       "degraded": [
         "oecd_bci_au"
       ]
@@ -634,11 +640,11 @@
         {
           "id": "oecd_cli_in",
           "name": "OECD 印度综合领先指标 CLI",
-          "value": 102.0041,
-          "date": "2026-09-01",
+          "value": 101.4458,
+          "date": "2026-10-01",
           "unit": "指数",
           "signal": {
-            "3m_change": 0.552
+            "3m_change": 0.192
           }
         },
         {
@@ -696,23 +702,23 @@
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
-        "growth": "down",
+        "growth": "neutral",
         "policy": "up",
         "credit": "up",
-        "market": "up",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
         {
           "id": "oecd_cli_br",
           "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.3614,
-          "date": "2026-09-01",
+          "value": 102.4283,
+          "date": "2026-10-01",
           "unit": "指数",
           "signal": {
-            "3m_change": -0.491
+            "3m_change": -0.028
           }
         },
         {
@@ -736,16 +742,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 395.6927,
-          "date": "2026-10-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": 0.0
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.48,
@@ -758,8 +754,8 @@
         {
           "id": "oecd_bci_br",
           "name": "OECD 巴西商业信心指数 BCI",
-          "value": 99.0359,
-          "date": "2026-09-01",
+          "value": 98.8526,
+          "date": "2026-10-01",
           "unit": "指数"
         },
         {
@@ -770,9 +766,11 @@
           "unit": "指数"
         }
       ],
-      "light": "yellow",
-      "summary": "巴西：增长走弱、信贷走强、市场走强，区域黄灯",
-      "degraded": []
+      "light": "green",
+      "summary": "巴西：增长平稳、信贷走强、市场缺失，区域绿灯",
+      "degraded": [
+        "oecd_share_br"
+      ]
     }
   },
   "oil_watch": {
@@ -800,44 +798,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.84,
-      "date": "2026-11-05",
+      "value": 4.86,
+      "date": "2026-11-06",
       "change_20d_bp": -38.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.25,
-      "date": "2026-11-05",
-      "change_20d_bp": -35.0,
+      "value": 5.26,
+      "date": "2026-11-06",
+      "change_20d_bp": -34.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.46,
-      "date": "2026-11-05",
+      "value": 4.51,
+      "date": "2026-11-06",
       "change_20d_bp": -29.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 38.0,
-      "date": "2026-11-05"
+      "value_bp": 35.0,
+      "date": "2026-11-06"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
       "us10y_change_20d_bp": -38.0,
-      "us30y_change_20d_bp": -35.0,
+      "us30y_change_20d_bp": -34.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.86,
-        "date": "2026-11-06",
+        "value": 4.88,
+        "date": "2026-11-09",
         "source": "tushare"
       },
       "us30y": {
         "value": 5.26,
-        "date": "2026-11-06",
+        "date": "2026-11-09",
         "source": "tushare"
       }
     }
@@ -860,25 +858,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "If the Fed Raises Interest Rates in December , Im Making This 1 Investing Move",
-      "source": "fool.com",
-      "url": "https://www.fool.com/investing/2026/11/08/if-the-fed-raises-interest-rates-in-december-im-ma/",
-      "published": "2026-11-08T09:00:00+00:00"
+      "category": "科技产业链",
+      "title": "Henkel Korea拟在首尔投资121亿韩元 扩建半导体先进封装材料研发中心 - 디지털투데이",
+      "source": "디지털투데이",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPalJpOW1fSDBRLXBmYnlzWHp1MDROMmNFbUZRaEZhSzdoVUlzTkI4ckxvN3J6a2UwSk1yYnBLSDB4aGN0VWJvVkVjWDB5eF9oVlByVWJjdUIwa19pWW1zN2RWZ2lXT0NSb2tpMmRpRkx6XzlIblFCT3l3ZlRtWmczWTRxbVhrdTlEQml5SjBqOW5Vc0g2eV9qM3Vja3BGYmFWaEQ2UDZ1WVp5TEg4UkgtajBidVRndw?oc=5",
+      "published": "2026-11-09T23:55:20+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "科技股买盘涌入、国际油价骤跌……预计韩国股市高开[早安股市] - 아시아경제",
+      "source": "아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE00bXB1QUd2X1paTHdOR2c3V3VSeW1YUkJwZk5ua3VhLWZ4dko0QndqSHhLdE9LLVVJdU92YWpvWDBYdHl3TDFFSUcyS0ZkTGx0S0tDQU1IRmt5Skh2U2lObXVXQkM?oc=5",
+      "published": "2026-11-09T22:58:39+00:00"
     },
     {
       "category": "货币政策",
-      "title": "Inflation , housing , jobs and corporate earnings will dominate the business calendar this week",
-      "source": "japantoday.com",
-      "url": "https://japantoday.com/category/business/inflation-housing-jobs-and-corporate-earnings-will-dominate-the-business-calendar-this-week",
-      "published": "2026-11-08T00:00:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "From high - flying AI stocks to tariff - hit alcohol companies , the midterms shook up Wall Street",
-      "source": "abcnews.com",
-      "url": "https://abcnews.com/Business/wireStory/high-flying-ai-stocks-tariff-hit-alcohol-companies-137938660",
-      "published": "2026-11-07T18:00:00+00:00"
+      "title": "美联储古尔斯比警告AI建设或致需求过热，巴尔金呼吁谨慎调整利率 - 新闻和统计 - IndexBox",
+      "source": "IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQYWV6Y29NcVJJQ0lUbGdXREE0QTdodVNOdVphMGY1WVdTczVZSThndm1mMExNZmp2NXJkX3ZaZzZiMHV0blNIVnlnTC11YThpa0VJdmlzZmd4NGV2N0g5ajhqcjRERGFTTnF3NUd5RVIyNmtoY2lJQmx2ajJKZkpzZE5pN2ZqY09oZ2J5T3RfT2tFcFRuQUdXeHlFUHUyd1p0RmVydFctSnpjU1U5UlQxSnVYd3V0NlNiYVctMl8yTXpyd0E?oc=5",
+      "published": "2026-11-09T20:10:54+00:00"
     }
   ]
 }
