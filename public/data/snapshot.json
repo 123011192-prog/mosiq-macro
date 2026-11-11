@@ -67,6 +67,8 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_cli_br",
+      "refresh:oecd:oecd_bci_br",
       "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
@@ -364,11 +366,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 10033.93,
-          "date": "2026-11-09",
+          "value": 9998.33,
+          "date": "2026-11-10",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -31.44
+            "drawdown_pct": -31.68
           }
         },
         {
@@ -704,23 +706,13 @@
     "brazil": {
       "status": "degraded",
       "cycle": {
-        "growth": "neutral",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
         "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.4283,
-          "date": "2026-10-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.028
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -752,13 +744,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 98.8526,
-          "date": "2026-10-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 224.5801,
@@ -767,9 +752,11 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长平稳、信贷走强、市场缺失，区域绿灯",
+      "summary": "巴西：增长缺失、信贷走强、市场缺失，区域绿灯",
       "degraded": [
-        "oecd_share_br"
+        "oecd_cli_br",
+        "oecd_share_br",
+        "oecd_bci_br"
       ]
     }
   },
@@ -858,25 +845,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "Cramer : Dont leave stocks over inflation , Nvidia worries",
-      "source": "cnbc.com",
-      "url": "https://www.cnbc.com/2026/11/10/cramer-stocks-inflation-nvidia-anthropic.html",
-      "published": "2026-11-11T01:30:00+00:00"
+      "category": "科技产业链",
+      "title": "韩国半导体出口持续增长 全年出口额有望首次突破1万亿美元 - 中国新闻网",
+      "source": "中国新闻网",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5Ndi1mUHpzRzFOLU92djR1a002bFBjV2l5Uk9DWUpmcFR3U2Uxa1ZKTlJCTjA5T2tLOHRERGoxQmg0dTcyTGEybGRELUpRcDRTNklzY3NFdWJCdGp5R0RMcklZakFRZms4?oc=5",
+      "published": "2026-11-11T12:28:05+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "KOSPI May See Renewed Consolidation On Wednesday",
-      "source": "finanzen.ch",
-      "url": "https://www.finanzen.ch/nachrichten/aktien/kospi-may-see-renewed-consolidation-on-wednesday-1036745070",
-      "published": "2026-11-11T01:00:00+00:00"
+      "category": "货币政策",
+      "title": "美元指数企稳，中东紧张局势与美国CPI数据左右美联储利率预期 - VT Markets",
+      "source": "VT Markets",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOOXdrYlE3Y0FIY19iVC1XOGNnelhqMGpySVJnZEVoZHd6RVFXbzVoTFIzWUMyc3EzTjg3anRnR3V2OExyTFhkX2lIR3F0bTAtTG5jeEtMeVpwMVJsQTJnUVBFbXNiaVItWEZ0Rm9Dcngzb1VMTEQ2VFl2bmxBX2xfTzJBc3FkUkROWnY2TnR1VDl4YURkRVEzOE5MNGlXTndRVDNScE5tVUJZV19Zd2pwNjVMUEY2M1MyZjdmV0VrZV9KamJ5VGlMaVdR?oc=5",
+      "published": "2026-11-11T11:43:31+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "Tech Shares May Weigh On Taiwan Stock Market",
-      "source": "finanzen.ch",
-      "url": "https://www.finanzen.ch/nachrichten/aktien/tech-shares-may-weigh-on-taiwan-stock-market-1036745599",
-      "published": "2026-11-11T01:00:00+00:00"
+      "category": "货币政策",
+      "title": "随着美联储加息预期升温、市场焦点转向美国CPI，黄金企稳于4,100美元上方 - VT Markets",
+      "source": "VT Markets",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPT0kycFlwT2tiaVJhRTdVZlpHYTF0VjNvZUVyX2RnNFUyY3lDZUZwRmlaOWh3VUp0NTNoN3FfcENST0U0TzhEaWh4NnJBNzJ2T2gyZWNqdmhRTjJORml4bGR3dGQtZjlsRER5LVFGU0hFb0hxeW9fZFQ3NjRxU2NRMkpiOGxieWlmWFZYNmRHVU1odUt0eENVN2t1THk0N0dEeExQUnQ3SGpVRHE4UnNKbmpFVFgtQjJaXy0yVg?oc=5",
+      "published": "2026-11-11T11:43:28+00:00"
     }
   ]
 }
