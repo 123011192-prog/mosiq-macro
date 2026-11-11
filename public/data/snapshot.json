@@ -67,23 +67,23 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:ecb:ecb_loan_idx",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
       "cycle:market_stress",
       "radar:banking",
       "radar:nonbank",
-      "regions:euro_area",
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
     "euro_area": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "up",
         "policy": "down",
@@ -155,13 +155,18 @@
           "value": 187.6931,
           "date": "2026-09-01",
           "unit": "指数"
+        },
+        {
+          "id": "ecb_loan_idx",
+          "name": "ECB 非金融企业贷款指数",
+          "value": 130.1301,
+          "date": "2026-09-01",
+          "unit": "指数"
         }
       ],
       "light": "orange",
       "summary": "欧元区：增长走强、信贷走弱、市场走强，区域橙灯",
-      "degraded": [
-        "ecb_loan_idx"
-      ]
+      "degraded": []
     },
     "china": {
       "status": "ok",
@@ -697,12 +702,12 @@
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "neutral",
         "policy": "up",
         "credit": "up",
-        "market": "up",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -737,16 +742,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 395.6927,
-          "date": "2026-10-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": 0.0
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.48,
@@ -772,8 +767,10 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长平稳、信贷走强、市场走强，区域绿灯",
-      "degraded": []
+      "summary": "巴西：增长平稳、信贷走强、市场缺失，区域绿灯",
+      "degraded": [
+        "oecd_share_br"
+      ]
     }
   },
   "oil_watch": {
@@ -832,13 +829,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.88,
-        "date": "2026-11-09",
+        "value": 4.98,
+        "date": "2026-11-10",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.26,
-        "date": "2026-11-09",
+        "value": 5.35,
+        "date": "2026-11-10",
         "source": "tushare"
       }
     }
@@ -862,24 +859,24 @@
   "world_brief": [
     {
       "category": "地缘冲突",
-      "title": "Daily Voice : Double - digit equity returns possible by end of Samvat 2083 ? Nimesh Chandan bets on private sector banks , internet platforms",
-      "source": "moneycontrol.com",
-      "url": "https://www.moneycontrol.com/news/business/markets/daily-voice-double-digit-equity-returns-possible-by-end-of-samvat-2083-nimesh-chandan-bets-on-private-sector-banks-internet-platforms-14075900.html",
-      "published": "2026-11-10T04:30:00+00:00"
+      "title": "Cramer : Dont leave stocks over inflation , Nvidia worries",
+      "source": "cnbc.com",
+      "url": "https://www.cnbc.com/2026/11/10/cramer-stocks-inflation-nvidia-anthropic.html",
+      "published": "2026-11-11T01:30:00+00:00"
     },
     {
       "category": "地缘冲突",
-      "title": "Canada expands US tariff exemptions , cuts some aluminum relief",
-      "source": "moneycontrol.com",
-      "url": "https://www.moneycontrol.com/world/canada-expands-us-tariff-exemptions-cuts-some-aluminum-relief-article-14075839.html",
-      "published": "2026-11-10T04:30:00+00:00"
+      "title": "KOSPI May See Renewed Consolidation On Wednesday",
+      "source": "finanzen.ch",
+      "url": "https://www.finanzen.ch/nachrichten/aktien/kospi-may-see-renewed-consolidation-on-wednesday-1036745070",
+      "published": "2026-11-11T01:00:00+00:00"
     },
     {
-      "category": "能源",
-      "title": "Asian stocks climb as sliding oil prices lift sentiment",
-      "source": "illawarramercury.com.au",
-      "url": "https://www.illawarramercury.com.au/story/9389055/asian-stocks-climb-as-sliding-oil-prices-lift-sentiment/",
-      "published": "2026-11-10T04:30:00+00:00"
+      "category": "地缘冲突",
+      "title": "Tech Shares May Weigh On Taiwan Stock Market",
+      "source": "finanzen.ch",
+      "url": "https://www.finanzen.ch/nachrichten/aktien/tech-shares-may-weigh-on-taiwan-stock-market-1036745599",
+      "published": "2026-11-11T01:00:00+00:00"
     }
   ]
 }
