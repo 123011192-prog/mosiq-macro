@@ -67,6 +67,7 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -288,11 +289,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 61248.59,
-          "date": "2026-11-11",
+          "value": 60819.36,
+          "date": "2026-11-12",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -15.36
+            "drawdown_pct": -15.96
           }
         },
         {
@@ -343,7 +344,7 @@
           "id": "bis_policy_kr",
           "name": "BIS 韩国央行政策利率",
           "value": 3.0,
-          "date": "2026-09-01",
+          "date": "2026-10-01",
           "unit": "%",
           "signal": {
             "6m_change_pp": 0.5
@@ -362,11 +363,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 9998.33,
-          "date": "2026-11-10",
+          "value": 10564.11,
+          "date": "2026-11-11",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -31.68
+            "drawdown_pct": -27.81
           }
         },
         {
@@ -575,7 +576,7 @@
           "id": "bis_policy_au",
           "name": "BIS 澳大利亚央行政策利率",
           "value": 4.6,
-          "date": "2026-09-01",
+          "date": "2026-10-01",
           "unit": "%",
           "signal": {
             "6m_change_pp": 0.5
@@ -865,24 +866,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "半导体助推韩国今年对美顺差料达170万亿韩元……会成特朗普的“靶子”吗？ : 财经新闻 - 韩民族日报",
-      "source": "韩民族日报",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8wRFl4OXQwT0dIaW1jQnlnZi15NG9VSkdXWG5SaFI2VnNRcE5WNkozcHNZdUlsbmZxeHhrTHJkV1BNS2dXN2l6X215Ym5aaWpQdDZGLWxSbVY4VlVq?oc=5",
-      "published": "2026-11-12T03:51:00+00:00"
+      "title": "韩国产业通商资源部公布端侧AI半导体路线图 项目总额8002亿韩元 - 观点网",
+      "source": "观点网",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBrNW1LeUs2Q2ZUZDUxbmY4Sng2YkY4blNsTVFON1hITXJjMjh5ZVpJeGRVdnNmOHB1Z0lQNWdsT0xxaVNhR0UzSGJWeWFVTXBraVc3dUJZWi0xTURWUm9iSndn?oc=5",
+      "published": "2026-11-12T11:29:21+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩国11月上旬出口334.6亿美元 半导体出口同比增331.2% - 观点网",
-      "source": "观点网",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBxVDRMZExEZzRhb1A4YUh3Rms5c2lUeExKSmdhRV9YVU1rY3haM2RPSTZvTTFGZldud3hUbzB3NFpScG9jaHZIeWo2MU1FVlA4ZXZlQkk3QnlBWTM5SXpZMkNR?oc=5",
-      "published": "2026-11-12T03:22:47+00:00"
+      "title": "韩国公布端侧AI半导体路线图，计划到2030年完成10款芯片开发验证 - 凤凰网科技",
+      "source": "凤凰网科技",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBlWUV4aU04Smw0V1lJbnZFNEhDaXBiTzNtcnJhNXFuazkwOE5UeG5iREVuaGpqR0dGeThuMm1Mc2wxTE1qb002V0p3ZEE?oc=5",
+      "published": "2026-11-12T09:35:34+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美国通胀升温，高盛修改美联储利率预测 - IDNFinancials",
-      "source": "IDNFinancials",
-      "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxNVnBvWG1ZYmdSNGo0elliWFA3SWFMVkY2R3dySElVdFVETnBHNE5hdnBjQnBsTDFkY21LOXowSXVtQzlYZDByMUt4RTMtdDEtcUN1RWVBY2gyZXNnYW5xakpjYlJ2UFlWcUYzMEY3ZVMwYW81bGFUR3hRa2FkRUVMTzgzb2d6bGdJZzNSRGRZTzF0Y2tjcDlhSTNXV1RscXQwV1VzcHg5Q2ZUdGtDUGhjMVJrZ25teU1hYkFSVUlJbFdOMVltZlVleWpTVEVuV2E5VGNXN0JJVDBuVkVlNlNXT3lnbGFiSDBURFFuQUNyMVBIVG10V3owRENia2txNmNORUtUZVNZMF9YUWNrMUl6ZmFwUHY1N3RabnNWOG9uSE5MdUE?oc=5",
-      "published": "2026-11-12T03:20:00+00:00"
+      "title": "美联储利率前景偏鹰，英伟达领导层陷入动荡，道指期货保持平稳 - www.tmgm.com",
+      "source": "www.tmgm.com",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNY1BxYTFmTWNzVDdGWUlxTmJYWEZsSlRFQlNNYnVHWWdyLWJ0YXU4aE5UaHNYb2pWdkZoM0k4QjlUempvR0dzVV90LVR3WHBlbFd3ZDJaeDg1a1BoSWxycW54QWpNN19FYzJNQXVzQjEtaFZ5UjAyYXgwaHpfZGNtY05ydXhPc3RHajNlTXVtQ1l5RlMtdkZJNzJ6V3BSS3k2VGQ3LVFQTUlHempNOV9mQ0NoUEl4emhocDRjS3BsZGV1MlEyc2pwa2pkbEU2dkl6azY4N1hyeHpZeE5fUzBjLWNRWXIwMVZUX0FGdlJvQQ?oc=5",
+      "published": "2026-11-12T09:01:33+00:00"
     }
   ]
 }
