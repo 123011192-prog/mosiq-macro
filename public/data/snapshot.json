@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-11",
+  "as_of": "2026-11-12",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.51,
-    "baa10y_pct": 7.082665,
+    "baa10y_pct": 7.09988,
     "curve_10y3m": 0.68,
     "curve_inverted": false
   },
@@ -63,11 +63,10 @@
     }
   ],
   "health": {
-    "data_asof": "2026-11-10",
+    "data_asof": "2026-11-11",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -805,32 +804,32 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.88,
-      "date": "2026-11-09",
-      "change_20d_bp": -33.0,
+      "value": 4.98,
+      "date": "2026-11-10",
+      "change_20d_bp": -21.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.26,
-      "date": "2026-11-09",
-      "change_20d_bp": -30.0,
+      "value": 5.35,
+      "date": "2026-11-10",
+      "change_20d_bp": -17.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.56,
-      "date": "2026-11-09",
-      "change_20d_bp": -23.0,
+      "value": 4.73,
+      "date": "2026-11-10",
+      "change_20d_bp": -9.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 32.0,
-      "date": "2026-11-09"
+      "value_bp": 25.0,
+      "date": "2026-11-10"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -33.0,
-      "us30y_change_20d_bp": -30.0,
+      "us10y_change_20d_bp": -21.0,
+      "us30y_change_20d_bp": -17.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -866,24 +865,24 @@
   "world_brief": [
     {
       "category": "科技产业链",
-      "title": "韩国产业通商资源部公布端侧AI半导体路线图 项目总额8002亿韩元 - 观点网",
-      "source": "观点网",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBrNW1LeUs2Q2ZUZDUxbmY4Sng2YkY4blNsTVFON1hITXJjMjh5ZVpJeGRVdnNmOHB1Z0lQNWdsT0xxaVNhR0UzSGJWeWFVTXBraVc3dUJZWi0xTURWUm9iSndn?oc=5",
-      "published": "2026-11-12T11:29:21+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "韩国公布端侧AI半导体路线图，计划到2030年完成10款芯片开发验证 - 凤凰网科技",
-      "source": "凤凰网科技",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBlWUV4aU04Smw0V1lJbnZFNEhDaXBiTzNtcnJhNXFuazkwOE5UeG5iREVuaGpqR0dGeThuMm1Mc2wxTE1qb002V0p3ZEE?oc=5",
-      "published": "2026-11-12T09:35:34+00:00"
+      "title": "韩国推动工业电价分区改革，半导体供应链向首都圈外转移或提速 - 디지털투데이",
+      "source": "디지털투데이",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQSWpGbHlFWUR6SWVHZDhxYXo4U2tETUszWHRuMm04MjF1bGtnM2xjNWdXSjlOWEl5V19fWHZ3X21PN2xxa3l1c2oxbV8wMl9SZDNSZnkxejA4dldIblFhNG5iQXdxRU1EUFM2VkpmMUJNUTVXNGNrOVZxRWNSVUJQSUFCSkhYQ3dMbkN1ZXVyM2YtZXBzUF9HaEVVcmVUcU5TS0VhLWgyM2FRdjR6T3hQYUlCRWl5Q2QtQWRycXFhbmdES1hmN2NqUk9lZDZWaG5XVlVGM3BrMkpFU0pOZzRGbzAtWk8yaUUxYVF5YQ?oc=5",
+      "published": "2026-11-12T22:30:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美联储利率前景偏鹰，英伟达领导层陷入动荡，道指期货保持平稳 - www.tmgm.com",
-      "source": "www.tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNY1BxYTFmTWNzVDdGWUlxTmJYWEZsSlRFQlNNYnVHWWdyLWJ0YXU4aE5UaHNYb2pWdkZoM0k4QjlUempvR0dzVV90LVR3WHBlbFd3ZDJaeDg1a1BoSWxycW54QWpNN19FYzJNQXVzQjEtaFZ5UjAyYXgwaHpfZGNtY05ydXhPc3RHajNlTXVtQ1l5RlMtdkZJNzJ6V3BSS3k2VGQ3LVFQTUlHempNOV9mQ0NoUEl4emhocDRjS3BsZGV1MlEyc2pwa2pkbEU2dkl6azY4N1hyeHpZeE5fUzBjLWNRWXIwMVZUX0FGdlJvQQ?oc=5",
-      "published": "2026-11-12T09:01:33+00:00"
+      "title": "美联储2027年日程：10月不设利率会议，沃什增设战略讨论会 - 新闻和统计 - IndexBox",
+      "source": "IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNQVNzSzBQWWgydVhCTUpxXzlKYWtEUDFtLVNjdVh4WFNzSnlpeDF0d214NHhqVFBFT3JTbHNqaWs2eHFobWVHcHpGTmxoSy13RjRkSW43QnJ3QklXWGh6WlMwSnc2c3ZacE5ON1RkRDhTZEdvSGhNUXI2MHk4ZmRqS0xDVmY0NDNsb0tfT3VJVlFmSkJmSk5ObXF6TGR0QWRrRG5jTWxJTmMzdnZybG1B?oc=5",
+      "published": "2026-11-12T19:30:51+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "[社论]“黄仁勋，中国间谍”，若在韩国能被查出来吗？ - 朝鮮日報中文版",
+      "source": "朝鮮日報中文版",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOd24xOHRvRDJOSWo2ODZ6WnMtVkhqa0M2UTlXcVBXNUF2WXB1SmszWHRHcVBvdXpHUFRQZVNLSXJDMFR0cWk4Nkd0SGg0c3RJR3k4N013Zmx5NWE1UERIRVZmZFpjV0RiSm9rSE9MYlM4LTNra0NKblRxcFZBcWJzTVBadFRNdWc?oc=5",
+      "published": "2026-11-12T15:45:08+00:00"
     }
   ]
 }
