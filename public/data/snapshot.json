@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-12",
+  "as_of": "2026-11-13",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -8,9 +8,9 @@
     "liquidity": "yellow"
   },
   "core": {
-    "baa10y": 1.51,
-    "baa10y_pct": 7.102729,
-    "curve_10y3m": 0.68,
+    "baa10y": 1.48,
+    "baa10y_pct": 5.756117,
+    "curve_10y3m": 0.78,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,7 +63,7 @@
     }
   ],
   "health": {
-    "data_asof": "2026-11-11",
+    "data_asof": "2026-11-12",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
@@ -804,32 +804,32 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.98,
-      "date": "2026-11-10",
-      "change_20d_bp": -21.0,
+      "value": 5.1,
+      "date": "2026-11-12",
+      "change_20d_bp": 0.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.35,
-      "date": "2026-11-10",
-      "change_20d_bp": -17.0,
+      "value": 5.43,
+      "date": "2026-11-12",
+      "change_20d_bp": 0.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.73,
-      "date": "2026-11-10",
-      "change_20d_bp": -9.0,
+      "value": 4.86,
+      "date": "2026-11-12",
+      "change_20d_bp": 9.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 25.0,
-      "date": "2026-11-10"
+      "value_bp": 24.0,
+      "date": "2026-11-12"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -21.0,
-      "us30y_change_20d_bp": -17.0,
+      "us10y_change_20d_bp": 0.0,
+      "us30y_change_20d_bp": 0.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -865,24 +865,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "地缘难解实际利率爆冲，美联储集体喊通胀，黄金承压_外汇动态报道 - 汇通网",
-      "source": "汇通网",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA2Ul93cmZ0c3pWUjBDUmVfUlRFSmdYOE82VEdWZnlFRklnQ1J4dlljS1BUN2JEWUhrb2QxM0RocEJFTlo5LXdmQVRmejdOSE5WTFFNNlVHX0YzQQ?oc=5",
-      "published": "2026-11-13T10:00:36+00:00"
+      "title": "China central bank signals easing restraint as growth holds up",
+      "source": "hindustantimes.com",
+      "url": "https://www.hindustantimes.com/business/chinas-central-bank-signals-easing-restraint-as-growth-holds-up-101794462764183.html",
+      "published": "2026-11-12T07:00:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美联储宣布：明年7次议息，10月不投票决定利率 - ThePaper.cn",
-      "source": "ThePaper.cn",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE13Vm5CUWlDT3pRT1hVUl9CRTc1YkVnd2xubkY1UlFwaE15N3NfR204RmktTmZiNERheThwZG1FaWR5TXNmWjUwR0hjOXhfSThIRnBkQnlIQk55QWMwek9uRA?oc=5",
-      "published": "2026-11-13T09:45:00+00:00"
+      "category": "科技产业链",
+      "title": "Memory Chips Are Completely Distorting South Korea Economy",
+      "source": "foreignpolicy.com",
+      "url": "https://foreignpolicy.com/2026/11/11/south-korea-semiconductor-memory-chips-artificial-intelligence-inflation-affordability/?tpcc=recirc_trending062921",
+      "published": "2026-11-12T06:45:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美联储公布重大调整！明年10月不再投票决定利率 - 上观新闻",
-      "source": "上观新闻",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBPbHpoNmZKTlE3NXZRVjFzbFUzYXdrQzR2cVo3bUlFbGtBYmozNVliWTBzMG5XYVp4bWZSN2hmUlJBaHcwb0s5LVpZbnA4dHNjbkRpSk43b1ZNQQ?oc=5",
-      "published": "2026-11-13T09:17:00+00:00"
+      "category": "能源",
+      "title": "Chip upcycle , easing oil - related pressures to boost consumption in 2027 : KDI",
+      "source": "koreatimes.co.kr",
+      "url": "https://www.koreatimes.co.kr/business/20261112/chip-upcycle-easing-oil-related-pressures-to-boost-consumption-in-2027-kdi",
+      "published": "2026-11-12T05:30:00+00:00"
     }
   ]
 }
