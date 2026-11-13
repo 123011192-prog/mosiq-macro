@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.51,
-    "baa10y_pct": 7.09988,
+    "baa10y_pct": 7.102729,
     "curve_10y3m": 0.68,
     "curve_inverted": false
   },
@@ -67,6 +67,7 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -76,7 +77,8 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -700,12 +702,12 @@
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "neutral",
         "policy": "up",
         "credit": "up",
-        "market": "up",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -740,16 +742,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 395.6927,
-          "date": "2026-10-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": 0.0
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.48,
@@ -775,8 +767,10 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长平稳、信贷走强、市场走强，区域绿灯",
-      "degraded": []
+      "summary": "巴西：增长平稳、信贷走强、市场缺失，区域绿灯",
+      "degraded": [
+        "oecd_share_br"
+      ]
     }
   },
   "oil_watch": {
@@ -835,13 +829,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.98,
-        "date": "2026-11-10",
+        "value": 5.1,
+        "date": "2026-11-12",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.35,
-        "date": "2026-11-10",
+        "value": 5.43,
+        "date": "2026-11-12",
         "source": "tushare"
       }
     }
@@ -864,25 +858,25 @@
   },
   "world_brief": [
     {
+      "category": "货币政策",
+      "title": "美联储调整2027年议息会议安排：10月不再投票决定利率 - www.hkcna.hk",
+      "source": "www.hkcna.hk",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9aS1pfcHFmeERzYjE5WmQ3WTBWTDVGUlRqNkZoR3F2NVpPSm9FanBBdnEtb2Z4LWVVeWxfc25qREsyWE93MGZlLUVodEZFWU9jSTllbVdjVkw3OHlrR3NjOGdiZjB3bkVpWE9VdXhHMA?oc=5",
+      "published": "2026-11-13T02:30:00+00:00"
+    },
+    {
       "category": "科技产业链",
-      "title": "韩国推动工业电价分区改革，半导体供应链向首都圈外转移或提速 - 디지털투데이",
-      "source": "디지털투데이",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQSWpGbHlFWUR6SWVHZDhxYXo4U2tETUszWHRuMm04MjF1bGtnM2xjNWdXSjlOWEl5V19fWHZ3X21PN2xxa3l1c2oxbV8wMl9SZDNSZnkxejA4dldIblFhNG5iQXdxRU1EUFM2VkpmMUJNUTVXNGNrOVZxRWNSVUJQSUFCSkhYQ3dMbkN1ZXVyM2YtZXBzUF9HaEVVcmVUcU5TS0VhLWgyM2FRdjR6T3hQYUlCRWl5Q2QtQWRycXFhbmdES1hmN2NqUk9lZDZWaG5XVlVGM3BrMkpFU0pOZzRGbzAtWk8yaUUxYVF5YQ?oc=5",
-      "published": "2026-11-12T22:30:00+00:00"
+      "title": "英伟达“掌门人热线”中断，韩国企业要启动B计划？ - 아시아경제",
+      "source": "아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5oblJKWndXX2RsZDhHU0ctRjUyT1dhR0JrTHpFbTFKeVltaUJjaGJyTHE1UUd0TENsanU1OGk1VVphZjN1c1czTXlReTlNTXdnd0VpdTgwVjVkY3RfZ2tUQ1BHY3g?oc=5",
+      "published": "2026-11-13T02:07:00+00:00"
     },
     {
       "category": "货币政策",
-      "title": "美联储2027年日程：10月不设利率会议，沃什增设战略讨论会 - 新闻和统计 - IndexBox",
-      "source": "IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNQVNzSzBQWWgydVhCTUpxXzlKYWtEUDFtLVNjdVh4WFNzSnlpeDF0d214NHhqVFBFT3JTbHNqaWs2eHFobWVHcHpGTmxoSy13RjRkSW43QnJ3QklXWGh6WlMwSnc2c3ZacE5ON1RkRDhTZEdvSGhNUXI2MHk4ZmRqS0xDVmY0NDNsb0tfT3VJVlFmSkJmSk5ObXF6TGR0QWRrRG5jTWxJTmMzdnZybG1B?oc=5",
-      "published": "2026-11-12T19:30:51+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "[社论]“黄仁勋，中国间谍”，若在韩国能被查出来吗？ - 朝鮮日報中文版",
-      "source": "朝鮮日報中文版",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOd24xOHRvRDJOSWo2ODZ6WnMtVkhqa0M2UTlXcVBXNUF2WXB1SmszWHRHcVBvdXpHUFRQZVNLSXJDMFR0cWk4Nkd0SGg0c3RJR3k4N013Zmx5NWE1UERIRVZmZFpjV0RiSm9rSE9MYlM4LTNra0NKblRxcFZBcWJzTVBadFRNdWc?oc=5",
-      "published": "2026-11-12T15:45:08+00:00"
+      "title": "美联储重磅改革落地：2027年少一次议息会议 10月不投票决定利率！ - 东方财富",
+      "source": "东方财富",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBNTGkwb2ZzS0xSTDJVMUdjaG8yMjdtbW4wUEowT2k2bWQ4OXpGTmlIX2l3eUJCdmt6Yk9qQk1IUUdHaVhFcjhfU1lMNU9nRS1HYm8taGt3V19KdFB2bjlMcmJQcw?oc=5",
+      "published": "2026-11-13T01:52:30+00:00"
     }
   ]
 }
