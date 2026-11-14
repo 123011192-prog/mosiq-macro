@@ -67,8 +67,6 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
-      "refresh:oecd:oecd_share_in",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -364,11 +362,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 10506.67,
-          "date": "2026-11-12",
+          "value": 10146.32,
+          "date": "2026-11-13",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -28.21
+            "drawdown_pct": -30.67
           }
         },
         {
@@ -633,7 +631,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -668,6 +666,16 @@
           }
         },
         {
+          "id": "oecd_share_in",
+          "name": "OECD 印度股价指数（NIFTY 代理）",
+          "value": 267.4428,
+          "date": "2026-10-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -13.99
+          }
+        },
+        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.48,
@@ -686,9 +694,8 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
-        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
@@ -857,25 +864,25 @@
   },
   "world_brief": [
     {
+      "category": "科技产业链",
+      "title": "黄仁勋辞职冲击韩国AI产业 半导体投资与合作添变数 - 联合早报",
+      "source": "联合早报",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1PQ3lMRzFkSXgyaHhNenRkaW14VWJDRzllTVRwUlE1M19meWVNWmdnNXkwYmZvRDMxMW00V1ZGNS1nV2lRdnNDOU92UzFyZ0VfVFhoYnFBWmRQTzZsUXAtYlA0eW5GNE1ETUE?oc=5",
+      "published": "2026-11-14T09:20:47+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "韩媒关注：韩国专家称该离开半导体 中国份额升至10% 韩媒报道称 - 手机网易网",
+      "source": "手机网易网",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBoRFUwbzU0cW1tNWFjdk1iM01mRnFlM19WdTJfaTRwY1UxaHJoV0tLaDFlNU1EMGVKOGM4ZERadFNYanNfaTFvdnN4TWpUOWZLelBaZQ?oc=5",
+      "published": "2026-11-14T05:55:21+00:00"
+    },
+    {
       "category": "货币政策",
       "title": "美联储二把手定调：通胀才是“最重要信号”，利率决策看它_滚动新闻_财经 - 证券之星",
       "source": "证券之星",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9hc1dQNzVBUXJWOFFGclp3UXFzY09scEV2aU9LYTlPQkpoc0RsZFhWT0Z3QjNnSlRCcnpOTzI2QWlGd29PMHUtZTJkYzFuVUN0ak42N0ZWZU42dDhVb3JDbg?oc=5",
       "published": "2026-11-14T02:50:19+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "美联储副主席杰斐逊表态：通胀已成利率最重要的参考指标 - 新浪网",
-      "source": "新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE54NWdKbGdCV0VZOVI3NzFLYmdPbHduNC03ZlBMVjF5RC1ZLWVvNTdOU0FDTEpVNFFrRW96MVMxeDF3aU9ZTzMtZ00tOA?oc=5",
-      "published": "2026-11-14T00:46:57+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "SpaceX特斯拉合并获进展，美联储明年议息减至7次 | 财经日日评 - Sohu",
-      "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPRHJrU1ZEbUdacHlXaDdJaU9CR2VqdGpZYTEwOUQwQzQtYTFmWVFKaFZVUkRsTjZhVnJXUWtmSk14OHE2M3BDUi1vT0dMMWQ3eTJmOW1BalNYeHRaei1xT0FGV3JRWkNMQ1ZzaUFXQTZtTUZudnlHRUZTOE56NVh6SGV1bzktejdPeVZxYw?oc=5",
-      "published": "2026-11-14T00:23:53+00:00"
     }
   ]
 }
