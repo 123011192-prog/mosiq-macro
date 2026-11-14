@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.48,
-    "baa10y_pct": 5.756117,
+    "baa10y_pct": 5.758427,
     "curve_10y3m": 0.78,
     "curve_inverted": false
   },
@@ -67,6 +67,8 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -631,7 +633,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -666,16 +668,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 267.4428,
-          "date": "2026-10-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -13.99
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.48,
@@ -694,8 +686,9 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
@@ -835,13 +828,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 5.1,
-        "date": "2026-11-12",
+        "value": 5.15,
+        "date": "2026-11-13",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.43,
-        "date": "2026-11-12",
+        "value": 5.47,
+        "date": "2026-11-13",
         "source": "tushare"
       }
     }
@@ -865,24 +858,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "China central bank signals easing restraint as growth holds up",
-      "source": "hindustantimes.com",
-      "url": "https://www.hindustantimes.com/business/chinas-central-bank-signals-easing-restraint-as-growth-holds-up-101794462764183.html",
-      "published": "2026-11-12T07:00:00+00:00"
+      "title": "美联储二把手定调：通胀才是“最重要信号”，利率决策看它_滚动新闻_财经 - 证券之星",
+      "source": "证券之星",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9hc1dQNzVBUXJWOFFGclp3UXFzY09scEV2aU9LYTlPQkpoc0RsZFhWT0Z3QjNnSlRCcnpOTzI2QWlGd29PMHUtZTJkYzFuVUN0ak42N0ZWZU42dDhVb3JDbg?oc=5",
+      "published": "2026-11-14T02:50:19+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "Memory Chips Are Completely Distorting South Korea Economy",
-      "source": "foreignpolicy.com",
-      "url": "https://foreignpolicy.com/2026/11/11/south-korea-semiconductor-memory-chips-artificial-intelligence-inflation-affordability/?tpcc=recirc_trending062921",
-      "published": "2026-11-12T06:45:00+00:00"
+      "category": "货币政策",
+      "title": "美联储副主席杰斐逊表态：通胀已成利率最重要的参考指标 - 新浪网",
+      "source": "新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE54NWdKbGdCV0VZOVI3NzFLYmdPbHduNC03ZlBMVjF5RC1ZLWVvNTdOU0FDTEpVNFFrRW96MVMxeDF3aU9ZTzMtZ00tOA?oc=5",
+      "published": "2026-11-14T00:46:57+00:00"
     },
     {
-      "category": "能源",
-      "title": "Chip upcycle , easing oil - related pressures to boost consumption in 2027 : KDI",
-      "source": "koreatimes.co.kr",
-      "url": "https://www.koreatimes.co.kr/business/20261112/chip-upcycle-easing-oil-related-pressures-to-boost-consumption-in-2027-kdi",
-      "published": "2026-11-12T05:30:00+00:00"
+      "category": "货币政策",
+      "title": "SpaceX特斯拉合并获进展，美联储明年议息减至7次 | 财经日日评 - Sohu",
+      "source": "Sohu",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPRHJrU1ZEbUdacHlXaDdJaU9CR2VqdGpZYTEwOUQwQzQtYTFmWVFKaFZVUkRsTjZhVnJXUWtmSk14OHE2M3BDUi1vT0dMMWQ3eTJmOW1BalNYeHRaei1xT0FGV3JRWkNMQ1ZzaUFXQTZtTUZudnlHRUZTOE56NVh6SGV1bzktejdPeVZxYw?oc=5",
+      "published": "2026-11-14T00:23:53+00:00"
     }
   ]
 }
