@@ -67,8 +67,7 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
-      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -78,7 +77,8 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -633,7 +633,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -668,6 +668,16 @@
           }
         },
         {
+          "id": "oecd_share_in",
+          "name": "OECD 印度股价指数（NIFTY 代理）",
+          "value": 267.4428,
+          "date": "2026-10-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -13.99
+          }
+        },
+        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.48,
@@ -686,19 +696,18 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
-        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
         "growth": "neutral",
         "policy": "up",
         "credit": "up",
-        "market": "up",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -733,16 +742,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 395.6927,
-          "date": "2026-10-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": 0.0
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.48,
@@ -768,8 +767,10 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长平稳、信贷走强、市场走强，区域绿灯",
-      "degraded": []
+      "summary": "巴西：增长平稳、信贷走强、市场缺失，区域绿灯",
+      "degraded": [
+        "oecd_share_br"
+      ]
     }
   },
   "oil_watch": {
@@ -857,25 +858,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "California Democrats plan to investigate Trump but leave a third impeachment off the table for now",
-      "source": "pressdemocrat.com",
-      "url": "https://www.pressdemocrat.com/2026/11/14/california-democrats-plan-to-investigate-trump-but-leave-a-third-impeachment-off-the-table-for-now-2/",
-      "published": "2026-11-14T21:00:00+00:00"
+      "category": "科技产业链",
+      "title": "受澳大利亚石油产品及荷兰SSD需求带动，非半导体出口激增: 经济 : 财经日报 - 재경일보",
+      "source": "재경일보",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5iRnZEZnVHY0xacGc4c1l0QU53ZVdkODVhVEREQU9TejJIVDVMV1dhZnZidVJ0UEhnMXJTeGhvN1R3QzNrVEV1SXN4UzR3dmREZ190bXdYZDhkekV1aU0wcTlR?oc=5",
+      "published": "2026-11-15T12:10:09+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "Azerbaijani bank Bloomberg deals approach $34B in nine months",
-      "source": "trend.az",
-      "url": "https://www.trend.az/azerbaijan/4246502.html",
-      "published": "2026-11-14T20:00:00+00:00"
+      "category": "科技产业链",
+      "title": "黄仁勋辞职冲击科技业 韩国2兆元合作恐生变 - e南洋",
+      "source": "e南洋",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBMMUtrNFBBZDc5MHBpOEU0V243RWo0UmtqNUlpWFVEYllfeDNrLU9xYWFKNlpNQ2ZncGJ2UzJQZDdCVnVlRW1mM29ZdWRuMVktUmhxanFLX2ZncjRENE8wRnhJWQ?oc=5",
+      "published": "2026-11-15T11:34:33+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "Telangana HC Pulls Up Govt Over Gadwal Court Delay",
-      "source": "deccanchronicle.com",
-      "url": "https://www.deccanchronicle.com/southern-states/telangana/telangana-hc-pulls-up-govt-over-gadwal-court-delay-2004522",
-      "published": "2026-11-14T20:00:00+00:00"
+      "category": "科技产业链",
+      "title": "Musk看中的半导体……韩国也有受益股？[周末理财] - 아시아경제",
+      "source": "아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9VZXZCY1JiWHQ0QzVUZU5IV0FNcHV5VEZnOHhvTXB0WHgxekhEN3ppV0pIdEZtM0VjWkRsY0NfVUxIVGtWSTk4dUp1NlZpN2V0cmY3OTR4OXZRNlhkRVp3Qi1wSHU?oc=5",
+      "published": "2026-11-15T10:08:00+00:00"
     }
   ]
 }
