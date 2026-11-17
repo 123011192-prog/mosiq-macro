@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-13",
+  "as_of": "2026-11-14",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -8,9 +8,9 @@
     "liquidity": "yellow"
   },
   "core": {
-    "baa10y": 1.48,
-    "baa10y_pct": 5.763052,
-    "curve_10y3m": 0.78,
+    "baa10y": 1.47,
+    "baa10y_pct": 5.180723,
+    "curve_10y3m": 0.83,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,8 +63,8 @@
     }
   ],
   "health": {
-    "data_asof": "2026-11-12",
-    "stale_count": 24,
+    "data_asof": "2026-11-13",
+    "stale_count": 23,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
@@ -804,44 +804,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 5.1,
-      "date": "2026-11-12",
-      "change_20d_bp": 0.0,
+      "value": 5.15,
+      "date": "2026-11-13",
+      "change_20d_bp": 6.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.43,
-      "date": "2026-11-12",
-      "change_20d_bp": 0.0,
+      "value": 5.47,
+      "date": "2026-11-13",
+      "change_20d_bp": 4.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.86,
-      "date": "2026-11-12",
-      "change_20d_bp": 9.0,
+      "value": 4.88,
+      "date": "2026-11-13",
+      "change_20d_bp": 14.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 24.0,
-      "date": "2026-11-12"
+      "value_bp": 27.0,
+      "date": "2026-11-13"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 0.0,
-      "us30y_change_20d_bp": 0.0,
+      "us10y_change_20d_bp": 6.0,
+      "us30y_change_20d_bp": 4.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 5.15,
-        "date": "2026-11-13",
+        "value": 5.12,
+        "date": "2026-11-16",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.47,
-        "date": "2026-11-13",
+        "value": 5.46,
+        "date": "2026-11-16",
         "source": "tushare"
       }
     }
@@ -865,24 +865,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "美元：美联储政策预期重估推动涨势延续——三菱日联金融集团 - www.tmgm.com",
-      "source": "www.tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQMXJMcElhbFVqTHRKMXFYbEZaa3hVdGJfN0VqT0FBTVIzTVdWalRGMVlUVUJtSHNXZ1NReHRWbzRLalUyb0ltSnVTSWswVHBWamVreWNKaUZZWFBJZEtHNGtXT2JERlZ2eDFONTJQZkpSR0xqWHlQV3lvbUgxQkxXdnFKck5QU3RMc1FTLTk0dG9GZHJId2tRdkxZWm9nb1BUejdaUlJ6V0JjVHMxRUZNdzNWanlocVZVcjJPU0JHdFZRbHFz?oc=5",
-      "published": "2026-11-16T11:56:18+00:00"
+      "title": "美联储在固定利率逆回购操作中总计接纳了8个对手方的1.82亿美元。 - 金融界",
+      "source": "金融界",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9BNjdSWEZlM2xYSGszdURIaEFUU1pVTzZXQmVOMm8zUmdYU3JNQ0dCbHQzYVI5bktvcDZPb1FMRDR4TlBlLXNNMGd3SUhuYldhX0VhdFhSRUxqbVdnSHV2Q2RjalhLYS0xSXQ3eTdCTQ?oc=5",
+      "published": "2026-11-16T18:18:24+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "彭博：“半导体产量若快速增长，韩国经济增速有望达4%” - 아시아경제",
-      "source": "아시아경제",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBTQU5TQ2lRR1JwaXhvZFpwNDlpYjZKa3hRdk5JUXRDelduSG9FNnhPMnBpY1NNWi1SS1ZZdGFaMjBGVWs5NTdIUFJKcDRkdnRWc3dPSHZWd2pZUEVTYzdNZzZzblE?oc=5",
-      "published": "2026-11-16T11:00:01+00:00"
+      "category": "货币政策",
+      "title": "Roboforex：黄金、比特币与主要货币对本周关键位曝光 - FX168",
+      "source": "FX168",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA2WjllNlBvTWhha2ZGLTZNQ1VlUXJLWjY1alJLZGgyanVGVkJ4QkxsRWZuamhQVUZsZHM5UzN3cGR0OGlYLUZZX0VfeDhFYXdJb045djFFcWFiQ0tGNEh2QTBxemZLU0tTdWRyRTU1VHNRUG43VXh2cw?oc=5",
+      "published": "2026-11-16T12:34:09+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "市场传闻：SK海力士计划投资$10亿用于韩国芯片供应链 - 富途牛牛",
-      "source": "富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxObWFuRGFhempFWFhoa2FYR3ZkMVlfckdHYTJybVlkdnBBcUIxMzJiNzZXQ1dYcEdEeGJQekh1WnB5d0dpa2lSalBwOGdjNUpJcW12T1NaemhhVE42UjhEU3VvWWlScm11Y2pCLUdjYXp1Sk5VdWpBNldtNHl1QkVveXZ0YmhyVVFlMURaLThxVF9FaTJRclNYa2x3R2tKMjJ0?oc=5",
-      "published": "2026-11-16T10:15:36+00:00"
+      "category": "货币政策",
+      "title": "黄金创一年多新低，本周还有三道关 - Sohu",
+      "source": "Sohu",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPeHNqeXNRb1NtdGpvdml0MEprTnhJZEs4ZzZyOFFwUUVwdTFZcGQwdUlWalpLd1RlYlNkLXI3TlNBM21iMEg2ei0tSkxPc3VOcXNSTVJ3a2J0Y0ZUdUdoQWhIS2dBcmFQNTh3b0ZDajlRYXZIMm5mT3lWUEk1bjFUNzlWRmV6SHJsZVFz?oc=5",
+      "published": "2026-11-16T12:32:32+00:00"
     }
   ]
 }
