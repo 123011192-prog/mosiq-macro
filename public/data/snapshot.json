@@ -68,9 +68,9 @@
     "degraded": [
       "refresh:unexpected_failure",
       "refresh:oecd:oecd_bci_in",
-      "refresh:oecd:oecd_share_in",
       "refresh:oecd:oecd_cli_br",
       "refresh:oecd:oecd_bci_br",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -293,11 +293,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 58860.43,
-          "date": "2026-11-17",
+          "value": 59024.28,
+          "date": "2026-11-18",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -18.66
+            "drawdown_pct": -18.44
           }
         },
         {
@@ -367,11 +367,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 9610.65,
-          "date": "2026-11-16",
+          "value": 9642.88,
+          "date": "2026-11-17",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -34.33
+            "drawdown_pct": -34.11
           }
         },
         {
@@ -636,7 +636,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -671,6 +671,16 @@
           }
         },
         {
+          "id": "oecd_share_in",
+          "name": "OECD 印度股价指数（NIFTY 代理）",
+          "value": 267.4428,
+          "date": "2026-10-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -13.99
+          }
+        },
+        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.48,
@@ -689,9 +699,8 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
-        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
@@ -701,7 +710,7 @@
         "growth": "degraded",
         "policy": "up",
         "credit": "up",
-        "market": "up",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -726,16 +735,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 395.6927,
-          "date": "2026-10-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": 0.0
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.48,
@@ -754,9 +753,10 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长缺失、信贷走强、市场走强，区域绿灯",
+      "summary": "巴西：增长缺失、信贷走强、市场缺失，区域绿灯",
       "degraded": [
         "oecd_cli_br",
+        "oecd_share_br",
         "oecd_bci_br"
       ]
     }
@@ -817,13 +817,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 5.12,
-        "date": "2026-11-16",
+        "value": 5.1,
+        "date": "2026-11-17",
         "source": "tushare"
       },
       "us30y": {
         "value": 5.46,
-        "date": "2026-11-16",
+        "date": "2026-11-17",
         "source": "tushare"
       }
     }
@@ -846,25 +846,25 @@
   },
   "world_brief": [
     {
-      "category": "货币政策",
-      "title": "连续加息四次？这一美联储官员，释放了迄今最鹰派信号 - 凤凰网财经",
-      "source": "凤凰网财经",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBTOERSakRUMUJWanhNX1hZQ20tNnY4VjQxa1J4T3lUbmVLQWFDbXlidXRmSDhYaVkyMFdxT0VjbXpFc1E5WmptcW9HejhoUW5X?oc=5",
-      "published": "2026-11-17T23:45:00+00:00"
+      "category": "科技产业链",
+      "title": "AI芯片引发质疑，韩国迫切需要重整防谍网: 이슈인사이드: 财经日报 - 재경일보",
+      "source": "재경일보",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9zYjY2TjI0aWFJRk1jeWsyZnRORW0tU1l3SVA2U01feGZXbTljUHZVZFVqdDZFLWJOYzNBWDVFWHBXWWhQTklhZW9uVUljTlF3bXk5bUpmcjVEa2JXZTVFcGVn?oc=5",
+      "published": "2026-11-18T11:55:08+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美联储哈玛克：住房领域受利率制约 - 币界网",
-      "source": "币界网",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1iLWI1M0lyV3ZkNDdHYjl0WVFfMC0tSDZXbHk4UlY4UzE4d1ZGX1NTa3lvZzk5XzBsUVRtektnXzJBNEF1b3MweHVaMlVieHct?oc=5",
-      "published": "2026-11-17T23:28:20+00:00"
+      "category": "科技产业链",
+      "title": "韩国开发研究院(KDI)预测,随着半导体出口效果转移到消费上,明年韩国经济增长率将比今年更高。 韩国开发研究院18日通过《2026年下半年经济展望》将今年国内生产总值(GDP)增长率预测值从今年8月的.. - 매일경제",
+      "source": "매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9PeGxxaXNCOWxNNV9ZZ011Zk0wdUF4eUQ5N3VvOGtSUzNHa3ByUGt6djhTQTVlei1icGFSWHIxRERHcHlKOXZRcUNFYXFTeFFtaHc?oc=5",
+      "published": "2026-11-18T08:37:40+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "美联储在固定利率逆回购操作中总计接纳了2个对手方的3.51亿美元。 - 金融界",
-      "source": "金融界",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBVeHQzTXUwRjB6czYyWHgtSnNPaTAtbk5KdEVzRW15MjhTaXVyUE9wa3lod2Y3TUFZc3BfMm9WNzc0OE81RnBTblh0VWVHalJ3d25Ybml0eV9nZTJ5dnQ5U2V2ZFNicEpyT2VtWEpRWQ?oc=5",
-      "published": "2026-11-17T18:17:15+00:00"
+      "category": "科技产业链",
+      "title": "水资源公社社长率先直奔半导体集群 - 매일경제",
+      "source": "매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE12Q3BFYzNRd0lzajRrR3ZLMVZrUnktd1dELTRGS3l2ZHY4d2JKT2pteDd4VFE0Zm1tUjdCS3p2MkFYSnZVWHVjU3ZWTVBiWjVIRGUw?oc=5",
+      "published": "2026-11-18T07:59:41+00:00"
     }
   ]
 }
