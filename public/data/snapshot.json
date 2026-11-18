@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-17",
+  "as_of": "2026-11-18",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -8,9 +8,9 @@
     "liquidity": "yellow"
   },
   "core": {
-    "baa10y": 1.5,
-    "baa10y_pct": 6.804496,
-    "curve_10y3m": 0.78,
+    "baa10y": 1.53,
+    "baa10y_pct": 8.246388,
+    "curve_10y3m": 0.77,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,14 +63,12 @@
     }
   ],
   "health": {
-    "data_asof": "2026-11-16",
+    "data_asof": "2026-11-17",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
       "refresh:oecd:oecd_bci_in",
-      "refresh:oecd:oecd_cli_br",
       "refresh:oecd:oecd_bci_br",
-      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -707,13 +705,23 @@
     "brazil": {
       "status": "degraded",
       "cycle": {
-        "growth": "degraded",
+        "growth": "neutral",
         "policy": "up",
         "credit": "up",
-        "market": "degraded",
+        "market": "up",
         "fx": "neutral"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_br",
+          "name": "OECD 巴西综合领先指标 CLI",
+          "value": 102.4283,
+          "date": "2026-10-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.028
+          }
+        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -735,6 +743,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 395.6927,
+          "date": "2026-10-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": 0.0
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 113.48,
@@ -753,10 +771,8 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长缺失、信贷走强、市场缺失，区域绿灯",
+      "summary": "巴西：增长平稳、信贷走强、市场走强，区域绿灯",
       "degraded": [
-        "oecd_cli_br",
-        "oecd_share_br",
         "oecd_bci_br"
       ]
     }
@@ -786,32 +802,32 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 5.12,
-      "date": "2026-11-16",
-      "change_20d_bp": -3.0,
+      "value": 5.1,
+      "date": "2026-11-17",
+      "change_20d_bp": -2.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.46,
-      "date": "2026-11-16",
-      "change_20d_bp": -2.0,
+      "date": "2026-11-17",
+      "change_20d_bp": 4.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.83,
-      "date": "2026-11-16",
-      "change_20d_bp": 6.0,
+      "value": 4.8,
+      "date": "2026-11-17",
+      "change_20d_bp": 1.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 29.0,
-      "date": "2026-11-16"
+      "value_bp": 30.0,
+      "date": "2026-11-17"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -3.0,
-      "us30y_change_20d_bp": -2.0,
+      "us10y_change_20d_bp": -2.0,
+      "us30y_change_20d_bp": 4.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -846,25 +862,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "AI芯片引发质疑，韩国迫切需要重整防谍网: 이슈인사이드: 财经日报 - 재경일보",
-      "source": "재경일보",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9zYjY2TjI0aWFJRk1jeWsyZnRORW0tU1l3SVA2U01feGZXbTljUHZVZFVqdDZFLWJOYzNBWDVFWHBXWWhQTklhZW9uVUljTlF3bXk5bUpmcjVEa2JXZTVFcGVn?oc=5",
-      "published": "2026-11-18T11:55:08+00:00"
+      "category": "地缘冲突",
+      "title": "Lam breaks ground on Miaoli facility",
+      "source": "taipeitimes.com",
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/19/2003867977",
+      "published": "2026-11-18T17:30:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "韩国开发研究院(KDI)预测,随着半导体出口效果转移到消费上,明年韩国经济增长率将比今年更高。 韩国开发研究院18日通过《2026年下半年经济展望》将今年国内生产总值(GDP)增长率预测值从今年8月的.. - 매일경제",
-      "source": "매일경제",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9PeGxxaXNCOWxNNV9ZZ011Zk0wdUF4eUQ5N3VvOGtSUzNHa3ByUGt6djhTQTVlei1icGFSWHIxRERHcHlKOXZRcUNFYXFTeFFtaHc?oc=5",
-      "published": "2026-11-18T08:37:40+00:00"
+      "category": "地缘冲突",
+      "title": "President Touts Trade Deal With Philippines | News Radio 920 AM & 104 . 7 FM",
+      "source": "newsradiori.iheart.com",
+      "url": "https://newsradiori.iheart.com/content/2026-11-18-president-touts-trade-deal-with-philippines/",
+      "published": "2026-11-18T17:30:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "水资源公社社长率先直奔半导体集群 - 매일경제",
-      "source": "매일경제",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE12Q3BFYzNRd0lzajRrR3ZLMVZrUnktd1dELTRGS3l2ZHY4d2JKT2pteDd4VFE0Zm1tUjdCS3p2MkFYSnZVWHVjU3ZWTVBiWjVIRGUw?oc=5",
-      "published": "2026-11-18T07:59:41+00:00"
+      "category": "地缘冲突",
+      "title": "President Touts Trade Deal With Philippines | NewsTalk WMEQ",
+      "source": "wmeq.iheart.com",
+      "url": "https://wmeq.iheart.com/content/2026-11-18-president-touts-trade-deal-with-philippines/",
+      "published": "2026-11-18T17:30:00+00:00"
     }
   ]
 }
