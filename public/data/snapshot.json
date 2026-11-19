@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-18",
+  "as_of": "2026-11-19",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.53,
     "baa10y_pct": 8.246388,
-    "curve_10y3m": 0.77,
+    "curve_10y3m": 0.73,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,11 +63,10 @@
     }
   ],
   "health": {
-    "data_asof": "2026-11-17",
+    "data_asof": "2026-11-18",
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -77,8 +76,7 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -135,11 +133,11 @@
         {
           "id": "bis_eer_eur",
           "name": "BIS 欧元名义有效汇率",
-          "value": 109.1,
-          "date": "2026-09-01",
+          "value": 107.37,
+          "date": "2026-10-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": 0.294
+            "3m_change_pct": -1.187
           }
         },
         {
@@ -221,11 +219,11 @@
         {
           "id": "bis_eer_cn",
           "name": "BIS 人民币名义有效汇率",
-          "value": 113.42,
-          "date": "2026-09-01",
+          "value": 115.12,
+          "date": "2026-10-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": -0.185
+            "3m_change_pct": 0.726
           }
         },
         {
@@ -290,21 +288,21 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 59024.28,
-          "date": "2026-11-18",
+          "value": 59444.21,
+          "date": "2026-11-19",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -18.44
+            "drawdown_pct": -17.86
           }
         },
         {
           "id": "bis_eer_jp",
           "name": "BIS 日元名义有效汇率",
-          "value": 69.49,
-          "date": "2026-09-01",
+          "value": 69.25,
+          "date": "2026-10-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": 2.146
+            "3m_change_pct": 2.486
           }
         },
         {
@@ -364,21 +362,21 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 9642.88,
-          "date": "2026-11-17",
+          "value": 9652.8,
+          "date": "2026-11-18",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -34.11
+            "drawdown_pct": -34.04
           }
         },
         {
           "id": "bis_eer_kr",
           "name": "BIS 韩元名义有效汇率",
-          "value": 91.99,
-          "date": "2026-09-01",
+          "value": 94.26,
+          "date": "2026-10-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": 12.197
+            "3m_change_pct": 11.326
           }
         },
         {
@@ -453,11 +451,11 @@
         {
           "id": "bis_eer_gb",
           "name": "BIS 英镑名义有效汇率",
-          "value": 111.39,
-          "date": "2026-09-01",
+          "value": 112.07,
+          "date": "2026-10-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": 0.714
+            "3m_change_pct": 0.295
           }
         },
         {
@@ -532,11 +530,11 @@
         {
           "id": "bis_eer_ca",
           "name": "BIS 加元名义有效汇率",
-          "value": 97.15,
-          "date": "2026-09-01",
+          "value": 96.56,
+          "date": "2026-10-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": 0.175
+            "3m_change_pct": -0.083
           }
         },
         {
@@ -606,11 +604,11 @@
         {
           "id": "bis_eer_au",
           "name": "BIS 澳元名义有效汇率",
-          "value": 107.36,
-          "date": "2026-09-01",
+          "value": 106.09,
+          "date": "2026-10-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": 0.59
+            "3m_change_pct": -0.132
           }
         },
         {
@@ -680,11 +678,11 @@
         {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
-          "value": 80.48,
-          "date": "2026-09-01",
+          "value": 80.95,
+          "date": "2026-10-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": -1.264
+            "3m_change_pct": -0.16
           }
         },
         {
@@ -702,7 +700,7 @@
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "neutral",
         "policy": "up",
@@ -754,12 +752,19 @@
         {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
-          "value": 113.48,
-          "date": "2026-09-01",
+          "value": 114.85,
+          "date": "2026-10-01",
           "unit": "指数",
           "signal": {
-            "3m_change_pct": -0.43
+            "3m_change_pct": 0.105
           }
+        },
+        {
+          "id": "oecd_bci_br",
+          "name": "OECD 巴西商业信心指数 BCI",
+          "value": 98.8526,
+          "date": "2026-10-01",
+          "unit": "指数"
         },
         {
           "id": "bis_spp_br",
@@ -771,9 +776,7 @@
       ],
       "light": "green",
       "summary": "巴西：增长平稳、信贷走强、市场走强，区域绿灯",
-      "degraded": [
-        "oecd_bci_br"
-      ]
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -803,7 +806,7 @@
     "us10y": {
       "value": 5.1,
       "date": "2026-11-17",
-      "change_20d_bp": -2.0,
+      "change_20d_bp": -3.0,
       "source": "fred"
     },
     "us30y": {
@@ -815,7 +818,7 @@
     "us02y": {
       "value": 4.8,
       "date": "2026-11-17",
-      "change_20d_bp": 1.0,
+      "change_20d_bp": -1.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -825,7 +828,7 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -2.0,
+      "us10y_change_20d_bp": -3.0,
       "us30y_change_20d_bp": 4.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
@@ -861,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "Lam breaks ground on Miaoli facility",
-      "source": "taipeitimes.com",
-      "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/19/2003867977",
-      "published": "2026-11-18T17:30:00+00:00"
+      "category": "科技产业链",
+      "title": "韩国年出口额首破1万亿美元……继德国、美国和中国后全球第四国: 财经新闻 - 韩民族日报",
+      "source": "韩民族日报",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5QQlNBQnhrdHlfYnRWQk4wWDYxemFtRXphOXotRzg4S2lkaVNPYVZqWEdwSkFKd1pTZHpaUUpBbWVfMGhuNXExcUFrQm05OHZocUZRVmRnYWNJLWRh?oc=5",
+      "published": "2026-11-19T09:58:00+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "President Touts Trade Deal With Philippines | News Radio 920 AM & 104 . 7 FM",
-      "source": "newsradiori.iheart.com",
-      "url": "https://newsradiori.iheart.com/content/2026-11-18-president-touts-trade-deal-with-philippines/",
-      "published": "2026-11-18T17:30:00+00:00"
+      "category": "科技产业链",
+      "title": "AI芯片拉动出口破万亿美元，韩国经济走强但内需意外收缩 - 凤凰网",
+      "source": "凤凰网",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE8tZUtIbFNRT3hfWjVxSlkwdUZuQlotYkx3ak43Sk1RZWhIRlFWT0p3eERyOUdDdVNEdi0xZmtXcVBXQkVjT0JRMDlRVDhfSWpXT0E?oc=5",
+      "published": "2026-11-19T09:11:04+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "President Touts Trade Deal With Philippines | NewsTalk WMEQ",
-      "source": "wmeq.iheart.com",
-      "url": "https://wmeq.iheart.com/content/2026-11-18-president-touts-trade-deal-with-philippines/",
-      "published": "2026-11-18T17:30:00+00:00"
+      "category": "货币政策",
+      "title": "美元走高，投资者关注利率 - IDNFinancials",
+      "source": "IDNFinancials",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxONktEb2EyRXhhNWw3VjFHNGhFTk1oZjBGNWg2R1k1SXI2X1d5cW41Q2FPUmRlQlN1N1N0NGFvb2xpZzk4RGgwNTFnemx6WXhaRVpHSXFVOWtSenotcDM3M2dQYlZTdEZiU3JSM2xEaEVBakI1Z3BLcW9JR2luVTU3VlpzMGUtcXJUbU0wMDR3UWhrUC1XTWNwVm56eWdCUWViUWhaYTNCUk5wcHVqSFlWakVvcDJLRUx3cUFHV0tvdm5JNzVwU20xa2UzYnY4Mnlsc3BfVjhIenJ6UTg?oc=5",
+      "published": "2026-11-19T09:00:00+00:00"
     }
   ]
 }
