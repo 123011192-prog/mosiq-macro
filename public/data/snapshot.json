@@ -67,7 +67,6 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
       "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
@@ -833,13 +832,13 @@
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 5.1,
-        "date": "2026-11-17",
+        "value": 5.07,
+        "date": "2026-11-18",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.46,
-        "date": "2026-11-17",
+        "value": 5.41,
+        "date": "2026-11-18",
         "source": "tushare"
       }
     }
