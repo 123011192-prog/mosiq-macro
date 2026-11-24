@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-21",
+  "as_of": "2026-11-24",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.61,
     "baa10y_pct": 14.21116,
-    "curve_10y3m": 0.6,
+    "curve_10y3m": 0.55,
     "curve_inverted": false
   },
   "cycle": {
@@ -18,7 +18,7 @@
     "inflation": "degraded",
     "liquidity": "neutral",
     "credit": "degraded",
-    "policy": "up",
+    "policy": "degraded",
     "market_stress": "degraded"
   },
   "confirmations": [
@@ -63,15 +63,17 @@
     }
   ],
   "health": {
-    "data_asof": "2026-11-20",
-    "stale_count": 23,
+    "data_asof": "2026-11-23",
+    "stale_count": 31,
     "degraded": [
       "refresh:unexpected_failure",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
+      "cycle:policy",
       "cycle:market_stress",
       "radar:banking",
+      "radar:credit",
       "radar:nonbank",
       "regions:japan",
       "regions:canada",
@@ -803,13 +805,13 @@
     "us30y": {
       "value": 5.31,
       "date": "2026-11-20",
-      "change_20d_bp": -2.0,
+      "change_20d_bp": 0.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.63,
       "date": "2026-11-20",
-      "change_20d_bp": -6.0,
+      "change_20d_bp": -5.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -820,7 +822,7 @@
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
       "us10y_change_20d_bp": -8.0,
-      "us30y_change_20d_bp": -2.0,
+      "us30y_change_20d_bp": 0.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -856,24 +858,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "美聯儲或連續加息 高利率還要持續多久？ - 大紀元",
-      "source": "大紀元",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBPRjRsYThWSmpvc3FDQjJiRUhXTjQzU1BvQlRFTnRkVTRBZVdDYkJvV3hJQUJCTkdUanB4cFZ6Znhfb0dzczVrOVAzOXdleUxMQWhVVjhnNnUxaU8zLXF1cDBB0gFnQVVfeXFMTXhQVEZLeFZ5MnBWWUNtdkdud2pwaXVndF9lYzlQemRhZmdzU0MtRmt4UUNRdWZCNTk1Y2RJSDkzR1R4Wkx3WlZNYWhITFlDN0Z0aGVsX0Rjdk9JM3ZSY01rYnJnZHFWTQ?oc=5",
-      "published": "2026-11-24T03:16:00+00:00"
+      "title": "一张表看懂！华尔街“彻底信了”：美联储本周加息 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBwcWs3b3ppTWlqZWdHRDRMbkJUeEtkeTN1bXFuLVhLMjY1MUxwdE9RWkJiWGE3bk5QWHVRZkE0UVNoUFlUZERhRw?oc=5",
+      "published": "2026-11-24T11:50:27+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "黄仁勋复职涨潮席卷亚洲 日韩半导体股齐涨 - KLSE Screener",
-      "source": "KLSE Screener",
-      "url": "https://news.google.com/rss/articles/CBMixAJBVV95cUxOU21NSFdXZHdkc0hpRTZUNXVScEhlYmJVa3pMNWRWS1NiSTJtMnBiRG5ONWNJUW9VU0M3eG9nLU1KYm4tRmxNaWU1aDk4ZUg3aHQteC1pa0U0SUlKQVdvZklMY1d6YXA5UEU1S2oxM3lJNWp6a3ZVV2pxaHFlekt4YmlsYzVVYW9lSk92QkMzQ0t1aVBMM1JqREEzWERVak1TNzR5Zk5vb2JEZnNFUFl5QzlOb2swRjNZd1FyS2dwLU0tSk91Z05nbWc3c0pTRnBWMExORkxmRUJLZlNsNHNLQ1VxTDlLLWMyb3RYMGR5MmZ3Ukp5ekZzTTg5clpvR1hOTm04QnlWa3Q4SXlvQkdMbUQ5ckh1UUx4eVAwOTdLa1BROF95VlBQY2V0dXc0ZnIyNjMyUHFYVHZlQVhXcjd2ak4wMTM?oc=5",
-      "published": "2026-11-24T01:28:05+00:00"
+      "title": "韩国央行后天或再加息！AI暴跌之际，高盛警告：消费撑不住了 - Sohu",
+      "source": "Sohu",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOGZhOGl0U3ZhWlR5RXYyUEZycG1ZNUd5WkpYRmNCMVBfQkZnRU1neFE2X0pJTTB0bmkxVTk4OHJxdHk5em5IY2p6OGVfVmZtMVV4eXFST0Ezc2lSV0ZpUTUzbWpZdUpxZ0ZPZWkxemJ2OFhoSjVHbG81VDBqSjhvLVRGUEpSbGoxVk5R?oc=5",
+      "published": "2026-11-24T10:56:19+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "黄仁勋复职涨潮席卷亚洲 日韩半导体股齐涨 - e南洋",
-      "source": "e南洋",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9QZ2c2NzJDaGNRMWlmNGdDY3k3WThGLWRKWXNwc1JWNnpTdWMzbkJrUjdOLWdPaXNpZTZWamVBbW1HWm5VNlpRRk80WFlyekpoUS1uOEJJNTNyVkRSMVFLX2IyQQ?oc=5",
-      "published": "2026-11-24T01:28:05+00:00"
+      "title": "三星与SK海力士扩建晶圆厂缺26万专业工人，韩国政府调配退伍军人补缺口 - Sohu",
+      "source": "Sohu",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNSGFWTzZUaXo0NEdVRXNQUWRJY3VDZXVnY1dMZGt2ZzJkS09KWG5mVXl1U19JOFk0ZzdmYnBWQTdITzJ5dmtJV0tBUU1fQXVLZGlWV2paUkdyM2FzT3pIOXZfYlo3eW1Dd1dQbWtEbzk0WDYxbndQZmVTSGV5UHgxNUVMQVZvYXYz?oc=5",
+      "published": "2026-11-24T10:43:16+00:00"
     }
   ]
 }
