@@ -8,8 +8,8 @@
     "liquidity": "yellow"
   },
   "core": {
-    "baa10y": 1.56,
-    "baa10y_pct": 10.65837,
+    "baa10y": 1.61,
+    "baa10y_pct": 14.21116,
     "curve_10y3m": 0.6,
     "curve_inverted": false
   },
@@ -64,10 +64,9 @@
   ],
   "health": {
     "data_asof": "2026-11-20",
-    "stale_count": 24,
+    "stale_count": 23,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -77,8 +76,7 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -693,12 +691,12 @@
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "neutral",
         "policy": "up",
         "credit": "up",
-        "market": "degraded",
+        "market": "up",
         "fx": "neutral"
       },
       "indicators": [
@@ -733,6 +731,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 395.6927,
+          "date": "2026-10-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": 0.0
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 114.85,
@@ -758,10 +766,8 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长平稳、信贷走强、市场缺失，区域绿灯",
-      "degraded": [
-        "oecd_share_br"
-      ]
+      "summary": "巴西：增长平稳、信贷走强、市场走强，区域绿灯",
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -789,44 +795,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 5.04,
-      "date": "2026-11-19",
-      "change_20d_bp": 4.0,
+      "value": 4.92,
+      "date": "2026-11-20",
+      "change_20d_bp": -8.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.4,
-      "date": "2026-11-19",
-      "change_20d_bp": 7.0,
+      "value": 5.31,
+      "date": "2026-11-20",
+      "change_20d_bp": -2.0,
       "source": "fred"
     },
     "us02y": {
-      "value": 4.76,
-      "date": "2026-11-19",
-      "change_20d_bp": 7.0,
+      "value": 4.63,
+      "date": "2026-11-20",
+      "change_20d_bp": -6.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 28.0,
-      "date": "2026-11-19"
+      "value_bp": 29.0,
+      "date": "2026-11-20"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": 4.0,
-      "us30y_change_20d_bp": 7.0,
+      "us10y_change_20d_bp": -8.0,
+      "us30y_change_20d_bp": -2.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
         "value": 4.92,
-        "date": "2026-11-20",
+        "date": "2026-11-23",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.31,
-        "date": "2026-11-20",
+        "value": 5.29,
+        "date": "2026-11-23",
         "source": "tushare"
       }
     }
@@ -850,24 +856,24 @@
   "world_brief": [
     {
       "category": "货币政策",
-      "title": "#交易员排除美联储12月加息50基点 社区洞察和市场情绪｜币安广场 - Binance",
-      "source": "Binance",
-      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQVUs5UGF0d0Q3M1BvSXBnUE5NS1U3THVzYk9sdzZfV2tld2JGeTJZZUkwTFczZDZjRnJLWFlzYm1jRU80VjlFZ3RmWDgzTW4wM2dLazlqWEItSTBVb3pPbXNoVUZwOEFJcmdER2thNTBxc2kxdFFJbzR4bkZzdVpYLXo3YlJRal85cjhTR1kyMUluVy1iVzdma2dUSlV5dlp0S19lbXB4NExKM2tuTmhMOGhnTllSeHVVM21aaGx5aHpmc1F4ZzZZWlhJaGEwVkZ3LUlTeU1HTGhKZlFCblBjZk53c19ISEdlc3NJUkNiVG85a0xOSk5ZVm5B?oc=5",
-      "published": "2026-11-23T14:38:01+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "新浪网· - 手机新浪网",
-      "source": "手机新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE0tSnR2bzFkRkpiS1hxZXYwWUVhanktZlhrcDlwajN1YXhjTE5ycHhfbE9jQlNMUVRGMnVEcjlQSGNpYzE4Z2hjeVNIYXp5UzJSWGg2N0dxU002UHFMUVZVbmNuUQ?oc=5",
-      "published": "2026-11-23T14:14:00+00:00"
+      "title": "美聯儲或連續加息 高利率還要持續多久？ - 大紀元",
+      "source": "大紀元",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBPRjRsYThWSmpvc3FDQjJiRUhXTjQzU1BvQlRFTnRkVTRBZVdDYkJvV3hJQUJCTkdUanB4cFZ6Znhfb0dzczVrOVAzOXdleUxMQWhVVjhnNnUxaU8zLXF1cDBB0gFnQVVfeXFMTXhQVEZLeFZ5MnBWWUNtdkdud2pwaXVndF9lYzlQemRhZmdzU0MtRmt4UUNRdWZCNTk1Y2RJSDkzR1R4Wkx3WlZNYWhITFlDN0Z0aGVsX0Rjdk9JM3ZSY01rYnJnZHFWTQ?oc=5",
+      "published": "2026-11-24T03:16:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "受益三星、SK海力士扩产 韩国多家半导体设备商积压订单翻番 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBPemxFemNST3hJMmVrUkNGTTNzNEU5TDdxZ1pucVNlRFdwbzZ5V1huX2pXei1ra0JQaUgxaUZtQUlPd1llZHlOUA?oc=5",
-      "published": "2026-11-23T09:50:42+00:00"
+      "title": "黄仁勋复职涨潮席卷亚洲 日韩半导体股齐涨 - KLSE Screener",
+      "source": "KLSE Screener",
+      "url": "https://news.google.com/rss/articles/CBMixAJBVV95cUxOU21NSFdXZHdkc0hpRTZUNXVScEhlYmJVa3pMNWRWS1NiSTJtMnBiRG5ONWNJUW9VU0M3eG9nLU1KYm4tRmxNaWU1aDk4ZUg3aHQteC1pa0U0SUlKQVdvZklMY1d6YXA5UEU1S2oxM3lJNWp6a3ZVV2pxaHFlekt4YmlsYzVVYW9lSk92QkMzQ0t1aVBMM1JqREEzWERVak1TNzR5Zk5vb2JEZnNFUFl5QzlOb2swRjNZd1FyS2dwLU0tSk91Z05nbWc3c0pTRnBWMExORkxmRUJLZlNsNHNLQ1VxTDlLLWMyb3RYMGR5MmZ3Ukp5ekZzTTg5clpvR1hOTm04QnlWa3Q4SXlvQkdMbUQ5ckh1UUx4eVAwOTdLa1BROF95VlBQY2V0dXc0ZnIyNjMyUHFYVHZlQVhXcjd2ak4wMTM?oc=5",
+      "published": "2026-11-24T01:28:05+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "黄仁勋复职涨潮席卷亚洲 日韩半导体股齐涨 - e南洋",
+      "source": "e南洋",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9QZ2c2NzJDaGNRMWlmNGdDY3k3WThGLWRKWXNwc1JWNnpTdWMzbkJrUjdOLWdPaXNpZTZWamVBbW1HWm5VNlpRRk80WFlyekpoUS1uOEJJNTNyVkRSMVFLX2IyQQ?oc=5",
+      "published": "2026-11-24T01:28:05+00:00"
     }
   ]
 }
