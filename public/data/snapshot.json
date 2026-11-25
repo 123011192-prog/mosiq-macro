@@ -8,8 +8,8 @@
     "liquidity": "yellow"
   },
   "core": {
-    "baa10y": 1.61,
-    "baa10y_pct": 14.21116,
+    "baa10y": 1.59,
+    "baa10y_pct": 12.921348,
     "curve_10y3m": 0.55,
     "curve_inverted": false
   },
@@ -18,7 +18,7 @@
     "inflation": "degraded",
     "liquidity": "neutral",
     "credit": "degraded",
-    "policy": "degraded",
+    "policy": "up",
     "market_stress": "degraded"
   },
   "confirmations": [
@@ -64,16 +64,15 @@
   ],
   "health": {
     "data_asof": "2026-11-23",
-    "stale_count": 31,
+    "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
-      "cycle:policy",
       "cycle:market_stress",
       "radar:banking",
-      "radar:credit",
       "radar:nonbank",
       "regions:japan",
       "regions:canada",
@@ -798,43 +797,43 @@
   "rates_watch": {
     "us10y": {
       "value": 4.92,
-      "date": "2026-11-20",
+      "date": "2026-11-23",
       "change_20d_bp": -8.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.31,
-      "date": "2026-11-20",
-      "change_20d_bp": 0.0,
+      "value": 5.29,
+      "date": "2026-11-23",
+      "change_20d_bp": -2.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.63,
-      "date": "2026-11-20",
+      "date": "2026-11-23",
       "change_20d_bp": -5.0,
       "source": "fred"
     },
     "spread_2s10s": {
       "value_bp": 29.0,
-      "date": "2026-11-20"
+      "date": "2026-11-23"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
       "us10y_change_20d_bp": -8.0,
-      "us30y_change_20d_bp": 0.0,
+      "us30y_change_20d_bp": -2.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.92,
-        "date": "2026-11-23",
+        "value": 4.91,
+        "date": "2026-11-24",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.29,
-        "date": "2026-11-23",
+        "value": 5.3,
+        "date": "2026-11-24",
         "source": "tushare"
       }
     }
@@ -857,25 +856,25 @@
   },
   "world_brief": [
     {
+      "category": "科技产业链",
+      "title": "韩国股市，因外资抛售和半导体股下跌重回4800点以下 - 亚洲日报",
+      "source": "亚洲日报",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAweGw1Ry0xeHBWeENoWTRBbno4SFoxdWpXV1FiV0xPWEMzYWdpbFczWUFlMzBRLW53RFNFZTRKYzZyemFra0hFWUlQeTJKbXFBeXNaelgtcnF1VGM?oc=5",
+      "published": "2026-11-25T00:16:10+00:00"
+    },
+    {
+      "category": "科技产业链",
+      "title": "[中国冲击，悬崖边的韩国产业｜半导体]③中国发展到哪一步了？DRAM差距仅2年、NAND仅1年，设备也将很快被赶上 - 아시아경제",
+      "source": "아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE83VlV6TEdRaDhwY1RfeTlsRHFGZjZWaklRR2NXSjZab29na0pxai1kSWk0RGRzNW5OOWMyT3owZVR6Z2lTd0VZcXFIMFZROVdieGhyRFJONGlFM2RQalN5eGJBQUc?oc=5",
+      "published": "2026-11-24T23:17:42+00:00"
+    },
+    {
       "category": "货币政策",
-      "title": "一张表看懂！华尔街“彻底信了”：美联储本周加息 - 财联社",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBwcWs3b3ppTWlqZWdHRDRMbkJUeEtkeTN1bXFuLVhLMjY1MUxwdE9RWkJiWGE3bk5QWHVRZkE0UVNoUFlUZERhRw?oc=5",
-      "published": "2026-11-24T11:50:27+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "韩国央行后天或再加息！AI暴跌之际，高盛警告：消费撑不住了 - Sohu",
-      "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOGZhOGl0U3ZhWlR5RXYyUEZycG1ZNUd5WkpYRmNCMVBfQkZnRU1neFE2X0pJTTB0bmkxVTk4OHJxdHk5em5IY2p6OGVfVmZtMVV4eXFST0Ezc2lSV0ZpUTUzbWpZdUpxZ0ZPZWkxemJ2OFhoSjVHbG81VDBqSjhvLVRGUEpSbGoxVk5R?oc=5",
-      "published": "2026-11-24T10:56:19+00:00"
-    },
-    {
-      "category": "科技产业链",
-      "title": "三星与SK海力士扩建晶圆厂缺26万专业工人，韩国政府调配退伍军人补缺口 - Sohu",
-      "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNSGFWTzZUaXo0NEdVRXNQUWRJY3VDZXVnY1dMZGt2ZzJkS09KWG5mVXl1U19JOFk0ZzdmYnBWQTdITzJ5dmtJV0tBUU1fQXVLZGlWV2paUkdyM2FzT3pIOXZfYlo3eW1Dd1dQbWtEbzk0WDYxbndQZmVTSGV5UHgxNUVMQVZvYXYz?oc=5",
-      "published": "2026-11-24T10:43:16+00:00"
+      "title": "美联储10月贴现利率会议纪要：8家地方联储建议上调贴现利率 - 手机新浪网",
+      "source": "手机新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBvREN3a09ZMjFnejRGcnBOMExiZWM2cGVORXp1NkM5QWFDMVdOc3J0UGNLemRVemEtQkc0cjBPOGxlMzF6VkZOU1NLUQ?oc=5",
+      "published": "2026-11-24T20:09:16+00:00"
     }
   ]
 }
