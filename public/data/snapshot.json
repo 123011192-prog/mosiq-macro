@@ -67,6 +67,11 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_cli_br",
+      "refresh:oecd:oecd_bci_br",
+      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -76,7 +81,8 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india"
+      "regions:india",
+      "regions:brazil"
     ]
   },
   "regions": {
@@ -150,15 +156,15 @@
         {
           "id": "ecb_m3_idx",
           "name": "ECB M3 货币总量指数",
-          "value": 187.6931,
-          "date": "2026-09-01",
+          "value": 188.1632,
+          "date": "2026-10-01",
           "unit": "指数"
         },
         {
           "id": "ecb_loan_idx",
           "name": "ECB 非金融企业贷款指数",
-          "value": 130.1301,
-          "date": "2026-09-01",
+          "value": 130.7153,
+          "date": "2026-10-01",
           "unit": "指数"
         }
       ],
@@ -288,11 +294,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 57011.62,
-          "date": "2026-11-25",
+          "value": 57499.16,
+          "date": "2026-11-26",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -21.22
+            "drawdown_pct": -20.54
           }
         },
         {
@@ -362,11 +368,11 @@
         {
           "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 8832.5,
-          "date": "2026-11-24",
+          "value": 8774.86,
+          "date": "2026-11-25",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -39.65
+            "drawdown_pct": -40.04
           }
         },
         {
@@ -389,7 +395,7 @@
         {
           "id": "bis_spp_kr",
           "name": "BIS 韩国住宅房价指数",
-          "value": 145.9223,
+          "value": 145.9224,
           "date": "2026-04-01",
           "unit": "指数"
         }
@@ -631,7 +637,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -666,16 +672,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 267.4428,
-          "date": "2026-10-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -13.99
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.95,
@@ -694,31 +690,22 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
-      "status": "ok",
+      "status": "degraded",
       "cycle": {
-        "growth": "neutral",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
-        "market": "up",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.4283,
-          "date": "2026-10-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.028
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -740,16 +727,6 @@
           }
         },
         {
-          "id": "oecd_share_br",
-          "name": "OECD 巴西股价指数（Bovespa 代理）",
-          "value": 395.6927,
-          "date": "2026-10-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": 0.0
-          }
-        },
-        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 114.85,
@@ -760,23 +737,20 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 98.8526,
-          "date": "2026-10-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
-          "value": 224.5801,
+          "value": 225.3367,
           "date": "2026-04-01",
           "unit": "指数"
         }
       ],
       "light": "green",
-      "summary": "巴西：增长平稳、信贷走强、市场走强，区域绿灯",
-      "degraded": []
+      "summary": "巴西：增长缺失、信贷走强、市场缺失，区域绿灯",
+      "degraded": [
+        "oecd_cli_br",
+        "oecd_share_br",
+        "oecd_bci_br"
+      ]
     }
   },
   "oil_watch": {
@@ -864,25 +838,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "韩国银行在今年最后一次货币政策方向会议上,将基准利率从年3.00%上调至3.25%,上调了0.25个百分点。 这是继今年7月和8月之后，中国今年第三次上调利率。韩国银行金融通货委员会（金通委）26日召.. - 매일경제",
-      "source": "매일경제",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9HRkFrTW1VSW1rVTNTNVlleGtpNFFzejdvdzljaExsM2psUjFJRTd0WHBTc1pnVHJnS2REUWhJZVlKSkREQmJadF9OY3hYbHdqZ0E?oc=5",
-      "published": "2026-11-26T00:50:38+00:00"
+      "category": "地缘冲突",
+      "title": "Global markets rebound as tech shares recover and tariff fears ease",
+      "source": "aol.co.uk",
+      "url": "https://www.aol.co.uk/articles/global-markets-rebound-tech-shares-042539000.html",
+      "published": "2026-11-26T06:15:00+00:00"
     },
     {
-      "category": "科技产业链",
-      "title": "美国瞄准韩国半导体、汽车产业政策……协商不成关税最高升至25%（综述） - 아시아경제",
-      "source": "아시아경제",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5kMVRFcnZBOWJYT0pTSUNjNHZZbXdlOExQMkdUWTZQa0t2dUh4UTdfQW9fQ21lclMyaVQ2b2RxOHJuZmxoMkh5XzgwRVpTTGg4SkdBM0N2MVBuVjRlNHp2a1BEU0E?oc=5",
-      "published": "2026-11-26T00:34:48+00:00"
+      "category": "地缘冲突",
+      "title": "Asian shares rebound led by AI stocks after Wall Street pares sharp losses – Winnipeg Free Press",
+      "source": "winnipegfreepress.com",
+      "url": "https://www.winnipegfreepress.com/business/2026/11/26/asian-shares-rebound-led-by-ai-stocks-after-wall-street-pares-sharp-losses",
+      "published": "2026-11-26T06:15:00+00:00"
     },
     {
-      "category": "货币政策",
-      "title": "【每日热点】美联储还在考虑加息，利率市场却“反向布局” - 东方财富网",
-      "source": "东方财富网",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9FU3ZseVhTeTBrUHZZcFJwQ2k0all1OFVNSElnRmpNNVE4QzhMWWtBOC1sQzF2bjJ4QmNlVHFlTy1mdEVfRC04MVpEVzY3NlFTdlV5UHhRanNvZ2N0VWpzYnJ6UmQ0dw?oc=5",
-      "published": "2026-11-25T14:29:08+00:00"
+      "category": "地缘冲突",
+      "title": "Asian shares rebound led by AI stocks after Wall Street pares sharp losses",
+      "source": "therecord.com",
+      "url": "https://www.therecord.com/business/asian-shares-rebound-led-by-ai-stocks-after-wall-street-pares-sharp-losses/article_8270cc26-5a29-5ca6-a5a7-d7c0db4ae6bd.html",
+      "published": "2026-11-26T06:15:00+00:00"
     }
   ]
 }
