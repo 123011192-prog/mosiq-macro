@@ -8,8 +8,8 @@
     "liquidity": "yellow"
   },
   "core": {
-    "baa10y": 1.59,
-    "baa10y_pct": 12.921348,
+    "baa10y": 1.61,
+    "baa10y_pct": 14.259928,
     "curve_10y3m": 0.55,
     "curve_inverted": false
   },
@@ -67,7 +67,6 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -77,8 +76,7 @@
       "regions:japan",
       "regions:canada",
       "regions:australia",
-      "regions:india",
-      "regions:brazil"
+      "regions:india"
     ]
   },
   "regions": {
@@ -702,12 +700,12 @@
       ]
     },
     "brazil": {
-      "status": "degraded",
+      "status": "ok",
       "cycle": {
         "growth": "neutral",
         "policy": "up",
         "credit": "up",
-        "market": "degraded",
+        "market": "up",
         "fx": "neutral"
       },
       "indicators": [
@@ -742,6 +740,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 395.6927,
+          "date": "2026-10-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": 0.0
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 114.85,
@@ -767,10 +775,8 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长平稳、信贷走强、市场缺失，区域绿灯",
-      "degraded": [
-        "oecd_share_br"
-      ]
+      "summary": "巴西：增长平稳、信贷走强、市场走强，区域绿灯",
+      "degraded": []
     }
   },
   "oil_watch": {
@@ -798,44 +804,44 @@
   },
   "rates_watch": {
     "us10y": {
-      "value": 4.92,
-      "date": "2026-11-23",
-      "change_20d_bp": -7.0,
+      "value": 4.91,
+      "date": "2026-11-24",
+      "change_20d_bp": -8.0,
       "source": "fred"
     },
     "us30y": {
-      "value": 5.29,
-      "date": "2026-11-23",
-      "change_20d_bp": -1.0,
+      "value": 5.3,
+      "date": "2026-11-24",
+      "change_20d_bp": 0.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.63,
-      "date": "2026-11-23",
+      "date": "2026-11-24",
       "change_20d_bp": -7.0,
       "source": "fred"
     },
     "spread_2s10s": {
-      "value_bp": 29.0,
-      "date": "2026-11-23"
+      "value_bp": 28.0,
+      "date": "2026-11-24"
     },
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -7.0,
-      "us30y_change_20d_bp": -1.0,
+      "us10y_change_20d_bp": -8.0,
+      "us30y_change_20d_bp": 0.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
     "latest_quotes": {
       "us10y": {
-        "value": 4.91,
-        "date": "2026-11-24",
+        "value": 4.85,
+        "date": "2026-11-25",
         "source": "tushare"
       },
       "us30y": {
-        "value": 5.3,
-        "date": "2026-11-24",
+        "value": 5.24,
+        "date": "2026-11-25",
         "source": "tushare"
       }
     }
@@ -858,25 +864,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "AI rout continues as market exuberance fades over Huang Nvidia return",
-      "source": "dailylocal.com",
-      "url": "https://www.dailylocal.com/2026/11/25/ai-nvidia-wall-street/",
-      "published": "2026-11-25T14:15:00+00:00"
-    },
-    {
-      "category": "地缘冲突",
-      "title": "Stock market news : AI rout continues as market exuberance fades",
-      "source": "bnnbloomberg.ca",
-      "url": "https://www.bnnbloomberg.ca/markets/2026/11/25/ai-rout-continues-as-market-exuberance-fades-over-improbable-return-of-nvidias-huang/",
-      "published": "2026-11-25T14:15:00+00:00"
+      "category": "科技产业链",
+      "title": "韩国银行在今年最后一次货币政策方向会议上,将基准利率从年3.00%上调至3.25%,上调了0.25个百分点。 这是继今年7月和8月之后，中国今年第三次上调利率。韩国银行金融通货委员会（金通委）26日召.. - 매일경제",
+      "source": "매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9HRkFrTW1VSW1rVTNTNVlleGtpNFFzejdvdzljaExsM2psUjFJRTd0WHBTc1pnVHJnS2REUWhJZVlKSkREQmJadF9OY3hYbHdqZ0E?oc=5",
+      "published": "2026-11-26T00:50:38+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "Taiwan Semiconductor Manufacturing Is Down Nearly 30 % From Its High . Is It a Bargain Buy ?",
-      "source": "aol.com",
-      "url": "https://www.aol.com/articles/taiwan-semiconductor-manufacturing-down-nearly-130001000.html",
-      "published": "2026-11-25T14:15:00+00:00"
+      "title": "美国瞄准韩国半导体、汽车产业政策……协商不成关税最高升至25%（综述） - 아시아경제",
+      "source": "아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5kMVRFcnZBOWJYT0pTSUNjNHZZbXdlOExQMkdUWTZQa0t2dUh4UTdfQW9fQ21lclMyaVQ2b2RxOHJuZmxoMkh5XzgwRVpTTGg4SkdBM0N2MVBuVjRlNHp2a1BEU0E?oc=5",
+      "published": "2026-11-26T00:34:48+00:00"
+    },
+    {
+      "category": "货币政策",
+      "title": "【每日热点】美联储还在考虑加息，利率市场却“反向布局” - 东方财富网",
+      "source": "东方财富网",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9FU3ZseVhTeTBrUHZZcFJwQ2k0all1OFVNSElnRmpNNVE4QzhMWWtBOC1sQzF2bjJ4QmNlVHFlTy1mdEVfRC04MVpEVzY3NlFTdlV5UHhRanNvZ2N0VWpzYnJ6UmQ0dw?oc=5",
+      "published": "2026-11-25T14:29:08+00:00"
     }
   ]
 }
