@@ -9,7 +9,7 @@
   },
   "core": {
     "baa10y": 1.61,
-    "baa10y_pct": 14.259928,
+    "baa10y_pct": 14.26565,
     "curve_10y3m": 0.55,
     "curve_inverted": false
   },
@@ -67,10 +67,6 @@
     "stale_count": 24,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_bci_in",
-      "refresh:oecd:oecd_share_in",
-      "refresh:oecd:oecd_cli_br",
-      "refresh:oecd:oecd_bci_br",
       "refresh:oecd:oecd_share_br",
       "cycle:growth",
       "cycle:inflation",
@@ -637,7 +633,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "up",
-        "market": "degraded",
+        "market": "neutral",
         "fx": "neutral"
       },
       "indicators": [
@@ -672,6 +668,16 @@
           }
         },
         {
+          "id": "oecd_share_in",
+          "name": "OECD 印度股价指数（NIFTY 代理）",
+          "value": 267.4428,
+          "date": "2026-10-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": -13.99
+          }
+        },
+        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.95,
@@ -690,22 +696,31 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
       "degraded": [
-        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
       "status": "degraded",
       "cycle": {
-        "growth": "degraded",
+        "growth": "neutral",
         "policy": "up",
         "credit": "up",
         "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
+        {
+          "id": "oecd_cli_br",
+          "name": "OECD 巴西综合领先指标 CLI",
+          "value": 102.4283,
+          "date": "2026-10-01",
+          "unit": "指数",
+          "signal": {
+            "3m_change": -0.028
+          }
+        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -737,6 +752,13 @@
           }
         },
         {
+          "id": "oecd_bci_br",
+          "name": "OECD 巴西商业信心指数 BCI",
+          "value": 98.8526,
+          "date": "2026-10-01",
+          "unit": "指数"
+        },
+        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 225.3367,
@@ -745,11 +767,9 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长缺失、信贷走强、市场缺失，区域绿灯",
+      "summary": "巴西：增长平稳、信贷走强、市场缺失，区域绿灯",
       "degraded": [
-        "oecd_cli_br",
-        "oecd_share_br",
-        "oecd_bci_br"
+        "oecd_share_br"
       ]
     }
   },
@@ -838,25 +858,25 @@
   },
   "world_brief": [
     {
-      "category": "地缘冲突",
-      "title": "Global markets rebound as tech shares recover and tariff fears ease",
-      "source": "aol.co.uk",
-      "url": "https://www.aol.co.uk/articles/global-markets-rebound-tech-shares-042539000.html",
-      "published": "2026-11-26T06:15:00+00:00"
+      "category": "货币政策",
+      "title": "金价持稳 美联储利率路径与AI股主导本周行情震荡 - Moomoo",
+      "source": "Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBXS0J3MmVXMWJFcXVGSzBzd2NVeC1LOHlIeFFzanRaalJsUVdRcDVCOVMxSFlRbmlVYWEyMTF5NG5hNjFDNkpKUDROM0prcUhTa0o1RFFxLTVKdkVC?oc=5",
+      "published": "2026-11-27T00:40:32+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "Asian shares rebound led by AI stocks after Wall Street pares sharp losses – Winnipeg Free Press",
-      "source": "winnipegfreepress.com",
-      "url": "https://www.winnipegfreepress.com/business/2026/11/26/asian-shares-rebound-led-by-ai-stocks-after-wall-street-pares-sharp-losses",
-      "published": "2026-11-26T06:15:00+00:00"
+      "category": "科技产业链",
+      "title": "特朗普拟征“产能过剩”关税……矛头直指韩国湖南地区半导体工厂| 东亚日报 - 동아일보",
+      "source": "동아일보",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBMYlNveV8xR0ZaSlozQ0JSdGRjeUFvbU1GOVhLQ2d3eHhTc1NReUx2V1QtbFczX01DWmxsSnVUYm9wMzFCbHlPa1I2ZnV2Y1RJVFZlcHdFSkNYcXo1cUxtOWVTNUlvdw?oc=5",
+      "published": "2026-11-27T00:13:59+00:00"
     },
     {
-      "category": "地缘冲突",
-      "title": "Asian shares rebound led by AI stocks after Wall Street pares sharp losses",
-      "source": "therecord.com",
-      "url": "https://www.therecord.com/business/asian-shares-rebound-led-by-ai-stocks-after-wall-street-pares-sharp-losses/article_8270cc26-5a29-5ca6-a5a7-d7c0db4ae6bd.html",
-      "published": "2026-11-26T06:15:00+00:00"
+      "category": "货币政策",
+      "title": "美银重磅发布2027年七大交易策略！上半年做多美元、做空美债 下半年交易主线或迎大逆转 - 金融界",
+      "source": "金融界",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5IeGdQeU8wLVZjci1qTHp2c3QtczlUMmNJZ2M5azQtMXBHOUFKbS0xQVE1VHJDTzdmcjBveTlZaVJ2SFZ0UXZCOS1LRXdoYnA4a2JoUDB3VE91WFdqOTVkUExJRGFnaXZZSzVNZzdKYlVjNERI?oc=5",
+      "published": "2026-11-26T23:40:11+00:00"
     }
   ]
 }
