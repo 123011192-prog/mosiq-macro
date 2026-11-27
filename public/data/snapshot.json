@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-25",
+  "as_of": "2026-11-27",
   "global_light": "green",
   "lights": {
     "banking": "green",
@@ -10,7 +10,7 @@
   "core": {
     "baa10y": 1.61,
     "baa10y_pct": 14.26565,
-    "curve_10y3m": 0.55,
+    "curve_10y3m": 0.51,
     "curve_inverted": false
   },
   "cycle": {
@@ -63,11 +63,14 @@
     }
   ],
   "health": {
-    "data_asof": "2026-11-24",
-    "stale_count": 24,
+    "data_asof": "2026-11-26",
+    "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
-      "refresh:oecd:oecd_share_br",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_cli_br",
+      "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
       "cycle:credit",
@@ -290,11 +293,11 @@
         {
           "id": "fred_nikkei225",
           "name": "日经 225 指数",
-          "value": 57499.16,
-          "date": "2026-11-26",
+          "value": 58711.11,
+          "date": "2026-11-27",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -20.54
+            "drawdown_pct": -18.87
           }
         },
         {
@@ -633,7 +636,7 @@
         "growth": "up",
         "policy": "neutral",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -668,16 +671,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 267.4428,
-          "date": "2026-10-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -13.99
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.95,
@@ -696,31 +689,22 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
       "status": "degraded",
       "cycle": {
-        "growth": "neutral",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
-        "market": "degraded",
+        "market": "up",
         "fx": "neutral"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.4283,
-          "date": "2026-10-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.028
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -742,6 +726,16 @@
           }
         },
         {
+          "id": "oecd_share_br",
+          "name": "OECD 巴西股价指数（Bovespa 代理）",
+          "value": 395.6927,
+          "date": "2026-10-01",
+          "unit": "指数/点位",
+          "signal": {
+            "drawdown_pct": 0.0
+          }
+        },
+        {
           "id": "bis_eer_br",
           "name": "BIS 巴西雷亚尔名义有效汇率",
           "value": 114.85,
@@ -752,13 +746,6 @@
           }
         },
         {
-          "id": "oecd_bci_br",
-          "name": "OECD 巴西商业信心指数 BCI",
-          "value": 98.8526,
-          "date": "2026-10-01",
-          "unit": "指数"
-        },
-        {
           "id": "bis_spp_br",
           "name": "BIS 巴西住宅房价指数",
           "value": 225.3367,
@@ -767,9 +754,10 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长平稳、信贷走强、市场缺失，区域绿灯",
+      "summary": "巴西：增长缺失、信贷走强、市场走强，区域绿灯",
       "degraded": [
-        "oecd_share_br"
+        "oecd_cli_br",
+        "oecd_bci_br"
       ]
     }
   },
@@ -800,19 +788,19 @@
     "us10y": {
       "value": 4.91,
       "date": "2026-11-24",
-      "change_20d_bp": -8.0,
+      "change_20d_bp": -7.0,
       "source": "fred"
     },
     "us30y": {
       "value": 5.3,
       "date": "2026-11-24",
-      "change_20d_bp": 0.0,
+      "change_20d_bp": -2.0,
       "source": "fred"
     },
     "us02y": {
       "value": 4.63,
       "date": "2026-11-24",
-      "change_20d_bp": -7.0,
+      "change_20d_bp": 2.0,
       "source": "fred"
     },
     "spread_2s10s": {
@@ -822,8 +810,8 @@
     "long_end_selloff": {
       "rule": "10Y或30Y收益率20个交易日上行≥30bp记为长端抛售压力",
       "active": false,
-      "us10y_change_20d_bp": -8.0,
-      "us30y_change_20d_bp": 0.0,
+      "us10y_change_20d_bp": -7.0,
+      "us30y_change_20d_bp": -2.0,
       "note": "仅作证据记录，不参与灯号判定"
     },
     "geopolitical_note": "避险买债压收益率、财政担忧抛长端抬收益率——同样的大幅波动方向很重要",
@@ -858,25 +846,25 @@
   },
   "world_brief": [
     {
+      "category": "科技产业链",
+      "title": "韩国抢先日本实现1万亿美元出口，繁荣背后有何隐忧？对华经贸未来该怎么走？ - Sohu",
+      "source": "Sohu",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOM0s3d3E1VVNaaEs2aGdTdzZpcEhZd1hjQWkyQ0o3YjlHeTRSdFQ5dTljU1Q1QzhfcGpVR3hhdjlaQ2Jvak1RcnViOVFJWXRYNUJSeHZMdGpWM05LWlFuYTJZamNmZ3MxYkpwYnZfVnB2X3p2dW8yN2pFT05WRmExUEFSSWdlYm82Ykdj?oc=5",
+      "published": "2026-11-27T13:26:48+00:00"
+    },
+    {
       "category": "货币政策",
-      "title": "金价持稳 美联储利率路径与AI股主导本周行情震荡 - Moomoo",
-      "source": "Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBXS0J3MmVXMWJFcXVGSzBzd2NVeC1LOHlIeFFzanRaalJsUVdRcDVCOVMxSFlRbmlVYWEyMTF5NG5hNjFDNkpKUDROM0prcUhTa0o1RFFxLTVKdkVC?oc=5",
-      "published": "2026-11-27T00:40:32+00:00"
+      "title": "核心个人消费支出物价指数触及3.3%，美联储12月利率路径面临关键考验 - 汇通财经",
+      "source": "汇通财经",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4yeDU4R25sMmZjcHdHaHF3RWVRQ3ZnUXJPY2k5RTZyMmJIb3RTQkdrUzMyZGNmcHlKckI2ZDl1Vm11NWxyZnh6VHVLc3RGeG92dXl1YUhXOEp0amc?oc=5",
+      "published": "2026-11-27T12:53:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "特朗普拟征“产能过剩”关税……矛头直指韩国湖南地区半导体工厂| 东亚日报 - 동아일보",
-      "source": "동아일보",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBMYlNveV8xR0ZaSlozQ0JSdGRjeUFvbU1GOVhLQ2d3eHhTc1NReUx2V1QtbFczX01DWmxsSnVUYm9wMzFCbHlPa1I2ZnV2Y1RJVFZlcHdFSkNYcXo1cUxtOWVTNUlvdw?oc=5",
-      "published": "2026-11-27T00:13:59+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "美银重磅发布2027年七大交易策略！上半年做多美元、做空美债 下半年交易主线或迎大逆转 - 金融界",
-      "source": "金融界",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5IeGdQeU8wLVZjci1qTHp2c3QtczlUMmNJZ2M5azQtMXBHOUFKbS0xQVE1VHJDTzdmcjBveTlZaVJ2SFZ0UXZCOS1LRXdoYnA4a2JoUDB3VE91WFdqOTVkUExJRGFnaXZZSzVNZzdKYlVjNERI?oc=5",
-      "published": "2026-11-26T23:40:11+00:00"
+      "title": "受益三星、SK海力士扩产 韩国多家半导体设备商积压订单翻番 - 财联社",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBPemxFemNST3hJMmVrUkNGTTNzNEU5TDdxZ1pucVNlRFdwbzZ5V1huX2pXei1ra0JQaUgxaUZtQUlPd1llZHlOUA?oc=5",
+      "published": "2026-11-27T10:19:19+00:00"
     }
   ]
 }
