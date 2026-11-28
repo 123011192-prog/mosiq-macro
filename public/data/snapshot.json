@@ -67,6 +67,9 @@
     "stale_count": 25,
     "degraded": [
       "refresh:unexpected_failure",
+      "refresh:oecd:oecd_bci_in",
+      "refresh:oecd:oecd_share_in",
+      "refresh:oecd:oecd_cli_br",
       "refresh:oecd:oecd_bci_br",
       "cycle:growth",
       "cycle:inflation",
@@ -356,13 +359,13 @@
           }
         },
         {
-          "id": "oecd_share_kr",
+          "id": "fred_sox",
           "name": "费城半导体指数 SOX / OECD 韩国股价指数",
-          "value": 304.1063,
-          "date": "2026-10-01",
+          "value": 9186.71,
+          "date": "2026-11-27",
           "unit": "指数/点位",
           "signal": {
-            "drawdown_pct": -27.91
+            "drawdown_pct": -37.23
           }
         },
         {
@@ -627,7 +630,7 @@
         "growth": "up",
         "policy": "degraded",
         "credit": "up",
-        "market": "neutral",
+        "market": "degraded",
         "fx": "neutral"
       },
       "indicators": [
@@ -652,16 +655,6 @@
           }
         },
         {
-          "id": "oecd_share_in",
-          "name": "OECD 印度股价指数（NIFTY 代理）",
-          "value": 267.4428,
-          "date": "2026-10-01",
-          "unit": "指数/点位",
-          "signal": {
-            "drawdown_pct": -13.99
-          }
-        },
-        {
           "id": "bis_eer_in",
           "name": "BIS 印度卢比名义有效汇率",
           "value": 80.95,
@@ -680,32 +673,23 @@
         }
       ],
       "light": "green",
-      "summary": "印度：增长走强、信贷走强、市场平稳，区域绿灯",
+      "summary": "印度：增长走强、信贷走强、市场缺失，区域绿灯",
       "degraded": [
         "bis_policy_in",
+        "oecd_share_in",
         "oecd_bci_in"
       ]
     },
     "brazil": {
       "status": "degraded",
       "cycle": {
-        "growth": "neutral",
+        "growth": "degraded",
         "policy": "up",
         "credit": "up",
         "market": "up",
         "fx": "neutral"
       },
       "indicators": [
-        {
-          "id": "oecd_cli_br",
-          "name": "OECD 巴西综合领先指标 CLI",
-          "value": 102.4283,
-          "date": "2026-10-01",
-          "unit": "指数",
-          "signal": {
-            "3m_change": -0.028
-          }
-        },
         {
           "id": "bis_policy_br",
           "name": "BIS 巴西央行政策利率",
@@ -755,8 +739,9 @@
         }
       ],
       "light": "green",
-      "summary": "巴西：增长平稳、信贷走强、市场走强，区域绿灯",
+      "summary": "巴西：增长缺失、信贷走强、市场走强，区域绿灯",
       "degraded": [
+        "oecd_cli_br",
         "oecd_bci_br"
       ]
     }
@@ -846,25 +831,25 @@
   },
   "world_brief": [
     {
-      "category": "科技产业链",
-      "title": "传为救线人向中国提供台湾情报 韩国国情院否认 - RFI",
-      "source": "RFI",
-      "url": "https://news.google.com/rss/articles/CBMi3AJBVV95cUxQTXZvT3UyUmcxUk54QVQyTTJfMkZESGRic3hsSXMwNWszaFpFMlhFUFpyZGthTHd3QnVsdjdDZWxjMDFtb1FKTG9QTXZ5eklWMDJTYjFqS0tpWFA0SXZSYW5sR1hmTGVZWTQ1RC10dW9QNlhfbWZxaGNCb2hXZ2pRdTRVQ3BsWlBQSHZxQ3ozb3lvdHkweUNQZGFGSzlOTkZaWGM2Ym8wRjRXUzZkZ01wd2dZX1hoZnJfLXNqVU9ESUVGUmFFMUM1R2NidjJPbjZaU1pRZjhrMDVxNTAtY0k4akxRSmJYTEJKRTdPcEVSRnctb05vSnVPNHV2eGFfRzV4dFFfM2Fud3RhVXY5WTIzd1JubjhESzlLRUM5dDB4T2gxbkI5NEt5emhQbXlDRDlhZlZYalVINldTeDZpYkF3QUdEekxrYldUR3VJR1pVS1ZlcTlqQ2dfbFNQZnU?oc=5",
-      "published": "2026-11-27T15:01:50+00:00"
+      "category": "地缘冲突",
+      "title": "China industrial profit growth fastest in 5 months as recovery remains uneven",
+      "source": "asiaone.com",
+      "url": "https://www.asiaone.com:443/china/china-industrial-profit-growth-fastest-5-months-recovery-uneven",
+      "published": "2026-11-28T06:30:00+00:00"
+    },
+    {
+      "category": "地缘冲突",
+      "title": "European shares log strong weekly gains ; markets await Spanish election",
+      "source": "economictimes.indiatimes.com",
+      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/european-shares-log-strong-weekly-gains-markets-await-spanish-election/articleshow/136237685.cms",
+      "published": "2026-11-28T04:30:00+00:00"
     },
     {
       "category": "科技产业链",
-      "title": "韩国抢先日本实现1万亿美元出口，繁荣背后有何隐忧？对华经贸未来该怎么走？ - Sohu",
-      "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOM0s3d3E1VVNaaEs2aGdTdzZpcEhZd1hjQWkyQ0o3YjlHeTRSdFQ5dTljU1Q1QzhfcGpVR3hhdjlaQ2Jvak1RcnViOVFJWXRYNUJSeHZMdGpWM05LWlFuYTJZamNmZ3MxYkpwYnZfVnB2X3p2dW8yN2pFT05WRmExUEFSSWdlYm82Ykdj?oc=5",
-      "published": "2026-11-27T13:26:48+00:00"
-    },
-    {
-      "category": "货币政策",
-      "title": "核心个人消费支出物价指数触及3.3%，美联储12月利率路径面临关键考验_外汇动态报道 - 汇通财经",
-      "source": "汇通财经",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5BVmdGMEpZZ3Z3d1gxbXlJR2MzejA4akY5OExfbzZuNkJGOEZIdDN3MWZveXNZd1RyMGZBbHFya04tUElZMEJNMFltVmhrUkVzSWoySVdEeWpHZw?oc=5",
-      "published": "2026-11-27T12:53:00+00:00"
+      "title": "China , Hong Kong stocks rise as AI and chip shares lead gains",
+      "source": "economictimes.indiatimes.com",
+      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/china-hong-kong-stocks-rise-as-ai-and-chip-shares-lead-gains/articleshow/136210600.cms",
+      "published": "2026-11-27T06:30:00+00:00"
     }
   ]
 }
